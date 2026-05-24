@@ -2,9 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useState } from "react";
 import { ScrollReveal } from "./ScrollReveal";
-import { AgentModal } from "./AgentModal";
 
 const agents = [
   {
@@ -66,8 +64,6 @@ const agents = [
 ];
 
 export function ArchitectureSection() {
-  const [selectedAgent, setSelectedAgent] = useState<(typeof agents)[number] | null>(null);
-  const closeModal = useCallback(() => setSelectedAgent(null), []);
 
   return (
     <section className="relative bg-white py-20 lg:py-30" aria-labelledby="architecture-heading">
@@ -137,10 +133,10 @@ export function ArchitectureSection() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-[960px] mx-auto">
           {agents.map((agent, i) => (
             <ScrollReveal key={agent.name} delay={0.15 + i * 0.06}>
-              <button
-                onClick={() => setSelectedAgent(agent)}
-                className="relative w-full bg-white rounded-2xl shadow-[var(--shadow-base)] px-5 py-6 text-center overflow-hidden border border-purple-15 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[var(--shadow-hover)] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
-                aria-label={`Learn more about ${agent.name}`}
+              <Link
+                href={`/agents#${agent.name.toLowerCase()}`}
+                className="relative block w-full bg-white rounded-2xl shadow-[var(--shadow-base)] px-5 py-6 text-center overflow-hidden border border-purple-15 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[var(--shadow-hover)] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+                aria-label={`View ${agent.name}'s full profile`}
               >
                 <div className="absolute top-0 left-0 right-0 h-1 gradient-bar" />
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-purple-05 overflow-hidden">
@@ -158,7 +154,7 @@ export function ArchitectureSection() {
                 <div className="text-sm text-purple-6 leading-snug">
                   {agent.shortRole}
                 </div>
-              </button>
+              </Link>
             </ScrollReveal>
           ))}
         </div>
@@ -181,7 +177,6 @@ export function ArchitectureSection() {
         </ScrollReveal>
       </div>
 
-      <AgentModal agent={selectedAgent} onClose={closeModal} />
     </section>
   );
 }
