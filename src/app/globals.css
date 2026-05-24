@@ -1,24 +1,53 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0a0a0a;
-  --color-foreground: #ededed;
+  /* Purple scale */
+  --color-purple-0: #FFFFFF;
+  --color-purple-05: #F3F0F5;
+  --color-purple-1: #E7E2EB;
+  --color-purple-15: #DCD3E1;
+  --color-purple-2: #D0C5D7;
+  --color-purple-3: #B8A7C4;
+  --color-purple-4: #A18AB0;
+  --color-purple-5: #896D9C;
+  --color-purple-6: #6E577D;
+  --color-purple-7: #52415E;
+  --color-purple-8: #372C3E;
+  --color-purple-85: #29212F;
+  --color-purple-9: #1B161F;
+  --color-purple-95: #0E0B10;
+
+  /* Pink accent */
+  --color-pink-05: #FFEBF0;
+  --color-pink-1: #FFD6E0;
+  --color-pink-3: #FE85A3;
+  --color-pink-5: #FE3465;
+  --color-pink-6: #CD2A51;
   --color-brand: #FE3465;
-  --color-brand-dark: #e02d5a;
-  --color-plum: #372C3E;
-  --color-plum-light: #4a3d52;
-  --color-surface: #141414;
-  --color-surface-light: #1a1a1a;
-  --color-border: #2a2a2a;
-  --color-muted: #888888;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-light: #FE5D84;
+  --color-brand-dark: #CD2A51;
+
+  /* Semantic */
+  --color-background: #F3F0F5;
+  --color-foreground: #1B161F;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F3F0F5;
+  --color-dark: #1B161F;
+  --color-border: #DCD3E1;
+  --color-muted: #6E577D;
+  --color-muted-light: #896D9C;
+
+  --font-sans: var(--font-inter);
+
+  --shadow-base: 0 4px 20px rgba(137, 109, 156, .12);
+  --shadow-hover: 0 12px 32px rgba(254, 52, 101, .20);
 }
 
 body {
   background: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
@@ -26,11 +55,39 @@ body {
   color: #ffffff;
 }
 
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Gradient utilities */
+.gradient-text {
+  background: linear-gradient(90deg, #FE3465 0%, #896D9C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+.gradient-bar {
+  background: linear-gradient(90deg, #FE3465 0%, #896D9C 100%);
+}
+
+/* Glass header */
+.glass-header {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-purple-15);
+}
+
+/* Card base */
+.card-gradient-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FE3465 0%, #896D9C 100%);
+  border-radius: 16px 16px 0 0;
+}
+
+/* Animations */
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -39,6 +96,31 @@ body {
 @keyframes fade-in-left {
   from { opacity: 0; transform: translateX(-30px); }
   to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg) translateX(var(--radius, 240px)) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(var(--radius, 240px)) rotate(-360deg); }
+}
+
+@keyframes ai-panel-breathe {
+  0%, 100% { opacity: 0.96; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-5px); }
+}
+
+@keyframes ai-dot-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(254, 52, 101, 0.6); }
+  50% { box-shadow: 0 0 0 7px rgba(254, 52, 101, 0); }
+}
+
+@keyframes ai-cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes pulse-glow {
@@ -66,19 +148,27 @@ body {
   animation: ticker 40s linear infinite;
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-in-delay-1,
+  .animate-fade-in-delay-2,
+  .animate-fade-in-delay-3,
+  .animate-ticker {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, var(--color-brand), #ff7aa2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Eyebrow label */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-brand);
 }
 
-.glass {
-  background: rgba(20, 20, 20, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-border);
+.eyebrow-light {
+  color: var(--color-pink-3);
 }

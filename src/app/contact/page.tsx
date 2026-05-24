@@ -4,35 +4,36 @@ import { ContactForm } from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Lihi Pinto to start building your AI-powered revenue growth machine. Let's start tripl'n.",
+    "Book a diagnostic call with Lihi Pinto. 30 minutes. Zero pressure. Senior CMO and CRO leadership for B2B tech companies.",
 };
 
 export default function ContactPage() {
   return (
     <>
-      <section className="pt-32 pb-24 lg:pt-40 lg:pb-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="pt-20 pb-20 lg:pt-28 lg:pb-28 bg-purple-05">
+        <div className="mx-auto max-w-[1200px] px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-sm font-semibold text-brand uppercase tracking-widest mb-4">
-                Get in touch
-              </h2>
-              <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-                Build your relentless{" "}
-                <span className="gradient-text">growth machine</span>
+              <p className="eyebrow mb-4">Get in touch</p>
+              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] text-purple-9 mb-6">
+                Book a{" "}
+                <span className="gradient-text">diagnostic call</span>
               </h1>
-              <p className="mt-6 text-lg text-muted leading-relaxed">
-                Contact me today, and let&apos;s start tripl&apos;n. Whether
-                you&apos;re looking for CMO or CRO leadership, AI marketing
-                agents, or a complete revenue transformation — I&apos;m here to
-                help.
+              <p className="text-lg text-purple-7 leading-relaxed mb-4">
+                30-minute diagnostic. Zero pressure. Lihi will tell you within
+                the first 10 minutes whether Triple is the right fit.
+              </p>
+              <p className="text-purple-7 leading-relaxed">
+                Whether you&apos;re looking for CMO or CRO leadership, AI
+                marketing agents, or a complete revenue transformation —
+                let&apos;s talk.
               </p>
 
               <div className="mt-12 space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-lg bg-brand/10 flex items-center justify-center shrink-0">
+                  <div className="h-10 w-10 rounded-[10px] bg-pink-05 flex items-center justify-center shrink-0 text-brand">
                     <svg
-                      className="h-5 w-5 text-brand"
+                      className="h-5 w-5"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
@@ -51,17 +52,17 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold">Location</h3>
-                    <p className="text-sm text-muted mt-1">
+                    <h3 className="font-extrabold text-purple-9">Location</h3>
+                    <p className="text-sm text-purple-7 mt-1">
                       Herzliya, Israel
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-lg bg-brand/10 flex items-center justify-center shrink-0">
+                  <div className="h-10 w-10 rounded-[10px] bg-pink-05 flex items-center justify-center shrink-0 text-brand">
                     <svg
-                      className="h-5 w-5 text-brand"
+                      className="h-5 w-5"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
@@ -75,17 +76,17 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold">Serving</h3>
-                    <p className="text-sm text-muted mt-1">
+                    <h3 className="font-extrabold text-purple-9">Serving</h3>
+                    <p className="text-sm text-purple-7 mt-1">
                       B2B companies in Israel and globally
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-lg bg-brand/10 flex items-center justify-center shrink-0">
+                  <div className="h-10 w-10 rounded-[10px] bg-pink-05 flex items-center justify-center shrink-0 text-brand">
                     <svg
-                      className="h-5 w-5 text-brand"
+                      className="h-5 w-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -93,7 +94,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold">LinkedIn</h3>
+                    <h3 className="font-extrabold text-purple-9">LinkedIn</h3>
                     <a
                       href="https://www.linkedin.com/in/lihipinto/"
                       target="_blank"
