@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { ScrollReveal } from "./ScrollReveal";
 
 const faqs = [
   {
@@ -29,48 +30,67 @@ const faqs = [
   },
 ];
 
-function FAQItem({ q, a }: { q: string; a: string }) {
+function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
   const [open, setOpen] = useState(false);
+  const [height, setHeight] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const handleToggle = () => {
+    if (!open && contentRef.current) {
+      setHeight(contentRef.current.scrollHeight);
+    }
+    setOpen((prev) => !prev);
+  };
 
   return (
-    <div className="relative bg-white rounded-2xl shadow-[var(--shadow-base)] mb-3 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-[3px] gradient-bar" />
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex justify-between items-center w-full px-7 py-6 text-left font-semibold text-[17px] text-purple-9 cursor-pointer"
-      >
-        <span>{q}</span>
-        <span
-          className={`w-8 h-8 rounded-full flex items-center justify-center text-lg font-extrabold shrink-0 transition-all duration-200 ${
-            open
-              ? "bg-brand text-white rotate-45"
-              : "bg-pink-05 text-brand rotate-0"
-          }`}
+    <ScrollReveal delay={index * 0.08}>
+      <div className="relative bg-white rounded-2xl shadow-[var(--shadow-base)] mb-3 overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-[3px] gradient-bar" />
+        <button
+          onClick={handleToggle}
+          aria-expanded={open}
+          className="flex justify-between items-center w-full px-7 py-6 text-left font-semibold text-[17px] text-purple-9 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 rounded-2xl"
         >
-          +
-        </span>
-      </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out text-purple-7 leading-[1.7] ${
-          open ? "max-h-[400px] px-7 pb-7" : "max-h-0 px-7 pb-0"
-        }`}
-      >
-        {a}
+          <span>{q}</span>
+          <span
+            className={`w-8 h-8 rounded-full flex items-center justify-center text-lg font-extrabold shrink-0 transition-all duration-300 ${
+              open
+                ? "bg-brand text-white rotate-45"
+                : "bg-pink-05 text-brand rotate-0"
+            }`}
+          >
+            +
+          </span>
+        </button>
+        <div
+          ref={contentRef}
+          style={{
+            maxHeight: open ? `${height}px` : "0",
+            opacity: open ? 1 : 0,
+            transition:
+              "max-height 0.4s cubic-bezier(.16,1,.3,1), opacity 0.3s ease",
+          }}
+          className="overflow-hidden"
+        >
+          <div className="px-7 pb-7 text-purple-7 leading-[1.7]">{a}</div>
+        </div>
       </div>
-    </div>
+    </ScrollReveal>
   );
 }
 
 export function FAQ() {
   return (
-    <section className="bg-purple-05 py-20 lg:py-30">
+    <section className="bg-purple-05 py-20 lg:py-30" aria-labelledby="faq-heading">
       <div className="mx-auto max-w-[880px] px-8">
-        <p className="eyebrow text-center mb-4">FAQ</p>
-        <h2 className="text-3xl lg:text-[44px] font-black tracking-tight leading-[1.1] text-center mb-12 text-purple-9">
-          Questions before we get on a call.
-        </h2>
-        {faqs.map((faq) => (
-          <FAQItem key={faq.q} q={faq.q} a={faq.a} />
+        <ScrollReveal>
+          <p className="eyebrow text-center mb-4">FAQ</p>
+          <h2 id="faq-heading" className="text-3xl lg:text-[44px] font-black tracking-tight leading-[1.1] text-center mb-12 text-purple-9">
+            Questions before we get on a call.
+          </h2>
+        </ScrollReveal>
+        {faqs.map((faq, i) => (
+          <FAQItem key={faq.q} q={faq.q} a={faq.a} index={i} />
         ))}
       </div>
     </section>

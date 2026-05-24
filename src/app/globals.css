@@ -160,6 +160,52 @@ body {
   }
 }
 
+/* Dark mode overrides */
+[data-theme="dark"] body {
+  background: #1B161F;
+  color: #E7E2EB;
+}
+
+[data-theme="dark"] .glass-header {
+  background: rgba(27, 22, 31, 0.92);
+  border-bottom-color: #372C3E;
+}
+
+[data-theme="dark"] section.bg-purple-05 {
+  background: #0E0B10;
+}
+
+[data-theme="dark"] section.bg-white {
+  background: #1B161F;
+}
+
+[data-theme="dark"] .bg-white:where(:not(section)) {
+  background: #29212F;
+}
+
+[data-theme="dark"] .text-purple-9 {
+  color: #E7E2EB;
+}
+
+[data-theme="dark"] .text-purple-7 {
+  color: #B8A7C4;
+}
+
+[data-theme="dark"] .text-purple-6 {
+  color: #A18AB0;
+}
+
+[data-theme="dark"] .border-purple-15 {
+  border-color: #372C3E;
+}
+
+/* Accessibility focus ring */
+*:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* Eyebrow label */
 .eyebrow {
   font-size: 11px;

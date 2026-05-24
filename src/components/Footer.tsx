@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-purple-95 text-purple-3 pt-20 pb-8">
+    <footer className="relative bg-purple-95 text-purple-3 pt-20 pb-20 lg:pb-8" role="contentinfo" aria-label="Site footer">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent" />
       <div className="mx-auto max-w-[1200px] px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}

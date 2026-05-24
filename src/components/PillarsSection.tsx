@@ -1,3 +1,7 @@
+"use client";
+
+import { ScrollReveal } from "./ScrollReveal";
+
 const pillars = [
   {
     num: "01",
@@ -21,44 +25,47 @@ const pillars = [
 
 export function PillarsSection() {
   return (
-    <section className="bg-white py-20 lg:py-30">
+    <section className="relative bg-white py-20 lg:py-30" aria-labelledby="pillars-heading">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent" />
+
       <div className="mx-auto max-w-[1200px] px-8">
-        <div className="text-center max-w-[880px] mx-auto mb-16">
-          <p className="eyebrow mb-4">The new model</p>
-          <h2 className="text-3xl lg:text-[44px] font-black tracking-tight leading-[1.1] text-purple-9 mb-6">
-            Triple &amp; Co. is{" "}
-            <span className="gradient-text">different</span>.
-          </h2>
-          <p className="text-lg lg:text-[19px] leading-relaxed text-purple-7">
-            Led by Lihi Pinto, Triple &amp; Co. gives you senior CMO and CRO
-            leadership, full-service B2B marketing execution, and access to a
-            supervised team of specialist AI agents trained to support every part
-            of your growth system: strategy, positioning, content, social,
-            campaigns, HubSpot, pipeline, analytics, events, and sales
-            enablement.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center max-w-[880px] mx-auto mb-16">
+            <p className="eyebrow mb-4">The new model</p>
+            <h2 id="pillars-heading" className="text-3xl lg:text-[44px] font-black tracking-tight leading-[1.1] text-purple-9 mb-6">
+              Triple &amp; Co. is{" "}
+              <span className="gradient-text">different</span>.
+            </h2>
+            <p className="text-lg lg:text-[19px] leading-relaxed text-purple-7">
+              Led by Lihi Pinto, Triple &amp; Co. gives you senior CMO and CRO
+              leadership, full-service B2B marketing execution, and access to a
+              supervised team of specialist AI agents trained to support every
+              part of your growth system: strategy, positioning, content, social,
+              campaigns, HubSpot, pipeline, analytics, events, and sales
+              enablement.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
-          {pillars.map((p) => (
-            <div
-              key={p.num}
-              className="relative bg-white rounded-[20px] p-9 pb-8 shadow-[var(--shadow-base)] border border-purple-15 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-hover)]"
-            >
-              <div className="absolute top-0 left-0 right-0 h-[5px] gradient-bar rounded-t-[20px]" />
-              <div className="font-black text-5xl leading-none tracking-tighter gradient-text mb-4">
-                {p.num}
+          {pillars.map((p, i) => (
+            <ScrollReveal key={p.num} delay={i * 0.12}>
+              <div className="relative bg-white rounded-[20px] p-9 pb-8 shadow-[var(--shadow-base)] border border-purple-15 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[var(--shadow-hover)]">
+                <div className="absolute top-0 left-0 right-0 h-[5px] gradient-bar rounded-t-[20px]" />
+                <div className="font-black text-5xl leading-none tracking-tighter gradient-text mb-4">
+                  {p.num}
+                </div>
+                <div className="text-xs uppercase tracking-[.14em] text-purple-5 font-bold mb-1.5">
+                  {p.need}
+                </div>
+                <div className="font-extrabold text-[22px] text-purple-9 mb-4 tracking-tight leading-snug">
+                  {p.title}
+                </div>
+                <div className="text-[15px] text-purple-7 leading-relaxed">
+                  {p.desc}
+                </div>
               </div>
-              <div className="text-xs uppercase tracking-[.14em] text-purple-5 font-bold mb-1.5">
-                {p.need}
-              </div>
-              <div className="font-extrabold text-[22px] text-purple-9 mb-4 tracking-tight leading-snug">
-                {p.title}
-              </div>
-              <div className="text-[15px] text-purple-7 leading-relaxed">
-                {p.desc}
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

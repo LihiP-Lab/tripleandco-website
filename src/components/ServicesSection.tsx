@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { ScrollReveal } from "./ScrollReveal";
 
 const services = [
   {
@@ -94,57 +97,62 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="bg-white py-20 lg:py-30">
+    <section className="relative bg-white py-20 lg:py-30" aria-labelledby="services-heading">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent" />
+
       <div className="mx-auto max-w-[1200px] px-8">
-        <div className="text-center max-w-[760px] mx-auto mb-16">
-          <p className="eyebrow mb-4">Our Services</p>
-          <h2 className="text-3xl lg:text-[44px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
-            What Triple &amp; Co. delivers for{" "}
-            <span className="gradient-text">your company</span>.
-          </h2>
-          <p className="text-lg text-purple-6">
-            Nine services your company can hire. Senior CMO and CRO leadership,
-            full-service B2B marketing execution, and AI-powered delivery. Hire
-            one. Hire several. Or hire the full stack.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center max-w-[760px] mx-auto mb-16">
+            <p className="eyebrow mb-4">Our Services</p>
+            <h2 id="services-heading" className="text-3xl lg:text-[44px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
+              What Triple &amp; Co. delivers for{" "}
+              <span className="gradient-text">your company</span>.
+            </h2>
+            <p className="text-lg text-purple-6">
+              Nine services your company can hire. Senior CMO and CRO leadership,
+              full-service B2B marketing execution, and AI-powered delivery. Hire
+              one. Hire several. Or hire the full stack.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {services.map((service) => (
-            <div
-              key={service.name}
-              className="relative bg-white rounded-2xl px-6 py-7 shadow-[var(--shadow-base)] overflow-hidden border border-purple-15 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-hover)]"
-            >
-              <div className="absolute top-0 left-0 right-0 h-1 gradient-bar" />
-              <div className="w-10 h-10 rounded-[10px] bg-pink-05 flex items-center justify-center text-brand mb-4">
-                {service.icon}
+          {services.map((service, i) => (
+            <ScrollReveal key={service.name} delay={i * 0.06}>
+              <div className="relative bg-white rounded-2xl px-6 py-7 shadow-[var(--shadow-base)] overflow-hidden border border-purple-15 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[var(--shadow-hover)]">
+                <div className="absolute top-0 left-0 right-0 h-1 gradient-bar" />
+                <div className="w-10 h-10 rounded-[10px] bg-pink-05 flex items-center justify-center text-brand mb-4">
+                  {service.icon}
+                </div>
+                <div className="font-extrabold text-[17px] text-purple-9 mb-1.5 tracking-tight">
+                  {service.name}
+                </div>
+                <div className="text-sm text-purple-6 leading-relaxed">
+                  {service.tag}
+                </div>
               </div>
-              <div className="font-extrabold text-[17px] text-purple-9 mb-1.5 tracking-tight">
-                {service.name}
-              </div>
-              <div className="text-sm text-purple-6 leading-relaxed">
-                {service.tag}
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
-        <div className="text-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
-          >
-            See every service in detail <span>&#8594;</span>
-          </Link>
-          <div className="mt-4">
+        <ScrollReveal delay={0.5}>
+          <div className="text-center">
             <Link
               href="/contact"
-              className="text-brand font-semibold text-[15px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
             >
-              Book a Diagnostic Call with Lihi <span>&#8594;</span>
+              See every service in detail <span>&#8594;</span>
             </Link>
+            <div className="mt-4">
+              <Link
+                href="/contact"
+                className="text-brand font-semibold text-[15px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
+              >
+                Book a Diagnostic Call with Lihi <span>&#8594;</span>
+              </Link>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

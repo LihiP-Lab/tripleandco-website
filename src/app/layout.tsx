@@ -3,6 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { BackToTop } from "@/components/BackToTop";
+import { MobileCTA } from "@/components/MobileCTA";
+import { PageTransition } from "@/components/PageTransition";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -45,11 +49,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} h-full antialiased scroll-smooth`}>
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          {/* Skip to content — accessibility */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:rounded-[10px] focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:text-sm focus:font-semibold focus:outline-none"
+          >
+            Skip to main content
+          </a>
+          <Navbar />
+          <main id="main-content" className="flex-1">
+            <PageTransition>{children}</PageTransition>
+          </main>
+          <Footer />
+          <BackToTop />
+          <MobileCTA />
+        </ThemeProvider>
       </body>
     </html>
   );
