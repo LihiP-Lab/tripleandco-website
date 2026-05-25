@@ -66,6 +66,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/insights"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  Insights
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/contact"
                   className="text-sm hover:text-brand transition-colors"
                 >

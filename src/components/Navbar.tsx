@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/cmo-as-a-service", label: "CMO as a Service" },
   { href: "/agents", label: "Marketing Agents" },
+  { href: "/insights", label: "Insights" },
   { href: "/contact", label: "Contact" },
 ];
 
