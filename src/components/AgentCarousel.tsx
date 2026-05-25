@@ -131,10 +131,9 @@ export function AgentCarousel() {
               <ScrollReveal key={agent.name} delay={0.05 + i * 0.06}>
                 <Link
                   href={`/agents#${agent.name.toLowerCase()}`}
-                  className="group relative flex-shrink-0 w-[200px] bg-purple-05 rounded-2xl p-5 text-center border border-purple-15 snap-start transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-hover)] hover:border-brand/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                  className="group relative flex-shrink-0 w-[200px] rounded-2xl p-5 text-center snap-start transition-all duration-300 hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
                 >
-                  <div className="absolute top-0 left-0 right-0 h-1 gradient-bar rounded-t-2xl" />
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-white overflow-hidden shadow-sm">
+                  <div className="w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden">
                     <Image
                       src={agent.image}
                       alt={agent.name}
