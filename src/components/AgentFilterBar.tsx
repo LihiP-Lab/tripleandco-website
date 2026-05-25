@@ -129,6 +129,18 @@ function AgentDetailCard({ agent, index }: { agent: Agent; index: number }) {
             </Link>
           </div>
         </div>
+
+        {/* Builder profile */}
+        <div className="border-t border-purple-15 px-8 py-4">
+          <Link
+            href="https://tripleandco.com/builder-profile/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-full rounded-full border-2 border-purple-15 py-2.5 text-sm font-semibold text-purple-6 hover:border-brand hover:text-brand transition-all"
+          >
+            View Builder Profile &rarr;
+          </Link>
+        </div>
       </div>
     </ScrollReveal>
   );
