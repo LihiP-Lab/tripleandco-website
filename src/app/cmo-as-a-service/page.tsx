@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { AgentCarousel } from "@/components/AgentCarousel";
 
 export const metadata: Metadata = {
   title: "CMO as a Service | Fractional CMO for B2B SaaS",
@@ -250,8 +251,11 @@ export default function CMOPage() {
         </div>
       </section>
 
+      {/* Agent Carousel */}
+      <AgentCarousel />
+
       {/* Our Offering — Strategic Marketing Leadership */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-purple-05">
         <div className="mx-auto max-w-[1200px] px-8">
           <ScrollReveal>
             <p className="eyebrow text-center mb-3">Our offering</p>
@@ -276,7 +280,7 @@ export default function CMOPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {strategicServices.map((svc, i) => (
                   <ScrollReveal key={svc.title} delay={0.05 + i * 0.08}>
-                    <div className="rounded-xl border border-purple-15 bg-purple-05 p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-base)]">
+                    <div className="rounded-xl border border-purple-15 bg-white p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-base)]">
                       <span className="text-2xl mb-3 block">{svc.icon}</span>
                       <h4 className="text-base font-bold text-purple-9 mb-2">
                         {svc.title}
@@ -303,7 +307,7 @@ export default function CMOPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {revenueServices.map((svc, i) => (
                   <ScrollReveal key={svc.title} delay={0.05 + i * 0.08}>
-                    <div className="rounded-xl border border-purple-15 bg-purple-05 p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-base)]">
+                    <div className="rounded-xl border border-purple-15 bg-white p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-base)]">
                       <span className="text-2xl mb-3 block">{svc.icon}</span>
                       <h4 className="text-base font-bold text-purple-9 mb-2">
                         {svc.title}
@@ -339,7 +343,7 @@ export default function CMOPage() {
       </section>
 
       {/* The Triple Process */}
-      <section className="py-16 lg:py-24 bg-purple-05">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-[1100px] px-8">
           <ScrollReveal>
             <p className="eyebrow text-center mb-3">How we work</p>
@@ -375,7 +379,7 @@ export default function CMOPage() {
       </section>
 
       {/* Stats band */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-purple-05">
         <div className="mx-auto max-w-[1000px] px-8">
           <ScrollReveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -401,7 +405,7 @@ export default function CMOPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-purple-05">
+      <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-[880px] px-8 text-center">
           <ScrollReveal>
             <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
