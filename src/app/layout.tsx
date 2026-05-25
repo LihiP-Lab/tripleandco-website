@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { BackToTop } from "@/components/BackToTop";
 import { MobileCTA } from "@/components/MobileCTA";
 import { PageTransition } from "@/components/PageTransition";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -67,6 +68,7 @@ export default function RootLayout({
           <BackToTop />
           <MobileCTA />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
