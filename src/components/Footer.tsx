@@ -42,6 +42,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/cmo-as-a-service"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  CMO as a Service
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/agents"
                   className="text-sm hover:text-brand transition-colors"
                 >
