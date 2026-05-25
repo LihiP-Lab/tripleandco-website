@@ -4,6 +4,8 @@ import { useState } from "react";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (submitted) {
     return (
@@ -35,9 +37,39 @@ export function ContactForm() {
 
   return (
     <form
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
-        setSubmitted(true);
+        setSubmitting(true);
+        setError(null);
+
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
+        try {
+          const res = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              firstName: formData.get("firstName") || "",
+              lastName: formData.get("lastName") || "",
+              email: formData.get("email"),
+              company: formData.get("company") || "",
+              message: formData.get("message") || "",
+            }),
+          });
+
+          if (!res.ok) {
+            throw new Error("Submission failed");
+          }
+
+          setSubmitted(true);
+        } catch {
+          setError(
+            "Something went wrong. Please try again or email lihi@tripleandco.com directly."
+          );
+        } finally {
+          setSubmitting(false);
+        }
       }}
       className="rounded-2xl bg-white shadow-[var(--shadow-base)] border border-purple-15 p-8"
     >
@@ -45,20 +77,38 @@ export function ContactForm() {
         Let&apos;s get started
       </h3>
       <div className="space-y-4">
-        <div>
-          <label
-            htmlFor="name"
-            className="block text-sm font-semibold text-purple-9 mb-1.5"
-          >
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            required
-            className="w-full rounded-[10px] border border-purple-15 bg-purple-05 px-4 py-2.5 text-sm text-purple-9 focus:outline-none focus:border-brand transition-colors placeholder:text-purple-4"
-            placeholder="Your name"
-          />
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label
+              htmlFor="firstName"
+              className="block text-sm font-semibold text-purple-9 mb-1.5"
+            >
+              First Name
+            </label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+              className="w-full rounded-[10px] border border-purple-15 bg-purple-05 px-4 py-2.5 text-sm text-purple-9 focus:outline-none focus:border-brand transition-colors placeholder:text-purple-4"
+              placeholder="First name"
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="lastName"
+              className="block text-sm font-semibold text-purple-9 mb-1.5"
+            >
+              Last Name
+            </label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              className="w-full rounded-[10px] border border-purple-15 bg-purple-05 px-4 py-2.5 text-sm text-purple-9 focus:outline-none focus:border-brand transition-colors placeholder:text-purple-4"
+              placeholder="Last name"
+            />
+          </div>
         </div>
         <div>
           <label
@@ -70,6 +120,7 @@ export function ContactForm() {
           <input
             type="email"
             id="email"
+            name="email"
             required
             className="w-full rounded-[10px] border border-purple-15 bg-purple-05 px-4 py-2.5 text-sm text-purple-9 focus:outline-none focus:border-brand transition-colors placeholder:text-purple-4"
             placeholder="you@company.com"
@@ -85,6 +136,7 @@ export function ContactForm() {
           <input
             type="text"
             id="company"
+            name="company"
             className="w-full rounded-[10px] border border-purple-15 bg-purple-05 px-4 py-2.5 text-sm text-purple-9 focus:outline-none focus:border-brand transition-colors placeholder:text-purple-4"
             placeholder="Your company name"
           />
@@ -98,17 +150,22 @@ export function ContactForm() {
           </label>
           <textarea
             id="message"
+            name="message"
             rows={4}
             required
             className="w-full rounded-[10px] border border-purple-15 bg-purple-05 px-4 py-2.5 text-sm text-purple-9 focus:outline-none focus:border-brand transition-colors resize-none placeholder:text-purple-4"
             placeholder="Tell me about your growth goals..."
           />
         </div>
+        {error && (
+          <p className="text-sm text-red-600">{error}</p>
+        )}
         <button
           type="submit"
-          className="w-full rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
+          disabled={submitting}
+          className="w-full rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          Book a Diagnostic Call
+          {submitting ? "Submitting..." : "Book a Diagnostic Call"}
         </button>
       </div>
     </form>
