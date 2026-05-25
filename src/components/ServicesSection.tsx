@@ -5,6 +5,7 @@ import { ScrollReveal } from "./ScrollReveal";
 
 const services = [
   {
+    id: "cmo",
     name: "CMO as a Service",
     tag: "Senior marketing leadership, embedded in your team.",
     icon: (
@@ -15,6 +16,7 @@ const services = [
     ),
   },
   {
+    id: "cro",
     name: "Full CRO Service",
     tag: "Revenue ownership across marketing, sales, and customer success.",
     icon: (
@@ -25,6 +27,7 @@ const services = [
     ),
   },
   {
+    id: "brand",
     name: "Brand Strategy & Storytelling",
     tag: "Voice, positioning, and visual language that scales.",
     icon: (
@@ -34,6 +37,7 @@ const services = [
     ),
   },
   {
+    id: "gtm",
     name: "Growth Strategy & GTM",
     tag: "From thesis to a 90-day execution plan.",
     icon: (
@@ -44,6 +48,7 @@ const services = [
     ),
   },
   {
+    id: "social",
     name: "Social Management",
     tag: "Founder-led content. A full marketing calendar.",
     icon: (
@@ -53,6 +58,7 @@ const services = [
     ),
   },
   {
+    id: "hubspot",
     name: "HubSpot & Automation",
     tag: "A CRM that runs like a revenue engine.",
     icon: (
@@ -63,6 +69,7 @@ const services = [
     ),
   },
   {
+    id: "pipeline",
     name: "Pipeline Management",
     tag: "Demand generation to qualified opportunity.",
     icon: (
@@ -73,6 +80,7 @@ const services = [
     ),
   },
   {
+    id: "events",
     name: "Events & Tradeshows",
     tag: "From booth to closed pipeline.",
     icon: (
@@ -83,6 +91,7 @@ const services = [
     ),
   },
   {
+    id: "team",
     name: "In-House Team Building",
     tag: "Sourcing, training, and keeping the right marketers.",
     icon: (
@@ -119,7 +128,10 @@ export function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, i) => (
             <ScrollReveal key={service.name} delay={i * 0.06}>
-              <div className="relative bg-white rounded-2xl px-6 py-7 shadow-[var(--shadow-base)] overflow-hidden border border-purple-15 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[var(--shadow-hover)]">
+              <Link
+                href={`/services#${service.id}`}
+                className="relative block bg-white rounded-2xl px-6 py-7 shadow-[var(--shadow-base)] overflow-hidden border border-purple-15 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[var(--shadow-hover)]"
+              >
                 <div className="absolute top-0 left-0 right-0 h-1 gradient-bar" />
                 <div className="w-10 h-10 rounded-[10px] bg-pink-05 flex items-center justify-center text-brand mb-4">
                   {service.icon}
@@ -130,7 +142,7 @@ export function ServicesSection() {
                 <div className="text-sm text-purple-6 leading-relaxed">
                   {service.tag}
                 </div>
-              </div>
+              </Link>
             </ScrollReveal>
           ))}
         </div>
@@ -138,7 +150,7 @@ export function ServicesSection() {
         <ScrollReveal delay={0.5}>
           <div className="text-center">
             <Link
-              href="/contact"
+              href="/services"
               className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
             >
               See every service in detail <span>&#8594;</span>
