@@ -18,7 +18,9 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const handler = () => {
-      setVisible(false);
+      if (window.location.pathname !== prevPathname.current) {
+        setVisible(false);
+      }
     };
     window.addEventListener("popstate", handler);
     return () => window.removeEventListener("popstate", handler);
