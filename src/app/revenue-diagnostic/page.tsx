@@ -236,7 +236,6 @@ export default function RevenueDiagnosticPage() {
       <section id="book" className="py-20 lg:py-28 bg-purple-05 scroll-mt-20">
         <div className="mx-auto max-w-[1200px] px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <ScrollReveal>
               <div>
                 <p className="eyebrow mb-4">Book your diagnostic</p>
                 <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.08] text-purple-9 mb-6">
@@ -266,10 +265,7 @@ export default function RevenueDiagnosticPage() {
                   </div>
                 </div>
               </div>
-            </ScrollReveal>
-            <ScrollReveal>
               <ContactForm />
-            </ScrollReveal>
           </div>
         </div>
       </section>
