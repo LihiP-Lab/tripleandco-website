@@ -27,21 +27,9 @@ export function DiagnosisSection() {
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
-          <div className="space-y-4 text-lg lg:text-xl leading-relaxed text-purple-7">
-            <p>
-              B2B tech companies need growth. But the model most agencies still
-              operate on was built for a different era.
-            </p>
-            <p>
-              Strategy in one place. Content in another. Performance somewhere
-              else. Sales completely disconnected. AI added as a tool, not as an
-              operating system.
-            </p>
-            <p>
-              Traditional agencies create assets, manage channels, and run
-              campaigns. They rarely connect everything into one revenue engine.
-            </p>
-          </div>
+          <p className="text-lg lg:text-xl leading-relaxed text-purple-7 max-w-[720px] mx-auto">
+            Strategy in one silo. Content in another. Sales disconnected. AI bolted on as a tool, not an operating system. The result? Fragmented execution that never compounds.
+          </p>
         </ScrollReveal>
         <ul className="mt-9 text-left max-w-[640px] mx-auto">
           {painPoints.map((point, i) => (
