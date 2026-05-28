@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useTheme } from "./ThemeProvider";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
@@ -18,13 +19,14 @@ const navLinks = [
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const { theme } = useTheme();
 
   return (
     <header className="sticky top-0 z-50 glass-header" role="banner">
       <div className="mx-auto max-w-[1200px] px-8 flex items-center justify-between py-[18px] gap-6">
         <Link href="/" className="inline-flex items-center h-9" aria-label="Triple & Co. home">
           <Image
-            src="/images/logos/logo-dark.png"
+            src={theme === "dark" ? "/images/logos/logo-bright.png" : "/images/logos/logo-dark.png"}
             alt="Triple & Co."
             width={140}
             height={36}
