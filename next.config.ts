@@ -30,6 +30,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/proposals/:slug",
+        destination: "/proposals/:slug/index.html",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
