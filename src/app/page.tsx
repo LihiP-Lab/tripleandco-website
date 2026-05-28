@@ -1,9 +1,8 @@
 import { HeroOrbit } from "@/components/HeroOrbit";
 import { DiagnosisSection } from "@/components/DiagnosisSection";
-import { PillarsSection } from "@/components/PillarsSection";
-import { StatsSection } from "@/components/StatsSection";
 import { ArchitectureSection } from "@/components/ArchitectureSection";
 import { OperatorSection } from "@/components/OperatorSection";
+import { WhyDifferentSection } from "@/components/WhyDifferentSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -46,10 +45,9 @@ export default function Home() {
       </section>
 
       <DiagnosisSection />
-      <PillarsSection />
-      <StatsSection />
       <ArchitectureSection />
       <OperatorSection />
+      <WhyDifferentSection />
       <ServicesSection />
       <FAQ />
       <FinalCTA />
