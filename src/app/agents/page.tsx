@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "AI Marketing Agents",
   description:
     "Eight specialist AI agents, each trained for a specific marketing function. Supervised by Lihi Pinto. Zero unsupervised output.",
+  alternates: { canonical: "/agents" },
 };
 
 const processSteps = [

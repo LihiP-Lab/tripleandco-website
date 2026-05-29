@@ -16,6 +16,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.tripleandco.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default:
       "B2B growth needs a new kind of marketing partner. | Triple & Co.",
@@ -38,7 +42,7 @@ export const metadata: Metadata = {
     title: "B2B growth needs a new kind of marketing partner. | Triple & Co.",
     description:
       "Senior CMO and CRO leadership, full-service B2B marketing execution, and a supervised team of specialist AI agents. Built for revenue in the AI era.",
-    url: "https://tripleandco.com",
+    url: "https://www.tripleandco.com",
     siteName: "Triple & Co.",
     type: "website",
   },

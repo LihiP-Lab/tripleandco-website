@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Our Services | Triple & Co.",
   description:
     "Nine services your company can hire. Senior CMO and CRO leadership, full-service B2B marketing execution, and AI-powered delivery.",
+  alternates: { canonical: "/services" },
 };
 
 const services = [

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Revenue Diagnostic | Triple&Co",
   description:
     "Book a free 30-minute Revenue Diagnostic with Lihi Pinto. Review your funnel math, get three concrete pipeline moves, and meet the AI-powered marketing team behind Triple&Co.",
+  alternates: { canonical: "/revenue-diagnostic" },
 };
 
 const diagnosticSteps = [

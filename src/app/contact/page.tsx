@@ -3,6 +3,7 @@ import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
+  alternates: { canonical: "/contact" },
   description:
     "Book a diagnostic call with Lihi Pinto. 30 minutes. Zero pressure. Senior CMO and CRO leadership for B2B tech companies.",
 };
