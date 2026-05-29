@@ -8,6 +8,47 @@ import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { HeroContent } from "@/components/HeroContent";
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Triple & Co.",
+  url: "https://www.tripleandco.com",
+  logo: "https://www.tripleandco.com/images/logos/logo-dark.png",
+  description:
+    "AI-powered CMO & CRO as a Service for B2B tech companies. Fractional executive marketing leadership combined with 8 supervised AI marketing specialists.",
+  founder: {
+    "@type": "Person",
+    name: "Lihi Pinto",
+    url: "https://www.tripleandco.com/builder-profile",
+    jobTitle: "Founder & CMO",
+  },
+  sameAs: ["https://www.linkedin.com/company/tripleandco/"],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    url: "https://www.tripleandco.com/contact",
+  },
+  knowsAbout: [
+    "B2B Marketing",
+    "AI Marketing Agents",
+    "Fractional CMO",
+    "Revenue Growth",
+    "Content Strategy",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Triple & Co.",
+  url: "https://www.tripleandco.com",
+  description: "AI-powered CMO & CRO as a Service for B2B tech companies.",
+  publisher: {
+    "@type": "Organization",
+    name: "Triple & Co.",
+  },
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -66,6 +107,14 @@ const faqSchema = {
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
