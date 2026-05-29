@@ -5,10 +5,15 @@ import { AgentFilterBar } from "@/components/AgentFilterBar";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "AI Marketing Agents",
+  title: "AI Marketing Agents for B2B",
   description:
-    "Eight specialist AI agents, each trained for a specific marketing function. Supervised by Lihi Pinto. Zero unsupervised output.",
+    "8 purpose-built AI marketing specialists — brand voice, content, social, video, analytics & performance. Supervised by Lihi Pinto. Real deliverables, weekly cadence.",
   alternates: { canonical: "/agents" },
+  openGraph: {
+    title: "Meet Your AI Marketing Team — Triple & Co.",
+    description:
+      "Triple & Co.'s 8 AI marketing agents handle the work — brand voice to video direction — while Lihi Pinto supervises strategy. Built for B2B companies ready to scale.",
+  },
 };
 
 const processSteps = [

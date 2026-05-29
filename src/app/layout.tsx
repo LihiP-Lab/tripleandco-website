@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   },
   title: {
     default:
-      "B2B growth needs a new kind of marketing partner. | Triple & Co.",
+      "AI-Powered CMO & CRO as a Service for B2B | Triple & Co.",
     template: "%s | Triple & Co.",
   },
   description:
-    "Triple & Co. is led by Lihi Pinto. Senior CMO and CRO leadership, full-service B2B marketing execution, and a supervised team of specialist AI agents. Built for revenue in the AI era.",
+    "Triple & Co. gives B2B tech companies fractional CMO & CRO leadership plus a supervised team of 8 AI marketing specialists. Built for revenue growth. Led by Lihi Pinto.",
   keywords: [
     "CMO as a Service",
     "CRO as a Service",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     "AI marketing agents",
   ],
   openGraph: {
-    title: "B2B growth needs a new kind of marketing partner. | Triple & Co.",
+    title: "AI-Powered CMO & CRO as a Service for B2B | Triple & Co.",
     description:
-      "Senior CMO and CRO leadership, full-service B2B marketing execution, and a supervised team of specialist AI agents. Built for revenue in the AI era.",
+      "On-demand executive marketing and revenue leadership, combined with a team of AI specialists that do the work. Results in weeks, not quarters. Led by Lihi Pinto.",
     url: "https://www.tripleandco.com",
     siteName: "Triple & Co.",
     type: "website",
