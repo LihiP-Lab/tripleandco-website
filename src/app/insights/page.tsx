@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Insights | Triple & Co.",
   description:
     "Nuggets of wisdom from Lihi Pinto on tripling revenue, B2B SaaS marketing, AI-powered growth, and building startup revenue engines.",
+  alternates: { canonical: "/insights" },
 };
 
 const categories = [

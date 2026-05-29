@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Strategy Insights | Triple & Co.",
   description:
     "The Joint Work Process \u2014 more than a collaboration, more than coaching. Triple becomes another hand in your business, strategically guiding you toward relentless growth.",
+  alternates: { canonical: "/insights/strategy" },
 };
 
 const workstreams = [

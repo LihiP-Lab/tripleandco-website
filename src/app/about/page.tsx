@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "About Lihi Pinto",
   description:
     "With over 15 years of experience in investment banking and high-tech entrepreneurship, Lihi Pinto has raised over $70 million in funding and built SaaS machines that tripled revenue.",
+  alternates: { canonical: "/about" },
 };
 
 const credentials = [

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "CMO as a Service | Fractional CMO for B2B SaaS",
   description:
     "On-demand executive marketing leadership for high-growth B2B SaaS startups. Led by Lihi Pinto — embedded, hands-on, revenue-focused.",
+  alternates: { canonical: "/cmo-as-a-service" },
 };
 
 const whyCards = [

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Revenue Insights | Triple & Co.",
   description:
     "Every startup has its own scaling formula. Explore how Triple & Co. builds marketing, sales, and customer success engines that triple revenue.",
+  alternates: { canonical: "/insights/revenue" },
 };
 
 const pillars = [

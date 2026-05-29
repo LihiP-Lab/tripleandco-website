@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Podcasts | Triple & Co.",
   description:
     "Battle-tested B2B marketing strategies with AI. Short, sharp episodes by Lihi Pinto for CMOs, founders, and marketers serious about growth.",
+  alternates: { canonical: "/insights/podcasts" },
 };
 
 const episodes = [

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Builder Profile — Lihi Pinto",
   description:
     "Lihi Pinto builds AI-powered revenue systems for B2B companies. Meet the builder behind Triple & Co.'s 8 supervised AI marketing agents.",
+  alternates: { canonical: "/builder-profile" },
 };
 
 /* ── Data ─────────────────────────────────────────────────── */
