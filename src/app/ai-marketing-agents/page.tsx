@@ -22,18 +22,18 @@ const agents = [
     name: "Camille",
     role: "Brand Voice Generator",
     description:
-      "Camille extracts your brand voice from your existing content and applies it consistently across every channel. So your company sounds like itselfnot like every other B2B SaaS on LinkedIn. She handles voice extraction, asset rewrites, and delivers a tone guide your whole team can use.",
+      "Camille extracts your brand voice from your existing content and applies it consistently across every channel. So your company sounds like itself, not like every other B2B SaaS on LinkedIn. She handles voice extraction, asset rewrites, and delivers a tone guide your whole team can use.",
     model: "Claude Sonnet",
-    price: "$5,000/mo retainer",
+    diagnostic: "Brand Voice Diagnostic \u00b7 2 weeks \u00b7 $2,000 fixed scope",
     id: "camille",
   },
   {
     name: "Vega",
     role: "Art Director",
     description:
-      "Vega owns visual direction across brand, marketing, web, and decks. She runs on Opus because design judgment compoundsa wrong type choice or a sloppy hierarchy isn\u2019t a bug you patch later, it\u2019s brand erosion you pay for in every campaign after. She always ships two to four directions with a recommendation, never one solution without a pick.",
+      "Vega owns visual direction across brand, marketing, web, and decks. She runs on Opus because design judgment compounds. A wrong type choice or a sloppy hierarchy isn\u2019t a bug you patch later, it\u2019s brand erosion you pay for in every campaign after. She always ships two to four directions with a recommendation, never one solution without a pick.",
     model: "Claude Opus",
-    price: "$6,000/mo retainer",
+    diagnostic: "Visual Direction Diagnostic \u00b7 2 weeks \u00b7 $2,500 fixed scope",
     id: "vega",
   },
   {
@@ -42,25 +42,25 @@ const agents = [
     description:
       "Rex audits your growth engine, finds the campaigns that will actually move pipeline, and maps the 90 days that get you to your next revenue milestone. He delivers a 12-month campaign audit, a sequenced 90-day roadmap, and an ICP analysis with message-market fit assessment.",
     model: "Claude Sonnet",
-    price: "$4,500/mo retainer",
+    diagnostic: "Growth Engine Diagnostic \u00b7 3 weeks \u00b7 $2,500 fixed scope",
     id: "rex",
   },
   {
     name: "Zara",
     role: "Social Media Commander",
     description:
-      "Zara turns your social channels from background noise into a revenue-driving asset. Founder voice, content cadence, and measurementall in one. She audits your current channels, builds a 30-day content calendar ready to publish, and establishes an executive voice framework.",
+      "Zara turns your social channels from background noise into a revenue-driving asset. Founder voice, content cadence, and measurement, all in one. She audits your current channels, builds a 30-day content calendar ready to publish, and establishes an executive voice framework.",
     model: "Claude Haiku",
-    price: "$3,000/mo retainer",
+    diagnostic: "Social Presence Diagnostic \u00b7 2 weeks \u00b7 $1,500 fixed scope",
     id: "zara",
   },
   {
     name: "Nova",
     role: "Content Research Analyst",
     description:
-      "Nova maps the content landscape in your category, surfaces the topics your buyers actually search, and hands you a content strategy grounded in real demandnot guesses. She delivers a competitive gap analysis, a keyword map built on buyer intent, and ten content plays sized by demand.",
+      "Nova maps the content landscape in your category, surfaces the topics your buyers actually search, and hands you a content strategy grounded in real demand, not guesses. She delivers a competitive gap analysis, a keyword map built on buyer intent, and ten content plays sized by demand.",
     model: "Claude Sonnet",
-    price: "$4,000/mo retainer",
+    diagnostic: "Content Intelligence Diagnostic \u00b7 2 weeks \u00b7 $1,800 fixed scope",
     id: "nova",
   },
   {
@@ -69,7 +69,7 @@ const agents = [
     description:
       "Atlas unifies your marketing and sales data, tells you where budget is actually working, and builds the dashboards your leadership needs to move faster. He delivers full-funnel attribution, a leadership-ready performance dashboard, and a budget reallocation plan with ROI projections.",
     model: "Claude Opus",
-    price: "$6,500/mo retainer",
+    diagnostic: "Marketing Performance Diagnostic \u00b7 3 weeks \u00b7 $3,500 fixed scope",
     id: "atlas",
   },
   {
@@ -78,16 +78,16 @@ const agents = [
     description:
       "Sage takes the content you\u2019ve already produced and multiplies its reach. One webinar becomes a dozen LinkedIn posts, three blog articles, an email sequence, and a lead magnet. She scores your content library by leverage potential and maps every asset to its best distribution channel.",
     model: "Claude Haiku",
-    price: "$2,500/mo retainer",
+    diagnostic: "Content Leverage Diagnostic \u00b7 2 weeks \u00b7 $1,200 fixed scope",
     id: "sage",
   },
   {
     name: "Lumen",
     role: "Video Director",
     description:
-      "Lumen owns video end to end. Concept, script, shot list, edit direction, and post. He runs on Opus because the first three seconds of a video decide whether anyone watches the next thirtyand that call can\u2019t be patched in post. He thinks in story before tools. Hook, setup, payoff.",
+      "Lumen owns video end to end. Concept, script, shot list, edit direction, and post. He runs on Opus because the first three seconds of a video decide whether anyone watches the next thirty, and that call can\u2019t be patched in post. He thinks in story before tools. Hook, setup, payoff.",
     model: "Claude Opus",
-    price: "$5,800/mo retainer",
+    diagnostic: "Video Engine Diagnostic \u00b7 3 weeks \u00b7 $2,500 fixed scope",
     id: "lumen",
   },
 ];
@@ -346,23 +346,34 @@ export default function AIMarketingAgentsPage() {
                     </div>
                     {/* Agent content */}
                     <div className="flex-1 p-6">
-                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
                         <div>
-                          <Link
-                            href={`/agents#${agent.id}`}
-                            className="text-xl font-extrabold text-purple-9 hover:text-brand transition-colors"
-                          >
+                          <span className="text-xl font-extrabold text-purple-9">
                             {agent.name}
-                          </Link>
-                          <span className="text-purple-7 ml-2 text-sm">
+                          </span>
+                          <span className="text-purple-5 ml-2 text-sm font-medium">
                             {agent.role}
                           </span>
                         </div>
                         <ModelBadge model={agent.model} />
                       </div>
-                      <p className="text-purple-7 leading-relaxed text-sm">
+                      <p className="text-purple-7 leading-relaxed text-sm mb-4">
                         {agent.description}
                       </p>
+                      <div className="flex flex-wrap items-center gap-3 pt-3 border-t border-purple-subtle">
+                        <Link
+                          href={`/contact?agent=${agent.id}&offer=diagnostic`}
+                          className="text-xs font-bold text-brand hover:underline"
+                        >
+                          Start here: {agent.diagnostic} →
+                        </Link>
+                        <Link
+                          href={`/agents#${agent.id}`}
+                          className="text-xs font-semibold text-purple-6 hover:text-brand transition-colors ml-auto"
+                        >
+                          Full profile →
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
