@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     title: "Meet Your AI Marketing Team — Triple & Co.",
     description:
       "Triple & Co.'s 8 AI marketing agents handle the work — brand voice to video direction — while Lihi Pinto supervises strategy. Built for B2B companies ready to scale.",
+      url: "https://www.tripleandco.com/agents",
+twitter: {
+    card: "summary_large_image",
+    title: "AI Marketing Agents for B2B — Triple & Co.",
+    description:
+      "8 purpose-built AI marketing specialists — brand voice, content, social, video, analytics and more. Supervised by Lihi Pinto. Real deliverables, weekly cadence.",
   },
 };
 
