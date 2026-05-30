@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+
 import { AgentFilterBar } from "@/components/AgentFilterBar";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
@@ -82,6 +83,22 @@ export default function AgentsPage() {
               diagnostic.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Pillar page callout */}
+      <section className="py-5 bg-dark">
+        <div className="mx-auto max-w-[1200px] px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-purple-light">
+            <span className="font-bold text-white">New to AI marketing agents?</span>{" "}
+            Read our complete guide to what they are and how to deploy them.
+          </p>
+          <Link
+            href="/ai-marketing-agents"
+            className="shrink-0 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-dark transition-colors"
+          >
+            Read the guide &#8594;
+          </Link>
         </div>
       </section>
 

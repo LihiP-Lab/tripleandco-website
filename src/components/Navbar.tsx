@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/cmo-as-a-service", label: "CMO as a Service" },
   { href: "/agents", label: "Marketing Agents" },
+  { href: "/ai-marketing-agents", label: "AI Agents Guide" },
   { href: "/insights", label: "Insights" },
   { href: "/contact", label: "Contact" },
 ];
