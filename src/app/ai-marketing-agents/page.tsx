@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -330,27 +331,40 @@ export default function AIMarketingAgentsPage() {
           <div className="space-y-6">
             {agents.map((agent, i) => (
               <ScrollReveal key={agent.id} delay={0.05 + i * 0.06}>
-                <div className="relative bg-purple-05 rounded-2xl p-7 overflow-hidden">
+                <div className="relative bg-purple-05 rounded-2xl overflow-hidden">
                   <div className="absolute top-0 left-0 right-0 h-[3px] gradient-bar" />
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3">
-                    <div>
-                      <Link
-                        href={`/agents#${agent.id}`}
-                        className="text-xl font-extrabold text-purple-9 hover:text-brand transition-colors"
-                      >
-                        {agent.name}
-                      </Link>
-                      <span className="text-purple-7 ml-2">
-                       {agent.role}
-                      </span>
+                  <div className="flex flex-col sm:flex-row">
+                    {/* Agent image */}
+                    <div className="sm:w-40 sm:shrink-0 bg-gradient-to-br from-purple-subtle to-bg flex items-end justify-center pt-4 sm:pt-0">
+                      <Image
+                        src={`/images/agents/${agent.id}.png`}
+                        alt={`${agent.name}, ${agent.role}`}
+                        width={128}
+                        height={128}
+                        className="object-contain w-28 h-28 sm:w-32 sm:h-32"
+                      />
                     </div>
-                    <div className="flex items-center gap-2 shrink-0">
-                      <ModelBadge model={agent.model} />
+                    {/* Agent content */}
+                    <div className="flex-1 p-6">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                        <div>
+                          <Link
+                            href={`/agents#${agent.id}`}
+                            className="text-xl font-extrabold text-purple-9 hover:text-brand transition-colors"
+                          >
+                            {agent.name}
+                          </Link>
+                          <span className="text-purple-7 ml-2 text-sm">
+                            {agent.role}
+                          </span>
+                        </div>
+                        <ModelBadge model={agent.model} />
+                      </div>
+                      <p className="text-purple-7 leading-relaxed text-sm">
+                        {agent.description}
+                      </p>
                     </div>
                   </div>
-                  <p className="text-purple-7 leading-relaxed">
-                    {agent.description}
-                  </p>
                 </div>
               </ScrollReveal>
             ))}
