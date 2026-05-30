@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services",
     "/cmo-as-a-service",
     "/agents",
+    "/ai-marketing-agents",
     "/builder-profile",
     "/insights",
     "/insights/revenue",
@@ -22,6 +23,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: route === "/" ? "weekly" : "monthly",
-    priority: route === "/" ? 1 : route === "/cmo-as-a-service" ? 0.9 : 0.8,
+    priority:
+      route === "/"
+        ? 1
+        : route === "/cmo-as-a-service" || route === "/ai-marketing-agents"
+          ? 0.9
+          : 0.8,
   }));
 }
