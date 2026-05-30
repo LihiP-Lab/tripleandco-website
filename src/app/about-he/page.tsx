@@ -3,14 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "אודות ליהי פינטו | Triple & Co.",
+  title: "אודות ליהיא פינטו | Triple & Co.",
   description:
-    "עם ניסיון של יותר מ-15 שנה בבנקאות השקעות ויזמות הייטק, ליהי פינטו גייסה מעל 70 מיליון דולר ושילשה הכנסות של חברות SaaS שוב ושוב.",
+    "ליהיא פינטו, CMO ו-CRO מסוג Native AI. מנהיגות בכירה, ביצוע מלא ו-8 סוכני AI לחברות B2B שרוצות לצמוח מהר יותר.",
   alternates: { canonical: "/about-he" },
   openGraph: {
-    title: "אודות ליהי פינטו | Triple & Co.",
+    title: "אודות ליהיא פינטו | Triple & Co.",
     description:
-      "עם ניסיון של יותר מ-15 שנה בבנקאות השקעות ויזמות הייטק, ליהי פינטו גייסה מעל 70 מיליון דולר ושילשה הכנסות של חברות SaaS שוב ושוב.",
+      "ליהיא פינטו, CMO ו-CRO מסוג Native AI. מנהיגות בכירה, ביצוע מלא ו-8 סוכני AI לחברות B2B שרוצות לצמוח מהר יותר.",
     url: "https://www.tripleandco.com/about-he",
   },
 };
@@ -19,6 +19,8 @@ const credentials = [
   "15+ שנות ניסיון ב-B2B SaaS ובנקאות השקעות",
   "גיוס של יותר מ-70 מיליון דולר",
   "שילוש הכנסות בחברת SaaS, שוב ושוב",
+  "8 סוכני AI ייעודיים, מובלים על ידי ליהיא, עובדים עבורכם כל שבוע",
+  "Human in the Loop: כל פלט עובר ליהיא לפני שיוצא לעולם",
   "דוברת עברית ואנגלית. ישראלית ובינלאומית.",
 ];
 
@@ -32,16 +34,19 @@ export default function AboutHebrewPage() {
             <div className="lg:col-span-7">
               <p className="eyebrow mb-4">אודות</p>
               <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.15] text-purple-9 mb-6">
-                היי! אני <span className="gradient-text">ליהי</span>.
+                היי! אני <span className="gradient-text">ליהיא</span>.
               </h1>
+              <p className="text-lg text-purple-7 leading-relaxed mb-2">
+                CMO ו-CRO מסוג חדש, Native AI.
+              </p>
               <p className="text-lg text-purple-7 leading-relaxed mb-4">
                 יש לי ניסיון של יותר מ-15 שנה בבנקאות השקעות ויזמות הייטק.
-                גייסתי יותר מ-70 מיליון דולר ובניתי מכונת SaaS שבה שילשתי את
-                הכנסות החברה שלי שוב ושוב.
+                גייסתי מעל 70 מיליון דולר ושילשתי הכנסות של חברות SaaS שוב ושוב.
               </p>
               <p className="text-lg text-purple-7 leading-relaxed">
-                עכשיו אני במשימה לעזור לסטארטאפים אחרים לעשות בדיוק את אותו
-                הדבר.
+                היום אני בונה דבר שלא קיים בשוק הישראלי: מנוע צמיחה שמשלב
+                מנהיגות בכירה, ביצוע מלא ו-8 סוכני AI שעובדים עבורכם כבר מהיום
+                הראשון.
               </p>
             </div>
             <div className="lg:col-span-5 flex justify-center">
@@ -49,7 +54,7 @@ export default function AboutHebrewPage() {
                 <div className="absolute top-0 left-0 right-0 h-1.5 gradient-bar z-10" />
                 <Image
                   src="/images/lihi.png"
-                  alt="ליהי פינטו"
+                  alt="ליהיא פינטו"
                   fill
                   className="object-cover object-top"
                   priority
@@ -64,22 +69,23 @@ export default function AboutHebrewPage() {
       <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-[880px] px-8">
           <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.2] text-purple-9 mb-8">
-            יזמים מתמודדים עם אתגרים רבים בדרכם לצמיחה.
+            שיווק מסורתי כבר לא עובד כמו שעבד.
           </h2>
           <div className="flex items-baseline gap-4 mb-8">
             <span className="text-6xl font-black gradient-text">5%</span>
             <span className="text-xl text-purple-7">מהסטארטאפים מצליחים</span>
           </div>
           <p className="text-lg text-purple-7 leading-relaxed mb-6">
-            תני ל-Triple &amp; Co. להפוך ליתרון הבלתי הוגן שלך.
+            הסוכנויות הישנות לא נבנו לעידן ה-AI. הן יוצרות תוכן, אבל לא
+            מחברות הכל למנוע הכנסות אחד.
           </p>
           <p className="text-purple-7 leading-relaxed mb-6">
-            יחד, נעזור לך למקסם את המומנטום ולהאיץ את מאמציך לבנות
-            &apos;מכונת כסף&apos; עם פוטנציאל לשלש את ההכנסות שלך.
+            Triple &amp; Co. עובדת אחרת: ליהיא מביאה את האסטרטגיה, ה-execution
+            ו-8 סוכני AI ייעודיים, ובונה איתכם מכונה שמשלשת הכנסות.
           </p>
           <p className="text-purple-7 leading-relaxed mb-8">
             חייתי בתוך תרבות הסטארטאפים. כמה הייתי רוצה שה&apos;אני&apos; של
-            היום הייתה לצד ליהי של אז. ללמד אותה איך לבנות מערכות ולגדול מהיסוד.
+            היום הייתה לצד ליהיא של אז. ללמד אותה איך לבנות מערכות ולגדול מהיסוד.
           </p>
 
           <ul className="mb-8">
@@ -95,8 +101,8 @@ export default function AboutHebrewPage() {
           </ul>
 
           <blockquote className="text-lg italic text-purple-9 py-5 px-6 bg-purple-05 border-r-4 border-l-0 border-brand rounded-xl shadow-[var(--shadow-base)] leading-snug">
-            &ldquo;בונה את צוות השיווק שהייתי רוצה שיהיה לי כמייסדת בשלב
-            מוקדם.&rdquo;
+            &ldquo;מי שבנה מכונות SaaS יודע מה לשנות קודם. אני מביאה את ה-strategy,
+            את ה-execution ואת ה-AI. אתם מביאים את הוויזה.&rdquo;
           </blockquote>
         </div>
       </section>
@@ -105,10 +111,10 @@ export default function AboutHebrewPage() {
       <section className="py-20 lg:py-28 bg-purple-05">
         <div className="mx-auto max-w-[880px] px-8 text-center">
           <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
-            מוכנים לעבוד יחד?
+            רוצים לראות מה Native AI CMO ו-CRO עושים לעסק שלכם?
           </h2>
           <p className="text-purple-7 mb-10">
-            גלו איך AI משנה את מנוע ההכנסות שלכם, עם ליהי פינטו.
+            קבעו שיחת אבחון עם ליהיא פינטו וגלו איך AI משנה את מנוע ההכנסות שלכם.
           </p>
           <Link
             href="/contact"
