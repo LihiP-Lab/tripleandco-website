@@ -100,7 +100,7 @@ export default function AboutHebrewPage() {
             ))}
           </ul>
 
-          <blockquote className="text-lg italic py-5 px-6 bg-white border-r-4 border-l-0 border-brand rounded-xl shadow-[var(--shadow-base)] leading-snug" style={{color: '#1B161F'}}>
+          <blockquote className="text-lg italic py-5 px-6 border-r-4 border-l-0 border-brand rounded-xl leading-snug" style={{color: '#1B161F', backgroundColor: '#ffffff', boxShadow: '0 2px 16px rgba(0,0,0,0.08)'}}>
             &ldquo;מי שבנה מכונות SaaS יודע מה לשנות קודם. אני מביאה את ה-strategy,
             את ה-execution ואת ה-AI. אתם מביאים את הוויזה.&rdquo;
           </blockquote>
