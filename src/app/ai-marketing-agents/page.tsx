@@ -93,7 +93,7 @@ const agents = [
 
 const comparisonRows = [
   { label: "Time to first output", traditional: "30–90 days", agent: "1 week" },
-  { label: "Monthly cost", traditional: "$8,000–$20,000", agent: "$2,500–$6,500" },
+
   { label: "Consistency", traditional: "Variable", agent: "Consistent by design" },
   { label: "Supervision needed", traditional: "Self-directed", agent: "Human-in-the-loop" },
   { label: "Ramp time", traditional: "60–90 days", agent: "None" },
@@ -346,9 +346,6 @@ export default function AIMarketingAgentsPage() {
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
                       <ModelBadge model={agent.model} />
-                      <span className="text-sm font-semibold text-purple-7">
-                        {agent.price}
-                      </span>
                     </div>
                   </div>
                   <p className="text-purple-7 leading-relaxed">
