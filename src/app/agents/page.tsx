@@ -13,9 +13,10 @@ export const metadata: Metadata = {
     title: "Meet Your AI Marketing Team — Triple & Co.",
     description:
       "Triple & Co.'s 8 AI marketing agents handle the work — brand voice to video direction — while Lihi Pinto supervises strategy. Built for B2B companies ready to scale.",
-      url: "https://www.tripleandco.com/agents",
-twitter: {
-    card: "summary_large_image",
+    url: "https://www.tripleandco.com/agents",
+  },
+  twitter: {
+    card: "summary_large_image" as const,
     title: "AI Marketing Agents for B2B — Triple & Co.",
     description:
       "8 purpose-built AI marketing specialists — brand voice, content, social, video, analytics and more. Supervised by Lihi Pinto. Real deliverables, weekly cadence.",
@@ -33,7 +34,7 @@ const processSteps = [
     number: "2",
     title: "Run",
     description:
-      "Your agent runs on Claude. Lihi supervises strategy and quality end to end \u2014 you\u2019re never handed raw AI output.",
+      "Your agent runs on Claude. Lihi supervises strategy and quality end to end — you're never handed raw AI output.",
   },
   {
     number: "3",
