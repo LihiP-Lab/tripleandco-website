@@ -176,7 +176,7 @@ export default function AIMarketingAgentsPage() {
 
           <ScrollReveal>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] text-purple-9 mb-6 mt-6">
-              AI Marketing Agents for B2B —{" "}
+              AI Marketing Agents for B2B:{" "}
               <span className="gradient-text">
                 What They Are and How to Deploy Them
               </span>
@@ -230,11 +230,11 @@ export default function AIMarketingAgentsPage() {
             </p>
             <p className="text-lg text-purple-7 leading-relaxed">
               Agents are also supervised. At Triple &amp; Co., every piece of
-              work passes a human —{" "}
+              work passes a human,{" "}
               <Link href="/about" className="text-brand font-semibold hover:underline">
                 Lihi Pinto
-              </Link>{" "}
-             before it ships. That&rsquo;s the operating model: AI handles
+              </Link>
+              , before it ships. That&rsquo;s the operating model: AI handles
               the execution, a senior operator handles the judgment calls.
             </p>
           </ScrollReveal>
@@ -445,11 +445,11 @@ export default function AIMarketingAgentsPage() {
                 },
                 {
                   title: "Companies scaling into new markets",
-                  body: "— Israeli companies going global, or global companies entering Israel",
+                  body: "Israeli companies going global, or global companies entering Israel",
                 },
                 {
                   title: "Teams with a marketing manager but no senior leadership",
-                  body: "— the agents provide the specialist depth, Lihi provides the strategic direction",
+                  body: "the agents provide the specialist depth, Lihi provides the strategic direction",
                 },
               ].map((item) => (
                 <div
