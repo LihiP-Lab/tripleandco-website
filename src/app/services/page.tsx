@@ -16,7 +16,7 @@ const services = [
     name: "CMO as a Service",
     tag: "Senior marketing leadership, embedded in your team.",
     description:
-      "Get executive-level marketing leadership without the full-time commitment. Lihi Pinto embeds within your leadership circle, joining your meetings, aligning with your goals and driving strategy from day one. From positioning and demand generation to team building and board reporting \u2014 everything a full-time CMO delivers, on your terms.",
+      "Get executive-level marketing leadership without the full-time commitment. Lihi Pinto embeds within your leadership circle, joining your meetings, aligning with your goals and driving strategy from day one. From positioning and demand generation to team building and board reporting, everything a full-time CMO delivers, on your terms.",
     deliverables: [
       "Marketing strategy & OKR alignment",
       "Go-to-market planning & execution",
@@ -36,7 +36,7 @@ const services = [
     name: "Full CRO Service",
     tag: "Revenue ownership across marketing, sales, and customer success.",
     description:
-      "A unified revenue engine that aligns marketing, sales and customer success under one strategic leader. We own the entire funnel \u2014 from first touch to closed-won to expansion \u2014 and build the processes, playbooks and dashboards your team needs to hit revenue targets consistently.",
+      "A unified revenue engine that aligns marketing, sales and customer success under one strategic leader. We own the entire funnel, from first touch to closed-won to expansion, and build the processes, playbooks and dashboards your team needs to hit revenue targets consistently.",
     deliverables: [
       "Full-funnel revenue strategy",
       "Sales & marketing alignment",
@@ -56,7 +56,7 @@ const services = [
     name: "Brand Strategy & Storytelling",
     tag: "Voice, positioning, and visual language that scales.",
     description:
-      "Your brand is more than a logo. We define your positioning, craft your narrative and build a visual identity system that resonates with buyers and scales across every channel. From messaging frameworks to brand guidelines \u2014 everything your team needs to speak with one voice.",
+      "Your brand is more than a logo. We define your positioning, craft your narrative and build a visual identity system that resonates with buyers and scales across every channel. From messaging frameworks to brand guidelines, everything your team needs to speak with one voice.",
     deliverables: [
       "Brand positioning & messaging framework",
       "Visual identity guidelines",
@@ -75,7 +75,7 @@ const services = [
     name: "Growth Strategy & GTM",
     tag: "From thesis to a 90-day execution plan.",
     description:
-      "We turn your growth thesis into a concrete, executable plan. Starting with ICP definition and market analysis, we build a 90-day go-to-market roadmap with clear milestones, channel strategy and budget allocation. No slide decks that sit on a shelf \u2014 a living plan your team executes against.",
+      "We turn your growth thesis into a concrete, executable plan. Starting with ICP definition and market analysis, we build a 90-day go-to-market roadmap with clear milestones, channel strategy and budget allocation. No slide decks that sit on a shelf. A living plan your team executes against.",
     deliverables: [
       "ICP & market segmentation",
       "90-day GTM roadmap",
@@ -95,7 +95,7 @@ const services = [
     name: "Social Management",
     tag: "Founder-led content. A full marketing calendar.",
     description:
-      "Social presence built around founder authority and company expertise. We create a full content calendar, produce founder-led posts, manage community engagement and measure what actually drives pipeline \u2014 not vanity metrics. Your channels become a revenue-driving asset.",
+      "Social presence built around founder authority and company expertise. We create a full content calendar, produce founder-led posts, manage community engagement and measure what actually drives pipeline, not vanity metrics. Your channels become a revenue-driving asset.",
     deliverables: [
       "Content calendar & cadence planning",
       "Founder-led content creation",
@@ -154,7 +154,7 @@ const services = [
     name: "Events & Tradeshows",
     tag: "From booth to closed pipeline.",
     description:
-      "Events are expensive \u2014 make them count. We handle end-to-end event strategy: selecting the right shows, designing booth experiences, preparing your team with talk tracks and follow-up sequences, and measuring the pipeline generated. From booth to closed deal.",
+      "Events are expensive. Make them count. We handle end-to-end event strategy: selecting the right shows, designing booth experiences, preparing your team with talk tracks and follow-up sequences, and measuring the pipeline generated. From booth to closed deal.",
     deliverables: [
       "Event selection & ROI planning",
       "Booth design & experience strategy",
