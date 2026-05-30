@@ -383,6 +383,45 @@ export default function AIMarketingAgentsPage() {
         </div>
       </section>
 
+      {/* Human in the Loop — Lihi */}
+      <section className="py-16 lg:py-24 bg-dark">
+        <div className="mx-auto max-w-[880px] px-8">
+          <ScrollReveal>
+            <div className="flex flex-col md:flex-row items-center gap-10">
+              <div className="shrink-0">
+                <div className="relative w-48 h-48 rounded-full overflow-hidden ring-4 ring-brand/30">
+                  <Image
+                    src="/images/lihi.png"
+                    alt="Lihi Pinto, founder of Triple & Co."
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
+              <div>
+                <p className="eyebrow text-brand mb-3">The Human in the Loop</p>
+                <h2 className="text-3xl lg:text-[36px] font-black tracking-tight leading-[1.1] text-white mb-4">
+                  Every agent runs under Lihi&rsquo;s supervision.{" "}
+                  <span className="gradient-text">Zero unsupervised output.</span>
+                </h2>
+                <p className="text-purple-light leading-relaxed mb-4">
+                  Lihi Pinto is a marketing and revenue executive with 15+ years scaling B2B SaaS startups. She raised over $70M, tripled revenue at a SaaS company repeatedly, and built the operating system that powers the agent team.
+                </p>
+                <p className="text-purple-light leading-relaxed mb-6">
+                  Every deliverable passes Lihi before it reaches you. She reviews for brand alignment, strategic accuracy, and quality. You are not buying AI tools you manage yourself — you are getting an operator who runs them for you.
+                </p>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 text-brand font-bold hover:underline text-sm"
+                >
+                  Meet Lihi →
+                </Link>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section className="py-16 lg:py-24 bg-purple-05">
         <div className="mx-auto max-w-[880px] px-8">
