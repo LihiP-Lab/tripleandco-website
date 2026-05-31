@@ -613,9 +613,6 @@ export default function AboutHebrewPage() {
                     loading="lazy"
                   />
                 </div>
-                <div className="px-5 py-4">
-                  <p className="text-sm font-bold text-purple-8 leading-snug">{v.title}</p>
-                </div>
               </div>
             ))}
           </div>
@@ -638,8 +635,7 @@ export default function AboutHebrewPage() {
             <span className="gradient-text">שיחת אבחון</span>.
           </h2>
           <p className="text-purple-3 text-lg mb-10 max-w-lg mx-auto">
-            פגישה אחת. ליהיא עושה אבחון של מבצע ההכנסות שלכם וממפה את
-            הסוכנים הספציפיים שיזיזו את המחט.
+            פגישה אחת. אבחון של מנוע הצמיחה שלכם. מיפוי של הסוכנים הספציפיים שיזיזו את המחט.
           </p>
           <Link
             href="/contact"
