@@ -128,7 +128,7 @@ const videos = [
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
 const stats = [
-  { value: 70, suffix: "M+", label: "גויס עבור לקוחות", prefix: "$" },
+  { value: 70, suffix: "M$", label: "גיוסים", prefix: "" },
   { value: 15, suffix: "+", label: "שנות ניסיון ב-B2B SaaS", prefix: "" },
   { value: 3, suffix: "×", label: "צמיחה בהכנסות, שוב ושוב", prefix: "" },
   { value: 8, suffix: "", label: "סוכני AI בצוות שלכם", prefix: "" },
@@ -137,8 +137,8 @@ const stats = [
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function AboutHebrewPage() {
   const typewritten = useTypewriter([
-    "ה-CMO הראשון בישראל עם AI ילידי.",
-    "ה-CRO הראשון בישראל עם AI ילידי.",
+    "ה-CMO הראשון בישראל עם AI נייטיב.",
+    "ה-CRO הראשון בישראל עם AI נייטיב.",
     "Human in the Loop.",
     "8 סוכנים. מפקחת אחת.",
     "בריף. הפעלה. מסירה.",
@@ -209,13 +209,13 @@ export default function AboutHebrewPage() {
 
               <p className="text-lg text-purple-3 leading-relaxed mb-6 max-w-xl">
                 15 שנות ניסיון ב-B2B SaaS ובנקאות השקעות. יותר מ-70 מיליון דולר
-                שגויסו. הכנסות שולשו, שוב ושוב. כעת מפעילה את מבצע השיווק הראשון
-                בעולם עם AI מלא, שמורכב מ-8 סוכנים ייעודיים עם ליהיא כ-Human in
+                שגויסו. הכנסות שולשו, שוב ושוב. כעת מפעילה את צוות השיווק הראשון
+                בישראל עם AI מלא, שמורכב מ-8 סוכנים ייעודיים עם ליהיא כ-Human in
                 the Loop.
               </p>
               <p className="text-lg text-purple-3 leading-relaxed mb-10 max-w-xl">
                 לא פלט AI גולמי. לא ספריית פרומפטים. מכונת הכנסות עם פיקוח
-                מקצה לקצה, שמנוהלת על ידי CMO שכבר עשתה את זה.
+                מקצה לקצה, שמנוהלת על ידי CRO שכבר עשתה את זה.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -321,9 +321,9 @@ export default function AboutHebrewPage() {
           <p className="eyebrow mb-4 text-brand">הראשון מסוגו</p>
           <h2 className="text-4xl lg:text-[52px] font-black leading-[1.1] text-purple-9 mb-8" style={{ letterSpacing: "-0.02em" }}>
             ה-CMO/CRO הראשון בישראל{" "}
-            <span className="gradient-text">עם AI ילידי</span>.
+            <span className="gradient-text">עם AI נייטיב</span>.
             <br />לא יועצת שמשתמשת ב-AI.
-            <br />מפעילה שנבנתה סביבו.
+            <br />אקסקיושן מלא.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
             <div>
@@ -334,7 +334,7 @@ export default function AboutHebrewPage() {
                 ושילשה הכנסות SaaS בעולם האמיתי.
               </p>
               <p className="text-purple-7 leading-relaxed">
-                התוצאה: מבצע שיווק שרץ במהירות מכונה, עם שיקול דעת אנושי
+                התוצאה: צוות שיווק שרץ במהירות מכונה, עם שיקול דעת אנושי
                 על כל פלט שיוצא החוצה. אתם לא מקבלים טקסט AI גולמי. כל
                 דלברבל נסקר, מעודן ומאושר.
               </p>
@@ -344,7 +344,6 @@ export default function AboutHebrewPage() {
                 "פיקוח מקצה לקצה, על ידי ליהיא",
                 "8 מומחי Claude מוגדרים מראש",
                 "הבריף מכם. הביצוע על ידי הסוכנים. הסקירה על ידי ליהיא.",
-                "דוברת עברית ואנגלית. ישראלית ובינלאומית.",
                 "15+ שנות ניסיון ב-SaaS, לא תיאוריה שיווקית",
               ].map((point) => (
                 <div
@@ -377,9 +376,9 @@ export default function AboutHebrewPage() {
           <div className="text-center mb-16">
             <p className="eyebrow text-brand mb-3">הצוות מאחורי העבודה</p>
             <h2 className="text-4xl lg:text-[52px] font-black leading-[1.05] text-white" style={{ letterSpacing: "-0.02em" }}>
-              8 סוכנים. מפקחת{" "}
+              8 סוכנים. ליהיא{" "}
               <span className="gradient-text">אחת</span>.
-              <br />פלט אינסופי.
+              <br />אקסקיושן מלא.
             </h2>
             <p className="text-purple-3 text-lg mt-4 max-w-xl mx-auto">
               כל סוכן מנהל ורטיקל. ליהיא מחזיקה את הבריף, סוקרת כל
@@ -521,10 +520,6 @@ export default function AboutHebrewPage() {
         <div className="mx-auto max-w-[1200px] px-8">
           <div className="text-center mb-14">
             <p className="eyebrow text-brand mb-3">ליהיא בפעולה</p>
-            <h2 className="text-4xl lg:text-[48px] font-black leading-[1.05] text-purple-9" style={{ letterSpacing: "-0.02em" }}>
-              תראו איך{" "}
-              <span className="gradient-text">המכונה רצה</span>.
-            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
