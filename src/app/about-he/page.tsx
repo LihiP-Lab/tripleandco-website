@@ -519,7 +519,20 @@ export default function AboutHebrewPage() {
       <section className="py-24 lg:py-32 bg-purple-05">
         <div className="mx-auto max-w-[1200px] px-8">
           <div className="text-center mb-14">
-            <p className="eyebrow text-brand mb-3">ליהיא בפעולה</p>
+            <div className="inline-flex items-center gap-2 bg-white border border-purple-15 rounded-full px-5 py-2 mb-6 shadow-[var(--shadow-base)]">
+              <span
+                className="w-2 h-2 rounded-full bg-brand shrink-0"
+                style={{ animation: "ai-dot-pulse 1.5s ease-in-out infinite" }}
+              />
+              <span className="text-xs font-bold tracking-widest uppercase text-brand">
+                ליהיא בפעולה
+              </span>
+            </div>
+            <h2 className="text-4xl lg:text-[48px] font-black leading-[1.05] text-purple-9" style={{ letterSpacing: "-0.02em" }}>
+              צפו{" "}
+              <span className="gradient-text">בשיטה</span>{" "}
+              מקרוב.
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
