@@ -271,22 +271,83 @@ export default function AboutHebrewPage() {
                 </div>
               </div>
 
-              {/* Floating badge */}
+              {/* Rex card — top left */}
               <div
-                className="absolute -left-4 top-12 bg-purple-85 border border-purple-7/40 rounded-2xl px-4 py-3 backdrop-blur-sm"
-                style={{ animation: "ai-panel-breathe 4s 1s ease-in-out infinite" }}
+                className="absolute -left-6 top-8 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52"
+                style={{ animation: "ai-panel-breathe 4s 1s ease-in-out infinite", zIndex: 20 }}
               >
-                <div className="flex items-center gap-2 mb-1">
-                  <span
-                    className="w-2 h-2 rounded-full bg-brand shrink-0"
-                    style={{ animation: "ai-dot-pulse 1.5s ease-in-out infinite" }}
-                  />
-                  <span className="text-xs font-bold text-brand uppercase tracking-wider">
-                    פעיל
-                  </span>
+                <div className="flex items-center gap-3">
+                  <div className="relative w-10 h-10 rounded-xl overflow-hidden shrink-0 border border-purple-7/40">
+                    <Image src="/images/agents/rex.png" alt="Rex" fill className="object-cover object-top" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <span
+                        className="w-1.5 h-1.5 rounded-full bg-brand shrink-0"
+                        style={{ animation: "ai-dot-pulse 1.5s ease-in-out infinite" }}
+                      />
+                      <span className="text-[10px] font-bold text-brand uppercase tracking-wider">פעיל</span>
+                    </div>
+                    <p className="text-xs font-bold text-white truncate">רקס</p>
+                    <p className="text-[10px] text-purple-4 truncate">מריץ בריף קמפיין</p>
+                  </div>
                 </div>
-                <p className="text-xs text-purple-3 font-semibold">רקס מריץ בריף קמפיין</p>
-                <p className="text-[10px] text-purple-5 mt-0.5">8 סוכנים פעילים</p>
+              </div>
+
+              {/* Camille card — bottom left */}
+              <div
+                className="absolute -left-6 bottom-32 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52"
+                style={{ animation: "ai-panel-breathe 5s 0.5s ease-in-out infinite", zIndex: 20 }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="relative w-10 h-10 rounded-xl overflow-hidden shrink-0 border border-purple-7/40">
+                    <Image src="/images/agents/camille.png" alt="Camille" fill className="object-cover object-top" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <span
+                        className="w-1.5 h-1.5 rounded-full bg-brand shrink-0"
+                        style={{ animation: "ai-dot-pulse 1.5s 0.4s ease-in-out infinite" }}
+                      />
+                      <span className="text-[10px] font-bold text-brand uppercase tracking-wider">כותבת</span>
+                    </div>
+                    <p className="text-xs font-bold text-white truncate">קמיל</p>
+                    <p className="text-[10px] text-purple-4 truncate">מסיימת דף נחיתה</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Atlas card — right side */}
+              <div
+                className="absolute -right-6 top-1/2 -translate-y-1/2 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52"
+                style={{ animation: "ai-panel-breathe 4.5s 1.8s ease-in-out infinite", zIndex: 20 }}
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="relative w-10 h-10 rounded-xl overflow-hidden shrink-0 border border-purple-7/40">
+                    <Image src="/images/agents/atlas.png" alt="Atlas" fill className="object-cover object-top" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <span
+                        className="w-1.5 h-1.5 rounded-full bg-brand shrink-0"
+                        style={{ animation: "ai-dot-pulse 1.5s 0.8s ease-in-out infinite" }}
+                      />
+                      <span className="text-[10px] font-bold text-brand uppercase tracking-wider">מנתח</span>
+                    </div>
+                    <p className="text-xs font-bold text-white truncate">אטלס</p>
+                    <p className="text-[10px] text-purple-4 truncate">סוקר ביצועי Q2</p>
+                  </div>
+                </div>
+                {/* Mini bar chart */}
+                <div className="flex items-end gap-1 h-6 px-1">
+                  {[40, 65, 50, 80, 70, 90, 75].map((h, i) => (
+                    <div
+                      key={i}
+                      className="flex-1 rounded-sm gradient-bar opacity-70"
+                      style={{ height: `${h}%` }}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
