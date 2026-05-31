@@ -4,7 +4,11 @@ import { useState } from "react";
 
 // ─── Questions ────────────────────────────────────────────────────────────────
 
-const SECTIONS = [
+type PrefilledItem = { label: string; value: string; highlight?: string };
+type Question = { id: string; text: string; hint?: string; rows?: number };
+type Section = { num: number; title: string; sub: string; prefilled?: PrefilledItem[]; questions: Question[] };
+
+const SECTIONS: Section[] = [
   {
     num: 1,
     title: "Who you are & what you do",
@@ -87,9 +91,9 @@ const SECTIONS = [
         value: "Taboola · Hoopo · Chamelio · Develeap · Bring It On · SignalPet",
       },
       {
-        label: "Testimonial 1 confirmed (Lital, Director Global TA, Taboola)",
-        value:
-          '"When we faced a period of rapid hiring growth… Inbal Drori and her team quickly immersed themselves in our business… they felt like a true extension of our internal TA team rather than an external vendor."',
+        label: "Testimonial 1 · Lital Eitan-Shmidet, Director Global TA, Taboola",
+        value: `"When we faced a period of rapid hiring growth and limited internal recruiting capacity at Taboola we partnered with Once HR to support our Talent Acquisition efforts. From day one, Inbal Drori and her team quickly immersed themselves in our business, hiring processes, and culture. Within a short time, they felt like a true extension of our internal TA team rather than an external vendor.\n\nWhat stood out most was their professionalism, responsiveness, and ability to build strong partnerships with our hiring managers. They were proactive, highly engaged, open to feedback, and genuinely invested in helping us achieve our hiring goals. Throughout the partnership, there was a strong sense of trust and accountability, and it was clear we could rely on them when it mattered most.\n\nI would gladly partner with Once HR again in the future and highly recommend Inbal and her team to any organization looking for a flexible, high-quality recruiting partner."`,
+        highlight: "they felt like a true extension of our internal TA team rather than an external vendor",
       },
     ],
     questions: [
@@ -116,22 +120,21 @@ const SECTIONS = [
     num: 5,
     title: "Logistics",
     sub: "So we never block on a missed message",
+    prefilled: [
+      {
+        label: "Best way to reach you during the project (answered by Lihi)",
+        value: "Answered by Lihi",
+      },
+      {
+        label: "Final approval authority (answered by Lihi)",
+        value: "Answered by Lihi",
+      },
+      {
+        label: "Hard deadlines or external constraints (answered by Lihi)",
+        value: "Campaign live by 1 July 2026",
+      },
+    ],
     questions: [
-      {
-        id: "q14",
-        text: "Best way to reach you during the project?",
-        hint: "WhatsApp / email / phone, and expected response time.",
-      },
-      {
-        id: "q15",
-        text: "Who has final approval on deliverables?",
-        hint: "Both Inbal and Eva, or does one of you lead?",
-      },
-      {
-        id: "q16",
-        text: "Any hard deadlines or external constraints we should know about?",
-        hint: "Events, announcements, or launches beyond 1 July.",
-      },
       {
         id: "q17",
         text: "Anything else you want us to know before we start?",
@@ -309,7 +312,23 @@ export default function OnceHROnboarding() {
             {sec.prefilled?.map((pf, i) => (
               <div key={i} style={styles.question}>
                 <span style={styles.prefilledLabel}>{pf.label}</span>
-                <div style={styles.prefilledValue}>{pf.value}</div>
+                {pf.highlight ? (
+                  <div style={styles.prefilledValue}>
+                    {pf.value.split(pf.highlight).map((part, idx, arr) => (
+                      <span key={idx}>
+                        {part}
+                        {idx < arr.length - 1 && (
+                          <mark style={styles.highlight}>{pf.highlight}</mark>
+                        )}
+                      </span>
+                    ))}
+                    <div style={styles.highlightNote}>
+                      ★ Recommended for website — this is the line to feature
+                    </div>
+                  </div>
+                ) : (
+                  <div style={styles.prefilledValue}>{pf.value}</div>
+                )}
               </div>
             ))}
 
@@ -665,10 +684,28 @@ const styles: Record<string, React.CSSProperties> = {
     background: C.purple05,
     border: `1.5px solid ${C.purple15}`,
     borderRadius: 10,
-    padding: "12px 14px",
+    padding: "14px 16px",
     fontSize: 13,
     color: C.purple7,
-    lineHeight: 1.6,
+    lineHeight: 1.75,
+    whiteSpace: "pre-wrap" as const,
+  },
+  highlight: {
+    background: "linear-gradient(120deg,#FFD6E0 0%,#FFAEC1 100%)",
+    color: C.purple9,
+    fontWeight: 700,
+    borderRadius: 4,
+    padding: "1px 3px",
+  },
+  highlightNote: {
+    marginTop: 12,
+    fontSize: 11,
+    fontWeight: 700,
+    color: C.pink,
+    letterSpacing: "0.06em",
+    textTransform: "uppercase" as const,
+    borderTop: `1px solid ${C.purple15}`,
+    paddingTop: 10,
   },
 
   // Submit
