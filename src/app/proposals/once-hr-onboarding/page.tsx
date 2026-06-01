@@ -178,20 +178,26 @@ export default function OnceHROnboarding() {
     setProgress(Math.round((filled / totalQ) * 100));
   }
 
-  function handleSubmit() {
-    const lines: string[] = ["Once-HR Onboarding Questionnaire\n"];
+  async function handleSubmit() {
+    // Build a flat payload for Formspree
+    const payload: Record<string, string> = {
+      _subject: "Once-HR Onboarding Questionnaire — answers",
+    };
     SECTIONS.forEach((sec) => {
-      lines.push(`\n── Section ${sec.num}: ${sec.title} ──`);
       sec.questions.forEach((q, i) => {
         const globalNum =
           SECTIONS.slice(0, SECTIONS.indexOf(sec)).flatMap((s) => s.questions).length + i + 1;
-        lines.push(`\nQ${globalNum}. ${q.text}`);
-        lines.push(answers[q.id]?.trim() || "(no answer)");
+        const key = `Q${globalNum}. ${q.text}`;
+        payload[key] = answers[q.id]?.trim() || "(no answer)";
       });
     });
-    const body = encodeURIComponent(lines.join("\n"));
-    const subject = encodeURIComponent("Once-HR Onboarding Questionnaire — answers");
-    window.location.href = `mailto:lihi@tripleandco.com?subject=${subject}&body=${body}`;
+
+    await fetch("https://formspree.io/f/mlgvyzqy", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload),
+    });
+
     setSubmitted(true);
   }
 
