@@ -273,7 +273,7 @@ export default function AboutHebrewPage() {
 
               {/* Rex card — top left */}
               <div
-                className="absolute -left-6 top-8 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52"
+                className="absolute -left-6 top-8 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52 hidden lg:block"
                 style={{ animation: "ai-panel-breathe 4s 1s ease-in-out infinite", zIndex: 20 }}
               >
                 <div className="flex items-center gap-3">
@@ -296,7 +296,7 @@ export default function AboutHebrewPage() {
 
               {/* Camille card — bottom left */}
               <div
-                className="absolute -left-6 bottom-32 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52"
+                className="absolute -left-6 bottom-32 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52 hidden lg:block"
                 style={{ animation: "ai-panel-breathe 5s 0.5s ease-in-out infinite", zIndex: 20 }}
               >
                 <div className="flex items-center gap-3">
@@ -319,7 +319,7 @@ export default function AboutHebrewPage() {
 
               {/* Atlas card — right side */}
               <div
-                className="absolute -right-6 top-1/2 -translate-y-1/2 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52"
+                className="absolute -right-6 top-1/2 -translate-y-1/2 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52 hidden lg:block"
                 style={{ animation: "ai-panel-breathe 4.5s 1.8s ease-in-out infinite", zIndex: 20 }}
               >
                 <div className="flex items-center gap-3 mb-2">
