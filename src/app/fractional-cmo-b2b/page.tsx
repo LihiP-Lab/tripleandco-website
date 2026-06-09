@@ -7,34 +7,34 @@ import { AgentCarousel } from "@/components/AgentCarousel";
 import { PillarFAQ } from "@/components/PillarFAQ";
 
 export const metadata: Metadata = {
-  title: "CMO as a Service for B2B SaaS",
+  title: "Fractional CMO for B2B SaaS, AI-Powered",
   description:
-    "CMO as a Service for B2B SaaS. One subscription replaces your agency retainers: senior strategy, 8 AI agents, and a full revenue operating system.",
-  alternates: { canonical: "/cmo-as-a-service" },
+    "Get a fractional CMO who ships, not just advises. Senior B2B SaaS strategy from Lihi Pinto, plus 8 supervised AI agents executing daily. Book a call.",
+  alternates: { canonical: "/fractional-cmo-b2b" },
   openGraph: {
-    title: "CMO as a Service for B2B SaaS | Triple & Co.",
+    title: "Fractional CMO for B2B SaaS, AI-Powered | Triple & Co.",
     description:
-      "One subscription replaces your agency stack: senior CMO leadership plus an integrated AI revenue operating system.",
-    url: "https://www.tripleandco.com/cmo-as-a-service",
+      "Senior fractional CMO strategy plus a built-in AI execution team. One partner, one price, output in days.",
+    url: "https://www.tripleandco.com/fractional-cmo-b2b",
   },
 };
 
 const faqs = [
   {
-    q: "What is CMO as a Service?",
-    a: "CMO as a Service is a subscription model that gives your company full marketing leadership and execution without hiring an executive or managing agencies. At Triple & Co., that means a senior CMO (Lihi Pinto, 15+ years in B2B SaaS) owning your strategy, plus an integrated AI operating system, 8 supervised agents and a digital COO, executing it daily across content, campaigns, SEO, outreach, and analytics.",
+    q: "What is the difference between a traditional Fractional CMO and an AI-powered marketing partner?",
+    a: "A traditional fractional CMO gives you part-time strategic leadership, typically 1 to 2 days a week of planning, advising, and oversight. Execution is left to your existing team or contractors you hire separately. An AI-powered partner like Triple & Co. bundles both layers. You get the same senior fractional CMO leadership, plus a supervised team of 8 AI agents that executes the strategy daily: content, campaigns, SEO, ops, and reporting. One engagement covers what previously required an executive plus a department.",
   },
   {
-    q: "How is CMO as a Service different from hiring a marketing agency?",
-    a: "An agency sells you a channel: SEO, paid, or content, each with its own retainer, account manager, and reporting. You remain responsible for strategy and for coordinating between them. CMO as a Service inverts that. Strategy ownership comes first, and execution across all channels runs inside one connected system with shared data and messaging. You replace 3 to 4 retainers and the founder-as-project-manager role with a single accountable partner.",
+    q: "Do you work with B2B companies outside of Israel?",
+    a: "Yes. Most of our clients sell into the US and Europe, and our entire operating model is built for it. We work async across timezones, communicate in fluent English, and bring the Start-Up Nation playbook of scaling globally from a small home market. Location has never been a constraint for our clients; if anything, it's an advantage.",
   },
   {
-    q: "How is this different from your Fractional CMO offering?",
-    a: "Same engine, different entry point. Fractional CMO engagements suit founders who want a named marketing executive in their leadership team. CMO as a Service suits companies consolidating agency spend into one integrated system. Both run on the Woman in the Loop model: Lihi's strategy, supervised AI execution. We'll recommend the right structure on your diagnostic call.",
+    q: "How much does a fractional CMO cost compared to hiring a full-time CMO?",
+    a: "A full-time B2B SaaS CMO typically costs $250K to $400K+ per year in salary, equity, and benefits, before you add the marketing team underneath them. A traditional fractional CMO runs $5K to $15K per month for strategy only. Triple & Co. prices at the level of a standalone fractional executive, but the engagement includes the execution layer, so you're replacing both the CMO line item and most of the team budget. Book a Revenue Diagnostic for a quote scoped to your stage.",
   },
   {
-    q: "Do you work with B2B SaaS companies outside of Israel?",
-    a: "Yes, that's most of our client base. We're built for US and European markets: async operations across timezones, fluent English, and Start-Up Nation experience scaling companies globally from day one. The AI layer works around the clock, which usually means faster turnaround than a local agency.",
+    q: "What does a fractional CMO for SaaS actually do in the first 90 days?",
+    a: "At Triple & Co., the first two weeks are diagnostic: positioning audit, funnel analysis, and pipeline math. By week three you have a prioritized growth plan, and the agent team is already executing the first sprint: messaging, content engine, campaign infrastructure, and reporting. By day 90 you should see a working demand engine with weekly shipped output and board-ready metrics, not a slide deck waiting for headcount.",
   },
 ];
 
@@ -50,69 +50,68 @@ const faqSchema = {
 
 const comparisonRows = [
   {
-    label: "Strategy ownership",
-    agencies: "Nobody (you, by default)",
-    triple: "One accountable CMO",
+    label: "Senior strategy",
+    traditional: "Included",
+    inhouse: "Maybe",
+    triple: "Included",
   },
   {
-    label: "Channel coordination",
-    agencies: "Manual, founder-led",
-    triple: "Built into the system",
+    label: "Daily execution",
+    traditional: "Not included",
+    inhouse: "Included",
+    triple: "Included",
   },
   {
-    label: "Shared data and messaging",
-    agencies: "Siloed per vendor",
-    triple: "One source of truth",
+    label: "Time to first output",
+    traditional: "Weeks",
+    inhouse: "Months",
+    triple: "Days",
   },
   {
-    label: "Output cadence",
-    agencies: "Monthly deliverables",
-    triple: "Daily shipped work",
-  },
-  {
-    label: "Cost",
-    agencies: "$25K to $50K+/month combined",
-    triple: "One executive-level subscription",
+    label: "Annual cost",
+    traditional: "$60K+, plus the team you still hire",
+    inhouse: "$400K+",
+    triple: "One executive-level retainer",
   },
 ];
 
-const systemPillars = [
+const wilPillars = [
   {
-    title: "Lihi Pinto Owns Your Revenue Strategy",
+    title: "Lihi Pinto, Your Fractional CMO",
     description:
-      "15+ years scaling B2B SaaS, $70M+ raised on her go-to-market playbooks. Positioning, ICP, pricing, funnel architecture, and board reporting sit with one accountable executive, not scattered across account managers.",
+      "15+ years scaling B2B SaaS companies. $70M+ raised on the back of her go-to-market playbooks. Lihi owns your strategy: positioning, pipeline architecture, pricing, board-level reporting. Every decision that requires judgment, taste, and accountability stays human.",
   },
   {
-    title: "A Digital COO Replaces the Handoffs",
+    title: "A Digital COO That Runs the Operation",
     description:
-      "Briefs, QA, sequencing, and cross-channel coordination run automatically inside one system. Your messaging is defined once and enforced everywhere. No telephone game between vendors.",
+      "Workflows, briefs, QA, and handoffs between agents are orchestrated automatically, so nothing waits on a status meeting. Your strategy turns into sequenced, supervised work the moment it's set.",
   },
   {
-    title: "8 Specialized AI Agents Replace the Retainers",
+    title: "8 Specialized AI Agents That Execute",
     description:
-      "Camille, Vega, Rex, Zara, Nova, Atlas, Sage, and Lumen cover content, campaigns, SEO, outreach, design, analytics, marketing ops, and reporting. Each works from the same strategy, the same data, and the same brand system, and nothing ships without supervision.",
+      "Content, campaigns, SEO, analytics, outreach, design, marketing ops, and reporting. Each agent is trained on your positioning and reviewed before anything ships. Meet Camille, Vega, Rex, Zara, Nova, Atlas, Sage, and Lumen.",
   },
 ];
 
 const globalSignals = [
   {
-    title: "Always-On by Architecture",
+    title: "Async by Design",
     description:
-      "The agent layer executes around the clock, and Lihi overlaps with US and European business hours. Your system doesn't wait for an agency's Monday standup.",
+      "Our AI execution layer works around the clock, and Lihi overlaps with both US and European business hours. Most clients say we respond faster than their in-house teams did.",
   },
   {
     title: "Fluent in Your Market",
     description:
-      "Native-level English and Hebrew, with playbooks proven on US enterprise buyers, European mid-market, and global product-led motions.",
+      "Native-level English and Hebrew, with deep experience selling into US enterprise, European mid-market, and global developer audiences.",
   },
   {
-    title: "A Verifiable Track Record",
+    title: "A Track Record You Can Verify",
     description:
-      "Coverage in TechCrunch, Calcalist, and Globes. The same playbooks behind $70M+ in funding rounds now run inside every client's operating system.",
+      "Our work and our founder's companies have been covered in TechCrunch, Calcalist, and Globes. The playbooks behind $70M+ in funding rounds are the same ones we run for clients.",
   },
 ];
 
-export default function CMOPage() {
+export default function FractionalCMOPage() {
   return (
     <>
       <script
@@ -126,29 +125,28 @@ export default function CMOPage() {
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
-              { label: "CMO as a Service" },
+              { label: "Fractional CMO" },
             ]}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
-              <p className="eyebrow mb-4">CMO as a Service for B2B &amp; SaaS</p>
+              <p className="eyebrow mb-4">Fractional CMO for B2B &amp; SaaS</p>
 
               <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] text-purple-9 mb-6">
-                CMO as a Service: One Subscription Replaces Your{" "}
-                <span className="gradient-text">Agency Stack</span>
+                The Fractional CMO Who Comes With a Built-In{" "}
+                <span className="gradient-text">Execution Team</span>
               </h1>
               <p className="text-lg text-purple-7 leading-relaxed mb-4">
-                Count your retainers. Content agency. Paid media agency. SEO
-                shop. A designer on Upwork. None of them talk to each other, and
-                all of them invoice you.
+                You don&apos;t need another strategy deck. You need someone who
+                builds the plan, then ships it.
               </p>
               <p className="text-base text-purple-6 leading-relaxed mb-8">
-                Triple &amp; Co. replaces the whole stack with one integrated
-                revenue operating system: senior CMO leadership from Lihi Pinto,
-                a digital COO orchestrating the work, and 8 supervised AI agents
-                executing across every channel. Connected strategy. Daily
-                output. One invoice.
+                Triple &amp; Co. gives you a senior fractional CMO with 15+ years
+                scaling B2B SaaS companies, backed by 8 supervised AI agents that
+                execute the work daily. Strategy and execution. One partner. One
+                price. No hiring freelancers. No managing juniors. No waiting
+                quarters for traction.
               </p>
               <div className="flex flex-wrap items-center gap-5 mb-8">
                 <Link
@@ -161,12 +159,12 @@ export default function CMOPage() {
                   href="/agents"
                   className="text-sm font-semibold text-brand hover:underline"
                 >
-                  Meet the 8 agents inside the system &#8594;
+                  See how the agent team works &#8594;
                 </Link>
               </div>
               <p className="text-xs text-purple-6 font-medium uppercase tracking-wider">
                 15+ years in B2B SaaS &middot; $70M+ raised with our playbooks
-                &middot; One system, zero agency handoffs
+                &middot; Built in Israel, the Start-Up Nation
               </p>
             </div>
             <div className="lg:col-span-5 flex justify-center">
@@ -174,7 +172,7 @@ export default function CMOPage() {
                 <div className="absolute top-0 left-0 right-0 h-1.5 gradient-bar z-10" />
                 <Image
                   src="/images/lihi.png"
-                  alt="Lihi Pinto, CMO as a Service for B2B SaaS"
+                  alt="Lihi Pinto, fractional CMO for B2B SaaS"
                   fill
                   className="object-cover object-top"
                   priority
@@ -191,63 +189,62 @@ export default function CMOPage() {
           <ScrollReveal>
             <p className="eyebrow mb-3">The problem</p>
             <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-6">
-              You Don&apos;t Have a Marketing Problem. You Have a{" "}
-              <span className="gradient-text">Coordination Problem.</span>
+              A Fractional CMO Without a Team Is Just an{" "}
+              <span className="gradient-text">Expensive Advisor</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p className="text-lg text-purple-7 leading-relaxed mb-6">
-              Agencies are built to sell you their channel, not your growth.
+              Here&apos;s the dirty secret of the fractional CMO industry:
+              you&apos;re paying executive rates for a strategy document.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <p className="text-purple-7 leading-relaxed mb-6">
-              The SEO agency reports rankings. The paid media agency reports
-              ROAS. The content shop reports posts published. Everyone hits
-              their numbers, and your pipeline still misses.
+              The typical engagement goes like this. A seasoned marketer joins
+              your leadership calls, audits your funnel, and hands you a sharp
+              90-day plan. Then reality hits. Who writes the content? Who builds
+              the campaigns? Who runs the ops, the CRM, the reporting?
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="text-purple-7 leading-relaxed mb-6">
-              Why? Because nobody owns the connection between them. Your
-              positioning lives in one agency&apos;s deck, your keywords in
-              another&apos;s spreadsheet, your customer data in a CRM nobody
-              briefs. Every handoff loses context. Every retainer adds a
-              meeting. And the strategic thinking that should tie it together?
-              That was never in anyone&apos;s scope. So you become the
-              integration layer. The founder, personally relaying messaging
-              between vendors at $40K+ a month in combined retainers.
+              You do. Or rather, you start hiring. A freelance writer here. A
+              paid media contractor there. A junior marketer to hold it together.
+              Suddenly your &quot;fractional&quot; hire spawned five more
+              vendors, a fragmented stack, and a part-time job for you: managing
+              them all.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.25}>
             <div className="rounded-2xl bg-purple-05 p-6 lg:p-8 border border-purple-15">
               <p className="text-purple-9 font-semibold leading-relaxed">
-                The retainer model sells you activity. What you need is a system
-                that owns revenue.
+                The strategy was never the bottleneck. Execution was. And the
+                traditional fractional CMO model leaves that part entirely on
+                your plate.
               </p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* The Solution: AI Revenue Operating System */}
+      {/* The Solution: Woman in the Loop */}
       <section className="py-16 lg:py-24 bg-purple-05">
         <div className="mx-auto max-w-[1200px] px-8">
           <ScrollReveal>
             <p className="eyebrow text-center mb-3">The Triple &amp; Co. model</p>
             <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4 text-center">
-              Not Another Vendor. The Operating System That{" "}
-              <span className="gradient-text">Replaces Them.</span>
+              Senior Strategy Plus Full-Scale Execution.{" "}
+              <span className="gradient-text">For the Cost of One Executive.</span>
             </h2>
             <p className="text-purple-7 text-center max-w-2xl mx-auto mb-12">
-              Triple &amp; Co.&apos;s CMO as a Service runs on our Woman in the
-              Loop (WIL) model: one senior human directing one integrated AI
-              execution layer, end to end.
+              Triple &amp; Co. runs on a model we call Woman in the Loop (WIL):
+              senior human judgment directing a supervised AI execution layer.
             </p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {systemPillars.map((pillar, i) => (
+            {wilPillars.map((pillar, i) => (
               <ScrollReveal key={pillar.title} delay={0.1 + i * 0.12}>
                 <div className="relative bg-white rounded-2xl p-8 shadow-[var(--shadow-base)] card-gradient-top overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(137,109,156,0.18)] h-full">
                   <h3 className="text-xl font-extrabold text-purple-9 mb-3">
@@ -273,10 +270,13 @@ export default function CMOPage() {
                     <tr className="border-b border-purple-15">
                       <th className="px-6 py-4 font-bold text-purple-9"></th>
                       <th className="px-6 py-4 font-bold text-purple-6">
-                        3 to 4 agency retainers
+                        Traditional fractional CMO
+                      </th>
+                      <th className="px-6 py-4 font-bold text-purple-6">
+                        In-house team
                       </th>
                       <th className="px-6 py-4 font-bold text-brand">
-                        CMO as a Service (WIL)
+                        Triple &amp; Co. (WIL)
                       </th>
                     </tr>
                   </thead>
@@ -286,7 +286,8 @@ export default function CMOPage() {
                         <td className="px-6 py-4 font-semibold text-purple-9">
                           {row.label}
                         </td>
-                        <td className="px-6 py-4 text-purple-7">{row.agencies}</td>
+                        <td className="px-6 py-4 text-purple-7">{row.traditional}</td>
+                        <td className="px-6 py-4 text-purple-7">{row.inhouse}</td>
                         <td className="px-6 py-4 font-semibold text-purple-9 bg-pink-05/40">
                           {row.triple}
                         </td>
@@ -297,7 +298,8 @@ export default function CMOPage() {
               </div>
             </div>
             <p className="text-purple-7 text-center max-w-2xl mx-auto mt-8 mb-8">
-              Fire the coordination overhead. Keep the output.
+              You get the judgment of a CMO who has done it before, and the
+              output of a full marketing department, without building one.
             </p>
             <div className="text-center">
               <Link
@@ -321,13 +323,14 @@ export default function CMOPage() {
             <p className="eyebrow text-center mb-3">Global by default</p>
             <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4 text-center">
               Built in the Start-Up Nation.{" "}
-              <span className="gradient-text">Running Revenue Systems Worldwide.</span>
+              <span className="gradient-text">Operating Everywhere.</span>
             </h2>
             <p className="text-purple-7 text-center max-w-3xl mx-auto mb-12">
-              Triple &amp; Co. operates from Israel, the ecosystem that produces
-              more B2B SaaS companies per capita than anywhere on earth. Here,
-              every company sells globally from day one, so global is our
-              default, not our stretch goal.
+              Triple &amp; Co. is headquartered in Israel, the densest startup
+              ecosystem on earth and the proving ground where B2B SaaS companies
+              learn to sell globally from day one. That DNA is our default
+              setting: every playbook we run assumes a global market, a remote
+              team, and a US or European buyer.
             </p>
           </ScrollReveal>
 
@@ -354,65 +357,40 @@ export default function CMOPage() {
         </div>
       </section>
 
-      {/* Stats band */}
-      <section className="py-12 bg-purple-05">
-        <div className="mx-auto max-w-[1000px] px-8">
-          <ScrollReveal>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div>
-                <p className="text-3xl lg:text-4xl font-black gradient-text">15+</p>
-                <p className="text-xs text-purple-6 mt-1 font-medium uppercase tracking-wider">Years Experience</p>
-              </div>
-              <div>
-                <p className="text-3xl lg:text-4xl font-black gradient-text">$70M+</p>
-                <p className="text-xs text-purple-6 mt-1 font-medium uppercase tracking-wider">Capital Raised</p>
-              </div>
-              <div>
-                <p className="text-3xl lg:text-4xl font-black gradient-text">8</p>
-                <p className="text-xs text-purple-6 mt-1 font-medium uppercase tracking-wider">AI Agents, Supervised</p>
-              </div>
-              <div>
-                <p className="text-3xl lg:text-4xl font-black gradient-text">1</p>
-                <p className="text-xs text-purple-6 mt-1 font-medium uppercase tracking-wider">Invoice, Not Five</p>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* FAQ */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-purple-05">
         <div className="mx-auto max-w-[880px] px-8">
           <ScrollReveal>
             <p className="eyebrow text-center mb-3">FAQ</p>
             <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-12 text-center">
-              CMO as a Service, <span className="gradient-text">Explained</span>
+              Fractional CMO Questions, <span className="gradient-text">Answered</span>
             </h2>
           </ScrollReveal>
           <PillarFAQ faqs={faqs} />
           <ScrollReveal delay={0.2}>
             <p className="text-sm text-purple-7 text-center mt-8">
-              Looking for a named executive on your leadership team instead?
+              Consolidating agency retainers instead of hiring an executive?
               See our{" "}
-              <Link href="/fractional-cmo-b2b" className="text-brand font-semibold hover:underline">
-                Fractional CMO for B2B SaaS
+              <Link href="/cmo-as-a-service" className="text-brand font-semibold hover:underline">
+                CMO as a Service
               </Link>{" "}
-              engagement.
+              model.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Closing CTA */}
-      <section className="py-20 lg:py-28 bg-purple-05">
+      <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-[880px] px-8 text-center">
           <ScrollReveal>
             <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
-              Cancel the Retainers. <span className="gradient-text">Install the System.</span>
+              Stop Hiring Strategy and Execution{" "}
+              <span className="gradient-text">Separately</span>
             </h2>
             <p className="text-purple-7 mb-10 max-w-xl mx-auto">
-              One CMO. One operating system. One line on your P&amp;L instead of
-              five.
+              One senior operator. One supervised AI team. One number on your
+              P&amp;L.
             </p>
             <Link
               href="/revenue-diagnostic"
@@ -421,8 +399,8 @@ export default function CMOPage() {
               Book a 30-Minute Revenue Diagnostic <span>&#8594;</span>
             </Link>
             <p className="text-sm text-purple-6 mt-6">
-              Bring your current agency invoices. We&apos;ll show you exactly
-              what the system replaces.
+              No pitch. You&apos;ll leave with 3 specific growth gaps, whether we
+              work together or not.
             </p>
           </ScrollReveal>
         </div>

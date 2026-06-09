@@ -58,6 +58,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/fractional-cmo-b2b"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  Fractional CMO
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/agents"
                   className="text-sm hover:text-brand transition-colors"
                 >

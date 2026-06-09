@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/services",
     "/cmo-as-a-service",
+    "/fractional-cmo-b2b",
     "/agents",
     "/ai-marketing-agents",
     "/builder-profile",
@@ -26,7 +27,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:
       route === "/"
         ? 1
-        : route === "/cmo-as-a-service" || route === "/ai-marketing-agents"
+        : route === "/cmo-as-a-service" ||
+            route === "/fractional-cmo-b2b" ||
+            route === "/ai-marketing-agents"
           ? 0.9
           : 0.8,
   }));
