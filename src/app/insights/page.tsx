@@ -69,13 +69,47 @@ const silos = [
 
 const articles = [
   {
+    date: "Jun 2026",
+    title:
+      "The Evolution of Marketing Leadership: Why CMO as a Service is Replacing the Fractional CMO",
+    excerpt:
+      "Startups know they need senior marketing leadership, so they hire a Fractional CMO. But the fractional model is broken: it gives you a playbook and no team to execute it. Here is what replaced it.",
+    category: "CMO & CRO as a Service",
+    href: "/insights/cmo-as-a-service-vs-fractional-cmo",
+    featured: true,
+    pillar: true,
+  },
+  {
+    date: "Jun 2026",
+    title:
+      "The Revenue Silo Problem: Why Your B2B SaaS Startup Needs CRO as a Service, Not Just a Fractional CRO",
+    excerpt:
+      "Marketing says the leads are good. Sales says they are garbage. Both teams have dashboards full of metrics. Neither dashboard explains why revenue is not growing. The problem is structural.",
+    category: "CMO & CRO as a Service",
+    href: "/insights/cro-as-a-service-vs-fractional-cro",
+    featured: false,
+    pillar: true,
+  },
+  {
+    date: "Jun 2026",
+    title:
+      "Why Your B2B SaaS Company Needs a Native AI CMO, Not Just AI Tools",
+    excerpt:
+      "Every B2B SaaS marketing team is using AI. Pipeline quality has not improved proportionally. The problem is not the tools. It is the architecture — and here is what native AI marketing actually looks like.",
+    category: "Native AI Marketing",
+    href: "/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era",
+    featured: false,
+    pillar: true,
+  },
+  {
     date: "10 Jul 2025",
     title:
       "CRO and CMO as a Service: The Growth Boost Your Startup Has Been Waiting For",
     excerpt:
       "When your startup starts gaining traction, that is exactly when the real challenges begin. It is hard to acquire new customers consistently, and marketing feels like throwing darts in the dark.",
     category: "CMO & CRO as a Service",
-    featured: true,
+    featured: false,
+    pillar: false,
   },
   {
     date: "8 Jul 2025",
@@ -84,6 +118,7 @@ const articles = [
       "AI is only as good as the prompts you give it. Learn how to craft marketing prompts that produce content your team can actually use.",
     category: "Native AI Marketing",
     featured: false,
+    pillar: false,
   },
   {
     date: "7 Jun 2025",
@@ -92,6 +127,7 @@ const articles = [
       "Discover how combining fractional CMO and CRO leadership creates a unified growth engine for B2B SaaS startups.",
     category: "CMO & CRO as a Service",
     featured: false,
+    pillar: false,
   },
   {
     date: "30 May 2025",
@@ -100,6 +136,7 @@ const articles = [
       "AI is not replacing marketers. It is giving the best ones superpowers. Here is what the future of marketing actually looks like.",
     category: "Native AI Marketing",
     featured: false,
+    pillar: false,
   },
   {
     date: "1 Apr 2025",
@@ -108,6 +145,7 @@ const articles = [
       "Q4 is make-or-break for many startups. Learn how CRO as a Service accelerates pipeline and closes the year strong.",
     category: "CMO & CRO as a Service",
     featured: false,
+    pillar: false,
   },
   {
     date: "30 Aug 2024",
@@ -116,6 +154,7 @@ const articles = [
       "Why more B2B SaaS companies are turning to fractional CRO leadership to align marketing, sales, and customer success.",
     category: "CMO & CRO as a Service",
     featured: false,
+    pillar: false,
   },
   {
     date: "24 Mar 2024",
@@ -124,6 +163,7 @@ const articles = [
       "Fractional CMOs bring executive-level marketing leadership without the overhead. Here is what to expect and how to get the most out of the engagement.",
     category: "Fractional Leadership",
     featured: false,
+    pillar: false,
   },
   {
     date: "21 Mar 2024",
@@ -133,6 +173,7 @@ const articles = [
       "The CMO as a Service model is growing fast. Understand what it is, why it works, and how it differs from traditional consulting.",
     category: "Fractional Leadership",
     featured: false,
+    pillar: false,
   },
   {
     date: "24 Jun 2023",
@@ -141,6 +182,7 @@ const articles = [
       "Why the fractional CMO model is becoming the default for high-growth B2B SaaS startups that need senior marketing leadership.",
     category: "Fractional Leadership",
     featured: false,
+    pillar: false,
   },
   {
     date: "1 Jun 2023",
@@ -150,6 +192,7 @@ const articles = [
       "Lessons on branding, positioning, and go-to-market from one of Europe's largest B2B food-tech events.",
     category: "Fractional Leadership",
     featured: false,
+    pillar: false,
   },
 ];
 
@@ -254,9 +297,16 @@ export default function InsightsPage() {
           <div className="mx-auto max-w-[1200px] px-8">
             <ScrollReveal>
               <div className="relative rounded-2xl bg-white border border-purple-15 p-8 lg:p-12 overflow-hidden card-gradient-top">
-                <span className="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand mb-4">
-                  Featured
-                </span>
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                  <span className="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
+                    Featured
+                  </span>
+                  {featured.pillar && (
+                    <span className="inline-flex items-center rounded-full bg-purple-05 border border-purple-15 px-3 py-1 text-xs font-bold text-purple-6">
+                      Pillar Article
+                    </span>
+                  )}
+                </div>
                 <p className="text-sm text-purple-6 mb-2">{featured.date}</p>
                 <h2 className="text-2xl lg:text-3xl font-extrabold text-purple-9 tracking-tight leading-tight mb-4 max-w-3xl">
                   {featured.title}
@@ -264,10 +314,18 @@ export default function InsightsPage() {
                 <p className="text-purple-7 leading-relaxed mb-6 max-w-2xl">
                   {featured.excerpt}
                 </p>
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3">
                   <span className="rounded-full bg-purple-05 border border-purple-15 px-3 py-1 text-xs font-semibold text-purple-6">
                     {featured.category}
                   </span>
+                  {featured.href && (
+                    <Link
+                      href={featured.href}
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-brand-dark transition-colors"
+                    >
+                      Read Article <span>&#8594;</span>
+                    </Link>
+                  )}
                 </div>
               </div>
             </ScrollReveal>
@@ -287,22 +345,43 @@ export default function InsightsPage() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {rest.map((article, i) => (
-              <ScrollReveal key={article.title} delay={0.05 + i * 0.04}>
-                <article className="relative bg-purple-05 rounded-2xl p-6 shadow-[var(--shadow-base)] border border-purple-15 overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(137,109,156,0.18)] card-gradient-top h-full flex flex-col">
-                  <p className="text-xs text-purple-5 mb-2">{article.date}</p>
-                  <h3 className="text-base font-extrabold text-purple-9 tracking-tight leading-snug mb-3">
-                    {article.title}
-                  </h3>
-                  <p className="text-sm text-purple-7 leading-relaxed mb-4 flex-1">
-                    {article.excerpt}
-                  </p>
-                  <span className="rounded-full bg-white border border-purple-15 px-3 py-1 text-[11px] font-semibold text-purple-6 self-start">
-                    {article.category}
-                  </span>
-                </article>
-              </ScrollReveal>
-            ))}
+            {rest.map((article, i) => {
+              const CardWrapper = article.href ? Link : "article";
+              const wrapperProps = article.href
+                ? { href: article.href, key: article.title }
+                : { key: article.title };
+              return (
+                <ScrollReveal key={article.title} delay={0.05 + i * 0.04}>
+                  <CardWrapper
+                    {...(wrapperProps as object)}
+                    className={`relative bg-purple-05 rounded-2xl p-6 shadow-[var(--shadow-base)] border border-purple-15 overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(137,109,156,0.18)] card-gradient-top h-full flex flex-col group ${article.href ? "cursor-pointer" : ""}`}
+                  >
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {article.pillar && (
+                        <span className="rounded-full bg-brand/10 px-2.5 py-1 text-[10px] font-bold text-brand uppercase tracking-wide">
+                          Pillar
+                        </span>
+                      )}
+                      <span className="rounded-full bg-white border border-purple-15 px-2.5 py-1 text-[10px] font-semibold text-purple-6">
+                        {article.category}
+                      </span>
+                    </div>
+                    <p className="text-xs text-purple-5 mb-2">{article.date}</p>
+                    <h3 className="text-base font-extrabold text-purple-9 tracking-tight leading-snug mb-3 flex-1">
+                      {article.title}
+                    </h3>
+                    <p className="text-sm text-purple-7 leading-relaxed mb-4">
+                      {article.excerpt}
+                    </p>
+                    {article.href && (
+                      <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand group-hover:gap-2 transition-all self-start">
+                        Read Article <span>&#8594;</span>
+                      </span>
+                    )}
+                  </CardWrapper>
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
