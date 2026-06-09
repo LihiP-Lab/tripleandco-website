@@ -408,7 +408,7 @@ export default function CMOPage() {
         <div className="mx-auto max-w-[880px] px-8 text-center">
           <ScrollReveal>
             <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
-              Cancel the Retainers. <span className="gradient-text">Install the System.</span>
+              <span className="gradient-text">Install the System.</span>
             </h2>
             <p className="text-purple-7 mb-10 max-w-xl mx-auto">
               One CMO. One operating system. One line on your P&amp;L instead of
