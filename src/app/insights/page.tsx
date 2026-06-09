@@ -11,12 +11,12 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "AI B2B Growth Hub | CMO & CRO as a Service",
   description:
-    "Battle-tested B2B SaaS playbooks from AI-Native fractional CMO and CRO leaders. Revenue architecture for the AI era, without the agency overhead.",
+    "Battle-tested B2B playbooks from AI-Native fractional CMO and CRO leaders. Revenue architecture for the AI era, without the agency overhead.",
   alternates: { canonical: "https://www.tripleandco.com/insights" },
   openGraph: {
     title: "AI B2B Growth Hub | CMO & CRO as a Service",
     description:
-      "Battle-tested B2B SaaS playbooks from AI-Native fractional CMO and CRO leaders. Revenue architecture for the AI era, without the agency overhead.",
+      "Battle-tested B2B playbooks from AI-Native fractional CMO and CRO leaders. Revenue architecture for the AI era, without the agency overhead.",
     url: "https://www.tripleandco.com/insights",
     siteName: "Triple & Co.",
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI B2B Growth Hub | CMO & CRO as a Service",
     description:
-      "Battle-tested B2B SaaS playbooks from AI-Native fractional CMO and CRO leaders. Revenue architecture for the AI era.",
+      "Battle-tested B2B playbooks from AI-Native fractional CMO and CRO leaders. Revenue architecture for the AI era.",
   },
 };
 
@@ -45,7 +45,7 @@ const silos = [
     tagline: "The New Execution Model",
     label: "CMO & CRO as a Service",
     description:
-      "Why elite B2B SaaS companies are replacing legacy agency retainers with CMO as a Service and CRO as a Service, and the AI-native execution layer that makes it work at scale.",
+      "Why elite B2B companies are replacing legacy agency retainers with CMO as a Service and CRO as a Service, and the AI-native execution layer that makes it work at scale.",
     href: "/insights/revenue",
     accent: "brand",
   },
@@ -82,7 +82,7 @@ const articles = [
   {
     date: "Jun 2026",
     title:
-      "The Revenue Silo Problem: Why Your B2B SaaS Startup Needs CRO as a Service, Not Just a Fractional CRO",
+      "The Revenue Silo Problem: Why Your B2B Startup Needs CRO as a Service, Not Just a Fractional CRO",
     excerpt:
       "Marketing says the leads are good. Sales says they are garbage. Both teams have dashboards full of metrics. Neither dashboard explains why revenue is not growing. The problem is structural.",
     category: "CMO & CRO as a Service",
@@ -93,9 +93,9 @@ const articles = [
   {
     date: "Jun 2026",
     title:
-      "Why Your B2B SaaS Company Needs a Native AI CMO, Not Just AI Tools",
+      "Why Your B2B Company Needs a Native AI CMO, Not Just AI Tools",
     excerpt:
-      "Every B2B SaaS marketing team is using AI. Pipeline quality has not improved proportionally. The problem is not the tools. It is the architecture — and here is what native AI marketing actually looks like.",
+      "Every B2B marketing team is using AI. Pipeline quality has not improved proportionally. The problem is not the tools. It is the architecture — and here is what native AI marketing actually looks like.",
     category: "Native AI Marketing",
     href: "/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era",
     featured: false,
@@ -122,9 +122,9 @@ const articles = [
   },
   {
     date: "7 Jun 2025",
-    title: "Accelerate SaaS Growth with CRO & CMO as a Service",
+    title: "Accelerate B2B Growth with CRO & CMO as a Service",
     excerpt:
-      "Discover how combining fractional CMO and CRO leadership creates a unified growth engine for B2B SaaS startups.",
+      "Discover how combining fractional CMO and CRO leadership creates a unified growth engine for B2B startups.",
     category: "CMO & CRO as a Service",
     featured: false,
     pillar: false,
@@ -149,9 +149,9 @@ const articles = [
   },
   {
     date: "30 Aug 2024",
-    title: "Unlocking Growth: CRO as a Service for SaaS B2B Startups",
+    title: "Unlocking Growth: CRO as a Service for B2B Startups",
     excerpt:
-      "Why more B2B SaaS companies are turning to fractional CRO leadership to align marketing, sales, and customer success.",
+      "Why more B2B companies are turning to fractional CRO leadership to align marketing, sales, and customer success.",
     category: "CMO & CRO as a Service",
     featured: false,
     pillar: false,
@@ -179,7 +179,7 @@ const articles = [
     date: "24 Jun 2023",
     title: "Exploring the Rise of CMO as a Service",
     excerpt:
-      "Why the fractional CMO model is becoming the default for high-growth B2B SaaS startups that need senior marketing leadership.",
+      "Why the fractional CMO model is becoming the default for high-growth B2B startups that need senior marketing leadership.",
     category: "Fractional Leadership",
     featured: false,
     pillar: false,
@@ -217,13 +217,13 @@ export default function InsightsPage() {
           <div className="max-w-3xl">
             <p className="eyebrow mb-4">AI B2B Growth Resource Hub</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] text-purple-9 mb-5">
-              Revenue Playbooks for B2B SaaS Leaders Who Build in the AI Era
+              Revenue Playbooks for B2B Leaders Who Build in the AI Era
             </h1>
             <p className="text-lg text-purple-7 leading-relaxed max-w-2xl">
               Marketing for B2B in the AI era is not a channel problem. It is an architecture problem.
               Triple &amp; Co. publishes battle-tested scaling playbooks drawn from live engagements as
               a Fractional CMO, a native AI CRO as a Service team, and an embedded growth partner for
-              venture-backed SaaS companies worldwide. No theory. No filler. Only what we have shipped,
+              venture-backed companies worldwide. No theory. No filler. Only what we have shipped,
               measured, and repeated.
             </p>
           </div>
@@ -257,7 +257,7 @@ export default function InsightsPage() {
               Browse by Topic
             </h2>
             <p className="text-purple-6 mb-8 text-base">
-              Three content tracks. Each one built around a decision a scaling B2B SaaS company actually has to make.
+              Three content tracks. Each one built around a decision a scaling B2B company actually has to make.
             </p>
           </ScrollReveal>
 
@@ -346,39 +346,44 @@ export default function InsightsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {rest.map((article, i) => {
-              const CardWrapper = article.href ? Link : "article";
-              const wrapperProps = article.href
-                ? { href: article.href, key: article.title }
-                : { key: article.title };
-              return (
-                <ScrollReveal key={article.title} delay={0.05 + i * 0.04}>
-                  <CardWrapper
-                    {...(wrapperProps as object)}
-                    className={`relative bg-purple-05 rounded-2xl p-6 shadow-[var(--shadow-base)] border border-purple-15 overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(137,109,156,0.18)] card-gradient-top h-full flex flex-col group ${article.href ? "cursor-pointer" : ""}`}
-                  >
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {article.pillar && (
-                        <span className="rounded-full bg-brand/10 px-2.5 py-1 text-[10px] font-bold text-brand uppercase tracking-wide">
-                          Pillar
-                        </span>
-                      )}
-                      <span className="rounded-full bg-white border border-purple-15 px-2.5 py-1 text-[10px] font-semibold text-purple-6">
-                        {article.category}
-                      </span>
-                    </div>
-                    <p className="text-xs text-purple-5 mb-2">{article.date}</p>
-                    <h3 className="text-base font-extrabold text-purple-9 tracking-tight leading-snug mb-3 flex-1">
-                      {article.title}
-                    </h3>
-                    <p className="text-sm text-purple-7 leading-relaxed mb-4">
-                      {article.excerpt}
-                    </p>
-                    {article.href && (
-                      <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand group-hover:gap-2 transition-all self-start">
-                        Read Article <span>&#8594;</span>
+              const cardClass = `relative bg-purple-05 rounded-2xl p-6 shadow-[var(--shadow-base)] border border-purple-15 overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(137,109,156,0.18)] card-gradient-top h-full flex flex-col group`;
+              const cardInner = (
+                <>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {article.pillar && (
+                      <span className="rounded-full bg-brand/10 px-2.5 py-1 text-[10px] font-bold text-brand uppercase tracking-wide">
+                        Pillar
                       </span>
                     )}
-                  </CardWrapper>
+                    <span className="rounded-full bg-white border border-purple-15 px-2.5 py-1 text-[10px] font-semibold text-purple-6">
+                      {article.category}
+                    </span>
+                  </div>
+                  <p className="text-xs text-purple-5 mb-2">{article.date}</p>
+                  <h3 className="text-base font-extrabold text-purple-9 tracking-tight leading-snug mb-3 flex-1">
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-purple-7 leading-relaxed mb-4">
+                    {article.excerpt}
+                  </p>
+                  {article.href && (
+                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand group-hover:gap-2 transition-all self-start">
+                      Read Article <span>&#8594;</span>
+                    </span>
+                  )}
+                </>
+              );
+              return (
+                <ScrollReveal key={article.title} delay={0.05 + i * 0.04}>
+                  {article.href ? (
+                    <Link href={article.href} className={`${cardClass} cursor-pointer`}>
+                      {cardInner}
+                    </Link>
+                  ) : (
+                    <article className={cardClass}>
+                      {cardInner}
+                    </article>
+                  )}
                 </ScrollReveal>
               );
             })}
@@ -444,7 +449,7 @@ export default function InsightsPage() {
                 </div>
 
                 <p className="text-purple-7 text-base leading-relaxed max-w-2xl">
-                  Lihi Pinto is a B2B SaaS revenue architect with over 15 years of experience and a
+                  Lihi Pinto is a B2B revenue architect with over 15 years of experience and a
                   track record of helping companies raise more than $70M in venture capital. She built her
                   methodology inside the Israeli Start-Up Nation ecosystem, an environment where speed,
                   capital efficiency, and aggressive growth are not aspirations but survival requirements.
@@ -454,12 +459,12 @@ export default function InsightsPage() {
                   CRO engagements, native AI CRO and CMO builds, and go-to-market architecture across
                   North America, Europe, and the Middle East. Triple &amp; Co. blends the relentless
                   growth instinct of the Israeli tech ecosystem with a timezone-agnostic, AI-native
-                  operating model to build predictable revenue engines for B2B SaaS companies anywhere
+                  operating model to build predictable revenue engines for B2B companies anywhere
                   in the world.
                 </p>
 
                 <div className="flex flex-wrap gap-2 pt-1">
-                  {["15+ Years B2B SaaS", "$70M+ Capital Raised", "Global AI Execution", "Israeli Tech Ecosystem"].map(
+                  {["15+ Years B2B", "$70M+ Capital Raised", "Global AI Execution", "Israeli Tech Ecosystem"].map(
                     (badge) => (
                       <span
                         key={badge}
