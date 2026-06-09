@@ -4,23 +4,23 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "CMO as a Service vs Fractional CMO | Triple & Co.",
+  title: "The Evolution of Marketing Leadership | Triple & Co.",
   description:
-    "The fractional CMO gives you a playbook but no team to execute it. Learn why CMO as a Service — strategy plus integrated AI execution — is replacing it for B2B.",
+    "From full-time CMO to Fractional CMO to CMO as a Service to AI-native execution — how B2B marketing leadership has evolved, what each model delivers, and how to choose the right one for your stage.",
   alternates: { canonical: "https://www.tripleandco.com/insights/cmo-as-a-service-vs-fractional-cmo" },
   openGraph: {
-    title: "Why CMO as a Service is Replacing the Fractional CMO",
+    title: "The Evolution of Marketing Leadership: Fractional CMO, CMO as a Service, and What Comes Next",
     description:
-      "The fractional CMO gives you a playbook but no team to execute it. Learn why CMO as a Service is replacing it for B2B.",
+      "How B2B marketing leadership has evolved — from full-time CMO to Fractional CMO to CMO as a Service to AI-native execution — and how to choose the right model for your stage.",
     url: "https://www.tripleandco.com/insights/cmo-as-a-service-vs-fractional-cmo",
     siteName: "Triple & Co.",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Why CMO as a Service is Replacing the Fractional CMO",
+    title: "The Evolution of Marketing Leadership",
     description:
-      "The fractional CMO gives you a playbook but no team to execute it. Here is what replaced it.",
+      "Fractional CMO. CMO as a Service. AI-native execution. How marketing leadership has evolved — and which model fits your stage.",
   },
 };
 
@@ -34,23 +34,23 @@ export default function Article1Page() {
             items={[
               { label: "Home", href: "/" },
               { label: "Insights", href: "/insights" },
-              { label: "CMO as a Service vs Fractional CMO" },
+              { label: "The Evolution of Marketing Leadership" },
             ]}
           />
           <div className="max-w-[800px] mt-6">
             <div className="flex flex-wrap gap-2 mb-5">
               <span className="rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
-                CMO &amp; CRO as a Service
+                Fractional Leadership
               </span>
               <span className="rounded-full bg-purple-05 border border-purple-15 px-3 py-1 text-xs font-semibold text-purple-6">
                 Pillar Article
               </span>
               <span className="rounded-full bg-purple-05 border border-purple-15 px-3 py-1 text-xs font-semibold text-purple-6">
-                8 min read
+                10 min read
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-black tracking-tight leading-[1.05] text-purple-9 mb-6">
-              The Evolution of Marketing Leadership: Why CMO as a Service is Replacing the Fractional CMO
+              The Evolution of Marketing Leadership: Fractional CMO, CMO as a Service, and What Comes Next
             </h1>
             <div className="flex items-center gap-4">
               <div className="relative w-10 h-10 rounded-full overflow-hidden border border-purple-15 shrink-0">
@@ -68,337 +68,333 @@ export default function Article1Page() {
       {/* ── BODY ── */}
       <section className="py-12 lg:py-16 bg-white">
         <div className="mx-auto max-w-[1200px] px-8">
-          <div className="max-w-[800px] article-prose">
+          <div className="max-w-[800px]">
 
             {/* Intro */}
             <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
-              You Hired a Strategist. You Got a Bottleneck.
+              The Question Has Not Changed. The Answers Have.
             </h2>
             <p className="text-purple-7 leading-relaxed mb-4">
-              Every growth-stage B2B company hits the same wall.
+              Every B2B founder running a company between 10 and 200 people faces the same inflection point:
+              marketing needs to perform at a higher level, and the current setup — a junior hire, a founder
+              doing it themselves, or an agency running disconnected campaigns — is not going to get you there.
             </p>
             <p className="text-purple-7 leading-relaxed mb-4">
-              You have product-market fit. Pipeline is inconsistent. The board wants a revenue plan.
-              Your founding team is brilliant at building, but no one is running marketing at a senior level.
+              The question is what senior marketing leadership should look like for a company at your stage.
+              And that question now has more legitimate answers than it did five years ago.
             </p>
             <p className="text-purple-7 leading-relaxed mb-4">
-              So you search for a Fractional CMO.
-            </p>
-            <p className="text-purple-7 leading-relaxed mb-4">
-              On paper, it looks like the smart move. Senior expertise, no full-time salary, flexibility.
-              You onboard them, they audit your funnel, they hand you a 90-day growth playbook, and then
-              comes the part nobody warns you about.
-            </p>
-            <p className="text-purple-7 leading-relaxed mb-4">
-              You still have to execute it.
+              The full-time CMO used to be the only answer. Then the Fractional CMO model emerged and gave
+              growth-stage companies access to executive-level marketing thinking without the cost of a full-time
+              hire. Then CMO as a Service evolved to add an execution layer to that strategic thinking. And now,
+              AI-native execution has changed what is possible within any of these models.
             </p>
             <p className="text-purple-7 leading-relaxed mb-8">
-              You still need writers, designers, a paid media agency, a demand gen specialist, and someone
-              to stitch it all together. The Fractional CMO has delivered the map. You are still expected to
-              build the car. This is the model that dominated the last decade. It is also the model that{" "}
-              <Link href="/cmo-as-a-service" className="text-brand hover:text-brand-dark font-semibold underline underline-offset-2">
-                CMO as a Service
-              </Link>{" "}
-              is now replacing.
+              This is not a story about one model replacing another. It is a story about how the options have
+              expanded — and how to match the right model to the specific stage and structure of your company.
             </p>
 
-            {/* Section 1 */}
+            {/* Stage 1 */}
             <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
-              The Hidden Costs of the Traditional Fractional CMO
+              Stage One: The Full-Time CMO
             </h2>
-            <p className="text-purple-7 leading-relaxed mb-6">
-              The pitch is seductive: get a CMO-caliber mind for 20 hours a month at a fraction of the
-              cost of a full-time hire. But &ldquo;fraction of the cost&rdquo; only holds up if you never count
-              what comes after.
-            </p>
-
-            <h3 className="text-xl font-bold text-purple-9 mb-3">What You Actually Pay For</h3>
-            <p className="text-purple-7 leading-relaxed mb-3">A traditional Fractional CMO typically delivers:</p>
-            <ul className="space-y-3 mb-6 pl-0">
-              {[
-                ["Market positioning and messaging frameworks", "documented, reviewed, filed."],
-                ["Channel strategy recommendations", "which platforms to prioritize, what budgets to allocate."],
-                ["A content and campaign roadmap", "a well-structured plan sitting in a Google Doc."],
-                ["Executive alignment sessions", "calls where everyone nods and agrees the plan is solid."],
-              ].map(([bold, rest]) => (
-                <li key={bold} className="flex gap-3 text-purple-7 leading-relaxed">
-                  <span className="text-brand mt-1 shrink-0">&#8594;</span>
-                  <span><strong className="text-purple-9">{bold}</strong> {rest}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-purple-7 leading-relaxed mb-8 font-semibold text-purple-9">
-              What they do not deliver: the execution.
-            </p>
-
-            <h3 className="text-xl font-bold text-purple-9 mb-3">The Execution Gap</h3>
             <p className="text-purple-7 leading-relaxed mb-4">
-              Once the playbook is complete, the Fractional CMO returns to their other three clients.
-              You are left with a strategy document and a hiring problem. To close the execution gap,
-              most companies then build a patchwork of:
+              The traditional answer to the marketing leadership question is a full-time CMO: an executive-level
+              hire who owns the entire marketing function, builds and leads the team, and is accountable to the
+              CEO and board for revenue marketing outcomes.
             </p>
+            <p className="text-purple-7 leading-relaxed mb-4">
+              At the right scale, it is still the right answer. A company with a 15-person marketing team,
+              complex multi-channel operations across several geographies, and enough organizational complexity
+              to justify a senior executive managing people and processes full-time — that company needs a CMO,
+              not a service.
+            </p>
+            <p className="text-purple-7 leading-relaxed mb-4">
+              The problem is that most B2B companies are not at that scale when they realize they need senior
+              marketing leadership. And the full-time CMO at the quality level those companies actually need
+              costs between $250,000 and $400,000 in fully-loaded annual compensation — before equity, before
+              the cost of building out the team they need to lead, and before the 6-to-12-month ramp before
+              they produce anything measurable.
+            </p>
+            <p className="text-purple-7 leading-relaxed mb-8">
+              That gap between the stage a company is at and the stage a full-time CMO makes sense for is
+              where the Fractional CMO model was born.
+            </p>
+
+            {/* Stage 2 */}
+            <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
+              Stage Two: The Fractional CMO
+            </h2>
+            <p className="text-purple-7 leading-relaxed mb-4">
+              The Fractional CMO model was a genuine breakthrough for growth-stage B2B companies. It solved a
+              real access problem: companies could now work with senior marketing operators who had built and
+              led marketing functions at scale, without paying for a full-time executive they did not yet have
+              the organizational structure to absorb.
+            </p>
+            <p className="text-purple-7 leading-relaxed mb-4">
+              A Fractional CMO works across several clients simultaneously, typically 2-3 days per week per
+              engagement. They bring strategic seniority — ICP definition, positioning, messaging, channel
+              strategy, team structure — and they deliver it at a fraction of the cost of a full-time hire.
+            </p>
+
+            <h3 className="text-xl font-bold text-purple-9 mb-3">What the Fractional CMO Does Well</h3>
             <ul className="space-y-2 mb-6 pl-0">
               {[
-                "A content agency at $5,000 to $15,000 per month",
-                "A paid media freelancer or agency",
-                "A part-time social media manager",
-                "A marketing ops contractor to manage HubSpot or Marketo",
-                "A designer on Upwork for one-off assets",
+                "Strategic clarity: defining what the marketing function should be doing, who it is targeting, and what success looks like — for a company that does not currently have that clarity.",
+                "Executive presence: representing marketing in board conversations, fundraising processes, and leadership team discussions at a level a junior hire cannot.",
+                "Institutional knowledge transfer: building the playbooks, frameworks, and processes that outlast the engagement and give the internal team a foundation to build from.",
+                "Hiring and structure: defining what the marketing org should look like and helping recruit the right people into it.",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-purple-7 leading-relaxed">
-                  <span className="text-brand mt-1 shrink-0">&#8594;</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-purple-7 leading-relaxed mb-8">
-              By the time you add it up, you have spent more than a full-time CMO salary, on a fragmented
-              team with no single owner accountable for revenue outcomes. The Fractional CMO wrote the
-              strategy. The agencies executed fragments of it. No one holds the whole equation together.
-            </p>
-
-            <h3 className="text-xl font-bold text-purple-9 mb-3">The Management Overhead Nobody Prices In</h3>
-            <p className="text-purple-7 leading-relaxed mb-8">
-              Beyond the direct costs, there is the founder tax: hours spent briefing agencies, reviewing
-              deliverables, chasing updates, and debugging why the paid campaigns are not converting.
-              Senior leadership time diverted from sales, product, and fundraising. This is not a people
-              problem. It is a structural problem. The fractional model was built for a world where
-              intelligence and execution were always separate. That world no longer exists.
-            </p>
-
-            {/* Section 2 */}
-            <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
-              The Paradigm Shift: What CMO as a Service Actually Means
-            </h2>
-            <p className="text-purple-7 leading-relaxed mb-4">
-              <Link href="/cmo-as-a-service" className="text-brand hover:text-brand-dark font-semibold underline underline-offset-2">
-                CMO as a Service
-              </Link>{" "}
-              is not a rebrand of the Fractional CMO. It is a fundamentally different operating model.
-              Where a Fractional CMO delivers strategy and leaves execution to you, a CMO as a Service
-              function owns both strategy and delivery under a single engagement.
-            </p>
-
-            <h3 className="text-xl font-bold text-purple-9 mb-3">Strategy Plus Execution, Integrated</h3>
-            <p className="text-purple-7 leading-relaxed mb-4">
-              The CMO as a Service model is built around one non-negotiable principle: the person setting
-              the strategy also owns the outcomes. There is no handoff. No translation layer. No gap
-              between what was planned and what gets shipped. This means:
-            </p>
-            <ul className="space-y-2 mb-6 pl-0">
-              {[
-                "The growth roadmap is built by a senior operator who also controls delivery.",
-                "Campaigns go live without a separate briefing process.",
-                "Content, paid media, SEO, outbound, and lifecycle marketing operate as one coordinated system rather than four separate vendor relationships.",
-                "Results are measured against revenue impact, not deliverable volume.",
-              ].map((item) => (
-                <li key={item} className="flex gap-3 text-purple-7 leading-relaxed">
-                  <span className="text-brand mt-1 shrink-0">&#8594;</span>
+                  <span className="text-brand mt-1 shrink-0">→</span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
 
-            <h3 className="text-xl font-bold text-purple-9 mb-3">Why This Matters for B2B Specifically</h3>
+            <h3 className="text-xl font-bold text-purple-9 mb-3">Where the Fractional Model Has Limits</h3>
             <p className="text-purple-7 leading-relaxed mb-4">
-              B2B buying cycles are long. Messaging precision matters enormously. A campaign that
-              goes live with slightly wrong positioning does not just underperform. It actively damages
-              pipeline by attracting the wrong leads and eroding trust with the right ones.
+              The Fractional CMO is a strategic advisor. By design and by bandwidth, they are not the person
+              executing the strategy they set. That execution falls to whoever is on your team — and if your
+              team does not have the capacity or seniority to execute a sophisticated multi-channel marketing
+              strategy, the strategy becomes a document rather than a result.
             </p>
             <p className="text-purple-7 leading-relaxed mb-8">
-              When strategy and execution are separated, precision degrades at every handoff. A Fractional
-              CMO&apos;s positioning brief gets interpreted by an agency copywriter. The agency&apos;s copy gets
-              adjusted by a designer. By the time the campaign reaches the market, the original strategic
-              intent is diluted by at least three layers of interpretation. CMO as a Service removes those
-              layers entirely.
+              This is not a failure of the Fractional CMO model. It is an honest description of what it is
+              built to deliver. Understanding that distinction is the key to knowing whether it is the right
+              fit for your company right now.
             </p>
 
-            {/* Section 3 */}
+            {/* Stage 3 */}
             <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
-              The AI Advantage: The Woman in the Loop Architecture
+              Stage Three: CMO as a Service
             </h2>
             <p className="text-purple-7 leading-relaxed mb-4">
-              At{" "}
-              <Link href="/" className="text-brand hover:text-brand-dark font-semibold underline underline-offset-2">
-                Triple &amp; Co.
-              </Link>
-              , we took the CMO as a Service model and built it natively for the AI era. The result is
-              what we call the <strong className="text-purple-9">Woman in the Loop (WIL)</strong> architecture.
+              CMO as a Service evolved directly from the Fractional CMO model in response to one observation:
+              many companies do not just need the strategy. They need someone to run it.
             </p>
-            <p className="text-purple-7 leading-relaxed mb-6">
-              One senior operator — Lihi Pinto, with 15 years of B2B experience and a track record
-              of supporting $70M+ in venture capital raises — sits at the center of a system of eight
-              specialized AI agents.
-            </p>
-
-            <h3 className="text-xl font-bold text-purple-9 mb-3">The Eight-Agent Execution Layer</h3>
-            <p className="text-purple-7 leading-relaxed mb-4">Each agent is purpose-built for a specific marketing function:</p>
-            <ul className="space-y-3 mb-5 pl-0">
-              {[
-                ["Camille", "Brand voice, content strategy, and long-form editorial"],
-                ["Vega", "SEO architecture, keyword strategy, and content optimization"],
-                ["Rex", "Paid media strategy and performance analysis"],
-                ["Zara", "Social content and community engagement"],
-                ["Nova", "Email marketing, lifecycle sequences, and CRM logic"],
-                ["Atlas", "Competitive intelligence and market research"],
-                ["Sage", "Marketing analytics, attribution, and reporting"],
-                ["Lumen", "Creative direction and visual asset briefing"],
-              ].map(([name, role]) => (
-                <li key={name} className="flex gap-3 text-purple-7 leading-relaxed">
-                  <span className="text-brand mt-1 shrink-0">&#8594;</span>
-                  <span><strong className="text-purple-9">{name}</strong> &mdash; {role}</span>
-                </li>
-              ))}
-            </ul>
             <p className="text-purple-7 leading-relaxed mb-4">
-              <Link href="/agents" className="text-brand hover:text-brand-dark font-semibold underline underline-offset-2">
-                Explore the full agent system
-              </Link>
+              The CMO as a Service model adds an execution layer to the strategic leadership the Fractional
+              CMO provides. The senior operator still sets direction, still owns the positioning and the
+              commercial objective, still represents marketing at the leadership level. But the engagement also
+              includes the campaigns, content, sequences, and assets that actually deliver the strategy to market.
             </p>
-            <p className="text-purple-7 leading-relaxed mb-6">
-              These agents do not replace senior judgment. They amplify it. Lihi sets the strategic
-              direction — the positioning, the ICP, the messaging hierarchy, the revenue goal. The agents
-              execute across channels simultaneously, at a speed and volume no human team can match.
-            </p>
-
-            <h3 className="text-xl font-bold text-purple-9 mb-3">What This Delivers</h3>
-            <ul className="space-y-3 mb-6 pl-0">
-              {[
-                ["Full-funnel execution without full-team overhead.", "Content, paid, SEO, outbound, and lifecycle marketing run as one integrated system."],
-                ["Senior strategic accountability.", "Every output is reviewed against a revenue objective by a human operator, not delegated to a junior manager."],
-                ["Consistency at scale.", "Brand voice, messaging, and strategic intent remain coherent across every touchpoint because a single senior mind holds the thread."],
-                ["Speed that matches early-stage urgency.", "What would take a traditional agency three weeks to brief, produce, and revise ships in days."],
-              ].map(([bold, rest]) => (
-                <li key={bold} className="flex gap-3 text-purple-7 leading-relaxed">
-                  <span className="text-brand mt-1 shrink-0">&#8594;</span>
-                  <span><strong className="text-purple-9">{bold}</strong> {rest}</span>
-                </li>
-              ))}
-            </ul>
-
-            <h3 className="text-xl font-bold text-purple-9 mb-3">The Cost Equation</h3>
-            <p className="text-purple-7 leading-relaxed mb-8">
-              A senior full-time CMO in the US commands $250,000 to $400,000 in base salary, plus equity,
-              plus benefits. A Fractional CMO plus execution patchwork frequently exceeds $150,000 annually
-              once all vendor costs are counted. The WIL model delivers a full integrated marketing function
-              at a fraction of that cost. This is not cost-cutting. It is capital efficiency, applied to
-              marketing the same way the best B2B companies apply it to engineering.
-            </p>
-
-            {/* Section 4 */}
-            <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
-              Built for Global Scale: Israeli Tech Speed, Delivered Anywhere
-            </h2>
             <p className="text-purple-7 leading-relaxed mb-4">
-              There is a reason Israeli B2B startups punch above their weight in global markets. The
-              ecosystem is built on a specific operating principle: move faster than your competition
-              believes is possible, make every dollar count, and execute with the precision of a team
-              that cannot afford to get it wrong. Triple &amp; Co. was built in that tradition.
-            </p>
-            <p className="text-purple-7 leading-relaxed mb-6">
-              Lihi Pinto&apos;s methodology was forged in an environment where Series A companies compete
-              against US enterprises with a tenth of the budget and are expected to win pipeline in
-              San Francisco, Berlin, and Singapore simultaneously. That demands a different kind of
-              marketing engine, one that does not clock out at 5pm, does not wait for weekly agency
-              status calls, and does not produce decks when the market wants results.
+              In practical terms: a Fractional CMO tells your team what to build. CMO as a Service builds it.
             </p>
 
-            <h3 className="text-xl font-bold text-purple-9 mb-3">The Timezone-Agnostic Execution Advantage</h3>
-            <p className="text-purple-7 leading-relaxed mb-4">
-              The eight-agent WIL architecture operates without geographic constraint. Your campaign
-              does not pause because your Fractional CMO is on vacation or your agency is in a different
-              timezone. B2B buying decisions happen on the buyer&apos;s schedule, not the marketer&apos;s.
-            </p>
-            <p className="text-purple-7 leading-relaxed mb-6">
-              A prospect who reads a cold email at 11pm and clicks through to a landing page should
-              encounter a follow-up sequence that was already live, optimized, and ready. A competitor
-              analysis that surfaces on Monday morning should have been built over the weekend. The WIL
-              model runs continuously. Strategy is set by a senior human. Execution is sustained by AI.
-            </p>
-
-            <h3 className="text-xl font-bold text-purple-9 mb-3">What This Looks Like in Practice</h3>
-            <p className="text-purple-7 leading-relaxed mb-3">
-              A Triple &amp; Co. engagement for a US-based B2B company with EU expansion goals:
-            </p>
+            <h3 className="text-xl font-bold text-purple-9 mb-3">The Structural Difference</h3>
             <ul className="space-y-3 mb-8 pl-0">
               {[
-                ["Week 1:", "Revenue diagnostic. Lihi audits the current funnel, ICP definition, competitive positioning, and channel performance."],
-                ["Week 2:", "Growth architecture. Strategic roadmap built across demand gen, content, paid, outbound, and lifecycle."],
-                ["Week 3:", "Agent deployment. All eight agents activated against the roadmap. First campaign assets live."],
-                ["Week 4 onward:", "Continuous execution. Weekly reporting against pipeline impact. Monthly strategic recalibration."],
-              ].map(([bold, rest]) => (
-                <li key={bold} className="flex gap-3 text-purple-7 leading-relaxed">
-                  <span className="text-brand mt-1 shrink-0">&#8594;</span>
-                  <span><strong className="text-purple-9">{bold}</strong> {rest}</span>
+                ["Strategy ownership:", "Both models. The senior operator defines ICP, positioning, messaging, channel mix, and the commercial objective the marketing function is accountable to."],
+                ["Execution:", "Fractional CMO depends on your internal team or an agency. CMO as a Service delivers execution as part of the engagement — under the same brief, by the same operator, accountable to the same result."],
+                ["Accountability:", "Fractional CMO is accountable to the quality of the advice. CMO as a Service is accountable to the pipeline outcomes that advice was supposed to produce."],
+              ].map(([label, text]) => (
+                <li key={label as string} className="flex gap-3 text-purple-7 leading-relaxed">
+                  <span className="text-brand mt-1 shrink-0">→</span>
+                  <span><span className="font-semibold text-purple-9">{label}</span> {text}</span>
                 </li>
               ))}
             </ul>
+
+            {/* Stage 4 */}
+            <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
+              Stage Four: AI-Native Execution
+            </h2>
+            <p className="text-purple-7 leading-relaxed mb-4">
+              The most recent evolution in marketing leadership is not a new category of hire. It is a new
+              kind of execution layer — one that changes what is possible within both the Fractional CMO and
+              CMO as a Service structures.
+            </p>
+            <p className="text-purple-7 leading-relaxed mb-4">
+              AI-native execution means the strategic brief the senior operator sets does not get handed to a
+              team of people who interpret it with varying degrees of fidelity, context, and capacity. It gets
+              loaded into a system of specialized AI agents — each with a defined function, a defined scope,
+              and a direct relationship to the commercial objective — that execute against it continuously
+              and consistently.
+            </p>
+            <p className="text-purple-7 leading-relaxed mb-4">
+              The senior operator is still essential. The strategic judgment, the ICP understanding, the
+              positioning decisions, the commercial context that makes every output relevant to an actual
+              buyer — none of that is automated. What is automated is the execution of that judgment at a
+              speed and consistency that a human team cannot match.
+            </p>
             <p className="text-purple-7 leading-relaxed mb-8">
-              From diagnostic to live campaigns in under a month. No hiring cycles. No onboarding delays.
-              No translation layers.
+              This is the model{" "}
+              <Link href="/" className="text-brand hover:text-brand-dark font-semibold underline underline-offset-2">
+                Triple &amp; Co.
+              </Link>{" "}
+              operates. We call it the Woman in the Loop (WIL) architecture: Lihi Pinto holds the strategic
+              thread, and{" "}
+              <Link href="/agents" className="text-brand hover:text-brand-dark font-semibold underline underline-offset-2">
+                eight specialized AI agents
+              </Link>{" "}
+              execute the work the strategy requires — across brand, content, SEO, paid, social, email,
+              competitive intelligence, and analytics.
+            </p>
+
+            {/* Comparison table */}
+            <h2 className="text-2xl font-extrabold text-purple-9 mb-6">
+              How the Models Compare
+            </h2>
+            <div className="mb-12 overflow-x-auto">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-purple-05 border border-purple-15">
+                    <th className="text-left px-4 py-3 font-bold text-purple-9 border-r border-purple-15">Criteria</th>
+                    <th className="text-left px-4 py-3 font-bold text-purple-9 border-r border-purple-15">Full-Time CMO</th>
+                    <th className="text-left px-4 py-3 font-bold text-purple-9 border-r border-purple-15">Fractional CMO</th>
+                    <th className="text-left px-4 py-3 font-bold text-brand">CMO as a Service</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Senior strategic oversight", "Yes", "Yes", "Yes"],
+                    ["Execution included", "Depends on team built", "No", "Yes"],
+                    ["Speed to first output", "Slow (ramp period)", "Medium", "Fast"],
+                    ["Pipeline accountability", "High", "Low to medium", "High"],
+                    ["Cost to access", "$250K–$400K+ per year", "$80K–$150K per year", "Varies by scope"],
+                    ["Best fit stage", "Series B+ with marketing team", "Seed to Series A", "Seed to Series B"],
+                    ["AI-native execution", "Rarely", "Rarely", "Yes (WIL model)"],
+                  ].map(([criteria, ft, frac, caas], idx) => (
+                    <tr key={criteria as string} className={idx % 2 === 0 ? "bg-white border border-purple-15" : "bg-purple-05 border border-purple-15"}>
+                      <td className="px-4 py-3 font-semibold text-purple-9 border-r border-purple-15">{criteria}</td>
+                      <td className="px-4 py-3 text-purple-7 border-r border-purple-15">{ft}</td>
+                      <td className="px-4 py-3 text-purple-7 border-r border-purple-15">{frac}</td>
+                      <td className="px-4 py-3 font-semibold text-brand">{caas}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Which model */}
+            <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
+              Which Model Is Right for Your Stage
+            </h2>
+            <p className="text-purple-7 leading-relaxed mb-6">
+              The right model depends on two things: what your marketing function currently looks like, and
+              what you need it to deliver in the next 12 months.
+            </p>
+
+            <div className="space-y-5 mb-10">
+              {[
+                {
+                  label: "Choose a Fractional CMO if:",
+                  items: [
+                    "You have a capable marketing team that needs strategic direction and senior leadership it currently does not have.",
+                    "Your primary gap is clarity — on positioning, ICP, messaging, or channel strategy — rather than execution capacity.",
+                    "You need executive-level marketing representation in board conversations or fundraising processes without the full-time cost.",
+                    "You want to build internal playbooks and processes that your team can own and run independently.",
+                  ],
+                },
+                {
+                  label: "Choose CMO as a Service if:",
+                  items: [
+                    "You do not have a marketing team capable of executing a sophisticated multi-channel strategy independently.",
+                    "You need both the strategy and the campaigns, content, and sequences that turn it into pipeline.",
+                    "You are a founder who is currently running marketing yourself and needs to hand it off completely to a senior operator.",
+                    "You want a full marketing function — not a consultant — accountable to your pipeline number.",
+                  ],
+                },
+              ].map(({ label, items }) => (
+                <div key={label} className="rounded-2xl border border-purple-15 bg-purple-05 p-6 card-gradient-top">
+                  <p className="text-sm font-bold text-purple-9 mb-3">{label}</p>
+                  <ul className="space-y-2 pl-0">
+                    {items.map((item) => (
+                      <li key={item} className="flex gap-3 text-purple-7 leading-relaxed text-sm">
+                        <span className="text-brand mt-1 shrink-0">→</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* Triple & Co. offers both */}
+            <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
+              Triple &amp; Co. Offers Both
+            </h2>
+            <p className="text-purple-7 leading-relaxed mb-4">
+              We do not have a fixed model. We have a fixed principle: senior strategic ownership plus the
+              execution capacity to back it up. What that looks like in practice depends on where you are and
+              what you need.
+            </p>
+            <p className="text-purple-7 leading-relaxed mb-4">
+              Some engagements are structured as Fractional CMO — Lihi working directly with your existing
+              team, setting strategy, and building the playbooks your team runs. Others are full CMO as a
+              Service engagements, where the WIL architecture handles the complete marketing execution
+              alongside the strategic direction.
+            </p>
+            <p className="text-purple-7 leading-relaxed mb-8">
+              In both cases, the commercial objective is the same: build a marketing function that produces
+              consistent, compounding pipeline — and leaves your company in a better structural position than
+              it started.
             </p>
 
             {/* Conclusion */}
             <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
-              The Model Has Changed. Has Your Marketing?
+              The Common Thread
             </h2>
             <p className="text-purple-7 leading-relaxed mb-4">
-              The Fractional CMO was the right answer to a real problem, until the tools available to
-              execute strategy changed entirely. Today, a single senior operator with the right AI
-              architecture can deliver the strategic judgment of a CMO and the output of a full marketing
-              department. The execution gap that made the fractional model frustrating and expensive has
-              closed.
+              What ties all of these models together — what has not changed through any of the evolutions in
+              marketing leadership — is this: the quality of your marketing is determined by the quality of
+              the strategic judgment directing it.
             </p>
             <p className="text-purple-7 leading-relaxed mb-4">
-              The companies that recognize this shift first will build compounding pipeline advantages
-              while their competitors are still briefing agencies and waiting for the next status call.
+              AI tools have changed what is possible in execution. The volume of content that can be produced,
+              the consistency with which it can be maintained, the speed at which campaigns can be iterated —
+              all of that has shifted. What has not shifted is the need for a senior operator who understands
+              your buyers, your competitive position, and the specific commercial objective your marketing
+              function is accountable to.
             </p>
             <p className="text-purple-7 leading-relaxed mb-8">
-              If you are still stitching together a Fractional CMO and a roster of vendors, you are paying
-              for fragmentation. There is a more capital-efficient, more accountable, and faster
-              alternative — and it is already running for B2B companies from Tel Aviv to New York.
+              Whether that takes the form of a Fractional CMO, a CMO as a Service engagement, or an AI-native
+              execution model is a structural question. The strategic question underneath it is always the
+              same: does the person running your marketing understand your market well enough to make every
+              output move a buyer closer to a decision?
             </p>
 
+            {/* CTA */}
+            <div className="rounded-2xl bg-purple-05 border border-purple-15 p-8 card-gradient-top">
+              <p className="text-xs font-bold uppercase tracking-widest text-brand mb-3">
+                Not sure which model fits your stage?
+              </p>
+              <h3 className="text-2xl font-extrabold text-purple-9 mb-3">
+                Let&apos;s Figure It Out in 45 Minutes
+              </h3>
+              <p className="text-purple-7 leading-relaxed mb-6 text-sm">
+                A Diagnostic Call with Lihi is not a sales call. It is a structured conversation about your
+                current marketing setup, where the gaps are, and which model — Fractional CMO, CMO as a
+                Service, or something in between — is the right fit for where your company is now. No generic
+                pitch. A straight answer.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-bold text-white hover:bg-brand-dark transition-colors"
+              >
+                Book a Diagnostic Call <span>&#8594;</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="py-12 lg:py-16 bg-purple-05">
-        <div className="mx-auto max-w-[800px] px-8 text-center">
-          <p className="eyebrow mb-3">Ready to audit your revenue funnel?</p>
-          <h2 className="text-2xl lg:text-3xl font-extrabold text-purple-9 tracking-tight mb-4">
-            Book a Free Diagnostic Call
-          </h2>
-          <p className="text-purple-7 leading-relaxed mb-8 max-w-xl mx-auto">
-            In 45 minutes, you will get a clear picture of where your current marketing architecture is
-            leaking revenue, and what a CMO as a Service engagement would look like for your stage and market.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
-          >
-            Book a Diagnostic Call <span>&#8594;</span>
-          </Link>
-        </div>
-      </section>
-
       {/* ── FOOTER BLURB ── */}
-      <section className="py-8 bg-white border-t border-purple-15">
-        <div className="mx-auto max-w-[800px] px-8">
-          <p className="text-sm text-purple-6 leading-relaxed">
-            Triple &amp; Co. is a revenue architecture firm for B2B companies. We operate a Woman in
-            the Loop (WIL) model: senior strategy from Lihi Pinto, executed by eight specialized AI agents
-            across content, SEO, paid media, outbound, and lifecycle marketing.{" "}
-            <Link href="/about" className="text-brand hover:text-brand-dark font-semibold">
-              Learn more about how we work
-            </Link>
-            {" "}or{" "}
-            <Link href="/insights" className="text-brand hover:text-brand-dark font-semibold">
-              return to the Insights Hub
-            </Link>
-            .
-          </p>
+      <section className="py-8 bg-purple-05 border-t border-purple-15">
+        <div className="mx-auto max-w-[1200px] px-8">
+          <div className="max-w-[800px]">
+            <p className="text-xs text-purple-6 leading-relaxed">
+              <Link href="/" className="text-brand hover:text-brand-dark font-semibold">Triple &amp; Co.</Link>{" "}
+              is a Native AI CMO and CRO as a Service firm. Our Woman in the Loop (WIL) architecture combines
+              senior strategic direction from Lihi Pinto with eight specialized AI agents executing across
+              brand, content, SEO, paid, social, email, intelligence, and analytics.{" "}
+              <Link href="/agents" className="text-brand hover:text-brand-dark font-semibold">Meet the agents</Link>{" "}
+              or{" "}
+              <Link href="/about" className="text-brand hover:text-brand-dark font-semibold">learn how we work</Link>.
+            </p>
+          </div>
         </div>
       </section>
     </>

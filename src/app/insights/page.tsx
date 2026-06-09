@@ -71,9 +71,9 @@ const articles = [
   {
     date: "Jun 2026",
     title:
-      "The Evolution of Marketing Leadership: Why CMO as a Service is Replacing the Fractional CMO",
+      "The Evolution of Marketing Leadership: Fractional CMO, CMO as a Service, and What Comes Next",
     excerpt:
-      "Startups know they need senior marketing leadership, so they hire a Fractional CMO. But the fractional model is broken: it gives you a playbook and no team to execute it. Here is what replaced it.",
+      "Full-time CMO. Fractional CMO. CMO as a Service. AI-native execution. How marketing leadership has evolved, what each model actually delivers, and how to choose the right one for your stage.",
     category: "CMO & CRO as a Service",
     href: "/insights/cmo-as-a-service-vs-fractional-cmo",
     featured: true,
