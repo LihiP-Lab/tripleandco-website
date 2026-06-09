@@ -81,6 +81,16 @@ const articles = [
   },
   {
     date: "Jun 2026",
+    title: "What Is CMO as a Service? The Complete Guide for B2B Founders",
+    excerpt:
+      "Not a fractional hire. Not an agency retainer. CMO as a Service is a full marketing function — strategy, AI execution, and senior oversight in one engagement. Here is everything you need to know.",
+    category: "CMO & CRO as a Service",
+    href: "/insights/what-is-cmo-as-a-service",
+    featured: false,
+    pillar: true,
+  },
+  {
+    date: "Jun 2026",
     title:
       "The Revenue Silo Problem: Why Your B2B Startup Needs CRO as a Service, Not Just a Fractional CRO",
     excerpt:
@@ -102,30 +112,11 @@ const articles = [
     pillar: true,
   },
   {
-    date: "10 Jul 2025",
-    title:
-      "CRO and CMO as a Service: The Growth Boost Your Startup Has Been Waiting For",
-    excerpt:
-      "When your startup starts gaining traction, that is exactly when the real challenges begin. It is hard to acquire new customers consistently, and marketing feels like throwing darts in the dark.",
-    category: "CMO & CRO as a Service",
-    featured: false,
-    pillar: false,
-  },
-  {
     date: "8 Jul 2025",
     title: "How to Write Strategic, Precise, and High-Impact Marketing Prompts",
     excerpt:
       "AI is only as good as the prompts you give it. Learn how to craft marketing prompts that produce content your team can actually use.",
     category: "Native AI Marketing",
-    featured: false,
-    pillar: false,
-  },
-  {
-    date: "7 Jun 2025",
-    title: "Accelerate B2B Growth with CRO & CMO as a Service",
-    excerpt:
-      "Discover how combining fractional CMO and CRO leadership creates a unified growth engine for B2B startups.",
-    category: "CMO & CRO as a Service",
     featured: false,
     pillar: false,
   },
@@ -139,57 +130,10 @@ const articles = [
     pillar: false,
   },
   {
-    date: "1 Apr 2025",
-    title: "Maximizing Your Startup Growth in Q4 2024 with CRO as a Service",
-    excerpt:
-      "Q4 is make-or-break for many startups. Learn how CRO as a Service accelerates pipeline and closes the year strong.",
-    category: "CMO & CRO as a Service",
-    featured: false,
-    pillar: false,
-  },
-  {
-    date: "30 Aug 2024",
-    title: "Unlocking Growth: CRO as a Service for B2B Startups",
-    excerpt:
-      "Why more B2B companies are turning to fractional CRO leadership to align marketing, sales, and customer success.",
-    category: "CMO & CRO as a Service",
-    featured: false,
-    pillar: false,
-  },
-  {
     date: "24 Mar 2024",
     title: "How a Fractional CMO Can Transform Your Startup",
     excerpt:
       "Fractional CMOs bring executive-level marketing leadership without the overhead. Here is what to expect and how to get the most out of the engagement.",
-    category: "Fractional Leadership",
-    featured: false,
-    pillar: false,
-  },
-  {
-    date: "21 Mar 2024",
-    title:
-      "Unlocking Growth Potential: Understanding CMO Services and the Rise of CMO as a Service",
-    excerpt:
-      "The CMO as a Service model is growing fast. Understand what it is, why it works, and how it differs from traditional consulting.",
-    category: "Fractional Leadership",
-    featured: false,
-    pillar: false,
-  },
-  {
-    date: "24 Jun 2023",
-    title: "Exploring the Rise of CMO as a Service",
-    excerpt:
-      "Why the fractional CMO model is becoming the default for high-growth B2B startups that need senior marketing leadership.",
-    category: "Fractional Leadership",
-    featured: false,
-    pillar: false,
-  },
-  {
-    date: "1 Jun 2023",
-    title:
-      "5 Key Insights from Vitafoods Europe 2023: Branding and Marketing for Nutraceutical and Food Tech Companies",
-    excerpt:
-      "Lessons on branding, positioning, and go-to-market from one of Europe's largest B2B food-tech events.",
     category: "Fractional Leadership",
     featured: false,
     pillar: false,
