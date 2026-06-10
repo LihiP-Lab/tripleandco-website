@@ -104,27 +104,27 @@ const comparisonRows = [
 const faqs = [
   {
     q: "What\u2019s the difference between an AI marketing agent and a tool like HubSpot?",
-    a: "HubSpot is infrastructureit manages your CRM, email, and reporting. An AI marketing agent produces the work that goes into those channels. Think of agents as the team that creates and executes, and HubSpot as the system that tracks and distributes it.",
+    a: "HubSpot is infrastructure. It manages your CRM, email, and reporting. An AI marketing agent produces the work that goes into those channels. Think of agents as the team that creates and executes, and HubSpot as the system that tracks and distributes it.",
   },
   {
     q: "Do I need to know how to use AI or Claude to work with the agents?",
-    a: "No. You brief Lihi, she configures and runs the agents, and you receive finished work. The AI is the engineyou interact with the operator, not the model.",
+    a: "No. You brief Lihi, she configures and runs the agents, and you receive finished work. The AI is the engine. You interact with the operator, not the model.",
   },
   {
     q: "How does Lihi Pinto\u2019s oversight work day to day?",
-    a: "Every deliverable passes Lihi before it reaches you. She reviews outputs for brand alignment, strategic accuracy, and quality. If something isn\u2019t right, she iterates before it ships. You\u2019re not reviewing AI draftsyou\u2019re receiving finished work.",
+    a: "Every deliverable passes Lihi before it reaches you. She reviews outputs for brand alignment, strategic accuracy, and quality. If something isn\u2019t right, she iterates before it ships. You\u2019re not reviewing AI drafts. You\u2019re receiving finished work.",
   },
   {
     q: "Can I hire one agent or do I need the full team?",
-    a: "You can hire one. Most engagements start with a single agent diagnostictypically Camille for brand voice, Rex for growth strategy, or Nova for content researchand expand from there as trust is established.",
+    a: "You can hire one. Most engagements start with a single agent diagnostic, typically Camille for brand voice, Rex for growth strategy, or Nova for content research, and expand from there as trust is established.",
   },
   {
     q: "What does a typical first month look like?",
-    a: "Week one: kickoff call, brief, and agent configuration. Weeks two and three: the agent runs the diagnostic and produces the deliverable. Week four: review, iteration, and decision on whether to continue as a retainer. The diagnostic is designed to produce something immediately usefulnot a roadmap for future work.",
+    a: "Week one: kickoff call, brief, and agent configuration. Weeks two and three: the agent runs the diagnostic and produces the deliverable. Week four: review, iteration, and decision on whether to continue as a retainer. The diagnostic is designed to produce something immediately useful, not a roadmap for future work.",
   },
   {
     q: "How is this different from hiring a marketing agency?",
-    a: "A traditional agency manages channels and produces assets. Triple & Co. runs an operating systemsenior CMO and CRO leadership, full-service execution, and specialist agents all connected into one revenue engine. Lihi owns the outcome, not just the deliverables.",
+    a: "A traditional agency manages channels and produces assets. Triple & Co. runs an operating system: senior CMO and CRO leadership, full-service execution, and specialist agents all connected into one revenue engine. Lihi owns the outcome, not just the deliverables.",
   },
 ];
 
@@ -193,7 +193,7 @@ export default function AIMarketingAgentsPage() {
             </p>
             <p className="text-lg text-purple-7 leading-relaxed">
               AI marketing agents are different. An agent isn&rsquo;t a tool you
-              prompt manuallyit&rsquo;s a specialist, scoped to a single
+              prompt manually. It&rsquo;s a specialist, scoped to a single
               function, configured to your brand, and built to deliver finished
               work on a predictable cadence. At Triple &amp; Co., we&rsquo;ve
               built a team of eight of them. Here&rsquo;s what they are, how
@@ -215,7 +215,7 @@ export default function AIMarketingAgentsPage() {
           <ScrollReveal delay={0.1}>
             <p className="text-lg text-purple-7 leading-relaxed mb-4">
               An AI marketing agent is a purpose-built system that handles one
-              specific marketing function end to endfrom intake to finished
+              specific marketing function end to end, from intake to finished
               deliverable. Unlike a general AI assistant that responds to
               whatever you ask, an agent has a defined scope, a specific model
               chosen for that type of judgment, and a structured workflow that
@@ -226,7 +226,7 @@ export default function AIMarketingAgentsPage() {
               &ldquo;write a LinkedIn post,&rdquo; you get whatever it decides to
               produce. When you deploy an AI marketing agent for social, it knows
               your brand voice, your audience, your content pillars, your
-              cadence, and your past performanceand it ships a 30-day
+              cadence, and your past performance, and it ships a 30-day
               calendar, not a one-off post.
             </p>
             <p className="text-lg text-purple-7 leading-relaxed">
@@ -261,7 +261,7 @@ export default function AIMarketingAgentsPage() {
             </p>
             <p className="text-lg text-purple-7 leading-relaxed mb-8">
               AI marketing agents solve this differently. Instead of adding
-              headcount, you deploy specialistseach one handling a defined
+              headcount, you deploy specialists, each one handling a defined
               function, each one running on the model best suited to that type
               of work, all of them connected into one operating system.
             </p>
@@ -323,7 +323,7 @@ export default function AIMarketingAgentsPage() {
             <p className="text-lg text-purple-7 leading-relaxed mb-10">
               8 Specialists, One Revenue System. Each agent is built for one
               function. Each one runs on the Claude model best suited to that
-              type of judgment. Each one ships finished worknot drafts, not
+              type of judgment. Each one ships finished work, not drafts, not
               suggestions, not raw AI output.
             </p>
           </ScrollReveal>
@@ -383,7 +383,7 @@ export default function AIMarketingAgentsPage() {
         </div>
       </section>
 
-      {/* Human in the Loop — Lihi */}
+      {/* Human in the Loop: Lihi */}
       <section className="py-16 lg:py-24 bg-dark">
         <div className="mx-auto max-w-[880px] px-8">
           <ScrollReveal>
@@ -408,7 +408,7 @@ export default function AIMarketingAgentsPage() {
                   Lihi Pinto is a marketing and revenue executive with 15+ years scaling B2B SaaS startups. She raised over $70M, tripled revenue at a SaaS company repeatedly, and built the operating system that powers the agent team.
                 </p>
                 <p className="text-purple-light leading-relaxed mb-6">
-                  Every deliverable passes Lihi before it reaches you. She reviews for brand alignment, strategic accuracy, and quality. You are not buying AI tools you manage yourself — you are getting an operator who runs them for you.
+                  Every deliverable passes Lihi before it reaches you. She reviews for brand alignment, strategic accuracy, and quality. You are not buying AI tools you manage yourself. You are getting an operator who runs them for you.
                 </p>
                 <Link
                   href="/about"
@@ -427,7 +427,7 @@ export default function AIMarketingAgentsPage() {
         <div className="mx-auto max-w-[880px] px-8">
           <ScrollReveal>
             <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-10">
-              How It WorksBrief, Run, Deliver
+              How It Works: Brief, Run, Deliver
             </h2>
           </ScrollReveal>
 
@@ -441,12 +441,12 @@ export default function AIMarketingAgentsPage() {
               {
                 num: "2",
                 title: "Run",
-                body: "The agent runs on Claude. Lihi supervises strategy and quality end to endreviewing outputs, making judgment calls, and ensuring everything aligns with your brand before it ships. You are never handed raw AI output.",
+                body: "The agent runs on Claude. Lihi supervises strategy and quality end to end, reviewing outputs, making judgment calls, and ensuring everything aligns with your brand before it ships. You are never handed raw AI output.",
               },
               {
                 num: "3",
                 title: "Deliver",
-                body: "Finished, on-brand work arrives on a weekly cadence. Every deliverable is yours to keepwhether you continue the engagement or not.",
+                body: "Finished, on-brand work arrives on a weekly cadence. Every deliverable is yours to keep, whether you continue the engagement or not.",
               },
             ].map((step, i) => (
               <ScrollReveal key={step.num} delay={0.1 + i * 0.12}>
@@ -467,7 +467,7 @@ export default function AIMarketingAgentsPage() {
 
           <ScrollReveal delay={0.4}>
             <p className="text-center text-purple-7 leading-relaxed mt-10 max-w-2xl mx-auto">
-              The first engagement is always a fixed-scope diagnostictwo to
+              The first engagement is always a fixed-scope diagnostic, two to
               three weeks, fixed price, with a defined deliverable. If you
               continue, the diagnostic fee is credited toward your first
               retainer month.
@@ -488,7 +488,7 @@ export default function AIMarketingAgentsPage() {
           <ScrollReveal delay={0.1}>
             <p className="text-lg text-purple-7 leading-relaxed mb-6">
               AI marketing agents work best for B2B companies that are past
-              product-market fit and need marketing output that compoundsnot
+              product-market fit and need marketing output that compounds, not
               another tool to manage.
             </p>
           </ScrollReveal>
@@ -565,7 +565,7 @@ export default function AIMarketingAgentsPage() {
             <p className="text-purple-7 leading-relaxed mb-3 max-w-2xl mx-auto">
               Start with a diagnostic. Book a 30-minute call with Lihi, identify
               the biggest gap in your marketing operation, and get a fixed-scope
-              deliverable in two weekscredited toward your first retainer if
+              deliverable in two weeks, credited toward your first retainer if
               you continue.
             </p>
             <p className="text-sm text-purple-5 mb-10">
