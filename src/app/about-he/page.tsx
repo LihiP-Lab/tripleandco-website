@@ -155,21 +155,48 @@ export default function AboutHebrewPage() {
   const profilePageSchema = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
+    "name": "ליהיא פינטו | עמוד רשמי",
     "url": "https://www.tripleandco.com/about-he",
+    "inLanguage": "he",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Triple & Co.",
+      "url": "https://www.tripleandco.com",
+    },
     "mainEntity": {
       "@type": "Person",
       "name": "ליהיא פינטו",
-      "alternateName": "Lihi Pinto",
-      "jobTitle": "Founder of Triple & Co., CMO and CRO as a Service",
+      "alternateName": ["Lihi Pinto", "Lihi Pinto Triple & Co.", "ליהיא פינטו Triple & Co."],
+      "jobTitle": "Founder, CMO and CRO as a Service",
+      "nationality": "Israeli",
       "worksFor": {
         "@type": "Organization",
         "name": "Triple & Co.",
         "url": "https://www.tripleandco.com",
+        "foundingDate": "2022",
+        "founder": {
+          "@type": "Person",
+          "name": "ליהיא פינטו",
+        },
       },
       "url": "https://www.tripleandco.com/about-he",
-      "image": "https://www.tripleandco.com/images/lihi.png",
-      "description": "ליהיא פינטו היא מייסדת Triple & Co. ומומחית CMO ו CRO as a Service לסטארטאפים B2B SaaS, עם מעל 15 שנות ניסיון בבנקאות השקעות, יזמות הייטק, גיוסי הון ובניית מנועי צמיחה.",
-      "knowsAbout": ["CMO as a Service", "CRO as a Service", "B2B SaaS Marketing", "Revenue Growth", "AI Marketing"],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.tripleandco.com/images/lihi.png",
+        "description": "ליהיא פינטו, מייסדת Triple & Co.",
+      },
+      "description": "ליהיא פינטו היא מייסדת Triple & Co. ומומחית CMO ו CRO as a Service לסטארטאפים B2B SaaS. יזמת, מומחית צמיחה, ממייסדי Syte. מעל 15 שנות ניסיון בבנקאות השקעות, יזמות הייטק, גיוסי הון ובניית מנועי צמיחה.",
+      "knowsAbout": [
+        "CMO as a Service",
+        "CRO as a Service",
+        "B2B SaaS Marketing",
+        "Revenue Growth",
+        "AI Marketing",
+        "Investment Banking",
+        "Go-To-Market Strategy",
+        "Pipeline Generation",
+        "Customer Success",
+      ],
       "sameAs": [
         "https://www.linkedin.com/in/lihipinto/",
         "https://www.linkedin.com/company/tripleandco/",
@@ -221,9 +248,6 @@ export default function AboutHebrewPage() {
 
               <h1 className="text-5xl sm:text-6xl lg:text-[72px] font-black leading-[1.0] text-white mb-4" style={{ letterSpacing: "-0.02em" }}>
                 <span className="gradient-text">ליהיא פינטו</span>
-                <span className="block text-3xl sm:text-4xl text-white font-black mt-2">
-                  מייסדת Triple &amp; Co.
-                </span>
               </h1>
               <p className="text-xl sm:text-2xl font-semibold text-purple-3 mb-6 leading-snug">
                 CMO ו CRO as a Service לסטארטאפים B2B
@@ -240,17 +264,20 @@ export default function AboutHebrewPage() {
                 </span>
               </div>
 
-              <p className="text-lg text-purple-3 leading-relaxed mb-6 max-w-xl">
-                ליהיא פינטו היא מייסדת Triple &amp; Co., מומחית CMO ו CRO as a Service
-                לסטארטאפים B2B, עם מעל 15 שנות ניסיון בבנקאות השקעות, יזמות
-                הייטק, גיוסי הון ובניית מנועי צמיחה. מעל 70 מיליון דולר שגויסו.
-                הכנסות שולשו, שוב ושוב. כעת מפעילה את צוות השיווק הראשון בישראל
-                עם AI מלא, שמורכב מ-8 סוכנים ייעודיים עם ליהיא פינטו כ-Human in
-                the Loop.
+              <p className="text-lg text-purple-3 leading-relaxed mb-5 max-w-xl">
+                ליהיא פינטו היא מייסדת Triple &amp; Co. ומומחית CMO ו CRO as a Service
+                לסטארטאפים B2B SaaS. זהו העמוד הרשמי של ליהיא פינטו בעברית, עם
+                מידע על הניסיון, שיטת העבודה והשירותים שהיא מובילה דרך Triple &amp; Co.
+              </p>
+              <p className="text-lg text-purple-3 leading-relaxed mb-5 max-w-xl">
+                עם מעל 15 שנות ניסיון בבנקאות השקעות, יזמות הייטק, גיוסי הון
+                ובניית מנועי צמיחה, ליהיא פינטו גייסה מעל 70 מיליון דולר, בנתה
+                מכונת SaaS משומנת ושילשה הכנסות שוב ושוב.
               </p>
               <p className="text-lg text-purple-3 leading-relaxed mb-10 max-w-xl">
-                לא פלט AI גולמי. לא ספריית פרומפטים. מכונת הכנסות עם פיקוח
-                מקצה לקצה, שמנוהלת על ידי CRO שכבר עשתה את זה.
+                היום ליהיא פינטו מובילה את Triple &amp; Co. כצוות שיווק, מכירות
+                ו AI נייטיב לסטארטאפים שרוצים לבנות פייפליין, לחדד מיצוב
+                ולהאיץ צמיחה.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -410,6 +437,34 @@ export default function AboutHebrewPage() {
           </div>
         </div>
       </div>
+
+      {/* ── ABOUT LIHI ──────────────────────────────────────────────────── */}
+      <section className="py-24 lg:py-32 bg-white" id="about">
+        <div className="mx-auto max-w-[800px] px-8">
+          <h2 className="text-3xl lg:text-[44px] font-black leading-[1.1] text-purple-9 mb-10" style={{ letterSpacing: "-0.02em" }}>
+            אודות{" "}
+            <span className="gradient-text">ליהיא פינטו</span>
+          </h2>
+          <div className="space-y-6 text-lg text-purple-7 leading-relaxed">
+            <p>
+              ליהיא פינטו היא יזמת, מומחית צמיחה ומייסדת Triple &amp; Co. לאורך
+              הקריירה שלה היא שילבה בין בנקאות השקעות, יזמות, שיווק, מכירות
+              ובניית מנועי הכנסות לחברות טכנולוגיה.
+            </p>
+            <p>
+              לפני הקמת Triple &amp; Co., ליהיא פינטו הייתה ממייסדי Syte, חברת SaaS
+              בתחום ה eCommerce, ושימשה בתפקידי צמיחה, שיווק והכנסות. הניסיון
+              הזה הפך לבסיס לשיטת העבודה של Triple &amp; Co. שילוב בין אסטרטגיה
+              בכירה, ביצוע שיווקי, תהליכי מכירה, customer success ו AI בפיקוח אנושי.
+            </p>
+            <p>
+              דרך Triple &amp; Co., ליהיא פינטו מלווה מייסדים והנהלות של חברות
+              B2B SaaS שרוצות לבנות תשתית צמיחה מדידה, להגדיל פייפליין
+              ולייצר מנוע הכנסות יציב.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* ── POSITION STATEMENT ──────────────────────────────────────────── */}
       <section className="py-24 lg:py-32 bg-white">
@@ -681,6 +736,14 @@ export default function AboutHebrewPage() {
               {
                 q: "במה ליהיא פינטו מתמחה?",
                 a: "ליהיא פינטו מתמחה בצמיחה לסטארטאפים B2B, בניית אסטרטגיית שיווק ומכירות, מיצוב, יצירת ביקושים, ניהול פייפליין והקמת מנועי הכנסות.",
+              },
+              {
+                q: "האם זה העמוד הרשמי של ליהיא פינטו?",
+                a: "כן. זהו עמוד האודות הרשמי של ליהיא פינטו באתר Triple & Co., החברה שהקימה ומובילה.",
+              },
+              {
+                q: "איך אפשר ליצור קשר עם ליהיא פינטו?",
+                a: "אפשר לקבוע שיחת אבחון עם ליהיא פינטו דרך אתר Triple & Co. ולבדוק התאמה לשירותי CMO ו CRO as a Service.",
               },
             ].map((item) => (
               <div
