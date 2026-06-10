@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 const agents = [
   {
     id: "camille",
-    name: "קמיל",
+    name: "קמי",
     role: "קול המותג",
     desc: "כותבת קופי שנשמע בדיוק כמו ליהיא, בכל בריף ובכל פוסט.",
   },
@@ -284,11 +284,36 @@ export default function AboutHebrewPage() {
     ],
   };
 
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://www.tripleandco.com/about-he#lihi-pinto",
+    "name": "Lihi Pinto",
+    "jobTitle": "Founder & Fractional CMO",
+    "worksFor": {
+      "@type": "Organization",
+      "@id": "https://www.tripleandco.com#organization",
+      "name": "Triple & Co.",
+      "url": "https://www.tripleandco.com",
+    },
+    "description":
+      "CMO and CRO as a Service for B2B SaaS startups, utilizing an AI-native team of 8 agents.",
+    "url": "https://www.tripleandco.com/about-he",
+    "sameAs": [
+      "https://il.linkedin.com/in/lihipinto",
+      "https://www.linkedin.com/in/lihipinto/",
+    ],
+  };
+
   return (
     <div dir="rtl" lang="he">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
       <script
         type="application/ld+json"
@@ -315,7 +340,7 @@ export default function AboutHebrewPage() {
         />
 
         <div className="relative z-10 mx-auto max-w-[1200px] px-8 w-full py-24 lg:py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center lg:items-start">
             {/* Copy */}
             <div className="lg:col-span-7 animate-fade-in">
               {/* Badge */}
@@ -331,6 +356,9 @@ export default function AboutHebrewPage() {
 
               <h1 className="text-5xl sm:text-6xl lg:text-[72px] font-black leading-[1.0] text-white mb-4" style={{ letterSpacing: "-0.02em" }}>
                 <span className="gradient-text">ליהיא פינטו</span>
+                <span className="block text-2xl sm:text-3xl lg:text-4xl font-bold text-white mt-4 leading-tight">
+                  CMO ו-CRO as a Service מבוסס AI לסטארטאפים
+                </span>
               </h1>
               <p className="text-xl sm:text-2xl font-semibold text-purple-3 mb-6 leading-snug">
                 Fractional CMO ו-CRO as a Service לסטארטאפים B2B ישראל
@@ -347,6 +375,12 @@ export default function AboutHebrewPage() {
                 </span>
               </div>
 
+              <p className="text-lg text-white leading-relaxed mb-5 max-w-xl font-medium">
+                טריפל אנד קו (Triple &amp; Co) הוא שירות ה-CMO ו-CRO הראשון בישראל
+                מבוסס בינה מלאכותית לסטארטאפים B2B SaaS. השירות משלב פיקוח אנושי
+                אסטרטגי של המייסדת ליהיא פינטו עם צוות של 8 סוכני AI מתמחים לביצוע
+                אקסקיושן שיווקי והאצת הכנסות.
+              </p>
               <p className="text-lg text-purple-3 leading-relaxed mb-5 max-w-xl">
                 ליהיא פינטו היא מייסדת Triple &amp; Co. ומומחית Fractional CMO ו-CRO as a Service
                 לסטארטאפים B2B SaaS. זהו העמוד הרשמי של ליהיא פינטו בעברית, עם
@@ -357,11 +391,27 @@ export default function AboutHebrewPage() {
                 ובניית מנועי צמיחה B2B SaaS, ליהיא פינטו גייסה מעל 70 מיליון דולר, בנתה
                 מכונת SaaS משומנת ושילשה הכנסות שוב ושוב.
               </p>
-              <p className="text-lg text-purple-3 leading-relaxed mb-10 max-w-xl">
+              <p className="text-lg text-purple-3 leading-relaxed mb-8 max-w-xl">
                 היום ליהיא פינטו מובילה את Triple &amp; Co. כצוות שיווק, מכירות
                 ו AI נייטיב לסטארטאפים שרוצים לבנות פייפליין, לחדד מיצוב
                 ולהאיץ צמיחה.
               </p>
+
+              <ul className="space-y-2 mb-10 max-w-xl">
+                {[
+                  "15+ שנות ניסיון ב-B2B SaaS",
+                  "70M$+ גיוסי הון",
+                  "8 סוכני AI בצוות שלכם",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-lg text-white font-medium"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-brand shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
 
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -456,7 +506,7 @@ export default function AboutHebrewPage() {
                       />
                       <span className="text-[10px] font-bold text-brand uppercase tracking-wider">כותבת</span>
                     </div>
-                    <p className="text-xs font-bold text-white truncate">קמיל</p>
+                    <p className="text-xs font-bold text-white truncate">קמי</p>
                     <p className="text-[10px] text-purple-4 truncate">מסיימת דף נחיתה</p>
                   </div>
                 </div>
@@ -684,9 +734,9 @@ export default function AboutHebrewPage() {
 
           {/* How they work together */}
           <div className="bg-purple-85 rounded-3xl p-8 lg:p-12 border border-purple-7/30">
-            <h3 className="text-2xl font-black text-white mb-8 text-center">
+            <h2 className="text-2xl font-black text-white mb-8 text-center">
               איך זה עובד ביחד
-            </h3>
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
@@ -699,7 +749,7 @@ export default function AboutHebrewPage() {
                   step: "02",
                   label: "הפעלה",
                   color: "#896D9C",
-                  desc: "הסוכנים הנכונים נכנסים לפעולה. רקס מתכנן. קמיל כותבת. אטלס עוקב. הכל במקביל.",
+                  desc: "הסוכנים הנכונים נכנסים לפעולה. רקס מתכנן. קמי כותבת. אטלס עוקב. הכל במקביל.",
                 },
                 {
                   step: "03",
