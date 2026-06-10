@@ -1,22 +1,41 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Our Services | Triple & Co.",
   description:
-    "Nine services your company can hire. Senior CMO and CRO leadership, full-service B2B marketing execution, and AI-powered delivery.",
+    "Nine services your company can hire. Senior CMO and CRO leadership, full-service B2B marketing execution, and AI-powered delivery. Benefit-led, outcome-scoped.",
   alternates: { canonical: "/services" },
 };
 
-const services = [
+type Service = {
+  id: string;
+  name: string;
+  tag: string;
+  description: string;
+  who: string;
+  problem: string;
+  outcome: string;
+  deliverables: string[];
+  link: string | null;
+  linkLabel?: string;
+  icon: ReactNode;
+};
+
+const services: Service[] = [
   {
     id: "cmo",
     name: "CMO as a Service",
     tag: "Senior marketing leadership, embedded in your team.",
     description:
-      "Get executive-level marketing leadership without the full-time commitment. Lihi Pinto embeds within your leadership circle, joining your meetings, aligning with your goals and driving strategy from day one. From positioning and demand generation to team building and board reporting, everything a full-time CMO delivers, on your terms.",
+      "Lihi embeds within your leadership circle, joins your meetings, aligns with your goals, and drives strategy from day one. Everything a full-time CMO delivers, on your terms and at a fraction of the cost.",
+    who: "B2B companies between seed and Series B that need executive marketing judgment but can't justify a $300K+ hire.",
+    problem:
+      "Marketing is running on tactics without strategy. Nobody owns the number, and the board asks questions nobody can answer.",
+    outcome:
+      "A clear marketing strategy, a team that ships against it, and board-level reporting that holds up to scrutiny.",
     deliverables: [
       "Marketing strategy & OKR alignment",
       "Go-to-market planning & execution",
@@ -24,6 +43,7 @@ const services = [
       "Board-level marketing reporting",
     ],
     link: "/cmo-as-a-service",
+    linkLabel: "Learn more",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
         <circle cx="12" cy="8" r="4" />
@@ -36,7 +56,12 @@ const services = [
     name: "Full CRO Service",
     tag: "Revenue ownership across marketing, sales, and customer success.",
     description:
-      "A unified revenue engine that aligns marketing, sales and customer success under one strategic leader. We own the entire funnel, from first touch to closed-won to expansion, and build the processes, playbooks and dashboards your team needs to hit revenue targets consistently.",
+      "One strategic leader who owns the entire funnel, from first touch to closed-won to expansion. We build the processes, playbooks, and dashboards your team needs to hit revenue targets consistently.",
+    who: "Companies where marketing, sales, and CS each report good numbers while revenue misses the plan.",
+    problem:
+      "Three teams, three sets of metrics, zero shared accountability. Deals leak between handoffs.",
+    outcome:
+      "One revenue engine with shared targets, clean handoffs, and a forecast your CEO can take to the board.",
     deliverables: [
       "Full-funnel revenue strategy",
       "Sales & marketing alignment",
@@ -56,7 +81,12 @@ const services = [
     name: "Brand Strategy & Storytelling",
     tag: "Voice, positioning, and visual language that scales.",
     description:
-      "Your brand is more than a logo. We define your positioning, craft your narrative and build a visual identity system that resonates with buyers and scales across every channel. From messaging frameworks to brand guidelines, everything your team needs to speak with one voice.",
+      "Your brand is more than a logo. We define your positioning, craft your narrative, and build a visual identity system that resonates with buyers and scales across every channel.",
+    who: "Companies whose product outgrew their story: strong tech, forgettable messaging.",
+    problem:
+      "Every deck, page, and post sounds different. Buyers can't repeat what you do, so they don't.",
+    outcome:
+      "One narrative, one voice, one visual system. Your whole team can tell the same story, and buyers remember it.",
     deliverables: [
       "Brand positioning & messaging framework",
       "Visual identity guidelines",
@@ -75,7 +105,12 @@ const services = [
     name: "Growth Strategy & GTM",
     tag: "From thesis to a 90-day execution plan.",
     description:
-      "We turn your growth thesis into a concrete, executable plan. Starting with ICP definition and market analysis, we build a 90-day go-to-market roadmap with clear milestones, channel strategy and budget allocation. No slide decks that sit on a shelf. A living plan your team executes against.",
+      "We turn your growth thesis into a concrete, executable plan: ICP definition, market analysis, channel strategy, and budget allocation. No slide decks that sit on a shelf. A living plan your team executes against.",
+    who: "Founders entering a new market, launching a new product, or resetting after a flat year.",
+    problem:
+      "Plenty of ideas, no sequence. Budget spreads thin across channels that were never validated.",
+    outcome:
+      "A 90-day roadmap with clear milestones, owners, and budget, plus the data to double down or kill each channel fast.",
     deliverables: [
       "ICP & market segmentation",
       "90-day GTM roadmap",
@@ -95,7 +130,12 @@ const services = [
     name: "Social Management",
     tag: "Founder-led content. A full marketing calendar.",
     description:
-      "Social presence built around founder authority and company expertise. We create a full content calendar, produce founder-led posts, manage community engagement and measure what actually drives pipeline, not vanity metrics. Your channels become a revenue-driving asset.",
+      "Social presence built around founder authority and company expertise. Full content calendar, founder-led posts, community engagement, and measurement tied to pipeline, not vanity metrics.",
+    who: "B2B founders and exec teams who know LinkedIn drives deals but can't sustain the cadence.",
+    problem:
+      "Posting is sporadic, generic, and disconnected from revenue. Competitors own the conversation.",
+    outcome:
+      "A consistent founder voice, a calendar that ships every week, and channels that produce conversations with buyers.",
     deliverables: [
       "Content calendar & cadence planning",
       "Founder-led content creation",
@@ -114,7 +154,12 @@ const services = [
     name: "HubSpot & Automation",
     tag: "A CRM that runs like a revenue engine.",
     description:
-      "Your CRM should work for you, not against you. We set up, configure and optimize HubSpot (or your preferred platform) so it captures every signal, automates routine follow-ups and gives your team real-time visibility into pipeline health. Clean data, smart workflows, actionable reports.",
+      "We set up, configure, and optimize HubSpot (or your preferred platform) so it captures every signal, automates routine follow-ups, and gives your team real-time visibility into pipeline health.",
+    who: "Teams paying for a CRM that works against them: messy data, manual follow-ups, reports nobody trusts.",
+    problem:
+      "Leads fall through the cracks. Reporting takes days and still doesn't answer the question.",
+    outcome:
+      "Clean data, smart workflows, and dashboards that show pipeline health in real time.",
     deliverables: [
       "CRM setup & configuration",
       "Marketing automation workflows",
@@ -134,7 +179,12 @@ const services = [
     name: "Pipeline Management",
     tag: "Demand generation to qualified opportunity.",
     description:
-      "End-to-end pipeline visibility and optimization. We build the processes that turn inbound interest into qualified opportunities, define stage criteria, implement lead scoring and create the reporting your sales team needs to focus on deals that close.",
+      "End-to-end pipeline visibility and optimization. We build the processes that turn inbound interest into qualified opportunities: stage criteria, lead scoring, and reporting your sales team actually uses.",
+    who: "Companies generating leads that stall: traffic and MQLs up, qualified opportunities flat.",
+    problem:
+      "No shared definition of \"qualified\". Sales chases everything and trusts nothing marketing sends.",
+    outcome:
+      "A pipeline where every stage has criteria, every lead has a score, and sales focuses on deals that close.",
     deliverables: [
       "Pipeline stage definition & criteria",
       "Lead scoring & qualification framework",
@@ -154,7 +204,12 @@ const services = [
     name: "Events & Tradeshows",
     tag: "From booth to closed pipeline.",
     description:
-      "Events are expensive. Make them count. We handle end-to-end event strategy: selecting the right shows, designing booth experiences, preparing your team with talk tracks and follow-up sequences, and measuring the pipeline generated. From booth to closed deal.",
+      "Events are expensive. Make them count. End-to-end event strategy: selecting the right shows, designing booth experiences, preparing your team with talk tracks, and measuring the pipeline generated.",
+    who: "Companies spending five or six figures per show without knowing what came back.",
+    problem:
+      "Booths get booked, badges get scanned, and follow-up dies in someone's inbox.",
+    outcome:
+      "Every event has a target, a talk track, a follow-up sequence, and a pipeline number attached to it.",
     deliverables: [
       "Event selection & ROI planning",
       "Booth design & experience strategy",
@@ -174,7 +229,12 @@ const services = [
     name: "In-House Team Building",
     tag: "Sourcing, training, and keeping the right marketers.",
     description:
-      "Building a marketing team is hard. We help you define roles, source candidates, run the interview process and onboard new hires with the systems and playbooks they need to be productive from week one. We also design career paths and retention strategies so your best people stay.",
+      "We help you define roles, source candidates, run interviews, and onboard new hires with the systems and playbooks they need to be productive from week one. Career paths included, so your best people stay.",
+    who: "Companies ready to bring marketing in-house but burned by bad hires before.",
+    problem:
+      "Wrong roles, vague job specs, and new hires left to figure it out alone for six months.",
+    outcome:
+      "The right people in the right roles, productive in weeks, with playbooks that outlast any one hire.",
     deliverables: [
       "Role definition & job descriptions",
       "Candidate sourcing & interview design",
@@ -192,139 +252,236 @@ const services = [
   },
 ];
 
+const jumpLinks = [
+  { id: "cmo", label: "CMO as a Service" },
+  { id: "cro", label: "Full CRO" },
+  { id: "brand", label: "Brand & Story" },
+  { id: "gtm", label: "Growth & GTM" },
+  { id: "social", label: "Social" },
+  { id: "hubspot", label: "HubSpot" },
+  { id: "pipeline", label: "Pipeline" },
+  { id: "events", label: "Events" },
+  { id: "team", label: "Team Building" },
+];
+
+function ServiceBlock({ service }: { service: Service }) {
+  return (
+    <div
+      id={service.id}
+      className="relative bg-white rounded-2xl p-8 lg:p-11 shadow-[var(--shadow-base)] border border-purple-15 card-gradient-top overflow-hidden scroll-mt-32"
+    >
+      <div className="flex items-center gap-4 mb-2">
+        <div className="w-11 h-11 rounded-xl bg-pink-05 flex items-center justify-center text-brand flex-shrink-0">
+          {service.icon}
+        </div>
+        <h2 className="text-2xl lg:text-[26px] font-extrabold text-purple-9 tracking-tight">
+          {service.name}
+        </h2>
+      </div>
+      <p className="text-sm font-semibold text-brand mb-5">{service.tag}</p>
+
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-10 items-start">
+        <div>
+          <p className="text-purple-7 leading-relaxed text-[15.5px] mb-6">
+            {service.description}
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 mb-7">
+            <div className="bg-purple-05 border border-purple-15 rounded-xl p-4">
+              <p className="text-[11px] font-extrabold uppercase tracking-[.1em] text-brand mb-1.5">
+                Who it&apos;s for
+              </p>
+              <p className="text-[13.5px] text-purple-7">{service.who}</p>
+            </div>
+            <div className="bg-purple-05 border border-purple-15 rounded-xl p-4">
+              <p className="text-[11px] font-extrabold uppercase tracking-[.1em] text-brand mb-1.5">
+                The problem
+              </p>
+              <p className="text-[13.5px] text-purple-7">{service.problem}</p>
+            </div>
+            <div className="bg-purple-05 border border-purple-15 rounded-xl p-4">
+              <p className="text-[11px] font-extrabold uppercase tracking-[.1em] text-brand mb-1.5">
+                The outcome
+              </p>
+              <p className="text-[13.5px] text-purple-7">{service.outcome}</p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-3.5">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
+            >
+              Book a Consultation <span>&#8594;</span>
+            </Link>
+            {service.link ? (
+              <Link
+                href={service.link}
+                className="inline-flex items-center gap-2 rounded-[10px] bg-pink-05 px-5 py-2.5 text-sm font-semibold text-brand transition-all hover:-translate-y-0.5"
+              >
+                {service.linkLabel ?? "Learn more"} <span>&#8594;</span>
+              </Link>
+            ) : null}
+          </div>
+        </div>
+
+        <div className="bg-purple-05 rounded-xl p-6 border border-purple-15">
+          <h3 className="text-[11px] font-extrabold uppercase tracking-[.14em] text-brand mb-3.5">
+            What you get
+          </h3>
+          <ul className="space-y-3">
+            {service.deliverables.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-2.5 text-sm text-purple-7"
+              >
+                <span className="w-1.5 h-1.5 rounded-full gradient-bar shrink-0 mt-1.5" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-20 pb-16 lg:pt-28 lg:pb-20 bg-purple-05">
-        <div className="mx-auto max-w-[1200px] px-8">
-          <Breadcrumbs
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Our Services" },
-            ]}
-          />
-
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <span className="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
-                9 services
-              </span>
-              <span className="text-purple-3">&middot;</span>
-              <span className="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
-                Full-stack B2B
-              </span>
-              <span className="text-purple-3">&middot;</span>
-              <span className="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
-                AI-powered delivery
-              </span>
-            </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] text-purple-9 mb-6">
-              Everything Your Growth{" "}
-              <span className="gradient-text">Engine Needs</span>
-            </h1>
-            <p className="text-lg text-purple-7 max-w-2xl mx-auto">
-              Senior CMO and CRO leadership, full-service B2B marketing
-              execution, and AI-powered delivery. Hire one. Hire several. Or
-              hire the full stack.
-            </p>
+      <section className="relative bg-dark text-white pt-20 pb-16 lg:pt-24 lg:pb-20 overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 70% 80% at 75% 40%, rgba(254, 52, 101, .18) 0%, transparent 70%)",
+          }}
+        />
+        <div className="relative z-10 mx-auto max-w-[1200px] px-8 text-center">
+          <div className="flex items-center justify-center gap-2.5 mb-6 flex-wrap">
+            <span className="inline-flex items-center rounded-full bg-brand/15 px-3.5 py-1.5 text-xs font-bold text-pink-3">
+              9 services
+            </span>
+            <span className="inline-flex items-center rounded-full bg-brand/15 px-3.5 py-1.5 text-xs font-bold text-pink-3">
+              Full-stack B2B
+            </span>
+            <span className="inline-flex items-center rounded-full bg-brand/15 px-3.5 py-1.5 text-xs font-bold text-pink-3">
+              AI-powered delivery
+            </span>
           </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] mb-6 max-w-[820px] mx-auto">
+            Everything your growth engine{" "}
+            <span className="gradient-text">needs</span>. Nothing it
+            doesn&apos;t.
+          </h1>
+          <p className="text-lg text-purple-3 max-w-2xl mx-auto">
+            Each service is scoped to a real business problem and a measurable
+            outcome. Hire one. Hire several. Or hire the full stack.
+          </p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="mx-auto max-w-[1200px] px-8">
-          <div className="space-y-8">
-            {services.map((service, i) => (
-              <ScrollReveal key={service.id} delay={0.05 + i * 0.04}>
-                <div
-                  id={service.id}
-                  className="relative bg-white rounded-2xl p-8 lg:p-10 shadow-[var(--shadow-base)] border border-purple-15 card-gradient-top overflow-hidden transition-all hover:shadow-[0_12px_32px_rgba(137,109,156,0.18)]"
-                >
-                  <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 items-start">
-                    <div>
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-11 h-11 rounded-xl bg-pink-05 flex items-center justify-center text-brand flex-shrink-0">
-                          {service.icon}
-                        </div>
-                        <div>
-                          <h2 className="text-xl lg:text-2xl font-extrabold text-purple-9 tracking-tight">
-                            {service.name}
-                          </h2>
-                          <p className="text-sm text-brand font-semibold">
-                            {service.tag}
-                          </p>
-                        </div>
-                      </div>
-
-                      <p className="text-purple-7 leading-relaxed mb-6">
-                        {service.description}
-                      </p>
-
-                      <div className="flex flex-wrap gap-3">
-                        {service.link ? (
-                          <Link
-                            href={service.link}
-                            className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
-                          >
-                            Learn more <span>&#8594;</span>
-                          </Link>
-                        ) : null}
-                        <Link
-                          href="/contact"
-                          className="inline-flex items-center gap-2 rounded-[10px] border border-purple-15 bg-purple-05 px-5 py-2.5 text-sm font-semibold text-purple-9 transition-all hover:border-brand/30 hover:-translate-y-0.5"
-                        >
-                          Book a call <span>&#8594;</span>
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="bg-purple-05 rounded-xl p-6 border border-purple-15">
-                      <h3 className="text-xs font-bold uppercase tracking-[.14em] text-brand mb-4">
-                        What you get
-                      </h3>
-                      <ul className="space-y-3">
-                        {service.deliverables.map((item) => (
-                          <li
-                            key={item}
-                            className="flex items-start gap-2.5 text-sm text-purple-7"
-                          >
-                            <span className="w-1.5 h-1.5 rounded-full gradient-bar shrink-0 mt-1.5" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+      {/* Jump nav */}
+      <div className="sticky top-[72px] z-40 bg-white border-b border-purple-15">
+        <div className="mx-auto max-w-[1200px] px-8 flex gap-1.5 overflow-x-auto py-3">
+          {jumpLinks.map((j) => (
+            <a
+              key={j.id}
+              href={`#${j.id}`}
+              className="text-[13px] font-semibold text-purple-6 px-3.5 py-1.5 rounded-full whitespace-nowrap transition-colors hover:bg-pink-05 hover:text-brand"
+            >
+              {j.label}
+            </a>
+          ))}
         </div>
-      </section>
+      </div>
 
-      {/* CTA */}
-      <section className="py-20 lg:py-28 bg-purple-05">
-        <div className="mx-auto max-w-[880px] px-8 text-center">
+      {/* Service blocks */}
+      <section className="py-16 lg:py-20 bg-purple-05">
+        <div className="mx-auto max-w-[1200px] px-8 space-y-8">
+          {services.slice(0, 4).map((service, i) => (
+            <ScrollReveal key={service.id} delay={0.05 + i * 0.04}>
+              <ServiceBlock service={service} />
+            </ScrollReveal>
+          ))}
+
+          {/* Mid-page lead band */}
           <ScrollReveal>
-            <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
-              Not Sure Which Service Fits?
+            <div className="relative bg-dark text-white rounded-3xl p-10 lg:p-14 overflow-hidden">
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(ellipse 60% 80% at 85% 40%, rgba(254, 52, 101, .2) 0%, transparent 70%)",
+                }}
+              />
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-10 items-center">
+                <div>
+                  <p className="eyebrow eyebrow-light mb-3">
+                    Not sure which service fits?
+                  </p>
+                  <h2 className="text-2xl lg:text-[28px] font-black tracking-tight mb-3">
+                    Start with a free diagnostic.
+                  </h2>
+                  <p className="text-purple-3 text-[15.5px]">
+                    30 minutes with Lihi. We map your current gaps and
+                    recommend the right combination for your stage and goals.
+                    Most companies start with one service and expand.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-4 lg:justify-end">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
+                  >
+                    Book a Consultation <span>&#8594;</span>
+                  </Link>
+                  <Link
+                    href="/agents"
+                    className="text-pink-3 font-semibold text-[15px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all self-center"
+                  >
+                    Explore AI Solutions <span>&#8594;</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {services.slice(4).map((service, i) => (
+            <ScrollReveal key={service.id} delay={0.05 + i * 0.04}>
+              <ServiceBlock service={service} />
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="relative bg-dark text-white py-20 lg:py-28 overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 60% 70% at 50% 30%, rgba(254, 52, 101, .2) 0%, transparent 70%)",
+          }}
+        />
+        <div className="relative z-10 mx-auto max-w-[760px] px-8 text-center">
+          <ScrollReveal>
+            <p className="eyebrow eyebrow-light mb-4">Next step</p>
+            <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] mb-4">
+              Map your gaps in{" "}
+              <span className="gradient-text">30 minutes</span>.
             </h2>
-            <p className="text-purple-7 mb-4 max-w-xl mx-auto">
-              Book a free diagnostic call with Lihi. We&apos;ll map your
-              current gaps and recommend the right combination of services for
-              your stage and goals.
-            </p>
-            <p className="text-sm text-purple-6 mb-10">
-              Most companies start with one service and expand as they grow.
+            <p className="text-purple-3 mb-10 max-w-xl mx-auto">
+              Book a consultation with Lihi. We&apos;ll look at your funnel,
+              name the highest-impact moves, and recommend where to start.
+              Most companies begin with one service and expand as they grow.
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
             >
-              Book a Diagnostic Call <span>&#8594;</span>
+              Book a Consultation <span>&#8594;</span>
             </Link>
           </ScrollReveal>
         </div>
