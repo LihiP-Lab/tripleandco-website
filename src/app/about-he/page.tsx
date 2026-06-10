@@ -340,7 +340,7 @@ export default function AboutHebrewPage() {
         />
 
         <div className="relative z-10 mx-auto max-w-[1200px] px-8 w-full py-24 lg:py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center lg:items-start">
             {/* Copy */}
             <div className="lg:col-span-7 animate-fade-in">
               {/* Badge */}
