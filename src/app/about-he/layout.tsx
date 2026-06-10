@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ליהיא פינטו | מייסדת Triple & Co. | CMO ו CRO as a Service",
+  title: "ליהיא פינטו | Fractional CMO לסטארטאפים B2B | Triple & Co.",
   description:
-    "ליהיא פינטו, מייסדת Triple & Co., מספקת CMO ו CRO as a Service לסטארטאפים B2B SaaS. ניסיון של 15 שנים, מעל 70 מיליון דולר שגויסו, ובניית מנועי צמיחה מבוססי AI.",
+    "ליהיא פינטו, מייסדת Triple & Co. — Fractional CMO ו-CRO לסטארטאפים B2B SaaS. 15 שנים, 70M$ שגויסו, 8 סוכני AI. קבעו שיחת אבחון עכשיו ←",
   alternates: { canonical: "https://www.tripleandco.com/about-he" },
   openGraph: {
-    title: "ליהיא פינטו | מייסדת Triple & Co. | CMO ו CRO as a Service",
+    title: "ליהיא פינטו | Fractional CMO לסטארטאפים B2B | Triple & Co.",
     description:
-      "ליהיא פינטו, מייסדת Triple & Co., מספקת CMO ו CRO as a Service לסטארטאפים B2B SaaS. ניסיון של 15 שנים, מעל 70 מיליון דולר שגויסו.",
+      "ליהיא פינטו, מייסדת Triple & Co. — Fractional CMO ו-CRO לסטארטאפים B2B SaaS. 15 שנים, 70M$ שגויסו, 8 סוכני AI. קבעו שיחת אבחון עכשיו.",
     url: "https://www.tripleandco.com/about-he",
     type: "profile",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ליהיא פינטו | מייסדת Triple & Co. | CMO ו CRO as a Service",
+    title: "ליהיא פינטו | Fractional CMO לסטארטאפים B2B | Triple & Co.",
     description:
-      "ליהיא פינטו, מייסדת Triple & Co., מספקת CMO ו CRO as a Service לסטארטאפים B2B SaaS.",
+      "ליהיא פינטו, מייסדת Triple & Co. — Fractional CMO ו-CRO לסטארטאפים B2B SaaS. 15 שנים, 70M$ שגויסו, 8 סוכני AI.",
   },
 };
 

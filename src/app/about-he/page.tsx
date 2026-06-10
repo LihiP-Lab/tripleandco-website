@@ -165,44 +165,123 @@ export default function AboutHebrewPage() {
     },
     "mainEntity": {
       "@type": "Person",
+      "@id": "https://www.tripleandco.com/about-he#lihi-pinto",
       "name": "ליהיא פינטו",
-      "alternateName": ["Lihi Pinto", "Lihi Pinto Triple & Co.", "ליהיא פינטו Triple & Co."],
-      "jobTitle": "Founder, CMO and CRO as a Service",
+      "alternateName": ["Lihi Pinto", "Lihi Pinto Triple & Co.", "ליהיא פינטו Triple & Co.", "Lihi Pinto CMO", "Lihi Pinto Fractional CMO"],
+      "jobTitle": "Fractional CMO and CRO as a Service",
       "nationality": "Israeli",
       "worksFor": {
         "@type": "Organization",
+        "@id": "https://www.tripleandco.com#organization",
         "name": "Triple & Co.",
         "url": "https://www.tripleandco.com",
         "foundingDate": "2022",
+        "description": "Triple & Co. מספקת שירותי Fractional CMO ו-CRO as a Service לסטארטאפים B2B SaaS באמצעות צוות של 8 סוכני AI ייעודיים תחת פיקוח אנושי של ליהיא פינטו.",
+        "areaServed": ["Israel", "United States", "Global"],
+        "serviceType": ["Fractional CMO", "Fractional CRO", "CMO as a Service", "CRO as a Service", "B2B SaaS Marketing", "AI Marketing"],
         "founder": {
           "@type": "Person",
           "name": "ליהיא פינטו",
         },
       },
+      "alumniOf": [
+        {
+          "@type": "Organization",
+          "name": "Syte",
+          "description": "חברת B2B SaaS בתחום ה-eCommerce — ליהיא פינטו הייתה ממייסדיה ושימשה בתפקידי צמיחה ושיווק",
+        },
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Fractional CMO",
+        "occupationLocation": { "@type": "Country", "name": "Israel" },
+        "skills": "Fractional CMO, CRO as a Service, B2B SaaS Growth, Go-To-Market Strategy, AI Marketing Agents, Pipeline Generation, Demand Generation, Customer Success",
+      },
       "url": "https://www.tripleandco.com/about-he",
       "image": {
         "@type": "ImageObject",
         "url": "https://www.tripleandco.com/images/lihi.png",
-        "description": "ליהיא פינטו, מייסדת Triple & Co.",
+        "description": "ליהיא פינטו, מייסדת Triple & Co., Fractional CMO ו-CRO לסטארטאפים B2B SaaS",
       },
-      "description": "ליהיא פינטו היא מייסדת Triple & Co. ומומחית CMO ו CRO as a Service לסטארטאפים B2B SaaS. יזמת, מומחית צמיחה, ממייסדי Syte. מעל 15 שנות ניסיון בבנקאות השקעות, יזמות הייטק, גיוסי הון ובניית מנועי צמיחה.",
+      "description": "ליהיא פינטו היא יזמת טכנולוגיה ישראלית ומייסדת Triple & Co., המספקת שירותי Fractional CMO ו-CRO as a Service לסטארטאפים B2B SaaS. בעלת ניסיון של 15+ שנים בבנקאות השקעות, יזמות הייטק וגיוסי הון. גייסה מעל 70 מיליון דולר ומובילה צוות שיווק של 8 סוכני AI תחת פיקוח אנושי.",
       "knowsAbout": [
+        "Fractional CMO",
+        "Fractional CRO",
         "CMO as a Service",
         "CRO as a Service",
         "B2B SaaS Marketing",
         "Revenue Growth",
-        "AI Marketing",
+        "AI Marketing Agents",
         "Investment Banking",
         "Go-To-Market Strategy",
         "Pipeline Generation",
         "Customer Success",
+        "Demand Generation",
+        "Startup Growth",
+        "SaaS Revenue Operations",
       ],
       "sameAs": [
         "https://www.linkedin.com/in/lihipinto/",
         "https://www.linkedin.com/company/tripleandco/",
         "https://www.youtube.com/@lihipinto",
+        "https://www.tripleandco.com",
       ],
     },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "מי זאת ליהיא פינטו?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ליהיא פינטו היא מייסדת Triple & Co. ומומחית Fractional CMO ו-CRO as a Service לסטארטאפים B2B SaaS. היא יזמת טכנולוגיה ישראלית עם ניסיון של מעל 15 שנים בבנקאות השקעות, יזמות הייטק וגיוסי הון.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "מה עושה ליהיא פינטו?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ליהיא פינטו בונה לסטארטאפים B2B SaaS מנועי צמיחה, שיווק, מכירות, customer success ותהליכי Go-To-Market מבוססי AI, דרך Triple & Co. — חברת Fractional CMO ו-CRO שהקימה ב-2022.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "מה הקשר בין ליהיא פינטו ל-Triple & Co.?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ליהיא פינטו היא המייסדת והמובילה של Triple & Co., חברת Fractional CMO ו-CRO as a Service. היא מובילה את אסטרטגיית הצמיחה והביצוע עבור כלל לקוחות החברה.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "במה ליהיא פינטו מתמחה?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ליהיא פינטו מתמחה בצמיחה לסטארטאפים B2B SaaS, בניית אסטרטגיית שיווק ומכירות, מיצוב, יצירת ביקושים, ניהול פייפליין, והקמת מנועי הכנסות. היא נחשבת לאחת ממומחיות ה-Fractional CMO המובילות לסטארטאפים B2B SaaS בישראל.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "האם זה העמוד הרשמי של ליהיא פינטו?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כן. זהו עמוד האודות הרשמי של ליהיא פינטו באתר Triple & Co. בכתובת https://www.tripleandco.com/about-he — החברה שהקימה ומובילה מאז 2022.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "איך אפשר ליצור קשר עם ליהיא פינטו?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "אפשר לקבוע שיחת אבחון עם ליהיא פינטו דרך אתר Triple & Co. בכתובת https://www.tripleandco.com/contact — לבדוק התאמה לשירותי Fractional CMO ו-CRO as a Service.",
+        },
+      },
+    ],
   };
 
   return (
@@ -210,6 +289,10 @@ export default function AboutHebrewPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* ── HERO ────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[92vh] flex items-center bg-purple-9 overflow-hidden">
@@ -250,7 +333,7 @@ export default function AboutHebrewPage() {
                 <span className="gradient-text">ליהיא פינטו</span>
               </h1>
               <p className="text-xl sm:text-2xl font-semibold text-purple-3 mb-6 leading-snug">
-                CMO ו CRO as a Service לסטארטאפים B2B
+                Fractional CMO ו-CRO as a Service לסטארטאפים B2B ישראל
               </p>
 
               {/* Typewriter */}
@@ -265,13 +348,13 @@ export default function AboutHebrewPage() {
               </div>
 
               <p className="text-lg text-purple-3 leading-relaxed mb-5 max-w-xl">
-                ליהיא פינטו היא מייסדת Triple &amp; Co. ומומחית CMO ו CRO as a Service
+                ליהיא פינטו היא מייסדת Triple &amp; Co. ומומחית Fractional CMO ו-CRO as a Service
                 לסטארטאפים B2B SaaS. זהו העמוד הרשמי של ליהיא פינטו בעברית, עם
                 מידע על הניסיון, שיטת העבודה והשירותים שהיא מובילה דרך Triple &amp; Co.
               </p>
               <p className="text-lg text-purple-3 leading-relaxed mb-5 max-w-xl">
                 עם מעל 15 שנות ניסיון בבנקאות השקעות, יזמות הייטק, גיוסי הון
-                ובניית מנועי צמיחה, ליהיא פינטו גייסה מעל 70 מיליון דולר, בנתה
+                ובניית מנועי צמיחה B2B SaaS, ליהיא פינטו גייסה מעל 70 מיליון דולר, בנתה
                 מכונת SaaS משומנת ושילשה הכנסות שוב ושוב.
               </p>
               <p className="text-lg text-purple-3 leading-relaxed mb-10 max-w-xl">
@@ -452,8 +535,8 @@ export default function AboutHebrewPage() {
               ובניית מנועי הכנסות לחברות טכנולוגיה.
             </p>
             <p>
-              לפני הקמת Triple &amp; Co., ליהיא פינטו הייתה ממייסדי Syte, חברת SaaS
-              בתחום ה eCommerce, ושימשה בתפקידי צמיחה, שיווק והכנסות. הניסיון
+              לפני הקמת Triple &amp; Co., ליהיא פינטו הייתה ממייסדי Syte, חברת B2B SaaS
+              בתחום ה-eCommerce, ושימשה בתפקידי צמיחה, שיווק והכנסות. הניסיון
               הזה הפך לבסיס לשיטת העבודה של Triple &amp; Co. שילוב בין אסטרטגיה
               בכירה, ביצוע שיווקי, תהליכי מכירה, customer success ו AI בפיקוח אנושי.
             </p>
@@ -471,8 +554,8 @@ export default function AboutHebrewPage() {
         <div className="mx-auto max-w-[1000px] px-8">
           <p className="eyebrow mb-4 text-brand">הראשון מסוגו</p>
           <h2 className="text-4xl lg:text-[52px] font-black leading-[1.1] text-purple-9 mb-8" style={{ letterSpacing: "-0.02em" }}>
-            ה-CMO/CRO הראשון בישראל{" "}
-            <span className="gradient-text">עם AI נייטיב</span>.
+            ליהיא פינטו —{" "}
+            <span className="gradient-text">Fractional CMO עם AI נייטיב</span>.
             <br />לא יועצת שמשתמשת ב-AI.
             <br />אקסקיושן מלא.
           </h2>
@@ -480,8 +563,8 @@ export default function AboutHebrewPage() {
             <div>
               <p className="text-lg text-purple-7 leading-relaxed mb-6">
                 רוב הסוכנויות הוסיפו AI לתהליכים קיימים. ליהיא בנתה את
-                התהליך סביב AI מהיום הראשון. שמונה סוכנים ייעודיים, כל אחד
-                מנהל ורטיקל, כולם תחת פיקוח של CMO שגייסה 70 מיליון דולר
+                התהליך סביב AI מהיום הראשון. שמונה סוכני AI לשיווק B2B, כל אחד
+                מנהל ורטיקל, כולם תחת פיקוח של Fractional CMO שגייסה 70 מיליון דולר
                 ושילשה הכנסות SaaS בעולם האמיתי.
               </p>
               <p className="text-purple-7 leading-relaxed">
@@ -494,7 +577,7 @@ export default function AboutHebrewPage() {
               {[
                 "פיקוח מקצה לקצה, על ידי ליהיא",
                 "8 מומחי Claude מוגדרים מראש",
-                "15+ שנות ניסיון ב-SaaS, לא תיאוריה שיווקית",
+                "15+ שנות ניסיון ב-B2B SaaS — Fractional CMO בפועל, לא תיאוריה שיווקית",
               ].map((point) => (
                 <div
                   key={point}
@@ -524,11 +607,11 @@ export default function AboutHebrewPage() {
         />
         <div ref={agentsSection.ref} className="relative z-10 mx-auto max-w-[1200px] px-8">
           <div className="text-center mb-16">
-            <p className="eyebrow text-brand mb-3">הצוות מאחורי העבודה</p>
+            <p className="eyebrow text-brand mb-3">סוכני AI לשיווק — הצוות של ליהיא פינטו</p>
             <h2 className="text-4xl lg:text-[52px] font-black leading-[1.05] text-white" style={{ letterSpacing: "-0.02em" }}>
-              8 סוכנים. ליהיא{" "}
-              <span className="gradient-text">אחת</span>.
-              <br />אקסקיושן מלא.
+              8 סוכני AI לשיווק.{" "}
+              <span className="gradient-text">אקסקיושן מלא</span>.
+              <br />ליהיא פינטו מפקחת על הכל.
             </h2>
             <p className="text-purple-3 text-lg mt-4 max-w-xl mx-auto">
               כל סוכן מנהל ורטיקל. ליהיא מחזיקה את הבריף, סוקרת כל
@@ -679,8 +762,8 @@ export default function AboutHebrewPage() {
               </span>
             </div>
             <h2 className="text-4xl lg:text-[48px] font-black leading-[1.05] text-purple-9" style={{ letterSpacing: "-0.02em" }}>
-              צפו{" "}
-              <span className="gradient-text">בשיטה</span>{" "}
+              ליהיא פינטו בפעולה —{" "}
+              <span className="gradient-text">צפו בשיטה</span>{" "}
               מקרוב.
             </h2>
           </div>
@@ -735,7 +818,7 @@ export default function AboutHebrewPage() {
               },
               {
                 q: "במה ליהיא פינטו מתמחה?",
-                a: "ליהיא פינטו מתמחה בצמיחה לסטארטאפים B2B, בניית אסטרטגיית שיווק ומכירות, מיצוב, יצירת ביקושים, ניהול פייפליין והקמת מנועי הכנסות.",
+                a: "ליהיא פינטו מתמחה בצמיחה לסטארטאפים B2B SaaS, בניית אסטרטגיית שיווק ומכירות, מיצוב, יצירת ביקושים, ניהול פייפליין והקמת מנועי הכנסות. היא נחשבת לאחת ממומחיות ה-Fractional CMO המובילות לסטארטאפים B2B SaaS בישראל.",
               },
               {
                 q: "האם זה העמוד הרשמי של ליהיא פינטו?",
@@ -770,11 +853,11 @@ export default function AboutHebrewPage() {
         <div className="relative z-10 mx-auto max-w-[700px] px-8 text-center">
           <p className="eyebrow text-brand mb-4">מוכנים?</p>
           <h2 className="text-4xl lg:text-[52px] font-black leading-[1.05] text-white mb-4" style={{ letterSpacing: "-0.02em" }}>
-            התחילו עם{" "}
-            <span className="gradient-text">שיחת אבחון</span>.
+            קבעו שיחת אבחון עם{" "}
+            <span className="gradient-text">ליהיא פינטו</span>.
           </h2>
           <p className="text-purple-3 text-lg mb-10 max-w-lg mx-auto">
-            פגישה אחת. אבחון של מנוע הצמיחה שלכם. מיפוי של הסוכנים הספציפיים שיזיזו את המחט.
+            פגישה אחת עם Fractional CMO. אבחון של מנוע הצמיחה שלכם. מיפוי של הסוכנים הספציפיים שיזיזו את המחט.
           </p>
           <Link
             href="/contact"
