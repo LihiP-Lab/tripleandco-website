@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { UserRound, Users, Stethoscope, ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 import { AgentFilterBar } from "@/components/AgentFilterBar";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { AgentConstellation } from "@/components/console/AgentConstellation";
+import { MagneticButton } from "@/components/console/MagneticButton";
+import { TelemetryTicker } from "@/components/console/TelemetryTicker";
+import { StickyDiagnosticBar } from "@/components/console/StickyDiagnosticBar";
 
 export const metadata: Metadata = {
   title: "AI Marketing Agents for B2B",
@@ -26,106 +31,322 @@ export const metadata: Metadata = {
 
 const processSteps = [
   {
-    number: "1",
+    number: "01",
     title: "Brief",
     description:
       "A 30-minute kickoff. You share the goal, the context, the assets you already have.",
   },
   {
-    number: "2",
+    number: "02",
     title: "Run",
     description:
       "Your agent runs on Claude. Lihi supervises strategy and quality end to end — you're never handed raw AI output.",
   },
   {
-    number: "3",
+    number: "03",
     title: "Deliver",
     description:
       "Finished, on-brand work lands in your inbox on a weekly cadence. Everything is yours to keep.",
   },
 ];
 
+const doors = [
+  {
+    icon: UserRound,
+    title: "Hire one specialist",
+    description:
+      "Pick a single agent for one focused function — brand voice, analytics, video.",
+    href: "#roster",
+    cta: "Browse the roster",
+    featured: false,
+  },
+  {
+    icon: Stethoscope,
+    title: "Start with a diagnostic",
+    description:
+      "Fixed-scope, fixed-price. The low-risk way to see the team in action.",
+    href: "/contact?offer=diagnostic",
+    cta: "Book a diagnostic",
+    featured: true,
+  },
+  {
+    icon: Users,
+    title: "Deploy the full team",
+    description:
+      "All 8 agents on a monthly retainer, supervised end-to-end by Lihi.",
+    href: "/contact?offer=team",
+    cta: "Talk through a team",
+    featured: false,
+  },
+];
+
 export default function AgentsPage() {
   return (
-    <>
-      {/* Hero */}
-      <section className="pt-20 pb-16 lg:pt-28 lg:pb-20 bg-purple-05">
+    <div className="console">
+      {/* ===== Hero ===== */}
+      <section className="console-canvas pt-16 pb-14 lg:pt-24 lg:pb-20">
         <div className="mx-auto max-w-[1200px] px-8">
           <Breadcrumbs
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Marketing Agents" },
-            ]}
+            items={[{ label: "Home", href: "/" }, { label: "Marketing Agents" }]}
           />
 
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <span className="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
-                8 AI specialists
-              </span>
-              <span className="text-purple-3">&middot;</span>
-              <span className="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
-                Zero onboarding
-              </span>
-              <span className="text-purple-3">&middot;</span>
-              <span className="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
-                Real deliverables
-              </span>
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8">
+            {/* Copy */}
+            <div className="animate-fade-in">
+              <div
+                className="mono-label mb-6 inline-flex items-center gap-2 rounded-full px-3 py-1.5"
+                style={{
+                  border: "1px solid var(--c-border)",
+                  color: "var(--c-text-dim)",
+                }}
+              >
+                <span className="signal-dot" aria-hidden="true" /> Deployment
+                console · 8 agents online
+              </div>
+
+              <h1
+                className="text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-[56px]"
+                style={{ color: "var(--c-text)" }}
+              >
+                Deploy your AI marketing team in{" "}
+                <span className="gradient-text">days, not quarters.</span>
+              </h1>
+
+              <p
+                className="mt-6 max-w-xl text-lg leading-relaxed"
+                style={{ color: "#B5B5C2" }}
+              >
+                Eight purpose-built Claude specialists for every marketing
+                function — each one supervised by a fractional CMO who raised
+                $70M and 3&times;&apos;d SaaS revenue. Hire one, deploy a team,
+                or start with a fixed-scope diagnostic.
+              </p>
+
+              {/* Dual CTA */}
+              <div className="mt-8 flex flex-wrap gap-4">
+                <MagneticButton
+                  href="#roster"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-brand-dark"
+                >
+                  Deploy a team &rarr;
+                </MagneticButton>
+                <Link
+                  href="/contact?offer=diagnostic"
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-semibold transition-all"
+                  style={{
+                    border: "1px solid var(--c-border-strong)",
+                    color: "var(--c-text)",
+                  }}
+                >
+                  Start with a diagnostic &rarr;
+                </Link>
+              </div>
+
+              {/* Trust strip */}
+              <div
+                className="mono-label mt-8 flex flex-wrap items-center gap-x-5 gap-y-2"
+                style={{ color: "var(--c-text-dim)", fontSize: 10 }}
+              >
+                <span className="inline-flex items-center gap-1.5">
+                  <ShieldCheck
+                    className="h-3.5 w-3.5"
+                    style={{ color: "#3DE1FF" }}
+                  />
+                  Every output human-reviewed
+                </span>
+                <span>$70M+ raised</span>
+                <span>15+ yrs B2B SaaS</span>
+                <span>Zero onboarding</span>
+              </div>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] text-purple-9 mb-6">
-              Your AI Marketing Team,{" "}
-              <span className="gradient-text">Ready to Deploy</span>
-            </h1>
-            <p className="text-lg text-purple-7 max-w-2xl mx-auto">
-              Purpose-built Claude specialists for every marketing function.
-              Hire one, hire a team &mdash; or start with a fixed-scope
-              diagnostic.
-            </p>
+            {/* Constellation */}
+            <div className="animate-fade-in-delay-1">
+              <AgentConstellation />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Pillar page callout */}
-      <section className="py-5 bg-dark">
-        <div className="mx-auto max-w-[1200px] px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-purple-light">
-            <span className="font-bold text-white">New to AI marketing agents?</span>{" "}
-            Read our complete guide to what they are and how to deploy them.
-          </p>
-          <Link
-            href="/ai-marketing-agents"
-            className="shrink-0 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-dark transition-colors"
-          >
-            Read the guide &#8594;
-          </Link>
-        </div>
-      </section>
+      {/* ===== Telemetry rail ===== */}
+      <TelemetryTicker />
 
-      {/* Agents Grid with Filters */}
-      <section className="py-16 lg:py-24 bg-white">
+      {/* ===== Three doors ===== */}
+      <section className="console-canvas py-16 lg:py-20">
         <div className="mx-auto max-w-[1200px] px-8">
-          <AgentFilterBar />
+          <ScrollReveal>
+            <p className="mono-label text-center" style={{ color: "#3DE1FF" }}>
+              Three ways in
+            </p>
+            <h2
+              className="mt-3 text-center text-3xl font-black tracking-tight lg:text-[38px]"
+              style={{ color: "var(--c-text)" }}
+            >
+              Take command your way
+            </h2>
+          </ScrollReveal>
+
+          <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
+            {doors.map((door, i) => {
+              const Icon = door.icon;
+              return (
+                <ScrollReveal key={door.title} delay={0.1 + i * 0.1}>
+                  <Link
+                    href={door.href}
+                    className="glass-card group relative flex h-full flex-col rounded-2xl p-7"
+                    style={
+                      door.featured
+                        ? { borderColor: "rgba(254,52,101,0.4)" }
+                        : undefined
+                    }
+                  >
+                    <span className="card-spotlight" aria-hidden="true" />
+                    {door.featured && (
+                      <span
+                        className="mono-label absolute right-5 top-5 rounded px-1.5 py-0.5 text-white"
+                        style={{ background: "var(--c-brand)", fontSize: 9 }}
+                      >
+                        Recommended
+                      </span>
+                    )}
+                    <div
+                      className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl"
+                      style={{
+                        background: door.featured
+                          ? "rgba(254,52,101,0.12)"
+                          : "rgba(61,225,255,0.08)",
+                        border: door.featured
+                          ? "1px solid rgba(254,52,101,0.3)"
+                          : "1px solid rgba(61,225,255,0.2)",
+                        color: door.featured ? "#FE3465" : "#3DE1FF",
+                      }}
+                    >
+                      <Icon className="h-5 w-5" strokeWidth={1.6} />
+                    </div>
+                    <h3
+                      className="text-lg font-bold"
+                      style={{ color: "var(--c-text)" }}
+                    >
+                      {door.title}
+                    </h3>
+                    <p
+                      className="mt-2 flex-1 text-sm leading-relaxed"
+                      style={{ color: "var(--c-text-dim)" }}
+                    >
+                      {door.description}
+                    </p>
+                    <span
+                      className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold transition-transform group-hover:translate-x-1"
+                      style={{ color: door.featured ? "#FE3465" : "#3DE1FF" }}
+                    >
+                      {door.cta} &rarr;
+                    </span>
+                  </Link>
+                </ScrollReveal>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* How it works */}
-      <section className="py-16 lg:py-24 bg-purple-05">
+      {/* ===== Field manual / guide band ===== */}
+      <section className="console-canvas pb-4">
+        <div className="mx-auto max-w-[1200px] px-8">
+          <div
+            className="flex flex-col items-center justify-between gap-4 rounded-2xl px-7 py-5 sm:flex-row"
+            style={{
+              background: "rgba(255,255,255,0.03)",
+              border: "1px solid var(--c-border)",
+            }}
+          >
+            <p className="text-sm" style={{ color: "var(--c-text-dim)" }}>
+              <span
+                className="mono-label mr-2"
+                style={{ color: "#3DE1FF" }}
+              >
+                Field manual
+              </span>
+              New to AI marketing agents? Read the complete guide to what they
+              are and how to deploy them.
+            </p>
+            <Link
+              href="/ai-marketing-agents"
+              className="shrink-0 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all"
+              style={{
+                border: "1px solid var(--c-border-strong)",
+                color: "var(--c-text)",
+              }}
+            >
+              Read the guide &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Roster ===== */}
+      <section id="roster" className="console-canvas py-14 lg:py-20">
+        <div className="mx-auto max-w-[1200px] px-8">
+          <ScrollReveal>
+            <p className="mono-label" style={{ color: "#3DE1FF" }}>
+              The roster
+            </p>
+            <h2
+              className="mt-3 text-3xl font-black tracking-tight lg:text-[38px]"
+              style={{ color: "var(--c-text)" }}
+            >
+              Your eight operatives
+            </h2>
+            <p
+              className="mt-3 max-w-2xl text-[15px]"
+              style={{ color: "var(--c-text-dim)" }}
+            >
+              Each agent runs a vertical. Lihi holds the brief, reviews every
+              output, and connects the whole operation. Filter by function.
+            </p>
+          </ScrollReveal>
+
+          <div className="mt-9">
+            <AgentFilterBar />
+          </div>
+        </div>
+      </section>
+
+      {/* ===== How deployment works ===== */}
+      <section className="console-canvas py-16 lg:py-20">
         <div className="mx-auto max-w-[1000px] px-8">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-3">How it works</p>
+            <p className="mono-label text-center" style={{ color: "#3DE1FF" }}>
+              How deployment works
+            </p>
+            <h2
+              className="mt-3 text-center text-3xl font-black tracking-tight lg:text-[38px]"
+              style={{ color: "var(--c-text)" }}
+            >
+              Brief &rarr; Run &rarr; Deliver
+            </h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+
+          <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
             {processSteps.map((step, i) => (
               <ScrollReveal key={step.number} delay={0.1 + i * 0.12}>
-                <div className="text-center">
-                  <div className="w-10 h-10 rounded-full bg-brand text-white flex items-center justify-center text-lg font-black mx-auto mb-4">
+                <div className="glass-card relative h-full rounded-2xl p-7">
+                  <span className="card-spotlight" aria-hidden="true" />
+                  <div
+                    className="mono-label mb-4"
+                    style={{ color: "var(--c-brand)", fontSize: 13 }}
+                  >
                     {step.number}
                   </div>
-                  <h3 className="text-xl font-extrabold text-purple-9 mb-2">
+                  <h3
+                    className="mb-2 text-xl font-bold"
+                    style={{ color: "var(--c-text)" }}
+                  >
                     {step.title}
                   </h3>
-                  <p className="text-sm text-purple-7 leading-relaxed">
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--c-text-dim)" }}
+                  >
                     {step.description}
                   </p>
                 </div>
@@ -135,26 +356,88 @@ export default function AgentsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="mx-auto max-w-[880px] px-8 text-center">
+      {/* ===== Proof band ===== */}
+      <section className="console-canvas py-12">
+        <div className="mx-auto max-w-[1000px] px-8">
           <ScrollReveal>
-            <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
-              Ready to put AI agents to work?
-            </h2>
-            <p className="text-purple-7 mb-10">
-              Book a diagnostic call to see how the supervised AI team can
-              accelerate your B2B growth.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
+            <div
+              className="rounded-2xl px-8 py-10 text-center"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(254,52,101,0.06), rgba(61,225,255,0.03))",
+                border: "1px solid var(--c-border)",
+              }}
             >
-              Book a Diagnostic Call with Lihi <span>&#8594;</span>
-            </Link>
+              <p
+                className="mx-auto max-w-2xl text-xl font-semibold leading-snug lg:text-2xl"
+                style={{ color: "var(--c-text)" }}
+              >
+                &ldquo;You don&apos;t hire freelancers here. You take command of
+                a team that&apos;s already running — with a fractional CMO on
+                every output.&rdquo;
+              </p>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+                {[
+                  ["8", "AI specialists"],
+                  ["$70M+", "raised"],
+                  ["15+ yrs", "B2B SaaS"],
+                  ["100%", "human-reviewed"],
+                ].map(([n, l]) => (
+                  <div key={l} className="text-center">
+                    <div
+                      className="text-2xl font-black"
+                      style={{ color: "var(--c-text)" }}
+                    >
+                      {n}
+                    </div>
+                    <div
+                      className="mono-label"
+                      style={{ color: "var(--c-text-dim)", fontSize: 9 }}
+                    >
+                      {l}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </section>
-    </>
+
+      {/* ===== Final console CTA ===== */}
+      <section className="console-canvas py-20 lg:py-28">
+        <div className="mx-auto max-w-[820px] px-8 text-center">
+          <ScrollReveal>
+            <p className="mono-label" style={{ color: "#3DE1FF" }}>
+              Ready when you are
+            </p>
+            <h2
+              className="mx-auto mt-3 max-w-2xl text-3xl font-black leading-[1.1] tracking-tight lg:text-[44px]"
+              style={{ color: "var(--c-text)" }}
+            >
+              Take command of your{" "}
+              <span className="gradient-text">marketing engine.</span>
+            </h2>
+            <p
+              className="mx-auto mt-5 max-w-xl text-[15px]"
+              style={{ color: "var(--c-text-dim)" }}
+            >
+              One diagnostic call. We map your growth engine and the specific
+              agents that will move the needle.
+            </p>
+            <div className="mt-9 flex justify-center">
+              <MagneticButton
+                href="/contact?offer=diagnostic"
+                className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-4 text-[15px] font-semibold text-white transition-colors hover:bg-brand-dark"
+              >
+                Book a diagnostic with Lihi &rarr;
+              </MagneticButton>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <StickyDiagnosticBar />
+    </div>
   );
 }
