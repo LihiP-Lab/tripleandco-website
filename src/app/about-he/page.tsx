@@ -287,17 +287,22 @@ export default function AboutHebrewPage() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://www.tripleandco.com/about-he#lihi-pinto",
     "name": "Lihi Pinto",
     "jobTitle": "Founder & Fractional CMO",
     "worksFor": {
       "@type": "Organization",
+      "@id": "https://www.tripleandco.com#organization",
       "name": "Triple & Co.",
       "url": "https://www.tripleandco.com",
     },
     "description":
       "CMO and CRO as a Service for B2B SaaS startups, utilizing an AI-native team of 8 agents.",
     "url": "https://www.tripleandco.com/about-he",
-    "sameAs": ["https://il.linkedin.com/in/lihipinto"],
+    "sameAs": [
+      "https://il.linkedin.com/in/lihipinto",
+      "https://www.linkedin.com/in/lihipinto/",
+    ],
   };
 
   return (
