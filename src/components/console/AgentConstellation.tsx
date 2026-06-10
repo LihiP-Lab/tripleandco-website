@@ -186,12 +186,10 @@ function Node({
 }) {
   return (
     <div
-      className="group absolute"
+      className="group console-node absolute"
       style={{
         left: `${x}%`,
         top: `${y}%`,
-        transform: "translate(-50%, -50%)",
-        animation: "ai-panel-breathe 6s ease-in-out infinite",
         animationDelay: `${delay}s`,
       }}
     >
