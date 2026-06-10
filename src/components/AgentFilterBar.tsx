@@ -1,72 +1,152 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { agents, CATEGORIES, type Agent, type Category } from "@/lib/agents-data";
 import { ScrollReveal } from "./ScrollReveal";
+import { DeliverableIcon } from "@/lib/deliverable-icon";
+
+const MODEL_COLOR: Record<Agent["model"], string> = {
+  "Claude Sonnet": "#3DE1FF",
+  "Claude Opus": "#FE3465",
+  "Claude Haiku": "#8B7BFF",
+};
 
 function ModelBadge({ model }: { model: Agent["model"] }) {
-  const colorMap: Record<Agent["model"], string> = {
-    "Claude Sonnet": "bg-pink-05 text-brand border-pink-1",
-    "Claude Opus": "bg-purple-05 text-purple-6 border-purple-15",
-    "Claude Haiku": "bg-purple-05 text-purple-5 border-purple-15",
-  };
-
+  const color = MODEL_COLOR[model];
   return (
     <span
-      className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-[11px] font-semibold ${colorMap[model]}`}
+      className="mono-label inline-flex items-center gap-1.5 rounded-full px-2.5 py-1"
+      style={{
+        border: `1px solid ${color}40`,
+        background: `${color}12`,
+        color,
+        fontSize: 10,
+      }}
     >
+      <span
+        style={{
+          width: 5,
+          height: 5,
+          borderRadius: 999,
+          background: color,
+          display: "inline-block",
+        }}
+      />
       {model}
     </span>
   );
 }
 
 function AgentDetailCard({ agent, index }: { agent: Agent; index: number }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = cardRef.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const rect = el.getBoundingClientRect();
+    const px = (e.clientX - rect.left) / rect.width;
+    const py = (e.clientY - rect.top) / rect.height;
+    el.style.setProperty("--mx", `${px * 100}%`);
+    el.style.setProperty("--my", `${py * 100}%`);
+    el.style.transform = `perspective(900px) rotateX(${(0.5 - py) * 4}deg) rotateY(${(px - 0.5) * 4}deg)`;
+  };
+  const reset = () => {
+    if (cardRef.current)
+      cardRef.current.style.transform =
+        "perspective(900px) rotateX(0) rotateY(0)";
+  };
+
   return (
     <ScrollReveal delay={0.08 + index * 0.06}>
       <div
+        ref={cardRef}
         id={agent.id}
-        className="relative bg-white rounded-2xl shadow-[var(--shadow-base)] overflow-hidden border border-purple-15 transition-all duration-300 hover:shadow-[var(--shadow-hover)] scroll-mt-28"
+        onMouseMove={handleMove}
+        onMouseLeave={reset}
+        className="glass-card group relative flex h-full flex-col overflow-hidden rounded-2xl scroll-mt-28"
       >
-        <div className="absolute top-0 left-0 right-0 h-1 gradient-bar" />
-        <div className="p-8">
+        <span className="card-spotlight" aria-hidden="true" />
+        <div className="p-7">
           {/* Header */}
-          <div className="flex items-start gap-5 mb-5">
-            <div className="w-20 h-20 rounded-full bg-purple-05 overflow-hidden shrink-0">
+          <div className="mb-4 flex items-start gap-4">
+            <div
+              className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl"
+              style={{ border: "1px solid var(--c-border-strong)" }}
+            >
               <Image
                 src={agent.image}
                 alt={`${agent.name}, AI marketing agent`}
-                width={80}
-                height={80}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover object-top"
               />
             </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="text-xl font-extrabold text-purple-9">
+            <div className="min-w-0 flex-1">
+              <h3 className="text-lg font-bold" style={{ color: "var(--c-text)" }}>
                 {agent.name}
               </h3>
-              <p className="text-sm text-purple-6 mb-2">{agent.role}</p>
+              <p className="mb-2 text-sm" style={{ color: "var(--c-text-dim)" }}>
+                {agent.role}
+              </p>
               <ModelBadge model={agent.model} />
             </div>
           </div>
 
+          {/* Boot-up status line */}
+          <div
+            className="mb-4 flex items-center gap-2 rounded-lg px-3 py-2"
+            style={{
+              background: "rgba(255,255,255,0.025)",
+              border: "1px solid var(--c-border)",
+              fontFamily: "var(--font-mono), ui-monospace, monospace",
+              fontSize: 11,
+              color: "var(--c-text-dim)",
+            }}
+          >
+            <span className="signal-dot shrink-0" aria-hidden="true" />
+            <span className="truncate">
+              online · {agent.model} · ready to deploy
+            </span>
+          </div>
+
           {/* Description */}
-          <p className="text-[15px] text-purple-7 leading-relaxed mb-6">
+          <p
+            className="mb-5 text-[14px] leading-relaxed line-clamp-4"
+            style={{ color: "#B5B5C2" }}
+          >
             {agent.description}
           </p>
 
           {/* What you get */}
-          <div className="mb-6">
-            <p className="eyebrow mb-4">What you get</p>
-            <div className="grid grid-cols-3 gap-4">
+          <div className="mb-5">
+            <p className="mono-label mb-3" style={{ color: "var(--c-text-dim)" }}>
+              What you get
+            </p>
+            <div className="grid grid-cols-3 gap-3">
               {agent.deliverables.map((d) => (
                 <div key={d.title} className="text-center">
-                  <div className="text-2xl mb-2">{d.icon}</div>
-                  <div className="text-sm font-bold text-purple-9 mb-0.5">
+                  <div
+                    className="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-lg"
+                    style={{
+                      background: "rgba(61,225,255,0.08)",
+                      border: "1px solid rgba(61,225,255,0.2)",
+                      color: "#3DE1FF",
+                    }}
+                  >
+                    <DeliverableIcon emoji={d.icon} className="h-[18px] w-[18px]" />
+                  </div>
+                  <div
+                    className="mb-0.5 text-xs font-semibold"
+                    style={{ color: "var(--c-text)" }}
+                  >
                     {d.title}
                   </div>
-                  <div className="text-xs text-purple-6 leading-snug">
+                  <div
+                    className="text-[11px] leading-snug"
+                    style={{ color: "var(--c-text-dim)" }}
+                  >
                     {d.description}
                   </div>
                 </div>
@@ -77,66 +157,86 @@ function AgentDetailCard({ agent, index }: { agent: Agent; index: number }) {
           {/* Diagnostic CTA */}
           <Link
             href={`/contact?agent=${agent.id}&offer=diagnostic`}
-            className="flex items-center justify-between w-full rounded-xl border-2 border-brand/20 bg-pink-05/50 px-5 py-4 group hover:border-brand/40 transition-all"
+            className="group/diag flex items-center justify-between rounded-xl px-4 py-3.5 transition-all"
+            style={{
+              background: "rgba(254,52,101,0.08)",
+              border: "1px solid rgba(254,52,101,0.3)",
+            }}
           >
             <div>
-              <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-white bg-brand rounded px-2 py-0.5 mb-1.5">
+              <span
+                className="mono-label mb-1 inline-block rounded px-1.5 py-0.5 text-white"
+                style={{ background: "var(--c-brand)", fontSize: 9 }}
+              >
                 Start here
               </span>
-              <div className="text-sm font-bold text-purple-9">
+              <div className="text-sm font-bold" style={{ color: "var(--c-text)" }}>
                 {agent.diagnostic.name}
               </div>
-              <div className="text-xs text-purple-6">
-                {agent.diagnostic.duration} &middot; {agent.diagnostic.price}{" "}
-                fixed scope
+              <div className="text-xs" style={{ color: "var(--c-text-dim)" }}>
+                {agent.diagnostic.duration} &middot; {agent.diagnostic.price} fixed
+                scope
               </div>
             </div>
-            <span className="text-brand text-xl group-hover:translate-x-1 transition-transform">
+            <span
+              className="text-xl transition-transform group-hover/diag:translate-x-1"
+              style={{ color: "var(--c-brand)" }}
+            >
               &rarr;
             </span>
           </Link>
         </div>
 
         {/* Footer: tags + pricing */}
-        <div className="border-t border-purple-15 px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+        <div
+          className="mt-auto flex flex-wrap items-center justify-between gap-3 px-7 py-4"
+          style={{ borderTop: "1px solid var(--c-border)" }}
+        >
           <div className="flex flex-wrap gap-1.5">
             {agent.categories.map((cat) => (
               <span
                 key={cat}
-                className="inline-flex items-center rounded-full bg-purple-05 px-3 py-1 text-[11px] font-medium text-purple-6"
+                className="mono-label rounded-full px-2.5 py-1"
+                style={{
+                  border: "1px solid var(--c-border)",
+                  color: "var(--c-text-dim)",
+                  fontSize: 9,
+                }}
               >
                 {cat}
               </span>
             ))}
           </div>
-          <div className="flex items-center gap-5">
-            <div className="text-right">
-              <span className="text-lg font-black text-purple-9">
-                {agent.hourlyRate}
-              </span>
-              <span className="text-xs text-purple-6">/hr</span>
-            </div>
-            <div className="text-right text-xs text-purple-6 leading-tight">
-              {agent.monthlyRetainer}/mo
-              <br />
-              retainer
-            </div>
-            <Link
-              href={`/contact?agent=${agent.id}`}
-              className="text-brand text-sm font-semibold hover:text-brand-dark transition-colors whitespace-nowrap"
-            >
-              Book a call &rarr;
-            </Link>
+          <div
+            className="text-right"
+            style={{
+              fontFamily: "var(--font-mono), ui-monospace, monospace",
+              color: "var(--c-text-dim)",
+              fontSize: 11,
+            }}
+          >
+            <span className="font-bold" style={{ color: "var(--c-text)" }}>
+              {agent.monthlyRetainer}
+            </span>
+            /mo · {agent.hourlyRate}/hr
           </div>
         </div>
 
-        {/* Builder profile */}
-        <div className="border-t border-purple-15 px-8 py-4">
+        {/* Deploy CTA */}
+        <div className="px-7 pb-7 pt-2">
+          <Link
+            href={`/contact?agent=${agent.id}`}
+            className="flex w-full items-center justify-center gap-2 rounded-full py-3 text-sm font-semibold text-white transition-all"
+            style={{ background: "var(--c-brand)" }}
+          >
+            Deploy {agent.name} &rarr;
+          </Link>
           <Link
             href="https://tripleandco.com/builder-profile/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-full rounded-full border-2 border-purple-15 py-2.5 text-sm font-semibold text-purple-6 hover:border-brand hover:text-brand transition-all"
+            className="mt-2.5 flex w-full items-center justify-center text-xs font-medium transition-colors"
+            style={{ color: "var(--c-text-dim)" }}
           >
             View Builder Profile &rarr;
           </Link>
@@ -156,28 +256,28 @@ export function AgentFilterBar() {
 
   return (
     <>
-      {/* Filter pills */}
-      <div className="flex flex-wrap items-center gap-2 mb-8">
+      {/* Tactical filter bar */}
+      <div className="mb-9 flex flex-wrap items-center gap-2">
         {CATEGORIES.map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all cursor-pointer ${
-              activeCategory === cat
-                ? "bg-brand text-white shadow-sm"
-                : "bg-purple-05 text-purple-6 hover:bg-purple-1 border border-purple-15"
-            }`}
+            data-active={activeCategory === cat}
+            className="chip cursor-pointer rounded-full px-3.5 py-1.5"
           >
             {cat}
           </button>
         ))}
-        <span className="ml-auto text-sm text-purple-6">
+        <span
+          className="mono-label ml-auto"
+          style={{ color: "var(--c-text-dim)" }}
+        >
           {filtered.length} agent{filtered.length !== 1 ? "s" : ""}
         </span>
       </div>
 
-      {/* Agent cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+      {/* Agent grid */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
         {filtered.map((agent, i) => (
           <AgentDetailCard key={agent.id} agent={agent} index={i} />
         ))}
