@@ -163,6 +163,12 @@ export default function CMOPage() {
                 >
                   Meet the 8 agents inside the system &#8594;
                 </Link>
+                <Link
+                  href="/about-he"
+                  className="text-sm font-semibold text-purple-5 hover:text-brand hover:underline"
+                >
+                  CMO ו CRO as a Service עם ליהיא פינטו &#8594;
+                </Link>
               </div>
               <p className="text-xs text-purple-6 font-medium uppercase tracking-wider">
                 15+ years in B2B SaaS &middot; $70M+ raised with our playbooks

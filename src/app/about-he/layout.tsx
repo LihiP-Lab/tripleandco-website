@@ -1,15 +1,22 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "אודות ליהיא פינטו | ה-CMO/CRO הראשון בישראל עם AI ילידי | Triple & Co.",
+  title: "ליהיא פינטו | מייסדת Triple & Co. | CMO ו CRO as a Service",
   description:
-    "ליהיא פינטו היא ה-CMO/CRO הראשון בישראל מסוג Native AI. 15+ שנות ניסיון, גיוס של 70 מיליון דולר, הכנסות שולשו שוב ושוב. כעת מפעילה 8 סוכני AI עם פיקוח מלא.",
-  alternates: { canonical: "/about-he" },
+    "ליהיא פינטו, מייסדת Triple & Co., מספקת CMO ו CRO as a Service לסטארטאפים B2B SaaS. ניסיון של 15 שנים, מעל 70 מיליון דולר שגויסו, ובניית מנועי צמיחה מבוססי AI.",
+  alternates: { canonical: "https://www.tripleandco.com/about-he" },
   openGraph: {
-    title: "אודות ליהיא פינטו | ה-CMO/CRO הראשון בישראל עם AI ילידי | Triple & Co.",
+    title: "ליהיא פינטו | מייסדת Triple & Co. | CMO ו CRO as a Service",
     description:
-      "ליהיא פינטו היא ה-CMO/CRO הראשון בישראל מסוג Native AI. 15+ שנות ניסיון, גיוס של 70 מיליון דולר, הכנסות שולשו שוב ושוב.",
+      "ליהיא פינטו, מייסדת Triple & Co., מספקת CMO ו CRO as a Service לסטארטאפים B2B SaaS. ניסיון של 15 שנים, מעל 70 מיליון דולר שגויסו.",
     url: "https://www.tripleandco.com/about-he",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ליהיא פינטו | מייסדת Triple & Co. | CMO ו CRO as a Service",
+    description:
+      "ליהיא פינטו, מייסדת Triple & Co., מספקת CMO ו CRO as a Service לסטארטאפים B2B SaaS.",
   },
 };
 

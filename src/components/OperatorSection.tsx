@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ScrollReveal } from "./ScrollReveal";
 
 const credentials = [
@@ -83,14 +84,22 @@ export function OperatorSection() {
                 founder.&rdquo;
               </blockquote>
 
-              <a
-                href="https://www.linkedin.com/in/lihipinto/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-brand font-semibold text-[15px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
-              >
-                Connect on LinkedIn <span>&#8594;</span>
-              </a>
+              <div className="flex flex-wrap gap-6 items-center">
+                <a
+                  href="https://www.linkedin.com/in/lihipinto/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand font-semibold text-[15px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
+                >
+                  Connect on LinkedIn <span>&#8594;</span>
+                </a>
+                <Link
+                  href="/about-he"
+                  className="text-purple-5 font-semibold text-[15px] inline-flex items-center gap-1.5 hover:text-brand hover:gap-2.5 transition-all"
+                >
+                  ליהיא פינטו <span>&#8594;</span>
+                </Link>
+              </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.4}>

@@ -154,8 +154,38 @@ export default function AboutHebrewPage() {
   const stat3 = useCounter(stats[3].value, 1000, statsSection.inView);
   const statValues = [stat0, stat1, stat2, stat3];
 
+  const profilePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": "https://www.tripleandco.com/about-he",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "ליהיא פינטו",
+      "alternateName": "Lihi Pinto",
+      "jobTitle": "Founder of Triple & Co., CMO and CRO as a Service",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Triple & Co.",
+        "url": "https://www.tripleandco.com",
+      },
+      "url": "https://www.tripleandco.com/about-he",
+      "image": "https://www.tripleandco.com/images/lihi.png",
+      "description": "ליהיא פינטו היא מייסדת Triple & Co. ומומחית CMO ו CRO as a Service לסטארטאפים B2B SaaS, עם מעל 15 שנות ניסיון בבנקאות השקעות, יזמות הייטק, גיוסי הון ובניית מנועי צמיחה.",
+      "knowsAbout": ["CMO as a Service", "CRO as a Service", "B2B SaaS Marketing", "Revenue Growth", "AI Marketing"],
+      "sameAs": [
+        "https://www.linkedin.com/in/lihipinto/",
+        "https://www.linkedin.com/company/tripleandco/",
+        "https://www.youtube.com/@lihipinto",
+      ],
+    },
+  };
+
   return (
     <div dir="rtl" lang="he">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
+      />
       {/* ── HERO ────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[92vh] flex items-center bg-purple-9 overflow-hidden">
         {/* Glow */}
@@ -191,10 +221,12 @@ export default function AboutHebrewPage() {
                 </span>
               </div>
 
-              <h1 className="text-5xl sm:text-6xl lg:text-[72px] font-black leading-[1.0] text-white mb-6" style={{ letterSpacing: "-0.02em" }}>
-                היי, אני{" "}
-                <span className="gradient-text">ליהיא</span>.
+              <h1 className="text-5xl sm:text-6xl lg:text-[72px] font-black leading-[1.0] text-white mb-4" style={{ letterSpacing: "-0.02em" }}>
+                <span className="gradient-text">ליהיא פינטו</span>
               </h1>
+              <p className="text-xl sm:text-2xl font-semibold text-purple-3 mb-6 leading-snug">
+                מייסדת Triple &amp; Co. | CMO ו CRO as a Service לסטארטאפים B2B SaaS
+              </p>
 
               {/* Typewriter */}
               <div className="h-10 flex items-center mb-8">
@@ -208,9 +240,11 @@ export default function AboutHebrewPage() {
               </div>
 
               <p className="text-lg text-purple-3 leading-relaxed mb-6 max-w-xl">
-                15 שנות ניסיון ב-B2B SaaS ובנקאות השקעות. יותר מ-70 מיליון דולר
-                שגויסו. הכנסות שולשו, שוב ושוב. כעת מפעילה את צוות השיווק הראשון
-                בישראל עם AI מלא, שמורכב מ-8 סוכנים ייעודיים עם ליהיא כ-Human in
+                ליהיא פינטו היא מייסדת Triple &amp; Co., מומחית CMO ו CRO as a Service
+                לסטארטאפים B2B SaaS, עם מעל 15 שנות ניסיון בבנקאות השקעות, יזמות
+                הייטק, גיוסי הון ובניית מנועי צמיחה. מעל 70 מיליון דולר שגויסו.
+                הכנסות שולשו, שוב ושוב. כעת מפעילה את צוות השיווק הראשון בישראל
+                עם AI מלא, שמורכב מ-8 סוכנים ייעודיים עם ליהיא פינטו כ-Human in
                 the Loop.
               </p>
               <p className="text-lg text-purple-3 leading-relaxed mb-10 max-w-xl">
@@ -255,7 +289,7 @@ export default function AboutHebrewPage() {
                 <div className="absolute top-0 left-0 right-0 h-1.5 gradient-bar z-10" />
                 <Image
                   src="/images/lihi.png"
-                  alt="ליהיא פינטו, ה-CMO/CRO הראשון בישראל עם AI ילידי"
+                  alt="ליהיא פינטו, מייסדת Triple & Co."
                   fill
                   className="object-cover object-top"
                   priority
@@ -613,6 +647,48 @@ export default function AboutHebrewPage() {
                     loading="lazy"
                   />
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ─────────────────────────────────────────────────────────── */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="mx-auto max-w-[800px] px-8">
+          <div className="text-center mb-14">
+            <p className="eyebrow mb-4 text-brand">שאלות נפוצות</p>
+            <h2 className="text-3xl lg:text-[44px] font-black leading-[1.1] text-purple-9" style={{ letterSpacing: "-0.02em" }}>
+              שאלות נפוצות על{" "}
+              <span className="gradient-text">ליהיא פינטו</span>
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "מי זאת ליהיא פינטו?",
+                a: "ליהיא פינטו היא מייסדת Triple & Co. ומומחית CMO ו CRO as a Service לסטארטאפים B2B SaaS.",
+              },
+              {
+                q: "מה עושה ליהיא פינטו?",
+                a: "ליהיא פינטו עוזרת לסטארטאפים לבנות מנועי צמיחה, שיווק, מכירות, customer success ותהליכי Go To Market מבוססי AI.",
+              },
+              {
+                q: "מה הקשר בין ליהיא פינטו ל Triple & Co.?",
+                a: "ליהיא פינטו היא המייסדת של Triple & Co. ומובילה את אסטרטגיית הצמיחה והביצוע עבור לקוחות החברה.",
+              },
+              {
+                q: "במה ליהיא פינטו מתמחה?",
+                a: "ליהיא פינטו מתמחה בצמיחה לסטארטאפים B2B SaaS, בניית אסטרטגיית שיווק ומכירות, מיצוב, יצירת ביקושים, ניהול פייפליין והקמת מנועי הכנסות.",
+              },
+            ].map((item) => (
+              <div
+                key={item.q}
+                className="rounded-2xl bg-purple-05 border border-purple-15 px-8 py-6"
+              >
+                <h3 className="text-lg font-black text-purple-9 mb-3">{item.q}</h3>
+                <p className="text-purple-7 leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>
