@@ -1,5 +1,5 @@
 import { HeroOrbit } from "@/components/HeroOrbit";
-import { DiagnosisSection } from "@/components/DiagnosisSection";
+import { ThreeLayersSection } from "@/components/ThreeLayersSection";
 import { ArchitectureSection } from "@/components/ArchitectureSection";
 import { OperatorSection } from "@/components/OperatorSection";
 import { WhyDifferentSection } from "@/components/WhyDifferentSection";
@@ -152,7 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      <DiagnosisSection />
+      <ThreeLayersSection />
       <ArchitectureSection />
       <OperatorSection />
       <WhyDifferentSection />
