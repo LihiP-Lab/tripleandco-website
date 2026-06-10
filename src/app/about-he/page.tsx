@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 const agents = [
   {
     id: "camille",
-    name: "קמיל",
+    name: "קמי",
     role: "קול המותג",
     desc: "כותבת קופי שנשמע בדיוק כמו ליהיא, בכל בריף ובכל פוסט.",
   },
@@ -506,7 +506,7 @@ export default function AboutHebrewPage() {
                       />
                       <span className="text-[10px] font-bold text-brand uppercase tracking-wider">כותבת</span>
                     </div>
-                    <p className="text-xs font-bold text-white truncate">קמיל</p>
+                    <p className="text-xs font-bold text-white truncate">קמי</p>
                     <p className="text-[10px] text-purple-4 truncate">מסיימת דף נחיתה</p>
                   </div>
                 </div>
@@ -749,7 +749,7 @@ export default function AboutHebrewPage() {
                   step: "02",
                   label: "הפעלה",
                   color: "#896D9C",
-                  desc: "הסוכנים הנכונים נכנסים לפעולה. רקס מתכנן. קמיל כותבת. אטלס עוקב. הכל במקביל.",
+                  desc: "הסוכנים הנכונים נכנסים לפעולה. רקס מתכנן. קמי כותבת. אטלס עוקב. הכל במקביל.",
                 },
                 {
                   step: "03",
