@@ -535,8 +535,8 @@ export default function AIMarketingAgentsPage() {
             <p className="text-lg text-purple-7 leading-relaxed mt-6">
               It is not the right fit for companies that want to hand off
               strategy entirely, or that aren&rsquo;t ready to invest in
-              consistent execution. The model works because Lihi is in the loop
-             it&rsquo;s not a self-running system.
+              consistent execution. The model works because Lihi is in the loop.
+             It&rsquo;s not a self-running system.
             </p>
           </ScrollReveal>
         </div>
