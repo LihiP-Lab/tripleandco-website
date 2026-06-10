@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Our Services | Triple & Co.",
+  title: "Our Services",
   description:
     "Nine services your company can hire. Senior CMO and CRO leadership, full-service B2B marketing execution, and AI-powered delivery. Benefit-led, outcome-scoped.",
   alternates: { canonical: "/services" },
