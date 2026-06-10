@@ -76,10 +76,8 @@ export function ArchitectureSection() {
             <h2 id="architecture-heading" className="text-3xl lg:text-[44px] font-black tracking-tight leading-[1.1] text-purple-9 mb-3">
               How a supervised AI marketing team works.
             </h2>
-            <p className="text-lg text-purple-6 italic">
-              We call it{" "}
-              <strong className="text-brand not-italic font-bold">WIL.</strong>{" "}
-              Woman in the Loop.
+            <p className="text-lg text-purple-6">
+              Meet the team behind the speed.
             </p>
           </div>
         </ScrollReveal>
