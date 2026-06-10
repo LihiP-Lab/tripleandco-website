@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function MobileCTA() {
   const [show, setShow] = useState(false);
+  const pathname = usePathname();
+  const isConsole = pathname === "/agents";
 
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 500);
@@ -14,7 +17,11 @@ export function MobileCTA() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-50 lg:hidden p-3 bg-white/95 backdrop-blur-md border-t border-purple-15"
+      className={`fixed bottom-0 left-0 right-0 z-50 lg:hidden p-3 backdrop-blur-md border-t ${
+        isConsole
+          ? "bg-[#0F0F1A]/95 border-white/10"
+          : "bg-white/95 border-purple-15"
+      }`}
       style={{
         transform: show ? "translateY(0)" : "translateY(100%)",
         transition: "transform 0.3s ease",
