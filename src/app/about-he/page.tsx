@@ -140,8 +140,6 @@ export default function AboutHebrewPage() {
     "ה-CMO הראשון בישראל עם AI נייטיב.",
     "ה-CRO הראשון בישראל עם AI נייטיב.",
     "Human in the Loop.",
-    "8 סוכנים. מפקחת אחת.",
-    "בריף. הפעלה. מסירה.",
   ]);
 
   const statsSection = useInView(0.3);
@@ -223,9 +221,12 @@ export default function AboutHebrewPage() {
 
               <h1 className="text-5xl sm:text-6xl lg:text-[72px] font-black leading-[1.0] text-white mb-4" style={{ letterSpacing: "-0.02em" }}>
                 <span className="gradient-text">ליהיא פינטו</span>
+                <span className="block text-3xl sm:text-4xl text-white font-black mt-2">
+                  מייסדת Triple &amp; Co.
+                </span>
               </h1>
               <p className="text-xl sm:text-2xl font-semibold text-purple-3 mb-6 leading-snug">
-                מייסדת Triple &amp; Co. | CMO ו CRO as a Service לסטארטאפים B2B SaaS
+                CMO ו CRO as a Service לסטארטאפים B2B
               </p>
 
               {/* Typewriter */}
@@ -438,7 +439,6 @@ export default function AboutHebrewPage() {
               {[
                 "פיקוח מקצה לקצה, על ידי ליהיא",
                 "8 מומחי Claude מוגדרים מראש",
-                "הבריף מכם. הביצוע על ידי הסוכנים. הסקירה על ידי ליהיא.",
                 "15+ שנות ניסיון ב-SaaS, לא תיאוריה שיווקית",
               ].map((point) => (
                 <div
@@ -453,7 +453,7 @@ export default function AboutHebrewPage() {
           </div>
 
           <blockquote className="mt-12 text-xl italic text-purple-9 py-6 px-8 bg-purple-05 border-r-4 border-l-0 border-brand rounded-2xl leading-snug">
-            &ldquo;בונה את צוות השיווק שהייתי רוצה שיהיה לי כמייסדת בשלב מוקדם.&rdquo;
+            &ldquo;בונה את צוותי השיווק שהייתי רוצה שיהיו לי כמייסדת בשלב מוקדם.&rdquo;
           </blockquote>
         </div>
       </section>
@@ -555,7 +555,7 @@ export default function AboutHebrewPage() {
                   step: "01",
                   label: "בריף",
                   color: "#FE3465",
-                  desc: "אתם נותנים לליהיא את המטרה. משפט אחד או מצגת מלאה. שניהם עובדים.",
+                  desc: "אתם נותנים לליהיא את המטרה.",
                 },
                 {
                   step: "02",
@@ -668,11 +668,11 @@ export default function AboutHebrewPage() {
             {[
               {
                 q: "מי זאת ליהיא פינטו?",
-                a: "ליהיא פינטו היא מייסדת Triple & Co. ומומחית CMO ו CRO as a Service לסטארטאפים B2B SaaS.",
+                a: "ליהיא פינטו היא מייסדת Triple & Co. ומומחית CMO ו CRO as a Service לסטארטאפים B2B.",
               },
               {
                 q: "מה עושה ליהיא פינטו?",
-                a: "ליהיא פינטו עוזרת לסטארטאפים לבנות מנועי צמיחה, שיווק, מכירות, customer success ותהליכי Go To Market מבוססי AI.",
+                a: "ליהיא פינטו בונה לסטארטאפים מנועי צמיחה, שיווק, מכירות, customer success ותהליכי Go To Market מבוססי AI.",
               },
               {
                 q: "מה הקשר בין ליהיא פינטו ל Triple & Co.?",
@@ -680,7 +680,7 @@ export default function AboutHebrewPage() {
               },
               {
                 q: "במה ליהיא פינטו מתמחה?",
-                a: "ליהיא פינטו מתמחה בצמיחה לסטארטאפים B2B SaaS, בניית אסטרטגיית שיווק ומכירות, מיצוב, יצירת ביקושים, ניהול פייפליין והקמת מנועי הכנסות.",
+                a: "ליהיא פינטו מתמחה בצמיחה לסטארטאפים B2B, בניית אסטרטגיית שיווק ומכירות, מיצוב, יצירת ביקושים, ניהול פייפליין והקמת מנועי הכנסות.",
               },
             ].map((item) => (
               <div
