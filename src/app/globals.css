@@ -72,6 +72,37 @@ body {
   background: linear-gradient(90deg, #FE3465 0%, #896D9C 100%);
 }
 
+/* Services section — soft depth behind floating white cards */
+.services-bg {
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 0%, rgba(254, 52, 101, 0.05) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 90% 100%, rgba(137, 109, 156, 0.06) 0%, transparent 55%),
+    #ffffff;
+}
+
+/* Cursor-follow spotlight on service cards (light theme) */
+.service-card .service-spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(
+    240px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(254, 52, 101, 0.08),
+    transparent 60%
+  );
+}
+.service-card:hover .service-spotlight {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-card * {
+    transition: none !important;
+  }
+}
+
 /* Glass header */
 .glass-header {
   background: rgba(255, 255, 255, 0.92);
