@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
@@ -8,6 +9,12 @@ export const metadata: Metadata = {
   description:
     "Nine services your company can hire. Senior CMO and CRO leadership, full-service B2B marketing execution, and AI-powered delivery. Benefit-led, outcome-scoped.",
   alternates: { canonical: "/services" },
+};
+
+type Agent = {
+  id: string;
+  name: string;
+  role: string;
 };
 
 type Service = {
@@ -19,9 +26,22 @@ type Service = {
   problem: string;
   outcome: string;
   deliverables: string[];
+  agents: Agent[];
+  agentNote: string;
   link: string | null;
   linkLabel?: string;
   icon: ReactNode;
+};
+
+const agentRoster: Record<string, Agent> = {
+  camille: { id: "camille", name: "Camille", role: "Brand Voice Generator" },
+  vega: { id: "vega", name: "Vega", role: "Art Director" },
+  rex: { id: "rex", name: "Rex", role: "Growth Campaign Strategist" },
+  zara: { id: "zara", name: "Zara", role: "Social Media Commander" },
+  nova: { id: "nova", name: "Nova", role: "Content Research Analyst" },
+  atlas: { id: "atlas", name: "Atlas", role: "Performance Analytics Agent" },
+  sage: { id: "sage", name: "Sage", role: "Content Repurposing Engine" },
+  lumen: { id: "lumen", name: "Lumen", role: "Video & Motion Director" },
 };
 
 const services: Service[] = [
@@ -42,6 +62,9 @@ const services: Service[] = [
       "Team leadership & hiring",
       "Board-level marketing reporting",
     ],
+    agents: [agentRoster.rex, agentRoster.atlas],
+    agentNote:
+      "Lihi leads the strategy in your leadership room. Rex drafts the campaign plans behind it, and Atlas builds the board-level reporting. Lihi reviews everything before it reaches your team.",
     link: "/cmo-as-a-service",
     linkLabel: "Learn more",
     icon: (
@@ -68,6 +91,9 @@ const services: Service[] = [
       "Pipeline forecasting & dashboards",
       "Customer success foundations",
     ],
+    agents: [agentRoster.atlas, agentRoster.rex],
+    agentNote:
+      "Atlas runs the forecasts, dashboards, and funnel analytics that one revenue number depends on. Rex pressure-tests the demand side. Lihi owns the calls and the accountability.",
     link: null,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
@@ -93,6 +119,9 @@ const services: Service[] = [
       "Narrative & storytelling playbook",
       "Competitive differentiation strategy",
     ],
+    agents: [agentRoster.camille, agentRoster.vega],
+    agentNote:
+      "Camille drafts the messaging and voice system. Vega directs the visual identity. Lihi sets the positioning with you and signs off on every word and pixel.",
     link: null,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
@@ -117,6 +146,9 @@ const services: Service[] = [
       "Channel strategy & budget allocation",
       "Competitive positioning analysis",
     ],
+    agents: [agentRoster.rex, agentRoster.nova],
+    agentNote:
+      "Nova researches the market, the ICP, and the competition. Rex turns it into the 90-day plan. Lihi makes the strategic calls with you, then your team executes with her behind it.",
     link: null,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
@@ -142,6 +174,9 @@ const services: Service[] = [
       "Community management & engagement",
       "Performance tracking & optimization",
     ],
+    agents: [agentRoster.zara, agentRoster.sage, agentRoster.lumen],
+    agentNote:
+      "Zara runs the calendar and engagement. Sage multiplies every post across channels. Lumen turns the best ones into video. Lihi keeps it all in your founder's voice, never raw AI output.",
     link: null,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
@@ -166,6 +201,9 @@ const services: Service[] = [
       "Lead scoring & routing",
       "Revenue dashboards & reporting",
     ],
+    agents: [agentRoster.nova, agentRoster.atlas],
+    agentNote:
+      "Nova audits what's broken in your CRM today. Atlas designs the dashboards and reporting your team will live in. Lihi architects the workflows and trains your team on them.",
     link: null,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
@@ -191,6 +229,9 @@ const services: Service[] = [
       "Conversion rate optimization",
       "Forecasting & pipeline reporting",
     ],
+    agents: [agentRoster.rex, agentRoster.atlas],
+    agentNote:
+      "Rex builds the demand programs that fill the top. Atlas scores, tracks, and forecasts every stage. Lihi aligns sales and marketing on a shared definition of qualified.",
     link: null,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
@@ -216,6 +257,9 @@ const services: Service[] = [
       "Talk tracks & demo preparation",
       "Post-event follow-up sequences",
     ],
+    agents: [agentRoster.nova, agentRoster.sage],
+    agentNote:
+      "Nova researches attendees and target accounts before the show. Sage builds the follow-up sequences that run after it. Lihi preps your team and ties every badge scan to pipeline.",
     link: null,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
@@ -241,6 +285,9 @@ const services: Service[] = [
       "Onboarding playbooks & training",
       "Team structure & career pathing",
     ],
+    agents: [agentRoster.nova, agentRoster.camille],
+    agentNote:
+      "Nova benchmarks roles, compensation, and team structures. Camille writes the job specs and onboarding playbooks. Lihi runs the interviews with you and trains the hires.",
     link: null,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
@@ -325,21 +372,74 @@ function ServiceBlock({ service }: { service: Service }) {
           </div>
         </div>
 
-        <div className="bg-purple-05 rounded-xl p-6 border border-purple-15">
-          <h3 className="text-[11px] font-extrabold uppercase tracking-[.14em] text-brand mb-3.5">
-            What you get
-          </h3>
-          <ul className="space-y-3">
-            {service.deliverables.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-2.5 text-sm text-purple-7"
+        <div className="space-y-5">
+          <div className="bg-purple-05 rounded-xl p-6 border border-purple-15">
+            <h3 className="text-[11px] font-extrabold uppercase tracking-[.14em] text-brand mb-3.5">
+              What you get
+            </h3>
+            <ul className="space-y-3">
+              {service.deliverables.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2.5 text-sm text-purple-7"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full gradient-bar shrink-0 mt-1.5" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Agents on this service */}
+          <div className="relative bg-dark rounded-xl p-6 overflow-hidden">
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse 80% 60% at 80% 0%, rgba(254, 52, 101, .15) 0%, transparent 70%)",
+              }}
+            />
+            <div className="relative">
+              <h3 className="text-[11px] font-extrabold uppercase tracking-[.14em] text-pink-3 mb-4">
+                Lihi&apos;s agents on this service
+              </h3>
+              <div className="flex items-end gap-3 mb-4">
+                {service.agents.map((agent) => (
+                  <Link
+                    key={agent.id}
+                    href="/agents"
+                    title={`${agent.name} · ${agent.role}`}
+                    className="group/agent text-center"
+                  >
+                    <div className="relative w-[72px] h-[72px] mx-auto rounded-2xl bg-white/10 border border-white/15 overflow-hidden transition-all group-hover/agent:-translate-y-1 group-hover/agent:border-pink-3/60">
+                      <Image
+                        src={`/images/agents/${agent.id}.png`}
+                        alt={`${agent.name}, ${agent.role}, Triple & Co. AI marketing agent`}
+                        fill
+                        className="object-contain object-bottom p-1"
+                        sizes="72px"
+                      />
+                    </div>
+                    <p className="mt-1.5 text-[12px] font-bold text-white">
+                      {agent.name}
+                    </p>
+                    <p className="text-[10px] leading-tight text-purple-3">
+                      {agent.role}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+              <p className="text-[13px] leading-relaxed text-purple-3 mb-3.5">
+                {service.agentNote}
+              </p>
+              <Link
+                href="/agents"
+                className="text-[12.5px] font-semibold text-pink-3 inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
               >
-                <span className="w-1.5 h-1.5 rounded-full gradient-bar shrink-0 mt-1.5" />
-                {item}
-              </li>
-            ))}
-          </ul>
+                Meet the full team <span>&#8594;</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
