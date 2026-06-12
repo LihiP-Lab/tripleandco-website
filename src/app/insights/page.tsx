@@ -71,11 +71,11 @@ const articles = [
   {
     date: "Jun 2026",
     title:
-      "The Evolution of Marketing Leadership: Fractional CMO, CMO as a Service, and What Comes Next",
+      "Outsourced CMO in Israel: What It Really Costs in 2026 (and What You Get)",
     excerpt:
-      "Full-time CMO. Fractional CMO. CMO as a Service. AI-native execution. How marketing leadership has evolved, what each model actually delivers, and how to choose the right one for your stage.",
+      "Full-time hire, outsourced marketing manager, or CMO as a Service? Real Israeli market numbers in shekels, what each tier actually delivers, and how to choose for your stage.",
     category: "CMO & CRO as a Service",
-    href: "/insights/cmo-as-a-service-vs-fractional-cmo",
+    href: "/insights/outsourced-cmo-israel-cost",
     featured: true,
     pillar: true,
   },

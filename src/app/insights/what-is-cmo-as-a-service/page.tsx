@@ -164,9 +164,9 @@ export default function MegaPillarCMOPage() {
             <p className="text-purple-7 leading-relaxed mb-8">
               CMO as a Service closes all three gaps. The senior operator sets the strategy and the
               execution layer delivers against it — under the same engagement, from the same brief, accountable
-              to the same commercial objective. Read the full comparison in{" "}
-              <Link href="/insights/cmo-as-a-service-vs-fractional-cmo" className="text-brand hover:text-brand-dark font-semibold underline underline-offset-2">
-                CMO as a Service vs. Fractional CMO
+              to the same commercial objective. See what each model costs in the Israeli market in{" "}
+              <Link href="/insights/outsourced-cmo-israel-cost" className="text-brand hover:text-brand-dark font-semibold underline underline-offset-2">
+                Outsourced CMO in Israel: What It Really Costs in 2026
               </Link>.
             </p>
 

@@ -3,6 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // ── RETOPICED — Jun 2026: fractional-vs-aaS pillar replaced by Israel cost guide
+      {
+        source: "/insights/cmo-as-a-service-vs-fractional-cmo",
+        destination: "/insights/outsourced-cmo-israel-cost",
+        permanent: true,
+      },
       // ── CONTENT PRUNING — Jun 2026 ──────────────────────────────────────
       // 1. Expired event: Vitafoods Europe 2023 → Insights Hub
       {
