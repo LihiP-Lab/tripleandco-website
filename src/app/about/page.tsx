@@ -420,9 +420,11 @@ export default function AboutPage() {
           {/* Agent grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-4 mb-12">
             {agents.map((agent, i) => (
-              <div
+              <Link
                 key={agent.id}
-                className="relative bg-purple-85 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+                href={`/agents#${agent.id}`}
+                aria-label={`${agent.name}, ${agent.role}. View full profile on the agents page.`}
+                className="relative block bg-purple-85 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
                 style={{
                   opacity: agentsSection.inView ? 1 : 0,
                   transform: agentsSection.inView
@@ -481,8 +483,17 @@ export default function AboutPage() {
                   >
                     {agent.desc}
                   </p>
+                  <p
+                    className="text-[11px] font-bold text-brand mt-1.5 transition-all duration-300 overflow-hidden"
+                    style={{
+                      maxHeight: activeAgent === agent.id ? "20px" : "0px",
+                      opacity: activeAgent === agent.id ? 1 : 0,
+                    }}
+                  >
+                    View full profile &#8594;
+                  </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
