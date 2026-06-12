@@ -8,7 +8,6 @@ const credentials = [
   "15+ years in B2B SaaS and investment banking",
   "Raised over $70M in funding",
   "Tripled revenue at a SaaS company, repeatedly",
-  "Bilingual: Hebrew and English. Israeli and global.",
 ];
 
 const pressLogos = [
