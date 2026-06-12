@@ -145,11 +145,11 @@ const videos = [
   },
   {
     id: "ACnkGqyOlSo",
-    title: "AI Marketing Agents Explained",
+    title: "Calcalist Berlin",
   },
   {
     id: "LLyyYhw4Lec",
-    title: "The Future of CMO",
+    title: "Shoptalk Vegas",
   },
 ];
 
