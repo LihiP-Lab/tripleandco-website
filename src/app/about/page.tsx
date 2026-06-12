@@ -373,7 +373,6 @@ export default function AboutPage() {
                 "Supervised end to end, by Lihi",
                 "8 pre-configured Claude specialists",
                 "Brief given by you. Delivered by agents. Reviewed by Lihi.",
-                "Bilingual: Hebrew and English. Israeli and global.",
                 "15+ years in SaaS, not marketing theory",
               ].map((point) => (
                 <div
