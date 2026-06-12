@@ -11,12 +11,11 @@ const credentials = [
 ];
 
 const pressLogos = [
-  "The Jerusalem Post",
-  "Geektime",
-  "Calcalist",
-  "Globes",
-  "TechCrunch",
-  "NoCamels",
+  { name: "Geektime", href: "https://www.geektime.co.il/syte-and-microsoft/" },
+  { name: "Calcalist", href: "https://www.calcalistech.com/ctech/articles/0,7340,L-3897041,00.html" },
+  { name: "Globes", href: "https://www.globes.co.il/news/home.aspx?fid=9672" },
+  { name: "TechCrunch", href: "https://techcrunch.com/2019/09/09/syte-snaps-up-21-5m-for-its-smartphone-based-visual-search-engine-for-e-commerce/" },
+  { name: "HubSpot", href: "https://blog.hubspot.com/marketing/author/lihi-pinto-fryman" },
 ];
 
 export function OperatorSection() {
@@ -107,14 +106,16 @@ export function OperatorSection() {
                   Lihi&apos;s work has been covered in:
                 </p>
                 <div className="flex flex-wrap gap-8 items-center">
-                  {pressLogos.map((name) => (
-                    <span
+                  {pressLogos.map(({ name, href }) => (
+                    <a
                       key={name}
-                      className="font-bold text-purple-5 tracking-tight opacity-80"
-                      style={{ filter: "grayscale(1)" }}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-purple-5 tracking-tight opacity-80 hover:opacity-100 hover:text-brand transition-all"
                     >
                       {name}
-                    </span>
+                    </a>
                   ))}
                 </div>
               </div>
