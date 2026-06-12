@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ScrollReveal } from "./ScrollReveal";
 
@@ -196,9 +196,22 @@ export function ServicesSection() {
   const [openId, setOpenId] = useState<string | null>(null);
   const [interacted, setInteracted] = useState<string[]>([]);
   const [stickyDismissed, setStickyDismissed] = useState(false);
+  const [operatorInView, setOperatorInView] = useState(false);
+
+  // Suppress the sticky CTA while the "Meet Lihi" operator section is on screen
+  useEffect(() => {
+    const target = document.querySelector('section[aria-labelledby="operator-heading"]');
+    if (!target) return;
+    const io = new IntersectionObserver(
+      ([entry]) => setOperatorInView(entry.isIntersecting),
+      { threshold: 0.15 }
+    );
+    io.observe(target);
+    return () => io.disconnect();
+  }, []);
 
   const isDimmed = (s: Service) => filter !== "all" && !s.challenges.includes(filter);
-  const showSticky = interacted.length >= 2 && !stickyDismissed;
+  const showSticky = interacted.length >= 2 && !stickyDismissed && !operatorInView;
 
   const toggle = (id: string) => {
     setOpenId((cur) => (cur === id ? null : id));
