@@ -48,6 +48,11 @@ const silos = [
       "Why elite B2B companies are replacing legacy agency retainers with CMO as a Service and CRO as a Service, and the AI-native execution layer that makes it work at scale.",
     href: "/insights/revenue",
     accent: "brand",
+    agent: {
+      img: "/images/agents/rex.png",
+      name: "Rex",
+      role: "Growth Campaign Strategist",
+    },
   },
   {
     tagline: "Hire for Leverage, Not Headcount",
@@ -56,6 +61,11 @@ const silos = [
       "A decision framework for founders and CEOs: when a Fractional CMO or Fractional CRO outperforms a full-time hire, how to structure the engagement, and the signals that tell you it is time to bring one in.",
     href: "/insights/strategy",
     accent: "purple",
+    agent: {
+      img: "/images/agents/nova.png",
+      name: "Nova",
+      role: "Content Research Analyst",
+    },
   },
   {
     tagline: "Agents, Not Just Tools",
@@ -64,6 +74,11 @@ const silos = [
       "How to architect a marketing function for B2B in the AI era: supervised AI agents, human-in-the-loop oversight, and the operating model that lets a lean team execute like an enterprise.",
     href: "/insights/strategy",
     accent: "brand",
+    agent: {
+      img: "/images/agents/camille.png",
+      name: "Camille",
+      role: "Brand Voice Generator",
+    },
   },
 ];
 
@@ -427,10 +442,17 @@ export default function InsightsPage() {
             <h2 className="text-2xl font-extrabold text-purple-9 mb-2">
               Browse by Topic
             </h2>
-            <p className="text-purple-6 mb-8 text-base">
+            <p className="text-purple-6 mb-2 text-base">
               Three content tracks. Each one built around a decision a scaling
               B2B company actually has to make.
             </p>
+            <Link
+              href="/agents"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-dark transition-colors mb-8"
+            >
+              Each track is run by one of our marketing agents{" "}
+              <span aria-hidden>&#8594;</span>
+            </Link>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -448,12 +470,26 @@ export default function InsightsPage() {
                       {silo.label}
                     </h3>
                   </div>
-                  <p className="text-sm text-purple-7 leading-relaxed flex-1">
+                  <p className="text-sm text-purple-7 leading-relaxed flex-1 pr-16">
                     {silo.description}
                   </p>
                   <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand group-hover:gap-2 transition-all">
                     Explore <span>&#8594;</span>
                   </span>
+                  {/* Topic-owner agent */}
+                  <div
+                    className="absolute bottom-2 right-3 h-[120px] w-[72px] pointer-events-none transition-transform group-hover:-translate-y-1"
+                    aria-hidden={false}
+                  >
+                    <Image
+                      src={silo.agent.img}
+                      alt={`${silo.agent.name}, ${silo.agent.role}`}
+                      title={`${silo.agent.name} · ${silo.agent.role}`}
+                      fill
+                      className="object-contain object-bottom"
+                      sizes="72px"
+                    />
+                  </div>
                 </Link>
               </ScrollReveal>
             ))}
@@ -473,7 +509,7 @@ export default function InsightsPage() {
               "radial-gradient(ellipse 50% 80% at 90% 50%, rgba(254,52,101,0.12) 0%, transparent 60%)",
           }}
         />
-        <div className="relative mx-auto max-w-[1200px] px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="relative mx-auto max-w-[1200px] px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center xl:pr-48">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-brand mb-3">
               Stay Sharp
@@ -483,12 +519,22 @@ export default function InsightsPage() {
             </h2>
             <p className="text-purple-3 text-base">
               Weekly intelligence on B2B marketing and AI, directly to your
-              inbox.
+              inbox. Amplified by Sage, our Content Repurposing Engine.
             </p>
           </div>
           <div className="lg:justify-self-end w-full lg:w-auto">
             <InsightsNewsletter />
           </div>
+        </div>
+        {/* Sage, Content Repurposing Engine */}
+        <div className="absolute bottom-0 right-8 h-[180px] w-[104px] hidden xl:block pointer-events-none">
+          <Image
+            src="/images/agents/sage.png"
+            alt="Sage, Content Repurposing Engine agent with megaphone"
+            fill
+            className="object-contain object-bottom"
+            sizes="104px"
+          />
         </div>
       </section>
 
@@ -498,7 +544,7 @@ export default function InsightsPage() {
       <section className="py-12 lg:py-16 bg-white">
         <div className="mx-auto max-w-[1200px] px-8">
           <ScrollReveal>
-            <div className="relative rounded-2xl border border-purple-15 bg-purple-05 p-8 lg:p-12 text-center card-gradient-top">
+            <div className="relative rounded-2xl border border-purple-15 bg-purple-05 p-8 lg:p-12 text-center card-gradient-top overflow-hidden">
               <p className="eyebrow mb-3">Listen &amp; learn</p>
               <h2 className="text-2xl lg:text-3xl font-extrabold text-purple-9 tracking-tight mb-4">
                 Triple &amp; Co. Podcast
@@ -507,7 +553,8 @@ export default function InsightsPage() {
                 Short, sharp episodes on real-world B2B marketing challenges
                 solved with AI. No fluff. No theory. Just battle-tested
                 strategies from the front lines of fractional CMO and CRO
-                engagements worldwide.
+                engagements worldwide. Produced with Lumen, our Video &amp;
+                Motion Director.
               </p>
               <Link
                 href="/insights/podcasts"
@@ -515,6 +562,16 @@ export default function InsightsPage() {
               >
                 Browse Episodes <span>&#8594;</span>
               </Link>
+              {/* Lumen, Video & Motion Director */}
+              <div className="absolute bottom-0 right-6 h-[160px] w-[132px] hidden lg:block pointer-events-none">
+                <Image
+                  src="/images/agents/lumen.png"
+                  alt="Lumen, Video and Motion Director agent with clapperboard"
+                  fill
+                  className="object-contain object-bottom"
+                  sizes="132px"
+                />
+              </div>
             </div>
           </ScrollReveal>
         </div>
