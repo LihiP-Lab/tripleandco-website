@@ -103,7 +103,9 @@ function useTypewriter(lines: string[], speed = 45) {
 
 // ─── Counter hook ─────────────────────────────────────────────────────────────
 function useCounter(target: number, duration = 1800, active: boolean) {
-  const [val, setVal] = useState(0);
+  // Initial value = target so SSR HTML shows real numbers (SEO-safe);
+  // the 0 -> target animation only runs client-side once in view.
+  const [val, setVal] = useState(target);
   useEffect(() => {
     if (!active) return;
     let start: number | null = null;

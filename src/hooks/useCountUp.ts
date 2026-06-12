@@ -2,12 +2,18 @@
 
 import { useSyncExternalStore, useRef, useCallback } from "react";
 
+/**
+ * Count-up animation that is SEO-safe: the server-rendered HTML (and any
+ * client without JS) shows the real target value. The 0 -> target animation
+ * only runs client-side, once the element scrolls into view, and is skipped
+ * entirely under prefers-reduced-motion.
+ */
 export function useCountUp(
   target: number,
   inView: boolean,
   duration = 1800
 ) {
-  const valueRef = useRef(0);
+  const valueRef = useRef(target);
   const startedRef = useRef(false);
   const listenersRef = useRef(new Set<() => void>());
 
@@ -46,5 +52,6 @@ export function useCountUp(
 
   const getSnapshot = useCallback(() => valueRef.current, []);
 
-  return useSyncExternalStore(subscribe, getSnapshot, () => 0);
+  // Server snapshot returns the target so crawlers index real numbers, not 0.
+  return useSyncExternalStore(subscribe, getSnapshot, () => target);
 }
