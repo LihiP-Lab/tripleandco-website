@@ -10,18 +10,26 @@ import { HeroContent } from "@/components/HeroContent";
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService"],
+  "@id": "https://www.tripleandco.com/#organization",
   name: "Triple & Co.",
   url: "https://www.tripleandco.com",
   logo: "https://www.tripleandco.com/images/logos/logo-dark.png",
+  image: "https://www.tripleandco.com/images/logos/logo-dark.png",
   description:
     "AI-powered CMO & CRO as a Service for B2B tech companies. Fractional executive marketing leadership combined with 8 supervised AI marketing specialists.",
-  founder: {
-    "@type": "Person",
-    name: "Lihi Pinto",
-    url: "https://www.tripleandco.com/builder-profile",
-    jobTitle: "Founder & CMO",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Tel Aviv",
+    addressCountry: "IL",
   },
+  areaServed: [
+    { "@type": "Country", name: "Israel" },
+    { "@type": "Country", name: "United States" },
+    { "@type": "Place", name: "Europe" },
+  ],
+  priceRange: "$$$",
+  founder: { "@id": "https://www.tripleandco.com/#lihi-pinto" },
   sameAs: ["https://www.linkedin.com/company/tripleandco/"],
   contactPoint: {
     "@type": "ContactPoint",
@@ -32,8 +40,53 @@ const organizationSchema = {
     "B2B Marketing",
     "AI Marketing Agents",
     "Fractional CMO",
+    "CMO as a Service",
+    "CRO as a Service",
     "Revenue Growth",
     "Content Strategy",
+  ],
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.tripleandco.com/#lihi-pinto",
+  name: "Lihi Pinto",
+  alternateName: "Lihi Pinto Fryman",
+  url: "https://www.tripleandco.com/about",
+  image: "https://www.tripleandco.com/images/lihi-portrait.jpg",
+  jobTitle: "Founder, CMO & CRO as a Service",
+  worksFor: { "@id": "https://www.tripleandco.com/#organization" },
+  description:
+    "Founder of Triple & Co. and Israel's first native AI CMO/CRO. 15+ years in B2B SaaS and investment banking, $70M+ raised, revenue tripled repeatedly. Runs a supervised team of 8 specialist AI marketing agents with human review on every output.",
+  knowsAbout: [
+    "B2B SaaS Marketing",
+    "Go-to-Market Strategy",
+    "Revenue Operations",
+    "AI Marketing Agents",
+    "Brand Strategy",
+    "HubSpot",
+  ],
+  sameAs: [
+    "https://www.linkedin.com/in/lihipinto/",
+    "https://blog.hubspot.com/marketing/author/lihi-pinto-fryman",
+  ],
+  subjectOf: [
+    {
+      "@type": "NewsArticle",
+      url: "https://techcrunch.com/2019/09/09/syte-snaps-up-21-5m-for-its-smartphone-based-visual-search-engine-for-e-commerce/",
+      publisher: { "@type": "Organization", name: "TechCrunch" },
+    },
+    {
+      "@type": "NewsArticle",
+      url: "https://www.calcalistech.com/ctech/articles/0,7340,L-3897041,00.html",
+      publisher: { "@type": "Organization", name: "Calcalist" },
+    },
+    {
+      "@type": "NewsArticle",
+      url: "https://www.geektime.co.il/syte-and-microsoft/",
+      publisher: { "@type": "Organization", name: "Geektime" },
+    },
   ],
 };
 
@@ -110,6 +163,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
       <script
         type="application/ld+json"
