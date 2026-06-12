@@ -16,10 +16,16 @@ const nextConfig: NextConfig = {
         destination: "/insights",
         permanent: true,
       },
-      // 2. Expired date: Q4 2024 CRO article → CRO pillar
+      // 2. Expired date: Q4 2024 CRO article → cost guide pillar
       {
         source: "/insights/maximizing-your-startup-growth-in-q4-2024-with-cro-as-a-service",
-        destination: "/insights/cro-as-a-service-vs-fractional-cro",
+        destination: "/insights/outsourced-cmo-israel-cost",
+        permanent: true,
+      },
+      // Removed Jun 2026: CRO fractional-vs-aaS pillar → cost guide pillar
+      {
+        source: "/insights/cro-as-a-service-vs-fractional-cro",
+        destination: "/insights/outsourced-cmo-israel-cost",
         permanent: true,
       },
       // 3. Keyword cannibalization: 3 thin CMO articles → CMO Mega Pillar

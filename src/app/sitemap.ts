@@ -18,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/insights/podcasts",
     "/insights/outsourced-cmo-israel-cost",
     "/insights/what-is-cmo-as-a-service",
-    "/insights/cro-as-a-service-vs-fractional-cro",
     "/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era",
     "/revenue-diagnostic",
     "/contact",

@@ -92,17 +92,6 @@ const articles = [
   {
     date: "Jun 2026",
     title:
-      "The Revenue Silo Problem: Why Your B2B Startup Needs CRO as a Service, Not Just a Fractional CRO",
-    excerpt:
-      "Marketing says the leads are good. Sales says they are garbage. Both teams have dashboards full of metrics. Neither dashboard explains why revenue is not growing. The problem is structural.",
-    category: "CMO & CRO as a Service",
-    href: "/insights/cro-as-a-service-vs-fractional-cro",
-    featured: false,
-    pillar: true,
-  },
-  {
-    date: "Jun 2026",
-    title:
       "Why Your B2B Company Needs a Native AI CMO, Not Just AI Tools",
     excerpt:
       "Every B2B marketing team is using AI. Pipeline quality has not improved proportionally. The problem is not the tools. It is the architecture — and here is what native AI marketing actually looks like.",
