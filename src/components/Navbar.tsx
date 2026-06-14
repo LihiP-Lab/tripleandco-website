@@ -58,7 +58,7 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <ThemeToggle />
           <Link
-            href="/contact"
+            href="/revenue-diagnostic#book"
             className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(254,52,101,.20)]"
           >
             Book a Diagnostic Call <span>&#8594;</span>
@@ -122,7 +122,7 @@ export function Navbar() {
             );
           })}
           <Link
-            href="/contact"
+            href="/revenue-diagnostic#book"
             onClick={() => setMobileOpen(false)}
             className="block w-full text-center rounded-[10px] bg-brand px-5 py-3 text-sm font-semibold text-white"
           >

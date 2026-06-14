@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ContactForm } from "@/components/ContactForm";
+import { CalendlyInline } from "@/components/CalendlyInline";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
@@ -233,7 +234,7 @@ export default function RevenueDiagnosticPage() {
         </div>
       </section>
 
-      {/* Booking form */}
+      {/* Booking */}
       <section id="book" className="py-20 lg:py-28 bg-purple-05 scroll-mt-20">
         <div className="mx-auto max-w-[1200px] px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -247,7 +248,7 @@ export default function RevenueDiagnosticPage() {
                   30 minutes. Three pipeline moves. No pitch.
                 </p>
                 <p className="text-purple-6 leading-relaxed mb-8">
-                  Fill out the form and Lihi will reach out within 24 hours to schedule your Revenue Diagnostic.
+                  Pick a time on the calendar and you&apos;re booked on the spot. No forms to wait on, no back-and-forth.
                 </p>
 
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-white border border-purple-15">
@@ -266,7 +267,18 @@ export default function RevenueDiagnosticPage() {
                   </div>
                 </div>
               </div>
-              <ContactForm />
+              <CalendlyInline />
+          </div>
+
+          {/* Secondary fallback: contact form for those who'd rather we reach out */}
+          <div className="mt-16 pt-12 border-t border-purple-15 max-w-2xl mx-auto">
+            <div className="text-center mb-8">
+              <p className="font-bold text-purple-9">Prefer we reach out? Leave your details.</p>
+              <p className="text-sm text-purple-6 mt-1">
+                Lihi will get back to you within 24 hours to find a time.
+              </p>
+            </div>
+            <ContactForm />
           </div>
         </div>
       </section>

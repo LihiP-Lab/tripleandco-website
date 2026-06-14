@@ -28,7 +28,7 @@ export function MobileCTA() {
       }}
     >
       <Link
-        href="/contact"
+        href="/revenue-diagnostic#book"
         className="flex items-center justify-center gap-2 w-full rounded-[10px] bg-brand px-6 py-3 text-[15px] font-semibold text-white transition-colors hover:bg-brand-dark"
       >
         Book a Diagnostic Call <span>&#8594;</span>
