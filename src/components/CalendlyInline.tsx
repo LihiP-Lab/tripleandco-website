@@ -18,7 +18,11 @@ type CalendlyWindow = Window & {
   Calendly?: {
     initInlineWidget: (opts: { url: string; parentElement: HTMLElement }) => void;
   };
+  lintrk?: (action: "track", data: { conversion_id: number }) => void;
 };
+
+// LinkedIn conversion id for "Revenue Diagnostic Booked" (event-specific tag).
+const LINKEDIN_BOOKED_CONVERSION_ID = 27632930;
 
 /**
  * Inline Calendly widget for the Revenue Diagnostic booking section.
@@ -56,6 +60,23 @@ export function CalendlyInline() {
     // If the script already loaded (client nav), init immediately.
     initWidget();
   }, [initWidget]);
+
+  // Fire the LinkedIn "Revenue Diagnostic Booked" conversion when a visitor
+  // completes a booking inside the inline Calendly widget. Calendly posts a
+  // `calendly.event_scheduled` message to the parent window on success.
+  useEffect(() => {
+    function onMessage(e: MessageEvent) {
+      const data = e.data as { event?: string } | undefined;
+      if (data && data.event === "calendly.event_scheduled") {
+        const w = window as CalendlyWindow;
+        if (typeof w.lintrk === "function") {
+          w.lintrk("track", { conversion_id: LINKEDIN_BOOKED_CONVERSION_ID });
+        }
+      }
+    }
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, []);
 
   return (
     <>

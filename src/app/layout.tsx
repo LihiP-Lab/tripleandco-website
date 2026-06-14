@@ -8,6 +8,7 @@ import { BackToTop } from "@/components/BackToTop";
 import { MobileCTA } from "@/components/MobileCTA";
 import { PageTransition } from "@/components/PageTransition";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -79,6 +80,12 @@ export default function RootLayout({
           <MobileCTA />
         </ThemeProvider>
         <Analytics />
+        {/* LinkedIn Insight Tag (Partner ID 3601938) — page-load tracking,
+            retargeting audiences, and event-based conversions (e.g. Revenue
+            Diagnostic Booked, fired from CalendlyInline). */}
+        <Script id="linkedin-insight-tag" strategy="afterInteractive">
+          {`_linkedin_partner_id="3601938";window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName("script")[0];var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src="https://snap.licdn.com/li.lms-analytics/insight.min.js";s.parentNode.insertBefore(b,s);})(window.lintrk);`}
+        </Script>
       </body>
     </html>
   );
