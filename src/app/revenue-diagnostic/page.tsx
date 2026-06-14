@@ -263,7 +263,7 @@ export default function RevenueDiagnosticPage() {
                   </div>
                   <div>
                     <p className="font-bold text-purple-9">Lihi Pinto</p>
-                    <p className="text-sm text-purple-6">Founder &amp; Fractional CMO, Triple&amp;Co</p>
+                    <p className="text-sm text-purple-6">Founder and CEO, Triple&amp;Co</p>
                   </div>
                 </div>
               </div>

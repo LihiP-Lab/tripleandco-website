@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="relative bg-purple-95 text-purple-3 pt-20 pb-20 lg:pb-8" role="contentinfo" aria-label="Site footer">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent" />
       <div className="mx-auto max-w-[1200px] px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
             <Link href="/" className="inline-flex items-center mb-4">
@@ -94,39 +94,6 @@ export function Footer() {
                   className="text-sm hover:text-brand transition-colors"
                 >
                   Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="text-white text-xs uppercase tracking-[.14em] font-bold mb-4">
-              Resources
-            </h4>
-            <ul className="space-y-2.5">
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Book a Call
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Terms &amp; Conditions
                 </Link>
               </li>
             </ul>
