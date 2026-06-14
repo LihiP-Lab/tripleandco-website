@@ -21,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era",
     "/revenue-diagnostic",
     "/contact",
+    "/privacy",
+    "/terms",
   ];
 
   return routes.map((route) => ({

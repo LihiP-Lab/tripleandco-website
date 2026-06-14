@@ -113,6 +113,22 @@ export function Footer() {
                   Book a Call
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  Terms &amp; Conditions
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -148,6 +164,17 @@ export function Footer() {
           <div>
             &copy; {new Date().getFullYear()} Triple &amp; Co. All rights
             reserved.
+          </div>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacy"
+              className="hover:text-brand transition-colors"
+            >
+              Privacy
+            </Link>
+            <Link href="/terms" className="hover:text-brand transition-colors">
+              Terms
+            </Link>
           </div>
         </div>
       </div>
