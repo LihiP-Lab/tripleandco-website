@@ -672,9 +672,11 @@ export default function AboutHebrewPage() {
           {/* Agent grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12">
             {agents.map((agent, i) => (
-              <div
+              <Link
                 key={agent.id}
-                className="relative bg-purple-85 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+                href={`/agents#${agent.id}`}
+                aria-label={`${agent.name} - ${agent.role}`}
+                className="relative block bg-purple-85 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
                 style={{
                   opacity: agentsSection.inView ? 1 : 0,
                   transform: agentsSection.inView
@@ -728,7 +730,7 @@ export default function AboutHebrewPage() {
                     {agent.desc}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
