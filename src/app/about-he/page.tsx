@@ -2,7 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { useInView } from "@/hooks/useInView";
+import { useCountUp } from "@/hooks/useCountUp";
+import { useTypewriter } from "@/hooks/useTypewriter";
 
 // ─── Agent cast (Hebrew) ──────────────────────────────────────────────────────
 const agents = [
@@ -56,69 +59,6 @@ const agents = [
   },
 ];
 
-// ─── Typewriter hook ──────────────────────────────────────────────────────────
-function useTypewriter(lines: string[], speed = 50) {
-  const [displayed, setDisplayed] = useState("");
-  const [lineIdx, setLineIdx] = useState(0);
-  const [charIdx, setCharIdx] = useState(0);
-  const [deleting, setDeleting] = useState(false);
-
-  useEffect(() => {
-    const current = lines[lineIdx];
-    let timer: ReturnType<typeof setTimeout>;
-
-    if (!deleting && charIdx < current.length) {
-      timer = setTimeout(() => setCharIdx((c) => c + 1), speed);
-    } else if (!deleting && charIdx === current.length) {
-      timer = setTimeout(() => setDeleting(true), 2200);
-    } else if (deleting && charIdx > 0) {
-      timer = setTimeout(() => setCharIdx((c) => c - 1), speed / 2);
-    } else if (deleting && charIdx === 0) {
-      setDeleting(false);
-      setLineIdx((i) => (i + 1) % lines.length);
-    }
-
-    setDisplayed(current.slice(0, charIdx));
-    return () => clearTimeout(timer);
-  }, [charIdx, deleting, lineIdx, lines, speed]);
-
-  return displayed;
-}
-
-// ─── Counter hook ─────────────────────────────────────────────────────────────
-function useCounter(target: number, duration = 1800, active: boolean) {
-  const [val, setVal] = useState(0);
-  useEffect(() => {
-    if (!active) return;
-    let start: number | null = null;
-    const step = (ts: number) => {
-      if (!start) start = ts;
-      const progress = Math.min((ts - start) / duration, 1);
-      setVal(Math.floor(progress * target));
-      if (progress < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }, [active, target, duration]);
-  return val;
-}
-
-// ─── InView hook ──────────────────────────────────────────────────────────────
-function useInView(threshold = 0.2) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [inView, setInView] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setInView(true); },
-      { threshold }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return { ref, inView };
-}
-
 // ─── Videos ───────────────────────────────────────────────────────────────────
 const videos = [
   { id: "MRlDdVdAbkk", title: "איך בניתי מכונת הכנסות" },
@@ -136,20 +76,23 @@ const stats = [
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function AboutHebrewPage() {
-  const typewritten = useTypewriter([
-    "ה-CMO הראשון בישראל עם AI נייטיב.",
-    "ה-CRO הראשון בישראל עם AI נייטיב.",
-    "Human in the Loop.",
-  ]);
+  const typewritten = useTypewriter(
+    [
+      "ה-CMO הראשון בישראל עם AI נייטיב.",
+      "ה-CRO הראשון בישראל עם AI נייטיב.",
+      "Human in the Loop.",
+    ],
+    50
+  );
 
-  const statsSection = useInView(0.3);
-  const agentsSection = useInView(0.1);
+  const statsSection = useInView({ threshold: 0.3 });
+  const agentsSection = useInView({ threshold: 0.1 });
   const [activeAgent, setActiveAgent] = useState<string | null>(null);
 
-  const stat0 = useCounter(stats[0].value, 1600, statsSection.inView);
-  const stat1 = useCounter(stats[1].value, 1200, statsSection.inView);
-  const stat2 = useCounter(stats[2].value, 800, statsSection.inView);
-  const stat3 = useCounter(stats[3].value, 1000, statsSection.inView);
+  const stat0 = useCountUp(stats[0].value, statsSection.inView, 1600);
+  const stat1 = useCountUp(stats[1].value, statsSection.inView, 1200);
+  const stat2 = useCountUp(stats[2].value, statsSection.inView, 800);
+  const stat3 = useCountUp(stats[3].value, statsSection.inView, 1000);
   const statValues = [stat0, stat1, stat2, stat3];
 
   const profilePageSchema = {
