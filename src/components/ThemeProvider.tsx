@@ -38,13 +38,23 @@ function setThemeValue(next: Theme) {
   currentTheme = next;
   if (typeof document !== "undefined") {
     document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
+    try {
+      localStorage.setItem("theme", next);
+    } catch (error) {
+      console.warn("Unable to persist theme preference:", error);
+    }
   }
   listeners.forEach((cb) => cb());
 }
 
 if (typeof window !== "undefined") {
-  const stored = localStorage.getItem("theme") as Theme | null;
+  let stored: Theme | null = null;
+  try {
+    const value = localStorage.getItem("theme");
+    stored = value === "light" || value === "dark" ? value : null;
+  } catch (error) {
+    console.warn("Unable to read theme preference:", error);
+  }
   const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light";
