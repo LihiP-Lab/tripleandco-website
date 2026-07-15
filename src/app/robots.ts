@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/proposals/"],
+        disallow: ["/api/", "/proposals/", "/demo-intelligence"],
       },
     ],
     sitemap: "https://www.tripleandco.com/sitemap.xml",
