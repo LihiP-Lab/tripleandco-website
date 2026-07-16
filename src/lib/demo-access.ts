@@ -56,11 +56,16 @@ export function verifyAccessToken(token: string | undefined | null): boolean {
   }
 }
 
-/** Constant-time comparison of a submitted code against the configured access code. */
+/**
+ * Constant-time comparison of a submitted code against the configured access code.
+ * Both sides are trimmed and lower-cased so stray whitespace or capitalization
+ * (a common cause of "incorrect code" when typing on a phone/laptop) still works.
+ */
 export function isValidAccessCode(submitted: string): boolean {
-  const expected = process.env.DEMO_ACCESS_CODE ?? "";
+  const expected = (process.env.DEMO_ACCESS_CODE ?? "").trim().toLowerCase();
   if (!expected) return false;
-  const a = Buffer.from(submitted);
+  const provided = (submitted ?? "").trim().toLowerCase();
+  const a = Buffer.from(provided);
   const b = Buffer.from(expected);
   if (a.length !== b.length) return false;
   return timingSafeEqual(a, b);

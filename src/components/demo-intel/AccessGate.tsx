@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Lock, LoaderCircle } from "lucide-react";
 
@@ -16,46 +16,68 @@ export function AccessGate() {
   const router = useRouter();
   const params = useSearchParams();
   const next = safeNext(params.get("next"));
+  const codeParam = params.get("code");
 
-  const [code, setCode] = useState("");
+  const [code, setCode] = useState(codeParam ?? "");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const autoTried = useRef(false);
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setError(null);
-    setLoading(true);
-    try {
-      const res = await fetch("/api/demo-access", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code }),
-      });
-      if (res.ok) {
-        router.replace(next);
-        router.refresh();
-        return;
+  const submit = useCallback(
+    async (value: string) => {
+      setError(null);
+      setLoading(true);
+      try {
+        const res = await fetch("/api/demo-access", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ code: value.trim() }),
+        });
+        if (res.ok) {
+          router.replace(next);
+          router.refresh();
+          return;
+        }
+        const data = (await res.json().catch(() => ({}))) as { error?: string };
+        setError(data.error ?? "Incorrect access code.");
+      } catch {
+        setError("Something went wrong. Please try again.");
+      } finally {
+        setLoading(false);
       }
-      const data = (await res.json().catch(() => ({}))) as { error?: string };
-      setError(data.error ?? "Incorrect access code.");
-    } catch {
-      setError("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
+    },
+    [next, router]
+  );
+
+  // Magic-link support: /demo-intelligence/access?code=… auto-submits once.
+  useEffect(() => {
+    if (codeParam && !autoTried.current) {
+      autoTried.current = true;
+      void submit(codeParam);
     }
-  }
+  }, [codeParam, submit]);
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-sm">
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        void submit(code);
+      }}
+      className="w-full max-w-sm"
+    >
       <label className="mono-label mb-2 block" style={{ color: "var(--c-text-dim)" }}>
         Access code
       </label>
       <input
-        type="password"
+        type="text"
         value={code}
         onChange={(e) => setCode(e.target.value)}
         autoFocus
         autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
+        spellCheck={false}
+        name="dt-access-code"
         aria-label="Access code"
         aria-invalid={error ? true : undefined}
         placeholder="Enter your code"
@@ -73,7 +95,7 @@ export function AccessGate() {
       )}
       <button
         type="submit"
-        disabled={loading || code.length === 0}
+        disabled={loading || code.trim().length === 0}
         className="mono-label mt-4 flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold transition disabled:cursor-not-allowed disabled:opacity-50"
         style={{ background: "var(--c-brand)", color: "#fff" }}
       >
