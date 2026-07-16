@@ -29,7 +29,7 @@ export function AccessGate() {
       const res = await fetch("/api/demo-access", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code }),
+        body: JSON.stringify({ code: code.trim() }),
       });
       if (res.ok) {
         router.replace(next);
@@ -51,11 +51,15 @@ export function AccessGate() {
         Access code
       </label>
       <input
-        type="password"
+        type="text"
         value={code}
         onChange={(e) => setCode(e.target.value)}
         autoFocus
         autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
+        spellCheck={false}
+        name="dt-access-code"
         aria-label="Access code"
         aria-invalid={error ? true : undefined}
         placeholder="Enter your code"
@@ -73,7 +77,7 @@ export function AccessGate() {
       )}
       <button
         type="submit"
-        disabled={loading || code.length === 0}
+        disabled={loading || code.trim().length === 0}
         className="mono-label mt-4 flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold transition disabled:cursor-not-allowed disabled:opacity-50"
         style={{ background: "var(--c-brand)", color: "#fff" }}
       >
