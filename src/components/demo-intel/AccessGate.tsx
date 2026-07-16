@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Lock, LoaderCircle } from "lucide-react";
 
@@ -16,55 +16,37 @@ export function AccessGate() {
   const router = useRouter();
   const params = useSearchParams();
   const next = safeNext(params.get("next"));
-  const codeParam = params.get("code");
 
-  const [code, setCode] = useState(codeParam ?? "");
+  const [code, setCode] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const autoTried = useRef(false);
 
-  const submit = useCallback(
-    async (value: string) => {
-      setError(null);
-      setLoading(true);
-      try {
-        const res = await fetch("/api/demo-access", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ code: value.trim() }),
-        });
-        if (res.ok) {
-          router.replace(next);
-          router.refresh();
-          return;
-        }
-        const data = (await res.json().catch(() => ({}))) as { error?: string };
-        setError(data.error ?? "Incorrect access code.");
-      } catch {
-        setError("Something went wrong. Please try again.");
-      } finally {
-        setLoading(false);
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setError(null);
+    setLoading(true);
+    try {
+      const res = await fetch("/api/demo-access", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ code: code.trim() }),
+      });
+      if (res.ok) {
+        router.replace(next);
+        router.refresh();
+        return;
       }
-    },
-    [next, router]
-  );
-
-  // Magic-link support: /demo-intelligence/access?code=… auto-submits once.
-  useEffect(() => {
-    if (codeParam && !autoTried.current) {
-      autoTried.current = true;
-      void submit(codeParam);
+      const data = (await res.json().catch(() => ({}))) as { error?: string };
+      setError(data.error ?? "Incorrect access code.");
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
-  }, [codeParam, submit]);
+  }
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        void submit(code);
-      }}
-      className="w-full max-w-sm"
-    >
+    <form onSubmit={handleSubmit} className="w-full max-w-sm">
       <label className="mono-label mb-2 block" style={{ color: "var(--c-text-dim)" }}>
         Access code
       </label>
