@@ -57,14 +57,24 @@ export function verifyAccessToken(token: string | undefined | null): boolean {
 }
 
 /**
- * Constant-time comparison of a submitted code against the configured access code.
- * Both sides are trimmed and lower-cased so stray whitespace or capitalization
- * (a common cause of "incorrect code" when typing on a phone/laptop) still works.
+ * Normalize a human-typed access code so trivial, invisible differences don't
+ * cause false "incorrect code" errors: lower-case, and drop everything that
+ * isn't a letter or digit. This absorbs stray whitespace, capitalization, and
+ * dash variants (`-`, en/em dashes `–`/`—`, minus sign) that mobile/desktop
+ * keyboards silently substitute for a plain hyphen.
+ */
+function normalizeCode(value: string): string {
+  return (value ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+/**
+ * Constant-time comparison of a submitted code against the configured access code,
+ * after normalizing both sides (see `normalizeCode`).
  */
 export function isValidAccessCode(submitted: string): boolean {
-  const expected = (process.env.DEMO_ACCESS_CODE ?? "").trim().toLowerCase();
+  const expected = normalizeCode(process.env.DEMO_ACCESS_CODE ?? "");
   if (!expected) return false;
-  const provided = (submitted ?? "").trim().toLowerCase();
+  const provided = normalizeCode(submitted);
   const a = Buffer.from(provided);
   const b = Buffer.from(expected);
   if (a.length !== b.length) return false;
