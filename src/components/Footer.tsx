@@ -66,10 +66,34 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/cro-as-a-service"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  CRO as a Service
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/fractional-cmo-b2b"
                   className="text-sm hover:text-brand transition-colors"
                 >
                   Fractional CMO
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/geo"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  GEO for B2B
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ai-visibility-audit"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  Free AI Visibility Audit
                 </Link>
               </li>
               <li>

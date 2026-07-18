@@ -8,7 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/services",
     "/cmo-as-a-service",
+    "/cro-as-a-service",
     "/fractional-cmo-b2b",
+    "/geo",
+    "/ai-visibility-audit",
     "/agents",
     "/ai-marketing-agents",
     "/builder-profile",
@@ -33,7 +36,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route === "/"
         ? 1
         : route === "/cmo-as-a-service" ||
+            route === "/cro-as-a-service" ||
             route === "/fractional-cmo-b2b" ||
+            route === "/geo" ||
+            route === "/ai-visibility-audit" ||
             route === "/ai-marketing-agents"
           ? 0.9
           : 0.8,

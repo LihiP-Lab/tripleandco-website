@@ -94,7 +94,8 @@ const services: Service[] = [
     agents: [agentRoster.atlas, agentRoster.rex],
     agentNote:
       "Atlas runs the forecasts, dashboards, and funnel analytics that one revenue number depends on. Rex pressure-tests the demand side. Lihi owns the calls and the accountability.",
-    link: null,
+    link: "/cro-as-a-service",
+    linkLabel: "Learn more",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
         <path d="M3 12l3-3 4 4 8-8" />
