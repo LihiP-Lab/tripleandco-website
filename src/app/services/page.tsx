@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Our Services",
   description:
-    "Nine services your company can hire. Senior CMO and CRO leadership, full-service B2B marketing execution, and AI-powered delivery. Benefit-led, outcome-scoped.",
+    "Ten services your company can hire. Senior CMO, CRO, and Head of Growth leadership, full-service B2B marketing execution, and AI-powered delivery. Benefit-led, outcome-scoped.",
   alternates: { canonical: "/services" },
 };
 
@@ -383,6 +383,7 @@ const industryLinks = [
 const jumpLinks = [
   { id: "cmo", label: "CMO as a Service" },
   { id: "cro", label: "Full CRO" },
+  { id: "head-of-growth", label: "Head of Growth" },
   { id: "brand", label: "Brand & Story" },
   { id: "gtm", label: "Growth & GTM" },
   { id: "social", label: "Social" },
@@ -542,7 +543,7 @@ export default function ServicesPage() {
         <div className="relative z-10 mx-auto max-w-[1200px] px-8 text-center">
           <div className="flex items-center justify-center gap-2.5 mb-6 flex-wrap">
             <span className="inline-flex items-center rounded-full bg-brand/15 px-3.5 py-1.5 text-xs font-bold text-pink-3">
-              9 services
+              10 services
             </span>
             <span className="inline-flex items-center rounded-full bg-brand/15 px-3.5 py-1.5 text-xs font-bold text-pink-3">
               Full-stack B2B
