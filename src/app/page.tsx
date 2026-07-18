@@ -1,6 +1,7 @@
 import { HeroOrbit } from "@/components/HeroOrbit";
 import { ThreeLayersSection } from "@/components/ThreeLayersSection";
 import { ArchitectureSection } from "@/components/ArchitectureSection";
+import { LiveCommandCenter } from "@/components/LiveCommandCenter";
 import { OperatorSection } from "@/components/OperatorSection";
 import { WhyDifferentSection } from "@/components/WhyDifferentSection";
 import { ServicesSection } from "@/components/ServicesSection";
@@ -211,6 +212,7 @@ export default function Home() {
 
       <ThreeLayersSection />
       <ArchitectureSection />
+      <LiveCommandCenter />
       <OperatorSection />
       <WhyDifferentSection />
       <ServicesSection />
