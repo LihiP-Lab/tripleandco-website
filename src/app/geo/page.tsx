@@ -346,6 +346,18 @@ export default function GEOPage() {
             </h2>
           </ScrollReveal>
           <PillarFAQ faqs={faqs} />
+          <ScrollReveal delay={0.2}>
+            <p className="text-sm text-purple-7 text-center mt-8">
+              Want the practical, do-it-yourself version? Read our{" "}
+              <Link
+                href="/llm-seo"
+                className="text-brand font-semibold hover:underline"
+              >
+                LLM SEO guide and checklist
+              </Link>
+              .
+            </p>
+          </ScrollReveal>
         </div>
       </section>
     </>
