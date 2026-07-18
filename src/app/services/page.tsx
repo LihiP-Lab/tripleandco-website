@@ -300,6 +300,57 @@ const services: Service[] = [
   },
 ];
 
+const industryLinks = [
+  {
+    kicker: "Industry",
+    title: "B2B SaaS",
+    blurb: "Positioning, demand, and pipeline for fast-moving SaaS teams.",
+    href: "/b2b-saas-marketing",
+  },
+  {
+    kicker: "Industry",
+    title: "Fintech",
+    blurb: "Trust-first marketing for regulated financial buyers.",
+    href: "/fintech-marketing",
+  },
+  {
+    kicker: "Industry",
+    title: "Cybersecurity",
+    blurb: "Credible marketing for CISOs and practitioners alike.",
+    href: "/cybersecurity-marketing",
+  },
+  {
+    kicker: "Industry",
+    title: "AI & DeepTech",
+    blurb: "Turn complex technology into a clear, buyable business case.",
+    href: "/ai-deeptech-marketing",
+  },
+  {
+    kicker: "Market",
+    title: "Israel",
+    blurb: "Israeli B2B and SaaS marketing built to sell globally.",
+    href: "/b2b-marketing-israel",
+  },
+  {
+    kicker: "Market",
+    title: "Tel Aviv",
+    blurb: "Senior ownership without the Tel Aviv hiring war.",
+    href: "/b2b-marketing-tel-aviv",
+  },
+  {
+    kicker: "Market",
+    title: "United States",
+    blurb: "US-grade marketing tuned to the American buyer.",
+    href: "/b2b-marketing-usa",
+  },
+  {
+    kicker: "AI search",
+    title: "GEO for B2B",
+    blurb: "Get cited by ChatGPT, Perplexity, Gemini, and AI Overviews.",
+    href: "/geo",
+  },
+];
+
 const jumpLinks = [
   { id: "cmo", label: "CMO as a Service" },
   { id: "cro", label: "Full CRO" },
@@ -554,6 +605,46 @@ export default function ServicesPage() {
               <ServiceBlock service={service} />
             </ScrollReveal>
           ))}
+        </div>
+      </section>
+
+      {/* Industries & Markets */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="mx-auto max-w-[1200px] px-8">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-3">Industries &amp; markets</p>
+            <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4 text-center">
+              Marketing Tuned to Your{" "}
+              <span className="gradient-text">Category and Market</span>
+            </h2>
+            <p className="text-purple-7 text-center max-w-2xl mx-auto mb-12">
+              Every service above adapts to how your buyers actually evaluate.
+              See the approach for your industry or your target market.
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {industryLinks.map((item, i) => (
+              <ScrollReveal key={item.href} delay={0.05 + i * 0.04}>
+                <Link
+                  href={item.href}
+                  className="group block h-full rounded-2xl bg-purple-05 border border-purple-15 p-6 transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-base)] hover:border-brand/40"
+                >
+                  <p className="text-[11px] font-extrabold uppercase tracking-[.1em] text-brand mb-2">
+                    {item.kicker}
+                  </p>
+                  <h3 className="text-lg font-extrabold text-purple-9 mb-1.5">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-purple-7 leading-relaxed mb-3">
+                    {item.blurb}
+                  </p>
+                  <span className="text-sm font-semibold text-brand inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Learn more <span>&#8594;</span>
+                  </span>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 

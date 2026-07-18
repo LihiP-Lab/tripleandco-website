@@ -12,6 +12,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/fractional-cmo-b2b",
     "/geo",
     "/ai-visibility-audit",
+    "/b2b-saas-marketing",
+    "/fintech-marketing",
+    "/cybersecurity-marketing",
+    "/ai-deeptech-marketing",
+    "/b2b-marketing-israel",
+    "/b2b-marketing-tel-aviv",
+    "/b2b-marketing-usa",
     "/agents",
     "/ai-marketing-agents",
     "/builder-profile",
@@ -40,6 +47,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
             route === "/fractional-cmo-b2b" ||
             route === "/geo" ||
             route === "/ai-visibility-audit" ||
+            route === "/b2b-saas-marketing" ||
+            route === "/fintech-marketing" ||
+            route === "/cybersecurity-marketing" ||
+            route === "/ai-deeptech-marketing" ||
+            route === "/b2b-marketing-israel" ||
+            route === "/b2b-marketing-tel-aviv" ||
+            route === "/b2b-marketing-usa" ||
             route === "/ai-marketing-agents"
           ? 0.9
           : 0.8,
