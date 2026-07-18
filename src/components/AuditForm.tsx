@@ -47,6 +47,10 @@ export function AuditForm() {
         const formData = new FormData(form);
         const website = String(formData.get("website") || "");
         const competitor = String(formData.get("competitor") || "");
+        const fullName = String(formData.get("fullName") || "").trim();
+        const nameParts = fullName.split(/\s+/).filter(Boolean);
+        const firstName = nameParts[0] || fullName;
+        const lastName = nameParts.slice(1).join(" ") || firstName;
 
         const message = [
           "AI Visibility Audit request",
@@ -61,8 +65,8 @@ export function AuditForm() {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              firstName: formData.get("firstName") || "",
-              lastName: "",
+              firstName,
+              lastName,
               email: formData.get("email"),
               company: formData.get("company") || "",
               message,
@@ -94,18 +98,18 @@ export function AuditForm() {
       <div className="space-y-4">
         <div>
           <label
-            htmlFor="firstName"
+            htmlFor="fullName"
             className="block text-sm font-semibold text-purple-9 mb-1.5"
           >
-            First Name
+            Full Name
           </label>
           <input
             type="text"
-            id="firstName"
-            name="firstName"
+            id="fullName"
+            name="fullName"
             required
             className="w-full rounded-[10px] border border-purple-15 bg-purple-05 px-4 py-2.5 text-sm text-purple-9 focus:outline-none focus:border-brand transition-colors placeholder:text-purple-4"
-            placeholder="First name"
+            placeholder="Jane Doe"
           />
         </div>
         <div>
