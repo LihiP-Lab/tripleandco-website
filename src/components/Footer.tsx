@@ -74,6 +74,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/head-of-growth"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  Head of Growth
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/fractional-cmo-b2b"
                   className="text-sm hover:text-brand transition-colors"
                 >
