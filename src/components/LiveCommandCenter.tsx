@@ -90,7 +90,7 @@ function ActivityFeed() {
         </span>
       </div>
 
-      <ul className="space-y-2.5" aria-live="polite">
+      <ul className="space-y-2.5">
         {entries.map((e) => (
           <li
             key={e.key}
