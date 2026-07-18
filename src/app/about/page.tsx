@@ -137,6 +137,75 @@ function useInView(threshold = 0.2) {
   return { ref, inView };
 }
 
+// ─── Live ops feed ────────────────────────────────────────────────────────────
+type OpsStatus = "running" | "done" | "approved" | "review";
+
+const opsFeed: {
+  id: string;
+  name: string;
+  task: string;
+  status: OpsStatus;
+  supervisor?: boolean;
+}[] = [
+  { id: "camille", name: "Camille", task: "Drafting homepage copy, v2", status: "running" },
+  { id: "nova", name: "Nova", task: "Scanning 4 competitor launches", status: "running" },
+  { id: "lihi", name: "Lihi", task: "Approved Camille's draft", status: "approved", supervisor: true },
+  { id: "rex", name: "Rex", task: "Building the Q3 campaign plan", status: "running" },
+  { id: "atlas", name: "Atlas", task: "CAC dashboard refreshed", status: "done" },
+  { id: "lihi", name: "Lihi", task: "Reviewing Rex's media plan", status: "review", supervisor: true },
+  { id: "zara", name: "Zara", task: "Scheduling 12 LinkedIn posts", status: "running" },
+  { id: "sage", name: "Sage", task: "Webinar turned into 6 assets", status: "done" },
+  { id: "vega", name: "Vega", task: "Rendering carousel visuals", status: "running" },
+  { id: "lihi", name: "Lihi", task: "Signed off on Zara's calendar", status: "approved", supervisor: true },
+  { id: "lumen", name: "Lumen", task: "Cutting a 30s product video", status: "running" },
+  { id: "lihi", name: "Lihi", task: "Reviewing Vega's visuals", status: "review", supervisor: true },
+];
+
+function useOpsFeed(intervalMs = 2600) {
+  // `count` = how many feed events have happened; visible = last 4, newest first.
+  const [count, setCount] = useState(4);
+  useEffect(() => {
+    const t = setInterval(() => setCount((c) => c + 1), intervalMs);
+    return () => clearInterval(t);
+  }, [intervalMs]);
+  return count;
+}
+
+function StatusIndicator({ status }: { status: OpsStatus }) {
+  if (status === "running") {
+    return (
+      <span className="flex items-end gap-[3px] shrink-0" aria-label="working">
+        {[0, 1, 2].map((d) => (
+          <span
+            key={d}
+            className="w-1 h-1 rounded-full bg-brand"
+            style={{ animation: `typing-bounce 1.2s ${d * 0.15}s ease-in-out infinite` }}
+          />
+        ))}
+      </span>
+    );
+  }
+  if (status === "approved") {
+    return (
+      <span className="text-[9px] font-bold tracking-wider uppercase text-brand shrink-0">
+        &#10003; approved
+      </span>
+    );
+  }
+  if (status === "review") {
+    return (
+      <span className="text-[9px] font-bold tracking-wider uppercase text-purple-3 shrink-0">
+        in review
+      </span>
+    );
+  }
+  return (
+    <span className="text-[9px] font-bold tracking-wider uppercase text-purple-5 shrink-0">
+      &#10003; done
+    </span>
+  );
+}
+
 // ─── Videos ───────────────────────────────────────────────────────────────────
 const videos = [
   {
@@ -174,6 +243,7 @@ export default function AboutPage() {
   const statsSection = useInView(0.3);
   const agentsSection = useInView(0.1);
   const [activeAgent, setActiveAgent] = useState<string | null>(null);
+  const feedCount = useOpsFeed();
 
   const stat0 = useCounter(stats[0].value, 1600, statsSection.inView);
   const stat1 = useCounter(stats[1].value, 1200, statsSection.inView);
@@ -271,8 +341,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Photo + floating badge */}
-            <div className="lg:col-span-5 flex justify-center relative">
+            {/* Photo + live ops console */}
+            <div className="lg:col-span-5 flex flex-col items-center relative">
               <div
                 className="relative aspect-[4/5] w-full max-w-[340px] rounded-3xl overflow-hidden"
                 style={{
@@ -288,33 +358,105 @@ export default function AboutPage() {
                   className="object-cover object-top"
                   priority
                 />
-                {/* Overlay tag */}
-                <div className="absolute bottom-4 left-4 right-4 bg-purple-9/80 backdrop-blur-md rounded-2xl px-4 py-3 border border-purple-7/40">
-                  <p className="text-xs font-bold tracking-widest uppercase text-brand mb-0.5">
-                    Israel&apos;s First
+                {/* Supervisor tag */}
+                <div className="absolute top-4 right-4 bg-purple-9/80 backdrop-blur-md rounded-xl px-3 py-2 border border-purple-7/40">
+                  <p className="text-[9px] font-bold tracking-widest uppercase text-brand mb-0.5">
+                    Human in the loop
                   </p>
-                  <p className="text-sm font-bold text-white leading-snug">
-                    Native AI CMO / CRO
+                  <p className="text-xs font-bold text-white leading-snug">
+                    Lihi Pinto &middot; Supervisor
                   </p>
                 </div>
               </div>
 
-              {/* Floating live agent indicator */}
+              {/* Live ops console */}
               <div
-                className="absolute -right-4 top-12 bg-purple-85 border border-purple-7/40 rounded-2xl px-4 py-3 backdrop-blur-sm"
-                style={{ animation: "ai-panel-breathe 4s 1s ease-in-out infinite" }}
+                className="relative z-20 mt-6 w-full max-w-[340px] lg:absolute lg:mt-0 lg:w-[320px] lg:-left-20 lg:-bottom-8 bg-purple-9/90 backdrop-blur-md border border-purple-7/50 rounded-2xl overflow-hidden"
+                style={{ boxShadow: "0 24px 60px rgba(27,22,31,.55)" }}
               >
-                <div className="flex items-center gap-2 mb-1">
-                  <span
-                    className="w-2 h-2 rounded-full bg-brand shrink-0"
-                    style={{ animation: "ai-dot-pulse 1.5s ease-in-out infinite" }}
-                  />
-                  <span className="text-xs font-bold text-brand uppercase tracking-wider">
-                    Live
+                {/* Console header */}
+                <div className="flex items-center justify-between px-4 py-2.5 border-b border-purple-7/40 bg-purple-85/60">
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="w-2 h-2 rounded-full bg-brand shrink-0"
+                      style={{ animation: "ai-dot-pulse 1.5s ease-in-out infinite" }}
+                    />
+                    <span className="text-[10px] font-bold tracking-widest uppercase text-brand">
+                      Triple Ops &middot; Live
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-semibold text-purple-5">
+                    8 agents active
                   </span>
                 </div>
-                <p className="text-xs text-purple-3 font-semibold">Rex running campaign brief</p>
-                <p className="text-[10px] text-purple-5 mt-0.5">8 agents active</p>
+
+                {/* Feed */}
+                <div className="px-2 py-2 h-[196px] overflow-hidden flex flex-col gap-1">
+                  {Array.from({ length: 4 }, (_, i) => {
+                    const absIdx = feedCount - 1 - i;
+                    const item = opsFeed[absIdx % opsFeed.length];
+                    return (
+                      <div
+                        key={absIdx}
+                        className={`flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl ${
+                          i === 0 ? "bg-purple-85/80 border border-brand/25" : ""
+                        }`}
+                        style={i === 0 ? { animation: "feed-slide-in 0.45s ease-out both" } : undefined}
+                      >
+                        <span
+                          className="relative w-8 h-8 rounded-full overflow-hidden shrink-0 border"
+                          style={{
+                            borderColor: item.supervisor ? "#FE3465" : "rgba(137,109,156,.45)",
+                          }}
+                        >
+                          <Image
+                            src={item.supervisor ? "/images/lihi.png" : `/images/agents/${item.id}.png`}
+                            alt={item.name}
+                            fill
+                            className="object-cover object-top"
+                          />
+                        </span>
+                        <span className="min-w-0 flex-1">
+                          <span className="block text-[11px] font-bold text-white leading-tight">
+                            {item.name}
+                            {item.supervisor && (
+                              <span className="ml-1.5 text-[8px] font-bold tracking-wider uppercase text-brand align-middle">
+                                Supervisor
+                              </span>
+                            )}
+                          </span>
+                          <span className="block text-[11px] text-purple-3 leading-tight truncate">
+                            {item.task}
+                          </span>
+                        </span>
+                        <StatusIndicator status={item.status} />
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Console footer: full team strip */}
+                <div className="flex items-center justify-between px-4 py-2.5 border-t border-purple-7/40 bg-purple-85/60">
+                  <div className="flex -space-x-1.5">
+                    {agents.map((a) => (
+                      <span
+                        key={a.id}
+                        className="relative w-6 h-6 rounded-full overflow-hidden border-2 bg-purple-8"
+                        style={{ borderColor: "#1B161F" }}
+                      >
+                        <Image
+                          src={`/images/agents/${a.id}.png`}
+                          alt={a.name}
+                          fill
+                          className="object-cover object-top"
+                        />
+                      </span>
+                    ))}
+                  </div>
+                  <span className="text-[9px] font-bold tracking-wider uppercase text-purple-5">
+                    Supervised by Lihi
+                  </span>
+                </div>
               </div>
             </div>
           </div>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Once · LinkedIn Post Template System</title>
+<!--
+  ╔════════════════════════════════════════════════════════════════╗
+  ║  ONCE · LINKEDIN POST TEMPLATE SYSTEM                           ║
+  ║  Inspired by the rocket + ascending-chart "growth" visual.     ║
+  ║  Built in the Once Warm Signal palette.                        ║
+  ║                                                                ║
+  ║  HOW TO USE                                                     ║
+  ║  1. Open this file in any browser. Each card is 1080×1080      ║
+  ║     (LinkedIn square). Three presets are shown side by side.   ║
+  ║  2. To make your own post, copy ONE <div class="post ..."> … </div>
+  ║     block and edit the text inside:                            ║
+  ║        .eyebrow   → small label up top                         ║
+  ║        .stat-big  → the big number / hero line                 ║
+  ║        .stat-sub  → the contrast line under it                 ║
+  ║        .closer    → bottom brand line                          ║
+  ║  3. To export: screenshot the card, OR right-click → save,     ║
+  ║     OR open DevTools and capture the node at 1080×1080.        ║
+  ║                                                                ║
+  ║  THEME SWAP                                                     ║
+  ║  Each card carries a theme class:                              ║
+  ║        .theme-wine   → deep Wine background (default hero)     ║
+  ║        .theme-orange → Once Orange background                  ║
+  ║        .theme-sand   → warm light Sand background              ║
+  ╚════════════════════════════════════════════════════════════════╝
+-->
+<style>
+  /* ── ONCE WARM SIGNAL PALETTE (locked) ───────────────────────── */
+  :root{
+    --whisper:#FFF2EB; --peach:#FFD4B8; --tangerine:#FF8C5A;
+    --once-orange:#F05A28; --ember:#C83A10; --flame:#902000;
+    --warm-white:#FFFDFB; --ivory:#FAF3EC; --sand:#F7E7CE;
+    --wheat:#EDD4A8; --caramel:#D4B880; --mocha:#A08060;
+    --blush:#FAE1E1; --rose:#F0B8B8; --crimson:#D4607A;
+    --berry:#8C1A40; --wine:#60032A; --noir:#380018;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--ivory);
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    padding:40px;
+    display:flex;flex-wrap:wrap;gap:48px;
+    justify-content:center;align-items:flex-start;
+  }
+
+  .wrap{display:flex;flex-direction:column;align-items:center;gap:14px;}
+  .label{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--mocha);font-weight:700;}
+
+  /* ── THE POST CARD ───────────────────────────────────────────── */
+  .post{
+    position:relative;
+    width:1080px;height:1080px;
+    overflow:hidden;
+    /* shown scaled-down on screen, full size when exported */
+    transform:scale(.42);transform-origin:top center;
+    margin-bottom:-626px; /* counteract scale gap */
+    border-radius:0;
+  }
+  /* full-size single-export helper: add ?full to nothing; just remove transform in DevTools */
+
+  /* diagonal striped background — recreates the inspiration image */
+  .bg{position:absolute;inset:0;}
+  .stripes{position:absolute;inset:-20%;}
+  .stripes .bar{
+    position:absolute;top:-30%;height:170%;
+    transform:rotate(-32deg);transform-origin:center;
+    border-radius:200px;
+    opacity:.5;
+  }
+  .blob{position:absolute;border-radius:50%;}
+
+  /* ── THEME: WINE (default hero) ──────────────────────────────── */
+  .theme-wine .bg{background:linear-gradient(135deg,#7a0838 0%,var(--wine) 45%,var(--noir) 100%);}
+  .theme-wine .stripes .bar{background:linear-gradient(135deg,#8c1a40,#60032a);}
+  .theme-wine .blob.a{background:radial-gradient(circle at 35% 35%,#9c244e,#60032a);}
+  .theme-wine .blob.b{background:radial-gradient(circle at 35% 35%,var(--berry),#48001f);}
+  .theme-wine .ink{color:var(--warm-white);}
+  .theme-wine .accent{color:var(--once-orange);}
+  .theme-wine .line{stroke:var(--warm-white);}
+  .theme-wine .bar-fill{fill:none;stroke:var(--warm-white);}
+  .theme-wine .bar-top{fill:none;stroke:var(--once-orange);}
+  .theme-wine .flame-fill{fill:var(--once-orange);}
+  .theme-wine .eyebrow{color:var(--peach);}
+  .theme-wine .closer-rule{background:var(--once-orange);}
+
+  /* ── THEME: ORANGE ───────────────────────────────────────────── */
+  .theme-orange .bg{background:linear-gradient(135deg,#ff7a45 0%,var(--once-orange) 48%,var(--ember) 100%);}
+  .theme-orange .stripes .bar{background:linear-gradient(135deg,#ff8c5a,#c83a10);}
+  .theme-orange .blob.a{background:radial-gradient(circle at 35% 35%,#ff9a68,#e8501f);}
+  .theme-orange .blob.b{background:radial-gradient(circle at 35% 35%,var(--ember),#7a1a00);}
+  .theme-orange .ink{color:var(--warm-white);}
+  .theme-orange .accent{color:var(--wine);}
+  .theme-orange .line{stroke:var(--warm-white);}
+  .theme-orange .bar-fill{fill:none;stroke:var(--warm-white);}
+  .theme-orange .bar-top{fill:none;stroke:var(--wine);}
+  .theme-orange .flame-fill{fill:var(--wine);}
+  .theme-orange .eyebrow{color:var(--whisper);}
+  .theme-orange .closer-rule{background:var(--wine);}
+
+  /* ── THEME: SAND (light) ─────────────────────────────────────── */
+  .theme-sand .bg{background:linear-gradient(135deg,var(--ivory) 0%,var(--sand) 55%,var(--wheat) 100%);}
+  .theme-sand .stripes .bar{background:linear-gradient(135deg,#f7e7ce,#edd4a8);opacity:.7;}
+  .theme-sand .blob.a{background:radial-gradient(circle at 35% 35%,#fff2eb,#f0d6ad);}
+  .theme-sand .blob.b{background:radial-gradient(circle at 35% 35%,var(--wheat),#dcc294);}
+  .theme-sand .ink{color:var(--wine);}
+  .theme-sand .accent{color:var(--once-orange);}
+  .theme-sand .line{stroke:var(--wine);}
+  .theme-sand .bar-fill{fill:none;stroke:var(--wine);}
+  .theme-sand .bar-top{fill:none;stroke:var(--once-orange);}
+  .theme-sand .flame-fill{fill:var(--once-orange);}
+  .theme-sand .eyebrow{color:var(--mocha);}
+  .theme-sand .closer-rule{background:var(--once-orange);}
+
+  /* ── CONTENT LAYER ───────────────────────────────────────────── */
+  .content{position:absolute;inset:0;padding:96px 96px 88px;display:flex;flex-direction:column;}
+
+  .topbar{display:flex;align-items:center;justify-content:space-between;}
+  .logo-mark{width:64px;height:64px;}
+  .eyebrow{font-size:30px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;}
+
+  .copy{margin-top:auto;}
+  .stat-big{font-size:150px;line-height:.92;font-weight:800;letter-spacing:-.02em;}
+  .stat-sub{font-size:74px;line-height:1.02;font-weight:700;letter-spacing:-.01em;margin-top:18px;}
+
+  .closer{display:flex;align-items:center;gap:26px;margin-top:64px;}
+  .closer-rule{width:96px;height:8px;border-radius:8px;flex:none;}
+  .closer-text{font-size:38px;font-weight:700;letter-spacing:-.005em;}
+
+  /* the rocket + chart art sits in the upper-right, like the source image */
+  .art{position:absolute;top:150px;right:64px;width:470px;height:470px;}
+</style>
+</head>
+<body>
+
+<!-- ════════════════ PRESET 1 · WINE (hero / default) ════════════════ -->
+<div class="wrap">
+  <div class="label">Wine · default</div>
+  <div class="post theme-wine">
+    <div class="bg">
+      <div class="stripes">
+        <div class="bar" style="left:6%;width:150px;"></div>
+        <div class="bar" style="left:30%;width:300px;"></div>
+        <div class="bar" style="left:64%;width:120px;"></div>
+        <div class="bar" style="left:80%;width:220px;"></div>
+      </div>
+      <div class="blob a" style="width:520px;height:520px;top:-180px;left:-120px;"></div>
+      <div class="blob b" style="width:360px;height:360px;bottom:-140px;right:-90px;opacity:.85;"></div>
+    </div>
+
+    <!-- ROCKET + CHART ART (white line, orange flame/top bar) -->
+    <svg class="art" viewBox="0 0 470 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- ascending bars -->
+      <g stroke-width="8" stroke-linejoin="round">
+        <rect class="bar-fill" x="40"  y="300" width="60" height="100"/>
+        <rect class="bar-fill" x="118" y="252" width="60" height="148"/>
+        <rect class="bar-fill" x="196" y="200" width="60" height="200"/>
+        <rect class="bar-top"  x="274" y="142" width="60" height="258"/>
+      </g>
+      <!-- baseline -->
+      <rect class="bar-fill" x="22" y="400" width="346" height="18" rx="5" stroke-width="8"/>
+      <!-- rocket: points up-right, launching off the chart -->
+      <g transform="rotate(40 300 160)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+        <!-- exhaust trail -->
+        <path class="line" d="M289 224 L289 322" opacity=".5"/>
+        <path class="line" d="M311 224 L311 322" opacity=".3"/>
+        <!-- body + nose -->
+        <path class="line" d="M278 116 C278 92 289 66 300 66 C311 66 322 92 322 116 L322 206 L278 206 Z"/>
+        <!-- window -->
+        <circle class="line" cx="300" cy="116" r="14"/>
+        <!-- left fin -->
+        <path class="line" d="M278 170 L257 218 L278 202 Z"/>
+        <!-- right fin -->
+        <path class="line" d="M322 170 L343 218 L322 202 Z"/>
+        <!-- flame -->
+        <path class="flame-fill" d="M286 206 C286 232 295 248 300 254 C305 248 314 232 314 206 Z"/>
+      </g>
+    </svg>
+
+    <div class="content">
+      <div class="topbar">
+        <svg class="logo-mark" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="var(--once-orange)"/><circle cx="100" cy="88" r="64" fill="var(--wine)"/></svg>
+        <div class="eyebrow">The hire you make once</div>
+      </div>
+      <div class="copy">
+        <div class="stat-big ink">Not 6 months.<br><span class="accent">27 days.</span></div>
+        <div class="closer">
+          <span class="closer-rule"></span>
+          <span class="closer-text ink">Every search ends once.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ PRESET 2 · ORANGE ════════════════ -->
+<div class="wrap">
+  <div class="label">Once Orange</div>
+  <div class="post theme-orange">
+    <div class="bg">
+      <div class="stripes">
+        <div class="bar" style="left:8%;width:160px;"></div>
+        <div class="bar" style="left:34%;width:280px;"></div>
+        <div class="bar" style="left:70%;width:140px;"></div>
+        <div class="bar" style="left:84%;width:200px;"></div>
+      </div>
+      <div class="blob a" style="width:500px;height:500px;top:-170px;left:-110px;"></div>
+      <div class="blob b" style="width:340px;height:340px;bottom:-130px;right:-80px;opacity:.85;"></div>
+    </div>
+
+    <svg class="art" viewBox="0 0 470 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke-width="8" stroke-linejoin="round">
+        <rect class="bar-fill" x="40"  y="300" width="60" height="100"/>
+        <rect class="bar-fill" x="118" y="252" width="60" height="148"/>
+        <rect class="bar-fill" x="196" y="200" width="60" height="200"/>
+        <rect class="bar-top"  x="274" y="142" width="60" height="258"/>
+      </g>
+      <rect class="bar-fill" x="22" y="400" width="346" height="18" rx="5" stroke-width="8"/>
+      <g transform="rotate(40 300 160)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+        <path class="line" d="M289 224 L289 322" opacity=".5"/>
+        <path class="line" d="M311 224 L311 322" opacity=".3"/>
+        <path class="line" d="M278 116 C278 92 289 66 300 66 C311 66 322 92 322 116 L322 206 L278 206 Z"/>
+        <circle class="line" cx="300" cy="116" r="14"/>
+        <path class="line" d="M278 170 L257 218 L278 202 Z"/>
+        <path class="line" d="M322 170 L343 218 L322 202 Z"/>
+        <path class="flame-fill" d="M286 206 C286 232 295 248 300 254 C305 248 314 232 314 206 Z"/>
+      </g>
+    </svg>
+
+    <div class="content">
+      <div class="topbar">
+        <svg class="logo-mark" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="var(--warm-white)"/><circle cx="100" cy="88" r="64" fill="var(--once-orange)"/></svg>
+        <div class="eyebrow">Fast. Personal. Final.</div>
+      </div>
+      <div class="copy">
+        <div class="stat-big ink">Search less.<br><span class="accent">Build more.</span></div>
+        <div class="closer">
+          <span class="closer-rule"></span>
+          <span class="closer-text ink">Every search ends once.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ PRESET 3 · SAND (light) ════════════════ -->
+<div class="wrap">
+  <div class="label">Sand · light</div>
+  <div class="post theme-sand">
+    <div class="bg">
+      <div class="stripes">
+        <div class="bar" style="left:8%;width:150px;"></div>
+        <div class="bar" style="left:32%;width:260px;"></div>
+        <div class="bar" style="left:68%;width:130px;"></div>
+        <div class="bar" style="left:82%;width:210px;"></div>
+      </div>
+      <div class="blob a" style="width:500px;height:500px;top:-170px;left:-110px;"></div>
+      <div class="blob b" style="width:340px;height:340px;bottom:-130px;right:-80px;opacity:.8;"></div>
+    </div>
+
+    <svg class="art" viewBox="0 0 470 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke-width="8" stroke-linejoin="round">
+        <rect class="bar-fill" x="40"  y="300" width="60" height="100"/>
+        <rect class="bar-fill" x="118" y="252" width="60" height="148"/>
+        <rect class="bar-fill" x="196" y="200" width="60" height="200"/>
+        <rect class="bar-top"  x="274" y="142" width="60" height="258"/>
+      </g>
+      <rect class="bar-fill" x="22" y="400" width="346" height="18" rx="5" stroke-width="8"/>
+      <g transform="rotate(40 300 160)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+        <path class="line" d="M289 224 L289 322" opacity=".5"/>
+        <path class="line" d="M311 224 L311 322" opacity=".3"/>
+        <path class="line" d="M278 116 C278 92 289 66 300 66 C311 66 322 92 322 116 L322 206 L278 206 Z"/>
+        <circle class="line" cx="300" cy="116" r="14"/>
+        <path class="line" d="M278 170 L257 218 L278 202 Z"/>
+        <path class="line" d="M322 170 L343 218 L322 202 Z"/>
+        <path class="flame-fill" d="M286 206 C286 232 295 248 300 254 C305 248 314 232 314 206 Z"/>
+      </g>
+    </svg>
+
+    <div class="content">
+      <div class="topbar">
+        <svg class="logo-mark" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="var(--once-orange)"/><circle cx="100" cy="88" r="64" fill="var(--sand)"/></svg>
+        <div class="eyebrow">Senior engineers, placed</div>
+      </div>
+      <div class="copy">
+        <div class="stat-big ink">27 days.</div>
+        <div class="stat-sub accent">That's all it took.</div>
+        <div class="closer">
+          <span class="closer-rule"></span>
+          <span class="closer-text ink">Every search ends once.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

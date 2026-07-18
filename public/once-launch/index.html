@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Once · LinkedIn Launch — Marketing Calendar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ── ONCE WARM SIGNAL PALETTE (locked) ───────────────────────── */
+  :root{
+    --whisper:#FFF2EB; --peach:#FFD4B8; --tangerine:#FF8C5A;
+    --once-orange:#F05A28; --ember:#C83A10; --flame:#902000;
+    --warm-white:#FFFDFB; --ivory:#FAF3EC; --sand:#F7E7CE;
+    --wheat:#EDD4A8; --caramel:#D4B880; --mocha:#A08060;
+    --blush:#FAE1E1; --rose:#F0B8B8; --crimson:#D4607A;
+    --berry:#8C1A40; --wine:#60032A; --noir:#380018;
+
+    /* Triple & Co. attribution */
+    --triple-pink:#FE3465; --triple-purple:#896D9C; --triple-dark:#1B161F;
+
+    --phase-teaser:var(--mocha);
+    --phase-reveal:var(--once-orange);
+    --phase-proof:var(--berry);
+    --phase-diff:var(--crimson);
+    --phase-cta:var(--wine);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(240,90,40,.10), transparent 60%),
+      radial-gradient(900px 500px at -5% 5%, rgba(96,3,42,.08), transparent 55%),
+      var(--ivory);
+    color:var(--noir);
+    font-family:'Inter','Helvetica Neue',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:48px 40px 0;
+    line-height:1.5;
+  }
+  .shell{max-width:1180px;margin:0 auto;}
+
+  /* ── HEADER ──────────────────────────────────────────────────── */
+  .head{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:14px;}
+  .brand-row{display:flex;flex-direction:column;align-items:flex-start;gap:12px;}
+  .once-logo{height:56px;width:224px;display:block;}
+  .titleblock h1{font-size:28px;font-weight:800;letter-spacing:-.02em;line-height:1.05;color:var(--wine);margin-top:14px;}
+  .titleblock .sub{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--mocha);margin-top:6px;}
+  .tagline{
+    align-self:center;font-size:15px;font-weight:700;color:var(--once-orange);
+    border-left:3px solid var(--once-orange);padding-left:14px;letter-spacing:-.01em;
+  }
+  .hint{font-size:12.5px;color:var(--caramel);font-weight:600;margin:0 0 30px;}
+  .hint b{color:var(--mocha);}
+
+  /* ── STAT TILES ──────────────────────────────────────────────── */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:44px;}
+  .stat{
+    background:var(--warm-white);border:1px solid rgba(160,128,96,.22);
+    border-radius:18px;padding:22px 24px;position:relative;overflow:hidden;
+    box-shadow:0 6px 22px rgba(96,3,42,.05);
+  }
+  .stat::after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:var(--whisper);opacity:.7;}
+  .stat .num{font-size:42px;font-weight:800;letter-spacing:-.03em;color:var(--once-orange);line-height:1;position:relative;}
+  .stat .lbl{font-size:13px;font-weight:700;color:var(--mocha);text-transform:uppercase;letter-spacing:.08em;margin-top:10px;position:relative;}
+  .stat.hero{background:linear-gradient(135deg,#7a0838,var(--wine) 55%,var(--noir));border:none;}
+  .stat.hero .num,.stat.hero .lbl{color:var(--warm-white);}
+  .stat.hero .num{color:var(--peach);}
+  .stat.hero::after{background:rgba(240,90,40,.25);}
+
+  /* ── PHASE LEGEND ────────────────────────────────────────────── */
+  .legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;align-items:center;}
+  .legend .ltitle{font-size:13px;font-weight:700;color:var(--mocha);text-transform:uppercase;letter-spacing:.1em;margin-right:6px;}
+  .pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--warm-white);padding:6px 14px;border-radius:999px;}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.85);}
+  .pill.teaser{background:var(--phase-teaser);}
+  .pill.reveal{background:var(--phase-reveal);}
+  .pill.proof{background:var(--phase-proof);}
+  .pill.diff{background:var(--phase-diff);}
+  .pill.cta{background:var(--phase-cta);}
+
+  /* ── WEEK GROUPS ─────────────────────────────────────────────── */
+  .week{margin-bottom:34px;}
+  .week-head{display:flex;align-items:baseline;gap:14px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid rgba(160,128,96,.25);}
+  .week-head h2{font-size:18px;font-weight:800;color:var(--wine);letter-spacing:-.01em;}
+  .week-head .range{font-size:14px;color:var(--mocha);font-weight:600;}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+
+  /* ── POST CARD (clickable) ───────────────────────────────────── */
+  .card{
+    background:var(--warm-white);border-radius:18px;padding:0;overflow:hidden;
+    border:1px solid rgba(160,128,96,.20);box-shadow:0 6px 20px rgba(96,3,42,.05);
+    display:flex;flex-direction:column;position:relative;text-decoration:none;color:inherit;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(96,3,42,.14);}
+  .card:hover .open{opacity:1;transform:translateX(0);}
+  .card .stripe{height:6px;width:100%;}
+  .card.teaser .stripe{background:var(--phase-teaser);}
+  .card.reveal .stripe{background:linear-gradient(90deg,var(--once-orange),var(--ember));}
+  .card.proof .stripe{background:var(--phase-proof);}
+  .card.diff .stripe{background:var(--phase-diff);}
+  .card.cta .stripe{background:var(--phase-cta);}
+  .card.reveal{box-shadow:0 10px 30px rgba(240,90,40,.18);border-color:rgba(240,90,40,.4);}
+
+  .card-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:12px;flex:1;}
+  .card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+  .meta{display:flex;align-items:center;gap:10px;}
+  .pnum{
+    width:34px;height:34px;border-radius:10px;background:var(--whisper);color:var(--ember);
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex:none;
+  }
+  .reveal .pnum{background:var(--once-orange);color:var(--warm-white);}
+  .date{font-size:13px;font-weight:800;color:var(--wine);}
+  .date .day{display:block;font-size:11px;font-weight:700;color:var(--mocha);text-transform:uppercase;letter-spacing:.08em;}
+  .tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--warm-white);padding:4px 10px;border-radius:999px;}
+  .tag.teaser{background:var(--phase-teaser);}
+  .tag.reveal{background:var(--phase-reveal);}
+  .tag.proof{background:var(--phase-proof);}
+  .tag.diff{background:var(--phase-diff);}
+  .tag.cta{background:var(--phase-cta);}
+
+  .title{font-size:19px;font-weight:800;letter-spacing:-.01em;color:var(--noir);line-height:1.15;display:flex;align-items:center;gap:8px;}
+  .desc{font-size:13.5px;color:#5b4a44;line-height:1.45;}
+
+  .rows{margin-top:auto;display:flex;flex-direction:column;gap:7px;padding-top:6px;border-top:1px dashed rgba(160,128,96,.3);}
+  .row{display:flex;align-items:center;gap:9px;font-size:12.5px;}
+  .row .k{font-weight:800;color:var(--mocha);text-transform:uppercase;letter-spacing:.06em;font-size:11px;width:54px;flex:none;}
+  .row .v{color:var(--noir);font-weight:600;}
+  .voice{display:inline-flex;align-items:center;gap:6px;}
+  .av{width:18px;height:18px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:800;flex:none;}
+  .av.page{background:var(--wine);}
+  .av.inbal{background:var(--once-orange);}
+  .av.eva{background:var(--crimson);}
+
+  .assetlink{display:inline-flex;align-items:center;gap:6px;color:var(--ember);font-weight:800;}
+  .assetlink svg{width:13px;height:13px;stroke:currentColor;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+
+  .status{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px;text-transform:uppercase;letter-spacing:.05em;}
+  .status.built{background:#E7F2E0;color:#3c6b2a;}
+  .status.build{background:var(--blush);color:var(--berry);}
+  .status .sdot{width:7px;height:7px;border-radius:50%;}
+  .status.built .sdot{background:#5a9c3a;}
+  .status.build .sdot{background:var(--crimson);}
+
+  .open{position:absolute;top:16px;right:18px;font-size:11px;font-weight:800;color:var(--once-orange);text-transform:uppercase;letter-spacing:.06em;opacity:0;transform:translateX(-6px);transition:.15s ease;display:flex;align-items:center;gap:5px;}
+  .open svg{width:12px;height:12px;stroke:currentColor;stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+
+  /* ── ASSET CHECKLIST ─────────────────────────────────────────── */
+  .assets{margin-top:46px;background:var(--warm-white);border:1px solid rgba(160,128,96,.22);border-radius:20px;padding:28px 30px;box-shadow:0 6px 22px rgba(96,3,42,.05);}
+  .assets h3{font-size:16px;font-weight:800;color:var(--wine);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;}
+  .acols{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  .acol h4{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;}
+  .acol.b h4{color:#3c6b2a;}
+  .acol.t h4{color:var(--berry);}
+  .alist{list-style:none;display:flex;flex-direction:column;gap:9px;}
+  .alist li{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--noir);font-weight:600;}
+  .alist a{color:inherit;text-decoration:none;}
+  .alist a:hover{color:var(--ember);text-decoration:underline;}
+  .chk{width:20px;height:20px;border-radius:6px;flex:none;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;}
+  .chk.y{background:#5a9c3a;}
+  .chk.n{background:var(--peach);color:var(--ember);border:1.5px dashed var(--ember);}
+  .acol .post-ref{color:var(--mocha);font-weight:700;font-size:11.5px;}
+
+  /* ── ONCE FOOTER LINE ────────────────────────────────────────── */
+  .foot{margin-top:40px;text-align:center;color:var(--mocha);font-size:13px;font-weight:600;}
+  .foot b{color:var(--once-orange);}
+  .note{margin-top:8px;font-size:12px;color:var(--caramel);}
+
+  /* ── POWERED BY TRIPLE & CO. ─────────────────────────────────── */
+  .powered{
+    margin-top:46px;margin-left:-40px;margin-right:-40px;
+    background:var(--triple-dark);
+    padding:30px 40px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+  }
+  .powered .pre{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);}
+  .powered a{display:inline-flex;align-items:center;gap:11px;text-decoration:none;}
+  .tri-mark{display:flex;gap:5px;}
+  .tri-mark span{width:13px;height:13px;border-radius:50%;display:block;}
+  .tri-mark span:nth-child(1){background:var(--triple-pink);}
+  .tri-mark span:nth-child(2){background:linear-gradient(135deg,var(--triple-pink),var(--triple-purple));}
+  .tri-mark span:nth-child(3){background:var(--triple-purple);}
+  .tri-word{font-size:21px;font-weight:800;letter-spacing:-.01em;
+    background:linear-gradient(135deg,#FE3465,#B8A7C4);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .tri-tag{font-size:12px;color:rgba(255,255,255,.45);font-weight:600;margin-left:4px;}
+
+  @media(max-width:880px){
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .grid{grid-template-columns:1fr;}
+    .acols{grid-template-columns:1fr;}
+    body{padding:28px 18px 0;}
+    .powered{margin-left:-18px;margin-right:-18px;}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- HEADER with REAL Once logo -->
+  <div class="head">
+    <div class="brand-row">
+      <!-- Once-HR horizontal lockup (master SVG) -->
+      <svg class="once-logo" viewBox="0 0 224 80" preserveAspectRatio="xMinYMid meet" xmlns="http://www.w3.org/2000/svg" aria-label="Once-HR logo">
+        <circle cx="40" cy="40" r="32" fill="#F05A28"/>
+        <circle cx="40" cy="36" r="22.7" fill="#FAF3EC"/>
+        <text x="86" y="46" font-family="Inter,sans-serif" font-weight="700" font-size="36" fill="#1A1A18">Once</text>
+        <text x="88" y="61" font-family="Inter,sans-serif" font-weight="600" font-size="11" letter-spacing="1.5" fill="#888880">HR</text>
+      </svg>
+      <div class="titleblock">
+        <h1>LinkedIn Launch — Marketing Calendar</h1>
+        <div class="sub">Campaign Dashboard</div>
+      </div>
+    </div>
+    <div class="tagline">Every search ends once.</div>
+  </div>
+  <p class="hint"><b>Tip:</b> every post card is clickable — open it to preview the actual creative. Videos and visuals are linked live.</p>
+
+  <!-- STAT TILES -->
+  <div class="stats">
+    <div class="stat hero"><div class="num">Jul 14</div><div class="lbl">Launch Day · Tue</div></div>
+    <div class="stat"><div class="num">9</div><div class="lbl">Posts in arc</div></div>
+    <div class="stat"><div class="num">3.5</div><div class="lbl">Weeks · Jul 7–30</div></div>
+    <div class="stat"><div class="num">Tue<span style="font-size:24px;">/</span>Thu</div><div class="lbl">~9:00 Israel time</div></div>
+  </div>
+
+  <!-- PHASE LEGEND -->
+  <div class="legend">
+    <span class="ltitle">Phases</span>
+    <span class="pill teaser"><span class="dot"></span>Tease</span>
+    <span class="pill reveal"><span class="dot"></span>Reveal</span>
+    <span class="pill proof"><span class="dot"></span>Prove</span>
+    <span class="pill diff"><span class="dot"></span>Differentiate</span>
+    <span class="pill cta"><span class="dot"></span>Convert</span>
+  </div>
+
+  <!-- WEEK 1 -->
+  <div class="week">
+    <div class="week-head"><h2>Week 1 · Tease</h2><span class="range">Jul 7 – Jul 9</span></div>
+    <div class="grid">
+
+      <a class="card teaser" href="once-launch-teaser-dark.mp4" target="_blank" rel="noopener">
+        <div class="open">Play <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="stripe"></div>
+        <div class="card-body">
+          <div class="card-top"><div class="meta"><span class="pnum">0a</span><span class="date"><span class="day">Tue</span>Jul 7</span></div><span class="tag teaser">Tease</span></div>
+          <div class="title">The "O" appears</div>
+          <div class="desc">Cryptic motion teaser. No logo explainer, no link. One line + the date. Goal: "what is this?" comments.</div>
+          <div class="rows">
+            <div class="row"><span class="k">Voice</span><span class="v voice"><span class="av page">P</span>Page <span class="av inbal">I</span>Inbal reshare</span></div>
+            <div class="row"><span class="k">Asset</span><span class="v assetlink">teaser-dark.mp4 <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></span></div>
+            <div class="row"><span class="k">Status</span><span class="status built"><span class="sdot"></span>Built</span></div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card teaser" href="once-launch-teaser-light.mp4" target="_blank" rel="noopener">
+        <div class="open">Play <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="stripe"></div>
+        <div class="card-body">
+          <div class="card-top"><div class="meta"><span class="pnum">0b</span><span class="date"><span class="day">Thu</span>Jul 9</span></div><span class="tag teaser">Tease</span></div>
+          <div class="title">Something ends once</div>
+          <div class="desc">Second teaser sharpens the promise — "what if a search ended once and stayed ended?" Countdown to Tuesday.</div>
+          <div class="rows">
+            <div class="row"><span class="k">Voice</span><span class="v voice"><span class="av page">P</span>Page <span class="av eva">E</span>Eva reshare</span></div>
+            <div class="row"><span class="k">Asset</span><span class="v assetlink">teaser-light.mp4 <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></span></div>
+            <div class="row"><span class="k">Status</span><span class="status built"><span class="sdot"></span>Built</span></div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- WEEK 2 -->
+  <div class="week">
+    <div class="week-head"><h2>Week 2 · Reveal + Prove</h2><span class="range">Jul 14 – Jul 16</span></div>
+    <div class="grid">
+
+      <a class="card reveal" href="once-linkedin-post-template.html" target="_blank" rel="noopener">
+        <div class="open">Open <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="stripe"></div>
+        <div class="card-body">
+          <div class="card-top"><div class="meta"><span class="pnum">1</span><span class="date"><span class="day">Tue · LAUNCH</span>Jul 14</span></div><span class="tag reveal">Reveal</span></div>
+          <div class="title">We're Once.</div>
+          <div class="desc">The manifesto. 12 years has a name. Founder-led, fast, transparent, honest. Both founders post natively. The tentpole — boost this one if any.</div>
+          <div class="rows">
+            <div class="row"><span class="k">Voice</span><span class="v voice"><span class="av page">P</span><span class="av inbal">I</span><span class="av eva">E</span>Page + both founders</span></div>
+            <div class="row"><span class="k">Asset</span><span class="v assetlink">Wine reveal card <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></span></div>
+            <div class="row"><span class="k">Status</span><span class="status built"><span class="sdot"></span>Built</span></div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card proof" href="once-linkedin-post-template.html" target="_blank" rel="noopener">
+        <div class="open">Open <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="stripe"></div>
+        <div class="card-body">
+          <div class="card-top"><div class="meta"><span class="pnum">2</span><span class="date"><span class="day">Thu</span>Jul 16</span></div><span class="tag proof">Prove</span></div>
+          <div class="title">27 days, not 6 months</div>
+          <div class="desc">Backs the speed claim. Average 27 days to a placed hire — and why that's setup, not luck. Links to the case-study blog.</div>
+          <div class="rows">
+            <div class="row"><span class="k">Voice</span><span class="v voice"><span class="av page">P</span>Page <span class="av inbal">I</span>Inbal reshare</span></div>
+            <div class="row"><span class="k">Asset</span><span class="v assetlink">Sand "27 days" card <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></span></div>
+            <div class="row"><span class="k">Status</span><span class="status built"><span class="sdot"></span>Built</span></div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- WEEK 3 -->
+  <div class="week">
+    <div class="week-head"><h2>Week 3 · Differentiate</h2><span class="range">Jul 21 – Jul 23</span></div>
+    <div class="grid">
+
+      <a class="card diff" href="once-platform-card.html" target="_blank" rel="noopener">
+        <div class="open">Open <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="stripe"></div>
+        <div class="card-body">
+          <div class="card-top"><div class="meta"><span class="pnum">3</span><span class="date"><span class="day">Tue</span>Jul 21</span></div><span class="tag diff">Differentiate</span></div>
+          <div class="title">No black box</div>
+          <div class="desc">The transparency platform. A live, shared pipeline view — "the same view we see is the view you see." No Friday-update wait.</div>
+          <div class="rows">
+            <div class="row"><span class="k">Voice</span><span class="v voice"><span class="av page">P</span>Page <span class="av eva">E</span>Eva reshare</span></div>
+            <div class="row"><span class="k">Asset</span><span class="v assetlink">Platform UI card <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></span></div>
+            <div class="row"><span class="k">Status</span><span class="status built"><span class="sdot"></span>Built</span></div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card diff" href="once-ai-agents-card.html" target="_blank" rel="noopener">
+        <div class="open">Open <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="stripe"></div>
+        <div class="card-body">
+          <div class="card-top"><div class="meta"><span class="pnum">4</span><span class="date"><span class="day">Thu</span>Jul 23</span></div><span class="tag diff">Differentiate</span></div>
+          <div class="title">Senior judgment, amplified</div>
+          <div class="desc">The AI agents, honestly framed. Five purpose-built agents do the heavy lifting; founders make every call. Human-in-the-loop, no black-box screening.</div>
+          <div class="rows">
+            <div class="row"><span class="k">Voice</span><span class="v voice"><span class="av page">P</span>Page <span class="av inbal">I</span>Inbal reshare</span></div>
+            <div class="row"><span class="k">Asset</span><span class="v assetlink">AI-agents card <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></span></div>
+            <div class="row"><span class="k">Status</span><span class="status built"><span class="sdot"></span>Built</span></div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- WEEK 4 -->
+  <div class="week">
+    <div class="week-head"><h2>Week 4 · Convert</h2><span class="range">Jul 28 – Jul 30</span></div>
+    <div class="grid">
+
+      <a class="card proof" href="once-case-study-carousel.html" target="_blank" rel="noopener">
+        <div class="open">Open <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="stripe"></div>
+        <div class="card-body">
+          <div class="card-top"><div class="meta"><span class="pnum">5</span><span class="date"><span class="day">Tue</span>Jul 28</span></div><span class="tag proof">Prove</span></div>
+          <div class="title">The 18-day VP R&D</div>
+          <div class="desc">The full case study as a 5-slide carousel. Calibrate → map the market → founder-led outreach. A handful of exactly-right people, not 100 CVs.</div>
+          <div class="rows">
+            <div class="row"><span class="k">Voice</span><span class="v voice"><span class="av page">P</span>Page <span class="av eva">E</span>Eva reshare</span></div>
+            <div class="row"><span class="k">Asset</span><span class="v assetlink">Case-study carousel <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></span></div>
+            <div class="row"><span class="k">Status</span><span class="status built"><span class="sdot"></span>Built</span></div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card cta" href="once-linkedin-post-template.html" target="_blank" rel="noopener">
+        <div class="open">Open <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="stripe"></div>
+        <div class="card-body">
+          <div class="card-top"><div class="meta"><span class="pnum">6</span><span class="date"><span class="day">Thu</span>Jul 30</span></div><span class="tag cta">Convert</span></div>
+          <div class="title">Five searches. That's the cap.</div>
+          <div class="desc">The close. The five-search cap as proof of "founder-led," plus the ask: two seats open this quarter. Fast. Personal. Final.</div>
+          <div class="rows">
+            <div class="row"><span class="k">Voice</span><span class="v voice"><span class="av page">P</span><span class="av inbal">I</span><span class="av eva">E</span>Page + joint founder</span></div>
+            <div class="row"><span class="k">Asset</span><span class="v assetlink">Orange "Fast. Personal. Final." <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></span></div>
+            <div class="row"><span class="k">Status</span><span class="status built"><span class="sdot"></span>Built</span></div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ASSET CHECKLIST -->
+  <div class="assets">
+    <h3>Asset Library — all connected</h3>
+    <div class="acols">
+      <div class="acol b">
+        <h4>✔ Ready (8)</h4>
+        <ul class="alist">
+          <li><span class="chk y">✓</span><a href="once-launch-teaser-dark.mp4" target="_blank">Teaser · dark .mp4</a> <span class="post-ref">· Post 0a</span></li>
+          <li><span class="chk y">✓</span><a href="once-launch-teaser-light.mp4" target="_blank">Teaser · light .mp4</a> <span class="post-ref">· Post 0b</span></li>
+          <li><span class="chk y">✓</span><a href="once-linkedin-post-template.html" target="_blank">Wine reveal card</a> <span class="post-ref">· Post 1</span></li>
+          <li><span class="chk y">✓</span><a href="once-linkedin-post-template.html" target="_blank">Sand "27 days" card</a> <span class="post-ref">· Post 2</span></li>
+          <li><span class="chk y">✓</span><a href="once-platform-card.html" target="_blank">Platform UI card</a> <span class="post-ref">· Post 3</span></li>
+          <li><span class="chk y">✓</span><a href="once-ai-agents-card.html" target="_blank">AI-agents card</a> <span class="post-ref">· Post 4</span></li>
+          <li><span class="chk y">✓</span><a href="once-case-study-carousel.html" target="_blank">Case-study carousel</a> <span class="post-ref">· Post 5</span></li>
+          <li><span class="chk y">✓</span><a href="once-linkedin-post-template.html" target="_blank">Orange "Fast. Personal. Final." card</a> <span class="post-ref">· Post 6</span></li>
+        </ul>
+      </div>
+      <div class="acol t">
+        <h4>○ Optional add-on</h4>
+        <ul class="alist">
+          <li><span class="chk n">+</span>Named-client testimonial card <span class="post-ref">· bonus social proof</span></li>
+        </ul>
+        <p style="margin-top:16px;font-size:13px;color:var(--mocha);font-weight:600;line-height:1.5;">All three previously-missing assets — the Platform card, AI-agents card, and 18-day carousel — are now built and connected. The only remaining optional add is one named-client quote card for extra social proof on launch week.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ONCE FOOTER -->
+  <div class="foot">
+    Coordinated voice: <b>Page publishes → founder reshares within 2–4h → team comments in hour one.</b> Links live in the first comment, never the caption.
+    <div class="note">Anchor date = Tue Jul 14. Move the launch and the whole grid shifts by the same offset. · The hire you make once.</div>
+  </div>
+
+  <!-- POWERED BY TRIPLE & CO. -->
+  <div class="powered">
+    <span class="pre">Powered by</span>
+    <a href="https://www.tripleandco.com" target="_blank" rel="noopener">
+      <span class="tri-mark"><span></span><span></span><span></span></span>
+      <span class="tri-word">Triple &amp; Co.</span>
+      <span class="tri-tag">AI-powered growth</span>
+    </a>
+  </div>
+
+</div>
+</body>
+</html>

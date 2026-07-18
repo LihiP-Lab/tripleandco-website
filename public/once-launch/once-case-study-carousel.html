@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Once · Case-Study Carousel — The 18-day VP R&D</title>
+<style>
+  :root{
+    --whisper:#FFF2EB; --peach:#FFD4B8; --tangerine:#FF8C5A;
+    --once-orange:#F05A28; --ember:#C83A10; --flame:#902000;
+    --warm-white:#FFFDFB; --ivory:#FAF3EC; --sand:#F7E7CE;
+    --wheat:#EDD4A8; --caramel:#D4B880; --mocha:#A08060;
+    --blush:#FAE1E1; --rose:#F0B8B8; --crimson:#D4607A;
+    --berry:#8C1A40; --wine:#60032A; --noir:#380018;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--ivory);font-family:'Helvetica Neue',Arial,sans-serif;padding:36px;display:flex;flex-wrap:wrap;gap:34px;justify-content:center;align-items:flex-start;}
+  .wrap{display:flex;flex-direction:column;align-items:center;gap:12px;}
+  .label{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--mocha);font-weight:700;}
+  .slide{position:relative;width:1080px;height:1080px;overflow:hidden;transform:scale(.40);transform-origin:top center;margin-bottom:-648px;}
+  .blob{position:absolute;border-radius:50%;}
+  .content{position:absolute;inset:0;padding:96px 90px 84px;display:flex;flex-direction:column;}
+  .topbar{display:flex;align-items:center;justify-content:space-between;}
+  .logo-mark{width:60px;height:60px;}
+  .pageno{font-size:26px;font-weight:800;letter-spacing:.05em;}
+  .swipe{font-size:28px;font-weight:800;letter-spacing:.04em;display:flex;align-items:center;gap:14px;}
+
+  /* WINE slides */
+  .wine{background:linear-gradient(135deg,#7a0838 0%,var(--wine) 48%,var(--noir) 100%);color:var(--warm-white);}
+  .wine .blob.a{width:520px;height:520px;top:-180px;left:-130px;background:radial-gradient(circle at 35% 35%,#9c244e,#60032a);}
+  .wine .blob.b{width:360px;height:360px;bottom:-150px;right:-100px;background:radial-gradient(circle at 35% 35%,var(--berry),#48001f);opacity:.85;}
+  .wine .pageno,.wine .swipe{color:var(--peach);}
+  .wine .accent{color:var(--once-orange);}
+  .wine .eyebrow{color:var(--peach);}
+  .wine .body{color:#f3dfe6;}
+  .wine .rule{background:var(--once-orange);}
+
+  /* SAND slides */
+  .sand{background:linear-gradient(135deg,var(--ivory) 0%,var(--sand) 60%,var(--wheat) 100%);color:var(--wine);}
+  .sand .blob.a{width:520px;height:520px;top:-190px;left:-130px;background:radial-gradient(circle at 35% 35%,#fff2eb,#f0d6ad);opacity:.8;}
+  .sand .blob.b{width:380px;height:380px;bottom:-150px;right:-110px;background:radial-gradient(circle at 35% 35%,var(--wheat),#dcc294);opacity:.7;}
+  .sand .pageno,.sand .swipe{color:var(--mocha);}
+  .sand .accent{color:var(--once-orange);}
+  .sand .eyebrow{color:var(--mocha);}
+  .sand .body{color:#6b574e;}
+  .sand .rule{background:var(--once-orange);}
+
+  /* ORANGE final */
+  .orange{background:linear-gradient(135deg,#ff7a45 0%,var(--once-orange) 50%,var(--ember) 100%);color:var(--warm-white);}
+  .orange .blob.a{width:520px;height:520px;top:-180px;left:-120px;background:radial-gradient(circle at 35% 35%,#ff9a68,#e8501f);}
+  .orange .blob.b{width:360px;height:360px;bottom:-140px;right:-90px;background:radial-gradient(circle at 35% 35%,var(--ember),#7a1a00);opacity:.85;}
+  .orange .pageno,.orange .swipe{color:var(--whisper);}
+  .orange .accent{color:var(--wine);}
+  .orange .body{color:#fff0e8;}
+  .orange .rule{background:var(--wine);}
+
+  .eyebrow{font-size:27px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;margin-bottom:28px;}
+  .mid{margin-top:auto;}
+  h1{font-size:104px;line-height:.95;font-weight:800;letter-spacing:-.03em;}
+  h2{font-size:64px;line-height:1.0;font-weight:800;letter-spacing:-.02em;}
+  .body{font-size:38px;line-height:1.34;font-weight:500;margin-top:30px;max-width:880px;}
+  .stat{font-size:150px;font-weight:800;letter-spacing:-.03em;line-height:.9;}
+  .closer{display:flex;align-items:center;gap:22px;margin-top:46px;}
+  .rule{width:84px;height:8px;border-radius:8px;flex:none;}
+  .closer-text{font-size:34px;font-weight:800;}
+  .arrow{width:30px;height:30px;stroke:currentColor;stroke-width:3.5;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 · COVER -->
+<div class="wrap"><div class="label">Slide 1 · Cover</div>
+<div class="slide wine"><div class="blob a"></div><div class="blob b"></div>
+  <div class="content">
+    <div class="topbar">
+      <svg class="logo-mark" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="var(--once-orange)"/><circle cx="100" cy="88" r="64" fill="var(--wine)"/></svg>
+      <span class="pageno">Case study</span>
+    </div>
+    <div class="mid">
+      <div class="stat accent">18 days.</div>
+      <h2 style="margin-top:24px;">One VP R&amp;D.<br>Two agencies said it couldn't be done.</h2>
+      <div class="closer"><span class="rule"></span><span class="swipe">How we did it <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- SLIDE 2 · SITUATION -->
+<div class="wrap"><div class="label">Slide 2 · The situation</div>
+<div class="slide sand"><div class="blob a"></div><div class="blob b"></div>
+  <div class="content">
+    <div class="topbar">
+      <svg class="logo-mark" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="var(--once-orange)"/><circle cx="100" cy="88" r="64" fill="var(--sand)"/></svg>
+      <span class="pageno">01 / The situation</span>
+    </div>
+    <div class="mid">
+      <div class="eyebrow">The brief</div>
+      <h2>A Series B startup, ~80 people, had just lost its VP R&amp;D.</h2>
+      <div class="body">The board meeting was eight weeks out. Two agencies had quoted "three to four months." That timeline didn't fit the reality of the business.</div>
+    </div>
+  </div>
+</div></div>
+
+<!-- SLIDE 3 · CALIBRATE -->
+<div class="wrap"><div class="label">Slide 3 · Calibrate</div>
+<div class="slide wine"><div class="blob a"></div><div class="blob b"></div>
+  <div class="content">
+    <div class="topbar">
+      <svg class="logo-mark" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="var(--once-orange)"/><circle cx="100" cy="88" r="64" fill="var(--wine)"/></svg>
+      <span class="pageno">02 / Days 1–2</span>
+    </div>
+    <div class="mid">
+      <div class="eyebrow accent">Calibrate, don't source</div>
+      <h2>We didn't start by sourcing. We started by getting the target right.</h2>
+      <div class="body">The last VP had failed on the jump from hands-on builder to leader of leaders, not on technical ability. So <b>that</b> became the thing we hired against. A sharp target is what lets a search move fast.</div>
+    </div>
+  </div>
+</div></div>
+
+<!-- SLIDE 4 · MAP -->
+<div class="wrap"><div class="label">Slide 4 · Map the market</div>
+<div class="slide sand"><div class="blob a"></div><div class="blob b"></div>
+  <div class="content">
+    <div class="topbar">
+      <svg class="logo-mark" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="var(--once-orange)"/><circle cx="100" cy="88" r="64" fill="var(--sand)"/></svg>
+      <span class="pageno">03 / Days 2–6</span>
+    </div>
+    <div class="mid">
+      <div class="eyebrow">Map the whole market</div>
+      <h2>The entire landscape, mapped early — including the people who'd never appear in a job search.</h2>
+      <div class="body">Our sourcing agent did the heavy lifting; the founders aimed judgment at the shortlist. Searches take months because they're done a few names at a time. Mapping the whole market early collapses that.</div>
+    </div>
+  </div>
+</div></div>
+
+<!-- SLIDE 5 · OUTREACH + CLOSE -->
+<div class="wrap"><div class="label">Slide 5 · Founder-led + close</div>
+<div class="slide orange"><div class="blob a"></div><div class="blob b"></div>
+  <div class="content">
+    <div class="topbar">
+      <svg class="logo-mark" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="var(--warm-white)"/><circle cx="100" cy="88" r="64" fill="var(--once-orange)"/></svg>
+      <span class="pageno">04 / Days 6–11</span>
+    </div>
+    <div class="mid">
+      <div class="eyebrow">Founder-led outreach</div>
+      <h2>Every approach drafted for the person. Sent under a founder's name.</h2>
+      <div class="body">A VP-level candidate responds to seriousness, not a template. The first conversation was with Inbal — not a coordinator. A well-aimed search isn't 100 CVs. It's a handful of exactly-right people in real dialogue.</div>
+      <div class="closer"><span class="rule"></span><span class="closer-text">Every search ends once.</span></div>
+    </div>
+  </div>
+</div></div>
+
+</body>
+</html>

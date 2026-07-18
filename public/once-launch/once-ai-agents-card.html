@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Once · AI Agents Card — "Senior judgment, amplified"</title>
+<style>
+  :root{
+    --whisper:#FFF2EB; --peach:#FFD4B8; --tangerine:#FF8C5A;
+    --once-orange:#F05A28; --ember:#C83A10; --flame:#902000;
+    --warm-white:#FFFDFB; --ivory:#FAF3EC; --sand:#F7E7CE;
+    --wheat:#EDD4A8; --caramel:#D4B880; --mocha:#A08060;
+    --blush:#FAE1E1; --rose:#F0B8B8; --crimson:#D4607A;
+    --berry:#8C1A40; --wine:#60032A; --noir:#380018;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--ivory);display:flex;justify-content:center;padding:40px;font-family:'Helvetica Neue',Arial,sans-serif;}
+  .post{
+    position:relative;width:1080px;height:1080px;overflow:hidden;
+    background:linear-gradient(135deg,var(--ivory) 0%,var(--sand) 60%,var(--wheat) 100%);
+    transform:scale(.62);transform-origin:top center;margin-bottom:-410px;
+  }
+  .blob{position:absolute;border-radius:50%;}
+  .blob.a{width:520px;height:520px;top:-190px;left:-130px;background:radial-gradient(circle at 35% 35%,#fff2eb,#f0d6ad);opacity:.8;}
+  .blob.b{width:380px;height:380px;bottom:-150px;right:-110px;background:radial-gradient(circle at 35% 35%,var(--wheat),#dcc294);opacity:.7;}
+  .content{position:absolute;inset:0;padding:84px 84px 76px;display:flex;flex-direction:column;color:var(--wine);}
+  .topbar{display:flex;align-items:center;justify-content:space-between;}
+  .logo-mark{width:60px;height:60px;}
+  .eyebrow{font-size:27px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--mocha);}
+  .head{margin-top:48px;}
+  .head h1{font-size:78px;line-height:.98;font-weight:800;letter-spacing:-.02em;}
+  .head h1 .accent{color:var(--once-orange);}
+  .sub{font-size:30px;color:var(--mocha);font-weight:600;margin-top:20px;max-width:780px;line-height:1.3;}
+
+  .agents{margin-top:48px;display:flex;flex-direction:column;gap:18px;}
+  .agent{display:flex;align-items:center;gap:24px;background:var(--warm-white);border:1px solid rgba(160,128,96,.2);border-radius:20px;padding:22px 28px;box-shadow:0 6px 18px rgba(96,3,42,.05);}
+  .ico{width:62px;height:62px;border-radius:16px;flex:none;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--tangerine),var(--ember));}
+  .ico svg{width:32px;height:32px;stroke:#fff;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+  .agent .nm{font-size:30px;font-weight:800;color:var(--noir);}
+  .agent .ds{font-size:23px;color:var(--mocha);font-weight:600;margin-top:2px;}
+  .agent .loop{margin-left:auto;font-size:18px;font-weight:800;color:var(--once-orange);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap;}
+
+  .closer{display:flex;align-items:center;gap:24px;margin-top:auto;padding-top:42px;}
+  .closer-rule{width:88px;height:8px;border-radius:8px;background:var(--once-orange);flex:none;}
+  .closer-text{font-size:40px;font-weight:800;letter-spacing:-.01em;color:var(--wine);}
+</style>
+</head>
+<body>
+<div class="post">
+  <div class="blob a"></div><div class="blob b"></div>
+  <div class="content">
+    <div class="topbar">
+      <svg class="logo-mark" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="var(--once-orange)"/><circle cx="100" cy="88" r="64" fill="var(--sand)"/></svg>
+      <div class="eyebrow">AI best practices, applied</div>
+    </div>
+
+    <div class="head">
+      <h1>We built our own agents.<br><span class="accent">The humans stay in charge.</span></h1>
+      <div class="sub">Five purpose-built agents do the heavy lifting. Inbal & Eva make every call.</div>
+    </div>
+
+    <div class="agents">
+      <div class="agent">
+        <span class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></span>
+        <div><div class="nm">Sourcing</div><div class="ds">Maps the full market, surfaces passive talent</div></div>
+        <span class="loop">Founder in the loop</span>
+      </div>
+      <div class="agent">
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <div><div class="nm">Screening</div><div class="ds">First-pass role & CV matching</div></div>
+        <span class="loop">Founder in the loop</span>
+      </div>
+      <div class="agent">
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-9"/><path d="M21 7v5h-5"/></svg></span>
+        <div><div class="nm">Market intelligence</div><div class="ds">Live salary benchmarks & competitor mapping</div></div>
+        <span class="loop">Founder in the loop</span>
+      </div>
+      <div class="agent">
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H7l-3 3z"/></svg></span>
+        <div><div class="nm">Outreach</div><div class="ds">Drafts each first message — a founder sends it</div></div>
+        <span class="loop">Founder in the loop</span>
+      </div>
+      <div class="agent">
+        <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>
+        <div><div class="nm">Coordination</div><div class="ds">Scheduling, reminders, pipeline hygiene</div></div>
+        <span class="loop">Founder in the loop</span>
+      </div>
+    </div>
+
+    <div class="closer">
+      <span class="closer-rule"></span>
+      <span class="closer-text">Senior judgment, amplified.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
