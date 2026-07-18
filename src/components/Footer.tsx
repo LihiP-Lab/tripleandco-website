@@ -114,6 +114,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/llm-seo"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  LLM SEO Guide
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/ai-visibility-audit"
                   className="text-sm hover:text-brand transition-colors"
                 >
