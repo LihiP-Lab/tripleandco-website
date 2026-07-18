@@ -9,9 +9,26 @@ interface BreadcrumbsProps {
   items: BreadcrumbItem[];
 }
 
+const SITE_URL = "https://www.tripleandco.com";
+
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.label,
+      ...(item.href ? { item: `${SITE_URL}${item.href}` } : {}),
+    })),
+  };
+
   return (
     <nav aria-label="Breadcrumb" className="mb-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ol className="flex items-center gap-2 text-sm text-purple-6">
         {items.map((item, i) => (
           <li key={item.label} className="flex items-center gap-2">
