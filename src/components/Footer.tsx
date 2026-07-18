@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="relative bg-purple-95 text-purple-3 pt-20 pb-20 lg:pb-8" role="contentinfo" aria-label="Site footer">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent" />
       <div className="mx-auto max-w-[1200px] px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
             <Link href="/" className="inline-flex items-center mb-4">
@@ -66,10 +66,34 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/cro-as-a-service"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  CRO as a Service
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/fractional-cmo-b2b"
                   className="text-sm hover:text-brand transition-colors"
                 >
                   Fractional CMO
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/geo"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  GEO for B2B
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ai-visibility-audit"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  Free AI Visibility Audit
                 </Link>
               </li>
               <li>
@@ -94,6 +118,71 @@ export function Footer() {
                   className="text-sm hover:text-brand transition-colors"
                 >
                   Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Industries & Markets */}
+          <div>
+            <h4 className="text-white text-xs uppercase tracking-[.14em] font-bold mb-4">
+              Industries &amp; Markets
+            </h4>
+            <ul className="space-y-2.5">
+              <li>
+                <Link
+                  href="/b2b-saas-marketing"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  B2B SaaS Marketing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/fintech-marketing"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  Fintech Marketing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cybersecurity-marketing"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  Cybersecurity Marketing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ai-deeptech-marketing"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  AI &amp; DeepTech Marketing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/b2b-marketing-israel"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  B2B Marketing in Israel
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/b2b-marketing-tel-aviv"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  B2B Marketing in Tel Aviv
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/b2b-marketing-usa"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  B2B Marketing for the US
                 </Link>
               </li>
             </ul>

@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/cmo-as-a-service", label: "CMO as a Service" },
+  { href: "/geo", label: "GEO" },
   { href: "/agents", label: "Marketing Agents" },
   { href: "/ai-marketing-agents", label: "AI Agents Guide" },
 
@@ -101,7 +102,7 @@ export function Navbar() {
       <div
         className="lg:hidden border-t border-purple-15 overflow-hidden"
         style={{
-          maxHeight: mobileOpen ? "300px" : "0",
+          maxHeight: mobileOpen ? "360px" : "0",
           opacity: mobileOpen ? 1 : 0,
           transition: "max-height 0.3s ease, opacity 0.3s ease",
         }}

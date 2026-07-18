@@ -100,8 +100,8 @@ export function AgentCarousel() {
             Execution
           </h2>
           <p className="text-purple-7 text-center max-w-2xl mx-auto mb-12">
-            Eight AI specialists, each trained for a specific marketing function,
-            supervised by Lihi, zero unsupervised output.
+            Eight AI specialists, each trained for a specific marketing
+            function, supervised by Lihi, zero unsupervised output.
           </p>
         </ScrollReveal>
 
