@@ -104,6 +104,35 @@ const services: Service[] = [
     ),
   },
   {
+    id: "head-of-growth",
+    name: "Head of Growth as a Service",
+    tag: "One leader owns acquisition, activation, and retention.",
+    description:
+      "A fractional Head of Growth who owns your growth system, not a single channel. We set the experiment roadmap, instrument the funnel, and ship tests every week so growth compounds through learning velocity instead of stalling between one-off projects.",
+    who: "B2B SaaS companies with product-market fit whose growth has flattened and where the founder is still running acquisition personally.",
+    problem:
+      "Growth is a pile of disconnected tactics measured in clicks nobody can tie to revenue. Retention leaks while everyone crowds the top of the funnel.",
+    outcome:
+      "A ranked experiment roadmap, an instrumented funnel, and a working weekly test cadence with validated wins, not a growth deck waiting on headcount.",
+    deliverables: [
+      "Growth strategy & experiment roadmap",
+      "Acquisition, activation & retention loops",
+      "Funnel instrumentation & dashboards",
+      "Weekly experiment cadence",
+    ],
+    agents: [agentRoster.rex, agentRoster.atlas],
+    agentNote:
+      "Rex runs the campaigns and experiments. Atlas instruments the funnel and builds the dashboards every test depends on. Lihi owns the growth strategy and reviews each bet before it ships.",
+    link: "/head-of-growth",
+    linkLabel: "Learn more",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
+        <path d="M3 17l6-6 4 4 7-7" />
+        <path d="M14 8h6v6" />
+      </svg>
+    ),
+  },
+  {
     id: "brand",
     name: "Brand Strategy & Storytelling",
     tag: "Voice, positioning, and visual language that scales.",
