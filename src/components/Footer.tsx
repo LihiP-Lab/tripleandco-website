@@ -82,6 +82,22 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/fractional-cmo-vs-agency-vs-hire"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  Fractional CMO vs Agency vs Hire
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ai-marketing-team-vs-agency"
+                  className="text-sm hover:text-brand transition-colors"
+                >
+                  AI Marketing Team vs Agency
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/geo"
                   className="text-sm hover:text-brand transition-colors"
                 >

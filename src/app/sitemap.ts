@@ -11,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cmo-as-a-service",
     "/cro-as-a-service",
     "/fractional-cmo-b2b",
+    "/fractional-cmo-vs-agency-vs-hire",
+    "/ai-marketing-team-vs-agency",
     "/geo",
     "/ai-visibility-audit",
     "/b2b-saas-marketing",
@@ -46,6 +48,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         : route === "/cmo-as-a-service" ||
             route === "/cro-as-a-service" ||
             route === "/fractional-cmo-b2b" ||
+            route === "/fractional-cmo-vs-agency-vs-hire" ||
+            route === "/ai-marketing-team-vs-agency" ||
             route === "/geo" ||
             route === "/ai-visibility-audit" ||
             route === "/b2b-saas-marketing" ||
