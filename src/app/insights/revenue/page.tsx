@@ -23,7 +23,7 @@ const pillars = [
           "Hiring",
           "Go-to-market (GTM) strategy",
           "Lead gen foundations for pipeline generation",
-          "Buyer persona analysis \u2014 finding your ICP",
+          "Buyer persona analysis: finding your ICP",
           "Funnel analysis",
           "A/B Testing",
           "Content strategy and creation",
@@ -45,11 +45,11 @@ const pillars = [
         ],
       },
       {
-        heading: "ABM \u2014 Triple\u2019s LEC Method",
+        heading: "ABM: Triple\u2019s LEC Method",
         items: [
-          "Locate \u2014 zero in on the accounts you need to grow",
-          "Engage \u2014 nail their needs with hyper-personalized content",
-          "Convert \u2014 invite them to be a part of your larger vision",
+          "Locate: zero in on the accounts you need to grow",
+          "Engage: nail their needs with hyper-personalized content",
+          "Convert: invite them to be a part of your larger vision",
         ],
       },
     ],
@@ -62,7 +62,7 @@ const pillars = [
   {
     title: "Sales",
     intro:
-      "Building a powerhouse sales team and scaling it over and over is undoubtedly one of the most challenging tasks founders face. Triple provides a specific sales strategy that suits you, your product, and most importantly \u2014 your customer.",
+      "Building a powerhouse sales team and scaling it over and over is undoubtedly one of the most challenging tasks founders face. Triple provides a specific sales strategy that suits you, your product, and most importantly, your customer.",
     cta: "We analyze the customer journey and design a funnel that brings the right clients to your door.",
     groups: [
       {
@@ -90,8 +90,8 @@ const pillars = [
   {
     title: "Customer Success",
     intro:
-      "Customer Success is THE most crucial aspect of a sustainable and scaling SaaS business. The reason is simple \u2014 Customer Success is handling the most valuable asset we have: our customers.",
-    cta: "Once we value the importance of the success of our customers and become totally obsessed over it \u2014 we know we\u2019re poised for growth.",
+      "Customer Success is THE most crucial aspect of a sustainable and scaling SaaS business. The reason is simple: Customer Success is handling the most valuable asset we have: our customers.",
+    cta: "Once we value the importance of the success of our customers and become totally obsessed over it, we know we\u2019re poised for growth.",
     groups: [
       {
         heading: "SaaS Metrics & Tools",
@@ -106,7 +106,7 @@ const pillars = [
         items: [
           "Current performance and metrics review",
           "Onboarding process to full renewal cycle",
-          "Focus on the most important CS KPI \u2014 Expansions",
+          "Focus on the most important CS KPI: Expansions",
         ],
       },
     ],

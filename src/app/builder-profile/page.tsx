@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { agents } from "@/lib/agents-data";
 
 export const metadata: Metadata = {
-  title: "Builder Profile — Lihi Pinto",
+  title: "Builder Profile, Lihi Pinto",
   description:
     "Lihi Pinto builds AI-powered revenue systems for B2B companies. Meet the builder behind Triple & Co.'s 8 supervised AI marketing agents.",
   alternates: { canonical: "/builder-profile" },
@@ -30,22 +30,22 @@ const buildCards = [
   {
     icon: "⚡",
     title: "Automated Revenue Workflows",
-    body: "Replace manual execution with AI agents that qualify, nurture, and convert — around the clock.",
+    body: "Replace manual execution with AI agents that qualify, nurture, and convert, around the clock.",
   },
   {
     icon: "🎯",
     title: "Full-Funnel AI Strategy",
-    body: "From awareness to closed revenue — AI-augmented at every stage, with human strategy at the center.",
+    body: "From awareness to closed revenue, AI-augmented at every stage, with human strategy at the center.",
   },
   {
     icon: "📈",
     title: "Scalable Systems, Not Projects",
-    body: "Built to learn and compound over time — not a one-time engagement that fades after handoff.",
+    body: "Built to learn and compound over time, not a one-time engagement that fades after handoff.",
   },
 ];
 
 const proofBullets = [
-  "Deep SaaS operator experience — not theory",
+  "Deep SaaS operator experience, not theory",
   "Proven revenue execution across multiple ventures",
   "Hands-on implementation of live AI systems",
   "Full-funnel ownership from awareness to revenue",
@@ -55,13 +55,13 @@ const phases = [
   {
     num: "01",
     title: "AI-Powered Content & Visibility",
-    body: "Deploy specialized agents to build a content engine that drives organic visibility and positions your brand as an authority — without adding headcount.",
+    body: "Deploy specialized agents to build a content engine that drives organic visibility and positions your brand as an authority, without adding headcount.",
     pills: ["SEO Agents", "Content Automation", "Brand Voice AI"],
   },
   {
     num: "02",
     title: "Demand Generation & Lead Intelligence",
-    body: "Layer AI-driven campaigns and intent data on top of your content foundation to generate qualified pipeline — not just traffic.",
+    body: "Layer AI-driven campaigns and intent data on top of your content foundation to generate qualified pipeline, not just traffic.",
     pills: ["Lead Scoring", "Campaign Agents", "Intent Data"],
   },
   {
@@ -96,7 +96,7 @@ export default function BuilderProfilePage() {
         </div>
       </section>
 
-      {/* 03 · Hero — split (text | portrait) */}
+      {/* 03 · Hero, split (text | portrait) */}
       <section className="pb-16 lg:pb-24 bg-purple-05">
         <div className="mx-auto max-w-[1200px] px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
@@ -116,7 +116,7 @@ export default function BuilderProfilePage() {
                 <p className="text-lg text-purple-7 leading-relaxed mb-8">
                   I build AI-powered revenue systems for B2B companies that want
                   to grow faster without growing their headcount. Strategy,
-                  execution, and eight supervised AI agents — unified under one
+                  execution, and eight supervised AI agents, unified under one
                   operating system.
                 </p>
               </ScrollReveal>
@@ -158,13 +158,13 @@ export default function BuilderProfilePage() {
               </ScrollReveal>
             </div>
 
-            {/* Right column — portrait */}
+            {/* Right column, portrait */}
             <ScrollReveal className="lg:col-span-5" direction="right">
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-[var(--shadow-base)] max-w-[400px] mx-auto lg:max-w-none">
                 <div className="absolute top-0 left-0 right-0 h-1.5 gradient-bar z-10" />
                 <Image
                   src="/images/lihi.png"
-                  alt="Lihi Pinto — Builder of Triple & Co.'s AI marketing agents"
+                  alt="Lihi Pinto, Builder of Triple & Co.'s AI marketing agents"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 400px, 42vw"
@@ -176,13 +176,13 @@ export default function BuilderProfilePage() {
         </div>
       </section>
 
-      {/* 04 · What I Build — 4-card grid */}
+      {/* 04 · What I Build, 4-card grid */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-[1200px] px-8">
           <ScrollReveal>
             <p className="eyebrow text-center mb-3">What I Build</p>
             <h2 className="text-3xl lg:text-[44px] font-black tracking-tight leading-[1.1] text-center text-purple-9 mb-4">
-              AI systems that generate revenue — not experiments.
+              AI systems that generate revenue, not experiments.
             </h2>
             <p className="text-center text-purple-6 max-w-2xl mx-auto mb-14">
               Most companies are running AI pilots. I build the infrastructure
@@ -211,7 +211,7 @@ export default function BuilderProfilePage() {
         </div>
       </section>
 
-      {/* 05 · Why Lihi — proof bullets */}
+      {/* 05 · Why Lihi, proof bullets */}
       <section className="py-20 lg:py-28 bg-purple-05">
         <div className="mx-auto max-w-[880px] px-8 text-center">
           <ScrollReveal>
@@ -251,7 +251,7 @@ export default function BuilderProfilePage() {
         </div>
       </section>
 
-      {/* 06 · The Framework — 4 phases */}
+      {/* 06 · The Framework, 4 phases */}
       <section
         id="bpl-framework"
         className="py-20 lg:py-28 bg-white scroll-mt-20"
@@ -329,7 +329,7 @@ export default function BuilderProfilePage() {
         </div>
       </section>
 
-      {/* The 8 Agents — grid with links */}
+      {/* The 8 Agents, grid with links */}
       <section className="py-20 lg:py-28 bg-purple-05">
         <div className="mx-auto max-w-[1200px] px-8">
           <ScrollReveal>
@@ -338,7 +338,7 @@ export default function BuilderProfilePage() {
               8 AI agents. Built &amp; supervised by Lihi.
             </h2>
             <p className="text-center text-purple-6 max-w-2xl mx-auto mb-14">
-              Each agent is a specialist — trained for one marketing function,
+              Each agent is a specialist, trained for one marketing function,
               supervised end-to-end, and connected to your revenue goals.
             </p>
           </ScrollReveal>
@@ -370,7 +370,7 @@ export default function BuilderProfilePage() {
         </div>
       </section>
 
-      {/* 08 · Signature Outcome — before → after */}
+      {/* 08 · Signature Outcome, before → after */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-[880px] px-8 text-center">
           <ScrollReveal>
@@ -404,7 +404,7 @@ export default function BuilderProfilePage() {
         </div>
       </section>
 
-      {/* 09 · FAQ — 7 expandable rows */}
+      {/* 09 · FAQ, 7 expandable rows */}
       <section className="py-20 lg:py-28 bg-purple-05">
         <div className="mx-auto max-w-[880px] px-8">
           <ScrollReveal>
@@ -417,7 +417,7 @@ export default function BuilderProfilePage() {
         </div>
       </section>
 
-      {/* 10 · Final CTA — Work With Lihi */}
+      {/* 10 · Final CTA, Work With Lihi */}
       <section className="relative bg-dark text-white py-24 lg:py-36 text-center overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none"

@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "Is this consulting or done-for-you?",
-    a: "Both. Lihi provides senior CMO/CRO leadership and strategy. The eight AI agents handle execution \u2014 content, campaigns, social, analytics, and more. You get strategic guidance and a full execution team in one engagement.",
+    a: "Both. Lihi provides senior CMO/CRO leadership and strategy. The eight AI agents handle execution: content, campaigns, social, analytics, and more. You get strategic guidance and a full execution team in one engagement.",
   },
   {
     q: "Do we need a technical team to work with you?",

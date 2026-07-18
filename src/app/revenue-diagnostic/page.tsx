@@ -25,7 +25,7 @@ const diagnosticSteps = [
   {
     number: "03",
     title: "Action plan",
-    description: "You leave with three concrete moves to add pipeline this quarter — whether we work together or not.",
+    description: "You leave with three concrete moves to add pipeline this quarter, whether we work together or not.",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function RevenueDiagnosticPage() {
                 <div className="w-[300px] h-[380px] rounded-2xl overflow-hidden border-2 border-brand/30 shadow-2xl">
                   <Image
                     src="/images/lihi.png"
-                    alt="Lihi Pinto — Fractional CMO"
+                    alt="Lihi Pinto, Fractional CMO"
                     width={300}
                     height={380}
                     className="w-full h-full object-cover object-top"
@@ -142,7 +142,7 @@ export default function RevenueDiagnosticPage() {
               </h2>
               <p className="text-lg text-purple-4 max-w-2xl mx-auto leading-relaxed">
                 When you work with Triple&Co, you don&apos;t just get Lihi. You get an AI-powered marketing team
-                covering every discipline — executing at a pace no human team can match.
+                covering every discipline, executing at a pace no human team can match.
               </p>
             </div>
           </ScrollReveal>
@@ -197,7 +197,7 @@ export default function RevenueDiagnosticPage() {
                   </svg>
                 ),
                 title: "Three highest-leverage moves",
-                description: "Specific, actionable steps to add pipeline this quarter — not generic advice.",
+                description: "Specific, actionable steps to add pipeline this quarter, not generic advice.",
               },
               {
                 icon: (

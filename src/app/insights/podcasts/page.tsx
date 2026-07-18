@@ -14,16 +14,16 @@ const episodes = [
   {
     number: 1,
     title:
-      "How AI is Reshaping B2B SaaS Marketing and How to Use It Like a Pro \u2014 Starting TODAY!",
+      "How AI is Reshaping B2B SaaS Marketing and How to Use It Like a Pro: Starting TODAY!",
     description:
-      "The AI revolution isn\u2019t coming \u2014 it\u2019s here. Learn which AI tools are actually moving the needle for B2B SaaS marketing teams and how to adopt them without the hype.",
+      "The AI revolution isn\u2019t coming. It\u2019s here. Learn which AI tools are actually moving the needle for B2B SaaS marketing teams and how to adopt them without the hype.",
   },
   {
     number: 2,
     title:
       "How to Make AI Models Like ChatGPT Work Like a Senior B2B SaaS Marketer",
     description:
-      "Most marketers use ChatGPT like a search engine. In this episode, Lihi shows how to prompt AI to think like a senior marketer \u2014 with strategy, context, and precision.",
+      "Most marketers use ChatGPT like a search engine. In this episode, Lihi shows how to prompt AI to think like a senior marketer, with strategy, context, and precision.",
   },
   {
     number: 3,

@@ -12,7 +12,7 @@ const agents = [
     role: "Brand Voice",
     emoji: "✍️",
     color: "#FE3465",
-    desc: "Writes copy that sounds exactly like Lihi — every brief, every post.",
+    desc: "Writes copy that sounds exactly like Lihi, every brief, every post.",
   },
   {
     id: "rex",
@@ -36,7 +36,7 @@ const agents = [
     role: "Research Analyst",
     emoji: "🔍",
     color: "#896D9C",
-    desc: "Competitive intel, market data, insights — in minutes.",
+    desc: "Competitive intel, market data, insights, in minutes.",
   },
   {
     id: "atlas",

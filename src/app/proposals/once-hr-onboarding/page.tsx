@@ -12,7 +12,7 @@ const SECTIONS: Section[] = [
   {
     num: 1,
     title: "Who you are & what you do",
-    sub: "Foundations — this shapes every headline, caption, and CTA we write",
+    sub: "Foundations, this shapes every headline, caption, and CTA we write",
     questions: [
       {
         id: "q1",
@@ -181,7 +181,7 @@ export default function OnceHROnboarding() {
   async function handleSubmit() {
     // Build a flat payload for Formspree
     const payload: Record<string, string> = {
-      _subject: "Once-HR Onboarding Questionnaire — answers",
+      _subject: "Once-HR Onboarding Questionnaire, answers",
     };
     SECTIONS.forEach((sec) => {
       sec.questions.forEach((q, i) => {
@@ -329,7 +329,7 @@ export default function OnceHROnboarding() {
                       </span>
                     ))}
                     <div style={styles.highlightNote}>
-                      ★ Recommended for website — this is the line to feature
+                      ★ Recommended for website, this is the line to feature
                     </div>
                   </div>
                 ) : (

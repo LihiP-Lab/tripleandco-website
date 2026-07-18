@@ -6,12 +6,12 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Native AI CMO: Marketing for B2B in the AI Era | Triple & Co.",
   description:
-    "Every B2B team is using AI tools. Pipeline quality has not improved proportionally. The problem is not the tools — it is the architecture. Here is what a Native AI CMO function actually looks like.",
+    "Every B2B team is using AI tools. Pipeline quality has not improved proportionally. The problem is not the tools, it is the architecture. Here is what a Native AI CMO function actually looks like.",
   alternates: { canonical: "https://www.tripleandco.com/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era" },
   openGraph: {
     title: "Native AI CMO: Marketing for B2B in the AI Era",
     description:
-      "Every B2B team is using AI tools. Pipeline quality has not improved. The problem is the architecture — here is what native AI marketing actually looks like.",
+      "Every B2B team is using AI tools. Pipeline quality has not improved. The problem is the architecture, here is what native AI marketing actually looks like.",
     url: "https://www.tripleandco.com/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era",
     siteName: "Triple & Co.",
     type: "article",
@@ -106,7 +106,7 @@ export default function Article3Page() {
             </h2>
             <p className="text-purple-7 leading-relaxed mb-6">
               Most companies discovered AI marketing tools in 2023 and 2024. The early adopters got a
-              genuine productivity boost — content that used to take three days now took three hours.
+              genuine productivity boost, content that used to take three days now took three hours.
               Then everyone else caught up. By 2025, every B2B company in your category was
               producing AI-assisted content. The volume in every niche tripled. Differentiation collapsed.
             </p>
@@ -139,7 +139,7 @@ export default function Article3Page() {
                 "AI is not a tool your team uses. It is the execution layer your strategy runs on.",
                 "Every AI agent has a defined function, a defined scope, and a defined relationship to the senior operator who sets strategic direction.",
                 "Human oversight is not an afterthought or a quality check. It is a structural component of every output, at every stage.",
-                "The system produces consistent brand voice, strategic precision, and revenue-linked outputs — not because an editor caught the errors, but because the architecture prevents generic output from entering the system at all.",
+                "The system produces consistent brand voice, strategic precision, and revenue-linked outputs, not because an editor caught the errors, but because the architecture prevents generic output from entering the system at all.",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-purple-7 leading-relaxed">
                   <span className="text-brand mt-1 shrink-0">&#8594;</span>
@@ -195,7 +195,7 @@ export default function Article3Page() {
               decision. A native AI CMO architecture fixes this by design.
             </p>
 
-            {/* Section 3 — Agents */}
+            {/* Section 3, Agents */}
             <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
               The Eight-Agent Architecture: Specialization at Scale
             </h2>
@@ -219,25 +219,25 @@ export default function Article3Page() {
                 name: "Camille",
                 role: "Brand Voice and Content Strategy",
                 fn: "Long-form editorial, brand voice governance, content strategy, and narrative architecture.",
-                body: "Camille ensures every piece of content — from a 2,500-word pillar article to a 90-word LinkedIn caption — sounds like it was written by the same authoritative voice. In B2B, brand voice is not a style preference. It is a trust signal. Camille operates from a brand voice document Lihi builds at the start of every engagement — a precise definition of tone, vocabulary, and the specific point of view the brand holds in its category.",
+                body: "Camille ensures every piece of content, from a 2,500-word pillar article to a 90-word LinkedIn caption, sounds like it was written by the same authoritative voice. In B2B, brand voice is not a style preference. It is a trust signal. Camille operates from a brand voice document Lihi builds at the start of every engagement, a precise definition of tone, vocabulary, and the specific point of view the brand holds in its category.",
               },
               {
                 name: "Vega",
                 role: "SEO and Organic Pipeline Architecture",
                 fn: "Keyword strategy, content gap analysis, on-page optimization, internal linking structure, and organic pipeline reporting.",
-                body: "Vega does not optimize content for rankings. Vega optimizes content for commercial intent — the specific searches that indicate a buyer is actively evaluating solutions, not just educating themselves. Traffic from informational keywords fills a blog's analytics dashboard. Traffic from commercial-intent keywords fills a pipeline. Vega is calibrated to the latter.",
+                body: "Vega does not optimize content for rankings. Vega optimizes content for commercial intent, the specific searches that indicate a buyer is actively evaluating solutions, not just educating themselves. Traffic from informational keywords fills a blog's analytics dashboard. Traffic from commercial-intent keywords fills a pipeline. Vega is calibrated to the latter.",
               },
               {
                 name: "Rex",
                 role: "Paid Pipeline Generation",
                 fn: "Paid media strategy, campaign architecture, audience segmentation, bidding logic, and performance analysis across LinkedIn, Google, and Meta.",
-                body: "Rex does not run paid media campaigns. Rex architects paid media systems — the full structure of audience targeting, creative variation, bidding strategy, and conversion tracking. LinkedIn CPCs are high. The targeting precision required to reach a Director of Revenue Operations at a 200-person software company without wasting budget demands a level of discipline that most in-house teams and many agencies do not apply consistently.",
+                body: "Rex does not run paid media campaigns. Rex architects paid media systems, the full structure of audience targeting, creative variation, bidding strategy, and conversion tracking. LinkedIn CPCs are high. The targeting precision required to reach a Director of Revenue Operations at a 200-person software company without wasting budget demands a level of discipline that most in-house teams and many agencies do not apply consistently.",
               },
               {
                 name: "Zara",
                 role: "Social Content and Community Signals",
                 fn: "LinkedIn content strategy, short-form social copy, thought leadership sequencing, and community engagement signals.",
-                body: "In B2B, LinkedIn is not a vanity channel. It is where your buyers form their first impression of your brand's point of view — often weeks or months before they visit your website. Zara produces the social content that builds this ambient awareness: short-form posts that express a specific, defensible position on a market problem, not generic productivity tips or recycled industry news.",
+                body: "In B2B, LinkedIn is not a vanity channel. It is where your buyers form their first impression of your brand's point of view, often weeks or months before they visit your website. Zara produces the social content that builds this ambient awareness: short-form posts that express a specific, defensible position on a market problem, not generic productivity tips or recycled industry news.",
               },
               {
                 name: "Nova",
@@ -280,7 +280,7 @@ export default function Article3Page() {
             </h2>
             <p className="text-purple-7 leading-relaxed mb-4">
               The WIL model is frequently misunderstood. The assumption is that Lihi reviews AI outputs
-              before they publish — a human quality check at the end of an otherwise automated process.
+              before they publish, a human quality check at the end of an otherwise automated process.
               That is not how it works.
             </p>
 
@@ -291,9 +291,9 @@ export default function Article3Page() {
             </p>
             <ul className="space-y-4 mb-6 pl-0">
               {[
-                ["Level 1 — Strategic Input:", "Every agent operates from a strategic brief that Lihi builds and maintains. This brief defines the ICP, the positioning, the messaging hierarchy, the competitive context, and the revenue objective. It is not a style guide. It is the operating system of the entire marketing function."],
-                ["Level 2 — Calibration Signals:", "Lihi reviews agent outputs as a strategist. The question is never \"is this grammatically correct?\" The question is always \"does this advance the revenue objective and reflect the buyer's specific reality?\" When outputs miss that standard, the brief is updated, not just the individual piece."],
-                ["Level 3 — Strategic Recalibration:", "Monthly, Lihi conducts a full review of what the system has produced against what the market has signaled in response. Positioning shifts. New competitive threats emerge. ICP understanding deepens. These inputs update the strategic brief, which updates every agent's operating context."],
+                ["Level 1, Strategic Input:", "Every agent operates from a strategic brief that Lihi builds and maintains. This brief defines the ICP, the positioning, the messaging hierarchy, the competitive context, and the revenue objective. It is not a style guide. It is the operating system of the entire marketing function."],
+                ["Level 2, Calibration Signals:", "Lihi reviews agent outputs as a strategist. The question is never \"is this grammatically correct?\" The question is always \"does this advance the revenue objective and reflect the buyer's specific reality?\" When outputs miss that standard, the brief is updated, not just the individual piece."],
+                ["Level 3, Strategic Recalibration:", "Monthly, Lihi conducts a full review of what the system has produced against what the market has signaled in response. Positioning shifts. New competitive threats emerge. ICP understanding deepens. These inputs update the strategic brief, which updates every agent's operating context."],
               ].map(([bold, rest]) => (
                 <li key={bold} className="flex gap-3 text-purple-7 leading-relaxed">
                   <span className="text-brand mt-1 shrink-0">&#8594;</span>
@@ -338,7 +338,7 @@ export default function Article3Page() {
             <h3 className="text-xl font-bold text-purple-9 mb-3">Weeks 1 to 2: Revenue Diagnostic and Strategic Brief</h3>
             <p className="text-purple-7 leading-relaxed mb-3">
               Lihi conducts a structured audit of the current marketing function. The output is a
-              Strategic Brief — the operating document all eight agents run from. It covers:
+              Strategic Brief, the operating document all eight agents run from. It covers:
             </p>
             <ul className="space-y-2 mb-6 pl-0">
               {[
@@ -389,9 +389,9 @@ export default function Article3Page() {
               objective. Monthly recalibration sessions update the Strategic Brief based on market signals.
             </p>
             <p className="text-purple-7 leading-relaxed mb-8">
-              For companies competing in global B2B markets — US-based companies targeting EU enterprise
+              For companies competing in global B2B markets, US-based companies targeting EU enterprise
               buyers, Israeli-founded startups running North American go-to-market from Tel Aviv, European
-              software companies expanding into the Middle East — this architecture removes the geographic
+              software companies expanding into the Middle East, this architecture removes the geographic
               constraint that makes traditional marketing operations expensive and slow. The agents run
               regardless of timezone. The commercial outcomes do not depend on whether your marketing
               team and your target market share working hours.
@@ -403,7 +403,7 @@ export default function Article3Page() {
             </h2>
             <p className="text-purple-7 leading-relaxed mb-4">
               Using AI tools is table stakes. Every B2B company is doing it. The competitive
-              advantage has moved upstream — to the architecture that determines what those tools produce
+              advantage has moved upstream, to the architecture that determines what those tools produce
               and whether that output moves the revenue needle.
             </p>
             <p className="text-purple-7 leading-relaxed mb-4">

@@ -6,12 +6,12 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "What Is CMO as a Service? The Complete Guide | Triple & Co.",
   description:
-    "CMO as a Service is not a fractional hire. It is a full marketing function — strategy, AI execution, and senior oversight — without the full-time overhead. Here is exactly how it works.",
+    "CMO as a Service is not a fractional hire. It is a full marketing function, strategy, AI execution, and senior oversight, without the full-time overhead. Here is exactly how it works.",
   alternates: { canonical: "https://www.tripleandco.com/insights/what-is-cmo-as-a-service" },
   openGraph: {
     title: "What Is CMO as a Service? The Complete Guide for B2B Founders",
     description:
-      "CMO as a Service is not a fractional hire. It is a full marketing function — strategy plus AI execution — without the full-time overhead.",
+      "CMO as a Service is not a fractional hire. It is a full marketing function, strategy plus AI execution, without the full-time overhead.",
     url: "https://www.tripleandco.com/insights/what-is-cmo-as-a-service",
     siteName: "Triple & Co.",
     type: "article",
@@ -75,13 +75,13 @@ export default function MegaPillarCMOPage() {
               The Marketing Leadership Question Every Founder Faces
             </h2>
             <p className="text-purple-7 leading-relaxed mb-4">
-              You have product-market fit — or you are close enough to need marketing to work harder than it
+              You have product-market fit, or you are close enough to need marketing to work harder than it
               currently is. You know you need senior marketing leadership. But a full-time CMO at the level
               your company needs costs between $250,000 and $400,000 a year in salary alone, before equity,
               benefits, and the 6-to-12-month ramp before they produce anything measurable.
             </p>
             <p className="text-purple-7 leading-relaxed mb-4">
-              So you look at alternatives. A marketing agency, maybe. Or a Fractional CMO — a senior marketer
+              So you look at alternatives. A marketing agency, maybe. Or a Fractional CMO, a senior marketer
               who works part-time across several clients. Both options have become standard advice for
               growth-stage founders who need expertise without full-time overhead.
             </p>
@@ -101,8 +101,8 @@ export default function MegaPillarCMOPage() {
             </h2>
             <p className="text-purple-7 leading-relaxed mb-4">
               CMO as a Service is a complete outsourced marketing function. It combines senior strategic
-              leadership with a full execution layer — the people, processes, and in modern implementations,
-              the AI agents — that actually deliver the work the strategy calls for.
+              leadership with a full execution layer, the people, processes, and in modern implementations,
+              the AI agents, that actually deliver the work the strategy calls for.
             </p>
             <p className="text-purple-7 leading-relaxed mb-4">
               The &quot;as a Service&quot; framing matters. It is not a consulting arrangement where someone
@@ -116,7 +116,7 @@ export default function MegaPillarCMOPage() {
             <ul className="space-y-3 mb-8 pl-0">
               {[
                 ["Strategic direction:", "ICP definition, positioning, messaging hierarchy, channel prioritization, and the competitive context that shapes every marketing decision."],
-                ["Execution infrastructure:", "The campaigns, content, sequences, and assets that actually reach buyers — produced consistently, not episodically."],
+                ["Execution infrastructure:", "The campaigns, content, sequences, and assets that actually reach buyers, produced consistently, not episodically."],
                 ["Performance accountability:", "Reporting tied to pipeline and revenue, not vanity metrics. Someone who owns the number, not just the activity."],
                 ["Organizational leverage:", "A model that scales with your growth stage without requiring you to build and manage a full internal marketing team prematurely."],
               ].map(([label, text]) => (
@@ -136,8 +136,8 @@ export default function MegaPillarCMOPage() {
               access to senior marketing thinking without paying for a full-time executive. That part works.
             </p>
             <p className="text-purple-7 leading-relaxed mb-4">
-              What it does not solve — and what consistently frustrates the founders who hire Fractional CMOs
-              — is the execution gap. A Fractional CMO works 2-3 days per week across multiple clients. They
+              What it does not solve, and what consistently frustrates the founders who hire Fractional CMOs,
+              is the execution gap. A Fractional CMO works 2-3 days per week across multiple clients. They
               can set the strategy. They can define the ICP, build the messaging framework, and outline the
               channel mix. What they cannot do is also deliver the work the strategy requires.
             </p>
@@ -151,7 +151,7 @@ export default function MegaPillarCMOPage() {
             <h3 className="text-xl font-bold text-purple-9 mb-3">The Three Structural Gaps in the Fractional Model</h3>
             <ul className="space-y-3 mb-8 pl-0">
               {[
-                ["The execution gap:", "Strategy is delivered. A team to run it is not. The Fractional CMO's value depends entirely on the quality and capacity of whoever executes the plan — and that team is rarely the reason you hired a Fractional CMO in the first place."],
+                ["The execution gap:", "Strategy is delivered. A team to run it is not. The Fractional CMO's value depends entirely on the quality and capacity of whoever executes the plan, and that team is rarely the reason you hired a Fractional CMO in the first place."],
                 ["The continuity gap:", "A Fractional CMO splits their attention across clients. Your company gets a fraction of their bandwidth at any given moment. When a campaign needs fast iteration or a positioning problem needs deep focus, you are in a queue."],
                 ["The accountability gap:", "A Fractional CMO can advise on what to do, but they rarely own the pipeline number. When results miss, the conversation becomes about whether the advice was followed correctly rather than whether the commercial outcome was achieved."],
               ].map(([label, text]) => (
@@ -163,7 +163,7 @@ export default function MegaPillarCMOPage() {
             </ul>
             <p className="text-purple-7 leading-relaxed mb-8">
               CMO as a Service closes all three gaps. The senior operator sets the strategy and the
-              execution layer delivers against it — under the same engagement, from the same brief, accountable
+              execution layer delivers against it, under the same engagement, from the same brief, accountable
               to the same commercial objective. See what each model costs in the Israeli market in{" "}
               <Link href="/insights/outsourced-cmo-israel-cost" className="text-brand hover:text-brand-dark font-semibold underline underline-offset-2">
                 Outsourced CMO in Israel: What It Really Costs in 2026
@@ -175,7 +175,7 @@ export default function MegaPillarCMOPage() {
               CMO as a Service vs. Full-Time CMO Hire
             </h2>
             <p className="text-purple-7 leading-relaxed mb-4">
-              The full-time CMO is the right answer — eventually. For most B2B companies, that moment comes
+              The full-time CMO is the right answer, eventually. For most B2B companies, that moment comes
               when you have enough scale, enough internal marketing infrastructure, and enough organizational
               complexity to justify a $300,000+ executive whose primary job is managing people and processes
               rather than driving them directly.
@@ -198,8 +198,8 @@ export default function MegaPillarCMOPage() {
             </ul>
             <p className="text-purple-7 leading-relaxed mb-8">
               CMO as a Service works best as a growth-stage bridge: get the marketing function operating at
-              a high level, build the playbooks and the pipeline proof points, and — when the business is ready
-              — hand a well-documented, high-performing marketing function to an internal leader who can scale it.
+              a high level, build the playbooks and the pipeline proof points, and, when the business is ready,
+              hand a well-documented, high-performing marketing function to an internal leader who can scale it.
             </p>
 
             {/* Section 4 */}
@@ -208,8 +208,8 @@ export default function MegaPillarCMOPage() {
             </h2>
             <p className="text-purple-7 leading-relaxed mb-4">
               The agency model has one core problem: misaligned incentives. Agencies are optimized for
-              retainer stability, not pipeline growth. The metrics they report — impressions, engagement rate,
-              leads generated — are activity metrics. They are not the same as revenue metrics.
+              retainer stability, not pipeline growth. The metrics they report, impressions, engagement rate,
+              leads generated, are activity metrics. They are not the same as revenue metrics.
             </p>
             <p className="text-purple-7 leading-relaxed mb-4">
               Agencies also have a structural positioning problem for B2B companies specifically. Their teams
@@ -274,7 +274,7 @@ export default function MegaPillarCMOPage() {
               The foundation is a Strategic Brief: a living document that defines your ICP with firmographic
               and psychographic precision, your positioning and differentiation claim, your messaging hierarchy
               across funnel stages, your competitive landscape, and the pipeline targets the marketing system
-              is accountable to. Every output — every campaign, every piece of content, every email sequence —
+              is accountable to. Every output, every campaign, every piece of content, every email sequence,
               runs from this brief. It is not a style guide. It is the operating system of the entire marketing
               function.
             </p>
@@ -305,7 +305,7 @@ export default function MegaPillarCMOPage() {
               point in the current system. Not impressions. Not MQLs. Revenue.
             </p>
 
-            {/* Section 6 — Triple & Co. model */}
+            {/* Section 6, Triple & Co. model */}
             <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
               The Triple &amp; Co. Model: AI-Native CMO as a Service
             </h2>
@@ -321,8 +321,8 @@ export default function MegaPillarCMOPage() {
               CMO as a Service model described above, rebuilt for the AI era.
             </p>
             <p className="text-purple-7 leading-relaxed mb-4">
-              The WIL model combines senior strategic direction from Lihi Pinto — 15+ years of B2B growth
-              leadership across Israeli tech, US enterprise, and global markets — with{" "}
+              The WIL model combines senior strategic direction from Lihi Pinto, 15+ years of B2B growth
+              leadership across Israeli tech, US enterprise, and global markets, with{" "}
               <Link href="/agents" className="text-brand hover:text-brand-dark font-semibold underline underline-offset-2">
                 eight specialized AI agents
               </Link>{" "}
@@ -331,12 +331,12 @@ export default function MegaPillarCMOPage() {
             </p>
             <p className="text-purple-7 leading-relaxed mb-4">
               This is not AI replacing strategic judgment. It is AI executing what strategic judgment
-              directs — at a speed, consistency, and scale that a human team of equivalent seniority
+              directs, at a speed, consistency, and scale that a human team of equivalent seniority
               could not match.
             </p>
             <p className="text-purple-7 leading-relaxed mb-6">
               The result: a marketing function that runs continuously, produces consistent brand voice, and
-              reports on pipeline outcomes — without the overhead of building an internal team, without the
+              reports on pipeline outcomes, without the overhead of building an internal team, without the
               rotation problems of an agency, and without the execution gap of a Fractional CMO.
             </p>
 
@@ -352,7 +352,7 @@ export default function MegaPillarCMOPage() {
               </p>
             </div>
 
-            {/* Section 7 — Fit */}
+            {/* Section 7, Fit */}
             <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
               Who CMO as a Service Is Built For
             </h2>
@@ -368,7 +368,7 @@ export default function MegaPillarCMOPage() {
                 "B2B companies between $1M and $20M ARR that have validated product-market fit and need a scalable marketing system to grow pipeline.",
                 "Founders who are currently running marketing themselves and need to hand it off to a senior operator without hiring a full team.",
                 "Companies with an early-stage marketing hire (coordinator or manager level) who need senior strategic direction they cannot provide internally.",
-                "Companies expanding into new geographies — US to EU, Israel to North America, Europe to MENA — who need a marketing function that can operate across markets without adding headcount.",
+                "Companies expanding into new geographies, US to EU, Israel to North America, Europe to MENA, who need a marketing function that can operate across markets without adding headcount.",
                 "Companies that have tried agency retainers and found that execution without strategic ownership does not produce results.",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-purple-7 leading-relaxed">
@@ -392,7 +392,7 @@ export default function MegaPillarCMOPage() {
               ))}
             </ul>
 
-            {/* Section 8 — 90 days */}
+            {/* Section 8, 90 days */}
             <h2 className="text-2xl font-extrabold text-purple-9 mb-4">
               What the First 90 Days Look Like
             </h2>
@@ -406,7 +406,7 @@ export default function MegaPillarCMOPage() {
               {[
                 {
                   label: "Weeks 1–2: The Revenue Diagnostic",
-                  body: "Lihi conducts a structured audit of your current marketing function: ICP definition (or the absence of one), existing messaging, channel mix, conversion rates at each funnel stage, competitive positioning, and the specific revenue objective. The output is the Strategic Brief — the document that all agents and all outputs run from. This is not a generic onboarding questionnaire. It is a deep commercial diagnosis.",
+                  body: "Lihi conducts a structured audit of your current marketing function: ICP definition (or the absence of one), existing messaging, channel mix, conversion rates at each funnel stage, competitive positioning, and the specific revenue objective. The output is the Strategic Brief, the document that all agents and all outputs run from. This is not a generic onboarding questionnaire. It is a deep commercial diagnosis.",
                 },
                 {
                   label: "Week 3: System Deployment",
@@ -414,7 +414,7 @@ export default function MegaPillarCMOPage() {
                 },
                 {
                   label: "Weeks 4–8: First Commercial Signals",
-                  body: "Campaigns are live. Content is publishing. Outbound is running. The first performance data arrives. Lihi reviews outputs weekly against the Strategic Brief — not as an editor but as a strategist checking whether the system is producing the right commercial signals. Adjustments happen at the brief level, not the asset level, so the entire system recalibrates together.",
+                  body: "Campaigns are live. Content is publishing. Outbound is running. The first performance data arrives. Lihi reviews outputs weekly against the Strategic Brief, not as an editor but as a strategist checking whether the system is producing the right commercial signals. Adjustments happen at the brief level, not the asset level, so the entire system recalibrates together.",
                 },
                 {
                   label: "Month 3: Recalibration and Compounding",
@@ -438,8 +438,8 @@ export default function MegaPillarCMOPage() {
               to perform at a higher level than it currently does.
             </p>
             <p className="text-purple-7 leading-relaxed mb-4">
-              It gives you senior strategic ownership, a full execution layer, and commercial accountability
-              — structured as an ongoing engagement that scales with your growth stage rather than a headcount
+              It gives you senior strategic ownership, a full execution layer, and commercial accountability,
+              structured as an ongoing engagement that scales with your growth stage rather than a headcount
               decision that locks you into a fixed org structure too early.
             </p>
             <p className="text-purple-7 leading-relaxed mb-8">

@@ -26,7 +26,7 @@ const DELIVERABLES = [
     desc: "One sentence Once-HR owns: the sharpest, most defensible version of what you do, for whom, and why it matters.",
     items: [
       "3 candidate positioning lines, ranked with rationale",
-      "Tested against competitor audit — no overlaps",
+      "Tested against competitor audit, no overlaps",
       "You pick one or refine together in the kickoff session",
     ],
     format: "Shared doc for review before the kickoff call",
@@ -47,7 +47,7 @@ const DELIVERABLES = [
     num: "04",
     agent: "Atlas",
     title: "CRM schema design",
-    desc: "A documented schema reviewed live in the kickoff session — HubSpot build begins Week 2.",
+    desc: "A documented schema reviewed live in the kickoff session, HubSpot build begins Week 2.",
     items: [
       "Object types: Companies (startup clients), Contacts (founders + candidates), Deals (open roles)",
       "Property list per object with recommended field types",

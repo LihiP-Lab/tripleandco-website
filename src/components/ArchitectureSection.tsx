@@ -8,7 +8,7 @@ const agents = [
   {
     name: "Camille",
     role: "Brand Voice Generator",
-    desc: "Writes the brand voice. Not an LLM's. Camille extracts your brand voice from your existing content and applies it consistently across every channel — so your company sounds like itself, not like everyone else.",
+    desc: "Writes the brand voice. Not an LLM's. Camille extracts your brand voice from your existing content and applies it consistently across every channel, so your company sounds like itself, not like everyone else.",
     shortRole: "Writes the brand voice. Not an LLM's.",
     image: "/images/agents/camille.png",
   },
@@ -22,7 +22,7 @@ const agents = [
   {
     name: "Zara",
     role: "Social Media Commander",
-    desc: "Ships the social channels. Zara turns your social channels from background noise into a revenue-driving asset — founder voice, content cadence, and measurement all in one.",
+    desc: "Ships the social channels. Zara turns your social channels from background noise into a revenue-driving asset: founder voice, content cadence, and measurement all in one.",
     shortRole: "Ships the social channels.",
     image: "/images/agents/zara.png",
   },
@@ -43,7 +43,7 @@ const agents = [
   {
     name: "Sage",
     role: "Content Repurposing Engine",
-    desc: "Repurposes everything. One piece becomes ten. Sage takes the content you've already produced and multiplies its reach — turning webinars, podcasts, and posts into dozens of high-performing derivatives.",
+    desc: "Repurposes everything. One piece becomes ten. Sage takes the content you've already produced and multiplies its reach, turning webinars, podcasts, and posts into dozens of high-performing derivatives.",
     shortRole: "Repurposes everything. One piece becomes ten.",
     image: "/images/agents/sage.png",
   },
