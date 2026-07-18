@@ -8,17 +8,17 @@ const differentiators = [
   {
     num: "01",
     title: "Senior leadership",
-    desc: "CMO and CRO judgment from Lihi Pinto — 15+ years scaling B2B SaaS, $70M+ raised, revenue tripled repeatedly.",
+    desc: "CMO and CRO judgment from Lihi Pinto: 15+ years scaling B2B SaaS, $70M+ raised, revenue tripled repeatedly.",
   },
   {
     num: "02",
     title: "Full-service execution",
-    desc: "Content, campaigns, HubSpot, social, pipeline, events, sales enablement — one partner running the work.",
+    desc: "Content, campaigns, HubSpot, social, pipeline, events, sales enablement. One partner running the work.",
   },
   {
     num: "03",
     title: "AI-native delivery",
-    desc: "Eight supervised AI agents trained on your brand. Not a bolt-on tool — an operating system for growth.",
+    desc: "Eight supervised AI agents trained on your brand. Not a bolt-on tool, an operating system for growth.",
   },
 ];
 
@@ -65,8 +65,8 @@ export function WhyDifferentSection() {
               <span className="gradient-text">unfair advantage</span>.
             </h2>
             <p className="text-lg text-purple-6">
-              Senior leadership, full-service execution, and AI-native delivery
-              — integrated into one revenue engine.
+              Senior leadership, full-service execution, and AI-native delivery,
+              integrated into one revenue engine.
             </p>
           </div>
         </ScrollReveal>

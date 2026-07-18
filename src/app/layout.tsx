@@ -64,7 +64,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased scroll-smooth`}>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider>
-          {/* Skip to content — accessibility */}
+          {/* Skip to content, accessibility */}
           <a
             href="#main-content"
             className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:rounded-[10px] focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:text-sm focus:font-semibold focus:outline-none"
@@ -80,7 +80,7 @@ export default function RootLayout({
           <MobileCTA />
         </ThemeProvider>
         <Analytics />
-        {/* LinkedIn Insight Tag (Partner ID 3601938) — page-load tracking,
+        {/* LinkedIn Insight Tag (Partner ID 3601938), page-load tracking,
             retargeting audiences, and event-based conversions (e.g. Revenue
             Diagnostic Booked, fired from CalendlyInline). */}
         <Script id="linkedin-insight-tag" strategy="afterInteractive">

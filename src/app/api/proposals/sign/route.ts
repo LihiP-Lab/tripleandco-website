@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
         body: JSON.stringify({
           from: "Triple&Co Proposals <notifications@tripleandco.com>",
           to: NOTIFY_EMAIL,
-          subject: `Proposal accepted: ${proposal} — signed by ${name}`,
+          subject: `Proposal accepted: ${proposal}, signed by ${name}`,
           html: `
             <h2>Proposal Accepted</h2>
             <p><strong>Proposal:</strong> ${proposal}</p>

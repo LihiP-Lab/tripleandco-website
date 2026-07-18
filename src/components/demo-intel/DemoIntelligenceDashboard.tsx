@@ -104,7 +104,7 @@ export function DemoIntelligenceDashboard() {
                 className="mt-3 rounded-lg px-2.5 py-1.5 text-[10px] leading-snug"
                 style={{ background: "rgba(214,69,69,0.1)", color: "#F08A8A", border: "1px solid rgba(214,69,69,0.25)" }}
               >
-                Internal — client names &amp; commercial terms. Do not distribute.
+                Internal: client names &amp; commercial terms. Do not distribute.
               </div>
             </div>
           </div>
@@ -124,7 +124,7 @@ export function DemoIntelligenceDashboard() {
               className="max-w-3xl text-3xl font-black leading-[1.08] tracking-tight lg:text-[42px]"
               style={{ color: "var(--c-text)" }}
             >
-              Demo Call Intelligence —{" "}
+              Demo Call Intelligence:{" "}
               <span className="gradient-text">
                 {meta.callsAnalyzed} of {meta.callsTotal} calls
               </span>{" "}

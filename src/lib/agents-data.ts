@@ -47,7 +47,7 @@ export const agents: Agent[] = [
     model: "Claude Sonnet",
     shortRole: "Writes the brand voice. Not an LLM\u2019s.",
     description:
-      "Camille extracts your brand voice from your existing content and applies it consistently across every channel \u2014 so your company sounds like itself, not like everyone else.",
+      "Camille extracts your brand voice from your existing content and applies it consistently across every channel, so your company sounds like itself, not like everyone else.",
     image: "/images/agents/camille.png",
     deliverables: [
       {
@@ -82,7 +82,7 @@ export const agents: Agent[] = [
     model: "Claude Opus",
     shortRole: "Directs how it looks. Art direction.",
     description:
-      "Vega owns visual direction across brand, marketing, web, and decks. She runs on Opus because direction compounds \u2014 a wrong type choice or a sloppy hierarchy isn\u2019t a bug you patch later, it\u2019s brand erosion you pay for every campaign after. Always ships two to four directions with a recommendation, never one solution and never three solutions without a pick. Curates as much as she creates \u2014 the right reference, the right photographer, the right illustration partner is often more on-brand than another in-house mockup. Built for taste calls, system extensions, and the kind of judgment that keeps a brand looking like itself across every surface.",
+      "Vega owns visual direction across brand, marketing, web, and decks. She runs on Opus because direction compounds. A wrong type choice or a sloppy hierarchy isn\u2019t a bug you patch later, it\u2019s brand erosion you pay for every campaign after. Always ships two to four directions with a recommendation, never one solution and never three solutions without a pick. Curates as much as she creates: the right reference, the right photographer, the right illustration partner is often more on-brand than another in-house mockup. Built for taste calls, system extensions, and the kind of judgment that keeps a brand looking like itself across every surface.",
     image: "/images/agents/vega.png",
     deliverables: [
       {
@@ -152,7 +152,7 @@ export const agents: Agent[] = [
     model: "Claude Haiku",
     shortRole: "Ships the social channels.",
     description:
-      "Zara turns your social channels from background noise into a revenue-driving asset \u2014 founder voice, content cadence, and measurement all in one.",
+      "Zara turns your social channels from background noise into a revenue-driving asset: founder voice, content cadence, and measurement all in one.",
     image: "/images/agents/zara.png",
     deliverables: [
       {
@@ -187,7 +187,7 @@ export const agents: Agent[] = [
     model: "Claude Sonnet",
     shortRole: "Reads the room. Research, trends, competitive intel.",
     description:
-      "Nova maps the content landscape in your category, surfaces the topics your buyers actually search, and hands you a content strategy grounded in real demand \u2014 not guesses.",
+      "Nova maps the content landscape in your category, surfaces the topics your buyers actually search, and hands you a content strategy grounded in real demand, not guesses.",
     image: "/images/agents/nova.png",
     deliverables: [
       {
@@ -257,7 +257,7 @@ export const agents: Agent[] = [
     model: "Claude Haiku",
     shortRole: "Repurposes everything. One piece becomes ten.",
     description:
-      "Sage takes the content you\u2019ve already produced and multiplies its reach \u2014 turning webinars, podcasts, and posts into dozens of high-performing derivatives.",
+      "Sage takes the content you\u2019ve already produced and multiplies its reach, turning webinars, podcasts, and posts into dozens of high-performing derivatives.",
     image: "/images/agents/sage.png",
     deliverables: [
       {

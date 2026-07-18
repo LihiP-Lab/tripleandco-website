@@ -578,7 +578,7 @@ export default function InsightsPage() {
       </section>
 
       {/* ================================================================
-          AUTHORITY FOOTER — ABOUT THE ARCHITECT
+          AUTHORITY FOOTER, ABOUT THE ARCHITECT
       ================================================================ */}
       <section className="py-12 lg:py-16 bg-purple-05">
         <div className="mx-auto max-w-[1200px] px-8">

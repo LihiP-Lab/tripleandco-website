@@ -3,7 +3,7 @@ import { createHmac, timingSafeEqual } from "crypto";
 /**
  * Shared-access-code gate for internal client dashboards (e.g. /demo-intelligence).
  * A correct code mints an HMAC-signed cookie; the proxy verifies it on every request.
- * Not a full auth system — one shared code per deployment, rotate via env vars.
+ * Not a full auth system, one shared code per deployment, rotate via env vars.
  */
 
 export const ACCESS_COOKIE = "dt_client_access";

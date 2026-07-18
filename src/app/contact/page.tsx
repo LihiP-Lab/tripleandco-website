@@ -26,7 +26,7 @@ export default function ContactPage() {
               </p>
               <p className="text-purple-7 leading-relaxed">
                 Whether you&apos;re looking for CMO or CRO leadership, AI
-                marketing agents, or a complete revenue transformation —
+                marketing agents, or a complete revenue transformation,
                 let&apos;s talk.
               </p>
 

@@ -188,7 +188,7 @@ export default function AboutHebrewPage() {
         {
           "@type": "Organization",
           "name": "Syte",
-          "description": "חברת B2B SaaS בתחום ה-eCommerce — ליהיא פינטו הייתה ממייסדיה ושימשה בתפקידי צמיחה ושיווק",
+          "description": "חברת B2B SaaS בתחום ה-eCommerce, ליהיא פינטו הייתה ממייסדיה ושימשה בתפקידי צמיחה ושיווק",
         },
       ],
       "hasOccupation": {
@@ -246,7 +246,7 @@ export default function AboutHebrewPage() {
         "name": "מה עושה ליהיא פינטו?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "ליהיא פינטו בונה לסטארטאפים B2B SaaS מנועי צמיחה, שיווק, מכירות, customer success ותהליכי Go-To-Market מבוססי AI, דרך Triple & Co. — חברת Fractional CMO ו-CRO שהקימה ב-2022.",
+          "text": "ליהיא פינטו בונה לסטארטאפים B2B SaaS מנועי צמיחה, שיווק, מכירות, customer success ותהליכי Go-To-Market מבוססי AI, דרך Triple & Co., חברת Fractional CMO ו-CRO שהקימה ב-2022.",
         },
       },
       {
@@ -270,7 +270,7 @@ export default function AboutHebrewPage() {
         "name": "האם זה העמוד הרשמי של ליהיא פינטו?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "כן. זהו עמוד האודות הרשמי של ליהיא פינטו באתר Triple & Co. בכתובת https://www.tripleandco.com/about-he — החברה שהקימה ומובילה מאז 2022.",
+          "text": "כן. זהו עמוד האודות הרשמי של ליהיא פינטו באתר Triple & Co. בכתובת https://www.tripleandco.com/about-he, החברה שהקימה ומובילה מאז 2022.",
         },
       },
       {
@@ -278,7 +278,7 @@ export default function AboutHebrewPage() {
         "name": "איך אפשר ליצור קשר עם ליהיא פינטו?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "אפשר לקבוע שיחת אבחון עם ליהיא פינטו דרך אתר Triple & Co. בכתובת https://www.tripleandco.com/contact — לבדוק התאמה לשירותי Fractional CMO ו-CRO as a Service.",
+          "text": "אפשר לקבוע שיחת אבחון עם ליהיא פינטו דרך אתר Triple & Co. בכתובת https://www.tripleandco.com/contact, לבדוק התאמה לשירותי Fractional CMO ו-CRO as a Service.",
         },
       },
     ],
@@ -466,7 +466,7 @@ export default function AboutHebrewPage() {
                 </div>
               </div>
 
-              {/* Rex card — top left */}
+              {/* Rex card, top left */}
               <div
                 className="absolute -left-6 top-8 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52 hidden lg:block"
                 style={{ animation: "ai-panel-breathe 4s 1s ease-in-out infinite", zIndex: 20 }}
@@ -489,7 +489,7 @@ export default function AboutHebrewPage() {
                 </div>
               </div>
 
-              {/* Camille card — bottom left */}
+              {/* Camille card, bottom left */}
               <div
                 className="absolute -left-6 bottom-32 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52 hidden lg:block"
                 style={{ animation: "ai-panel-breathe 5s 0.5s ease-in-out infinite", zIndex: 20 }}
@@ -512,7 +512,7 @@ export default function AboutHebrewPage() {
                 </div>
               </div>
 
-              {/* Atlas card — right side */}
+              {/* Atlas card, right side */}
               <div
                 className="absolute -right-6 top-1/2 -translate-y-1/2 bg-purple-85/95 border border-purple-7/40 rounded-2xl p-3 backdrop-blur-sm w-52 hidden lg:block"
                 style={{ animation: "ai-panel-breathe 4.5s 1.8s ease-in-out infinite", zIndex: 20 }}
@@ -604,7 +604,7 @@ export default function AboutHebrewPage() {
         <div className="mx-auto max-w-[1000px] px-8">
           <p className="eyebrow mb-4 text-brand">הראשון מסוגו</p>
           <h2 className="text-4xl lg:text-[52px] font-black leading-[1.1] text-purple-9 mb-8" style={{ letterSpacing: "-0.02em" }}>
-            ליהיא פינטו —{" "}
+            ליהיא פינטו:{" "}
             <span className="gradient-text">Fractional CMO עם AI נייטיב</span>.
             <br />לא יועצת שמשתמשת ב-AI.
             <br />אקסקיושן מלא.
@@ -627,7 +627,7 @@ export default function AboutHebrewPage() {
               {[
                 "פיקוח מקצה לקצה, על ידי ליהיא",
                 "8 מומחי Claude מוגדרים מראש",
-                "15+ שנות ניסיון ב-B2B SaaS — Fractional CMO בפועל, לא תיאוריה שיווקית",
+                "15+ שנות ניסיון ב-B2B SaaS, Fractional CMO בפועל, לא תיאוריה שיווקית",
               ].map((point) => (
                 <div
                   key={point}
@@ -657,7 +657,7 @@ export default function AboutHebrewPage() {
         />
         <div ref={agentsSection.ref} className="relative z-10 mx-auto max-w-[1200px] px-8">
           <div className="text-center mb-16">
-            <p className="eyebrow text-brand mb-3">סוכני AI לשיווק — הצוות של ליהיא פינטו</p>
+            <p className="eyebrow text-brand mb-3">סוכני AI לשיווק, הצוות של ליהיא פינטו</p>
             <h2 className="text-4xl lg:text-[52px] font-black leading-[1.05] text-white" style={{ letterSpacing: "-0.02em" }}>
               8 סוכני AI לשיווק.{" "}
               <span className="gradient-text">אקסקיושן מלא</span>.
@@ -814,7 +814,7 @@ export default function AboutHebrewPage() {
               </span>
             </div>
             <h2 className="text-4xl lg:text-[48px] font-black leading-[1.05] text-purple-9" style={{ letterSpacing: "-0.02em" }}>
-              ליהיא פינטו בפעולה —{" "}
+              ליהיא פינטו בפעולה:{" "}
               <span className="gradient-text">צפו בשיטה</span>{" "}
               מקרוב.
             </h2>

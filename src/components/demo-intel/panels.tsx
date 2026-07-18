@@ -52,7 +52,7 @@ export function OverviewPanel() {
         <SectionHeading
           eyebrow="Signal summary"
           title="The demo funnel at a glance"
-          intro={`${meta.callsAnalyzed} of ${meta.callsTotal} demos analyzed — conversation mechanics, objection patterns and coaching priorities from full call transcripts.`}
+          intro={`${meta.callsAnalyzed} of ${meta.callsTotal} demos analyzed: conversation mechanics, objection patterns and coaching priorities from full call transcripts.`}
         />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
           {kpis.map((k) => (
@@ -76,7 +76,7 @@ export function OverviewPanel() {
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
           <Card>
             <h3 className="mono-label mb-5" style={{ color: "var(--c-text-dim)" }}>
-              Call scores — avg 58.8 / 100
+              Call scores: avg 58.8 / 100
             </h3>
             <ScoreBarChart
               data={calls.map((c) => ({ account: c.account, score: c.score, temp: c.temp }))}
@@ -347,11 +347,11 @@ export function ObjectionsPanel() {
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
           <Card>
             <h3 className="mb-3 flex items-center gap-2 text-[15px] font-bold" style={{ color: "#4FD1A1" }}>
-              <QuoteIcon className="h-4 w-4" /> Best response heard (mPrest — Kobi)
+              <QuoteIcon className="h-4 w-4" /> Best response heard (mPrest, Kobi)
             </h3>
             <Quote he={bestParityResponse.he} en={bestParityResponse.en} />
             <p className="mt-3 text-[13px] leading-relaxed" style={{ color: "var(--c-text-dim)" }}>
-              Also good: Saar&apos;s Exaware framing — &quot;דמיין Base44 לארגונים שצריכים לתמוך ב-codebase ענקיים&quot; + guardrails, cost governance, fleet consistency.
+              Also good: Saar&apos;s Exaware framing: &quot;דמיין Base44 לארגונים שצריכים לתמוך ב-codebase ענקיים&quot; + guardrails, cost governance, fleet consistency.
             </p>
           </Card>
           <Card>
@@ -370,7 +370,7 @@ export function ObjectionsPanel() {
       </section>
 
       <section>
-        <SectionHeading eyebrow="Deep dive" title="Pricing objection — what the transcript data says" />
+        <SectionHeading eyebrow="Deep dive" title="Pricing objection: what the transcript data says" />
         <Card>
           <ul className="flex flex-col gap-2.5">
             {pricingNotes.map((n) => (

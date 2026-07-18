@@ -4,7 +4,7 @@ import { ShieldCheck } from "lucide-react";
 import { AccessGate } from "@/components/demo-intel/AccessGate";
 
 export const metadata: Metadata = {
-  title: "Access — Demo Call Intelligence",
+  title: "Access, Demo Call Intelligence",
   description: "Enter your access code to view the Dark Titan demo call intelligence dashboard.",
   robots: { index: false, follow: false },
 };

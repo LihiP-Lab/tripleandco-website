@@ -13,19 +13,19 @@ import { StickyDiagnosticBar } from "@/components/console/StickyDiagnosticBar";
 export const metadata: Metadata = {
   title: "AI Marketing Agents for B2B",
   description:
-    "8 purpose-built AI marketing specialists — brand voice, content, social, video, analytics & performance. Supervised by Lihi Pinto. Real deliverables, weekly cadence.",
+    "8 purpose-built AI marketing specialists, brand voice, content, social, video, analytics & performance. Supervised by Lihi Pinto. Real deliverables, weekly cadence.",
   alternates: { canonical: "/agents" },
   openGraph: {
-    title: "Meet Your AI Marketing Team — Triple & Co.",
+    title: "Meet Your AI Marketing Team, Triple & Co.",
     description:
-      "Triple & Co.'s 8 AI marketing agents handle the work — brand voice to video direction — while Lihi Pinto supervises strategy. Built for B2B companies ready to scale.",
+      "Triple & Co.'s 8 AI marketing agents handle the work, brand voice to video direction, while Lihi Pinto supervises strategy. Built for B2B companies ready to scale.",
     url: "https://www.tripleandco.com/agents",
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "AI Marketing Agents for B2B — Triple & Co.",
+    title: "AI Marketing Agents for B2B, Triple & Co.",
     description:
-      "8 purpose-built AI marketing specialists — brand voice, content, social, video, analytics and more. Supervised by Lihi Pinto. Real deliverables, weekly cadence.",
+      "8 purpose-built AI marketing specialists, brand voice, content, social, video, analytics and more. Supervised by Lihi Pinto. Real deliverables, weekly cadence.",
   },
 };
 
@@ -40,7 +40,7 @@ const processSteps = [
     number: "02",
     title: "Run",
     description:
-      "Your agent runs on Claude. Lihi supervises strategy and quality end to end — you're never handed raw AI output.",
+      "Your agent runs on Claude. Lihi supervises strategy and quality end to end, you're never handed raw AI output.",
   },
   {
     number: "03",
@@ -55,7 +55,7 @@ const doors = [
     icon: UserRound,
     title: "Hire one specialist",
     description:
-      "Pick a single agent for one focused function — brand voice, analytics, video.",
+      "Pick a single agent for one focused function, brand voice, analytics, video.",
     href: "#roster",
     cta: "Browse the roster",
     featured: false,
@@ -117,7 +117,7 @@ export default function AgentsPage() {
                 style={{ color: "#B5B5C2" }}
               >
                 Eight purpose-built Claude specialists for every marketing
-                function — each one supervised by a fractional CMO who raised
+                function, each one supervised by a fractional CMO who raised
                 $70M and 3&times;&apos;d SaaS revenue. Hire one, deploy a team,
                 or start with a fixed-scope diagnostic.
               </p>
@@ -373,7 +373,7 @@ export default function AgentsPage() {
                 style={{ color: "var(--c-text)" }}
               >
                 &ldquo;You don&apos;t hire freelancers here. You take command of
-                a team that&apos;s already running — with a fractional CMO on
+                a team that&apos;s already running, with a fractional CMO on
                 every output.&rdquo;
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">

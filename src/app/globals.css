@@ -113,7 +113,7 @@ body {
   50% { opacity: 1; transform: translateY(-5px); }
 }
 
-/* Constellation node breathe — preserves translate(-50%,-50%) centering */
+/* Constellation node breathe, preserves translate(-50%,-50%) centering */
 @keyframes node-breathe {
   0%, 100% { opacity: 0.96; transform: translate(-50%, -50%) translateY(0); }
   50% { opacity: 1; transform: translate(-50%, -50%) translateY(-5px); }
@@ -251,7 +251,7 @@ body {
 }
 
 /* ============================================================
-   DEPLOYMENT CONSOLE — /agents dark mission-control theme
+   DEPLOYMENT CONSOLE, /agents dark mission-control theme
    Self-contained dark surface (works in both light & dark site modes)
    ============================================================ */
 
@@ -264,8 +264,8 @@ body {
   --c-border-strong: rgba(255, 255, 255, 0.14);
   --c-text: #F4F4F8;
   --c-text-dim: #8A8A9A;
-  --c-signal: #3DE1FF;      /* cool AI signal — telemetry/active only */
-  --c-brand: #FE3465;       /* magenta — reserved for action */
+  --c-signal: #3DE1FF;      /* cool AI signal, telemetry/active only */
+  --c-brand: #FE3465;       /* magenta, reserved for action */
   background: var(--c-bg);
   color: var(--c-text);
 }
