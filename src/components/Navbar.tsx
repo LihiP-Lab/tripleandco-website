@@ -37,14 +37,14 @@ export function Navbar() {
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-purple-7" aria-label="Main navigation">
+        <nav className="hidden xl:flex items-center gap-6 text-sm font-medium text-purple-7" aria-label="Main navigation">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative transition-colors hover:text-brand ${isActive ? "text-brand" : ""}`}
+                className={`relative whitespace-nowrap transition-colors hover:text-brand ${isActive ? "text-brand" : ""}`}
                 aria-current={isActive ? "page" : undefined}
               >
                 {link.label}
@@ -56,7 +56,7 @@ export function Navbar() {
           })}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-3">
           <ThemeToggle />
           <Link
             href="/revenue-diagnostic#book"
@@ -66,7 +66,7 @@ export function Navbar() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
           <ThemeToggle />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -100,7 +100,7 @@ export function Navbar() {
       </div>
 
       <div
-        className="lg:hidden border-t border-purple-15 overflow-hidden"
+        className="xl:hidden border-t border-purple-15 overflow-hidden"
         style={{
           maxHeight: mobileOpen ? "360px" : "0",
           opacity: mobileOpen ? 1 : 0,
