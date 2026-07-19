@@ -53,6 +53,12 @@ export const metadata: Metadata = {
     siteName: "Triple & Co.",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI-Powered CMO & CRO as a Service for B2B | Triple & Co.",
+    description:
+      "On-demand executive marketing and revenue leadership, combined with a team of AI specialists that do the work. Results in weeks, not quarters. Led by Lihi Pinto.",
+  },
 };
 
 export default function RootLayout({
