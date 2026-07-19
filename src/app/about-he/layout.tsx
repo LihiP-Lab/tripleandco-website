@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HtmlLangController } from "@/components/HtmlLangController";
 
 export const metadata: Metadata = {
   title: {
@@ -30,5 +31,10 @@ export default function AboutHeLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <div lang="he" dir="rtl">
+      <HtmlLangController lang="he" dir="rtl" />
+      {children}
+    </div>
+  );
 }
