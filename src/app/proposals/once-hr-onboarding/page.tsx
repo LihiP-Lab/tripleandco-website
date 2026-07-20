@@ -157,6 +157,8 @@ export default function OnceHROnboarding() {
   const [pwError, setPwError] = useState(false);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
 
   // Count fillable questions
@@ -179,6 +181,8 @@ export default function OnceHROnboarding() {
   }
 
   async function handleSubmit() {
+    if (submitting) return;
+
     // Build a flat payload for Formspree
     const payload: Record<string, string> = {
       _subject: "Once-HR Onboarding Questionnaire, answers",
@@ -192,13 +196,28 @@ export default function OnceHROnboarding() {
       });
     });
 
-    await fetch("https://formspree.io/f/mlgvyzqy", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(payload),
-    });
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      const response = await fetch("https://formspree.io/f/mlgvyzqy", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    setSubmitted(true);
+      if (!response.ok) {
+        throw new Error(`Formspree returned ${response.status}`);
+      }
+
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Onboarding questionnaire submission failed:", error);
+      setSubmitError(
+        "Your answers could not be sent. Please try again or email lihi@tripleandco.com."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   // ─── Gate screen ──────────────────────────────────────────────────────────
@@ -250,9 +269,9 @@ export default function OnceHROnboarding() {
       <div style={styles.gate}>
         <div style={{ ...styles.gateCard, textAlign: "center" }}>
           <div style={styles.successDot}>✓</div>
-          <h2 style={{ ...styles.gateTitle, marginBottom: 12 }}>You're done.</h2>
+          <h2 style={{ ...styles.gateTitle, marginBottom: 12 }}>You&apos;re done.</h2>
           <p style={{ color: "#896D9C", fontSize: 15, lineHeight: 1.65 }}>
-            Your answers are on their way to Lihi. She'll be in touch within 24 hours with the kickoff invite.
+            Your answers are on their way to Lihi. She&apos;ll be in touch within 24 hours with the kickoff invite.
           </p>
           <p style={{ marginTop: 20, fontSize: 13, color: "#B8A7C4" }}>
             <a href="https://www.tripleandco.com" style={styles.link}>← Back to tripleandco.com</a>
@@ -365,11 +384,25 @@ export default function OnceHROnboarding() {
 
         {/* Submit */}
         <div style={styles.submitBlock}>
-          <p style={styles.submitNote}>
-            Clicking submit will open your email app with all answers pre-filled, addressed to Lihi. Just hit send.
-          </p>
-          <button onClick={handleSubmit} style={styles.submitBtn}>
-            Submit answers to Lihi →
+          <div>
+            <p style={styles.submitNote}>
+              Clicking submit securely sends all answers directly to Lihi.
+            </p>
+            {submitError && (
+              <p role="alert" style={styles.submitError}>
+                {submitError}
+              </p>
+            )}
+          </div>
+          <button
+            onClick={handleSubmit}
+            disabled={submitting}
+            style={{
+              ...styles.submitBtn,
+              ...(submitting ? styles.submitBtnDisabled : {}),
+            }}
+          >
+            {submitting ? "Sending…" : "Submit answers to Lihi →"}
           </button>
         </div>
       </main>
@@ -743,6 +776,17 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: 15,
     cursor: "pointer",
     whiteSpace: "nowrap",
+  },
+  submitBtnDisabled: {
+    cursor: "wait",
+    opacity: 0.65,
+  },
+  submitError: {
+    color: C.pink2,
+    fontSize: 12,
+    fontWeight: 600,
+    marginTop: 8,
+    maxWidth: 440,
   },
 
   // Footer
