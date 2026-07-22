@@ -342,7 +342,7 @@ export default function AboutPage() {
             </div>
 
             {/* Photo + live ops console */}
-            <div className="lg:col-span-5 flex flex-col items-center relative">
+            <div className="lg:col-span-5 flex flex-col items-center lg:items-end relative">
               <div
                 className="relative aspect-[4/5] w-full max-w-[340px] rounded-3xl overflow-hidden"
                 style={{
@@ -371,7 +371,7 @@ export default function AboutPage() {
 
               {/* Live ops console */}
               <div
-                className="relative z-20 mt-6 w-full max-w-[340px] lg:absolute lg:mt-0 lg:w-[320px] lg:-left-20 lg:-bottom-8 bg-purple-9/90 backdrop-blur-md border border-purple-7/50 rounded-2xl overflow-hidden"
+                className="relative z-20 mt-6 w-full max-w-[340px] lg:absolute lg:mt-0 lg:w-[290px] lg:-left-16 lg:bottom-6 bg-purple-9/92 backdrop-blur-md border border-purple-7/50 rounded-2xl overflow-hidden"
                 style={{ boxShadow: "0 24px 60px rgba(27,22,31,.55)" }}
               >
                 {/* Console header */}
@@ -391,8 +391,8 @@ export default function AboutPage() {
                 </div>
 
                 {/* Feed */}
-                <div className="px-2 py-2 h-[196px] overflow-hidden flex flex-col gap-1">
-                  {Array.from({ length: 4 }, (_, i) => {
+                <div className="px-2 py-2 h-[148px] overflow-hidden flex flex-col gap-1">
+                  {Array.from({ length: 3 }, (_, i) => {
                     const absIdx = feedCount - 1 - i;
                     const item = opsFeed[absIdx % opsFeed.length];
                     return (
