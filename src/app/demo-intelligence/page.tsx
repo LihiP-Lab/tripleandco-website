@@ -4,7 +4,7 @@ import { DemoIntelligenceDashboard } from "@/components/demo-intel/DemoIntellige
 export const metadata: Metadata = {
   title: "Demo Call Intelligence, Dark Titan",
   description:
-    "Internal Gong-style analysis of Dark Titan (Develeap) demo calls: scores, talk ratios, objection patterns, competitive signals and coaching priorities.",
+    "Internal analysis of Dark Titan (Develeap) demo calls: scores, talk ratios, objection patterns, competitive signals and coaching priorities.",
   robots: { index: false, follow: false },
 };
 

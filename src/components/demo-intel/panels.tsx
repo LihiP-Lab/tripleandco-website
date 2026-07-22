@@ -676,7 +676,7 @@ export function AccountPanel() {
         <SectionHeading
           eyebrow="Account intelligence"
           title="Akamai — post-POC review & expansion"
-          intro="A different call type than the demo funnel: an existing enterprise customer after five paid POCs. Framed for the CRO and VP of Customer Success — deal health, expansion, account risk and next steps."
+          intro="A different call type than the demo funnel: an existing enterprise customer after five paid POCs. Built on Customer Success best practices and industry standards — deal health, expansion, account risk and next steps."
         />
         <Card>
           <div className="grid grid-cols-2 gap-x-6 gap-y-4 md:grid-cols-3">
