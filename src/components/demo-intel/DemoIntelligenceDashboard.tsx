@@ -7,6 +7,7 @@ import {
   ShieldAlert,
   Swords,
   GraduationCap,
+  Building2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { meta } from "@/lib/demo-intelligence-data";
@@ -16,9 +17,16 @@ import {
   ObjectionsPanel,
   CompetitivePanel,
   CoachingPanel,
+  AccountPanel,
 } from "./panels";
 
-type TabId = "overview" | "calls" | "objections" | "competitive" | "coaching";
+type TabId =
+  | "overview"
+  | "calls"
+  | "objections"
+  | "competitive"
+  | "coaching"
+  | "akamai";
 
 const TABS: { id: TabId; label: string; icon: LucideIcon }[] = [
   { id: "overview", label: "Overview", icon: LayoutDashboard },
@@ -26,6 +34,7 @@ const TABS: { id: TabId; label: string; icon: LucideIcon }[] = [
   { id: "objections", label: "Objections", icon: ShieldAlert },
   { id: "competitive", label: "Competitive", icon: Swords },
   { id: "coaching", label: "Coaching", icon: GraduationCap },
+  { id: "akamai", label: "Akamai (Post-POC)", icon: Building2 },
 ];
 
 const PANELS: Record<TabId, React.ComponentType> = {
@@ -34,6 +43,7 @@ const PANELS: Record<TabId, React.ComponentType> = {
   objections: ObjectionsPanel,
   competitive: CompetitivePanel,
   coaching: CoachingPanel,
+  akamai: AccountPanel,
 };
 
 export function DemoIntelligenceDashboard() {
