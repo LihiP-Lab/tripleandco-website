@@ -141,7 +141,7 @@ export function DemoIntelligenceDashboard() {
               analyzed
             </h1>
             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed" style={{ color: "var(--c-text-dim)" }}>
-              Gong-style breakdown of the Sisense, Exaware, Verbit, Xwinsys and mPrest demos:
+              A structured breakdown of the Sisense, Exaware, Verbit, Xwinsys and mPrest demos:
               conversation mechanics, objection patterns, competitive signals and coaching
               priorities. Built from full call transcripts (Hebrew); all quotes verbatim.
               Talk-time figures are estimates from transcript word counts.

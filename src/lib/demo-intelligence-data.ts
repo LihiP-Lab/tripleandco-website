@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // DEMO CALL INTELLIGENCE, data model
-// Gong-style analysis of Dark Titan (Develeap) demo calls.
+// Structured analysis of Dark Titan (Develeap) demo calls.
 // Source: full Hebrew call transcripts; all quotes verbatim.
 // Talk-time figures are estimates from transcript word/turn counts.
 // Internal, contains client names and commercial terms.
@@ -741,14 +741,14 @@ export const experiments: string[] = [
 ];
 
 export const methodNotes =
-  "Scores use a 100-pt rubric (Discovery 20, Demo relevance 20, Objection handling 20, Engagement 15, Next-step 15, Positioning accuracy 10). Talk ratios and question counts are estimates from transcript word/turn counts; transcript speaker labels contain some attribution errors (noted where material). Talk-ratio benchmarks follow Gong revenue-intelligence norms: top-performing sellers hold ~46% talk share; ≤55% is the acceptable ceiling. 5 of 13 demos analyzed, patterns should be re-validated as the remaining 8 transcripts arrive.";
+  "Scores use a 100-pt rubric (Discovery 20, Demo relevance 20, Objection handling 20, Engagement 15, Next-step 15, Positioning accuracy 10). Talk ratios and question counts are estimates from transcript word/turn counts; transcript speaker labels contain some attribution errors (noted where material). Talk-ratio benchmarks follow established revenue-intelligence industry standards: top-performing sellers hold ~46% talk share; ≤55% is the acceptable ceiling. 5 of 13 demos analyzed, patterns should be re-validated as the remaining 8 transcripts arrive.";
 
 // ===========================================================================
 // ACCOUNT INTELLIGENCE — AKAMAI (post-POC review & expansion)
 // A different call type than the five demos above: an existing customer after
-// 5 paid POCs. Framed for Dark Titan's CRO and VP of Customer Success —
-// deal health, expansion opportunity, account risk and next steps rather than
-// rep talk-ratio scoring. Source: full call transcript; all quotes verbatim.
+// 5 paid POCs. Built on Customer Success best practices and industry
+// standards — deal health, expansion opportunity, account risk and next steps
+// rather than rep talk-ratio scoring. Source: full call transcript; all quotes verbatim.
 // ===========================================================================
 
 export type DealTemp = "expansion" | "healthy" | "watch";
