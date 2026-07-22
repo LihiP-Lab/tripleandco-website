@@ -93,18 +93,18 @@ export function WhyDifferentSection() {
         {/* Inline stats */}
         <ScrollReveal delay={0.3}>
           <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 py-8 px-6 bg-white rounded-2xl shadow-[var(--shadow-base)] max-w-[720px] mx-auto">
-            <AnimatedNumber target={14} label="Pieces shipped today" />
+            <AnimatedNumber target={8} label="Specialist AI agents" />
             <div className="hidden md:block w-px h-12 bg-purple-15" />
             <AnimatedNumber
-              target={94}
+              target={100}
               suffix="%"
-              label="Approved on first pass"
+              label="Human-reviewed before it ships"
             />
             <div className="hidden md:block w-px h-12 bg-purple-15" />
-            <AnimatedNumber target={8} label="Specialist AI agents" />
+            <AnimatedNumber target={15} suffix="+" label="Years scaling B2B SaaS" />
           </div>
           <p className="text-center mt-5 text-sm italic text-purple-5">
-            The supervised team in numbers. Refreshed weekly.
+            The supervised team in numbers.
           </p>
         </ScrollReveal>
       </div>

@@ -165,7 +165,7 @@ export function ContactForm() {
           disabled={submitting}
           className="w-full rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {submitting ? "Submitting..." : "Book a Diagnostic Call"}
+          {submitting ? "Submitting..." : "Request a diagnostic"}
         </button>
       </div>
     </form>

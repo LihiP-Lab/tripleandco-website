@@ -156,7 +156,7 @@ function AgentDetailCard({ agent, index }: { agent: Agent; index: number }) {
 
           {/* Diagnostic CTA */}
           <Link
-            href={`/contact?agent=${agent.id}&offer=diagnostic`}
+            href="/revenue-diagnostic#book"
             className="group/diag flex items-center justify-between rounded-xl px-4 py-3.5 transition-all"
             style={{
               background: "rgba(254,52,101,0.08)",

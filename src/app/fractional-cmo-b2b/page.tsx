@@ -79,7 +79,7 @@ const wilPillars = [
   {
     title: "Lihi Pinto, Your Fractional CMO",
     description:
-      "15+ years scaling B2B SaaS companies. $70M+ raised on the back of her go-to-market playbooks. Lihi owns your strategy: positioning, pipeline architecture, pricing, board-level reporting. Every decision that requires judgment, taste, and accountability stays human.",
+      "15+ years scaling B2B SaaS companies. $70M+ raised at companies she led. Lihi owns your strategy: positioning, pipeline architecture, pricing, board-level reporting. Every decision that requires judgment, taste, and accountability stays human.",
   },
   {
     title: "A Digital COO That Runs the Operation",
@@ -107,7 +107,7 @@ const globalSignals = [
   {
     title: "A Track Record You Can Verify",
     description:
-      "Our work and our founder's companies have been covered in TechCrunch, Calcalist, and Globes. The playbooks behind $70M+ in funding rounds are the same ones we run for clients.",
+      "Our work and our founder's companies have been covered in TechCrunch, Calcalist, and Globes. The playbooks Lihi built while helping raise $70M+ are the same ones we run for clients.",
   },
 ];
 
@@ -163,7 +163,7 @@ export default function FractionalCMOPage() {
                 </Link>
               </div>
               <p className="text-xs text-purple-6 font-medium uppercase tracking-wider">
-                15+ years in B2B SaaS &middot; $70M+ raised with our playbooks
+                15+ years in B2B SaaS &middot; $70M+ raised at companies Lihi led
                 &middot; Built in Israel, the Start-Up Nation
               </p>
             </div>

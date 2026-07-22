@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Revenue Insights | Triple & Co.",
+  title: "Revenue Insights",
   description:
     "Every startup has its own scaling formula. Explore how Triple & Co. builds marketing, sales, and customer success engines that triple revenue.",
   alternates: { canonical: "/insights/revenue" },
@@ -216,7 +216,7 @@ export default function RevenuePage() {
               assessing, re-evaluating, and enhancing for maximum growth.
             </p>
             <Link
-              href="/contact"
+              href="/revenue-diagnostic#book"
               className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
             >
               Book a Diagnostic Call <span>&#8594;</span>

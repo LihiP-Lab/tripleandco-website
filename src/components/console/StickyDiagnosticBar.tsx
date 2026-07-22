@@ -50,7 +50,7 @@ export function StickyDiagnosticBar() {
           </span>
         </span>
         <Link
-          href="/contact?offer=diagnostic"
+          href="/revenue-diagnostic#book"
           className="inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-dark"
         >
           Book a diagnostic &#8594;

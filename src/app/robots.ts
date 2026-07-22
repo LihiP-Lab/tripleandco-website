@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 // Private surfaces that should stay out of every crawler (search + AI).
-const disallow = ["/api/", "/proposals/", "/demo-intelligence"];
+const disallow = ["/api/", "/demo-intelligence"];
 
 // AI answer engines we explicitly welcome so Triple & Co. is eligible to be
 // cited in ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews.

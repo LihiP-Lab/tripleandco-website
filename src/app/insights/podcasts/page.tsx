@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Podcasts | Triple & Co.",
+  title: "Podcasts",
   description:
     "Battle-tested B2B marketing strategies with AI. Short, sharp episodes by Lihi Pinto for CMOs, founders, and marketers serious about growth.",
   alternates: { canonical: "/insights/podcasts" },
@@ -134,7 +134,7 @@ export default function PodcastsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                href="/revenue-diagnostic#book"
                 className="inline-flex items-center justify-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
               >
                 Book a Diagnostic Call <span>&#8594;</span>

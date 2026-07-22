@@ -30,7 +30,7 @@ const content: LandingContent = {
   heroBody:
     "A full-time hire gives you ownership but costs $300K+ and takes months to find. An agency gives you hands but rents you strategy by the project. A fractional CMO gives you senior ownership plus execution, without the salary or the search. Here is the honest breakdown.",
   heroStats:
-    "15+ years in B2B SaaS \u00b7 $70M+ raised with our playbooks \u00b7 One accountable owner",
+    "15+ years in B2B SaaS \u00b7 $70M+ raised at companies Lihi led \u00b7 One accountable owner",
   heroImageAlt:
     "Lihi Pinto, fractional CMO for B2B SaaS companies",
 

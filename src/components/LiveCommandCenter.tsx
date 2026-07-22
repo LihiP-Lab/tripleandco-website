@@ -31,12 +31,6 @@ interface FeedEntry {
   reviewed: boolean;
 }
 
-function ageLabel(age: number): string {
-  if (age <= 2) return "live";
-  if (age < 60) return `${age}s ago`;
-  return `${Math.floor(age / 60)}m ago`;
-}
-
 function ActivityFeed() {
   const seed: FeedEntry[] = ACTIVITY.slice(0, 5).map((a, i) => ({
     key: i,
@@ -53,10 +47,6 @@ function ActivityFeed() {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) return;
 
-    const tick = setInterval(() => {
-      setEntries((prev) => prev.map((e) => ({ ...e, age: e.age + 1, reviewed: e.age + 1 > 2 })));
-    }, 1000);
-
     const spawn = setInterval(() => {
       const next = ACTIVITY[cursor.current % ACTIVITY.length];
       cursor.current += 1;
@@ -67,7 +57,6 @@ function ActivityFeed() {
     }, 3200);
 
     return () => {
-      clearInterval(tick);
       clearInterval(spawn);
     };
   }, []);
@@ -83,15 +72,15 @@ function ActivityFeed() {
       <div className="mb-4 flex items-center justify-between">
         <span className="mono-label flex items-center gap-2.5" style={{ color: "var(--color-pink-3)" }}>
           <span className="signal-dot" aria-hidden="true" />
-          command-center &#8250; live feed
+          command-center &#8250; a typical week
         </span>
         <span className="mono-label" style={{ color: "rgba(244,244,248,0.45)" }}>
-          8 agents online
+          8 specialist agents
         </span>
       </div>
 
       <ul className="space-y-2.5">
-        {entries.map((e) => (
+        {entries.map((e, idx) => (
           <li
             key={e.key}
             className="flex items-start gap-3 rounded-xl px-3.5 py-3"
@@ -111,10 +100,8 @@ function ActivityFeed() {
                 <span className="text-purple-3">{e.action}</span>
               </p>
               <p className="mt-1 flex items-center gap-2 text-[11px]" style={{ color: "rgba(244,244,248,0.45)" }}>
-                <span>{ageLabel(e.age)}</span>
-                <span aria-hidden="true">&middot;</span>
-                <span style={{ color: e.reviewed ? "#3DE1FF" : "rgba(244,244,248,0.4)" }}>
-                  {e.reviewed ? "reviewed by Lihi" : "queued for review"}
+                <span style={{ color: idx > 0 ? "#3DE1FF" : "rgba(244,244,248,0.4)" }}>
+                  {idx > 0 ? "reviewed by Lihi" : "in review"}
                 </span>
               </p>
             </div>
@@ -172,7 +159,7 @@ export function LiveCommandCenter() {
           </h2>
           <p className="mt-5 max-w-[560px] text-lg leading-relaxed text-purple-3">
             The eight agents work while you sleep. Lihi reviews everything before it ships. This is
-            what momentum looks like when one operator owns the outcome.
+            what a typical week looks like when one operator owns the outcome.
           </p>
         </ScrollReveal>
 
@@ -183,10 +170,10 @@ export function LiveCommandCenter() {
 
           <ScrollReveal delay={0.2} direction="right">
             <div className="grid grid-cols-2 gap-4">
-              <LiveStat target={47} label="Deliverables shipped this week" />
-              <LiveStat target={94} suffix="%" label="Approved on first pass" />
               <LiveStat target={8} label="Specialist agents on the team" />
               <LiveStat target={100} suffix="%" label="Human-reviewed before it ships" />
+              <LiveStat target={15} suffix="+" label="Years scaling B2B SaaS" />
+              <LiveStat target={0} label="Outputs shipped unsupervised" />
             </div>
 
             <div

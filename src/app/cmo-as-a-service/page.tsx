@@ -80,7 +80,7 @@ const systemPillars = [
   {
     title: "Lihi Pinto Owns Your Revenue Strategy",
     description:
-      "15+ years scaling B2B SaaS, $70M+ raised on her go-to-market playbooks. Positioning, ICP, pricing, funnel architecture, and board reporting sit with one accountable executive, not scattered across account managers.",
+      "15+ years scaling B2B SaaS, $70M+ raised at companies she led. Positioning, ICP, pricing, funnel architecture, and board reporting sit with one accountable executive, not scattered across account managers.",
   },
   {
     title: "A Digital COO Replaces the Handoffs",
@@ -171,7 +171,7 @@ export default function CMOPage() {
                 </Link>
               </div>
               <p className="text-xs text-purple-6 font-medium uppercase tracking-wider">
-                15+ years in B2B SaaS &middot; $70M+ raised with our playbooks
+                15+ years in B2B SaaS &middot; $70M+ raised at companies Lihi led
                 &middot; One system, zero agency handoffs
               </p>
             </div>

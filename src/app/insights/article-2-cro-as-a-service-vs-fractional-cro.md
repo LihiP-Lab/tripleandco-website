@@ -214,7 +214,7 @@ If your marketing and sales teams are pulling in different directions and your p
 
 Book a Diagnostic Call with Lihi Pinto. You will leave with a clear view of where your revenue system is breaking down and a concrete set of interventions you can act on immediately, whether or not you engage Triple & Co.
 
-**[Book a Diagnostic Call](/contact)**
+**[Book a Diagnostic Call](/revenue-diagnostic#book)**
 
 ---
 

@@ -37,7 +37,7 @@ export function FinalCTA() {
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <Link
-            href="/contact"
+            href="/revenue-diagnostic#book"
             className="inline-flex items-center gap-2 rounded-[10px] bg-white text-purple-9 px-9 py-[18px] text-base font-semibold transition-all hover:bg-purple-05 hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
           >
             Book a Diagnostic Call with Lihi <span>&#8594;</span>

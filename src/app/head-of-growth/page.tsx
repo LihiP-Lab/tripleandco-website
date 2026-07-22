@@ -104,7 +104,7 @@ const systemPillars = [
   {
     title: "Lihi Pinto Owns Your Growth System",
     description:
-      "15+ years scaling B2B SaaS, $70M+ raised on her go-to-market playbooks. The growth strategy, the experiment roadmap, and the metrics that matter sit with one accountable leader who owns the outcome, not a rotating cast of freelancers optimizing single channels.",
+      "15+ years scaling B2B SaaS, $70M+ raised at companies she led. The growth strategy, the experiment roadmap, and the metrics that matter sit with one accountable leader who owns the outcome, not a rotating cast of freelancers optimizing single channels.",
   },
   {
     title: "A Digital COO Runs the Experiment Loop",
@@ -192,7 +192,7 @@ export default function HeadOfGrowthPage() {
                 </Link>
               </div>
               <p className="text-xs text-purple-6 font-medium uppercase tracking-wider">
-                15+ years in B2B SaaS &middot; $70M+ raised with our playbooks
+                15+ years in B2B SaaS &middot; $70M+ raised at companies Lihi led
                 &middot; Experiments shipped weekly
               </p>
             </div>

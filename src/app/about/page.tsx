@@ -224,7 +224,7 @@ const videos = [
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
 const stats = [
-  { value: 70, suffix: "M+", label: "raised for clients", prefix: "$" },
+  { value: 70, suffix: "M+", label: "raised at companies Lihi led", prefix: "$" },
   { value: 15, suffix: "+", label: "years in B2B SaaS", prefix: "" },
   { value: 3, suffix: "×", label: "revenue growth, repeatedly", prefix: "" },
   { value: 8, suffix: "", label: "AI agents in your corner", prefix: "" },
@@ -318,7 +318,7 @@ export default function AboutPage() {
 
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/contact"
+                  href="/revenue-diagnostic#book"
                   className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5"
                   style={{ boxShadow: "0 0 0 0 rgba(254,52,101,0)" }}
                   onMouseEnter={(e) =>
@@ -382,11 +382,11 @@ export default function AboutPage() {
                       style={{ animation: "ai-dot-pulse 1.5s ease-in-out infinite" }}
                     />
                     <span className="text-[10px] font-bold tracking-widest uppercase text-brand">
-                      Triple Ops &middot; Live
+                      Triple Ops
                     </span>
                   </div>
                   <span className="text-[10px] font-semibold text-purple-5">
-                    8 agents active
+                    8 specialist agents
                   </span>
                 </div>
 
@@ -503,7 +503,7 @@ export default function AboutPage() {
                 Most agencies added AI to existing workflows. Lihi built the
                 workflow around AI from day one. Eight specialist agents,
                 each running a vertical, all supervised by a CMO who has
-                raised $70M+ and tripled SaaS revenue in the real world.
+                helped raise $70M+ and tripled SaaS revenue in the real world.
               </p>
               <p className="text-purple-7 leading-relaxed">
                 The result: a marketing operation that runs at machine speed,
@@ -767,7 +767,7 @@ export default function AboutPage() {
             the exact agents that would move the needle.
           </p>
           <Link
-            href="/contact"
+            href="/revenue-diagnostic#book"
             className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5"
             style={{ boxShadow: "0 0 40px rgba(254,52,101,.3)" }}
           >

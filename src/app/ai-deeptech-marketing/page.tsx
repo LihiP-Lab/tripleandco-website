@@ -46,7 +46,7 @@ const content: LandingContent = {
   heroBody:
     "Triple & Co. gives you a senior marketing leader who is genuinely AI-native, plus 8 supervised AI agents that turn complex capabilities into clear positioning, credible content, and a demand engine. We market AI companies using AI, and a human owns the story so it stays accurate.",
   heroStats:
-    "AI-native operating model \u00b7 $70M+ raised with our playbooks \u00b7 15+ years in B2B tech",
+    "AI-native operating model \u00b7 $70M+ raised at companies Lihi led \u00b7 15+ years in B2B tech",
   heroImageAlt: "Lihi Pinto, AI and deep tech marketing leader",
 
   problemEyebrow: "The problem",

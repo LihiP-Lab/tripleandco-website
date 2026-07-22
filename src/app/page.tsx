@@ -8,6 +8,13 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { HeroContent } from "@/components/HeroContent";
+import type { Metadata } from "next";
+
+// Homepage owns the "/" canonical directly (the root layout no longer sets a
+// site-wide canonical, so pages without their own no longer inherit "/").
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const organizationSchema = {
   "@context": "https://schema.org",

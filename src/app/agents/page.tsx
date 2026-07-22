@@ -11,7 +11,7 @@ import { TelemetryTicker } from "@/components/console/TelemetryTicker";
 import { StickyDiagnosticBar } from "@/components/console/StickyDiagnosticBar";
 
 export const metadata: Metadata = {
-  title: "AI Marketing Agents for B2B",
+  title: "Meet the 8 AI Marketing Agents for B2B",
   description:
     "8 purpose-built AI marketing specialists, brand voice, content, social, video, analytics & performance. Supervised by Lihi Pinto. Real deliverables, weekly cadence.",
   alternates: { canonical: "/agents" },
@@ -65,7 +65,7 @@ const doors = [
     title: "Start with a diagnostic",
     description:
       "Fixed-scope, fixed-price. The low-risk way to see the team in action.",
-    href: "/contact?offer=diagnostic",
+    href: "/revenue-diagnostic#book",
     cta: "Book a diagnostic",
     featured: true,
   },
@@ -101,7 +101,7 @@ export default function AgentsPage() {
                 }}
               >
                 <span className="signal-dot" aria-hidden="true" /> Deployment
-                console · 8 agents online
+                console · 8 specialist agents
               </div>
 
               <h1
@@ -117,7 +117,7 @@ export default function AgentsPage() {
                 style={{ color: "#B5B5C2" }}
               >
                 Eight purpose-built Claude specialists for every marketing
-                function, each one supervised by a fractional CMO who raised
+                function, each one supervised by a fractional CMO who helped raise
                 $70M and 3&times;&apos;d SaaS revenue. Hire one, deploy a team,
                 or start with a fixed-scope diagnostic.
               </p>
@@ -131,7 +131,7 @@ export default function AgentsPage() {
                   Deploy a team &rarr;
                 </MagneticButton>
                 <Link
-                  href="/contact?offer=diagnostic"
+                  href="/revenue-diagnostic#book"
                   className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-semibold transition-all"
                   style={{
                     border: "1px solid var(--c-border-strong)",
@@ -427,7 +427,7 @@ export default function AgentsPage() {
             </p>
             <div className="mt-9 flex justify-center">
               <MagneticButton
-                href="/contact?offer=diagnostic"
+                href="/revenue-diagnostic#book"
                 className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-4 text-[15px] font-semibold text-white transition-colors hover:bg-brand-dark"
               >
                 Book a diagnostic with Lihi &rarr;

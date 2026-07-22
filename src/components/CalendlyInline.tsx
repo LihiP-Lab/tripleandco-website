@@ -3,16 +3,21 @@
 import { useCallback, useEffect, useRef } from "react";
 import Script from "next/script";
 
-// Base Calendly event + the params we always want set.
+// Base Calendly widget params we always want set.
 // primary_color matches Triple brand pink; hide_gdpr_banner keeps it clean.
 const CALENDLY_BASE = "https://calendly.com/lihi-tripleandco/30min";
 const CALENDLY_PARAMS = new URLSearchParams({
   hide_gdpr_banner: "1",
   primary_color: "FE3465",
-  utm_source: "linkedin",
-  utm_medium: "paid_social",
-  utm_campaign: "cmo_leadgen_q2_2026",
 });
+
+// Fallback attribution for visitors who arrive with no UTMs of their own
+// (direct, organic search, referral). We never hardcode a paid-social source,
+// so only genuine ad clicks report as paid. Inbound UTMs always take priority.
+const DEFAULT_UTMS: Record<string, string> = {
+  utm_source: "website",
+  utm_medium: "organic",
+};
 
 type CalendlyWindow = Window & {
   Calendly?: {
@@ -35,12 +40,15 @@ export function CalendlyInline() {
   const buildUrl = useCallback(() => {
     const params = new URLSearchParams(CALENDLY_PARAMS);
     if (typeof window !== "undefined") {
-      // Forward inbound UTMs (utm_content, utm_term, etc.) without
-      // clobbering the params we set above.
+      // Forward the visitor's real inbound query string (the ad's/campaign's
+      // UTMs) verbatim, so a booking attributes back to the exact source.
       const inbound = new URLSearchParams(window.location.search);
-      inbound.forEach((value, key) => {
-        if (!params.has(key)) params.set(key, value);
-      });
+      inbound.forEach((value, key) => params.set(key, value));
+    }
+    // Only fill attribution defaults the visitor did not supply, so unknown
+    // traffic reads as "website / organic" rather than as LinkedIn paid.
+    for (const [key, value] of Object.entries(DEFAULT_UTMS)) {
+      if (!params.has(key)) params.set(key, value);
     }
     return `${CALENDLY_BASE}?${params.toString()}`;
   }, []);

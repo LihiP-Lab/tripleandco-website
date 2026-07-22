@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "What Is CMO as a Service? The Complete Guide | Triple & Co.",
+  title: "What Is CMO as a Service? The Complete Guide",
   description:
     "CMO as a Service is not a fractional hire. It is a full marketing function, strategy, AI execution, and senior oversight, without the full-time overhead. Here is exactly how it works.",
   alternates: { canonical: "https://www.tripleandco.com/insights/what-is-cmo-as-a-service" },
@@ -468,7 +468,7 @@ export default function MegaPillarCMOPage() {
                 sees.
               </p>
               <Link
-                href="/contact"
+                href="/revenue-diagnostic#book"
                 className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-bold text-white hover:bg-brand-dark transition-colors"
               >
                 Book a Diagnostic Call <span>&#8594;</span>

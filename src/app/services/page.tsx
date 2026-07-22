@@ -438,7 +438,7 @@ function ServiceBlock({ service }: { service: Service }) {
 
           <div className="flex flex-wrap gap-3.5">
             <Link
-              href="/contact"
+              href="/revenue-diagnostic#book"
               className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
             >
               Book a Consultation <span>&#8594;</span>
@@ -614,7 +614,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="flex flex-wrap gap-4 lg:justify-end">
                   <Link
-                    href="/contact"
+                    href="/revenue-diagnostic#book"
                     className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
                   >
                     Book a Consultation <span>&#8594;</span>
@@ -700,7 +700,7 @@ export default function ServicesPage() {
               Most companies begin with one service and expand as they grow.
             </p>
             <Link
-              href="/contact"
+              href="/revenue-diagnostic#book"
               className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
             >
               Book a Consultation <span>&#8594;</span>

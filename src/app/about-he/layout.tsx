@@ -8,7 +8,14 @@ export const metadata: Metadata = {
   },
   description:
     "מומחית CMO ו-CRO as a Service לסטארטאפים B2B SaaS עם 15 שנות ניסיון. בניית מנועי צמיחה מבוססי סוכני AI בניהול אסטרטגי של ליהיא פינטו. קבעו שיחת אבחון.",
-  alternates: { canonical: "https://www.tripleandco.com/about-he" },
+  alternates: {
+    canonical: "https://www.tripleandco.com/about-he",
+    languages: {
+      "he-IL": "/about-he",
+      en: "/about",
+      "x-default": "/about",
+    },
+  },
   openGraph: {
     title:
       "ליהיא פינטו | CMO ו-CRO as a Service לסטארטאפים B2B SaaS | Triple & Co.",

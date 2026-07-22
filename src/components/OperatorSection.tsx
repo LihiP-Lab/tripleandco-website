@@ -310,7 +310,7 @@ export function OperatorSection() {
             <ScrollReveal delay={0.25}>
               <div className="flex flex-wrap items-center gap-5">
                 <Link
-                  href="/contact"
+                  href="/revenue-diagnostic#book"
                   className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
                 >
                   Book a call with Lihi <span>&#8594;</span>

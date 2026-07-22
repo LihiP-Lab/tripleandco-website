@@ -295,7 +295,7 @@ In 45 minutes, Lihi will assess your current marketing setup, identify the highe
 
 No generic recommendations. No AI-generated proposals. A senior operator who has built this system from scratch, giving you a straight answer about whether and how it applies to your situation.
 
-**[Book a Diagnostic Call](/contact)**
+**[Book a Diagnostic Call](/revenue-diagnostic#book)**
 
 ---
 

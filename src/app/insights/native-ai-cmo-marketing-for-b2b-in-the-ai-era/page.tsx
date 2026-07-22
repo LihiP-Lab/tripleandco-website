@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Native AI CMO: Marketing for B2B in the AI Era | Triple & Co.",
+  title: "Native AI CMO: Marketing for B2B in the AI Era",
   description:
     "Every B2B team is using AI tools. Pipeline quality has not improved proportionally. The problem is not the tools, it is the architecture. Here is what a Native AI CMO function actually looks like.",
   alternates: { canonical: "https://www.tripleandco.com/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era" },
@@ -437,7 +437,7 @@ export default function Article3Page() {
             No generic recommendations. No AI-generated proposals.
           </p>
           <Link
-            href="/contact"
+            href="/revenue-diagnostic#book"
             className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
           >
             Book a Diagnostic Call <span>&#8594;</span>

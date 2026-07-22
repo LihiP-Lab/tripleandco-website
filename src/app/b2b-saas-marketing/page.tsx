@@ -46,7 +46,7 @@ const content: LandingContent = {
   heroBody:
     "Triple & Co. gives you a senior B2B SaaS marketing leader plus 8 supervised AI agents that run positioning, demand, content, and reporting every day. One engagement covers the CMO and the team that would sit under one, so you go from plan to shipped work in days, not quarters.",
   heroStats:
-    "15+ years in B2B SaaS \u00b7 $70M+ raised with our playbooks \u00b7 One partner, not five vendors",
+    "15+ years in B2B SaaS \u00b7 $70M+ raised at companies Lihi led \u00b7 One partner, not five vendors",
   heroImageAlt: "Lihi Pinto, B2B SaaS marketing leader",
 
   problemEyebrow: "The problem",
@@ -69,7 +69,7 @@ const content: LandingContent = {
     {
       title: "Lihi Pinto Owns Your Growth",
       description:
-        "15+ years scaling B2B SaaS, $70M+ raised on her go-to-market playbooks. Positioning, pricing narrative, pipeline architecture, and board reporting sit with one accountable executive who has done it before.",
+        "15+ years scaling B2B SaaS, $70M+ raised at companies she led. Positioning, pricing narrative, pipeline architecture, and board reporting sit with one accountable executive who has done it before.",
     },
     {
       title: "A Digital COO Runs the Operation",

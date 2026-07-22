@@ -145,7 +145,7 @@ const content: LandingContent = {
     {
       title: "A Track Record You Can Verify",
       description:
-        "Our founder's companies and work have been covered in TechCrunch, Calcalist, and Globes. The playbooks behind $70M+ in funding are the same ones we run for clients.",
+        "Our founder's companies and work have been covered in TechCrunch, Calcalist, and Globes. The playbooks Lihi built while helping raise $70M+ are the same ones we run for clients.",
     },
   ],
   signalsFootnote: "As covered in TechCrunch \u00b7 Calcalist \u00b7 Globes",

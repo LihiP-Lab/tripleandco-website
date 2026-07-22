@@ -5,7 +5,7 @@ import { CalendlyInline } from "@/components/CalendlyInline";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Revenue Diagnostic | Triple&Co",
+  title: "Revenue Diagnostic",
   description:
     "Book a free 30-minute Revenue Diagnostic with Lihi Pinto. Review your funnel math, get three concrete pipeline moves, and meet the AI-powered marketing team behind Triple&Co.",
   alternates: { canonical: "/revenue-diagnostic" },

@@ -649,7 +649,7 @@ export default function InsightsPage() {
                     Full story <span>&#8594;</span>
                   </Link>
                   <Link
-                    href="/contact"
+                    href="/revenue-diagnostic#book"
                     className="text-sm font-semibold text-purple-6 hover:text-purple-9 transition-colors"
                   >
                     Work with Lihi
@@ -676,7 +676,7 @@ export default function InsightsPage() {
               era.
             </p>
             <Link
-              href="/contact"
+              href="/revenue-diagnostic#book"
               className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
             >
               Book a Diagnostic Call <span>&#8594;</span>

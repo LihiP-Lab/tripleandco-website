@@ -39,7 +39,7 @@ const featuredCro: Service = {
     "Weekly pipeline and forecast ownership",
     "Marketing, SDR, and CS alignment",
   ],
-  metric: { big: "$70M+", small: "raised by companies we've led revenue for" },
+  metric: { big: "$70M+", small: "raised at companies Lihi led marketing" },
   cta: "See the model",
   icon: (
     <svg {...iconProps}>
@@ -433,7 +433,7 @@ export function ServicesSection() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/revenue-diagnostic#book"
               className="relative inline-flex shrink-0 items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
             >
               Book a Diagnostic Call <span>&#8594;</span>
@@ -453,7 +453,7 @@ export function ServicesSection() {
           Comparing services? A 30-min diagnostic call sorts it faster.
         </p>
         <Link
-          href="/contact"
+          href="/revenue-diagnostic#book"
           className="shrink-0 rounded-[10px] bg-brand px-4 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-brand-dark"
         >
           Book a call &#8594;

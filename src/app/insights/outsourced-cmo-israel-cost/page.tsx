@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Outsourced CMO in Israel: What It Costs in 2026 | Triple & Co.",
+  title: "Outsourced CMO in Israel: What It Costs in 2026",
   description:
     "Full-time CMO, outsourced marketing manager, fractional CMO, or CMO as a Service: what each model costs in Israel in 2026, in shekels, and what you actually get for the money.",
   alternates: {
@@ -454,7 +454,7 @@ export default function OutsourcedCmoIsraelCostPage() {
             generic ranges.
           </p>
           <Link
-            href="/contact"
+            href="/revenue-diagnostic#book"
             className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
           >
             Book a Diagnostic Call <span>&#8594;</span>

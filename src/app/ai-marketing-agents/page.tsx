@@ -362,7 +362,7 @@ export default function AIMarketingAgentsPage() {
                       </p>
                       <div className="flex flex-wrap items-center gap-3 pt-3 border-t border-purple-subtle">
                         <Link
-                          href={`/contact?agent=${agent.id}&offer=diagnostic`}
+                          href="/revenue-diagnostic#book"
                           className="text-xs font-bold text-brand hover:underline"
                         >
                           Start here: {agent.diagnostic} →
@@ -405,7 +405,7 @@ export default function AIMarketingAgentsPage() {
                   <span className="gradient-text">Zero unsupervised output.</span>
                 </h2>
                 <p className="text-purple-light leading-relaxed mb-4">
-                  Lihi Pinto is a marketing and revenue executive with 15+ years scaling B2B SaaS startups. She raised over $70M, tripled revenue at a SaaS company repeatedly, and built the operating system that powers the agent team.
+                  Lihi Pinto is a marketing and revenue executive with 15+ years scaling B2B SaaS startups. She helped raise over $70M and tripled revenue at a SaaS company repeatedly, and built the operating system that powers the agent team.
                 </p>
                 <p className="text-purple-light leading-relaxed mb-6">
                   Every deliverable passes Lihi before it reaches you. She reviews for brand alignment, strategic accuracy, and quality. You are not buying AI tools you manage yourself. You are getting an operator who runs them for you.
@@ -573,7 +573,7 @@ export default function AIMarketingAgentsPage() {
               minutes whether this is the right fit.
             </p>
             <Link
-              href="/contact"
+              href="/revenue-diagnostic#book"
               className="inline-block rounded-full bg-brand px-10 py-4 text-white font-bold shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300 text-lg"
             >
               Book a Diagnostic Call with Lihi &rarr;

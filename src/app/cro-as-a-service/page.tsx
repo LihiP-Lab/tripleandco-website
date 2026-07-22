@@ -104,7 +104,7 @@ const systemPillars = [
   {
     title: "Lihi Pinto Owns Your Revenue Number",
     description:
-      "15+ years scaling B2B SaaS, $70M+ raised on her go-to-market playbooks. Positioning, pipeline architecture, pricing, forecasting, and board reporting sit with one accountable executive who owns the outcome, not three teams optimizing three metrics.",
+      "15+ years scaling B2B SaaS, $70M+ raised at companies she led. Positioning, pipeline architecture, pricing, forecasting, and board reporting sit with one accountable executive who owns the outcome, not three teams optimizing three metrics.",
   },
   {
     title: "A Digital COO Connects the Funnel",
@@ -190,7 +190,7 @@ export default function CROPage() {
                 </Link>
               </div>
               <p className="text-xs text-purple-6 font-medium uppercase tracking-wider">
-                15+ years in B2B SaaS &middot; $70M+ raised with our playbooks
+                15+ years in B2B SaaS &middot; $70M+ raised at companies Lihi led
                 &middot; One revenue owner, not three
               </p>
             </div>

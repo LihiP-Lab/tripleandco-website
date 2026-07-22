@@ -24,9 +24,6 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.tripleandco.com"),
-  alternates: {
-    canonical: "/",
-  },
   title: {
     default:
       "AI-Powered CMO & CRO as a Service for B2B | Triple & Co.",

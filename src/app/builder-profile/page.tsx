@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description:
     "Lihi Pinto builds AI-powered revenue systems for B2B companies. Meet the builder behind Triple & Co.'s 8 supervised AI marketing agents.",
   alternates: { canonical: "/builder-profile" },
+  // Thin duplicate of /about with no internal links in; keep it out of the
+  // index so it doesn't compete with the canonical founder page.
+  robots: { index: false, follow: true },
 };
 
 /* ── Data ─────────────────────────────────────────────────── */

@@ -178,7 +178,7 @@ If you are still stitching together a Fractional CMO and a roster of vendors, yo
 
 Book a free Diagnostic Call with Lihi Pinto. In 45 minutes, you will get a clear picture of where your current marketing architecture is leaking revenue, and what a CMO as a Service engagement would look like for your specific stage and market.
 
-**[Book a Diagnostic Call](/contact)**
+**[Book a Diagnostic Call](/revenue-diagnostic#book)**
 
 ---
 

@@ -74,7 +74,7 @@ const content: LandingContent = {
     {
       title: "Lihi Pinto Owns Go-To-Market",
       description:
-        "15+ years scaling B2B SaaS, $70M+ raised on her playbooks, fluent in English and Hebrew. Lihi owns positioning, messaging, and pipeline strategy for the global buyer, so the story is built for the market you sell into, not the one you sit in.",
+        "15+ years scaling B2B SaaS, $70M+ raised at companies she led, fluent in English and Hebrew. Lihi owns positioning, messaging, and pipeline strategy for the global buyer, so the story is built for the market you sell into, not the one you sit in.",
     },
     {
       title: "A Digital COO Runs It Async",
@@ -144,7 +144,7 @@ const content: LandingContent = {
     {
       title: "A Track Record You Can Verify",
       description:
-        "Our founder's companies and work have been covered in TechCrunch, Calcalist, and Globes. The playbooks behind $70M+ in funding are the same ones we run for clients.",
+        "Our founder's companies and work have been covered in TechCrunch, Calcalist, and Globes. The playbooks Lihi built while helping raise $70M+ are the same ones we run for clients.",
     },
   ],
   signalsFootnote: "As covered in TechCrunch \u00b7 Calcalist \u00b7 Globes",
