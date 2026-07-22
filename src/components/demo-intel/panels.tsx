@@ -6,6 +6,11 @@ import {
   TriangleAlert,
   Lightbulb,
   Quote as QuoteIcon,
+  ArrowRight,
+  TrendingUp,
+  ShieldCheck,
+  Users,
+  ListChecks,
 } from "lucide-react";
 import {
   kpis,
@@ -27,7 +32,18 @@ import {
   experiments,
   methodNotes,
   meta,
+  account,
+  accountSummary,
+  accountKpis,
+  pocOutcomes,
+  accountSignals,
+  accountRisks,
+  commercialModel,
+  stakeholders,
+  accountActions,
+  accountQuotes,
   type Call,
+  type Severity,
 } from "@/lib/demo-intelligence-data";
 import {
   ScoreBarChart,
@@ -607,6 +623,332 @@ export function CoachingPanel() {
         <p className="mt-6 text-xs leading-relaxed" style={{ color: "var(--c-text-dim)" }}>
           <b style={{ color: "var(--c-text)" }}>Method notes:</b> {methodNotes}
         </p>
+      </section>
+    </div>
+  );
+}
+
+// ============================ ACCOUNT — AKAMAI ============================
+
+const SEVERITY_STYLE: Record<Severity, { color: string; bg: string; border: string; label: string }> = {
+  critical: { color: "#F08A8A", bg: "rgba(214,69,69,0.14)", border: "rgba(214,69,69,0.4)", label: "Critical" },
+  high: { color: "#E0B75C", bg: "rgba(224,183,92,0.12)", border: "rgba(224,183,92,0.35)", label: "High" },
+  medium: { color: "#3DE1FF", bg: "rgba(61,225,255,0.1)", border: "rgba(61,225,255,0.28)", label: "Medium" },
+  low: { color: "var(--c-text-dim)", bg: "rgba(255,255,255,0.05)", border: "var(--c-border)", label: "Low" },
+};
+
+const POC_STATUS_STYLE: Record<string, { color: string; bg: string }> = {
+  live: { color: "#4FD1A1", bg: "rgba(79,209,161,0.12)" },
+  expanding: { color: "#3DE1FF", bg: "rgba(61,225,255,0.12)" },
+  early: { color: "#E0B75C", bg: "rgba(224,183,92,0.12)" },
+};
+
+const COMMERCIAL_TONE: Record<string, string> = {
+  ok: "#4FD1A1",
+  flag: "#E0B75C",
+  neutral: "#3DE1FF",
+};
+
+const QUOTE_TONE: Record<string, { color: string; label: string }> = {
+  signal: { color: "#4FD1A1", label: "Buying signal" },
+  risk: { color: "#F08A8A", label: "Risk" },
+  commercial: { color: "#3DE1FF", label: "Commercial" },
+};
+
+function SeverityPill({ severity }: { severity: Severity }) {
+  const s = SEVERITY_STYLE[severity];
+  return (
+    <span
+      className="mono-label inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-1"
+      style={{ background: s.bg, color: s.color, border: `1px solid ${s.border}`, fontSize: 10 }}
+    >
+      <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ background: s.color }} />
+      {s.label}
+    </span>
+  );
+}
+
+export function AccountPanel() {
+  return (
+    <div className="flex flex-col gap-12">
+      {/* Deal snapshot */}
+      <section>
+        <SectionHeading
+          eyebrow="Account intelligence"
+          title="Akamai — post-POC review & expansion"
+          intro="A different call type than the demo funnel: an existing enterprise customer after five paid POCs. Framed for the CRO and VP of Customer Success — deal health, expansion, account risk and next steps."
+        />
+        <Card>
+          <div className="grid grid-cols-2 gap-x-6 gap-y-4 md:grid-cols-3">
+            {[
+              ["Call type", account.callType],
+              ["Recorded", `${account.date} · ~${account.durationMinutes}m`],
+              ["Stage", account.stage],
+              ["Relationship", account.relationship],
+              ["Dark Titan", account.dtTeam],
+              ["Akamai", account.akamaiTeam],
+            ].map(([label, value]) => (
+              <div key={label}>
+                <div className="mono-label mb-1" style={{ color: "#3DE1FF", fontSize: 9 }}>
+                  {label}
+                </div>
+                <div className="text-[13px] leading-relaxed" style={{ color: "var(--c-text)" }}>
+                  {value}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p
+            className="mt-6 border-t pt-5 text-sm leading-relaxed"
+            style={{ color: "var(--c-text-dim)", borderColor: "var(--c-border)" }}
+          >
+            {accountSummary}
+          </p>
+        </Card>
+      </section>
+
+      {/* KPIs */}
+      <section>
+        <SectionHeading eyebrow="Deal health" title="Account at a glance" />
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+          {accountKpis.map((k) => (
+            <Card key={k.label} className="!p-5">
+              <div className="text-3xl font-black tracking-tight" style={{ color: "var(--c-text)" }}>
+                {k.value}
+              </div>
+              <div className="mt-1.5 text-[13px] font-semibold" style={{ color: "var(--c-text)" }}>
+                {k.label}
+              </div>
+              <div className="mt-1.5 text-xs" style={{ color: KPI_TONE[k.tone] }}>
+                {k.note}
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* POC outcomes */}
+      <section>
+        <SectionHeading
+          eyebrow="What was delivered"
+          title="The five POCs & their outcomes"
+          intro="All five shipped; several are already in production and expanding onto shared cores."
+        />
+        <div className="flex flex-col gap-3">
+          {pocOutcomes.map((p) => {
+            const st = POC_STATUS_STYLE[p.status];
+            return (
+              <Card key={p.name} className="!p-5">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                  <span className="text-[15px] font-black" style={{ color: "var(--c-text)" }}>
+                    {p.name}
+                  </span>
+                  <span
+                    className="mono-label rounded-full px-2.5 py-1"
+                    style={{ background: st.bg, color: st.color, fontSize: 10 }}
+                  >
+                    {p.statusLabel}
+                  </span>
+                  <span className="mono-label" style={{ color: "var(--c-text-dim)", fontSize: 9 }}>
+                    {p.sponsor}
+                  </span>
+                </div>
+                <div className="mt-3 flex flex-wrap items-center gap-3 text-sm">
+                  <span
+                    className="rounded-lg px-3 py-1.5"
+                    style={{ background: "rgba(255,255,255,0.04)", color: "var(--c-text-dim)" }}
+                  >
+                    {p.before}
+                  </span>
+                  <ArrowRight className="h-4 w-4 shrink-0" style={{ color: "#4FD1A1" }} />
+                  <span
+                    className="rounded-lg px-3 py-1.5 font-semibold"
+                    style={{ background: "rgba(79,209,161,0.1)", color: "#4FD1A1" }}
+                  >
+                    {p.after}
+                  </span>
+                </div>
+                <p className="mt-3 text-sm leading-relaxed" style={{ color: "var(--c-text-dim)" }}>
+                  {p.detail}
+                </p>
+              </Card>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Signals + Risks */}
+      <section>
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+          <div>
+            <h3 className="mb-4 flex items-center gap-2 text-[15px] font-bold" style={{ color: "#4FD1A1" }}>
+              <TrendingUp className="h-4 w-4" /> Expansion signals
+            </h3>
+            <div className="flex flex-col gap-3">
+              {accountSignals.map((s) => (
+                <Card key={s.title} className="!p-4">
+                  <b className="text-sm" style={{ color: "var(--c-text)" }}>
+                    {s.title}
+                  </b>
+                  <p className="mt-1.5 text-[13px] leading-relaxed" style={{ color: "var(--c-text-dim)" }}>
+                    {s.body}
+                  </p>
+                </Card>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="mb-4 flex items-center gap-2 text-[15px] font-bold" style={{ color: "#F08A8A" }}>
+              <TriangleAlert className="h-4 w-4" /> Risks & blockers
+            </h3>
+            <div className="flex flex-col gap-3">
+              {accountRisks.map((r) => (
+                <Card key={r.title} className="!p-4">
+                  <div className="flex items-start justify-between gap-3">
+                    <b className="text-sm" style={{ color: "var(--c-text)" }}>
+                      {r.title}
+                    </b>
+                    <SeverityPill severity={r.severity} />
+                  </div>
+                  <p className="mt-1.5 text-[13px] leading-relaxed" style={{ color: "var(--c-text-dim)" }}>
+                    {r.body}
+                  </p>
+                  <div className="mono-label mt-2" style={{ color: "#3DE1FF", fontSize: 9 }}>
+                    Owner · {r.owner}
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Commercial */}
+      <section>
+        <SectionHeading eyebrow="Commercial" title="Pricing & monetization discussion" />
+        <div className="flex flex-col gap-3">
+          {commercialModel.map((c) => (
+            <Card key={c.topic} className="!p-5">
+              <div className="flex flex-col gap-2 lg:flex-row lg:items-start">
+                <div className="lg:w-52 lg:shrink-0">
+                  <span
+                    className="mono-label rounded-md px-2 py-1"
+                    style={{ color: COMMERCIAL_TONE[c.tone], background: "rgba(255,255,255,0.04)", fontSize: 10 }}
+                  >
+                    {c.topic}
+                  </span>
+                </div>
+                <p className="flex-1 text-sm leading-relaxed" style={{ color: "var(--c-text-dim)" }}>
+                  {c.detail}
+                </p>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Stakeholders */}
+      <section>
+        <SectionHeading eyebrow="Decision map" title="Who's in the room" />
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+          {stakeholders.map((s) => (
+            <Card key={s.name} className="!p-4">
+              <div className="flex items-center gap-2">
+                {s.side === "darktitan" ? (
+                  <ShieldCheck className="h-4 w-4 shrink-0" style={{ color: "var(--c-brand)" }} />
+                ) : (
+                  <Users className="h-4 w-4 shrink-0" style={{ color: "#3DE1FF" }} />
+                )}
+                <span className="text-[15px] font-black" style={{ color: "var(--c-text)" }}>
+                  {s.name}
+                </span>
+                <span className="mono-label" style={{ color: "var(--c-text-dim)", fontSize: 9 }}>
+                  {s.side === "darktitan" ? "Dark Titan" : "Akamai"}
+                </span>
+              </div>
+              <div className="mt-0.5 text-[13px] font-semibold" style={{ color: "var(--c-text)" }}>
+                {s.role}
+              </div>
+              <p className="mt-1.5 text-[13px] leading-relaxed" style={{ color: "var(--c-text-dim)" }}>
+                {s.note}
+              </p>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Next steps */}
+      <section>
+        <SectionHeading eyebrow="Action plan" title="Next steps & owners" />
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-left text-sm">
+            <thead>
+              <tr>
+                {["Action", "Owner", "Timing", "Priority"].map((h) => (
+                  <th
+                    key={h}
+                    className="mono-label whitespace-nowrap px-3 py-3"
+                    style={{ color: "var(--c-text-dim)", fontSize: 9, borderBottom: "1px solid var(--c-border)" }}
+                  >
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {accountActions.map((a) => (
+                <tr key={a.action}>
+                  <td className="px-3 py-3 align-top" style={{ color: "var(--c-text)", borderBottom: "1px solid var(--c-border)", minWidth: 240 }}>
+                    {a.action}
+                  </td>
+                  <td className="px-3 py-3 align-top text-xs" style={{ color: "var(--c-text-dim)", borderBottom: "1px solid var(--c-border)", minWidth: 150 }}>
+                    {a.owner}
+                  </td>
+                  <td className="px-3 py-3 align-top text-xs" style={{ color: "#3DE1FF", borderBottom: "1px solid var(--c-border)", minWidth: 110 }}>
+                    {a.timing}
+                  </td>
+                  <td className="px-3 py-3 align-top" style={{ borderBottom: "1px solid var(--c-border)" }}>
+                    <SeverityPill severity={a.priority} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Quotes */}
+      <section>
+        <SectionHeading eyebrow="Verbatim" title="Notable moments" />
+        <div className="flex flex-col gap-3">
+          {accountQuotes.map((q) => {
+            const t = QUOTE_TONE[q.tone];
+            return (
+              <Card key={q.text} className="!p-5">
+                <div className="mb-2 flex items-center gap-2">
+                  <ListChecks className="h-3.5 w-3.5" style={{ color: t.color }} />
+                  <span className="mono-label" style={{ color: t.color, fontSize: 9 }}>
+                    {t.label}
+                  </span>
+                </div>
+                <blockquote
+                  className="rounded-r-xl py-2 pl-4 pr-3 text-[15px] font-semibold leading-relaxed"
+                  style={{
+                    borderLeft: "3px solid",
+                    borderImage: "linear-gradient(180deg,#FE3465,#896D9C) 1",
+                    background: "rgba(255,255,255,0.03)",
+                    color: "var(--c-text)",
+                  }}
+                >
+                  “{q.text}”
+                </blockquote>
+                <div className="mt-2 text-xs" style={{ color: "var(--c-text-dim)" }}>
+                  — {q.speaker}, {q.role}
+                </div>
+              </Card>
+            );
+          })}
+        </div>
       </section>
     </div>
   );

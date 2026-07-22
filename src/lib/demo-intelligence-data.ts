@@ -742,3 +742,410 @@ export const experiments: string[] = [
 
 export const methodNotes =
   "Scores use a 100-pt rubric (Discovery 20, Demo relevance 20, Objection handling 20, Engagement 15, Next-step 15, Positioning accuracy 10). Talk ratios and question counts are estimates from transcript word/turn counts; transcript speaker labels contain some attribution errors (noted where material). Talk-ratio benchmarks follow Gong revenue-intelligence norms: top-performing sellers hold ~46% talk share; ≤55% is the acceptable ceiling. 5 of 13 demos analyzed, patterns should be re-validated as the remaining 8 transcripts arrive.";
+
+// ===========================================================================
+// ACCOUNT INTELLIGENCE — AKAMAI (post-POC review & expansion)
+// A different call type than the five demos above: an existing customer after
+// 5 paid POCs. Framed for Dark Titan's CRO and VP of Customer Success —
+// deal health, expansion opportunity, account risk and next steps rather than
+// rep talk-ratio scoring. Source: full call transcript; all quotes verbatim.
+// ===========================================================================
+
+export type DealTemp = "expansion" | "healthy" | "watch";
+export type Severity = "critical" | "high" | "medium" | "low";
+export type StakeholderSide = "akamai" | "darktitan";
+export type Disposition =
+  | "champion"
+  | "economic"
+  | "technical"
+  | "people"
+  | "delivery"
+  | "mentioned";
+
+export interface AccountKpi {
+  value: string;
+  label: string;
+  note: string;
+  tone: "flag" | "ok" | "neutral";
+}
+
+export interface PocOutcome {
+  name: string;
+  sponsor: string;
+  before: string;
+  after: string;
+  status: "live" | "expanding" | "early";
+  statusLabel: string;
+  detail: string;
+}
+
+export interface AccountSignal {
+  title: string;
+  body: string;
+}
+
+export interface AccountRisk {
+  title: string;
+  severity: Severity;
+  owner: string;
+  body: string;
+}
+
+export interface CommercialItem {
+  topic: string;
+  detail: string;
+  tone: "ok" | "flag" | "neutral";
+}
+
+export interface Stakeholder {
+  name: string;
+  role: string;
+  side: StakeholderSide;
+  disposition: Disposition;
+  note: string;
+}
+
+export interface ActionItem {
+  action: string;
+  owner: string;
+  timing: string;
+  priority: Severity;
+}
+
+export interface AccountQuote {
+  speaker: string;
+  role: string;
+  text: string;
+  tone: "signal" | "risk" | "commercial";
+}
+
+export const account = {
+  name: "Akamai",
+  callType: "Post-POC review & expansion planning",
+  date: "Jul 2026",
+  durationMinutes: 78,
+  relationship: "10+ year relationship · high trust · design-partner phase",
+  stage: "5 POCs delivered → expansion + investment conversation",
+  dtTeam: "Omri Spector (Founder/CEO) · Carmit Shemesh Haas (POC delivery lead)",
+  akamaiTeam:
+    "Sean M. Lyons (SVP/GM, ~960-person BU) · Aryeh “Aria” Sivan (Architecture) · Clint Cherco (Chief of Staff / People & Org)",
+} as const;
+
+export const accountKpis: AccountKpi[] = [
+  { value: "5 / 5", label: "POCs delivered", note: "Several already in production", tone: "ok" },
+  { value: "Expansion", label: "Deal temperature", note: "Org-wide adoption on the table", tone: "ok" },
+  { value: "~960", label: "Employees in target BU", note: "Restructuring around AI for ’27–’29", tone: "neutral" },
+  { value: "$0", label: "Paid to date", note: "POC self-funded by DT’s founder — unpaid", tone: "flag" },
+  { value: "$35M", label: "Round DT is raising", note: "Akamai invited to invest + Foundations $1–4M", tone: "ok" },
+  { value: "7", label: "Open account risks", note: "1 critical (payment), 2 high", tone: "flag" },
+];
+
+export const pocOutcomes: PocOutcome[] = [
+  {
+    name: "VulMAN — CVE remediation agent",
+    sponsor: "Akamai security / VulMAN team",
+    before: "Weeks to patch a CVE",
+    after: "Minutes (target was < 6h)",
+    status: "live",
+    statusLabel: "In production",
+    detail:
+      "Agentic flow inside the existing Jenkins pipeline: scans dependencies, proposes a fix, opens a PR for a human in the loop. Real PRs already approved and merged by Akamai devs; the team has since added dashboards for deeper insight.",
+  },
+  {
+    name: "WSA Dimension Builder",
+    sponsor: "CSI group",
+    before: "~1 month + several expensive engineers per dimension",
+    after: "Automated; 2 dimensions already replicated",
+    status: "expanding",
+    statusLabel: "Live · scaling",
+    detail:
+      "Lives inside Webex where Akamai devs already work; collects data across repos/Confluence, asks clarifying questions, and drafts the code change behind human-in-the-loop gates. A brand-new dimension is being built with it this week — the real proof point.",
+  },
+  {
+    name: "AI Bot Intelligence — marketing dashboard",
+    sponsor: "Adarsh’s team · Emily Leones (contact)",
+    before: "Dev team stood between marketing and live data",
+    after: "Self-serve, Wix-like dashboard builder",
+    status: "live",
+    statusLabel: "Working",
+    detail:
+      "An agent pulls from Databricks daily and surfaces AI insights; marketing self-selects panels/views without engineering. Positioned as marketing’s tool to beat Cloudflare. In active discussion on which insights to publish.",
+  },
+  {
+    name: "Network Health Analyst (+ DDDS)",
+    sponsor: "Jim’s team (NOC)",
+    before: "Needed a specialist to interpret ClickHouse data",
+    after: "Natural-language anomaly insights for non-technical users",
+    status: "early",
+    statusLabel: "Working · DDDS early",
+    detail:
+      "Detects and visualizes network anomalies and runs the queries behind the scenes so the NOC can act without a data interpreter. A concurrent DDDS POC reuses the same core (swap data sources/outputs) — an early reusability proof.",
+  },
+  {
+    name: "Incident Management on the Data Management Platform",
+    sponsor: "Richard (product) · Patrick (AI lifecycle)",
+    before: "Evaluate/buy a standard incident tool (e.g. PagerDuty)",
+    after: "Tailored graph-DB app on a reusable DMP core",
+    status: "expanding",
+    statusLabel: "Live · 3 apps next",
+    detail:
+      "DT built a Data Management Platform; incident management is the first thin app on it — a graph DB surfaces connections to resolve incidents faster by learning from prior ones. Three more apps (carby, knowledge library, digital twins) are being built this week by Richard’s own team using the DT flow.",
+  },
+];
+
+export const accountSignals: AccountSignal[] = [
+  {
+    title: "Org-wide, multi-year ambition from the economic buyer",
+    body: "Sean wants to restructure a ~960-person business unit around this capability for ’27–’28–’29, using the offsite to decide greenfield-vs-brownfield and where to deploy a dark factory vs Claude licenses. This is a platform bet, not a tool trial.",
+  },
+  {
+    title: "Investment interest — two paths",
+    body: "Sean asked how much DT is raising ($35M) and proactively offered to sponsor DT into “Akamai Foundations” ($1–4M startup investments). He requested the investor package by email (cc Aria + Clint). Strategic-investor optionality on top of the commercial deal.",
+  },
+  {
+    title: "Reusability is already proven inside the account",
+    body: "One core served both Jim’s Network Analyst and the DDDS POC, and Richard’s DMP now underpins four apps. Proven internal reuse is the single biggest expansion multiplier — land-and-expand is de-risked.",
+  },
+  {
+    title: "The buyer is building your pricing model for you",
+    body: "Sean volunteered monetization ideas (skills-based tiers, per-connector pricing, mandatory onboarding/training/assessment services) and a fully-loaded-engineer ROI pitch for his CFO. A champion actively packaging the internal business case.",
+  },
+  {
+    title: "Deep, durable trust",
+    body: "“We implicitly trust you… based on the relationship you’ve invested in us over a decade.” Carmit was singled out for praise. Relationship capital is high — leverage it, don’t coast on it.",
+  },
+  {
+    title: "Retain the embedded expertise",
+    body: "DT engineers currently hold Akamai machines, permissions and hard-won context that evaporates when the POC ends in ~3.5 weeks. Omri floated keeping some embedded — a natural bridge into a paid expansion.",
+  },
+];
+
+export const accountRisks: AccountRisk[] = [
+  {
+    title: "POC is unpaid — DT’s founder is personally financing it",
+    severity: "critical",
+    owner: "Clint → Akamai finance/ops",
+    body: "“We did not receive a single cent. All this POC is running off of my bank account.” Israeli tax is due on invoice regardless of collection, so this is real cash pressure. Aria hadn’t heard of it; Clint is chasing a possible “E-Team” intermediary blocker. Cash + relationship risk — resolve before any expansion paperwork.",
+  },
+  {
+    title: "InfoSec / guardrail scrutiny",
+    severity: "high",
+    owner: "DT + Akamai InfoSec (Dekel)",
+    body: "Connectivity for the global DDoS system was pulled because a competitor (Cloudflare) API was in play, and InfoSec is “freaking out” about Cast AI / Kimchi. DT clarified its system wasn’t the cause (endpoint config), but the perception risk is internal to Akamai. Need clear articulation of what is connected/utilized and a security pre-pack.",
+  },
+  {
+    title: "Credibility gap — “where it does NOT work” was missing",
+    severity: "high",
+    owner: "DT (Omri / Carmit)",
+    body: "Sean’s sharpest feedback: the POC story had no lessons-learned or limitations — no honest “here’s when a couple of engineers with Claude licenses is the better call.” He wants a non-sugar-coated assessment; delivering it builds the internal credibility the expansion depends on.",
+  },
+  {
+    title: "Vendor-scale / support risk",
+    severity: "high",
+    owner: "DT (Omri)",
+    body: "“You’re a small company.” Before a 1,000-person org relies on DT for ’27–’29 it needs proof DT can resource support, training and guardrails while serving other customers. Ties directly to the raise and to the risk/reward of a design partnership.",
+  },
+  {
+    title: "Commercial-model mismatch: tickets/seats vs tokens",
+    severity: "medium",
+    owner: "Aria + Omri (offline)",
+    body: "DT prices per-seat + usage in tickets + FDE services; Akamai finance thinks in tokens and wants ticket→$ mapping and DT modeled as a budgetable spend (per-project budget with auto-stop — which DT already enforces). Unaddressed, this becomes procurement friction. Taken offline between Aria and Omri.",
+  },
+  {
+    title: "Organizational readiness / change management",
+    severity: "medium",
+    owner: "Clint + Maya (L&D)",
+    body: "By Akamai’s own admission the BU isn’t set up to leverage AI at the scale they want. There’s a cultural conversion curve for skeptics and R&R/structure change ahead — the offsite’s afternoon is dedicated to it. Adoption success, not just tech, drives renewal/expansion.",
+  },
+  {
+    title: "Architecture fragmentation across the 5 POCs",
+    severity: "low",
+    owner: "DT delivery",
+    body: "The POCs ran independently with no shared architecture or code, and brownfield context (libraries, infra, Confluence/SharePoint) isn’t ingested out of the box. Risk of duplication at scale; the fix is FDE integration engineers and a shared-core objective going forward.",
+  },
+];
+
+export const commercialModel: CommercialItem[] = [
+  {
+    topic: "Current model",
+    detail:
+      "Per-seat license (base price) + usage tiers measured in tickets (a ticket = a unit of business value) + FDE implementation services (connect to CI, security, knowledge base, Jira). The POCs used only the minimal install.",
+    tone: "neutral",
+  },
+  {
+    topic: "Pricing upside (from Sean)",
+    detail:
+      "Add a skills-based opt-in/out tier; price connectors (all-in bundle vs per-connector, ticketing included); make onboarding/training/assessment services a first-class line — “you can’t powerfully use your tool without the expertise.”",
+    tone: "ok",
+  },
+  {
+    topic: "Token-economy framing (from Aria)",
+    detail:
+      "Finance benchmarks everything in tokens vs Claude Code. Wants each ticket expressed in $ and DT treated as a budget consumer: assign a project budget, DT stops when exhausted, resumes when topped up. Omri: DT already does budget-stop/resume today.",
+    tone: "flag",
+  },
+  {
+    topic: "ROI narrative (Omri)",
+    detail:
+      "Savings are capped by current spend; the bigger prize is earnings — time-to-market and new product launches. “The big money is launching new products.” Sean agreed, then pressed on how it gets funded.",
+    tone: "ok",
+  },
+];
+
+export const stakeholders: Stakeholder[] = [
+  {
+    name: "Omri Spector",
+    role: "Founder & CEO",
+    side: "darktitan",
+    disposition: "champion",
+    note: "Leads the strategic narrative and the raise; owns the investor package and lessons-learned doc.",
+  },
+  {
+    name: "Carmit Shemesh Haas",
+    role: "POC delivery lead",
+    side: "darktitan",
+    disposition: "delivery",
+    note: "Ran all five POCs centrally; singled out for praise by Sean. Drafting the cross-team feedback form.",
+  },
+  {
+    name: "Sean M. Lyons",
+    role: "SVP / GM, ~960-person BU",
+    side: "akamai",
+    disposition: "economic",
+    note: "Champion + economic sponsor. Driving org-wide adoption, pricing ideas and the Foundations investment path.",
+  },
+  {
+    name: "Aryeh “Aria” Sivan",
+    role: "Architecture / technical leader",
+    side: "akamai",
+    disposition: "technical",
+    note: "Decade-long relationship; scrutinizes architecture sharing, product influence and the token/financial model.",
+  },
+  {
+    name: "Clint Cherco",
+    role: "Chief of Staff / People & Org",
+    side: "akamai",
+    disposition: "people",
+    note: "Owns the offsite agenda and L&D; escalating the unpaid-invoice issue to finance/ops.",
+  },
+  {
+    name: "Richard · Patrick",
+    role: "Product owner · AI lifecycle",
+    side: "akamai",
+    disposition: "mentioned",
+    note: "Sponsors of the DMP/incident-management work; Richard’s team is building the next apps on the DT flow.",
+  },
+  {
+    name: "Adarsh · Emily Leones · Jim",
+    role: "POC sponsors / contacts",
+    side: "akamai",
+    disposition: "mentioned",
+    note: "Own the marketing-dashboard and network-analyst POCs — expansion entry points across other teams.",
+  },
+  {
+    name: "Dekel · Maya",
+    role: "InfoSec · L&D",
+    side: "akamai",
+    disposition: "mentioned",
+    note: "Dekel involved in security/payment threads; Maya to lead translating adoption into org & L&D change.",
+  },
+];
+
+export const accountActions: ActionItem[] = [
+  {
+    action: "Resolve the outstanding POC invoice (chase E-Team intermediary)",
+    owner: "Clint (Akamai) → finance/ops",
+    timing: "Immediate",
+    priority: "critical",
+  },
+  {
+    action: "Send investor package (cc Aria, Sean, Clint) → route to Akamai Foundations",
+    owner: "Omri (DT)",
+    timing: "This week",
+    priority: "high",
+  },
+  {
+    action: "Produce integrative lessons-learned + limitations doc (incl. where NOT to use DT)",
+    owner: "DT (Omri / Carmit)",
+    timing: "Before the offsite",
+    priority: "high",
+  },
+  {
+    action: "Finalize cross-team feedback form and run a 90–120 min pre-meeting forum",
+    owner: "Carmit (DT) + Clint",
+    timing: "Next week",
+    priority: "high",
+  },
+  {
+    action: "Wrap up remaining ~2 weeks of POC; prep each team to demo what worked & didn’t",
+    owner: "Omri + Carmit (DT)",
+    timing: "Next 2 weeks",
+    priority: "medium",
+  },
+  {
+    action: "Offsite: AM knowledge-share + PM org/L&D evolution (bring Maya in)",
+    owner: "Clint (Akamai)",
+    timing: "Wed the 12th",
+    priority: "medium",
+  },
+  {
+    action: "Deep-dive the token/budget commercial model offline",
+    owner: "Aria + Omri",
+    timing: "Offline follow-up",
+    priority: "medium",
+  },
+  {
+    action: "Explore retaining embedded DT engineers past POC end (~3.5 wks)",
+    owner: "Sean (Akamai) to check internally",
+    timing: "Before POC ends",
+    priority: "medium",
+  },
+];
+
+export const accountQuotes: AccountQuote[] = [
+  {
+    speaker: "Sean M. Lyons",
+    role: "Akamai SVP/GM",
+    text: "In the presentation I didn't hear what it wasn't good at. I didn't hear the lessons learned… it can be more effective to use a different approach versus using a dark factory. I think that's super important because it lends credibility within the organization.",
+    tone: "risk",
+  },
+  {
+    speaker: "Omri Spector",
+    role: "DT Founder/CEO",
+    text: "We did not receive a single cent. All this POC is running off of my bank account.",
+    tone: "risk",
+  },
+  {
+    speaker: "Sean M. Lyons",
+    role: "Akamai SVP/GM",
+    text: "We have 960 people that work in our business unit… we are not organizationally set up to leverage AI in a way that will be as productive and as powerful and as impactful in '27, '28, and '29.",
+    tone: "signal",
+  },
+  {
+    speaker: "Sean M. Lyons",
+    role: "Akamai SVP/GM",
+    text: "I'd like to get your investor package… we have something called Akamai Foundations… typically somewhere between a million to $4 million in regards to investments.",
+    tone: "signal",
+  },
+  {
+    speaker: "Omri Spector",
+    role: "DT Founder/CEO",
+    text: "The big money is launching new products… How does it speed my time to market? How does it allow me to bring more to the market to overtake my competitor?",
+    tone: "commercial",
+  },
+  {
+    speaker: "Aryeh Sivan",
+    role: "Akamai Architecture",
+    text: "Everybody today is talking about tokens, and you're going here in a very different aspect… for me it's easier to understand, compare tokens and tokens.",
+    tone: "commercial",
+  },
+  {
+    speaker: "Sean M. Lyons",
+    role: "Akamai SVP/GM",
+    text: "We implicitly trust you… based on the relationship you've invested in us over a decade.",
+    tone: "signal",
+  },
+];
+
+export const accountSummary =
+  "This is not a discovery call — it's a post-POC review with a decade-long enterprise customer that ran five paid POCs, most now in production. The mood is expansion: Akamai is contemplating org-wide adoption across a ~960-person BU for ’27–’29, has invited DT into its funding round and its Foundations program, and is co-authoring the commercial model. Three things gate the expansion and belong to Customer Success: (1) the POC is still completely unpaid, (2) Akamai wants an honest limitations / “where it doesn’t work” story before it will scale internally, and (3) InfoSec, vendor-scale and change-management concerns must be answered. Land the payment, deliver the candid lessons-learned, and convert the embedded-engineer momentum into a paid expansion.";
