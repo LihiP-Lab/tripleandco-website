@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   description:
     "Every startup has its own scaling formula. Explore how Triple & Co. builds marketing, sales, and customer success engines that triple revenue.",
   alternates: { canonical: "/insights/revenue" },
+  openGraph: {
+    title: "Revenue Insights | Triple & Co.",
+    description:
+      "How Triple & Co. builds marketing, sales, and customer success engines that triple B2B revenue.",
+    url: "https://www.tripleandco.com/insights/revenue",
+    siteName: "Triple & Co.",
+    type: "website",
+  },
 };
 
 const pillars = [

@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Native AI CMO: Marketing for B2B in the AI Era",
   description:
-    "Every B2B team is using AI tools. Pipeline quality has not improved proportionally. The problem is not the tools, it is the architecture. Here is what a Native AI CMO function actually looks like.",
+    "Every B2B team uses AI tools, yet pipeline quality has not improved. The problem is architecture, not tools. Here is what a Native AI CMO function looks like.",
   alternates: { canonical: "https://www.tripleandco.com/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era" },
   openGraph: {
     title: "Native AI CMO: Marketing for B2B in the AI Era",
@@ -24,9 +24,35 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Native AI CMO: Marketing for B2B in the AI Era",
+  description:
+    "Every B2B team uses AI tools, yet pipeline quality has not improved. The problem is architecture, not tools. Here is what a Native AI CMO function looks like.",
+  image:
+    "https://www.tripleandco.com/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era/opengraph-image",
+  datePublished: "2026-06-01",
+  dateModified: "2026-06-01",
+  author: { "@type": "Person", name: "Lihi Pinto", url: "https://www.tripleandco.com/about" },
+  publisher: {
+    "@type": "Organization",
+    name: "Triple & Co.",
+    logo: { "@type": "ImageObject", url: "https://www.tripleandco.com/images/logos/logo-dark.png" },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://www.tripleandco.com/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era",
+  },
+};
+
 export default function Article3Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* ── HERO ── */}
       <section className="pt-20 pb-12 lg:pt-28 lg:pb-16 bg-purple-05">
         <div className="mx-auto max-w-[1200px] px-8">

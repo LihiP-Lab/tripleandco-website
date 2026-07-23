@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   description:
     "The Joint Work Process: more than a collaboration, more than coaching. Triple becomes another hand in your business, strategically guiding you toward relentless growth.",
   alternates: { canonical: "/insights/strategy" },
+  openGraph: {
+    title: "Strategy Insights | Triple & Co.",
+    description:
+      "The Joint Work Process: Triple becomes another hand in your business, guiding you toward relentless growth.",
+    url: "https://www.tripleandco.com/insights/strategy",
+    siteName: "Triple & Co.",
+    type: "website",
+  },
 };
 
 const workstreams = [

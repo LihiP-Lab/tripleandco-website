@@ -9,7 +9,7 @@ import { PillarFAQ } from "@/components/PillarFAQ";
 export const metadata: Metadata = {
   title: "Head of Growth as a Service (Fractional CGO) for B2B SaaS",
   description:
-    "Fractional Head of Growth for B2B SaaS. One growth leader owns acquisition, activation, and retention as a measurable system, backed by 8 supervised AI agents running experiments weekly.",
+    "Fractional Head of Growth for B2B SaaS. One leader owns acquisition, activation, and retention as a measurable system, backed by a supervised AI team.",
   alternates: { canonical: "/head-of-growth" },
   openGraph: {
     title: "Head of Growth as a Service (Fractional CGO) | Triple & Co.",

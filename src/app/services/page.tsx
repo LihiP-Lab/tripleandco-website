@@ -7,8 +7,16 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Our Services",
   description:
-    "Ten services your company can hire. Senior CMO, CRO, and Head of Growth leadership, full-service B2B marketing execution, and AI-powered delivery. Benefit-led, outcome-scoped.",
+    "Ten services you can hire: senior CMO, CRO, and Head of Growth leadership plus full-service, AI-powered B2B marketing execution. Outcome-scoped, not retainers.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Our Services | Triple & Co.",
+    description:
+      "Senior CMO, CRO, and Head of Growth leadership plus full-service, AI-powered B2B marketing execution. Hire one service or the full stack.",
+    url: "https://www.tripleandco.com/services",
+    siteName: "Triple & Co.",
+    type: "website",
+  },
 };
 
 type Agent = {

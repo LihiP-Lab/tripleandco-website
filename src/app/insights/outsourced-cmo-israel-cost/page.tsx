@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Outsourced CMO in Israel: What It Costs in 2026",
   description:
-    "Full-time CMO, outsourced marketing manager, fractional CMO, or CMO as a Service: what each model costs in Israel in 2026, in shekels, and what you actually get for the money.",
+    "Full-time CMO, fractional CMO, or CMO as a Service: what each model actually costs in Israel in 2026, in shekels, and what you get for the money.",
   alternates: {
     canonical: "https://www.tripleandco.com/insights/outsourced-cmo-israel-cost",
   },
@@ -65,12 +65,38 @@ const faqJsonLd = {
   ],
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Outsourced CMO in Israel: What It Costs in 2026",
+  description:
+    "Full-time CMO, fractional CMO, or CMO as a Service: what each model actually costs in Israel in 2026, in shekels, and what you get for the money.",
+  image:
+    "https://www.tripleandco.com/insights/outsourced-cmo-israel-cost/opengraph-image",
+  datePublished: "2026-06-01",
+  dateModified: "2026-06-01",
+  author: { "@type": "Person", name: "Lihi Pinto", url: "https://www.tripleandco.com/about" },
+  publisher: {
+    "@type": "Organization",
+    name: "Triple & Co.",
+    logo: { "@type": "ImageObject", url: "https://www.tripleandco.com/images/logos/logo-dark.png" },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://www.tripleandco.com/insights/outsourced-cmo-israel-cost",
+  },
+};
+
 export default function OutsourcedCmoIsraelCostPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
       {/* ── HERO ── */}

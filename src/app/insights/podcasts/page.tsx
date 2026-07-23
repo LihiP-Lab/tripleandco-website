@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   description:
     "Battle-tested B2B marketing strategies with AI. Short, sharp episodes by Lihi Pinto for CMOs, founders, and marketers serious about growth.",
   alternates: { canonical: "/insights/podcasts" },
+  openGraph: {
+    title: "Podcasts | Triple & Co.",
+    description:
+      "Battle-tested B2B marketing strategies with AI. Short, sharp episodes by Lihi Pinto for CMOs and founders.",
+    url: "https://www.tripleandco.com/insights/podcasts",
+    siteName: "Triple & Co.",
+    type: "website",
+  },
 };
 
 const episodes = [

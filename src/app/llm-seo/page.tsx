@@ -8,7 +8,7 @@ import { PillarFAQ } from "@/components/PillarFAQ";
 export const metadata: Metadata = {
   title: "LLM SEO: How to Get Cited by ChatGPT, Perplexity, and AI Search",
   description:
-    "LLM SEO is optimizing your content so large language models cite your brand in their answers. A practical B2B checklist for getting cited by ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+    "LLM SEO means optimizing your content so AI models cite your brand. A practical B2B checklist for getting cited by ChatGPT, Perplexity, Gemini, and AI Overviews.",
   alternates: { canonical: "/llm-seo" },
   openGraph: {
     title: "LLM SEO: How to Get Cited by AI Search | Triple & Co.",

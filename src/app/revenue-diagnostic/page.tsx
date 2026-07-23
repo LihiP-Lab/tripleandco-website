@@ -7,8 +7,16 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Revenue Diagnostic",
   description:
-    "Book a free 30-minute Revenue Diagnostic with Lihi Pinto. Review your funnel math, get three concrete pipeline moves, and meet the AI-powered marketing team behind Triple&Co.",
+    "Book a free 30-minute Revenue Diagnostic with Lihi Pinto. Review your funnel math and leave with three concrete moves to add pipeline this quarter.",
   alternates: { canonical: "/revenue-diagnostic" },
+  openGraph: {
+    title: "Book a Free Revenue Diagnostic | Triple & Co.",
+    description:
+      "30 minutes with Lihi Pinto. Review your funnel and leave with three concrete moves to add pipeline this quarter. No pitch.",
+    url: "https://www.tripleandco.com/revenue-diagnostic",
+    siteName: "Triple & Co.",
+    type: "website",
+  },
 };
 
 const diagnosticSteps = [

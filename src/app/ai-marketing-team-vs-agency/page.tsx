@@ -7,7 +7,7 @@ import {
 export const metadata: Metadata = {
   title: "AI Marketing Team vs Traditional Agency: What B2B Should Know",
   description:
-    "AI marketing team vs traditional agency for B2B SaaS. Compare speed, cost, quality control, and accountability, and see why a supervised AI team beats both an agency and a pure AI tool.",
+    "AI marketing team vs traditional agency for B2B SaaS: compare speed, cost, quality, and accountability, and why a supervised AI team beats both.",
   alternates: { canonical: "/ai-marketing-team-vs-agency" },
   openGraph: {
     title: "AI Marketing Team vs Traditional Agency | Triple & Co.",

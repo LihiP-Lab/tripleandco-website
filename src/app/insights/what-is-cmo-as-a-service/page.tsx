@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "What Is CMO as a Service? The Complete Guide",
   description:
-    "CMO as a Service is not a fractional hire. It is a full marketing function, strategy, AI execution, and senior oversight, without the full-time overhead. Here is exactly how it works.",
+    "CMO as a Service is not a fractional hire. It is a full marketing function, strategy plus AI execution and senior oversight, without the full-time overhead.",
   alternates: { canonical: "https://www.tripleandco.com/insights/what-is-cmo-as-a-service" },
   openGraph: {
     title: "What Is CMO as a Service? The Complete Guide for B2B Founders",
@@ -24,9 +24,35 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "What Is CMO as a Service? The Complete Guide",
+  description:
+    "CMO as a Service is not a fractional hire. It is a full marketing function, strategy plus AI execution and senior oversight, without the full-time overhead.",
+  image:
+    "https://www.tripleandco.com/insights/what-is-cmo-as-a-service/opengraph-image",
+  datePublished: "2026-06-01",
+  dateModified: "2026-06-01",
+  author: { "@type": "Person", name: "Lihi Pinto", url: "https://www.tripleandco.com/about" },
+  publisher: {
+    "@type": "Organization",
+    name: "Triple & Co.",
+    logo: { "@type": "ImageObject", url: "https://www.tripleandco.com/images/logos/logo-dark.png" },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://www.tripleandco.com/insights/what-is-cmo-as-a-service",
+  },
+};
+
 export default function MegaPillarCMOPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* ── HERO ── */}
       <section className="pt-20 pb-12 lg:pt-28 lg:pb-16 bg-purple-05">
         <div className="mx-auto max-w-[1200px] px-8">
