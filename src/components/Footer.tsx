@@ -1,14 +1,55 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const linkCls = "text-sm hover:text-brand transition-colors";
+const headCls =
+  "text-white text-xs uppercase tracking-[.14em] font-bold mb-4";
+
+const services = [
+  { href: "/cmo-as-a-service", label: "CMO as a Service" },
+  { href: "/cro-as-a-service", label: "CRO as a Service" },
+  { href: "/agents", label: "Marketing Agents" },
+  { href: "/revenue-diagnostic", label: "Revenue Diagnostic" },
+  { href: "/services", label: "All Services" },
+];
+
+const resources = [
+  { href: "/insights", label: "Insights" },
+  { href: "/ai-marketing-agents", label: "AI Agents Guide" },
+  { href: "/geo", label: "GEO for B2B" },
+  { href: "/llm-seo", label: "LLM SEO Guide" },
+  { href: "/ai-visibility-audit", label: "Free AI Visibility Audit" },
+  { href: "/head-of-growth", label: "Head of Growth" },
+  { href: "/fractional-cmo-b2b", label: "Fractional CMO" },
+  {
+    href: "/fractional-cmo-vs-agency-vs-hire",
+    label: "Fractional CMO vs Agency vs Hire",
+  },
+  { href: "/ai-marketing-team-vs-agency", label: "AI Marketing Team vs Agency" },
+];
+
+const industries = [
+  { href: "/b2b-saas-marketing", label: "B2B SaaS Marketing" },
+  { href: "/fintech-marketing", label: "Fintech Marketing" },
+  { href: "/cybersecurity-marketing", label: "Cybersecurity Marketing" },
+  { href: "/ai-deeptech-marketing", label: "AI & DeepTech Marketing" },
+  { href: "/b2b-marketing-israel", label: "B2B Marketing in Israel" },
+  { href: "/b2b-marketing-tel-aviv", label: "B2B Marketing in Tel Aviv" },
+  { href: "/b2b-marketing-usa", label: "B2B Marketing for the US" },
+];
+
 export function Footer() {
   return (
-    <footer className="relative bg-purple-95 text-purple-3 pt-20 pb-20 lg:pb-8" role="contentinfo" aria-label="Site footer">
+    <footer
+      className="relative bg-purple-95 text-purple-3 pt-20 pb-20 lg:pb-8"
+      role="contentinfo"
+      aria-label="Site footer"
+    >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent" />
       <div className="mx-auto max-w-[1200px] px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-8 mb-12">
           {/* Brand */}
-          <div>
+          <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link href="/" className="inline-flex items-center mb-4">
               <Image
                 src="/images/logos/logo-bright.png"
@@ -26,221 +67,79 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Company */}
+          {/* Services */}
           <div>
-            <h4 className="text-white text-xs uppercase tracking-[.14em] font-bold mb-4">
-              Company
-            </h4>
+            <h4 className={headCls}>Services</h4>
             <ul className="space-y-2.5">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about-he"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  אודות ליהיא פינטו
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cmo-as-a-service"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  CMO as a Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cro-as-a-service"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  CRO as a Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/head-of-growth"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Head of Growth
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/fractional-cmo-b2b"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Fractional CMO
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/fractional-cmo-vs-agency-vs-hire"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Fractional CMO vs Agency vs Hire
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/ai-marketing-team-vs-agency"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  AI Marketing Team vs Agency
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/geo"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  GEO for B2B
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/llm-seo"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  LLM SEO Guide
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/ai-visibility-audit"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Free AI Visibility Audit
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/agents"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Marketing Agents
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/insights"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Insights
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
+              {services.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className={linkCls}>
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className={headCls}>Resources</h4>
+            <ul className="space-y-2.5">
+              {resources.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className={linkCls}>
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Industries & Markets */}
           <div>
-            <h4 className="text-white text-xs uppercase tracking-[.14em] font-bold mb-4">
-              Industries &amp; Markets
-            </h4>
+            <h4 className={headCls}>Industries &amp; Markets</h4>
             <ul className="space-y-2.5">
-              <li>
-                <Link
-                  href="/b2b-saas-marketing"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  B2B SaaS Marketing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/fintech-marketing"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Fintech Marketing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cybersecurity-marketing"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  Cybersecurity Marketing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/ai-deeptech-marketing"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  AI &amp; DeepTech Marketing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/b2b-marketing-israel"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  B2B Marketing in Israel
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/b2b-marketing-tel-aviv"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  B2B Marketing in Tel Aviv
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/b2b-marketing-usa"
-                  className="text-sm hover:text-brand transition-colors"
-                >
-                  B2B Marketing for the US
-                </Link>
-              </li>
+              {industries.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className={linkCls}>
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Connect */}
+          {/* Company */}
           <div>
-            <h4 className="text-white text-xs uppercase tracking-[.14em] font-bold mb-4">
-              Connect
-            </h4>
+            <h4 className={headCls}>Company</h4>
             <ul className="space-y-2.5">
+              <li>
+                <Link href="/about" className={linkCls}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/about-he" className={linkCls}>
+                  אודות ליהיא פינטו
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className={linkCls}>
+                  Contact
+                </Link>
+              </li>
               <li>
                 <a
                   href="https://www.linkedin.com/in/lihipinto/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm hover:text-brand transition-colors"
+                  className={linkCls}
                 >
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:lihi@tripleandco.com"
-                  className="text-sm hover:text-brand transition-colors"
-                >
+                <a href="mailto:lihi@tripleandco.com" className={linkCls}>
                   Email
                 </a>
               </li>
@@ -254,10 +153,7 @@ export function Footer() {
             reserved.
           </div>
           <div className="flex items-center gap-4">
-            <Link
-              href="/privacy"
-              className="hover:text-brand transition-colors"
-            >
+            <Link href="/privacy" className="hover:text-brand transition-colors">
               Privacy
             </Link>
             <Link href="/terms" className="hover:text-brand transition-colors">

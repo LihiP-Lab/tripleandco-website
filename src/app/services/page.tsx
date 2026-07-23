@@ -84,7 +84,7 @@ const services: Service[] = [
   },
   {
     id: "cro",
-    name: "Full CRO Service",
+    name: "CRO as a Service",
     tag: "Revenue ownership across marketing, sales, and customer success.",
     description:
       "One strategic leader who owns the entire funnel, from first touch to closed-won to expansion. We build the processes, playbooks, and dashboards your team needs to hit revenue targets consistently.",
@@ -390,7 +390,7 @@ const industryLinks = [
 
 const jumpLinks = [
   { id: "cmo", label: "CMO as a Service" },
-  { id: "cro", label: "Full CRO" },
+  { id: "cro", label: "CRO as a Service" },
   { id: "head-of-growth", label: "Head of Growth" },
   { id: "brand", label: "Brand & Story" },
   { id: "gtm", label: "Growth & GTM" },

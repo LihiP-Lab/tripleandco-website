@@ -30,7 +30,7 @@ const iconProps = {
 
 const featuredCro: Service = {
   id: "cro",
-  name: "Full CRO Service",
+  name: "CRO as a Service",
   desc: "One owner for the entire revenue number. Marketing, sales, and customer success under a single strategy.",
   tag: "Flagship",
   challenges: ["pipeline", "leader"],
