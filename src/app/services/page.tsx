@@ -536,9 +536,80 @@ function ServiceBlock({ service }: { service: Service }) {
   );
 }
 
+const serviceNames = [
+  "CMO as a Service",
+  "CRO as a Service",
+  "Head of Growth as a Service",
+  "Brand Strategy & Storytelling",
+  "Growth Strategy & GTM",
+  "Social Management",
+  "HubSpot & Automation",
+  "Pipeline Management",
+  "Events & Tradeshows",
+  "In-House Team Building",
+];
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "B2B Marketing & Revenue Services",
+  serviceType: "Fractional CMO, CRO, and Head of Growth leadership",
+  provider: {
+    "@type": "Organization",
+    name: "Triple & Co.",
+    url: "https://www.tripleandco.com",
+  },
+  areaServed: ["US", "Europe", "Israel", "Worldwide"],
+  audience: {
+    "@type": "Audience",
+    audienceType: "B2B technology companies",
+  },
+  description:
+    "Senior CMO, CRO, and Head of Growth leadership plus full-service, AI-powered B2B marketing execution. Each service is scoped to a business problem and a measurable outcome, supervised by Lihi Pinto.",
+  url: "https://www.tripleandco.com/services",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Triple & Co. Services",
+    itemListElement: serviceNames.map((name) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name },
+    })),
+  },
+};
+
+const servicesBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.tripleandco.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Services",
+      item: "https://www.tripleandco.com/services",
+    },
+  ],
+};
+
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(servicesBreadcrumbSchema),
+        }}
+      />
+
       {/* Hero */}
       <section className="relative bg-dark text-white pt-20 pb-16 lg:pt-24 lg:pb-20 overflow-hidden">
         <div
