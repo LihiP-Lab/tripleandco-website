@@ -48,9 +48,65 @@ const agents = [
   { name: "Lumen", role: "Video", image: "/images/agents/lumen.png" },
 ];
 
+const diagnosticSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Revenue Diagnostic",
+  serviceType: "B2B revenue and funnel diagnostic",
+  provider: {
+    "@type": "Organization",
+    name: "Triple & Co.",
+    url: "https://www.tripleandco.com",
+  },
+  areaServed: ["US", "Europe", "Israel", "Worldwide"],
+  audience: {
+    "@type": "Audience",
+    audienceType: "B2B technology companies",
+  },
+  description:
+    "A free 30-minute Revenue Diagnostic with Lihi Pinto. Review your funnel math together and leave with three concrete moves to add pipeline this quarter.",
+  url: "https://www.tripleandco.com/revenue-diagnostic",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+    description: "Free 30-minute Revenue Diagnostic call.",
+  },
+};
+
+const diagnosticBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.tripleandco.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Revenue Diagnostic",
+      item: "https://www.tripleandco.com/revenue-diagnostic",
+    },
+  ],
+};
+
 export default function RevenueDiagnosticPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(diagnosticSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(diagnosticBreadcrumbSchema),
+        }}
+      />
+
       {/* Hero */}
       <section className="pt-20 pb-16 lg:pt-28 lg:pb-24 bg-purple-9 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-9 via-purple-85 to-purple-8 opacity-80" />
