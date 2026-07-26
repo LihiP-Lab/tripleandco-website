@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Lihi Pinto | Israel's First Native AI CMO/CRO",
+  title: "Lihi Pinto: Israel's Native AI CMO & CRO",
   description:
     "Lihi Pinto is Israel's first native AI CMO/CRO. 15+ years in B2B SaaS, revenue tripled repeatedly, now running 8 specialist AI agents supervised end-to-end.",
   alternates: {

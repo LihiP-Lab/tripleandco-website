@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Native AI CMO: Marketing for B2B in the AI Era",
+  title: "Native AI CMO: Marketing for B2B",
   description:
     "Every B2B team uses AI tools, yet pipeline quality has not improved. The problem is architecture, not tools. Here is what a Native AI CMO function looks like.",
   alternates: { canonical: "https://www.tripleandco.com/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era" },

@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Strategy Insights",
   description:
-    "The Joint Work Process: more than a collaboration, more than coaching. Triple becomes another hand in your business, strategically guiding you toward relentless growth.",
+    "The Joint Work Process: more than a collaboration, more than coaching. Triple becomes another hand in your business, guiding you toward relentless growth.",
   alternates: { canonical: "/insights/strategy" },
   openGraph: {
     title: "Strategy Insights | Triple & Co.",
