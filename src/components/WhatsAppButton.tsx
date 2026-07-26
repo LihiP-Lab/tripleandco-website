@@ -2,14 +2,13 @@ import { whatsappHref, WHATSAPP_DEFAULT_MESSAGE } from "@/lib/whatsapp";
 
 type WhatsAppButtonProps = {
   message?: string;
-  label?: string;
   className?: string;
 };
 
 const WhatsAppIcon = () => (
   <svg
-    width="20"
-    height="20"
+    width="26"
+    height="26"
     viewBox="0 0 24 24"
     fill="currentColor"
     aria-hidden="true"
@@ -20,7 +19,6 @@ const WhatsAppIcon = () => (
 
 export function WhatsAppButton({
   message = WHATSAPP_DEFAULT_MESSAGE,
-  label = "WhatsApp",
   className = "",
 }: WhatsAppButtonProps) {
   return (
@@ -29,10 +27,9 @@ export function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Lihi on WhatsApp"
-      className={`inline-flex items-center gap-2.5 rounded-[10px] bg-[#25D366] px-6 py-3.5 text-[15px] font-semibold text-[#0a0a0a] transition-all hover:bg-[#1ebe5b] hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] ${className}`}
+      className={`grid h-[52px] w-[52px] place-items-center rounded-2xl bg-[#25D366] text-white shadow-[0_8px_24px_rgba(37,211,102,0.45)] transition-all hover:bg-[#1ebe5b] hover:-translate-y-0.5 ${className}`}
     >
       <WhatsAppIcon />
-      {label}
     </a>
   );
 }
