@@ -158,6 +158,30 @@ const articles = [
 const featured = articles.find((a) => a.featured);
 const rest = articles.filter((a) => !a.featured);
 
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://www.tripleandco.com/insights#blog",
+  name: "Triple & Co. Insights",
+  description:
+    "Battle-tested B2B playbooks from AI-native fractional CMO and CRO leaders. Revenue architecture for the AI era.",
+  url: "https://www.tripleandco.com/insights",
+  publisher: {
+    "@type": "Organization",
+    name: "Triple & Co.",
+    url: "https://www.tripleandco.com",
+  },
+  blogPost: articles
+    .filter((a) => a.href)
+    .map((a) => ({
+      "@type": "BlogPosting",
+      headline: a.title,
+      description: a.excerpt,
+      url: `https://www.tripleandco.com${a.href}`,
+      author: { "@type": "Person", name: "Lihi Pinto" },
+    })),
+};
+
 function AuthorRow({
   date,
   readTime,
@@ -200,6 +224,10 @@ function AuthorRow({
 export default function InsightsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
       {/* ================================================================
           HERO (dark, per Insights System)
       ================================================================ */}
@@ -317,7 +345,7 @@ export default function InsightsPage() {
                   <div className="relative hidden lg:block overflow-hidden min-h-[404px]">
                     <Image
                       src={featured.image}
-                      alt=""
+                      alt={featured.title}
                       fill
                       className="object-cover"
                       sizes="(min-width: 1024px) 568px, 100vw"
@@ -373,7 +401,7 @@ export default function InsightsPage() {
                   <div className="relative h-[220px] shrink-0 overflow-hidden">
                     <Image
                       src={article.image}
-                      alt=""
+                      alt={article.title}
                       fill
                       className="object-cover"
                       sizes="(min-width: 1024px) 405px, 100vw"

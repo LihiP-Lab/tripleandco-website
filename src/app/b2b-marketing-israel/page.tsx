@@ -4,7 +4,7 @@ import { SolutionLanding, type LandingContent } from "@/components/SolutionLandi
 export const metadata: Metadata = {
   title: "B2B Marketing Agency in Israel, AI-Powered",
   description:
-    "B2B marketing in Israel built to sell globally. Senior strategy from Lihi Pinto plus 8 supervised AI agents, for Israeli B2B and SaaS companies going to the US and Europe.",
+    "B2B marketing in Israel built to sell globally. Senior strategy from Lihi Pinto plus 8 supervised AI agents, for Israeli B2B and SaaS companies going global.",
   alternates: { canonical: "/b2b-marketing-israel" },
   openGraph: {
     title: "B2B Marketing Agency in Israel, AI-Powered | Triple & Co.",

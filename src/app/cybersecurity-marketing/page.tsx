@@ -4,7 +4,7 @@ import { SolutionLanding, type LandingContent } from "@/components/SolutionLandi
 export const metadata: Metadata = {
   title: "Cybersecurity Marketing for B2B, AI-Powered",
   description:
-    "Cybersecurity marketing that speaks to CISOs and practitioners. Technical positioning and demand for B2B security, led by an AI-native CMO and 8 supervised agents.",
+    "Cybersecurity marketing that speaks to CISOs and practitioners. Positioning and demand for B2B security, led by an AI-native CMO and 8 supervised agents.",
   alternates: { canonical: "/cybersecurity-marketing" },
   openGraph: {
     title: "Cybersecurity Marketing for B2B, AI-Powered | Triple & Co.",

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Outsourced CMO in Israel: What It Costs in 2026",
+  title: "Outsourced CMO in Israel: 2026 Costs",
   description:
     "Full-time CMO, fractional CMO, or CMO as a Service: what each model actually costs in Israel in 2026, in shekels, and what you get for the money.",
   alternates: {

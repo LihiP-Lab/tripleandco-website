@@ -5,9 +5,9 @@ import {
 } from "@/components/SolutionLanding";
 
 export const metadata: Metadata = {
-  title: "Fractional CMO vs Agency vs Full-Time Hire: How to Choose",
+  title: "Fractional CMO vs Agency vs Full-Time Hire",
   description:
-    "Fractional CMO vs marketing agency vs full-time hire for B2B SaaS. Compare cost, ownership, speed, and risk, and see which marketing leadership model fits your stage.",
+    "Fractional CMO vs marketing agency vs full-time hire for B2B SaaS. Compare cost, ownership, speed, and risk, and see which model fits your stage.",
   alternates: { canonical: "/fractional-cmo-vs-agency-vs-hire" },
   openGraph: {
     title:

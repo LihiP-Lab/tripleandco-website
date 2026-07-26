@@ -13,7 +13,7 @@ import { StickyDiagnosticBar } from "@/components/console/StickyDiagnosticBar";
 export const metadata: Metadata = {
   title: "Meet the 8 AI Marketing Agents for B2B",
   description:
-    "8 purpose-built AI marketing specialists, brand voice, content, social, video, analytics & performance. Supervised by Lihi Pinto. Real deliverables, weekly cadence.",
+    "8 purpose-built AI marketing specialists, brand voice, content, social, video, analytics & performance. Supervised by Lihi Pinto. Real deliverables.",
   alternates: { canonical: "/agents" },
   openGraph: {
     title: "Meet Your AI Marketing Team, Triple & Co.",

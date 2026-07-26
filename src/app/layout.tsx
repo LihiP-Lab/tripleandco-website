@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Triple & Co.",
   },
   description:
-    "Triple & Co. gives B2B tech companies fractional CMO & CRO leadership plus a supervised team of 8 AI marketing specialists. Built for revenue growth. Led by Lihi Pinto.",
+    "Triple & Co. gives B2B tech companies fractional CMO & CRO leadership plus a supervised team of 8 AI marketing specialists. Led by Lihi Pinto.",
   keywords: [
     "CMO as a Service",
     "CRO as a Service",
