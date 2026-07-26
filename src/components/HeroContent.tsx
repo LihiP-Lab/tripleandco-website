@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ScrollReveal } from "./ScrollReveal";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 export function HeroContent() {
   return (
@@ -27,6 +28,7 @@ export function HeroContent() {
       </ScrollReveal>
       <ScrollReveal delay={0.4}>
         <div className="flex items-center gap-5 flex-wrap">
+          <WhatsAppButton />
           <Link
             href="/revenue-diagnostic#book"
             className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
