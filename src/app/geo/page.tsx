@@ -113,6 +113,22 @@ const pillars = [
   },
 ];
 
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to get your B2B brand cited by AI answer engines",
+  description:
+    "The three moves that make a brand quotable, legible, and measurable to ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+  totalTime: "P90D",
+  step: pillars.map((pillar, i) => ({
+    "@type": "HowToStep",
+    position: i + 1,
+    name: pillar.title,
+    text: pillar.description,
+    url: `https://www.tripleandco.com/geo#move-${i + 1}`,
+  })),
+};
+
 const engines = [
   "ChatGPT",
   "Perplexity",
@@ -132,6 +148,10 @@ export default function GEOPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       {/* Hero */}
@@ -288,9 +308,10 @@ export default function GEOPage() {
               structures, and measures everything it ships.
             </p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ol className="grid grid-cols-1 md:grid-cols-3 gap-8 list-none p-0 m-0">
             {pillars.map((pillar, i) => (
-              <ScrollReveal key={pillar.title} delay={0.1 + i * 0.12}>
+              <li key={pillar.title} id={`move-${i + 1}`}>
+              <ScrollReveal delay={0.1 + i * 0.12}>
                 <div className="relative bg-white rounded-2xl p-8 shadow-[var(--shadow-base)] card-gradient-top overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(137,109,156,0.18)] h-full border border-purple-15">
                   <p className="text-sm font-black text-brand mb-3">
                     0{i + 1}
@@ -303,8 +324,9 @@ export default function GEOPage() {
                   </p>
                 </div>
               </ScrollReveal>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 

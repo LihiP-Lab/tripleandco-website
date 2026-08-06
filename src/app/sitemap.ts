@@ -1,5 +1,47 @@
 import type { MetadataRoute } from "next";
 
+// Real per-route last-modified dates. Deliberately static: calling new Date()
+// here re-stamps all 34 URLs with the build time on every deploy, so a one-line
+// footer change re-dates the privacy policy and every article identically.
+// Crawlers learn to discount that. Bump a route's date when its content
+// meaningfully changes.
+const LAST_MODIFIED: Record<string, string> = {
+  "/": "2026-08-06",
+  "/about": "2026-08-06",
+  "/about-he": "2026-08-06",
+  "/services": "2026-08-06",
+  "/cmo-as-a-service": "2026-08-06",
+  "/cro-as-a-service": "2026-08-06",
+  "/head-of-growth": "2026-08-06",
+  "/fractional-cmo-b2b": "2026-08-06",
+  "/fractional-cmo-vs-agency-vs-hire": "2026-08-06",
+  "/ai-marketing-team-vs-agency": "2026-08-06",
+  "/geo": "2026-08-06",
+  "/llm-seo": "2026-08-06",
+  "/ai-visibility-audit": "2026-08-06",
+  "/b2b-saas-marketing": "2026-08-06",
+  "/fintech-marketing": "2026-08-06",
+  "/cybersecurity-marketing": "2026-08-06",
+  "/ai-deeptech-marketing": "2026-08-06",
+  "/b2b-marketing-israel": "2026-08-06",
+  "/b2b-marketing-tel-aviv": "2026-08-06",
+  "/b2b-marketing-usa": "2026-08-06",
+  "/agents": "2026-07-23",
+  "/ai-marketing-agents": "2026-06-10",
+  "/builder-profile": "2026-07-23",
+  "/insights": "2026-07-23",
+  "/insights/revenue": "2026-07-23",
+  "/insights/strategy": "2026-07-23",
+  "/insights/podcasts": "2026-07-23",
+  "/insights/outsourced-cmo-israel-cost": "2026-07-23",
+  "/insights/what-is-cmo-as-a-service": "2026-07-23",
+  "/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era": "2026-07-23",
+  "/revenue-diagnostic": "2026-07-23",
+  "/contact": "2026-08-06",
+  "/privacy": "2026-06-14",
+  "/terms": "2026-06-14",
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.tripleandco.com";
 
@@ -26,7 +68,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/b2b-marketing-usa",
     "/agents",
     "/ai-marketing-agents",
-    "/builder-profile",
     "/insights",
     "/insights/revenue",
     "/insights/strategy",
@@ -42,7 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    lastModified: new Date(LAST_MODIFIED[route] ?? "2026-08-06"),
     changeFrequency: route === "/" ? "weekly" : "monthly",
     priority:
       route === "/"

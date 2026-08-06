@@ -105,12 +105,32 @@ const steps = [
   },
 ];
 
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to find out what AI answer engines say about your brand",
+  description:
+    "Three steps to a written AI visibility audit: share your domain, the agents probe the engines, and you get a scored read on where you are cited and where a competitor is cited instead.",
+  totalTime: "P2D",
+  step: steps.map((s, i) => ({
+    "@type": "HowToStep",
+    position: i + 1,
+    name: s.title,
+    text: s.line,
+    url: `https://www.tripleandco.com/ai-visibility-audit#step-${i + 1}`,
+  })),
+};
+
 export default function AIVisibilityAuditPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <script
         type="application/ld+json"
@@ -188,9 +208,10 @@ export default function AIVisibilityAuditPage() {
               <span className="gradient-text">You Stand.</span>
             </h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ol className="grid grid-cols-1 md:grid-cols-3 gap-8 list-none p-0 m-0">
             {steps.map((s, i) => (
-              <ScrollReveal key={s.n} delay={0.1 + i * 0.12}>
+              <li key={s.n} id={`step-${i + 1}`}>
+              <ScrollReveal delay={0.1 + i * 0.12}>
                 <div className="relative bg-white rounded-2xl p-8 shadow-[var(--shadow-base)] card-gradient-top overflow-hidden h-full border border-purple-15">
                   <p className="text-sm font-black text-brand mb-3">{s.n}</p>
                   <h3 className="text-xl font-extrabold text-purple-9 mb-3">
@@ -201,8 +222,9 @@ export default function AIVisibilityAuditPage() {
                   </p>
                 </div>
               </ScrollReveal>
+              </li>
             ))}
-          </div>
+          </ol>
           <ScrollReveal delay={0.2}>
             <p className="text-sm text-purple-7 text-center mt-10">
               Want the strategy behind it? See{" "}

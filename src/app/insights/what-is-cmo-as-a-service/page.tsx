@@ -33,7 +33,7 @@ const articleSchema = {
   image:
     "https://www.tripleandco.com/insights/what-is-cmo-as-a-service/opengraph-image",
   datePublished: "2026-06-01",
-  dateModified: "2026-06-01",
+  dateModified: "2026-07-23",
   author: { "@type": "Person", name: "Lihi Pinto", url: "https://www.tripleandco.com/about" },
   publisher: {
     "@type": "Organization",
@@ -84,7 +84,7 @@ export default function MegaPillarCMOPage() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-purple-9">Lihi Pinto</p>
-                <p className="text-xs text-purple-6">Founder, Triple &amp; Co. &middot; June 2026</p>
+                <p className="text-xs text-purple-6">Founder, Triple &amp; Co. &middot; <time dateTime="2026-06-01">June 2026</time> &middot; Updated <time dateTime="2026-07-23">July 2026</time></p>
               </div>
             </div>
           </div>

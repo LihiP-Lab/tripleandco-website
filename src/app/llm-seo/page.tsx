@@ -70,6 +70,8 @@ const articleSchema = {
   },
   mainEntityOfPage: "https://www.tripleandco.com/llm-seo",
   url: "https://www.tripleandco.com/llm-seo",
+  datePublished: "2026-07-18",
+  dateModified: "2026-07-23",
 };
 
 const engines = [
@@ -124,6 +126,21 @@ const checklist = [
   },
 ];
 
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to get cited by AI search",
+  description:
+    "An eight-step checklist for making large language models understand, trust, and cite your brand. The first three change your content, the middle three change your technical footprint, and the last two make it compound.",
+  step: checklist.map((item, i) => ({
+    "@type": "HowToStep",
+    position: i + 1,
+    name: item.title,
+    text: item.description,
+    url: `https://www.tripleandco.com/llm-seo#step-${i + 1}`,
+  })),
+};
+
 export default function LlmSeoPage() {
   return (
     <>
@@ -134,6 +151,10 @@ export default function LlmSeoPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       {/* Hero */}
@@ -283,9 +304,10 @@ export default function LlmSeoPage() {
               make it compound.
             </p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <ol className="grid grid-cols-1 md:grid-cols-2 gap-6 list-none p-0 m-0">
             {checklist.map((item, i) => (
-              <ScrollReveal key={item.title} delay={0.05 + i * 0.05}>
+              <li key={item.title} id={`step-${i + 1}`}>
+              <ScrollReveal delay={0.05 + i * 0.05}>
                 <div className="relative bg-white rounded-2xl p-6 lg:p-7 shadow-[var(--shadow-base)] card-gradient-top overflow-hidden h-full border border-purple-15">
                   <p className="text-sm font-black text-brand mb-2">
                     {String(i + 1).padStart(2, "0")}
@@ -298,8 +320,9 @@ export default function LlmSeoPage() {
                   </p>
                 </div>
               </ScrollReveal>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
