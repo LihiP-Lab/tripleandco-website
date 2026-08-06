@@ -26,13 +26,6 @@ const organizationSchema = {
   image: "https://www.tripleandco.com/images/logos/logo-dark.png",
   description:
     "AI-powered CMO & CRO as a Service for B2B tech companies. Fractional executive marketing leadership combined with 8 supervised AI marketing specialists.",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "2 Hadarim Street",
-    addressLocality: "Hod Hasharon",
-    postalCode: "4528033",
-    addressCountry: "IL",
-  },
   areaServed: [
     { "@type": "Country", name: "Israel" },
     { "@type": "Country", name: "United States" },

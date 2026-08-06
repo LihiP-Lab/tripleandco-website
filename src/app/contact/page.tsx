@@ -53,9 +53,9 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-extrabold text-purple-9">Location</h3>
+                    <h3 className="font-extrabold text-purple-9">Where we work</h3>
                     <p className="text-sm text-purple-7 mt-1">
-                      Hod Hasharon, Israel
+                      Israel, the United States, and Europe
                     </p>
                   </div>
                 </div>
