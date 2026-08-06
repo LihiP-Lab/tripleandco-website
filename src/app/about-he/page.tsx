@@ -222,7 +222,7 @@ export default function AboutHebrewPage() {
       ],
       "sameAs": [
         "https://www.linkedin.com/in/lihipinto/",
-        "https://www.linkedin.com/company/tripleandco/",
+        "https://www.linkedin.com/company/triple-and-co/",
         "https://www.youtube.com/@lihipinto",
         "https://www.tripleandco.com",
       ],

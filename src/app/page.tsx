@@ -28,7 +28,9 @@ const organizationSchema = {
     "AI-powered CMO & CRO as a Service for B2B tech companies. Fractional executive marketing leadership combined with 8 supervised AI marketing specialists.",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Tel Aviv",
+    streetAddress: "2 Hadarim Street",
+    addressLocality: "Hod Hasharon",
+    postalCode: "4528033",
     addressCountry: "IL",
   },
   areaServed: [
@@ -38,7 +40,11 @@ const organizationSchema = {
   ],
   priceRange: "$$$",
   founder: { "@id": "https://www.tripleandco.com/#lihi-pinto" },
-  sameAs: ["https://www.linkedin.com/company/tripleandco/"],
+  sameAs: [
+    "https://www.linkedin.com/company/triple-and-co/",
+    "https://www.youtube.com/@Tripleandco",
+    "https://clutch.co/profile/triple-co",
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "sales",
@@ -77,7 +83,10 @@ const personSchema = {
   ],
   sameAs: [
     "https://www.linkedin.com/in/lihipinto/",
+    "https://www.crunchbase.com/person/lihi-pinto-fryman",
+    "https://x.com/lihipinto",
     "https://blog.hubspot.com/marketing/author/lihi-pinto-fryman",
+    "https://www.womeninretail.com/author/lihipintofryman/",
   ],
   subjectOf: [
     {
@@ -101,13 +110,11 @@ const personSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://www.tripleandco.com/#website",
   name: "Triple & Co.",
   url: "https://www.tripleandco.com",
   description: "AI-powered CMO & CRO as a Service for B2B tech companies.",
-  publisher: {
-    "@type": "Organization",
-    name: "Triple & Co.",
-  },
+  publisher: { "@id": "https://www.tripleandco.com/#organization" },
 };
 
 const faqSchema = {

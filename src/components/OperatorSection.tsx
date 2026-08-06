@@ -321,7 +321,15 @@ export function OperatorSection() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand transition-all hover:gap-2.5"
                 >
-                  Connect on LinkedIn <span>&#8594;</span>
+                  Connect with Lihi <span>&#8594;</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/triple-and-co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand transition-all hover:gap-2.5"
+                >
+                  Follow Triple &amp; Co. <span>&#8594;</span>
                 </a>
                 <Link
                   href="/about-he"

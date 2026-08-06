@@ -554,11 +554,7 @@ const servicesSchema = {
   "@type": "Service",
   name: "B2B Marketing & Revenue Services",
   serviceType: "Fractional CMO, CRO, and Head of Growth leadership",
-  provider: {
-    "@type": "Organization",
-    name: "Triple & Co.",
-    url: "https://www.tripleandco.com",
-  },
+  provider: { "@id": "https://www.tripleandco.com/#organization" },
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",

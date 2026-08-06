@@ -19,11 +19,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "B2B Marketing for the US Market",
   serviceType: "B2B and SaaS marketing agency",
-  provider: {
-    "@type": "Organization",
-    name: "Triple & Co.",
-    url: "https://www.tripleandco.com",
-  },
+  provider: { "@id": "https://www.tripleandco.com/#organization" },
   areaServed: [
     { "@type": "Country", name: "United States" },
     "Worldwide",

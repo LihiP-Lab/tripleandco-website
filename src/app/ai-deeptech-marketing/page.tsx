@@ -19,11 +19,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "AI and DeepTech Marketing",
   serviceType: "B2B AI and deep tech marketing and demand generation",
-  provider: {
-    "@type": "Organization",
-    name: "Triple & Co.",
-    url: "https://www.tripleandco.com",
-  },
+  provider: { "@id": "https://www.tripleandco.com/#organization" },
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",

@@ -19,11 +19,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Cybersecurity Marketing",
   serviceType: "B2B cybersecurity marketing and demand generation",
-  provider: {
-    "@type": "Organization",
-    name: "Triple & Co.",
-    url: "https://www.tripleandco.com",
-  },
+  provider: { "@id": "https://www.tripleandco.com/#organization" },
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",

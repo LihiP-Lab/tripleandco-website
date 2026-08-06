@@ -1,6 +1,6 @@
 # Triple & Co.
 
-> AI-powered CMO & CRO as a Service for B2B tech companies. Triple & Co. gives founders one accountable partner: senior fractional marketing and revenue leadership from Lihi Pinto, combined with a supervised team of eight specialist AI marketing agents that do the work. Based in Tel Aviv, serving Israel, the United States, and Europe.
+> AI-powered CMO & CRO as a Service for B2B tech companies. Triple & Co. gives founders one accountable partner: senior fractional marketing and revenue leadership from Lihi Pinto, combined with a supervised team of eight specialist AI marketing agents that do the work. Based in Hod Hasharon, Israel, serving Tel Aviv, Israel, the United States, and Europe.
 
 ## What Triple & Co. does
 
@@ -12,22 +12,65 @@ Triple & Co. replaces the usual patchwork of a fractional executive, an agency, 
 
 ## About Lihi Pinto
 
-Founder of Triple & Co. and one of Israel's first native AI CMO/CROs. 15+ years in B2B SaaS and investment banking, $70M+ raised at companies where Lihi led marketing, across seed through growth rounds, revenue tripled repeatedly.
+Founder of Triple & Co. and one of Israel's first native AI CMO/CROs. Previously co-founder and CMO at Syte, where she was covered as Lihi Pinto Fryman. 15+ years in B2B SaaS and investment banking, $70M+ raised at companies where Lihi led marketing, across seed through growth rounds, revenue tripled repeatedly.
 
 ## Core pages
 
 - [Home](https://www.tripleandco.com/): Overview of the supervised AI marketing model
 - [About Lihi Pinto](https://www.tripleandco.com/about): Founder background and track record
-- [Services](https://www.tripleandco.com/services): How engagements work
-- [CMO as a Service](https://www.tripleandco.com/cmo-as-a-service): The core offering
-- [Fractional CMO for B2B](https://www.tripleandco.com/fractional-cmo-b2b): Fractional leadership model
-- [Marketing Agents](https://www.tripleandco.com/agents): The eight AI specialists in detail
-- [AI Marketing Agents Guide](https://www.tripleandco.com/ai-marketing-agents): How supervised AI agents work
+- [About, Hebrew](https://www.tripleandco.com/about-he): Hebrew-language founder page
+- [Services](https://www.tripleandco.com/services): How engagements work, full service catalogue
 - [Contact](https://www.tripleandco.com/contact): Book a diagnostic call with Lihi
+
+## Offerings
+
+- [CMO as a Service](https://www.tripleandco.com/cmo-as-a-service): The core marketing leadership offering
+- [CRO as a Service](https://www.tripleandco.com/cro-as-a-service): Chief Revenue Officer leadership on the same model
+- [Head of Growth](https://www.tripleandco.com/head-of-growth): Growth leadership engagement
+- [Fractional CMO for B2B](https://www.tripleandco.com/fractional-cmo-b2b): Fractional leadership model explained
+- [Revenue Diagnostic](https://www.tripleandco.com/revenue-diagnostic): Free diagnostic call, the main entry point
+- [AI Visibility Audit](https://www.tripleandco.com/ai-visibility-audit): Free audit of how AI answer engines describe your brand
+
+## AI marketing agents
+
+- [Marketing Agents](https://www.tripleandco.com/agents): The eight AI specialists in detail, with deliverables and pricing
+- [AI Marketing Agents Guide](https://www.tripleandco.com/ai-marketing-agents): How supervised AI marketing agents work
+
+## Generative engine optimization
+
+- [GEO for B2B](https://www.tripleandco.com/geo): What generative engine optimization is and how Triple & Co. runs it
+- [LLM SEO](https://www.tripleandco.com/llm-seo): How to get cited by AI search
+
+## Comparisons
+
+- [Fractional CMO vs agency vs in-house hire](https://www.tripleandco.com/fractional-cmo-vs-agency-vs-hire): Which model fits which stage
+- [AI marketing team vs agency](https://www.tripleandco.com/ai-marketing-team-vs-agency): Supervised AI delivery compared to agency retainers
+
+## Industries
+
+- [B2B SaaS marketing](https://www.tripleandco.com/b2b-saas-marketing)
+- [Fintech marketing](https://www.tripleandco.com/fintech-marketing)
+- [Cybersecurity marketing](https://www.tripleandco.com/cybersecurity-marketing)
+- [AI and deeptech marketing](https://www.tripleandco.com/ai-deeptech-marketing)
+
+## Markets
+
+- [B2B marketing in Israel](https://www.tripleandco.com/b2b-marketing-israel)
+- [B2B marketing in Tel Aviv](https://www.tripleandco.com/b2b-marketing-tel-aviv)
+- [B2B marketing in the USA](https://www.tripleandco.com/b2b-marketing-usa)
 
 ## Insights
 
 - [Insights Hub](https://www.tripleandco.com/insights): Articles on B2B growth in the AI era
-- [What is CMO as a Service](https://www.tripleandco.com/insights/what-is-cmo-as-a-service)
-- [Outsourced CMO in Israel: cost guide](https://www.tripleandco.com/insights/outsourced-cmo-israel-cost)
+- [What is CMO as a Service](https://www.tripleandco.com/insights/what-is-cmo-as-a-service): Complete guide for B2B founders
+- [Outsourced CMO in Israel: cost guide](https://www.tripleandco.com/insights/outsourced-cmo-israel-cost): Shekel price ranges by engagement model
 - [Native AI CMO marketing for B2B](https://www.tripleandco.com/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era)
+- [Revenue](https://www.tripleandco.com/insights/revenue): Revenue and pipeline articles
+- [Strategy](https://www.tripleandco.com/insights/strategy): Growth strategy articles
+- [Podcasts](https://www.tripleandco.com/insights/podcasts): Podcast episodes hosted by Lihi Pinto
+
+## Optional
+
+- [Privacy policy](https://www.tripleandco.com/privacy)
+- [Terms](https://www.tripleandco.com/terms)
+- [Sitemap](https://www.tripleandco.com/sitemap.xml)

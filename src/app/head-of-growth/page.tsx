@@ -57,11 +57,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Head of Growth as a Service",
   serviceType: "Fractional Head of Growth / Chief Growth Officer",
-  provider: {
-    "@type": "Organization",
-    name: "Triple & Co.",
-    url: "https://www.tripleandco.com",
-  },
+  provider: { "@id": "https://www.tripleandco.com/#organization" },
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",

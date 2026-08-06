@@ -22,8 +22,24 @@ export const metadata: Metadata = {
   },
 };
 
+// The Person node references #organization via worksFor. That node lives on the
+// homepage, so /about emits a minimal Organization stub in the same @graph to
+// keep the reference resolvable for crawlers that only fetch this page.
 const profileSchema = {
   "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://www.tripleandco.com/#organization",
+      name: "Triple & Co.",
+      url: "https://www.tripleandco.com",
+      sameAs: [
+        "https://www.linkedin.com/company/triple-and-co/",
+        "https://www.youtube.com/@Tripleandco",
+        "https://clutch.co/profile/triple-co",
+      ],
+    },
+    {
   "@type": "ProfilePage",
   "@id": "https://www.tripleandco.com/about#profile",
   url: "https://www.tripleandco.com/about",
@@ -49,9 +65,14 @@ const profileSchema = {
     ],
     sameAs: [
       "https://www.linkedin.com/in/lihipinto/",
+      "https://www.crunchbase.com/person/lihi-pinto-fryman",
+      "https://x.com/lihipinto",
       "https://blog.hubspot.com/marketing/author/lihi-pinto-fryman",
+      "https://www.womeninretail.com/author/lihipintofryman/",
     ],
-  },
+      },
+    },
+  ],
 };
 
 export default function AboutLayout({

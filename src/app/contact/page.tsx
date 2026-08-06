@@ -55,7 +55,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-extrabold text-purple-9">Location</h3>
                     <p className="text-sm text-purple-7 mt-1">
-                      Herzliya, Israel
+                      Hod Hasharon, Israel
                     </p>
                   </div>
                 </div>
@@ -97,10 +97,18 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-extrabold text-purple-9">LinkedIn</h3>
                     <a
+                      href="https://www.linkedin.com/company/triple-and-co/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-brand hover:text-brand-dark transition-colors mt-1 block"
+                    >
+                      linkedin.com/company/triple-and-co
+                    </a>
+                    <a
                       href="https://www.linkedin.com/in/lihipinto/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-brand hover:text-brand-dark transition-colors mt-1 inline-block"
+                      className="text-sm text-brand hover:text-brand-dark transition-colors block"
                     >
                       linkedin.com/in/lihipinto
                     </a>

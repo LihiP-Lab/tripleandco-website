@@ -130,12 +130,22 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href="https://www.linkedin.com/company/triple-and-co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={linkCls}
+                >
+                  Triple &amp; Co. on LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://www.linkedin.com/in/lihipinto/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={linkCls}
                 >
-                  LinkedIn
+                  Lihi Pinto on LinkedIn
                 </a>
               </li>
               <li>

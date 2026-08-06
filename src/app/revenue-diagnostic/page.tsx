@@ -53,11 +53,7 @@ const diagnosticSchema = {
   "@type": "Service",
   name: "Revenue Diagnostic",
   serviceType: "B2B revenue and funnel diagnostic",
-  provider: {
-    "@type": "Organization",
-    name: "Triple & Co.",
-    url: "https://www.tripleandco.com",
-  },
+  provider: { "@id": "https://www.tripleandco.com/#organization" },
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",
