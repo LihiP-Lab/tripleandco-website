@@ -93,11 +93,11 @@ const agents = [
 ];
 
 const comparisonRows = [
-  { label: "Time to first output", traditional: "30–90 days", agent: "1 week" },
+  { label: "Time to first output", traditional: "30-90 days", agent: "1 week" },
 
   { label: "Consistency", traditional: "Variable", agent: "Consistent by design" },
   { label: "Supervision needed", traditional: "Self-directed", agent: "Human-in-the-loop" },
-  { label: "Ramp time", traditional: "60–90 days", agent: "None" },
+  { label: "Ramp time", traditional: "60-90 days", agent: "None" },
   { label: "Brand knowledge", traditional: "Built over months", agent: "Configured from day one" },
 ];
 
@@ -497,7 +497,7 @@ export default function AIMarketingAgentsPage() {
             <div className="space-y-4">
               {[
                 {
-                  title: "Series A–C B2B SaaS companies",
+                  title: "Series A-C B2B SaaS companies",
                   body: "that need senior marketing execution without the cost of a full department",
                 },
                 {

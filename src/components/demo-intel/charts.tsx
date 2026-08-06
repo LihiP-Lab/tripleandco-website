@@ -16,7 +16,7 @@ function talkColor(v: number): string {
   return BAD;
 }
 
-/** Circular score gauge, 0–100, colored by call temperature. */
+/** Circular score gauge, 0-100, colored by call temperature. */
 export function ScoreRing({
   score,
   temp,
@@ -175,7 +175,7 @@ export function TalkRatioChart({
       <div className="mt-1 flex flex-wrap gap-x-4 gap-y-2">
         {[
           ["Good ≤55%", GOOD],
-          ["Watch 56–64%", WATCH],
+          ["Watch 56-64%", WATCH],
           ["Too high ≥65%", BAD],
         ].map(([label, color]) => (
           <span

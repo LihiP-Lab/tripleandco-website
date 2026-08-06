@@ -675,8 +675,8 @@ export function AccountPanel() {
       <section>
         <SectionHeading
           eyebrow="Account intelligence"
-          title="Akamai — post-POC review & expansion"
-          intro="A different call type than the demo funnel: an existing enterprise customer after five paid POCs. Built on Customer Success best practices and industry standards — deal health, expansion, account risk and next steps."
+          title="Akamai · post-POC review & expansion"
+          intro="A different call type than the demo funnel: an existing enterprise customer after five paid POCs. Built on Customer Success best practices and industry standards: deal health, expansion, account risk and next steps."
         />
         <Card>
           <div className="grid grid-cols-2 gap-x-6 gap-y-4 md:grid-cols-3">
@@ -943,7 +943,7 @@ export function AccountPanel() {
                   “{q.text}”
                 </blockquote>
                 <div className="mt-2 text-xs" style={{ color: "var(--c-text-dim)" }}>
-                  — {q.speaker}, {q.role}
+                  {q.speaker}, {q.role}
                 </div>
               </Card>
             );

@@ -445,7 +445,7 @@ export default function BuilderProfilePage() {
               <span className="gradient-text">Start building with it.</span>
             </h2>
             <p className="text-purple-4 mb-10 italic">
-              Limited availability. Currently accepting 2–3 new clients per
+              Limited availability. Currently accepting 2-3 new clients per
               quarter.
             </p>
           </ScrollReveal>

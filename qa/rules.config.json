@@ -1,0 +1,19 @@
+{
+  "_comment": "Rule exemptions. Every entry needs a reason. Keep this list short.",
+  "exempt": {
+    "no-em-dash": [
+      "src/lib/demo-intelligence-data.ts",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "README.md"
+    ],
+    "banned-vocabulary": [
+      "src/lib/demo-intelligence-data.ts"
+    ]
+  },
+  "_reasons": {
+    "src/lib/demo-intelligence-data.ts": "Verbatim client call transcript and quotes behind the gated /demo-intelligence demo. Not Triple marketing copy, so the house copy rules do not apply.",
+    "AGENTS.md": "Generated Next.js agent-rules block. Internal, never shipped to a reader.",
+    "README.md": "create-next-app boilerplate. Internal."
+  }
+}

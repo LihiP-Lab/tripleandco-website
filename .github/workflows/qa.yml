@@ -1,0 +1,229 @@
+name: QA
+
+# Runs three ways:
+#   push / pull_request  -> gate the change, tested against the build this commit produces
+#   Monday 06:00 UTC     -> sweep what the public actually sees at www.tripleandco.com
+#   workflow_dispatch    -> on demand, either target
+#
+# A failure emails lihi@tripleandco.com from the notify job at the bottom.
+
+on:
+  push:
+    branches: [initial-base]
+  pull_request:
+  schedule:
+    # 06:00 UTC Monday = 09:00 Asia/Jerusalem in summer, 08:00 in winter.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      target:
+        description: What to test
+        type: choice
+        options: [build, production]
+        default: build
+
+concurrency:
+  group: qa-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  # Scheduled runs test production. Everything else tests this commit's build.
+  TEST_PRODUCTION: ${{ github.event_name == 'schedule' || inputs.target == 'production' }}
+
+jobs:
+  # ---------------------------------------------------------------- static
+  # Source-level checks. Nothing to build, nothing to serve, seconds to run.
+  static:
+    name: Types, lint, house rules
+    if: github.event_name != 'schedule' && inputs.target != 'production'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Typecheck
+        run: npx tsc --noEmit
+      # Report-only for now. As of 2026-08-06 there are 4 pre-existing errors in
+      # src/app/about/page.tsx and src/app/about-he/page.tsx (setState inside an
+      # effect causing cascading renders, and refs read during render). Fix those,
+      # then delete this continue-on-error line so lint gates properly.
+      - name: Lint
+        continue-on-error: true
+        run: npm run lint
+      - name: House rules
+        id: rules
+        run: node qa/rules.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qa-rules
+          path: qa/results/rules.json
+          if-no-files-found: ignore
+
+  # ---------------------------------------------------------------- browser
+  # The real sweep: 36 routes in a real browser, desktop and mobile.
+  browser:
+    name: Route sweep and accessibility
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Resolve target
+        id: target
+        run: |
+          if [ "${TEST_PRODUCTION}" = "true" ]; then
+            echo "base_url=https://www.tripleandco.com" >> "$GITHUB_OUTPUT"
+            echo "Testing production" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "base_url=http://127.0.0.1:3000" >> "$GITHUB_OUTPUT"
+            echo "Testing the build from ${GITHUB_SHA:0:7}" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Install app dependencies
+        if: env.TEST_PRODUCTION != 'true'
+        run: npm ci
+
+      - name: Build
+        if: env.TEST_PRODUCTION != 'true'
+        run: npm run build
+
+      - name: Start server
+        if: env.TEST_PRODUCTION != 'true'
+        run: |
+          npx next start -p 3000 &
+          for i in $(seq 1 45); do
+            if curl -sf -o /dev/null http://127.0.0.1:3000/; then echo "up after ${i}s"; exit 0; fi
+            sleep 1
+          done
+          echo "server did not come up"; exit 1
+
+      - name: Install QA dependencies
+        working-directory: qa
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+
+      - name: Route sweep
+        working-directory: qa
+        env:
+          BASE_URL: ${{ steps.target.outputs.base_url }}
+        run: npx playwright test tests/routes.spec.ts
+
+      - name: Cross-route SEO checks
+        if: always()
+        working-directory: qa
+        env:
+          BASE_URL: ${{ steps.target.outputs.base_url }}
+        run: node aggregate.mjs
+
+      - name: Accessibility
+        if: always()
+        working-directory: qa
+        env:
+          BASE_URL: ${{ steps.target.outputs.base_url }}
+        run: npx playwright test tests/a11y.spec.ts --project=desktop
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qa-browser
+          path: |
+            qa/results/meta/
+            qa/results/a11y/
+            qa/results/aggregate.json
+            qa/results/playwright.json
+            qa/results/html-report/
+          retention-days: 14
+
+  # ---------------------------------------------------------------- report
+  # Claude reads the artifacts and writes the human-facing triage.
+  # Never fails the run: this job explains, it does not gate.
+  report:
+    name: Claude QA report
+    needs: [browser]
+    # Fork PRs get no secrets, so the Claude step cannot authenticate there.
+    if: always() && github.event.pull_request.head.repo.fork != true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      id-token: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: qa-artifacts
+        continue-on-error: true
+
+      - uses: anthropics/claude-code-action@v1
+        continue-on-error: true
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: /site-qa-report
+          claude_args: |
+            --max-turns 20
+            --allowedTools "Read,Glob,Grep,Bash(ls:*),Bash(cat:*),Bash(git diff:*),Bash(git log:*),Write"
+
+      - name: Publish report
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f qa-report.md ]; then
+            cat qa-report.md >> "$GITHUB_STEP_SUMMARY"
+            if [ "${{ github.event_name }}" = "pull_request" ]; then
+              gh pr comment "${{ github.event.pull_request.number }}" --body-file qa-report.md
+            fi
+          else
+            echo "No report produced. See the browser job artifacts." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+  # ---------------------------------------------------------------- notify
+  # Email on any failure. Requires two repository secrets:
+  #   SMTP_USERNAME  the Google Workspace address that sends the mail
+  #   SMTP_PASSWORD  a Google app password, not the account password
+  # Without them this step is skipped and GitHub's own failure email is the fallback.
+  notify:
+    name: Email on failure
+    needs: [static, browser]
+    if: always() && (needs.static.result == 'failure' || needs.browser.result == 'failure')
+    runs-on: ubuntu-latest
+    env:
+      # A secret cannot be read directly inside an `if`, so surface it as env first.
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+    steps:
+      - name: Send failure email
+        if: env.SMTP_PASSWORD != ''
+        uses: dawidd6/action-send-mail@v17
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          from: Triple QA <${{ secrets.SMTP_USERNAME }}>
+          to: lihi@tripleandco.com
+          subject: >-
+            [QA] tripleandco.com failed
+            ${{ github.event_name == 'schedule' && '(weekly production sweep)' || format('({0})', github.ref_name) }}
+          body: |
+            The QA run failed.
+
+            Trigger:   ${{ github.event_name }}
+            Branch:    ${{ github.ref_name }}
+            Commit:    ${{ github.sha }}
+            Static:    ${{ needs.static.result }}
+            Browser:   ${{ needs.browser.result }}
+
+            Full report and artifacts:
+            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

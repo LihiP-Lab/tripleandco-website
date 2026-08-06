@@ -269,7 +269,7 @@ export default function MegaPillarCMOPage() {
                     ["Execution included", "No", "Depends on team", "Yes (channel-specific)", "Yes (full-stack)"],
                     ["Speed to output", "Slow (depends on your team)", "Slow (ramp period)", "Medium", "Fast"],
                     ["Revenue accountability", "Low", "High", "Low", "High"],
-                    ["Cost (annual)", "$80K–$150K", "$250K–$400K+", "$60K–$200K", "Varies by scope"],
+                    ["Cost (annual)", "$80K-$150K", "$250K-$400K+", "$60K-$200K", "Varies by scope"],
                     ["Scales with growth", "Limited", "Yes (with team)", "Partial", "Yes"],
                     ["Brand/ICP continuity", "Medium", "High", "Low (team rotation)", "High"],
                     ["AI-native execution", "Rarely", "Rarely", "Rarely", "Yes (WIL model)"],
@@ -431,7 +431,7 @@ export default function MegaPillarCMOPage() {
             <div className="space-y-6 mb-8">
               {[
                 {
-                  label: "Weeks 1–2: The Revenue Diagnostic",
+                  label: "Weeks 1-2: The Revenue Diagnostic",
                   body: "Lihi conducts a structured audit of your current marketing function: ICP definition (or the absence of one), existing messaging, channel mix, conversion rates at each funnel stage, competitive positioning, and the specific revenue objective. The output is the Strategic Brief, the document that all agents and all outputs run from. This is not a generic onboarding questionnaire. It is a deep commercial diagnosis.",
                 },
                 {
@@ -439,7 +439,7 @@ export default function MegaPillarCMOPage() {
                   body: "All eight agents are initialized against the Strategic Brief. Initial asset production begins across every channel simultaneously: content, SEO architecture, paid campaign structure, LinkedIn content calendar, outbound sequences, competitive intelligence, reporting framework, and creative direction. By the end of Week 3, the marketing engine is running. Not planned. Running.",
                 },
                 {
-                  label: "Weeks 4–8: First Commercial Signals",
+                  label: "Weeks 4-8: First Commercial Signals",
                   body: "Campaigns are live. Content is publishing. Outbound is running. The first performance data arrives. Lihi reviews outputs weekly against the Strategic Brief, not as an editor but as a strategist checking whether the system is producing the right commercial signals. Adjustments happen at the brief level, not the asset level, so the entire system recalibrates together.",
                 },
                 {
