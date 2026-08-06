@@ -202,6 +202,7 @@ body {
   border-bottom-color: #372C3E;
 }
 
+/* Sunken page bands */
 [data-theme="dark"] section.bg-purple-05 {
   background: #0E0B10;
 }
@@ -210,24 +211,58 @@ body {
   background: #1B161F;
 }
 
-[data-theme="dark"] .bg-white:where(:not(section)) {
+/* Raised surfaces: cards, table rows, quote blocks, badges.
+   bg-purple-05 must be matched here as well as on <section>, otherwise every
+   non-section container keeps its light value while its text flips bright. */
+[data-theme="dark"] .bg-white:where(:not(section)),
+[data-theme="dark"] .bg-purple-05:where(:not(section)) {
   background: #29212F;
 }
 
+/* Text scale. Every step that appears on a dark surface needs a mapping here,
+   not just 9/7/6, or the unmapped steps render near-invisible. */
 [data-theme="dark"] .text-purple-9 {
   color: #E7E2EB;
+}
+
+[data-theme="dark"] .text-purple-8 {
+  color: #DCD3E1;
 }
 
 [data-theme="dark"] .text-purple-7 {
   color: #B8A7C4;
 }
 
-[data-theme="dark"] .text-purple-6 {
+[data-theme="dark"] .text-purple-6,
+[data-theme="dark"] .text-purple-5,
+[data-theme="dark"] .text-purple-4,
+[data-theme="dark"] .text-purple-3 {
   color: #A18AB0;
 }
 
 [data-theme="dark"] .border-purple-15 {
   border-color: #372C3E;
+}
+
+/* Pink tint surfaces: badges, secondary buttons, FAQ markers. Solid #FFEBF0
+   reads as a white blob on a dark page, so use a translucent brand wash that
+   composites correctly over whichever surface it sits on. */
+[data-theme="dark"] .bg-pink-05,
+[data-theme="dark"] .bg-pink-1 {
+  background: rgba(254, 52, 101, 0.12);
+}
+
+[data-theme="dark"] .hover\:bg-pink-1:hover {
+  background: rgba(254, 52, 101, 0.18);
+}
+
+/* Brand pink as a text colour needs lifting on dark surfaces. #FE3465 lands at
+   4.36:1 on the raised surface, just under AA; brand-light clears it at 5.26:1
+   and at 4.64:1 over the pink wash above. Button fills stay #FE3465 and are
+   handled separately in phase 3. */
+[data-theme="dark"] .text-brand,
+[data-theme="dark"] .eyebrow {
+  color: #FE5D84;
 }
 
 /* Accessibility focus ring */

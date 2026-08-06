@@ -335,7 +335,7 @@ export default function AIMarketingAgentsPage() {
                   <div className="absolute top-0 left-0 right-0 h-[3px] gradient-bar" />
                   <div className="flex flex-col sm:flex-row">
                     {/* Agent image */}
-                    <div className="sm:w-40 sm:shrink-0 bg-gradient-to-br from-purple-subtle to-bg flex items-end justify-center pt-4 sm:pt-0">
+                    <div className="sm:w-40 sm:shrink-0 bg-gradient-to-br from-brand/5 to-purple-5/10 flex items-end justify-center pt-4 sm:pt-0">
                       <Image
                         src={`/images/agents/${agent.id}.png`}
                         alt={`${agent.name}, ${agent.role}`}
@@ -360,7 +360,7 @@ export default function AIMarketingAgentsPage() {
                       <p className="text-purple-7 leading-relaxed text-sm mb-4">
                         {agent.description}
                       </p>
-                      <div className="flex flex-wrap items-center gap-3 pt-3 border-t border-purple-subtle">
+                      <div className="flex flex-wrap items-center gap-3 pt-3 border-t border-purple-15">
                         <Link
                           href="/revenue-diagnostic#book"
                           className="text-xs font-bold text-brand hover:underline"
@@ -404,10 +404,10 @@ export default function AIMarketingAgentsPage() {
                   Every agent runs under Lihi&rsquo;s supervision.{" "}
                   <span className="gradient-text">Zero unsupervised output.</span>
                 </h2>
-                <p className="text-purple-light leading-relaxed mb-4">
+                <p className="text-purple-2 leading-relaxed mb-4">
                   Lihi Pinto is a marketing and revenue executive with 15+ years scaling B2B SaaS startups. She helped raise over $70M and tripled revenue at a SaaS company repeatedly, and built the operating system that powers the agent team.
                 </p>
-                <p className="text-purple-light leading-relaxed mb-6">
+                <p className="text-purple-2 leading-relaxed mb-6">
                   Every deliverable passes Lihi before it reaches you. She reviews for brand alignment, strategic accuracy, and quality. You are not buying AI tools you manage yourself. You are getting an operator who runs them for you.
                 </p>
                 <Link
