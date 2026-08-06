@@ -66,7 +66,6 @@ const personSchema = {
   "@type": "Person",
   "@id": "https://www.tripleandco.com/#lihi-pinto",
   name: "Lihi Pinto",
-  alternateName: "Lihi Pinto Fryman",
   url: "https://www.tripleandco.com/about",
   image: "https://www.tripleandco.com/images/lihi-portrait.jpg",
   jobTitle: "Founder, CMO & CRO as a Service",
@@ -83,10 +82,7 @@ const personSchema = {
   ],
   sameAs: [
     "https://www.linkedin.com/in/lihipinto/",
-    "https://www.crunchbase.com/person/lihi-pinto-fryman",
     "https://x.com/lihipinto",
-    "https://blog.hubspot.com/marketing/author/lihi-pinto-fryman",
-    "https://www.womeninretail.com/author/lihipintofryman/",
   ],
   subjectOf: [
     {

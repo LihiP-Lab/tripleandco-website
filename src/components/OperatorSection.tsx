@@ -77,8 +77,8 @@ const pressLogos = [
   },
   {
     name: "HubSpot",
-    href: "https://blog.hubspot.com/marketing/author/lihi-pinto-fryman",
-    headline: "HubSpot marketing blog author",
+    href: "https://blog.hubspot.com/marketing",
+    headline: "HubSpot marketing blog contributor",
   },
 ];
 
