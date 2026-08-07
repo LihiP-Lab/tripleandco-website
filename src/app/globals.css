@@ -191,78 +191,168 @@ body {
   }
 }
 
-/* Dark mode overrides */
+/* ============================================================
+   DARK THEME LAYER
+   ============================================================
+   The light palette above is the source vocabulary: components use ordinary
+   utilities (text-purple-9, bg-white, border-purple-15, ...). This layer makes
+   that vocabulary theme-aware by remapping each utility BY ROLE under
+   [data-theme="dark"]. Components never change for dark mode.
+
+   THE CONTRACT, for humans and agents adding UI:
+   1. Use the existing utilities. A class listed below is dark-safe as-is.
+   2. If you introduce a color utility that is NOT covered below and it sits on
+      a light surface (bg-white / bg-purple-05 / bg-pink-*), add one rule to
+      this layer, taking its value from the --dk-* table. Do not hardcode a
+      second hex.
+   3. Never use text-purple-9..5 on bg-dark / bg-purple-9 heroes (use
+      text-white / text-purple-2 / text-pink-3 there); the remaps below assume
+      the light-surface role.
+   4. Surfaces that must stay dark in BOTH themes (heroes, the /agents
+      console) use bg-dark / bg-purple-9 / .console, which this layer never
+      touches.
+
+   All dark values live in the --dk-* table so the dark palette is tuned in
+   one place. Ratios quoted are WCAG against --dk-card #29212F (worst case).
+   ============================================================ */
+
+[data-theme="dark"] {
+  /* surfaces */
+  --dk-page: #1B161F;                       /* body, white page bands        */
+  --dk-band: #0E0B10;                       /* tinted (sunken) page bands    */
+  --dk-card: #29212F;                       /* raised: cards, rows, badges   */
+  --dk-card-hover: #332939;                 /* raised surface on hover       */
+  --dk-chip: #372C3E;                       /* small fills: avatars, pills   */
+  --dk-line: #372C3E;                       /* hairline borders              */
+  /* text */
+  --dk-ink: #E7E2EB;                        /* headings, strong    12.2:1    */
+  --dk-ink-2: #DCD3E1;                      /* subheadings         10.7:1    */
+  --dk-body: #B8A7C4;                       /* body copy            6.9:1    */
+  --dk-mut: #A18AB0;                        /* muted, captions      5.0:1    */
+  /* accent */
+  --dk-accent: #FE5D84;                     /* brand pink as text   5.3:1    */
+  --dk-accent-hover: #FE85A3;               /* brand text on hover  6.7:1    */
+  --dk-wash: rgba(254, 52, 101, 0.12);      /* pink tint surfaces            */
+  --dk-wash-strong: rgba(254, 52, 101, 0.18);
+  --dk-wash-mid: rgba(254, 52, 101, 0.10);
+  --dk-wash-faint: rgba(254, 52, 101, 0.06);
+  --dk-danger: #F87171;                     /* form errors          5.6:1    */
+}
+
+/* -- base ------------------------------------------------------------ */
 [data-theme="dark"] body {
-  background: #1B161F;
-  color: #E7E2EB;
+  background: var(--dk-page);
+  color: var(--dk-ink);
 }
 
 [data-theme="dark"] .glass-header {
   background: rgba(27, 22, 31, 0.92);
-  border-bottom-color: #372C3E;
+  border-bottom-color: var(--dk-line);
 }
 
-/* Sunken page bands */
+/* -- surfaces -------------------------------------------------------- */
+/* Page bands: <section> keeps the page-level alternation (page / sunken). */
+[data-theme="dark"] section.bg-white,
+[data-theme="dark"] .bg-background {
+  background: var(--dk-page);
+}
+
 [data-theme="dark"] section.bg-purple-05 {
-  background: #0E0B10;
+  background: var(--dk-band);
 }
 
-[data-theme="dark"] section.bg-white {
-  background: #1B161F;
-}
-
-/* Raised surfaces: cards, table rows, quote blocks, badges.
-   bg-purple-05 must be matched here as well as on <section>, otherwise every
-   non-section container keeps its light value while its text flips bright. */
+/* Raised containers: any non-section bg-white / bg-purple-05 (cards, table
+   rows, quote blocks) plus the bg-surface alias. The :not(section) split is
+   what keeps band vs card depth correct. */
 [data-theme="dark"] .bg-white:where(:not(section)),
-[data-theme="dark"] .bg-purple-05:where(:not(section)) {
-  background: #29212F;
+[data-theme="dark"] .bg-purple-05:where(:not(section)),
+[data-theme="dark"] .bg-surface {
+  background: var(--dk-card);
 }
 
-/* Text scale. Every step that appears on a dark surface needs a mapping here,
-   not just 9/7/6, or the unmapped steps render near-invisible. */
-[data-theme="dark"] .text-purple-9 {
-  color: #E7E2EB;
+[data-theme="dark"] .hover\:bg-purple-05:hover {
+  background: var(--dk-card-hover);
+}
+
+[data-theme="dark"] .bg-purple-15,
+[data-theme="dark"] .hover\:bg-purple-1:hover {
+  background: var(--dk-chip);
+}
+
+[data-theme="dark"] .bg-white\/95 {
+  background: rgba(27, 22, 31, 0.95);
+}
+
+/* -- borders --------------------------------------------------------- */
+[data-theme="dark"] .border-purple-15,
+[data-theme="dark"] .border-border {
+  border-color: var(--dk-line);
+}
+
+/* -- text scale (light-surface roles) -------------------------------- */
+[data-theme="dark"] .text-purple-9,
+[data-theme="dark"] .hover\:text-purple-9:hover,
+[data-theme="dark"] .text-foreground,
+[data-theme="dark"] .hover\:text-foreground:hover {
+  color: var(--dk-ink);
 }
 
 [data-theme="dark"] .text-purple-8 {
-  color: #DCD3E1;
+  color: var(--dk-ink-2);
 }
 
 [data-theme="dark"] .text-purple-7 {
-  color: #B8A7C4;
+  color: var(--dk-body);
 }
 
 [data-theme="dark"] .text-purple-6,
 [data-theme="dark"] .text-purple-5,
 [data-theme="dark"] .text-purple-4,
-[data-theme="dark"] .text-purple-3 {
-  color: #A18AB0;
+[data-theme="dark"] .text-purple-3,
+[data-theme="dark"] .text-muted {
+  color: var(--dk-mut);
 }
 
-[data-theme="dark"] .border-purple-15 {
-  border-color: #372C3E;
-}
-
-/* Pink tint surfaces: badges, secondary buttons, FAQ markers. Solid #FFEBF0
-   reads as a white blob on a dark page, so use a translucent brand wash that
-   composites correctly over whichever surface it sits on. */
+/* -- pink tint surfaces ---------------------------------------------- */
+/* Solid #FFEBF0 reads as a white blob on a dark page; a translucent brand
+   wash composites correctly over whichever surface it sits on. */
 [data-theme="dark"] .bg-pink-05,
-[data-theme="dark"] .bg-pink-1 {
-  background: rgba(254, 52, 101, 0.12);
+[data-theme="dark"] .bg-pink-1,
+[data-theme="dark"] .hover\:bg-pink-05:hover {
+  background: var(--dk-wash);
 }
 
 [data-theme="dark"] .hover\:bg-pink-1:hover {
-  background: rgba(254, 52, 101, 0.18);
+  background: var(--dk-wash-strong);
 }
 
-/* Brand pink as a text colour needs lifting on dark surfaces. #FE3465 lands at
-   4.36:1 on the raised surface, just under AA; brand-light clears it at 5.26:1
-   and at 4.64:1 over the pink wash above. Button fills stay #FE3465 and are
-   handled separately in phase 3. */
+[data-theme="dark"] .bg-pink-05\/40 {
+  background: var(--dk-wash-mid);
+}
+
+[data-theme="dark"] .bg-pink-05\/10 {
+  background: var(--dk-wash-faint);
+}
+
+/* -- brand accent as text -------------------------------------------- */
+/* #FE3465 lands at 4.36:1 on the raised surface, just under AA; brand-light
+   clears it. hover:text-brand-dark (#CD2A51, a LIGHT-mode hover darkening)
+   would hover to ~2.8:1 on dark, so it brightens instead. Button FILLS stay
+   #FE3465; that is a light-mode AA issue handled in phase 3. */
 [data-theme="dark"] .text-brand,
+[data-theme="dark"] .hover\:text-brand:hover,
+[data-theme="dark"] .group:hover .group-hover\:text-brand,
 [data-theme="dark"] .eyebrow {
-  color: #FE5D84;
+  color: var(--dk-accent);
+}
+
+[data-theme="dark"] .hover\:text-brand-dark:hover {
+  color: var(--dk-accent-hover);
+}
+
+/* -- feedback -------------------------------------------------------- */
+[data-theme="dark"] .text-red-600 {
+  color: var(--dk-danger);
 }
 
 /* Accessibility focus ring */
