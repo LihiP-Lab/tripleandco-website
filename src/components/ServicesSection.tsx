@@ -225,7 +225,7 @@ export function ServicesSection() {
       }`}
     >
       <div className={`border-t pt-5 ${dark ? "border-purple-8" : "border-purple-15"}`}>
-        <p className={`text-[11px] font-bold uppercase tracking-[0.14em] mb-2.5 ${dark ? "text-purple-4" : "text-purple-5"}`}>
+        <p className={`text-[11px] font-bold uppercase tracking-[0.14em] mb-2.5 ${dark ? "text-purple-4" : "text-purple-6"}`}>
           What&apos;s included
         </p>
         <ul className="mb-4 space-y-1.5">
@@ -344,7 +344,7 @@ export function ServicesSection() {
                 >
                   {featuredCmo.cta} &#8594;
                 </Link>
-                <span className="hidden text-xs font-medium text-purple-3 sm:block">Click for details</span>
+                <span className="hidden text-xs font-medium text-purple-6 sm:block">Click for details</span>
               </div>
             </div>
           </ScrollReveal>
@@ -406,7 +406,7 @@ export function ServicesSection() {
                   >
                     {s.cta} &#8594;
                   </Link>
-                  <span className="hidden text-xs font-medium text-purple-3 sm:block">Click for details</span>
+                  <span className="hidden text-xs font-medium text-purple-6 sm:block">Click for details</span>
                 </div>
               </div>
             </ScrollReveal>

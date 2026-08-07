@@ -360,7 +360,7 @@ export function OperatorSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={headline}
-                  className="font-bold tracking-tight text-purple-5 opacity-80 transition-all hover:text-brand hover:opacity-100"
+                  className="font-bold tracking-tight text-purple-6 transition-all hover:text-brand"
                 >
                   {name}
                 </a>

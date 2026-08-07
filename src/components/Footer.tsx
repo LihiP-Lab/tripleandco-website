@@ -157,7 +157,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-purple-7 pt-6 flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-purple-5">
+        <div className="border-t border-purple-7 pt-6 flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-purple-4">
           <div>
             &copy; {new Date().getFullYear()} Triple &amp; Co. All rights
             reserved.

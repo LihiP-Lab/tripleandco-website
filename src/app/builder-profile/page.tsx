@@ -277,7 +277,7 @@ export default function BuilderProfilePage() {
                 <div className="relative bg-white rounded-2xl border border-purple-15 p-8 shadow-[var(--shadow-base)] h-full">
                   <div className="absolute top-0 left-0 right-0 h-1 gradient-bar rounded-t-2xl" />
                   <div className="flex items-start gap-5 mb-4">
-                    <span className="font-mono text-3xl font-extrabold text-purple-3">
+                    <span className="font-mono text-3xl font-extrabold text-purple-5">
                       {phase.num}
                     </span>
                     <h3 className="text-lg font-extrabold text-purple-9 pt-1">

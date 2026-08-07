@@ -74,7 +74,7 @@ function ActivityFeed() {
           <span className="signal-dot" aria-hidden="true" />
           command-center &#8250; a typical week
         </span>
-        <span className="mono-label" style={{ color: "rgba(244,244,248,0.45)" }}>
+        <span className="mono-label" style={{ color: "rgba(244,244,248,0.62)" }}>
           8 specialist agents
         </span>
       </div>
@@ -99,8 +99,8 @@ function ActivityFeed() {
                 </span>{" "}
                 <span className="text-purple-3">{e.action}</span>
               </p>
-              <p className="mt-1 flex items-center gap-2 text-[11px]" style={{ color: "rgba(244,244,248,0.45)" }}>
-                <span style={{ color: idx > 0 ? "#3DE1FF" : "rgba(244,244,248,0.4)" }}>
+              <p className="mt-1 flex items-center gap-2 text-[11px]" style={{ color: "rgba(244,244,248,0.62)" }}>
+                <span style={{ color: idx > 0 ? "#3DE1FF" : "rgba(244,244,248,0.55)" }}>
                   {idx > 0 ? "reviewed by Lihi" : "in review"}
                 </span>
               </p>

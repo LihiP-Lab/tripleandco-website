@@ -65,7 +65,7 @@ export default function MegaPillarCMOPage() {
           />
           <div className="max-w-[800px] mt-6">
             <div className="flex flex-wrap gap-2 mb-5">
-              <span className="rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
+              <span className="rounded-full bg-pink-05 px-3 py-1 text-xs font-bold text-brand-dark">
                 CMO &amp; CRO as a Service
               </span>
               <span className="rounded-full bg-purple-05 border border-purple-15 px-3 py-1 text-xs font-semibold text-purple-6">
@@ -412,7 +412,7 @@ export default function MegaPillarCMOPage() {
                 "Companies that need a senior executive primarily to manage a large internal marketing team. At that scale, a full-time CMO is the right answer.",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-purple-7 leading-relaxed">
-                  <span className="text-purple-4 mt-1 shrink-0">&#215;</span>
+                  <span className="text-purple-6 mt-1 shrink-0">&#215;</span>
                   <span>{item}</span>
                 </li>
               ))}

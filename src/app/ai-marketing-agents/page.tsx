@@ -142,14 +142,17 @@ const faqSchema = {
 };
 
 function ModelBadge({ model }: { model: string }) {
+  // Brand-palette badges (stock Tailwind blue/green appear nowhere else on the
+  // site and had no dark treatment). Same tint for AA-safe contrast; the model
+  // tier is signalled by border strength instead of hue.
   const colors: Record<string, string> = {
-    "Claude Opus": "bg-purple-100 text-purple-800",
-    "Claude Sonnet": "bg-blue-100 text-blue-800",
-    "Claude Haiku": "bg-green-100 text-green-800",
+    "Claude Opus": "bg-pink-05 text-brand-dark border border-brand/30",
+    "Claude Sonnet": "bg-pink-05 text-brand-dark border border-brand/15",
+    "Claude Haiku": "bg-pink-05 text-brand-dark",
   };
   return (
     <span
-      className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${colors[model] ?? "bg-gray-100 text-gray-800"}`}
+      className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${colors[model] ?? "bg-purple-05 text-purple-7"}`}
     >
       {model}
     </span>

@@ -111,7 +111,7 @@ export default function OutsourcedCmoIsraelCostPage() {
           />
           <div className="max-w-[800px] mt-6">
             <div className="flex flex-wrap gap-2 mb-5">
-              <span className="rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
+              <span className="rounded-full bg-pink-05 px-3 py-1 text-xs font-bold text-brand-dark">
                 CMO &amp; CRO as a Service
               </span>
               <span className="rounded-full bg-purple-05 border border-purple-15 px-3 py-1 text-xs font-semibold text-purple-6">

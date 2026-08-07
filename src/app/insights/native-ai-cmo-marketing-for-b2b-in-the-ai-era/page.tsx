@@ -65,7 +65,7 @@ export default function Article3Page() {
           />
           <div className="max-w-[800px] mt-6">
             <div className="flex flex-wrap gap-2 mb-5">
-              <span className="rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
+              <span className="rounded-full bg-pink-05 px-3 py-1 text-xs font-bold text-brand-dark">
                 Native AI Marketing
               </span>
               <span className="rounded-full bg-purple-05 border border-purple-15 px-3 py-1 text-xs font-semibold text-purple-6">
@@ -153,7 +153,7 @@ export default function Article3Page() {
                 "It is not automation that publishes content without a human reviewing it against a strategic objective.",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-purple-7 leading-relaxed">
-                  <span className="text-purple-4 mt-1 shrink-0">&#215;</span>
+                  <span className="text-purple-6 mt-1 shrink-0">&#215;</span>
                   <span>{item}</span>
                 </li>
               ))}

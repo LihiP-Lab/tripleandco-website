@@ -253,7 +253,7 @@ export default function InsightsPage() {
                   Home
                 </Link>
               </li>
-              <li aria-hidden className="text-purple-6">
+              <li aria-hidden className="text-purple-4">
                 /
               </li>
               <li className="text-purple-2 font-medium">Insights</li>
@@ -414,7 +414,7 @@ export default function InsightsPage() {
                           "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.18) 100%)",
                       }}
                     />
-                    <span className="absolute top-4 left-4 rounded-full border border-purple-5 px-3 py-1.5 text-[11px] font-semibold uppercase text-purple-5 bg-purple-9/40 backdrop-blur-sm">
+                    <span className="absolute top-4 left-4 rounded-full border border-purple-7 px-3 py-1.5 text-[11px] font-semibold uppercase text-purple-2 bg-purple-9/80 backdrop-blur-sm">
                       {article.category}
                     </span>
                     {article.pillar && (

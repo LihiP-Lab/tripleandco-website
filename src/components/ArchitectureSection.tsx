@@ -95,7 +95,7 @@ export function ArchitectureSection() {
                 </div>
               </div>
             </div>
-            <div className="text-center text-purple-3 text-[22px] leading-none my-2">
+            <div className="text-center text-purple-6 text-[22px] leading-none my-2">
               &#8597;
             </div>
           </ScrollReveal>
@@ -122,7 +122,7 @@ export function ArchitectureSection() {
                 </div>
               </div>
             </div>
-            <div className="text-center text-purple-3 text-[22px] leading-none my-2">
+            <div className="text-center text-purple-6 text-[22px] leading-none my-2">
               &#8597;
             </div>
           </ScrollReveal>

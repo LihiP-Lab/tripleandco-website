@@ -204,7 +204,7 @@ export default function AgentsPage() {
                     {door.featured && (
                       <span
                         className="mono-label absolute right-5 top-5 rounded px-1.5 py-0.5 text-white"
-                        style={{ background: "var(--c-brand)", fontSize: 9 }}
+                        style={{ background: "var(--color-brand-dark)", fontSize: 9 }}
                       >
                         Recommended
                       </span>

@@ -76,7 +76,7 @@ export default function PodcastsPage() {
                   <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3zM19 10v2a7 7 0 01-14 0v-2H3v2a9 9 0 004 7.47V22h2v-2.54A8.96 8.96 0 0012 20a8.96 8.96 0 003-.54V22h2v-2.53A9 9 0 0021 12v-2h-2z" />
                 </svg>
               </div>
-              <span className="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">
+              <span className="inline-flex items-center rounded-full bg-pink-05 px-3 py-1 text-xs font-bold text-brand-dark">
                 Podcast
               </span>
             </div>

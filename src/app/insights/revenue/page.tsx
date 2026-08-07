@@ -141,7 +141,7 @@ export default function RevenuePage() {
           />
 
           <div className="max-w-3xl">
-            <span className="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand mb-4">
+            <span className="inline-flex items-center rounded-full bg-pink-05 px-3 py-1 text-xs font-bold text-brand-dark mb-4">
               Revenue
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] text-purple-9 mb-4">

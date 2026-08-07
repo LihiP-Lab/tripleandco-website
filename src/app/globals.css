@@ -26,6 +26,7 @@
   --color-brand: #FE3465;
   --color-brand-light: #FE5D84;
   --color-brand-dark: #CD2A51;
+  --color-brand-darker: #A81F41;
 
   /* Semantic */
   --color-background: #F3F0F5;
@@ -355,6 +356,39 @@ body {
   color: var(--dk-danger);
 }
 
+/* ============================================================
+   ACTION FILLS (WCAG AA), both themes
+   ============================================================
+   White text on brand pink #FE3465 measures 3.56:1 and fails AA on every
+   solid CTA. Fills therefore render one step darker: rest #CD2A51 (5.2:1),
+   hover #A81F41 (7.2:1). Hot pink #FE3465 stays the brand accent for text,
+   borders, gradients, and glows, which is where the brand reads from.
+
+   This remaps the existing utilities so no component changes:
+   - bg-brand           -> brand-dark   (rest state of every solid CTA)
+   - hover:bg-brand-dark-> brand-darker (the step that kept hover visible
+                                         once rest became brand-dark)
+   ============================================================ */
+
+.bg-brand {
+  background-color: var(--color-brand-dark);
+}
+
+.hover\:bg-brand:hover,
+.focus\:bg-brand:focus {
+  background-color: var(--color-brand-dark);
+}
+
+.hover\:bg-brand-dark:hover {
+  background-color: var(--color-brand-darker);
+}
+
+/* text-brand-dark at rest (ModelBadge, insight pills): fine on light tints,
+   ~2.8:1 on dark surfaces, so it lifts in dark mode per the theme layer. */
+[data-theme="dark"] .text-brand-dark {
+  color: var(--dk-accent-hover);
+}
+
 /* Accessibility focus ring */
 *:focus-visible {
   outline: 2px solid var(--color-brand);
@@ -362,12 +396,25 @@ body {
   border-radius: 4px;
 }
 
-/* Eyebrow label */
+/* Eyebrow label. Brand-dark, not hot pink: at 11px this is small text and
+   #FE3465 on white is 3.56:1 (AA needs 4.5). #CD2A51 is 5.2:1. The dark
+   theme layer lifts it to brand-light on dark surfaces. */
 .eyebrow {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  color: var(--color-brand-dark);
+}
+
+/* Eyebrows sitting on the always-dark hero surfaces keep hot pink: #CD2A51
+   on #1B161F is 3.43:1, while #FE3465 clears at 4.99:1. This intentionally
+   also wins over the dark-layer lift (later in the cascade, same
+   specificity), which is fine: 4.99:1 passes there too. */
+.bg-dark .eyebrow,
+.bg-purple-9 .eyebrow,
+.bg-purple-85 .eyebrow,
+.bg-purple-95 .eyebrow {
   color: var(--color-brand);
 }
 
@@ -512,7 +559,7 @@ body {
 .chip:hover { color: var(--c-text); border-color: var(--c-border-strong); }
 .chip[data-active="true"] {
   color: #fff;
-  background: var(--c-brand);
+  background: var(--color-brand-dark); /* AA: white on #FE3465 is 3.56:1 */
   border-color: var(--c-brand);
   box-shadow: 0 0 18px rgba(254, 52, 101, 0.4);
 }
