@@ -78,6 +78,61 @@ for (const p of pages) {
   }
 }
 
+// ---- links and images resolve ----
+// Done here, once, rather than per route. The same 36 pages reference the same
+// ~150 URLs about 1,500 times between them. Checking per route meant firing all
+// 1,500 at a single `next start` from several parallel workers, which made it
+// drop connections and report working links as broken. Deduplicate first, cap
+// the concurrency, and retry once before believing a failure.
+const allPages = readdirSync(META)
+  .filter((f) => f.startsWith("desktop__"))
+  .map((f) => JSON.parse(readFileSync(join(META, f), "utf8")));
+
+const referencedBy = new Map(); // url -> Set(routes)
+const note = (url, route) => {
+  if (!url || url.startsWith("data:")) return;
+  if (!referencedBy.has(url)) referencedBy.set(url, new Set());
+  referencedBy.get(url).add(route);
+};
+for (const p of allPages) {
+  for (const href of p.links ?? []) note(new URL(href, BASE).toString(), p.route);
+  for (const img of p.images ?? []) note(img.src, p.route);
+}
+
+async function probe(url) {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const res = await fetch(url, { redirect: "follow", signal: AbortSignal.timeout(15_000) });
+      return res.status;
+    } catch {
+      if (attempt === 0) await new Promise((r) => setTimeout(r, 750));
+    }
+  }
+  return 0;
+}
+
+const urls = [...referencedBy.keys()];
+const CONCURRENCY = 4;
+let cursor = 0;
+const statuses = new Map();
+await Promise.all(
+  Array.from({ length: CONCURRENCY }, async () => {
+    while (cursor < urls.length) {
+      const url = urls[cursor++];
+      statuses.set(url, await probe(url));
+    }
+  })
+);
+
+for (const [url, status] of statuses) {
+  if (status > 0 && status < 400) continue;
+  const where = [...referencedBy.get(url)].sort().slice(0, 5).join(", ");
+  const label = status === 0 ? "unreachable after a retry" : `HTTP ${status}`;
+  add("error", url.includes("/_next/image") ? "image-broken" : "link-broken", where,
+    `${url} is ${label}. Referenced by ${referencedBy.get(url).size} route(s).`);
+}
+console.log(`Checked ${urls.length} unique URLs referenced across ${allPages.length} pages.`);
+
 // ---- sitemap coverage ----
 try {
   const res = await fetch(`${BASE}/sitemap.xml`);

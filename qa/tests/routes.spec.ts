@@ -25,11 +25,8 @@ const IGNORED_CONSOLE = [
 // and against nothing in production, so a failure here is never actionable.
 const IGNORED_RESOURCES = [/\/_vercel\//, /vitals\.vercel-insights\.com/, /va\.vercel-scripts\.com/];
 
-// Link checks are cached per worker so a nav link shared by 36 pages is fetched once.
-const linkCache = new Map<string, number>();
-
 for (const route of routes) {
-  test(`route ${route}`, async ({ page, request, baseURL }, testInfo) => {
+  test(`route ${route}`, async ({ page, baseURL }, testInfo) => {
     const consoleErrors: string[] = [];
     const failedRequests: string[] = [];
     // Third-party embeds (Calendly, HubSpot, fonts) fail for reasons we do not
@@ -116,50 +113,15 @@ for (const route of routes) {
     }
 
     // ---- images ----
-    // naturalWidth is not a reliable signal here: theme-swapped and lazy images
-    // are legitimately never painted. Fetch the source instead.
-    const brokenImages: string[] = [];
-    if (testInfo.project.name === "desktop") {
-      for (const src of [...new Set(meta.images.map((i) => i.src).filter(Boolean))]) {
-        if (src.startsWith("data:")) continue;
-        if (!linkCache.has(src)) {
-          let status = 0;
-          try {
-            status = (await request.get(src, { timeout: 10_000 })).status();
-          } catch {
-            status = 0;
-          }
-          linkCache.set(src, status);
-        }
-        const status = linkCache.get(src)!;
-        if (status === 0 || status >= 400) brokenImages.push(`${src} -> ${status || "unreachable"}`);
-      }
-    }
-    expect(brokenImages, `${route} has images that do not resolve: ${brokenImages.join(", ")}`).toHaveLength(0);
+    // Only alt text is checked here. Whether a URL resolves is checked once,
+    // globally, in aggregate.mjs. Doing it per route fired ~1,500 concurrent
+    // requests at a single `next start` and it dropped connections, which
+    // looked exactly like broken links.
     const missingAlt = meta.images.filter((i) => i.alt === null);
     expect(missingAlt, `${route} has ${missingAlt.length} <img> without an alt attribute: ${missingAlt.map((i) => i.src).join(", ")}`).toHaveLength(0);
 
-    // ---- internal links resolve ----
-    // Desktop only. The link graph is the same on mobile, so checking twice
-    // doubles the runtime and finds nothing new.
-    const broken: string[] = [];
-    if (testInfo.project.name === "desktop")
-    for (const href of [...new Set(meta.links)]) {
-      const url = new URL(href, baseURL).toString();
-      if (!linkCache.has(url)) {
-        let status = 0;
-        try {
-          const res = await request.get(url, { maxRedirects: 5, timeout: 10_000 });
-          status = res.status();
-        } catch {
-          status = 0;
-        }
-        linkCache.set(url, status);
-      }
-      const status = linkCache.get(url)!;
-      if (status === 0 || status >= 400) broken.push(`${href} -> ${status || "unreachable"}`);
-    }
-    expect(broken, `${route} links to broken URLs: ${broken.join(", ")}`).toHaveLength(0);
+    // Internal links are collected into the meta artifact above and verified
+    // once, globally, by aggregate.mjs. See the note on images.
 
     // ---- runtime errors ----
     expect(consoleErrors, `${route} logged console errors: ${consoleErrors.join(" | ")}`).toHaveLength(0);

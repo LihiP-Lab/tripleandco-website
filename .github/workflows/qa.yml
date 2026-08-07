@@ -149,8 +149,14 @@ jobs:
   report:
     name: Claude QA report
     needs: [browser]
-    # Fork PRs get no secrets, so the Claude step cannot authenticate there.
-    if: always() && github.event.pull_request.head.repo.fork != true
+    # The Claude action does not support the `push` event, so this job is limited
+    # to the events it does handle. On a push, the artifacts and the workflow
+    # summary carry the findings instead.
+    # Fork PRs also get no secrets, so the action cannot authenticate there.
+    if: >-
+      always()
+      && github.event_name != 'push'
+      && github.event.pull_request.head.repo.fork != true
     runs-on: ubuntu-latest
     permissions:
       contents: read
