@@ -128,22 +128,22 @@ export function ArchitectureSection() {
           </ScrollReveal>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-[960px] mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 auto-rows-fr gap-5 max-w-[960px] mx-auto">
           {agents.map((agent, i) => (
-            <ScrollReveal key={agent.name} delay={0.15 + i * 0.06}>
+            <ScrollReveal key={agent.name} delay={0.15 + i * 0.06} className="h-full">
               <Link
                 href={`/agents#${agent.name.toLowerCase()}`}
-                className="relative block w-full bg-white rounded-2xl shadow-[var(--shadow-base)] px-5 py-6 text-center overflow-hidden border border-purple-15 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[var(--shadow-hover)] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+                className="relative flex h-full w-full flex-col bg-white rounded-2xl shadow-[var(--shadow-base)] px-5 py-6 text-center overflow-hidden border border-purple-15 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[var(--shadow-hover)] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
                 aria-label={`View ${agent.name}'s full profile`}
               >
                 <div className="absolute top-0 left-0 right-0 h-1 gradient-bar" />
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-purple-05 overflow-hidden">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-purple-05 overflow-hidden p-2">
                   <Image
                     src={agent.image}
                     alt={`${agent.name}, AI marketing agent`}
-                    width={96}
-                    height={96}
-                    className="w-full h-full object-cover"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="font-extrabold text-lg text-purple-9 mb-1.5">

@@ -133,13 +133,13 @@ export function AgentCarousel() {
                   href={`/agents#${agent.name.toLowerCase()}`}
                   className="group relative flex-shrink-0 w-[200px] rounded-2xl p-5 text-center snap-start transition-all duration-300 hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
                 >
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden">
+                  <div className="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden p-1">
                     <Image
                       src={agent.image}
                       alt={agent.name}
                       width={64}
                       height={64}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   <h3 className="font-extrabold text-base text-purple-9 mb-1">
