@@ -47,5 +47,19 @@ export default defineConfig({
         launchOptions: chromiumPath ? { executablePath: chromiumPath } : {},
       },
     },
+    // Dark-mode a11y leg. colorScheme: "dark" flips prefers-color-scheme,
+    // which ThemeProvider reads to set data-theme="dark" -- the same path a
+    // real dark-mode visitor takes. Scoped to the a11y spec so the route
+    // sweep does not run a third time.
+    {
+      name: "dark",
+      testMatch: /a11y/,
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 1440, height: 900 },
+        colorScheme: "dark",
+        launchOptions: chromiumPath ? { executablePath: chromiumPath } : {},
+      },
+    },
   ],
 });

@@ -405,7 +405,7 @@ function ServiceBlock({ service }: { service: Service }) {
   return (
     <div
       id={service.id}
-      className="relative bg-white rounded-2xl p-8 lg:p-11 shadow-[var(--shadow-base)] border border-purple-15 card-gradient-top overflow-hidden scroll-mt-32"
+      className="relative bg-white rounded-2xl p-8 lg:p-11 shadow-[var(--shadow-base)] border border-purple-15 card-gradient-top overflow-hidden scroll-mt-40"
     >
       <div className="flex items-center gap-4 mb-2">
         <div className="w-11 h-11 rounded-xl bg-pink-05 flex items-center justify-center text-brand flex-shrink-0">

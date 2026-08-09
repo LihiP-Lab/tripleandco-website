@@ -129,7 +129,7 @@ jobs:
         working-directory: qa
         env:
           BASE_URL: ${{ steps.target.outputs.base_url }}
-        run: npx playwright test tests/a11y.spec.ts --project=desktop
+        run: npx playwright test tests/a11y.spec.ts --project=desktop --project=dark
 
       - uses: actions/upload-artifact@v4
         if: always()

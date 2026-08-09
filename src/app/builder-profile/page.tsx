@@ -257,7 +257,7 @@ export default function BuilderProfilePage() {
       {/* 06 · The Framework, 4 phases */}
       <section
         id="bpl-framework"
-        className="py-20 lg:py-28 bg-white scroll-mt-20"
+        className="py-20 lg:py-28 bg-white scroll-mt-24"
       >
         <div className="mx-auto max-w-[1200px] px-8">
           <ScrollReveal>

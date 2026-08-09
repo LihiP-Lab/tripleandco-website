@@ -1,10 +1,9 @@
 {
-  "_comment": "Accessibility debt that existed when the QA suite was added on 2026-08-06. These do not fail the gate; anything NEW does. Shrink this file over time, do not grow it.",
-  "generated": "2026-08-06",
+  "_comment": "Accessibility debt accepted at the date below. These do not fail the gate; anything NEW does. Shrink this file over time, do not grow it. Regenerate with `npm run a11y:baseline` after an a11y run.",
+  "generated": "2026-08-08",
   "accepted": {
     "/": [
       "aria-hidden-focus",
-      "color-contrast",
       "nested-interactive"
     ],
     "/about": [
@@ -18,9 +17,6 @@
       "color-contrast"
     ],
     "/ai-deeptech-marketing": [
-      "color-contrast"
-    ],
-    "/ai-marketing-agents": [
       "color-contrast"
     ],
     "/ai-marketing-team-vs-agency": [
@@ -41,9 +37,6 @@
     "/b2b-saas-marketing": [
       "color-contrast"
     ],
-    "/builder-profile": [
-      "color-contrast"
-    ],
     "/cmo-as-a-service": [
       "color-contrast"
     ],
@@ -54,12 +47,6 @@
       "color-contrast"
     ],
     "/cybersecurity-marketing": [
-      "color-contrast"
-    ],
-    "/demo-intelligence": [
-      "color-contrast"
-    ],
-    "/demo-intelligence/access": [
       "color-contrast"
     ],
     "/fintech-marketing": [
@@ -86,13 +73,7 @@
     "/insights/outsourced-cmo-israel-cost": [
       "color-contrast"
     ],
-    "/insights/podcasts": [
-      "color-contrast"
-    ],
     "/insights/revenue": [
-      "color-contrast"
-    ],
-    "/insights/strategy": [
       "color-contrast"
     ],
     "/insights/what-is-cmo-as-a-service": [
@@ -105,8 +86,7 @@
       "color-contrast"
     ],
     "/revenue-diagnostic": [
-      "aria-prohibited-attr",
-      "color-contrast"
+      "aria-prohibited-attr"
     ],
     "/services": [
       "color-contrast"

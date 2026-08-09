@@ -295,7 +295,7 @@ export default function RevenueDiagnosticPage() {
       </section>
 
       {/* Booking */}
-      <section id="book" className="py-20 lg:py-28 bg-purple-05 scroll-mt-20">
+      <section id="book" className="py-20 lg:py-28 bg-purple-05 scroll-mt-24">
         <div className="mx-auto max-w-[1200px] px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>

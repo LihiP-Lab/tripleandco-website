@@ -5,7 +5,8 @@
   "description": "QA suite for tripleandco.com. Kept out of the app's package.json so Vercel builds stay untouched.",
   "scripts": {
     "test": "playwright test tests/routes.spec.ts",
-    "a11y": "playwright test tests/a11y.spec.ts --project=desktop",
+    "a11y": "playwright test tests/a11y.spec.ts --project=desktop --project=dark",
+    "a11y:baseline": "node baseline.mjs",
     "rules": "node rules.mjs",
     "seo": "node aggregate.mjs",
     "all": "npm run rules && npm run test && npm run seo && npm run a11y",
