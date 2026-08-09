@@ -166,7 +166,7 @@ function AgentDetailCard({ agent, index }: { agent: Agent; index: number }) {
             <div>
               <span
                 className="mono-label mb-1 inline-block rounded px-1.5 py-0.5 text-white"
-                style={{ background: "var(--color-brand-dark)", fontSize: 9 }}
+                style={{ background: "var(--c-brand)", fontSize: 9 }}
               >
                 Start here
               </span>
@@ -227,7 +227,7 @@ function AgentDetailCard({ agent, index }: { agent: Agent; index: number }) {
           <Link
             href={`/contact?agent=${agent.id}`}
             className="flex w-full items-center justify-center gap-2 rounded-full py-3 text-sm font-semibold text-white transition-all"
-            style={{ background: "var(--color-brand-dark)" }}
+            style={{ background: "var(--c-brand)" }}
           >
             Deploy {agent.name} &rarr;
           </Link>

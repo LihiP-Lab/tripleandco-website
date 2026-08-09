@@ -26,7 +26,6 @@
   --color-brand: #FE3465;
   --color-brand-light: #FE5D84;
   --color-brand-dark: #CD2A51;
-  --color-brand-darker: #A81F41;
 
   /* Semantic */
   --color-background: #F3F0F5;
@@ -357,31 +356,15 @@ body {
 }
 
 /* ============================================================
-   ACTION FILLS (WCAG AA), both themes
+   CTA FILLS: BRAND PINK, ACCEPTED WCAG EXCEPTION
    ============================================================
-   White text on brand pink #FE3465 measures 3.56:1 and fails AA on every
-   solid CTA. Fills therefore render one step darker: rest #CD2A51 (5.2:1),
-   hover #A81F41 (7.2:1). Hot pink #FE3465 stays the brand accent for text,
-   borders, gradients, and glows, which is where the brand reads from.
-
-   This remaps the existing utilities so no component changes:
-   - bg-brand           -> brand-dark   (rest state of every solid CTA)
-   - hover:bg-brand-dark-> brand-darker (the step that kept hover visible
-                                         once rest became brand-dark)
+   Solid CTAs fill with brand #FE3465 (bg-brand as-is, hover:bg-brand-dark
+   darkens on hover). White text on #FE3465 measures 3.56:1, below the AA
+   4.5:1 threshold for this text size. This is a deliberate brand decision
+   by the site owner (2026-08-09), and the corresponding color-contrast
+   entries in qa/a11y-baseline.json are accepted debt.
+   Do NOT "fix" this by darkening bg-brand without owner sign-off.
    ============================================================ */
-
-.bg-brand {
-  background-color: var(--color-brand-dark);
-}
-
-.hover\:bg-brand:hover,
-.focus\:bg-brand:focus {
-  background-color: var(--color-brand-dark);
-}
-
-.hover\:bg-brand-dark:hover {
-  background-color: var(--color-brand-darker);
-}
 
 /* text-brand-dark at rest (ModelBadge, insight pills): fine on light tints,
    ~2.8:1 on dark surfaces, so it lifts in dark mode per the theme layer. */
@@ -559,7 +542,7 @@ body {
 .chip:hover { color: var(--c-text); border-color: var(--c-border-strong); }
 .chip[data-active="true"] {
   color: #fff;
-  background: var(--color-brand-dark); /* AA: white on #FE3465 is 3.56:1 */
+  background: var(--c-brand);
   border-color: var(--c-brand);
   box-shadow: 0 0 18px rgba(254, 52, 101, 0.4);
 }
