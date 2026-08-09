@@ -10,7 +10,7 @@ import { ScrollReveal } from "./ScrollReveal";
 const proofChips = [
   "$70M+ raised",
   "Top 1% fastest-growing SaaS",
-  "Tripled revenue. Twice.",
+  "Tripled revenue. Multiple times.",
 ];
 
 const agents = [
