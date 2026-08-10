@@ -74,3 +74,4 @@ Founder of Triple & Co. and one of Israel's first native AI CMO/CROs. Previously
 - [Privacy policy](https://www.tripleandco.com/privacy)
 - [Terms](https://www.tripleandco.com/terms)
 - [Sitemap](https://www.tripleandco.com/sitemap.xml)
+- [Full site content](https://www.tripleandco.com/llms-full.txt): every page's full text in one file

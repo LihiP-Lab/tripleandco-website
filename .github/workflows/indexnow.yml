@@ -1,0 +1,28 @@
+name: IndexNow ping
+
+# Notifies Bing (and other IndexNow-enabled engines) whenever content ships.
+# Bing's index is what ChatGPT browsing and Copilot cite, so fast indexing
+# there directly improves AI answer-engine visibility. The key file is
+# public/4f495edc5c77e8772c8297d6fa02b614.txt (IndexNow keys are public by design).
+
+on:
+  push:
+    branches: [initial-base]
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit sitemap URLs to IndexNow
+        run: |
+          sleep 120  # give the Vercel deploy time to go live first
+          URLS=$(curl -s https://www.tripleandco.com/sitemap.xml | grep -o '<loc>[^<]*</loc>' | sed 's/<[^>]*>//g' | jq -R . | jq -s .)
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{
+              \"host\": \"www.tripleandco.com\",
+              \"key\": \"4f495edc5c77e8772c8297d6fa02b614\",
+              \"keyLocation\": \"https://www.tripleandco.com/4f495edc5c77e8772c8297d6fa02b614.txt\",
+              \"urlList\": $URLS
+            }" -w "\nHTTP %{http_code}\n"
