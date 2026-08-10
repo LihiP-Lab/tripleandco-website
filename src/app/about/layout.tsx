@@ -37,6 +37,7 @@ const profileSchema = {
         "https://www.linkedin.com/company/triple-and-co/",
         "https://www.youtube.com/@Tripleandco",
         "https://clutch.co/profile/triple-co",
+        "https://www.crunchbase.com/organization/triple-co",
       ],
     },
     {
