@@ -126,7 +126,7 @@ for (const route of ROUTES) {
 }
 
 const header = [
-  "# Triple & Co. — full site content (llms-full.txt)",
+  "# Triple & Co. full site content (llms-full.txt)",
   "",
   "> AI-powered CMO & CRO as a Service for B2B tech companies, led by Lihi Pinto,",
   "> with a supervised team of eight specialist AI marketing agents.",
