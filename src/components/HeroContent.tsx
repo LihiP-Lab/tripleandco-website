@@ -9,21 +9,21 @@ export function HeroContent() {
     <div>
       <ScrollReveal delay={0.1}>
         <p className="eyebrow-light eyebrow mb-6">
-          AI-powered CMO + CRO leadership
+          Human in the loop &middot; 8 specialist AI agents
         </p>
       </ScrollReveal>
       <ScrollReveal delay={0.2}>
         <h1 className="text-4xl md:text-5xl lg:text-[64px] font-black tracking-tighter leading-[1.05] text-white mb-7">
-          B2B growth needs a{" "}
-          <span className="gradient-text">new</span> kind of marketing
-          partner.
+          AI-Powered <span className="gradient-text">CMO &amp; CRO</span> as a
+          Service for B2B Tech
         </h1>
       </ScrollReveal>
       <ScrollReveal delay={0.3}>
         <p className="text-lg lg:text-[19px] leading-relaxed text-purple-3 max-w-[560px] mb-9 font-normal">
-          Senior CMO and CRO leadership. Full-service execution. A supervised
-          team of specialist AI agents. One partner, built for B2B revenue in
-          the AI era.
+          B2B growth needs a new kind of marketing partner: senior CMO and CRO
+          leadership, full-service execution, and a supervised team of
+          specialist AI agents. One partner, built for B2B revenue in the AI
+          era.
         </p>
       </ScrollReveal>
       <ScrollReveal delay={0.4}>
