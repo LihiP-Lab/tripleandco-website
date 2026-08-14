@@ -28,6 +28,11 @@ const LAST_MODIFIED: Record<string, string> = {
   "/b2b-marketing-israel": "2026-08-06",
   "/b2b-marketing-tel-aviv": "2026-08-06",
   "/b2b-marketing-usa": "2026-08-06",
+  "/ai-content-engine": "2026-08-14",
+  "/ai-social-engine": "2026-08-14",
+  "/ai-market-research": "2026-08-14",
+  "/ai-analytics-attribution": "2026-08-14",
+  "/ai-video-production": "2026-08-14",
   "/agents": "2026-07-23",
   "/ai-marketing-agents": "2026-06-10",
   "/builder-profile": "2026-07-23",
@@ -70,6 +75,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/b2b-marketing-israel",
     "/b2b-marketing-tel-aviv",
     "/b2b-marketing-usa",
+    "/ai-content-engine",
+    "/ai-social-engine",
+    "/ai-market-research",
+    "/ai-analytics-attribution",
+    "/ai-video-production",
     "/agents",
     "/ai-marketing-agents",
     "/insights",
@@ -110,7 +120,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             route === "/b2b-marketing-israel" ||
             route === "/b2b-marketing-tel-aviv" ||
             route === "/b2b-marketing-usa" ||
-            route === "/ai-marketing-agents"
+            route === "/ai-marketing-agents" ||
+            route === "/ai-content-engine" ||
+            route === "/ai-social-engine" ||
+            route === "/ai-market-research" ||
+            route === "/ai-analytics-attribution" ||
+            route === "/ai-video-production"
           ? 0.9
           : 0.8,
   }));
