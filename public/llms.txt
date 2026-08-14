@@ -2,6 +2,8 @@
 
 > AI-powered CMO & CRO as a Service for B2B tech companies. Triple & Co. gives founders one accountable partner: senior fractional marketing and revenue leadership from Lihi Pinto, combined with a supervised team of eight specialist AI marketing agents that do the work. Working with B2B teams in Israel, the United States, and Europe.
 
+Verified entity: [Wikidata Q141044424](https://www.wikidata.org/wiki/Q141044424) | Founder: [Wikidata Q141044419](https://www.wikidata.org/wiki/Q141044419) | [LinkedIn](https://www.linkedin.com/company/triple-and-co/) | [Crunchbase](https://www.crunchbase.com/organization/triple-co)
+
 ## What Triple & Co. does
 
 Triple & Co. replaces the usual patchwork of a fractional executive, an agency, and a stack of freelancers with one operating system that runs strategy, execution, and AI-scaled delivery together. Every AI output passes a human before it ships.

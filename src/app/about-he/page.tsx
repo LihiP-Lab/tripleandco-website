@@ -222,6 +222,7 @@ export default function AboutHebrewPage() {
       ],
       "sameAs": [
         "https://www.linkedin.com/in/lihipinto/",
+        "https://www.wikidata.org/wiki/Q141044419",
         "https://www.linkedin.com/company/triple-and-co/",
         "https://www.youtube.com/@lihipinto",
         "https://www.tripleandco.com",
@@ -302,6 +303,7 @@ export default function AboutHebrewPage() {
     "sameAs": [
       "https://il.linkedin.com/in/lihipinto",
       "https://www.linkedin.com/in/lihipinto/",
+      "https://www.wikidata.org/wiki/Q141044419",
     ],
   };
 

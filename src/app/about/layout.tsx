@@ -38,6 +38,7 @@ const profileSchema = {
         "https://www.youtube.com/@Tripleandco",
         "https://clutch.co/profile/triple-co",
         "https://www.crunchbase.com/organization/triple-co",
+        "https://www.wikidata.org/wiki/Q141044424",
       ],
     },
     {
@@ -66,6 +67,7 @@ const profileSchema = {
     sameAs: [
       "https://www.linkedin.com/in/lihipinto/",
       "https://x.com/lihipinto",
+      "https://www.wikidata.org/wiki/Q141044419",
     ],
       },
     },
