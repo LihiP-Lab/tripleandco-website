@@ -148,7 +148,14 @@ export default function CMOPage() {
                 revenue operating system: senior CMO leadership from Lihi Pinto,
                 a digital COO orchestrating the work, and 8 supervised AI agents
                 executing across every channel. Connected strategy. Daily
-                output. One invoice.
+                output. One invoice. The operating model behind it is public:{" "}
+                <Link
+                  href="/orchestrator-method"
+                  className="text-brand font-semibold hover:underline"
+                >
+                  the Orchestrator Method
+                </Link>
+                .
               </p>
               <div className="flex flex-wrap items-center gap-5 mb-8">
                 <Link

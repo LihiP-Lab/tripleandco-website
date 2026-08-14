@@ -16,6 +16,7 @@ const services = [
 ];
 
 const resources = [
+  { href: "/orchestrator-method", label: "The Orchestrator Method" },
   { href: "/insights", label: "Insights" },
   { href: "/ai-marketing-agents", label: "AI Agents Guide" },
   { href: "/ai-content-engine", label: "AI Content Engine" },

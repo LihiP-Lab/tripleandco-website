@@ -508,6 +508,14 @@ export default function AboutPage() {
               <p className="text-purple-7 leading-relaxed">
                 The result: a marketing operation that runs at machine speed,
                 with human judgment on every output that goes out the door.
+                The full operating model is documented in{" "}
+                <Link
+                  href="/orchestrator-method"
+                  className="text-brand font-semibold hover:underline"
+                >
+                  the Orchestrator Method
+                </Link>
+                .
                 You never receive raw AI text. Every deliverable is reviewed,
                 refined, and signed off.
               </p>
