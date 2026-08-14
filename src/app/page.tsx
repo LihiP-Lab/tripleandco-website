@@ -38,6 +38,7 @@ const organizationSchema = {
     "https://www.youtube.com/@Tripleandco",
     "https://clutch.co/profile/triple-co",
     "https://www.crunchbase.com/organization/triple-co",
+    "https://www.wikidata.org/wiki/Q141044424",
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -77,6 +78,7 @@ const personSchema = {
   sameAs: [
     "https://www.linkedin.com/in/lihipinto/",
     "https://x.com/lihipinto",
+    "https://www.wikidata.org/wiki/Q141044419",
   ],
   subjectOf: [
     {
