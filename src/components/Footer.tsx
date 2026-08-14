@@ -10,6 +10,7 @@ const services = [
   { href: "/cro-as-a-service", label: "CRO as a Service" },
   { href: "/agents", label: "Marketing Agents" },
   { href: "/revenue-diagnostic", label: "Revenue Diagnostic" },
+  { href: "/pricing", label: "Engagement Models & Pricing" },
   { href: "/services", label: "All Services" },
 ];
 

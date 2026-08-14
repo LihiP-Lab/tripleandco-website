@@ -10,6 +10,7 @@ const LAST_MODIFIED: Record<string, string> = {
   "/about": "2026-08-06",
   "/about-he": "2026-08-06",
   "/services": "2026-08-06",
+  "/pricing": "2026-08-14",
   "/cmo-as-a-service": "2026-08-06",
   "/cro-as-a-service": "2026-08-06",
   "/head-of-growth": "2026-08-06",
@@ -50,6 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/about-he",
     "/services",
+    "/pricing",
     "/cmo-as-a-service",
     "/cro-as-a-service",
     "/head-of-growth",
@@ -88,7 +90,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:
       route === "/"
         ? 1
-        : route === "/cmo-as-a-service" ||
+        : route === "/pricing" ||
+            route === "/cmo-as-a-service" ||
             route === "/cro-as-a-service" ||
             route === "/head-of-growth" ||
             route === "/fractional-cmo-b2b" ||
