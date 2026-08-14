@@ -40,7 +40,15 @@ export async function POST(request: NextRequest) {
 
   const result = await runVisibilityCheck(domain);
   if ("error" in result) {
-    return Response.json({ error: result.error }, { status: result.status });
+    return Response.json(
+      {
+        error: result.error,
+        kind: result.kind,
+        provider: result.provider,
+        httpStatus: result.httpStatus,
+      },
+      { status: result.status }
+    );
   }
   return Response.json(result);
 }

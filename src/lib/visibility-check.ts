@@ -170,6 +170,31 @@ async function guardedFetch(url: string): Promise<FetchResult> {
 }
 
 /* ------------------------------------------------------------------ */
+/* Bot-protection detection                                            */
+/* ------------------------------------------------------------------ */
+
+// When a WAF rejects the fetch outright, that is a finding, not a dead end:
+// protection that blocks this checker usually blocks AI crawlers too.
+export function botBlockProvider(res: FetchResult): string | null {
+  if (!res.headers) return null;
+  if (![401, 403, 429, 503].includes(res.status)) return null;
+  const server = (res.headers.get("server") || "").toLowerCase();
+  if (
+    server.includes("cloudflare") ||
+    res.headers.get("cf-ray") ||
+    res.headers.get("cf-mitigated")
+  )
+    return "Cloudflare";
+  if (server.includes("akamai") || res.headers.get("x-akamai-request-id"))
+    return "Akamai";
+  if (res.headers.get("x-amzn-waf-action")) return "AWS WAF";
+  if (server.includes("imperva") || res.headers.get("x-iinfo"))
+    return "Imperva";
+  if (res.status === 401 || res.status === 403) return "bot protection";
+  return null;
+}
+
+/* ------------------------------------------------------------------ */
 /* robots.txt parsing (simplified RFC 9309)                            */
 /* ------------------------------------------------------------------ */
 
@@ -373,7 +398,13 @@ export type VisibilityReport = {
   note?: string;
 };
 
-export type RunError = { error: string; status: number };
+export type RunError = {
+  error: string;
+  status: number;
+  kind?: "bot_blocked";
+  provider?: string;
+  httpStatus?: number;
+};
 
 export async function runVisibilityCheck(
   rawDomain: string,
@@ -405,11 +436,13 @@ export async function runVisibilityCheck(
   let home = await guardedFetch(`${base}/`);
   let effectiveBase = base;
   let note: string | undefined;
+  let siblingResult: FetchResult | null = null;
   if (!home.ok) {
     const sibling = domain.startsWith("www.")
       ? domain.slice(4)
       : `www.${domain}`;
     const alt = await guardedFetch(`https://${sibling}/`);
+    siblingResult = alt;
     if (alt.ok) {
       const failure =
         home.status > 0
@@ -429,6 +462,22 @@ export async function runVisibilityCheck(
   }
 
   if (!home.ok) {
+    const blocked =
+      botBlockProvider(home) ??
+      (siblingResult ? botBlockProvider(siblingResult) : null);
+    if (blocked) {
+      const httpStatus =
+        botBlockProvider(home) !== null
+          ? home.status
+          : (siblingResult?.status ?? home.status);
+      return {
+        error: `Automated checks are blocked by this site's bot protection (${blocked} answered with status ${httpStatus}).`,
+        status: 422,
+        kind: "bot_blocked",
+        provider: blocked,
+        httpStatus,
+      };
+    }
     return {
       error:
         "We could not reach that site over HTTPS. It may be down, or it may be blocking automated checks.",

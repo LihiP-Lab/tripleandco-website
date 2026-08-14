@@ -66,6 +66,10 @@ export function VisibilityChecker() {
   const [domain, setDomain] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [blocked, setBlocked] = useState<{
+    provider: string;
+    httpStatus: number;
+  } | null>(null);
   const [report, setReport] = useState<Report | null>(null);
   const [stage, setStage] = useState(0);
   const stageTimer = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -95,6 +99,7 @@ export function VisibilityChecker() {
     if (loading) return;
     setLoading(true);
     setError(null);
+    setBlocked(null);
     setReport(null);
     setEmailState("idle");
     const startedAt = Date.now();
@@ -111,6 +116,12 @@ export function VisibilityChecker() {
         await new Promise((r) => setTimeout(r, 4000 - elapsed));
       }
       if (!res.ok) {
+        if (data?.kind === "bot_blocked") {
+          setBlocked({
+            provider: String(data.provider || "Bot protection"),
+            httpStatus: Number(data.httpStatus || 403),
+          });
+        }
         throw new Error(
           typeof data?.error === "string"
             ? data.error
@@ -252,7 +263,27 @@ export function VisibilityChecker() {
             </ol>
           )}
 
-          {!loading && error && (
+          {!loading && error && blocked && (
+            <p className="text-sm sm:text-[15px] text-purple-9 leading-relaxed">
+              {blocked.provider} blocked me before I could read{" "}
+              {domain.replace(/^https?:\/\//, "").replace(/[/?#].*$/, "") ||
+                "that site"}{" "}
+              (status {blocked.httpStatus}). Here is the thing: protection
+              that blocks me usually blocks AI crawlers too, so it may be
+              quietly costing you citations. Worth checking your bot settings
+              for GPTBot, ClaudeBot, and PerplexityBot. The full audit reads
+              what the engines actually see:{" "}
+              <Link
+                href="/ai-visibility-audit"
+                className="text-brand font-semibold hover:underline"
+              >
+                request it here
+              </Link>
+              .
+            </p>
+          )}
+
+          {!loading && error && !blocked && (
             <p className="text-sm sm:text-[15px] text-purple-9 leading-relaxed">
               Hmm. {error} If the site is live and this keeps happening, the
               full audit covers it by hand:{" "}
