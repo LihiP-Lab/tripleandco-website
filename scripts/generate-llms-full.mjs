@@ -25,6 +25,7 @@ const ROUTES = [
   "/cmo-as-a-service",
   "/cro-as-a-service",
   "/head-of-growth",
+  "/pricing",
   "/fractional-cmo-b2b",
   "/fractional-cmo-vs-agency-vs-hire",
   "/ai-marketing-team-vs-agency",
