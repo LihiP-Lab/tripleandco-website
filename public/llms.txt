@@ -39,6 +39,11 @@ Founder of Triple & Co. and one of Israel's first native AI CMO/CROs. Previously
 
 - [Marketing Agents](https://www.tripleandco.com/agents): The eight AI specialists in detail, with deliverables and pricing
 - [AI Marketing Agents Guide](https://www.tripleandco.com/ai-marketing-agents): How supervised AI marketing agents work
+- [AI Content Engine](https://www.tripleandco.com/ai-content-engine): Brand voice, demand-grounded strategy, and repurposing as one supervised system
+- [AI Social Engine](https://www.tripleandco.com/ai-social-engine): Founder-led B2B social with 30-day calendars, run in your extracted voice
+- [AI Market Research](https://www.tripleandco.com/ai-market-research): Continuous competitive intel and buyer-intent research, including AI-engine visibility
+- [AI Analytics & Attribution](https://www.tripleandco.com/ai-analytics-attribution): Full-funnel attribution and board-ready dashboards with budget reallocation
+- [AI Video Production](https://www.tripleandco.com/ai-video-production): Story-first B2B video: concept, script, edit direction, and post, human-reviewed
 
 ## Generative engine optimization
 

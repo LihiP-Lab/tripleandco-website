@@ -18,6 +18,11 @@ const services = [
 const resources = [
   { href: "/insights", label: "Insights" },
   { href: "/ai-marketing-agents", label: "AI Agents Guide" },
+  { href: "/ai-content-engine", label: "AI Content Engine" },
+  { href: "/ai-social-engine", label: "AI Social Engine" },
+  { href: "/ai-market-research", label: "AI Market Research" },
+  { href: "/ai-analytics-attribution", label: "AI Analytics & Attribution" },
+  { href: "/ai-video-production", label: "AI Video Production" },
   { href: "/geo", label: "GEO for B2B" },
   { href: "/llm-seo", label: "LLM SEO Guide" },
   { href: "/ai-visibility-audit", label: "Free AI Visibility Audit" },
