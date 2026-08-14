@@ -29,6 +29,7 @@ type Report = {
   score: number;
   grade: string;
   checks: Check[];
+  note?: string;
 };
 
 const STATUS_STYLES: Record<Check["status"], { chip: string; label: string }> = {
@@ -267,6 +268,7 @@ export function VisibilityChecker() {
 
           {!loading && !error && report && (
             <p className="text-sm sm:text-[15px] text-purple-9 leading-relaxed">
+              {report.note ? `Heads up: ${report.note} ` : ""}
               {novaQuip(report)}
             </p>
           )}

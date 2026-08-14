@@ -370,6 +370,7 @@ export type VisibilityReport = {
   score: number;
   grade: string;
   checks: Check[];
+  note?: string;
 };
 
 export type RunError = { error: string; status: number };
@@ -388,6 +389,7 @@ export async function runVisibilityCheck(
   if (opts.allowPrivateHosts) {
     hostChecked.set(domain, true);
     hostChecked.set("www." + domain, true);
+    hostChecked.set(domain.replace(/^www\./, ""), true);
   }
   if (!(await hostIsPublic(domain))) {
     return {
@@ -398,13 +400,24 @@ export async function runVisibilityCheck(
   const base = `https://${domain}`;
 
   // Resolve the homepage first; it tells us the canonical host (www or not).
+  // If the typed host fails, try its sibling (apex <-> www) before giving up,
+  // and record a note so the report can say what happened.
   let home = await guardedFetch(`${base}/`);
   let effectiveBase = base;
-  if (!home.ok && !domain.startsWith("www.")) {
-    const withWww = await guardedFetch(`https://www.${domain}/`);
-    if (withWww.ok) {
-      home = withWww;
-      effectiveBase = `https://www.${domain}`;
+  let note: string | undefined;
+  if (!home.ok) {
+    const sibling = domain.startsWith("www.")
+      ? domain.slice(4)
+      : `www.${domain}`;
+    const alt = await guardedFetch(`https://${sibling}/`);
+    if (alt.ok) {
+      const failure =
+        home.status > 0
+          ? `answered with an error (status ${home.status})`
+          : "did not answer over HTTPS";
+      note = `${domain} ${failure}, so the checks below ran against ${sibling} instead. Worth fixing: crawlers that land on ${domain} hit the same problem.`;
+      home = alt;
+      effectiveBase = `https://${sibling}`;
     }
   }
   if (home.ok) {
@@ -418,7 +431,7 @@ export async function runVisibilityCheck(
   if (!home.ok) {
     return {
       error:
-        "We could not reach that site over HTTPS. If it is live, it may be blocking automated checks; the full audit covers it manually.",
+        "We could not reach that site over HTTPS. It may be down, or it may be blocking automated checks.",
       status: 422,
     };
   }
@@ -595,5 +608,5 @@ export async function runVisibilityCheck(
           ? "Partially invisible"
           : "Invisible to AI";
 
-  return { domain, checkedUrl: effectiveBase, score, grade, checks };
+  return { domain, checkedUrl: effectiveBase, score, grade, checks, note };
 }
