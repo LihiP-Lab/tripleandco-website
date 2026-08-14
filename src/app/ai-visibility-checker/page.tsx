@@ -114,10 +114,11 @@ export default function AIVisibilityCheckerPage() {
             <span className="gradient-text">Read Your Site?</span>
           </h1>
           <p className="text-lg text-purple-7 leading-relaxed mb-8">
-            Enter your domain. In about 10 seconds we fetch your site the way
-            AI crawlers do and score the four technical signals that decide
-            whether ChatGPT, Claude, and Perplexity can read you at all:
-            llms.txt, crawler access, structured data, and Bing indexability.
+            Enter your domain and let Nova, our content research agent, fetch
+            your site the way AI crawlers do. In about 10 seconds she scores
+            the four technical signals that decide whether ChatGPT, Claude,
+            and Perplexity can read you at all: llms.txt, crawler access,
+            structured data, and Bing indexability.
           </p>
           <VisibilityChecker />
         </div>
