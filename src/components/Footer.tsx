@@ -26,6 +26,7 @@ const resources = [
   { href: "/geo", label: "GEO for B2B" },
   { href: "/llm-seo", label: "LLM SEO Guide" },
   { href: "/ai-visibility-audit", label: "Free AI Visibility Audit" },
+  { href: "/ai-visibility-checker", label: "AI Visibility Checker" },
   { href: "/head-of-growth", label: "Head of Growth" },
   { href: "/fractional-cmo-b2b", label: "Fractional CMO" },
   {
