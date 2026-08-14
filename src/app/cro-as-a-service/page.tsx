@@ -66,6 +66,19 @@ const serviceSchema = {
   description:
     "Subscription CRO leadership for B2B SaaS: one accountable leader owns the full revenue funnel across marketing, sales, and customer success, executed by a supervised AI team.",
   url: "https://www.tripleandco.com/cro-as-a-service",
+  offers: {
+    "@type": "Offer",
+    url: "https://www.tripleandco.com/pricing",
+    priceCurrency: "USD",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      priceCurrency: "USD",
+      minPrice: 5000,
+      maxPrice: 15000,
+      unitCode: "MON",
+      unitText: "month",
+    },
+  },
 };
 
 const comparisonRows = [

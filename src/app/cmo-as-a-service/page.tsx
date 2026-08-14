@@ -38,6 +38,35 @@ const faqs = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "CMO as a Service",
+  serviceType: "Fractional Chief Marketing Officer / CMO as a Service",
+  provider: { "@id": "https://www.tripleandco.com/#organization" },
+  areaServed: ["US", "Europe", "Israel", "Worldwide"],
+  audience: {
+    "@type": "Audience",
+    audienceType: "B2B SaaS companies",
+  },
+  description:
+    "Subscription CMO leadership for B2B SaaS: senior strategy from Lihi Pinto, a digital COO orchestrating the work, and 8 supervised AI agents executing daily across content, campaigns, SEO, outreach, and analytics.",
+  url: "https://www.tripleandco.com/cmo-as-a-service",
+  offers: {
+    "@type": "Offer",
+    url: "https://www.tripleandco.com/pricing",
+    priceCurrency: "USD",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      priceCurrency: "USD",
+      minPrice: 5000,
+      maxPrice: 15000,
+      unitCode: "MON",
+      unitText: "month",
+    },
+  },
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -115,6 +144,10 @@ const globalSignals = [
 export default function CMOPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
