@@ -11,6 +11,7 @@ const services = [
   { href: "/agents", label: "Marketing Agents" },
   { href: "/revenue-diagnostic", label: "Revenue Diagnostic" },
   { href: "/pricing", label: "Engagement Models & Pricing" },
+  { href: "/results", label: "Results" },
   { href: "/services", label: "All Services" },
 ];
 
