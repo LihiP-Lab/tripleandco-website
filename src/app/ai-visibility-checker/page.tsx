@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -48,7 +49,7 @@ const faqs = [
   },
   {
     q: "Is it really free? What do you do with my domain?",
-    a: "Yes. No signup, no email required, no credit card. We fetch a handful of public files from your site (the homepage, llms.txt, robots.txt, and sitemap.xml), score them, and show you the result. Nothing is stored unless you choose to request the full audit with your email.",
+    a: "Yes. No signup, no email required, no credit card. We fetch a handful of public files from your site (the homepage, llms.txt, robots.txt, and sitemap.xml), score them, and show you the result. We keep a simple log of the domain checked and its score so we can improve the checker; your email is never collected unless you choose to request the full audit.",
   },
   {
     q: "I scored well. Does that mean AI recommends me?",
@@ -120,7 +121,9 @@ export default function AIVisibilityCheckerPage() {
             and Perplexity can read you at all: llms.txt, crawler access,
             structured data, and Bing indexability.
           </p>
-          <VisibilityChecker />
+          <Suspense>
+            <VisibilityChecker />
+          </Suspense>
         </div>
       </section>
 

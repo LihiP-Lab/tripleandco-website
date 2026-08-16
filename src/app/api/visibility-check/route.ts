@@ -40,6 +40,15 @@ export async function POST(request: NextRequest) {
 
   const result = await runVisibilityCheck(domain);
   if ("error" in result) {
+    console.log(
+      JSON.stringify({
+        event: "visibility_check_failed",
+        domain,
+        reason: result.error,
+        kind: result.kind ?? null,
+        ts: new Date().toISOString(),
+      })
+    );
     return Response.json(
       {
         error: result.error,
@@ -50,5 +59,14 @@ export async function POST(request: NextRequest) {
       { status: result.status }
     );
   }
+  console.log(
+    JSON.stringify({
+      event: "visibility_check",
+      domain: result.domain,
+      score: result.score,
+      grade: result.grade,
+      ts: new Date().toISOString(),
+    })
+  );
   return Response.json(result);
 }
