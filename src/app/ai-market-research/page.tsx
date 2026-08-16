@@ -7,7 +7,7 @@ import {
 export const metadata: Metadata = {
   title: "AI Market Research & Competitive Intel, Supervised",
   description:
-    "AI market research for B2B: competitive gap analysis, intent-based keyword maps, and demand-sized content plays run by a supervised AI agent. Included in engagements from $5,000/month.",
+    "AI market research for B2B: competitive gap analysis, intent-based keyword maps, and demand-sized content plays run by a supervised AI agent.",
   alternates: { canonical: "/ai-market-research" },
   openGraph: {
     title: "AI Market Research & Competitive Intel | Triple & Co.",

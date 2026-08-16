@@ -17,19 +17,43 @@
     "/agents": [
       "color-contrast"
     ],
+    "/ai-analytics-attribution": [
+      "color-contrast"
+    ],
+    "/ai-content-engine": [
+      "color-contrast"
+    ],
     "/ai-deeptech-marketing": [
+      "color-contrast"
+    ],
+    "/ai-market-research": [
       "color-contrast"
     ],
     "/ai-marketing-agents": [
       "color-contrast"
     ],
+    "/ai-marketing-agents-he": [
+      "color-contrast"
+    ],
     "/ai-marketing-team-vs-agency": [
+      "color-contrast"
+    ],
+    "/ai-social-engine": [
+      "color-contrast"
+    ],
+    "/ai-video-production": [
       "color-contrast"
     ],
     "/ai-visibility-audit": [
       "color-contrast"
     ],
+    "/ai-visibility-checker": [
+      "color-contrast"
+    ],
     "/b2b-marketing-israel": [
+      "color-contrast"
+    ],
+    "/b2b-marketing-israel-he": [
       "color-contrast"
     ],
     "/b2b-marketing-tel-aviv": [
@@ -45,6 +69,9 @@
       "color-contrast"
     ],
     "/cmo-as-a-service": [
+      "color-contrast"
+    ],
+    "/cmo-as-a-service-he": [
       "color-contrast"
     ],
     "/contact": [
@@ -101,7 +128,16 @@
     "/llm-seo": [
       "color-contrast"
     ],
+    "/orchestrator-method": [
+      "color-contrast"
+    ],
+    "/pricing": [
+      "color-contrast"
+    ],
     "/privacy": [
+      "color-contrast"
+    ],
+    "/results": [
       "color-contrast"
     ],
     "/revenue-diagnostic": [

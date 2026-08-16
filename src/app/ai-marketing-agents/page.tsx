@@ -9,7 +9,14 @@ export const metadata: Metadata = {
   title: "AI Marketing Agents for B2B",
   description:
     "What AI marketing agents are, how they work, and how Triple & Co. deploys 8 specialist agents, supervised by Lihi Pinto, to drive B2B revenue.",
-  alternates: { canonical: "/ai-marketing-agents" },
+  alternates: {
+    canonical: "/ai-marketing-agents",
+    languages: {
+      en: "/ai-marketing-agents",
+      "he-IL": "/ai-marketing-agents-he",
+      "x-default": "/ai-marketing-agents",
+    },
+  },
   openGraph: {
     title: "AI Marketing Agents for B2B | Triple & Co.",
     description:

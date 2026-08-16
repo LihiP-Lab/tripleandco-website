@@ -7,7 +7,7 @@ import {
 export const metadata: Metadata = {
   title: "AI Content Engine as a Service, Supervised",
   description:
-    "An AI content engine for B2B: brand voice, research-backed strategy, and repurposing run by supervised AI agents with human review on every output. Included in engagements from $5,000/month.",
+    "An AI content engine for B2B: brand voice, research-backed strategy, and repurposing run by supervised AI agents with human review on every output.",
   alternates: { canonical: "/ai-content-engine" },
   openGraph: {
     title: "AI Content Engine as a Service | Triple & Co.",

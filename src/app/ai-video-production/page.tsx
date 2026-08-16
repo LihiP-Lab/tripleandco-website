@@ -7,7 +7,7 @@ import {
 export const metadata: Metadata = {
   title: "AI Video Production as a Service, Supervised",
   description:
-    "AI video production for B2B: concept, script, edit direction, and post run by a supervised AI agent with art direction and human review. Included in engagements from $5,000/month.",
+    "AI video production for B2B: concept, script, edit direction, and post run by a supervised AI agent with art direction and human review.",
   alternates: { canonical: "/ai-video-production" },
   openGraph: {
     title: "AI Video Production as a Service | Triple & Co.",
