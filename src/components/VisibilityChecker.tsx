@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 type BotResult = {
   bot: string;
@@ -63,7 +64,8 @@ function novaQuip(report: Report): string {
 }
 
 export function VisibilityChecker() {
-  const [domain, setDomain] = useState("");
+  const searchParams = useSearchParams();
+  const [domain, setDomain] = useState(() => searchParams.get("domain") ?? "");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [blocked, setBlocked] = useState<{
@@ -78,6 +80,9 @@ export function VisibilityChecker() {
   const [emailState, setEmailState] = useState<
     "idle" | "sending" | "sent" | "error"
   >("idle");
+  const [copied, setCopied] = useState(false);
+  const loadingRef = useRef(false);
+  const autoRan = useRef(false);
 
   useEffect(() => {
     if (loading) {
@@ -94,20 +99,21 @@ export function VisibilityChecker() {
     };
   }, [loading]);
 
-  async function runCheck(e: React.FormEvent) {
-    e.preventDefault();
-    if (loading) return;
+  const check = useCallback(async (target: string) => {
+    if (loadingRef.current) return;
+    loadingRef.current = true;
     setLoading(true);
     setError(null);
     setBlocked(null);
     setReport(null);
     setEmailState("idle");
+    setCopied(false);
     const startedAt = Date.now();
     try {
       const res = await fetch("/api/visibility-check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ domain }),
+        body: JSON.stringify({ domain: target }),
       });
       const data = await res.json();
       // Let Nova's narration finish its first stages before the reveal.
@@ -128,7 +134,13 @@ export function VisibilityChecker() {
             : "The check failed. Try again in a minute."
         );
       }
-      setReport(data as Report);
+      const rep = data as Report;
+      setReport(rep);
+      window.history.replaceState(
+        null,
+        "",
+        `?domain=${encodeURIComponent(rep.domain)}`
+      );
     } catch (err) {
       setError(
         err instanceof Error
@@ -136,8 +148,37 @@ export function VisibilityChecker() {
           : "The check failed. Try again in a minute."
       );
     } finally {
+      loadingRef.current = false;
       setLoading(false);
     }
+  }, []);
+
+  // Auto-run when the page is opened through a shared ?domain= link.
+  useEffect(() => {
+    const fromUrl = searchParams.get("domain");
+    if (!fromUrl || autoRan.current) return;
+    const t = setTimeout(() => {
+      autoRan.current = true;
+      void check(fromUrl);
+    }, 0);
+    return () => clearTimeout(t);
+  }, [searchParams, check]);
+
+  function runCheck(e: React.FormEvent) {
+    e.preventDefault();
+    void check(domain);
+  }
+
+  function copyLink() {
+    if (!report) return;
+    const url = `${window.location.origin}${window.location.pathname}?domain=${encodeURIComponent(report.domain)}`;
+    navigator.clipboard.writeText(url).then(
+      () => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      },
+      () => {}
+    );
   }
 
   async function sendReport(e: React.FormEvent) {
@@ -357,7 +398,7 @@ export function VisibilityChecker() {
                   <span className="text-2xl text-purple-4 font-bold">/100</span>
                 </p>
               </div>
-              <div>
+              <div className="flex-1">
                 <p className="eyebrow mb-1">AI visibility score</p>
                 <h3 className="text-2xl font-extrabold text-purple-9 mb-1">
                   {report.domain}: {report.grade}
@@ -367,6 +408,13 @@ export function VisibilityChecker() {
                   plumbing of AI visibility, not what the engines actually say
                   about you.
                 </p>
+                <button
+                  type="button"
+                  onClick={copyLink}
+                  className="mt-3 inline-flex items-center gap-1.5 rounded-lg border border-purple-15 px-3 py-1.5 text-xs font-bold text-purple-7 hover:bg-purple-05 transition-colors"
+                >
+                  {copied ? "Link copied" : "Copy link to this report"}
+                </button>
               </div>
             </div>
 
