@@ -64,6 +64,18 @@ const personSchema = {
   url: "https://www.tripleandco.com/about",
   image: "https://www.tripleandco.com/images/lihi-portrait.jpg",
   jobTitle: "Founder, CMO & CRO as a Service",
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "AI-native Chief Marketing Officer",
+    occupationCategory: {
+      "@type": "CategoryCode",
+      codeValue: "11-2021",
+      name: "Marketing Managers",
+      inCodeSet: "https://www.onetonline.org/",
+    },
+    description:
+      "Fractional CMO and CRO leadership for B2B SaaS companies, running marketing through a supervised team of 8 specialist AI agents.",
+  },
   worksFor: { "@id": "https://www.tripleandco.com/#organization" },
   description:
     "Founder of Triple & Co. and Israel's first native AI CMO/CRO. 15+ years in B2B SaaS and investment banking, $70M+ raised, revenue tripled repeatedly. Runs a supervised team of 8 specialist AI marketing agents with human review on every output.",

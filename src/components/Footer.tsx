@@ -16,6 +16,7 @@ const services = [
 ];
 
 const resources = [
+  { href: "/orchestrator-method", label: "The Orchestrator Method" },
   { href: "/insights", label: "Insights" },
   { href: "/ai-marketing-agents", label: "AI Agents Guide" },
   { href: "/ai-content-engine", label: "AI Content Engine" },
@@ -26,6 +27,7 @@ const resources = [
   { href: "/geo", label: "GEO for B2B" },
   { href: "/llm-seo", label: "LLM SEO Guide" },
   { href: "/ai-visibility-audit", label: "Free AI Visibility Audit" },
+  { href: "/ai-visibility-checker", label: "AI Visibility Checker" },
   { href: "/head-of-growth", label: "Head of Growth" },
   { href: "/fractional-cmo-b2b", label: "Fractional CMO" },
   {

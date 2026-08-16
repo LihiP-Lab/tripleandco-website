@@ -350,6 +350,17 @@ export default function GEOPage() {
             >
               Get my free AI Visibility Audit <span>&#8594;</span>
             </Link>
+            <p className="text-sm text-purple-7 mt-6">
+              Prefer an instant read? Run the free 10-second{" "}
+              <Link
+                href="/ai-visibility-checker"
+                className="text-brand font-semibold hover:underline"
+              >
+                AI Visibility Checker
+              </Link>{" "}
+              and score your site on llms.txt, crawler access, structured
+              data, and Bing indexability.
+            </p>
           </ScrollReveal>
         </div>
       </section>

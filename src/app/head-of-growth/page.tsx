@@ -66,6 +66,19 @@ const serviceSchema = {
   description:
     "Fractional Head of Growth leadership for B2B SaaS: one leader owns acquisition, activation, and retention as a measurable experiment system, executed by a supervised AI team.",
   url: "https://www.tripleandco.com/head-of-growth",
+  offers: {
+    "@type": "Offer",
+    url: "https://www.tripleandco.com/pricing",
+    priceCurrency: "USD",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      priceCurrency: "USD",
+      minPrice: 5000,
+      maxPrice: 15000,
+      unitCode: "MON",
+      unitText: "month",
+    },
+  },
 };
 
 const comparisonRows = [

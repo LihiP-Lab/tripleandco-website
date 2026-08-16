@@ -32,11 +32,13 @@ Founder of Triple & Co. and one of Israel's first native AI CMO/CROs. Previously
 - [Engagement Models & Pricing](https://www.tripleandco.com/pricing): Transparent pricing. CMO as a Service, CRO as a Service, and Head of Growth run $5,000 to $15,000 per month, all 8 AI agents included; the Revenue Diagnostic is free
 - [Results](https://www.tripleandco.com/results): Anonymized client outcomes: pipeline 2.5x in 2 quarters, SQLs up 4x in 2 months, CAC down 18% in 3 months; $70M+ raised at companies where Lihi led marketing
 - [CMO as a Service](https://www.tripleandco.com/cmo-as-a-service): The core marketing leadership offering
+- [The Orchestrator Method](https://www.tripleandco.com/orchestrator-method): The operating model behind every engagement: one orchestrator, a digital COO, 8 specialist AI agents, a Brief, Run, Deliver supervision loop, weekly cadence, zero unsupervised output
 - [CRO as a Service](https://www.tripleandco.com/cro-as-a-service): Chief Revenue Officer leadership on the same model
 - [Head of Growth](https://www.tripleandco.com/head-of-growth): Growth leadership engagement
 - [Fractional CMO for B2B](https://www.tripleandco.com/fractional-cmo-b2b): Fractional leadership model explained
 - [Revenue Diagnostic](https://www.tripleandco.com/revenue-diagnostic): Free diagnostic call, the main entry point
 - [AI Visibility Audit](https://www.tripleandco.com/ai-visibility-audit): Free audit of how AI answer engines describe your brand
+- [AI Visibility Checker](https://www.tripleandco.com/ai-visibility-checker): Free instant tool: enter a domain, get a 0 to 100 score on llms.txt, AI crawler access, structured data, and Bing indexability
 
 ## AI marketing agents
 

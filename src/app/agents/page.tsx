@@ -353,6 +353,23 @@ export default function AgentsPage() {
               </ScrollReveal>
             ))}
           </div>
+
+          <ScrollReveal delay={0.3}>
+            <p
+              className="mt-8 text-center text-sm"
+              style={{ color: "var(--c-text-dim)" }}
+            >
+              This loop is the heart of{" "}
+              <Link
+                href="/orchestrator-method"
+                className="font-semibold hover:underline"
+                style={{ color: "var(--c-brand)" }}
+              >
+                the Orchestrator Method
+              </Link>
+              , the full operating model behind the team.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 

@@ -21,6 +21,8 @@ const LAST_MODIFIED: Record<string, string> = {
   "/geo": "2026-08-06",
   "/llm-seo": "2026-08-06",
   "/ai-visibility-audit": "2026-08-06",
+  "/ai-visibility-checker": "2026-08-14",
+  "/orchestrator-method": "2026-08-14",
   "/b2b-saas-marketing": "2026-08-06",
   "/fintech-marketing": "2026-08-06",
   "/cybersecurity-marketing": "2026-08-06",
@@ -71,6 +73,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/geo",
     "/llm-seo",
     "/ai-visibility-audit",
+    "/ai-visibility-checker",
+    "/orchestrator-method",
     "/b2b-saas-marketing",
     "/fintech-marketing",
     "/cybersecurity-marketing",
@@ -119,6 +123,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
             route === "/geo" ||
             route === "/llm-seo" ||
             route === "/ai-visibility-audit" ||
+            route === "/ai-visibility-checker" ||
+            route === "/orchestrator-method" ||
             route === "/b2b-saas-marketing" ||
             route === "/fintech-marketing" ||
             route === "/cybersecurity-marketing" ||

@@ -169,6 +169,17 @@ export default function AIVisibilityAuditPage() {
                 business days
               </p>
 
+              <p className="text-sm text-purple-7 mb-10">
+                Want an instant read first? Run the free 10-second{" "}
+                <Link
+                  href="/ai-visibility-checker"
+                  className="text-brand font-semibold hover:underline"
+                >
+                  AI Visibility Checker
+                </Link>{" "}
+                and see if AI engines can read your site at all.
+              </p>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {covers.map((c) => (
                   <div
