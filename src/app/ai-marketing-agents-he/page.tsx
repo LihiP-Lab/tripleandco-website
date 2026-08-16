@@ -162,7 +162,7 @@ export default function AiMarketingAgentsHePage() {
                 href="/revenue-diagnostic"
                 className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
               >
-                קביעת אבחון הכנסות חינם
+                <span>&#8592;</span> קביעת אבחון הכנסות חינם
               </Link>
               <Link
                 href="/agents"
@@ -244,7 +244,7 @@ export default function AiMarketingAgentsHePage() {
               href="/revenue-diagnostic"
               className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
             >
-              קביעת אבחון הכנסות חינם
+              <span>&#8592;</span> קביעת אבחון הכנסות חינם
             </Link>
           </ScrollReveal>
         </div>
