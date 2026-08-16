@@ -10,7 +10,14 @@ export const metadata: Metadata = {
   title: "CMO as a Service for B2B SaaS",
   description:
     "CMO as a Service for B2B SaaS. One subscription replaces your agency retainers: senior strategy, 8 AI agents, and a full revenue operating system.",
-  alternates: { canonical: "/cmo-as-a-service" },
+  alternates: {
+    canonical: "/cmo-as-a-service",
+    languages: {
+      en: "/cmo-as-a-service",
+      "he-IL": "/cmo-as-a-service-he",
+      "x-default": "/cmo-as-a-service",
+    },
+  },
   openGraph: {
     title: "CMO as a Service for B2B SaaS | Triple & Co.",
     description:

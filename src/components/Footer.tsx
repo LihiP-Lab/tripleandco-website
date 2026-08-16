@@ -43,6 +43,9 @@ const industries = [
   { href: "/b2b-marketing-israel", label: "B2B Marketing in Israel" },
   { href: "/b2b-marketing-tel-aviv", label: "B2B Marketing in Tel Aviv" },
   { href: "/b2b-marketing-usa", label: "B2B Marketing for the US" },
+  { href: "/cmo-as-a-service-he", label: "CMO as a Service (עברית)" },
+  { href: "/b2b-marketing-israel-he", label: "שיווק B2B לחברות ישראליות" },
+  { href: "/ai-marketing-agents-he", label: "סוכני AI לשיווק (עברית)" },
 ];
 
 export function Footer() {

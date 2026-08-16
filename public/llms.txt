@@ -21,6 +21,9 @@ Founder of Triple & Co. and one of Israel's first native AI CMO/CROs. Previously
 - [Home](https://www.tripleandco.com/): Overview of the supervised AI marketing model
 - [About Lihi Pinto](https://www.tripleandco.com/about): Founder background and track record
 - [About, Hebrew](https://www.tripleandco.com/about-he): Hebrew-language founder page
+- [CMO as a Service, Hebrew](https://www.tripleandco.com/cmo-as-a-service-he): Hebrew-language page on the core offering for Israeli B2B companies
+- [AI Marketing Agents, Hebrew](https://www.tripleandco.com/ai-marketing-agents-he): Hebrew-language page on the 8 supervised agents
+- [B2B Marketing for Israeli Tech, Hebrew](https://www.tripleandco.com/b2b-marketing-israel-he): Hebrew-language page for Israeli companies selling to the US and Europe
 - [Services](https://www.tripleandco.com/services): How engagements work, full service catalogue
 - [Contact](https://www.tripleandco.com/contact): Book a diagnostic call with Lihi
 
