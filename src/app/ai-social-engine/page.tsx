@@ -7,7 +7,7 @@ import {
 export const metadata: Metadata = {
   title: "AI Social Media Engine as a Service, Supervised",
   description:
-    "An AI social engine for B2B: founder voice, 30-day content calendars, and daily execution run by a supervised AI agent with human review. Included in engagements from $5,000/month.",
+    "An AI social engine for B2B: founder voice, 30-day content calendars, and daily execution run by a supervised AI agent with human review.",
   alternates: { canonical: "/ai-social-engine" },
   openGraph: {
     title: "AI Social Media Engine as a Service | Triple & Co.",

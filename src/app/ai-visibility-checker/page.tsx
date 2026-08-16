@@ -6,9 +6,9 @@ import { PillarFAQ } from "@/components/PillarFAQ";
 import { VisibilityChecker } from "@/components/VisibilityChecker";
 
 export const metadata: Metadata = {
-  title: "Free AI Visibility Checker: Test Your Site in 10 Seconds",
+  title: "Free AI Visibility Checker: Test Your Site",
   description:
-    "Enter your domain and get an instant 0 to 100 AI visibility score. Checks llms.txt, robots.txt access for 10 AI crawlers, JSON-LD structured data, and Bing indexability. Free, no signup.",
+    "Enter your domain and get an instant 0 to 100 AI visibility score: llms.txt, AI crawler access, structured data, and Bing indexability. Free, no signup.",
   alternates: { canonical: "/ai-visibility-checker" },
   openGraph: {
     title: "Free AI Visibility Checker | Triple & Co.",

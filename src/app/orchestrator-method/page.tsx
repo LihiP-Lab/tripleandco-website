@@ -6,9 +6,9 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { PillarFAQ } from "@/components/PillarFAQ";
 
 export const metadata: Metadata = {
-  title: "The Orchestrator Method: How a Supervised AI Marketing Team Runs",
+  title: "The Orchestrator Method: Supervised AI Marketing",
   description:
-    "Triple & Co.'s operating model for AI-powered B2B marketing: one senior orchestrator, a digital COO, 8 specialist AI agents, a Brief, Run, Deliver supervision loop, and a weekly cadence that ships. What runs, who reviews it, and what ships in weeks 1 to 4.",
+    "Triple & Co.'s operating model for AI-powered B2B marketing: one senior orchestrator, a digital COO, 8 specialist AI agents, and a supervision loop that ships.",
   alternates: { canonical: "/orchestrator-method" },
   openGraph: {
     title: "The Orchestrator Method | Triple & Co.",

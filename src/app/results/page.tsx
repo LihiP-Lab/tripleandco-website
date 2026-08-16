@@ -7,7 +7,7 @@ import { PillarFAQ } from "@/components/PillarFAQ";
 export const metadata: Metadata = {
   title: "Results: $70M+ Raised, Pipeline 2.5x, SQLs 4x",
   description:
-    "Verified outcomes from Triple & Co. engagements: pipeline 2.5x in 2 quarters, SQLs up 4x in 2 months, CAC down 18% in 3 months. $70M+ raised at companies where Lihi Pinto led marketing.",
+    "Verified outcomes: pipeline 2.5x in 2 quarters, SQLs up 4x in 2 months, CAC down 18% in 3 months. $70M+ raised at companies where Lihi Pinto led marketing.",
   alternates: { canonical: "/results" },
   openGraph: {
     title: "Results | Triple & Co.",

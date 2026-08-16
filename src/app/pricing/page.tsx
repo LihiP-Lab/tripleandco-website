@@ -7,7 +7,7 @@ import { PillarFAQ } from "@/components/PillarFAQ";
 export const metadata: Metadata = {
   title: "Engagement Models & Pricing",
   description:
-    "Transparent pricing for AI-powered marketing leadership. CMO as a Service, CRO as a Service, and Head of Growth run $5,000 to $15,000 per month, all 8 AI agents included. Start with a free Revenue Diagnostic.",
+    "Transparent pricing for AI-powered marketing leadership: CMO, CRO, and Head of Growth at $5,000 to $15,000 per month, all 8 AI agents included.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     title: "Engagement Models & Pricing | Triple & Co.",

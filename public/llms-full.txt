@@ -415,7 +415,7 @@ Not a consultant who uses AI.
 An operator built around it.
 
 Most agencies added AI to existing workflows. Lihi built the workflow around AI from day one. Eight specialist agents, each running a vertical, all supervised by a CMO who has helped raise $70M+ and tripled SaaS revenue in the real world.
-The result: a marketing operation that runs at machine speed, with human judgment on every output that goes out the door. You never receive raw AI text. Every deliverable is reviewed, refined, and signed off.
+The result: a marketing operation that runs at machine speed, with human judgment on every output that goes out the door. The full operating model is documented in the Orchestrator Method . You never receive raw AI text. Every deliverable is reviewed, refined, and signed off.
 
 Supervised end to end, by Lihi
 8 pre-configured Claude specialists
@@ -1095,7 +1095,7 @@ CMO as a Service for B2B & SaaS
 # CMO as a Service: One Subscription Replaces Your Agency Stack
 
 Count your retainers. Content agency. Paid media agency. SEO shop. A designer on Upwork. None of them talk to each other, and all of them invoice you.
-Triple & Co. replaces the whole stack with one integrated revenue operating system: senior CMO leadership from Lihi Pinto, a digital COO orchestrating the work, and 8 supervised AI agents executing across every channel. Connected strategy. Daily output. One invoice.
+Triple & Co. replaces the whole stack with one integrated revenue operating system: senior CMO leadership from Lihi Pinto, a digital COO orchestrating the work, and 8 supervised AI agents executing across every channel. Connected strategy. Daily output. One invoice. The operating model behind it is public: the Orchestrator Method .
 Book a 30-Minute Revenue Diagnostic → Meet the 8 agents inside the system → CMO ו CRO as a Service עם ליהיא פינטו →
 15+ years in B2B SaaS · $70M+ raised at companies Lihi led · One system, zero agency handoffs
 
@@ -1563,7 +1563,7 @@ Book a 30-Minute Growth Diagnostic →
 ---
 url: https://www.tripleandco.com/pricing
 title: Engagement Models & Pricing | Triple & Co.
-description: Transparent pricing for AI-powered marketing leadership. CMO as a Service, CRO as a Service, and Head of Growth run $5,000 to $15,000 per month, all 8 AI agents included. Start with a free Revenue Diagnostic.
+description: Transparent pricing for AI-powered marketing leadership: CMO, CRO, and Head of Growth at $5,000 to $15,000 per month, all 8 AI agents included.
 ---
 - Home
 - Pricing
@@ -1692,7 +1692,7 @@ Book Your Revenue Diagnostic →
 ---
 url: https://www.tripleandco.com/results
 title: Results: $70M+ Raised, Pipeline 2.5x, SQLs 4x | Triple & Co.
-description: Verified outcomes from Triple & Co. engagements: pipeline 2.5x in 2 quarters, SQLs up 4x in 2 months, CAC down 18% in 3 months. $70M+ raised at companies where Lihi Pinto led marketing.
+description: Verified outcomes: pipeline 2.5x in 2 quarters, SQLs up 4x in 2 months, CAC down 18% in 3 months. $70M+ raised at companies where Lihi Pinto led marketing.
 ---
 - Home
 - Results
@@ -2273,7 +2273,7 @@ Start free
 ## What Does AI Say About Your Brand Today?
 
 Run our free AI Visibility Audit to see whether ChatGPT and other engines mention you, what they get wrong, and where a competitor is cited instead.
-Get my free AI Visibility Audit →
+Get my free AI Visibility Audit → Prefer an instant read? Run the free 10-second AI Visibility Checker and score your site on llms.txt, crawler access, structured data, and Bing indexability.
 
 FAQ
 
@@ -2381,7 +2381,7 @@ Start free
 ## See If AI Already Cites You.
 
 Run our free AI Visibility Audit to see whether ChatGPT and other engines mention you, what they get wrong, and where a competitor is cited instead. It is the first step of the checklist, done for you.
-Get my free AI Visibility Audit →
+Get my free AI Visibility Audit → Prefer an instant read? Run the free 10-second AI Visibility Checker and score your site on llms.txt, crawler access, structured data, and Bing indexability.
 
 FAQ
 
@@ -2413,6 +2413,7 @@ Free AI Visibility Audit
 Your buyers are asking ChatGPT, Perplexity, and Google AI Overviews who to shortlist. You cannot see those answers. We can.
 Our free AI Visibility Audit shows exactly how AI engines describe your brand today, where a competitor gets cited instead, and the fastest way to get into the answer. Run by an AI-native CMO and a supervised agent team.
 100% free · No pitch deck · Delivered in two business days
+Want an instant read first? Run the free 10-second AI Visibility Checker and see if AI engines can read your site at all.
 
 ### What AI says about you
 
@@ -3732,7 +3733,7 @@ description: שיווק B2B לחברות טכנולוגיה ישראליות ש�
 ---
 url: https://www.tripleandco.com/ai-content-engine
 title: AI Content Engine as a Service, Supervised | Triple & Co.
-description: An AI content engine for B2B: brand voice, research-backed strategy, and repurposing run by supervised AI agents with human review on every output. Included in engagements from $5,000/month.
+description: An AI content engine for B2B: brand voice, research-backed strategy, and repurposing run by supervised AI agents with human review on every output.
 ---
 - Home
 - AI Content Engine
@@ -3883,7 +3884,7 @@ Book a 30-Minute Revenue Diagnostic → No pitch. You will leave with 3 specific
 ---
 url: https://www.tripleandco.com/ai-social-engine
 title: AI Social Media Engine as a Service, Supervised | Triple & Co.
-description: An AI social engine for B2B: founder voice, 30-day content calendars, and daily execution run by a supervised AI agent with human review. Included in engagements from $5,000/month.
+description: An AI social engine for B2B: founder voice, 30-day content calendars, and daily execution run by a supervised AI agent with human review.
 ---
 - Home
 - AI Social Engine
@@ -4034,7 +4035,7 @@ Book a 30-Minute Revenue Diagnostic → No pitch. You will leave with 3 specific
 ---
 url: https://www.tripleandco.com/ai-market-research
 title: AI Market Research & Competitive Intel, Supervised | Triple & Co.
-description: AI market research for B2B: competitive gap analysis, intent-based keyword maps, and demand-sized content plays run by a supervised AI agent. Included in engagements from $5,000/month.
+description: AI market research for B2B: competitive gap analysis, intent-based keyword maps, and demand-sized content plays run by a supervised AI agent.
 ---
 - Home
 - AI Market Research
@@ -4185,7 +4186,7 @@ Book a 30-Minute Revenue Diagnostic → No pitch. You will leave with 3 specific
 ---
 url: https://www.tripleandco.com/ai-analytics-attribution
 title: AI Marketing Analytics & Attribution, Supervised | Triple & Co.
-description: AI marketing analytics for B2B: full-funnel attribution, leadership-ready dashboards, and budget reallocation with ROI projections, run by a supervised AI agent. Included in engagements from $5,000/month.
+description: AI marketing analytics for B2B: full-funnel attribution, leadership-ready dashboards, and budget reallocation with ROI projections, run by a supervised AI agent.
 ---
 - Home
 - AI Analytics & Attribution
@@ -4336,7 +4337,7 @@ Book a 30-Minute Revenue Diagnostic → No pitch. You will leave with 3 specific
 ---
 url: https://www.tripleandco.com/ai-video-production
 title: AI Video Production as a Service, Supervised | Triple & Co.
-description: AI video production for B2B: concept, script, edit direction, and post run by a supervised AI agent with art direction and human review. Included in engagements from $5,000/month.
+description: AI video production for B2B: concept, script, edit direction, and post run by a supervised AI agent with art direction and human review.
 ---
 - Home
 - AI Video Production
@@ -4789,6 +4790,8 @@ Your agent runs on Claude. Lihi supervises strategy and quality end to end, you'
 ### Deliver
 
 Finished, on-brand work lands in your inbox on a weekly cadence. Everything is yours to keep.
+
+This loop is the heart of the Orchestrator Method , the full operating model behind the team.
 
 “You don't hire freelancers here. You take command of a team that's already running, with a fractional CMO on every output.”
 8

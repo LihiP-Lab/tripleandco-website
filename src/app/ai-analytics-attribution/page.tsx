@@ -7,7 +7,7 @@ import {
 export const metadata: Metadata = {
   title: "AI Marketing Analytics & Attribution, Supervised",
   description:
-    "AI marketing analytics for B2B: full-funnel attribution, leadership-ready dashboards, and budget reallocation with ROI projections, run by a supervised AI agent. Included in engagements from $5,000/month.",
+    "AI marketing analytics for B2B: full-funnel attribution, leadership-ready dashboards, and budget reallocation with ROI projections, run by a supervised AI agent.",
   alternates: { canonical: "/ai-analytics-attribution" },
   openGraph: {
     title: "AI Marketing Analytics & Attribution | Triple & Co.",
