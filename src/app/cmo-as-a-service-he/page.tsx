@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     absolute: "CMO as a Service לחברות B2B | Triple & Co.",
   },
   description:
-    "CMO as a Service לחברות טכנולוגיה B2B: מנהיגות שיווק בכירה של ליהיא פינטו וצוות של 8 סוכני AI מפוקחים, במנוי חודשי אחד של $5,000 עד $15,000. מתחילים באבחון הכנסות חינם.",
+    "CMO as a Service לחברות B2B: מנהיגות שיווק בכירה של ליהיא פינטו ו-8 סוכני AI מפוקחים, במנוי חודשי של $5,000 עד $15,000. מתחילים באבחון הכנסות חינם.",
   alternates: {
     canonical: "https://www.tripleandco.com/cmo-as-a-service-he",
     languages: {

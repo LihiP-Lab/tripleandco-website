@@ -3550,7 +3550,7 @@ Book a 30-Minute Revenue Diagnostic → No pitch. You will leave with 3 specific
 ---
 url: https://www.tripleandco.com/cmo-as-a-service-he
 title: CMO as a Service לחברות B2B | Triple & Co.
-description: CMO as a Service לחברות טכנולוגיה B2B: מנהיגות שיווק בכירה של ליהיא פינטו וצוות של 8 סוכני AI מפוקחים, במנוי חודשי אחד של $5,000 עד $15,000. מתחילים באבחון הכנסות חינם.
+description: CMO as a Service לחברות B2B: מנהיגות שיווק בכירה של ליהיא פינטו ו-8 סוכני AI מפוקחים, במנוי חודשי של $5,000 עד $15,000. מתחילים באבחון הכנסות חינם.
 ---
 מנוי אחד · אסטרטגיה וביצוע · סוכני AI כלולים
 

@@ -23,6 +23,9 @@
     "/ai-marketing-agents": [
       "color-contrast"
     ],
+    "/ai-marketing-agents-he": [
+      "color-contrast"
+    ],
     "/ai-marketing-team-vs-agency": [
       "color-contrast"
     ],
@@ -30,6 +33,9 @@
       "color-contrast"
     ],
     "/b2b-marketing-israel": [
+      "color-contrast"
+    ],
+    "/b2b-marketing-israel-he": [
       "color-contrast"
     ],
     "/b2b-marketing-tel-aviv": [
@@ -45,6 +51,9 @@
       "color-contrast"
     ],
     "/cmo-as-a-service": [
+      "color-contrast"
+    ],
+    "/cmo-as-a-service-he": [
       "color-contrast"
     ],
     "/contact": [
