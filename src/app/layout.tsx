@@ -31,6 +31,11 @@ export const metadata: Metadata = {
   },
   description:
     "Triple & Co. gives B2B tech companies fractional CMO & CRO leadership plus a supervised team of 8 AI marketing specialists. Led by Lihi Pinto.",
+  // Emits <meta name="author" content="Lihi Pinto"> sitewide. A named,
+  // credentialed human is a scored E-E-A-T signal for AI answer engines.
+  authors: [{ name: "Lihi Pinto", url: "https://www.tripleandco.com/about" }],
+  creator: "Lihi Pinto",
+  publisher: "Triple & Co.",
   keywords: [
     "CMO as a Service",
     "CRO as a Service",
@@ -66,6 +71,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased scroll-smooth`}>
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        {/* Advertises the llms.txt manifest to AI crawlers. React hoists this
+            into <head>. The matching Link: HTTP header lives in next.config.ts
+            so agents that only issue a HEAD request still discover it. */}
+        <link
+          rel="llms-txt"
+          type="text/plain"
+          href="https://www.tripleandco.com/llms.txt"
+        />
         <ThemeProvider>
           {/* Skip to content, accessibility */}
           <a

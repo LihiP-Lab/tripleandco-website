@@ -126,6 +126,23 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        // Advertise the llms.txt manifest at the HTTP layer, so an agent that
+        // issues only a HEAD request and never parses the HTML still finds it.
+        // Mirrors the <link rel="llms-txt"> tag in the root layout.
+        source: "/:path*",
+        headers: [
+          {
+            key: "Link",
+            value:
+              '<https://www.tripleandco.com/llms.txt>; rel="llms-txt"; type="text/plain"',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

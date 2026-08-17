@@ -8,6 +8,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { HeroContent } from "@/components/HeroContent";
+import { SITE_LAST_MODIFIED, lihiRef } from "@/lib/seo";
 import type { Metadata } from "next";
 
 // Homepage owns the "/" canonical directly (the root layout no longer sets a
@@ -95,6 +96,9 @@ const personSchema = {
   subjectOf: [
     {
       "@type": "NewsArticle",
+      headline:
+        "Syte snaps up $21.5M for its smartphone-based visual search engine for e-commerce",
+      datePublished: "2019-09-09",
       url: "https://techcrunch.com/2019/09/09/syte-snaps-up-21-5m-for-its-smartphone-based-visual-search-engine-for-e-commerce/",
       publisher: { "@type": "Organization", name: "TechCrunch" },
     },
@@ -119,11 +123,24 @@ const websiteSchema = {
   url: "https://www.tripleandco.com",
   description: "AI-powered CMO & CRO as a Service for B2B tech companies.",
   publisher: { "@id": "https://www.tripleandco.com/#organization" },
+  // Names the human behind the site. E-E-A-T rubrics look for an explicit
+  // author edge, not just a Person node floating alongside the Organization.
+  author: lihiRef,
+  dateModified: SITE_LAST_MODIFIED,
 };
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "@id": "https://www.tripleandco.com/#faq",
+  author: lihiRef,
+  dateModified: SITE_LAST_MODIFIED,
+  // FAQPage is a WebPage subtype, so `speakable` is valid here. These selectors
+  // mark the blocks an answer engine or voice assistant should read verbatim.
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["#faq-heading", ".faq-answer"],
+  },
   mainEntity: [
     {
       "@type": "Question",

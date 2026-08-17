@@ -24,22 +24,25 @@ function PillarFAQItem({ q, a, index }: FAQItem & { index: number }) {
     <ScrollReveal delay={index * 0.08}>
       <div className="relative bg-white rounded-2xl shadow-[var(--shadow-base)] mb-3 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-[3px] gradient-bar" />
-        <button
-          onClick={handleToggle}
-          aria-expanded={open}
-          className="flex justify-between items-center w-full px-7 py-6 text-left font-semibold text-[17px] text-purple-9 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 rounded-2xl"
-        >
-          <span>{q}</span>
-          <span
-            className={`w-8 h-8 rounded-full flex items-center justify-center text-lg font-extrabold shrink-0 transition-all duration-300 ${
-              open
-                ? "bg-brand text-white rotate-45"
-                : "bg-pink-05 text-brand rotate-0"
-            }`}
+        {/* Same reasoning as FAQ.tsx: the question ships as a real heading. */}
+        <h3 className="m-0">
+          <button
+            onClick={handleToggle}
+            aria-expanded={open}
+            className="flex justify-between items-center w-full px-7 py-6 text-left font-semibold text-[17px] text-purple-9 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 rounded-2xl"
           >
-            +
-          </span>
-        </button>
+            <span>{q}</span>
+            <span
+              className={`w-8 h-8 rounded-full flex items-center justify-center text-lg font-extrabold shrink-0 transition-all duration-300 ${
+                open
+                  ? "bg-brand text-white rotate-45"
+                  : "bg-pink-05 text-brand rotate-0"
+              }`}
+            >
+              +
+            </span>
+          </button>
+        </h3>
         <div
           ref={contentRef}
           style={{
@@ -50,7 +53,9 @@ function PillarFAQItem({ q, a, index }: FAQItem & { index: number }) {
           }}
           className="overflow-hidden"
         >
-          <div className="px-7 pb-7 text-purple-7 leading-[1.7]">{a}</div>
+          <div className="faq-answer px-7 pb-7 text-purple-7 leading-[1.7]">
+            {a}
+          </div>
         </div>
       </div>
     </ScrollReveal>

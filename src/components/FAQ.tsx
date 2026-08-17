@@ -46,22 +46,26 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
     <ScrollReveal delay={index * 0.08}>
       <div className="relative bg-white rounded-2xl shadow-[var(--shadow-base)] mb-3 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-[3px] gradient-bar" />
-        <button
-          onClick={handleToggle}
-          aria-expanded={open}
-          className="flex justify-between items-center w-full px-7 py-6 text-left font-semibold text-[17px] text-purple-9 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 rounded-2xl"
-        >
-          <span>{q}</span>
-          <span
-            className={`w-8 h-8 rounded-full flex items-center justify-center text-lg font-extrabold shrink-0 transition-all duration-300 ${
-              open
-                ? "bg-brand text-white rotate-45"
-                : "bg-pink-05 text-brand rotate-0"
-            }`}
+        {/* The question is a real heading, not just styled button text, so
+            answer engines and screen readers can both find it. */}
+        <h3 className="m-0">
+          <button
+            onClick={handleToggle}
+            aria-expanded={open}
+            className="flex justify-between items-center w-full px-7 py-6 text-left font-semibold text-[17px] text-purple-9 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 rounded-2xl"
           >
-            +
-          </span>
-        </button>
+            <span>{q}</span>
+            <span
+              className={`w-8 h-8 rounded-full flex items-center justify-center text-lg font-extrabold shrink-0 transition-all duration-300 ${
+                open
+                  ? "bg-brand text-white rotate-45"
+                  : "bg-pink-05 text-brand rotate-0"
+              }`}
+            >
+              +
+            </span>
+          </button>
+        </h3>
         <div
           ref={contentRef}
           style={{
@@ -72,7 +76,11 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
           }}
           className="overflow-hidden"
         >
-          <div className="px-7 pb-7 text-purple-7 leading-[1.7]">{a}</div>
+          {/* .faq-answer is targeted by the SpeakableSpecification in the
+              homepage FAQPage schema. Keep the class if you restyle this. */}
+          <div className="faq-answer px-7 pb-7 text-purple-7 leading-[1.7]">
+            {a}
+          </div>
         </div>
       </div>
     </ScrollReveal>
@@ -85,8 +93,10 @@ export function FAQ() {
       <div className="mx-auto max-w-[880px] px-8">
         <ScrollReveal>
           <p className="eyebrow text-center mb-4">FAQ</p>
+          {/* Phrased as a question on purpose. Question-shaped H2s followed by
+              a short direct answer are the unit answer engines extract. */}
           <h2 id="faq-heading" className="text-3xl lg:text-[44px] font-black tracking-tight leading-[1.1] text-center mb-12 text-purple-9">
-            Questions before we get on a call.
+            What do founders ask before we get on a call?
           </h2>
         </ScrollReveal>
         {faqs.map((faq, i) => (
