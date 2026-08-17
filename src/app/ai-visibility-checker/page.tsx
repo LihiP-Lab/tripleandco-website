@@ -5,8 +5,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { PillarFAQ } from "@/components/PillarFAQ";
 import { VisibilityChecker } from "@/components/VisibilityChecker";
+import { normalizeDomain } from "@/lib/visibility-check";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "Free AI Visibility Checker: Test Your Site",
   description:
     "Enter your domain and get an instant 0 to 100 AI visibility score: llms.txt, AI crawler access, structured data, and Bing indexability. Free, no signup.",
@@ -18,6 +19,38 @@ export const metadata: Metadata = {
     url: "https://www.tripleandco.com/ai-visibility-checker",
   },
 };
+
+type PageProps = {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const params = await searchParams;
+  const raw = typeof params.domain === "string" ? params.domain : "";
+  const domain = raw ? normalizeDomain(raw.slice(0, 253)) : null;
+  if (!domain) return baseMetadata;
+  return {
+    ...baseMetadata,
+    title: `AI Visibility Score for ${domain}`,
+    openGraph: {
+      ...baseMetadata.openGraph,
+      title: `AI Visibility Score for ${domain} | Triple & Co.`,
+      url: `https://www.tripleandco.com/ai-visibility-checker?domain=${encodeURIComponent(domain)}`,
+      images: [
+        {
+          url: `/api/og/visibility?domain=${encodeURIComponent(domain)}`,
+          width: 1200,
+          height: 630,
+          alt: `AI visibility score for ${domain}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [`/api/og/visibility?domain=${encodeURIComponent(domain)}`],
+    },
+  };
+}
 
 const checksExplained = [
   {
