@@ -33,7 +33,8 @@ export async function POST(request: NextRequest) {
   let domain = "";
   try {
     const body = await request.json();
-    domain = String(body.domain ?? "");
+    // Cap length so an arbitrary request body can't inflate log volume.
+    domain = String(body.domain ?? "").slice(0, 253);
   } catch {
     return Response.json({ error: "Invalid request." }, { status: 400 });
   }

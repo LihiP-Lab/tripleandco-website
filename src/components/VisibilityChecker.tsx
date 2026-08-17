@@ -136,6 +136,7 @@ export function VisibilityChecker() {
       }
       const rep = data as Report;
       setReport(rep);
+      autoRan.current = true;
       window.history.replaceState(
         null,
         "",
