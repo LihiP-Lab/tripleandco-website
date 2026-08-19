@@ -100,7 +100,7 @@ const content: LandingContent = {
     },
     {
       label: "Executes daily",
-      left: "No, advises",
+      left: "Depends on model, often relies on your internal team",
       middle: "Per channel",
       right: "Yes, full layer",
     },
@@ -113,14 +113,14 @@ const content: LandingContent = {
     {
       label: "Accountable for pipeline",
       left: "Sometimes",
-      middle: "Activity metrics",
+      middle: "Varies, typically scoped to channels or deliverables",
       right: "Yes, revenue first",
     },
     {
       label: "Fits an Israeli budget",
       left: "Often",
       middle: "Adds up per retainer",
-      right: "One engagement, $5K to $15K/mo",
+      right: "One integrated engagement. See Israel pricing.",
     },
   ],
   comparisonNote:
@@ -165,7 +165,7 @@ const content: LandingContent = {
     },
     {
       q: "How much does CMO as a Service cost in Israel?",
-      a: "Engagements run $5,000 to $15,000 per month depending on scope, with all 8 AI agents included. That typically replaces the combined cost of several agency retainers and freelancers, and sits well below a full-time senior marketing hire in the Israeli market. Our pricing page lists the engagement models, and our outsourced CMO cost guide breaks down shekel ranges by model.",
+      a: "For Israeli companies, CMO as a Service engagements that include execution typically run 18,000 to 40,000 NIS per month depending on scope, with all 8 AI agents included. That usually replaces the combined cost of several agency retainers and freelancers, and sits well below the real first-year cost of a full-time CMO hire in Israel, typically 700,000 NIS or more. Our pricing page lists the engagement models, and our outsourced CMO cost guide breaks down the shekel ranges by model.",
     },
     {
       q: "Do you only work with Israeli companies?",
@@ -182,6 +182,48 @@ const content: LandingContent = {
     linkLabel: "CMO as a Service guide",
     after: "for how the operating system works end to end.",
   },
+
+  relatedEyebrow: "Go deeper",
+  relatedH2Lead: "B2B Growth in Israel,",
+  relatedH2Highlight: "Page by Page",
+  relatedLinks: [
+    {
+      href: "/b2b-marketing-israel",
+      label: "B2B Marketing in Israel",
+      description:
+        "How Israeli B2B companies build marketing that sells into the US and Europe, in native English, async by design.",
+    },
+    {
+      href: "/fractional-cmo-b2b",
+      label: "Fractional CMO for B2B",
+      description:
+        "When a named marketing executive inside your leadership team is the right structure, on the same supervised model.",
+    },
+    {
+      href: "/insights/outsourced-cmo-israel-cost",
+      label: "Outsourced CMO in Israel: Cost Guide",
+      description:
+        "Shekel price ranges by engagement model, from outsourced marketing manager to full CMO as a Service.",
+    },
+    {
+      href: "/cybersecurity-marketing",
+      label: "Cybersecurity Marketing",
+      description:
+        "Positioning and pipeline for Israeli security companies selling to skeptical, technical global buyers.",
+    },
+    {
+      href: "/ai-deeptech-marketing",
+      label: "AI & Deep Tech Marketing",
+      description:
+        "Turning research-grade technology into a commercial story enterprise buyers can evaluate and act on.",
+    },
+    {
+      href: "/about",
+      label: "About Lihi Pinto",
+      description:
+        "The operator behind Triple: 15+ years in B2B tech, $70M+ raised at Syte.ai, revenue tripled twice.",
+    },
+  ],
 
   ctaH2Lead: "Turn Israeli Technology Into",
   ctaH2Highlight: "Global Revenue",

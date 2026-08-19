@@ -22,6 +22,12 @@ export interface LandingComparisonRow {
   right: string;
 }
 
+export interface LandingRelatedLink {
+  href: string;
+  label: string;
+  description: string;
+}
+
 export interface LandingContent {
   breadcrumbLabel: string;
   canonical: string;
@@ -78,6 +84,13 @@ export interface LandingContent {
   ctaH2Highlight: string;
   ctaBody: string;
   ctaNote: string;
+
+  /** Optional internal-link hub rendered between the FAQ and the final CTA.
+   *  Use on hub pages to point at the supporting subtopic pages. */
+  relatedEyebrow?: string;
+  relatedH2Lead?: string;
+  relatedH2Highlight?: string;
+  relatedLinks?: LandingRelatedLink[];
 }
 
 export function SolutionLanding({
@@ -371,6 +384,44 @@ export function SolutionLanding({
           )}
         </div>
       </section>
+
+      {/* Related pages (internal-link hub) */}
+      {content.relatedLinks && content.relatedLinks.length > 0 && (
+        <section className="py-16 lg:py-24 bg-white">
+          <div className="mx-auto max-w-[1200px] px-8">
+            <ScrollReveal>
+              {content.relatedEyebrow && (
+                <p className="eyebrow text-center mb-3">
+                  {content.relatedEyebrow}
+                </p>
+              )}
+              <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-12 text-center">
+                {content.relatedH2Lead}{" "}
+                <span className="gradient-text">
+                  {content.relatedH2Highlight}
+                </span>
+              </h2>
+            </ScrollReveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {content.relatedLinks.map((link, i) => (
+                <ScrollReveal key={link.href} delay={0.05 + i * 0.05}>
+                  <Link
+                    href={link.href}
+                    className="block h-full rounded-xl border border-purple-15 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-[var(--shadow-base)]"
+                  >
+                    <h3 className="text-base font-bold text-purple-9 mb-2">
+                      {link.label} <span className="text-brand">&#8594;</span>
+                    </h3>
+                    <p className="text-sm text-purple-7 leading-relaxed">
+                      {link.description}
+                    </p>
+                  </Link>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Closing CTA */}
       <section className="py-20 lg:py-28 bg-white">
