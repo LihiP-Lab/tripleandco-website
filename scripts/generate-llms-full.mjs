@@ -23,6 +23,7 @@ const ROUTES = [
   "/about-he",
   "/services",
   "/cmo-as-a-service",
+  "/cmo-as-a-service-israel",
   "/cro-as-a-service",
   "/head-of-growth",
   "/pricing",

@@ -380,7 +380,15 @@ export default function CMOPage() {
               Triple &amp; Co. operates from Israel, the ecosystem that produces
               more B2B SaaS companies per capita than anywhere on earth. Here,
               every company sells globally from day one, so global is our
-              default, not our stretch goal.
+              default, not our stretch goal. Scaling an Israeli company into
+              global markets? See{" "}
+              <Link
+                href="/cmo-as-a-service-israel"
+                className="text-brand font-semibold hover:underline"
+              >
+                CMO as a Service in Israel for B2B tech
+              </Link>
+              .
             </p>
           </ScrollReveal>
 

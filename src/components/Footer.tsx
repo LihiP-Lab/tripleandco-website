@@ -43,6 +43,7 @@ const industries = [
   { href: "/cybersecurity-marketing", label: "Cybersecurity Marketing" },
   { href: "/ai-deeptech-marketing", label: "AI & DeepTech Marketing" },
   { href: "/b2b-marketing-israel", label: "B2B Marketing in Israel" },
+  { href: "/cmo-as-a-service-israel", label: "CMO as a Service in Israel" },
   { href: "/b2b-marketing-tel-aviv", label: "B2B Marketing in Tel Aviv" },
   { href: "/b2b-marketing-usa", label: "B2B Marketing for the US" },
   { href: "/cmo-as-a-service-he", label: "CMO as a Service (עברית)" },
