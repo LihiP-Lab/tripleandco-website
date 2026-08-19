@@ -173,6 +173,7 @@ export default function AIVisibilityAuditPage() {
                 Want an instant read first? Run the free 10-second{" "}
                 <Link
                   href="/ai-visibility-checker"
+                  prefetch={false}
                   className="text-brand font-semibold hover:underline"
                 >
                   AI Visibility Checker
