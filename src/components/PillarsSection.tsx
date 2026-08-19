@@ -7,7 +7,7 @@ const pillars = [
     num: "01",
     need: "What you need · Senior strategy",
     title: "CMO and CRO leadership from Lihi Pinto.",
-    desc: "15+ years scaling B2B SaaS. $70M+ raised. Tripled revenue, repeatedly. The judgment of an experienced operator embedded in your team.",
+    desc: "15+ years scaling B2B tech. $70M+ raised. Tripled revenue, repeatedly. The judgment of an experienced operator embedded in your team.",
   },
   {
     num: "02",

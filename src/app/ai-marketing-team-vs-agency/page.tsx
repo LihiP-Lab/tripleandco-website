@@ -7,7 +7,7 @@ import {
 export const metadata: Metadata = {
   title: "AI Marketing Team vs Agency for B2B",
   description:
-    "AI marketing team vs traditional agency for B2B SaaS: compare speed, cost, quality, and accountability, and why a supervised AI team beats both.",
+    "AI marketing team vs traditional agency for B2B tech: compare speed, cost, quality, and accountability, and why a supervised AI team beats both.",
   alternates: { canonical: "/ai-marketing-team-vs-agency" },
   openGraph: {
     title: "AI Marketing Team vs Traditional Agency | Triple & Co.",
@@ -143,7 +143,7 @@ const content: LandingContent = {
   faqs: [
     {
       q: "Is an AI marketing team better than a traditional agency?",
-      a: "For most B2B SaaS teams, a supervised AI marketing team delivers comparable or better output faster and at a fraction of an agency retainer, because agents handle the volume and a senior human owns judgment. A traditional agency can still be the right call when you need a specific human craft or channel specialist and budget is not the constraint. The key difference is that a supervised AI team pairs AI speed with accountable human sign-off.",
+      a: "For most B2B tech teams, a supervised AI marketing team delivers comparable or better output faster and at a fraction of an agency retainer, because agents handle the volume and a senior human owns judgment. A traditional agency can still be the right call when you need a specific human craft or channel specialist and budget is not the constraint. The key difference is that a supervised AI team pairs AI speed with accountable human sign-off.",
     },
     {
       q: "How is this different from just using ChatGPT or AI tools ourselves?",
@@ -181,10 +181,10 @@ const serviceSchema = {
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",
-    audienceType: "B2B SaaS companies",
+    audienceType: "B2B technology companies",
   },
   description:
-    "A supervised AI marketing team for B2B SaaS: 8 specialist AI agents execute content, campaigns, and analytics at machine speed, with a senior human owning strategy and reviewing every output. An alternative to a traditional agency or unsupervised AI tools.",
+    "A supervised AI marketing team for B2B tech: 8 specialist AI agents execute content, campaigns, and analytics at machine speed, with a senior human owning strategy and reviewing every output. An alternative to a traditional agency or unsupervised AI tools.",
   url: "https://www.tripleandco.com/ai-marketing-team-vs-agency",
 };
 

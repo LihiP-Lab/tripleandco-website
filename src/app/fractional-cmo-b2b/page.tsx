@@ -7,12 +7,12 @@ import { AgentCarousel } from "@/components/AgentCarousel";
 import { PillarFAQ } from "@/components/PillarFAQ";
 
 export const metadata: Metadata = {
-  title: "Fractional CMO for B2B SaaS, AI-Powered",
+  title: "Fractional CMO for B2B Tech, AI-Powered",
   description:
-    "Get a fractional CMO who ships, not just advises. Senior B2B SaaS strategy from Lihi Pinto, plus 8 supervised AI agents executing daily. Book a call.",
+    "Get a fractional CMO who ships, not just advises. Senior B2B tech strategy from Lihi Pinto, plus 8 supervised AI agents executing daily. Book a call.",
   alternates: { canonical: "/fractional-cmo-b2b" },
   openGraph: {
-    title: "Fractional CMO for B2B SaaS, AI-Powered | Triple & Co.",
+    title: "Fractional CMO for B2B Tech, AI-Powered | Triple & Co.",
     description:
       "Senior fractional CMO strategy plus a built-in AI execution team. One partner, one price, output in days.",
     url: "https://www.tripleandco.com/fractional-cmo-b2b",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "How much does a fractional CMO cost compared to hiring a full-time CMO?",
-    a: "A full-time B2B SaaS CMO typically costs $250K to $400K+ per year in salary, equity, and benefits, before you add the marketing team underneath them. A traditional fractional CMO runs $5K to $15K per month for strategy only. Triple & Co. prices at the level of a standalone fractional executive, but the engagement includes the execution layer, so you're replacing both the CMO line item and most of the team budget. Book a Revenue Diagnostic for a quote scoped to your stage.",
+    a: "A full-time B2B tech CMO typically costs $250K to $400K+ per year in salary, equity, and benefits, before you add the marketing team underneath them. A traditional fractional CMO runs $5K to $15K per month for strategy only. Triple & Co. prices at the level of a standalone fractional executive, but the engagement includes the execution layer, so you're replacing both the CMO line item and most of the team budget. Book a Revenue Diagnostic for a quote scoped to your stage.",
   },
   {
     q: "What does a fractional CMO for SaaS actually do in the first 90 days?",
@@ -79,7 +79,7 @@ const wilPillars = [
   {
     title: "Lihi Pinto, Your Fractional CMO",
     description:
-      "15+ years scaling B2B SaaS companies. $70M+ raised at companies she led. Lihi owns your strategy: positioning, pipeline architecture, pricing, board-level reporting. Every decision that requires judgment, taste, and accountability stays human.",
+      "15+ years scaling B2B tech companies. $70M+ raised at companies she led. Lihi owns your strategy: positioning, pipeline architecture, pricing, board-level reporting. Every decision that requires judgment, taste, and accountability stays human.",
   },
   {
     title: "A Digital COO That Runs the Operation",
@@ -131,7 +131,7 @@ export default function FractionalCMOPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
-              <p className="eyebrow mb-4">Fractional CMO for B2B &amp; SaaS</p>
+              <p className="eyebrow mb-4">Fractional CMO for B2B Tech</p>
 
               <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] text-purple-9 mb-6">
                 The Fractional CMO Who Comes With a Built-In{" "}
@@ -143,7 +143,7 @@ export default function FractionalCMOPage() {
               </p>
               <p className="text-base text-purple-6 leading-relaxed mb-8">
                 Triple &amp; Co. gives you a senior fractional CMO with 15+ years
-                scaling B2B SaaS companies, backed by 8 supervised AI agents that
+                scaling B2B tech companies, backed by 8 supervised AI agents that
                 execute the work daily. Strategy and execution. One partner. One
                 price. No hiring freelancers. No managing juniors. No waiting
                 quarters for traction.
@@ -163,7 +163,7 @@ export default function FractionalCMOPage() {
                 </Link>
               </div>
               <p className="text-xs text-purple-6 font-medium uppercase tracking-wider">
-                15+ years in B2B SaaS &middot; $70M+ raised at companies Lihi led
+                15+ years in B2B tech &middot; $70M+ raised at companies Lihi led
                 &middot; Built in Israel, the Start-Up Nation
               </p>
             </div>
@@ -172,7 +172,7 @@ export default function FractionalCMOPage() {
                 <div className="absolute top-0 left-0 right-0 h-1.5 gradient-bar z-10" />
                 <Image
                   src="/images/lihi.png"
-                  alt="Lihi Pinto, fractional CMO for B2B SaaS"
+                  alt="Lihi Pinto, fractional CMO for B2B tech"
                   fill
                   className="object-cover object-top"
                   priority
@@ -327,7 +327,7 @@ export default function FractionalCMOPage() {
             </h2>
             <p className="text-purple-7 text-center max-w-3xl mx-auto mb-12">
               Triple &amp; Co. is headquartered in Israel, the densest startup
-              ecosystem on earth and the proving ground where B2B SaaS companies
+              ecosystem on earth and the proving ground where B2B tech companies
               learn to sell globally from day one. That DNA is our default
               setting: every playbook we run assumes a global market, a remote
               team, and a US or European buyer.

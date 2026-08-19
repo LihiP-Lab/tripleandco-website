@@ -167,7 +167,7 @@ export default function OutsourcedCmoIsraelCostPage() {
             <p className="text-purple-7 leading-relaxed mb-8">
               One note before the numbers: I run a CMO as a Service practice, so
               I have a position in this market. I also spent 15 years on the
-              hiring side in B2B SaaS and investment banking. The numbers below
+              hiring side in B2B technology and investment banking. The numbers below
               are the market as it actually prices, not as anyone wishes it
               priced.
             </p>

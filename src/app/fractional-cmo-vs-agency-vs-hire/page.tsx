@@ -7,7 +7,7 @@ import {
 export const metadata: Metadata = {
   title: "Fractional CMO vs Agency vs Full-Time Hire",
   description:
-    "Fractional CMO vs marketing agency vs full-time hire for B2B SaaS. Compare cost, ownership, speed, and risk, and see which model fits your stage.",
+    "Fractional CMO vs marketing agency vs full-time hire for B2B tech. Compare cost, ownership, speed, and risk, and see which model fits your stage.",
   alternates: { canonical: "/fractional-cmo-vs-agency-vs-hire" },
   openGraph: {
     title:
@@ -30,9 +30,9 @@ const content: LandingContent = {
   heroBody:
     "A full-time hire gives you ownership but costs $300K+ and takes months to find. An agency gives you hands but rents you strategy by the project. A fractional CMO gives you senior ownership plus execution, without the salary or the search. Here is the honest breakdown.",
   heroStats:
-    "15+ years in B2B SaaS \u00b7 $70M+ raised at companies Lihi led \u00b7 One accountable owner",
+    "15+ years in B2B tech \u00b7 $70M+ raised at companies Lihi led \u00b7 One accountable owner",
   heroImageAlt:
-    "Lihi Pinto, fractional CMO for B2B SaaS companies",
+    "Lihi Pinto, fractional CMO for B2B tech companies",
 
   problemEyebrow: "The real question",
   problemH2Lead: "It Is Not About Cost. It Is About Who Owns the",
@@ -144,7 +144,7 @@ const content: LandingContent = {
   faqs: [
     {
       q: "Is a fractional CMO cheaper than a full-time CMO?",
-      a: "Yes. A full-time CMO in B2B SaaS is typically a $300K+ fully loaded commitment once you add salary, equity, benefits, and ramp time. A fractional CMO gives you senior ownership for a fraction of that, because you pay for the leadership and the execution you need, not a full-time seat. The bigger saving is speed: you skip a three to six month executive search and start in days.",
+      a: "Yes. A full-time CMO in B2B tech is typically a $300K+ fully loaded commitment once you add salary, equity, benefits, and ramp time. A fractional CMO gives you senior ownership for a fraction of that, because you pay for the leadership and the execution you need, not a full-time seat. The bigger saving is speed: you skip a three to six month executive search and start in days.",
     },
     {
       q: "How is a fractional CMO different from a marketing agency?",
@@ -182,10 +182,10 @@ const serviceSchema = {
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",
-    audienceType: "B2B SaaS companies",
+    audienceType: "B2B technology companies",
   },
   description:
-    "Senior fractional CMO leadership for B2B SaaS: one accountable owner of marketing strategy and the number, with execution delivered by a supervised AI team. An alternative to a full-time CMO hire or a marketing agency.",
+    "Senior fractional CMO leadership for B2B tech: one accountable owner of marketing strategy and the number, with execution delivered by a supervised AI team. An alternative to a full-time CMO hire or a marketing agency.",
   url: "https://www.tripleandco.com/fractional-cmo-vs-agency-vs-hire",
 };
 

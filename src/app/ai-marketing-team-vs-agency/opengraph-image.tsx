@@ -8,6 +8,6 @@ export default function OgImage() {
   return ogCard({
     eyebrow: "Comparison",
     title: "AI Marketing Team vs Traditional Agency",
-    subtitle: "Compare speed, cost, quality control, and accountability for B2B SaaS.",
+    subtitle: "Compare speed, cost, quality control, and accountability for B2B tech.",
   });
 }

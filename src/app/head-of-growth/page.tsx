@@ -7,9 +7,9 @@ import { AgentCarousel } from "@/components/AgentCarousel";
 import { PillarFAQ } from "@/components/PillarFAQ";
 
 export const metadata: Metadata = {
-  title: "Head of Growth as a Service for B2B SaaS",
+  title: "Head of Growth as a Service for B2B Tech",
   description:
-    "Fractional Head of Growth for B2B SaaS. One leader owns acquisition, activation, and retention as a measurable system, backed by a supervised AI team.",
+    "Fractional Head of Growth for B2B tech. One leader owns acquisition, activation, and retention as a measurable system, backed by a supervised AI team.",
   alternates: { canonical: "/head-of-growth" },
   openGraph: {
     title: "Head of Growth as a Service (Fractional CGO) | Triple & Co.",
@@ -29,7 +29,7 @@ const faqs = [
     a: "A CMO owns marketing broadly: brand, positioning, demand, and pipeline. A Head of Growth (or CGO) owns the growth engine specifically: the loops and experiments that move acquisition, activation, conversion, and retention as one measurable system. In practice the roles overlap, so on your diagnostic call we recommend the right entry point. If your problem is that growth is stalling and nobody owns the experiment velocity, a Head of Growth is usually the fit.",
   },
   {
-    q: "When should a B2B SaaS company hire a Head of Growth?",
+    q: "When should a B2B tech company hire a Head of Growth?",
     a: "Usually once you have product-market fit and early traction but growth is plateauing, when the founder is still running acquisition personally, or when marketing ships activity but no one owns the funnel math end to end. A fractional Head of Growth gives you senior ownership of the growth system and the experiment cadence to unlock the next stage, without the $300K+ cost and long search of a full-time hire.",
   },
   {
@@ -37,7 +37,7 @@ const faqs = [
     a: "The first two weeks are diagnostic: funnel audit, activation and retention analysis, channel economics, and a ranked list of growth bets. By week three you have a prioritized experiment roadmap with clear metrics, and the agent team is already shipping the tests, landing pages, and dashboards behind it. By day 90 you should have a working experiment cadence, instrumented funnel metrics, and a handful of validated wins, not a growth deck waiting on headcount.",
   },
   {
-    q: "Do you work with B2B SaaS companies outside of Israel?",
+    q: "Do you work with B2B tech companies outside of Israel?",
     a: "Yes, most of our client base sells into the US and Europe. Our operating model is async by design: fluent English, coverage across US and European business hours, and the Start-Up Nation playbook of scaling globally from day one. The AI execution layer runs around the clock, so experiment turnaround is usually faster than a local hire.",
   },
 ];
@@ -61,10 +61,10 @@ const serviceSchema = {
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",
-    audienceType: "B2B SaaS companies",
+    audienceType: "B2B technology companies",
   },
   description:
-    "Fractional Head of Growth leadership for B2B SaaS: one leader owns acquisition, activation, and retention as a measurable experiment system, executed by a supervised AI team.",
+    "Fractional Head of Growth leadership for B2B tech: one leader owns acquisition, activation, and retention as a measurable experiment system, executed by a supervised AI team.",
   url: "https://www.tripleandco.com/head-of-growth",
   offers: {
     "@type": "Offer",
@@ -113,7 +113,7 @@ const systemPillars = [
   {
     title: "Lihi Pinto Owns Your Growth System",
     description:
-      "15+ years scaling B2B SaaS, $70M+ raised at companies she led. The growth strategy, the experiment roadmap, and the metrics that matter sit with one accountable leader who owns the outcome, not a rotating cast of freelancers optimizing single channels.",
+      "15+ years scaling B2B tech, $70M+ raised at companies she led. The growth strategy, the experiment roadmap, and the metrics that matter sit with one accountable leader who owns the outcome, not a rotating cast of freelancers optimizing single channels.",
   },
   {
     title: "A Digital COO Runs the Experiment Loop",
@@ -167,7 +167,7 @@ export default function HeadOfGrowthPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <p className="eyebrow mb-4">
-                Head of Growth as a Service for B2B &amp; SaaS
+                Head of Growth as a Service for B2B Tech
               </p>
 
               <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] text-purple-9 mb-6">
@@ -201,7 +201,7 @@ export default function HeadOfGrowthPage() {
                 </Link>
               </div>
               <p className="text-xs text-purple-6 font-medium uppercase tracking-wider">
-                15+ years in B2B SaaS &middot; $70M+ raised at companies Lihi led
+                15+ years in B2B tech &middot; $70M+ raised at companies Lihi led
                 &middot; Experiments shipped weekly
               </p>
             </div>
@@ -210,7 +210,7 @@ export default function HeadOfGrowthPage() {
                 <div className="absolute top-0 left-0 right-0 h-1.5 gradient-bar z-10" />
                 <Image
                   src="/images/lihi.png"
-                  alt="Lihi Pinto, fractional Head of Growth for B2B SaaS"
+                  alt="Lihi Pinto, fractional Head of Growth for B2B tech"
                   fill
                   className="object-cover object-top"
                   priority

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "B2B Marketing Agency in Tel Aviv, AI-Powered | Triple & Co.",
     description:
-      "Tel Aviv B2B and SaaS marketing built for the global buyer, led by Lihi Pinto with a supervised AI team.",
+      "Tel Aviv B2B tech marketing built for the global buyer, led by Lihi Pinto with a supervised AI team.",
     url: "https://www.tripleandco.com/b2b-marketing-tel-aviv",
   },
 };
@@ -18,7 +18,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "B2B Marketing in Tel Aviv",
-  serviceType: "B2B and SaaS marketing agency",
+  serviceType: "B2B tech marketing agency",
   provider: { "@id": "https://www.tripleandco.com/#organization" },
   areaServed: [
     { "@type": "City", name: "Tel Aviv" },
@@ -29,7 +29,7 @@ const serviceSchema = {
   ],
   audience: {
     "@type": "Audience",
-    audienceType: "Tel Aviv B2B and SaaS companies",
+    audienceType: "Tel Aviv B2B tech companies",
   },
   description:
     "AI-powered B2B marketing for Tel Aviv technology companies selling into the US and Europe: positioning, demand, and pipeline led by an AI-native CMO and a supervised team of AI agents.",
@@ -71,7 +71,7 @@ const content: LandingContent = {
     {
       title: "Lihi Pinto Owns Go-To-Market",
       description:
-        "15+ years scaling B2B SaaS, $70M+ raised, fluent in English and Hebrew. You get senior go-to-market ownership immediately, without the search, the salary war, or the risk of losing your one marketing hire to the next well-funded startup.",
+        "15+ years scaling B2B tech, $70M+ raised, fluent in English and Hebrew. You get senior go-to-market ownership immediately, without the search, the salary war, or the risk of losing your one marketing hire to the next well-funded startup.",
     },
     {
       title: "A Digital COO Runs the Operation",

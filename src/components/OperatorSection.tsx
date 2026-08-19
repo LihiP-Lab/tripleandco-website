@@ -41,7 +41,7 @@ const credCards = [
   },
   {
     id: "years",
-    claim: "15 years across B2B SaaS and investment banking.",
+    claim: "15 years across B2B technology and investment banking.",
     line: "Numbers first, always.",
     context:
       "Every marketing decision tied to pipeline and revenue, not vanity metrics.",

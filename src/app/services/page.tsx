@@ -117,7 +117,7 @@ const services: Service[] = [
     tag: "One leader owns acquisition, activation, and retention.",
     description:
       "A fractional Head of Growth who owns your growth system, not a single channel. We set the experiment roadmap, instrument the funnel, and ship tests every week so growth compounds through learning velocity instead of stalling between one-off projects.",
-    who: "B2B SaaS companies with product-market fit whose growth has flattened and where the founder is still running acquisition personally.",
+    who: "B2B tech companies with product-market fit whose growth has flattened and where the founder is still running acquisition personally.",
     problem:
       "Growth is a pile of disconnected tactics measured in clicks nobody can tie to revenue. Retention leaks while everyone crowds the top of the funnel.",
     outcome:
@@ -365,7 +365,7 @@ const industryLinks = [
   {
     kicker: "Market",
     title: "Israel",
-    blurb: "Israeli B2B and SaaS marketing built to sell globally.",
+    blurb: "Israeli B2B tech marketing built to sell globally.",
     href: "/b2b-marketing-israel",
   },
   {

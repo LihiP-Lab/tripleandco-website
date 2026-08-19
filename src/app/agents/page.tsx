@@ -155,7 +155,7 @@ export default function AgentsPage() {
                   Every output human-reviewed
                 </span>
                 <span>$70M+ raised</span>
-                <span>15+ yrs B2B SaaS</span>
+                <span>15+ yrs B2B tech</span>
                 <span>Zero onboarding</span>
               </div>
             </div>
@@ -397,7 +397,7 @@ export default function AgentsPage() {
                 {[
                   ["8", "AI specialists"],
                   ["$70M+", "raised"],
-                  ["15+ yrs", "B2B SaaS"],
+                  ["15+ yrs", "B2B tech"],
                   ["100%", "human-reviewed"],
                 ].map(([n, l]) => (
                   <div key={l} className="text-center">

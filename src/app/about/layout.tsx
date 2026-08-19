@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Lihi Pinto: Israel's Native AI CMO & CRO",
   description:
-    "Lihi Pinto is Israel's first native AI CMO/CRO. 15+ years in B2B SaaS, revenue tripled repeatedly, now running 8 specialist AI agents supervised end-to-end.",
+    "Lihi Pinto is Israel's first native AI CMO/CRO. 15+ years in B2B tech, revenue tripled repeatedly, now running 8 specialist AI agents supervised end-to-end.",
   alternates: {
     canonical: "/about",
     languages: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Lihi Pinto | Triple & Co.",
     description:
-      "Israel's first native AI CMO/CRO. 15+ years in B2B SaaS, now running a supervised team of 8 specialist AI marketing agents.",
+      "Israel's first native AI CMO/CRO. 15+ years in B2B tech, now running a supervised team of 8 specialist AI marketing agents.",
     url: "https://www.tripleandco.com/about",
     siteName: "Triple & Co.",
     type: "profile",
@@ -55,8 +55,9 @@ const profileSchema = {
     jobTitle: "Founder, CMO & CRO as a Service",
     worksFor: { "@id": "https://www.tripleandco.com/#organization" },
     description:
-      "Founder of Triple & Co. and Israel's first native AI CMO/CRO. 15+ years in B2B SaaS and investment banking, revenue tripled repeatedly. Runs a supervised team of 8 specialist AI marketing agents with human review on every output.",
+      "Founder of Triple & Co. and Israel's first native AI CMO/CRO. 15+ years in B2B technology and investment banking, revenue tripled repeatedly. Runs a supervised team of 8 specialist AI marketing agents with human review on every output.",
     knowsAbout: [
+      "B2B Technology Marketing",
       "B2B SaaS Marketing",
       "Go-to-Market Strategy",
       "Revenue Operations",

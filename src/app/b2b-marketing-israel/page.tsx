@@ -4,7 +4,7 @@ import { SolutionLanding, type LandingContent } from "@/components/SolutionLandi
 export const metadata: Metadata = {
   title: "B2B Marketing Agency in Israel, AI-Powered",
   description:
-    "B2B marketing in Israel built to sell globally. Senior strategy from Lihi Pinto plus 8 supervised AI agents, for Israeli B2B and SaaS companies going global.",
+    "B2B marketing in Israel built to sell globally. Senior strategy from Lihi Pinto plus 8 supervised AI agents, for Israeli B2B tech companies going global.",
   alternates: {
     canonical: "/b2b-marketing-israel",
     languages: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "B2B Marketing Agency in Israel, AI-Powered | Triple & Co.",
     description:
-      "Israeli B2B and SaaS marketing built for the US and European buyer, led by Lihi Pinto with a supervised AI team.",
+      "Israeli B2B tech marketing built for the US and European buyer, led by Lihi Pinto with a supervised AI team.",
     url: "https://www.tripleandco.com/b2b-marketing-israel",
   },
 };
@@ -25,7 +25,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "B2B Marketing in Israel",
-  serviceType: "B2B and SaaS marketing agency",
+  serviceType: "B2B tech marketing agency",
   provider: { "@id": "https://www.tripleandco.com/#organization" },
   areaServed: [
     { "@type": "Country", name: "Israel" },
@@ -35,7 +35,7 @@ const serviceSchema = {
   ],
   audience: {
     "@type": "Audience",
-    audienceType: "Israeli B2B and SaaS companies",
+    audienceType: "Israeli B2B tech companies",
   },
   description:
     "AI-powered B2B marketing for Israeli technology companies selling into the US and Europe: positioning, demand, and pipeline led by an AI-native CMO and a supervised team of AI agents.",
@@ -77,7 +77,7 @@ const content: LandingContent = {
     {
       title: "Lihi Pinto Owns Go-To-Market",
       description:
-        "15+ years scaling B2B SaaS, $70M+ raised at companies she led, fluent in English and Hebrew. Lihi owns positioning, messaging, and pipeline strategy for the global buyer, so the story is built for the market you sell into, not the one you sit in.",
+        "15+ years scaling B2B tech, $70M+ raised at companies she led, fluent in English and Hebrew. Lihi owns positioning, messaging, and pipeline strategy for the global buyer, so the story is built for the market you sell into, not the one you sit in.",
     },
     {
       title: "A Digital COO Runs It Async",
@@ -158,7 +158,7 @@ const content: LandingContent = {
   faqs: [
     {
       q: "Do you work with Israeli companies selling into the US and Europe?",
-      a: "Yes, that is our core focus. Most of our clients are Israeli B2B and SaaS companies whose buyers are in the US and Europe. Our entire operating model is built for it: native English content, async work across timezones, and go-to-market playbooks tuned to how American and European buyers evaluate and buy.",
+      a: "Yes, that is our core focus. Most of our clients are Israeli B2B tech companies whose buyers are in the US and Europe. Our entire operating model is built for it: native English content, async work across timezones, and go-to-market playbooks tuned to how American and European buyers evaluate and buy.",
     },
     {
       q: "Can you produce native-level English marketing?",

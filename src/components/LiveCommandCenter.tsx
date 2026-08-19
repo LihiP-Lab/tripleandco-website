@@ -172,7 +172,7 @@ export function LiveCommandCenter() {
             <div className="grid grid-cols-2 gap-4">
               <LiveStat target={8} label="Specialist agents on the team" />
               <LiveStat target={100} suffix="%" label="Human-reviewed before it ships" />
-              <LiveStat target={15} suffix="+" label="Years scaling B2B SaaS" />
+              <LiveStat target={15} suffix="+" label="Years scaling B2B tech" />
               <LiveStat target={0} label="Outputs shipped unsupervised" />
             </div>
 

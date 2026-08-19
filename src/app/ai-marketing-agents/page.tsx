@@ -29,7 +29,7 @@ const agents = [
     name: "Camille",
     role: "Brand Voice Generator",
     description:
-      "Camille extracts your brand voice from your existing content and applies it consistently across every channel. So your company sounds like itself, not like every other B2B SaaS on LinkedIn. She handles voice extraction, asset rewrites, and delivers a tone guide your whole team can use.",
+      "Camille extracts your brand voice from your existing content and applies it consistently across every channel. So your company sounds like itself, not like every other B2B tech company on LinkedIn. She handles voice extraction, asset rewrites, and delivers a tone guide your whole team can use.",
     model: "Claude Sonnet",
     diagnostic: "Brand Voice Diagnostic \u00b7 2 weeks \u00b7 $2,000 fixed scope",
     id: "camille",
@@ -415,7 +415,7 @@ export default function AIMarketingAgentsPage() {
                   <span className="gradient-text">Zero unsupervised output.</span>
                 </h2>
                 <p className="text-purple-2 leading-relaxed mb-4">
-                  Lihi Pinto is a marketing and revenue executive with 15+ years scaling B2B SaaS startups. She helped raise over $70M and tripled revenue at a SaaS company repeatedly, and built the operating system that powers the agent team.
+                  Lihi Pinto is a marketing and revenue executive with 15+ years scaling B2B technology startups. She helped raise over $70M and tripled revenue at a SaaS company repeatedly, and built the operating system that powers the agent team.
                 </p>
                 <p className="text-purple-2 leading-relaxed mb-6">
                   Every deliverable passes Lihi before it reaches you. She reviews for brand alignment, strategic accuracy, and quality. You are not buying AI tools you manage yourself. You are getting an operator who runs them for you.
@@ -507,7 +507,7 @@ export default function AIMarketingAgentsPage() {
             <div className="space-y-4">
               {[
                 {
-                  title: "Series A-C B2B SaaS companies",
+                  title: "Series A-C B2B tech companies",
                   body: "that need senior marketing execution without the cost of a full department",
                 },
                 {

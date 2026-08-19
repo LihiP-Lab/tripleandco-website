@@ -75,12 +75,13 @@ const personSchema = {
       inCodeSet: "https://www.onetonline.org/",
     },
     description:
-      "Fractional CMO and CRO leadership for B2B SaaS companies, running marketing through a supervised team of 8 specialist AI agents.",
+      "Fractional CMO and CRO leadership for B2B technology companies, running marketing through a supervised team of 8 specialist AI agents.",
   },
   worksFor: { "@id": "https://www.tripleandco.com/#organization" },
   description:
-    "Founder of Triple & Co. and Israel's first native AI CMO/CRO. 15+ years in B2B SaaS and investment banking, $70M+ raised, revenue tripled repeatedly. Runs a supervised team of 8 specialist AI marketing agents with human review on every output.",
+    "Founder of Triple & Co. and Israel's first native AI CMO/CRO. 15+ years in B2B technology and investment banking, $70M+ raised, revenue tripled repeatedly. Runs a supervised team of 8 specialist AI marketing agents with human review on every output.",
   knowsAbout: [
+    "B2B Technology Marketing",
     "B2B SaaS Marketing",
     "Go-to-Market Strategy",
     "Revenue Operations",

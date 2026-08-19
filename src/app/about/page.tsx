@@ -225,7 +225,7 @@ const videos = [
 // ─── Stats ────────────────────────────────────────────────────────────────────
 const stats = [
   { value: 70, suffix: "M+", label: "raised at companies Lihi led", prefix: "$" },
-  { value: 15, suffix: "+", label: "years in B2B SaaS", prefix: "" },
+  { value: 15, suffix: "+", label: "years in B2B tech", prefix: "" },
   { value: 3, suffix: "×", label: "revenue growth, repeatedly", prefix: "" },
   { value: 8, suffix: "", label: "AI agents in your corner", prefix: "" },
 ];
@@ -305,7 +305,7 @@ export default function AboutPage() {
               </div>
 
               <p className="text-lg text-purple-3 leading-relaxed mb-6 max-w-xl">
-                15 years in B2B SaaS and investment banking. $70M+ raised.
+                15 years in B2B technology and investment banking. $70M+ raised.
                 Revenue tripled, repeatedly. Now running the world&apos;s first
                 fully supervised AI marketing operation, built on 8 specialist
                 agents with Lihi as the human in the loop.

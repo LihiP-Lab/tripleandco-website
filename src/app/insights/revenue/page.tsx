@@ -22,7 +22,7 @@ const pillars = [
   {
     title: "Marketing",
     intro:
-      "Triple provides B2B SaaS companies with the know-how to create a well-oiled marketing machine. We develop your unique lead generation process from strategy to content creation to building a team of knowledgeable experts.",
+      "Triple provides B2B tech companies with the know-how to create a well-oiled marketing machine. We develop your unique lead generation process from strategy to content creation to building a team of knowledgeable experts.",
     cta: "Bring in qualified leads to feed your sales and fuel your growth.",
     groups: [
       {

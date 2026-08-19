@@ -7,9 +7,9 @@ import { AgentCarousel } from "@/components/AgentCarousel";
 import { PillarFAQ } from "@/components/PillarFAQ";
 
 export const metadata: Metadata = {
-  title: "CMO as a Service for B2B SaaS",
+  title: "CMO as a Service for B2B Tech",
   description:
-    "CMO as a Service for B2B SaaS. One subscription replaces your agency retainers: senior strategy, 8 AI agents, and a full revenue operating system.",
+    "CMO as a Service for B2B tech. One subscription replaces your agency retainers: senior strategy, 8 AI agents, and a full revenue operating system.",
   alternates: {
     canonical: "/cmo-as-a-service",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "CMO as a Service for B2B SaaS | Triple & Co.",
+    title: "CMO as a Service for B2B Tech | Triple & Co.",
     description:
       "One subscription replaces your agency stack: senior CMO leadership plus an integrated AI revenue operating system.",
     url: "https://www.tripleandco.com/cmo-as-a-service",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is CMO as a Service?",
-    a: "CMO as a Service is a subscription model that gives your company full marketing leadership and execution without hiring an executive or managing agencies. At Triple & Co., that means a senior CMO (Lihi Pinto, 15+ years in B2B SaaS) owning your strategy, plus an integrated AI operating system, 8 supervised agents and a digital COO, executing it daily across content, campaigns, SEO, outreach, and analytics.",
+    a: "CMO as a Service is a subscription model that gives your company full marketing leadership and execution without hiring an executive or managing agencies. At Triple & Co., that means a senior CMO (Lihi Pinto, 15+ years in B2B tech) owning your strategy, plus an integrated AI operating system, 8 supervised agents and a digital COO, executing it daily across content, campaigns, SEO, outreach, and analytics.",
   },
   {
     q: "How is CMO as a Service different from hiring a marketing agency?",
@@ -40,7 +40,7 @@ const faqs = [
     a: "Same engine, different entry point. Fractional CMO engagements suit founders who want a named marketing executive in their leadership team. CMO as a Service suits companies consolidating agency spend into one integrated system. Both run on the Woman in the Loop model: Lihi's strategy, supervised AI execution. We'll recommend the right structure on your diagnostic call.",
   },
   {
-    q: "Do you work with B2B SaaS companies outside of Israel?",
+    q: "Do you work with B2B tech companies outside of Israel?",
     a: "Yes, that's most of our client base. We're built for US and European markets: async operations across timezones, fluent English, and Start-Up Nation experience scaling companies globally from day one. The AI layer works around the clock, which usually means faster turnaround than a local agency.",
   },
 ];
@@ -54,10 +54,10 @@ const serviceSchema = {
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",
-    audienceType: "B2B SaaS companies",
+    audienceType: "B2B technology companies",
   },
   description:
-    "Subscription CMO leadership for B2B SaaS: senior strategy from Lihi Pinto, a digital COO orchestrating the work, and 8 supervised AI agents executing daily across content, campaigns, SEO, outreach, and analytics.",
+    "Subscription CMO leadership for B2B tech: senior strategy from Lihi Pinto, a digital COO orchestrating the work, and 8 supervised AI agents executing daily across content, campaigns, SEO, outreach, and analytics.",
   url: "https://www.tripleandco.com/cmo-as-a-service",
   offers: {
     "@type": "Offer",
@@ -116,7 +116,7 @@ const systemPillars = [
   {
     title: "Lihi Pinto Owns Your Revenue Strategy",
     description:
-      "15+ years scaling B2B SaaS, $70M+ raised at companies she led. Positioning, ICP, pricing, funnel architecture, and board reporting sit with one accountable executive, not scattered across account managers.",
+      "15+ years scaling B2B tech, $70M+ raised at companies she led. Positioning, ICP, pricing, funnel architecture, and board reporting sit with one accountable executive, not scattered across account managers.",
   },
   {
     title: "A Digital COO Replaces the Handoffs",
@@ -172,7 +172,7 @@ export default function CMOPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
-              <p className="eyebrow mb-4">CMO as a Service for B2B &amp; SaaS</p>
+              <p className="eyebrow mb-4">CMO as a Service for B2B Tech</p>
 
               <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] text-purple-9 mb-6">
                 CMO as a Service: One Subscription Replaces Your{" "}
@@ -218,7 +218,7 @@ export default function CMOPage() {
                 </Link>
               </div>
               <p className="text-xs text-purple-6 font-medium uppercase tracking-wider">
-                15+ years in B2B SaaS &middot; $70M+ raised at companies Lihi led
+                15+ years in B2B tech &middot; $70M+ raised at companies Lihi led
                 &middot; One system, zero agency handoffs
               </p>
             </div>
@@ -227,7 +227,7 @@ export default function CMOPage() {
                 <div className="absolute top-0 left-0 right-0 h-1.5 gradient-bar z-10" />
                 <Image
                   src="/images/lihi.png"
-                  alt="Lihi Pinto, CMO as a Service for B2B SaaS"
+                  alt="Lihi Pinto, CMO as a Service for B2B tech"
                   fill
                   className="object-cover object-top"
                   priority
@@ -378,7 +378,7 @@ export default function CMOPage() {
             </h2>
             <p className="text-purple-7 text-center max-w-3xl mx-auto mb-12">
               Triple &amp; Co. operates from Israel, the ecosystem that produces
-              more B2B SaaS companies per capita than anywhere on earth. Here,
+              more B2B tech companies per capita than anywhere on earth. Here,
               every company sells globally from day one, so global is our
               default, not our stretch goal. Scaling an Israeli company into
               global markets? See{" "}
@@ -456,7 +456,7 @@ export default function CMOPage() {
               Looking for a named executive on your leadership team instead?
               See our{" "}
               <Link href="/fractional-cmo-b2b" className="text-brand font-semibold hover:underline">
-                Fractional CMO for B2B SaaS
+                Fractional CMO for B2B Tech
               </Link>{" "}
               engagement.
             </p>

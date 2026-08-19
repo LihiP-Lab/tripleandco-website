@@ -68,7 +68,7 @@ const content: LandingContent = {
     {
       title: "Camille Owns Brand Voice",
       description:
-        "Camille extracts your voice from your existing content and applies it consistently across every channel, so your company sounds like itself, not like every other B2B SaaS on LinkedIn. She delivers voice extraction, asset rewrites, and a tone guide your whole team can use.",
+        "Camille extracts your voice from your existing content and applies it consistently across every channel, so your company sounds like itself, not like every other B2B tech company on LinkedIn. She delivers voice extraction, asset rewrites, and a tone guide your whole team can use.",
     },
     {
       title: "Nova Grounds Strategy in Demand",

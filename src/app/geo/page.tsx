@@ -8,12 +8,12 @@ import { PillarFAQ } from "@/components/PillarFAQ";
 export const metadata: Metadata = {
   title: "GEO: Generative Engine Optimization for B2B",
   description:
-    "Generative Engine Optimization (GEO) makes your brand citable in ChatGPT, Perplexity, Gemini, and Google AI Overviews. B2B SaaS GEO from an AI-native CMO.",
+    "Generative Engine Optimization (GEO) makes your brand citable in ChatGPT, Perplexity, Gemini, and Google AI Overviews. B2B tech GEO from an AI-native CMO.",
   alternates: { canonical: "/geo" },
   openGraph: {
     title: "GEO: Generative Engine Optimization for B2B | Triple & Co.",
     description:
-      "Get cited by ChatGPT, Perplexity, Gemini, and AI Overviews. GEO strategy and execution for B2B SaaS, run by an AI-native CMO and a supervised agent team.",
+      "Get cited by ChatGPT, Perplexity, Gemini, and AI Overviews. GEO strategy and execution for B2B tech, run by an AI-native CMO and a supervised agent team.",
     url: "https://www.tripleandco.com/geo",
   },
 };
@@ -28,7 +28,7 @@ const faqs = [
     a: "SEO earns you a ranked link that a human clicks. GEO earns you a citation inside a generated answer, often before any link is clicked. SEO optimizes pages for a crawler and an index; GEO optimizes claims, definitions, and evidence for a language model that synthesizes an answer. They share a foundation, clean, authoritative, well-structured content, but GEO adds quotable formatting, entity clarity, and explicit AI-crawler access. Most B2B buyers now start in an AI assistant, so both matter.",
   },
   {
-    q: "Why does GEO matter for B2B SaaS?",
+    q: "Why does GEO matter for B2B tech?",
     a: "B2B buyers increasingly ask an AI assistant to shortlist vendors, compare categories, and summarize options before they ever visit a website. If AI engines do not know who you are or cite a competitor instead, you are cut from the consideration set before the funnel starts. GEO puts your positioning, proof, and category language in the exact form these engines lift, so your brand shows up in the answer, not just on page two.",
   },
   {
@@ -60,10 +60,10 @@ const serviceSchema = {
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",
-    audienceType: "B2B SaaS companies",
+    audienceType: "B2B technology companies",
   },
   description:
-    "GEO strategy and execution for B2B SaaS: make your brand citable in ChatGPT, Perplexity, Gemini, and Google AI Overviews through structured, authoritative, AI-readable content.",
+    "GEO strategy and execution for B2B tech: make your brand citable in ChatGPT, Perplexity, Gemini, and Google AI Overviews through structured, authoritative, AI-readable content.",
   url: "https://www.tripleandco.com/geo",
 };
 
@@ -206,7 +206,7 @@ export default function GEOPage() {
                 <div className="absolute top-0 left-0 right-0 h-1.5 gradient-bar z-10" />
                 <Image
                   src="/images/lihi.png"
-                  alt="Lihi Pinto, AI-native CMO leading GEO for B2B SaaS"
+                  alt="Lihi Pinto, AI-native CMO leading GEO for B2B tech"
                   fill
                   className="object-cover object-top"
                   priority

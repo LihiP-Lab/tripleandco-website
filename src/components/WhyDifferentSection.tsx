@@ -8,7 +8,7 @@ const differentiators = [
   {
     num: "01",
     title: "Senior leadership",
-    desc: "CMO and CRO judgment from Lihi Pinto: 15+ years scaling B2B SaaS, $70M+ raised, revenue tripled repeatedly.",
+    desc: "CMO and CRO judgment from Lihi Pinto: 15+ years scaling B2B tech, $70M+ raised, revenue tripled repeatedly.",
   },
   {
     num: "02",
@@ -101,7 +101,7 @@ export function WhyDifferentSection() {
               label="Human-reviewed before it ships"
             />
             <div className="hidden md:block w-px h-12 bg-purple-15" />
-            <AnimatedNumber target={15} suffix="+" label="Years scaling B2B SaaS" />
+            <AnimatedNumber target={15} suffix="+" label="Years scaling B2B tech" />
           </div>
           <p className="text-center mt-5 text-sm italic text-purple-5">
             The supervised team in numbers.

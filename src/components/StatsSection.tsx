@@ -61,7 +61,7 @@ export function StatsSection() {
           <AnimatedStat
             target={15}
             suffix="+"
-            label="Years scaling B2B SaaS"
+            label="Years scaling B2B tech"
             delay={0.24}
           />
         </div>

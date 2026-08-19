@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "What kinds of companies do you work with?",
-    a: "B2B SaaS companies from seed to Series C. Typically $1M\u2013$30M ARR, looking to build a scalable marketing and revenue engine without hiring a full department.",
+    a: "B2B tech companies from seed to Series C. Typically $1M\u2013$30M ARR, looking to build a scalable marketing and revenue engine without hiring a full department.",
   },
   {
     q: "How many clients do you take at a time?",

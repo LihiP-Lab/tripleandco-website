@@ -18,7 +18,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "B2B Marketing for the US Market",
-  serviceType: "B2B and SaaS marketing agency",
+  serviceType: "B2B tech marketing agency",
   provider: { "@id": "https://www.tripleandco.com/#organization" },
   areaServed: [
     { "@type": "Country", name: "United States" },
@@ -26,7 +26,7 @@ const serviceSchema = {
   ],
   audience: {
     "@type": "Audience",
-    audienceType: "B2B and SaaS companies selling into the United States",
+    audienceType: "B2B tech companies selling into the United States",
   },
   description:
     "AI-powered B2B marketing for companies selling into the US market: positioning, demand, and pipeline tuned to the American buyer, led by an AI-native CMO and a supervised team of AI agents.",
@@ -68,7 +68,7 @@ const content: LandingContent = {
     {
       title: "Lihi Pinto Owns Go-To-Market",
       description:
-        "15+ years scaling B2B SaaS with go-to-market playbooks tuned to the American buyer, $70M+ raised. Lihi owns positioning, messaging, and pipeline strategy, so your US story is confident, clear, and built to compete.",
+        "15+ years scaling B2B tech with go-to-market playbooks tuned to the American buyer, $70M+ raised. Lihi owns positioning, messaging, and pipeline strategy, so your US story is confident, clear, and built to compete.",
     },
     {
       title: "A Digital COO Runs the Operation",

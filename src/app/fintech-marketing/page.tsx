@@ -42,7 +42,7 @@ const content: LandingContent = {
   heroBody:
     "Triple & Co. gives you a senior fintech marketing leader plus 8 supervised AI agents that build trust-first positioning, compliant content, and a demand engine that turns credibility into pipeline. Strategy and execution in one engagement, with a human accountable for every claim that ships.",
   heroStats:
-    "15+ years in B2B SaaS and investment banking \u00b7 $70M+ raised \u00b7 Trust-first by design",
+    "15+ years in B2B technology and investment banking \u00b7 $70M+ raised \u00b7 Trust-first by design",
   heroImageAlt: "Lihi Pinto, fintech marketing leader",
 
   problemEyebrow: "The problem",
@@ -65,7 +65,7 @@ const content: LandingContent = {
     {
       title: "Lihi Pinto Owns the Trust Story",
       description:
-        "15+ years across B2B SaaS and investment banking, $70M+ raised. Lihi owns positioning, the credibility narrative, and messaging, so the way you present risk, security, and proof is set by someone who has sat on both sides of the table.",
+        "15+ years across B2B technology and investment banking, $70M+ raised. Lihi owns positioning, the credibility narrative, and messaging, so the way you present risk, security, and proof is set by someone who has sat on both sides of the table.",
     },
     {
       title: "A Digital COO Keeps Everything Reviewed",
@@ -146,7 +146,7 @@ const content: LandingContent = {
   faqs: [
     {
       q: "Do you understand marketing for regulated financial products?",
-      a: "Yes. Lihi Pinto's background spans B2B SaaS and investment banking, so the trust story, the risk narrative, and the way regulated buyers evaluate vendors are core to how we position fintech companies. We lead with proof and credibility rather than hype, and every claim is reviewed by a human before it ships.",
+      a: "Yes. Lihi Pinto's background spans B2B technology and investment banking, so the trust story, the risk narrative, and the way regulated buyers evaluate vendors are core to how we position fintech companies. We lead with proof and credibility rather than hype, and every claim is reviewed by a human before it ships.",
     },
     {
       q: "How do you handle compliance and accuracy in content?",

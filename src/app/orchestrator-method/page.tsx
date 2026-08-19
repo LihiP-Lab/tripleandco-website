@@ -37,7 +37,7 @@ const layers = [
   {
     n: "01",
     title: "The Orchestrator",
-    line: "Lihi Pinto. Sets the strategy, writes the briefs, reviews every deliverable, and owns the revenue outcome. 15+ years in B2B SaaS, $70M+ raised at companies where she led marketing.",
+    line: "Lihi Pinto. Sets the strategy, writes the briefs, reviews every deliverable, and owns the revenue outcome. 15+ years in B2B tech, $70M+ raised at companies where she led marketing.",
   },
   {
     n: "02",
@@ -133,7 +133,7 @@ const faqs = [
   },
   {
     q: "Who is the orchestrator?",
-    a: "Lihi Pinto, founder of Triple & Co. and an AI-native CMO with 15+ years in B2B SaaS, $70M+ raised at companies where she led marketing, and revenue tripled repeatedly. The orchestrator role is the point of the method: a senior marketer whose judgment directs the agents and whose review gates everything that ships.",
+    a: "Lihi Pinto, founder of Triple & Co. and an AI-native CMO with 15+ years in B2B tech, $70M+ raised at companies where she led marketing, and revenue tripled repeatedly. The orchestrator role is the point of the method: a senior marketer whose judgment directs the agents and whose review gates everything that ships.",
   },
   {
     q: "How is this different from our team just using AI tools?",

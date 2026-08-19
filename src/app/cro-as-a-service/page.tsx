@@ -7,12 +7,12 @@ import { AgentCarousel } from "@/components/AgentCarousel";
 import { PillarFAQ } from "@/components/PillarFAQ";
 
 export const metadata: Metadata = {
-  title: "CRO as a Service for B2B SaaS",
+  title: "CRO as a Service for B2B Tech",
   description:
-    "CRO as a Service for B2B SaaS. One leader owns the entire revenue number across marketing, sales, and customer success, backed by 8 supervised AI agents.",
+    "CRO as a Service for B2B tech. One leader owns the entire revenue number across marketing, sales, and customer success, backed by 8 supervised AI agents.",
   alternates: { canonical: "/cro-as-a-service" },
   openGraph: {
-    title: "CRO as a Service for B2B SaaS | Triple & Co.",
+    title: "CRO as a Service for B2B Tech | Triple & Co.",
     description:
       "One accountable leader owns your full revenue funnel, from first touch to expansion, executed daily by a supervised AI team.",
     url: "https://www.tripleandco.com/cro-as-a-service",
@@ -29,7 +29,7 @@ const faqs = [
     a: "A CMO owns marketing: positioning, demand, brand, and pipeline creation. A CRO owns the whole revenue engine: marketing, sales, and customer success under one strategy and one number. If your marketing, sales, and CS teams each hit their own metrics while total revenue still misses plan, that is a coordination gap a CRO closes. Triple & Co. offers both entry points and will recommend the right one on your diagnostic call.",
   },
   {
-    q: "When should a B2B SaaS company bring in a CRO?",
+    q: "When should a B2B tech company bring in a CRO?",
     a: "Usually between Series A and Series C, when there is real pipeline but revenue is leaking between teams: marketing passes leads sales does not trust, deals stall in handoff, and churn quietly erases new bookings. A fractional CRO gives you senior revenue leadership and the systems to fix those leaks, without the $350K+ cost and long search of a full-time hire.",
   },
   {
@@ -37,7 +37,7 @@ const faqs = [
     a: "The first two weeks are diagnostic: full-funnel audit, pipeline math, handoff analysis, and churn review. By week three you have a prioritized revenue plan with shared targets across marketing, sales, and CS, and the agent team is already building the dashboards and demand programs behind it. By day 90 you should have clean stage criteria, a forecast your board can trust, and weekly shipped work, not a strategy deck waiting on headcount.",
   },
   {
-    q: "Do you work with B2B SaaS companies outside of Israel?",
+    q: "Do you work with B2B tech companies outside of Israel?",
     a: "Yes, most of our client base sells into the US and Europe. Our operating model is async by design: fluent English, coverage across US and European business hours, and the Start-Up Nation playbook of scaling globally from day one. The AI execution layer runs around the clock, so turnaround is usually faster than a local hire.",
   },
 ];
@@ -61,10 +61,10 @@ const serviceSchema = {
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",
-    audienceType: "B2B SaaS companies",
+    audienceType: "B2B technology companies",
   },
   description:
-    "Subscription CRO leadership for B2B SaaS: one accountable leader owns the full revenue funnel across marketing, sales, and customer success, executed by a supervised AI team.",
+    "Subscription CRO leadership for B2B tech: one accountable leader owns the full revenue funnel across marketing, sales, and customer success, executed by a supervised AI team.",
   url: "https://www.tripleandco.com/cro-as-a-service",
   offers: {
     "@type": "Offer",
@@ -113,7 +113,7 @@ const systemPillars = [
   {
     title: "Lihi Pinto Owns Your Revenue Number",
     description:
-      "15+ years scaling B2B SaaS, $70M+ raised at companies she led. Positioning, pipeline architecture, pricing, forecasting, and board reporting sit with one accountable executive who owns the outcome, not three teams optimizing three metrics.",
+      "15+ years scaling B2B tech, $70M+ raised at companies she led. Positioning, pipeline architecture, pricing, forecasting, and board reporting sit with one accountable executive who owns the outcome, not three teams optimizing three metrics.",
   },
   {
     title: "A Digital COO Connects the Funnel",
@@ -166,7 +166,7 @@ export default function CROPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
-              <p className="eyebrow mb-4">CRO as a Service for B2B &amp; SaaS</p>
+              <p className="eyebrow mb-4">CRO as a Service for B2B Tech</p>
 
               <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.05] text-purple-9 mb-6">
                 CRO as a Service: One Leader Owns Your Whole{" "}
@@ -199,7 +199,7 @@ export default function CROPage() {
                 </Link>
               </div>
               <p className="text-xs text-purple-6 font-medium uppercase tracking-wider">
-                15+ years in B2B SaaS &middot; $70M+ raised at companies Lihi led
+                15+ years in B2B tech &middot; $70M+ raised at companies Lihi led
                 &middot; One revenue owner, not three
               </p>
             </div>
@@ -208,7 +208,7 @@ export default function CROPage() {
                 <div className="absolute top-0 left-0 right-0 h-1.5 gradient-bar z-10" />
                 <Image
                   src="/images/lihi.png"
-                  alt="Lihi Pinto, CRO as a Service for B2B SaaS"
+                  alt="Lihi Pinto, CRO as a Service for B2B tech"
                   fill
                   className="object-cover object-top"
                   priority

@@ -6,12 +6,12 @@ import { PillarFAQ } from "@/components/PillarFAQ";
 import { AuditForm } from "@/components/AuditForm";
 
 export const metadata: Metadata = {
-  title: "Free AI Visibility Audit for B2B SaaS",
+  title: "Free AI Visibility Audit for B2B Tech",
   description:
-    "See what ChatGPT, Perplexity, Gemini, and Google AI Overviews say about your brand. Free AI Visibility Audit for B2B SaaS, run by an AI-native CMO.",
+    "See what ChatGPT, Perplexity, Gemini, and Google AI Overviews say about your brand. Free AI Visibility Audit for B2B tech, run by an AI-native CMO.",
   alternates: { canonical: "/ai-visibility-audit" },
   openGraph: {
-    title: "Free AI Visibility Audit for B2B SaaS | Triple & Co.",
+    title: "Free AI Visibility Audit for B2B Tech | Triple & Co.",
     description:
       "Does AI mention your brand or a competitor? Get a free audit of how ChatGPT, Perplexity, and AI Overviews see you.",
     url: "https://www.tripleandco.com/ai-visibility-audit",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "How much does the audit cost?",
-    a: "It is free. There is no cost and no obligation. We run it because it is the clearest way to show B2B SaaS teams where they stand in AI search, and because it reflects how we think about marketing in the AI era.",
+    a: "It is free. There is no cost and no obligation. We run it because it is the clearest way to show B2B tech teams where they stand in AI search, and because it reflects how we think about marketing in the AI era.",
   },
   {
     q: "What do I get and how long does it take?",
@@ -56,10 +56,10 @@ const serviceSchema = {
   areaServed: ["US", "Europe", "Israel", "Worldwide"],
   audience: {
     "@type": "Audience",
-    audienceType: "B2B SaaS companies",
+    audienceType: "B2B technology companies",
   },
   description:
-    "A free audit of how AI answer engines such as ChatGPT, Perplexity, Gemini, and Google AI Overviews mention and cite a B2B SaaS brand.",
+    "A free audit of how AI answer engines such as ChatGPT, Perplexity, Gemini, and Google AI Overviews mention and cite a B2B tech brand.",
   offers: {
     "@type": "Offer",
     price: "0",

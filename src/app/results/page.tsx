@@ -36,7 +36,7 @@ const trackRecord = [
   },
   {
     metric: "15+",
-    label: "years in B2B SaaS marketing leadership",
+    label: "years in B2B tech marketing leadership",
     detail:
       "Including co-founding and leading marketing at a venture-backed SaaS company. The same playbooks now run for Triple & Co. clients, executed by 8 supervised AI agents.",
   },

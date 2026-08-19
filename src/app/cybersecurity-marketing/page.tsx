@@ -42,7 +42,7 @@ const content: LandingContent = {
   heroBody:
     "Triple & Co. gives you a senior cybersecurity marketing leader plus 8 supervised AI agents that produce technically credible positioning, content practitioners share, and a demand engine that reaches both the CISO and the analyst. Strategy and execution in one engagement, all reviewed by a human.",
   heroStats:
-    "15+ years in B2B SaaS \u00b7 $70M+ raised \u00b7 Built in Israel, the cybersecurity capital",
+    "15+ years in B2B tech \u00b7 $70M+ raised \u00b7 Built in Israel, the cybersecurity capital",
   heroImageAlt: "Lihi Pinto, cybersecurity marketing leader",
 
   problemEyebrow: "The problem",
