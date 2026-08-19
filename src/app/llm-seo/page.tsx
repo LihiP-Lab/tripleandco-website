@@ -350,6 +350,7 @@ export default function LlmSeoPage() {
               Prefer an instant read? Run the free 10-second{" "}
               <Link
                 href="/ai-visibility-checker"
+                prefetch={false}
                 className="text-brand font-semibold hover:underline"
               >
                 AI Visibility Checker

@@ -456,6 +456,7 @@ export default function OrchestratorMethodPage() {
               &middot; the technical layer, tested free:{" "}
               <Link
                 href="/ai-visibility-checker"
+                prefetch={false}
                 className="text-brand font-semibold hover:underline"
               >
                 the AI Visibility Checker

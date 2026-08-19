@@ -99,7 +99,11 @@ export function Footer() {
             <ul className="space-y-2.5">
               {resources.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className={linkCls}>
+                  <Link
+                    href={l.href}
+                    className={linkCls}
+                    prefetch={l.href === "/ai-visibility-checker" ? false : undefined}
+                  >
                     {l.label}
                   </Link>
                 </li>
