@@ -52,6 +52,9 @@ const content: LandingContent = {
     "$70M+ raised at Syte.ai · Revenue tripled, twice · Top 1% fastest-growing SaaS",
   heroImageAlt: "Lihi Pinto, CMO as a Service for B2B tech companies in Israel",
 
+  definition:
+    "CMO as a Service in Israel gives B2B technology companies senior marketing leadership without hiring a full-time CMO. Triple & Co. combines that leadership with full marketing execution and 8 supervised AI specialists, giving founders one accountable marketing function rather than separate consultants, agencies, and freelancers.",
+
   problemEyebrow: "The Israeli B2B tech challenge",
   problemH2Lead: "Built in Israel. Built for",
   problemH2Highlight: "Global Growth.",

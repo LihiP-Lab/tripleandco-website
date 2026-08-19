@@ -34,6 +34,11 @@ export interface LandingContent {
   heroStats: string;
   heroImageAlt: string;
 
+  /** Optional two-sentence answer block rendered directly below the hero.
+   *  Written to be extractable by AI answer engines; marked speakable in the
+   *  page's FAQPage schema via #page-definition. */
+  definition?: string;
+
   problemEyebrow: string;
   problemH2Lead: string;
   problemH2Highlight: string;
@@ -85,6 +90,16 @@ export function SolutionLanding({
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    // FAQPage is a WebPage subtype, so `speakable` is valid here. The selector
+    // marks the definition block an answer engine should read verbatim.
+    ...(content.definition
+      ? {
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: ["#page-definition"],
+          },
+        }
+      : {}),
     mainEntity: content.faqs.map((f) => ({
       "@type": "Question",
       name: f.q,
@@ -160,6 +175,22 @@ export function SolutionLanding({
           </div>
         </div>
       </section>
+
+      {/* Definition (GEO answer block) */}
+      {content.definition && (
+        <section className="py-10 lg:py-14 bg-white">
+          <div className="mx-auto max-w-[880px] px-8">
+            <div className="rounded-2xl bg-purple-05 border border-purple-15 p-6 lg:p-8 border-l-4 border-l-brand">
+              <p
+                id="page-definition"
+                className="text-purple-9 text-lg leading-relaxed font-medium"
+              >
+                {content.definition}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Problem */}
       <section className="py-16 lg:py-24 bg-white">
