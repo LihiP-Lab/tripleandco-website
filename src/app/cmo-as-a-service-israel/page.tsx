@@ -47,7 +47,7 @@ const content: LandingContent = {
   heroLede:
     "You do not need another marketing consultant. You need someone who sits beside the CEO, makes the marketing calls that matter, and makes sure the work actually ships.",
   heroBody:
-    "Triple & Co. gives Israeli B2B technology companies senior CMO and CRO leadership from Lihi Pinto, a full execution layer, and 8 supervised AI agents working inside one marketing operating system. Strategy does not end in a presentation. It turns into positioning, campaigns, content, pipeline, and sales alignment, measured in revenue.",
+    "Triple & Co. gives Israeli B2B technology companies senior CMO leadership from Lihi Pinto, a full execution layer, and 8 supervised AI agents working inside one marketing operating system. Strategy does not end in a presentation. It turns into positioning, campaigns, content, pipeline, and sales alignment, measured in revenue.",
   heroStats:
     "$70M+ raised at Syte.ai · Revenue tripled, twice · Top 1% fastest-growing SaaS",
   heroImageAlt: "Lihi Pinto, CMO as a Service for B2B tech companies in Israel",
@@ -154,7 +154,7 @@ const content: LandingContent = {
   faqs: [
     {
       q: "What does CMO as a Service include?",
-      a: "Senior CMO leadership from Lihi Pinto, a full execution layer, and 8 supervised AI agents in one operating system. In practice that means positioning and messaging, go-to-market strategy, campaigns, content, sales alignment, and reporting, run and reviewed by one accountable partner instead of a patchwork of agencies and freelancers.",
+      a: "Senior CMO leadership from Lihi Pinto, a full execution layer, and 8 supervised AI agents in one operating system. In practice that means positioning and messaging, go-to-market strategy, campaigns, content, sales alignment, and reporting, run and reviewed by one accountable partner instead of a patchwork of agencies and freelancers. When you are ready to unify marketing and sales under one revenue owner, the same model extends to CRO as a Service.",
     },
     {
       q: "How is this different from hiring a fractional CMO in Israel?",
