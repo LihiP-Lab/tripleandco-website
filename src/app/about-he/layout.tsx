@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     absolute: "ליהיא פינטו | CMO ו-CRO as a Service | Triple & Co.",
   },
   description:
-    "מומחית CMO ו-CRO as a Service לסטארטאפים B2B SaaS עם 15 שנות ניסיון. בניית מנועי צמיחה מבוססי סוכני AI בניהול אסטרטגי של ליהיא פינטו. קבעו שיחת אבחון.",
+    "מומחית CMO ו-CRO as a Service לסטארטאפים B2B Tech עם 15 שנות ניסיון. בניית מנועי צמיחה מבוססי סוכני AI בניהול אסטרטגי של ליהיא פינטו. קבעו שיחת אבחון.",
   alternates: {
     canonical: "https://www.tripleandco.com/about-he",
     languages: {
@@ -17,18 +17,18 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "ליהיא פינטו | CMO ו-CRO as a Service לסטארטאפים B2B SaaS | Triple & Co.",
+      "ליהיא פינטו | CMO ו-CRO as a Service לסטארטאפים B2B Tech | Triple & Co.",
     description:
-      "מומחית CMO ו-CRO as a Service לסטארטאפים B2B SaaS עם 15 שנות ניסיון. בניית מנועי צמיחה מבוססי סוכני AI בניהול אסטרטגי של ליהיא פינטו. קבעו שיחת אבחון.",
+      "מומחית CMO ו-CRO as a Service לסטארטאפים B2B Tech עם 15 שנות ניסיון. בניית מנועי צמיחה מבוססי סוכני AI בניהול אסטרטגי של ליהיא פינטו. קבעו שיחת אבחון.",
     url: "https://www.tripleandco.com/about-he",
     type: "profile",
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "ליהיא פינטו | CMO ו-CRO as a Service לסטארטאפים B2B SaaS | Triple & Co.",
+      "ליהיא פינטו | CMO ו-CRO as a Service לסטארטאפים B2B Tech | Triple & Co.",
     description:
-      "מומחית CMO ו-CRO as a Service לסטארטאפים B2B SaaS עם 15 שנות ניסיון. בניית מנועי צמיחה מבוססי סוכני AI בניהול אסטרטגי של ליהיא פינטו. קבעו שיחת אבחון.",
+      "מומחית CMO ו-CRO as a Service לסטארטאפים B2B Tech עם 15 שנות ניסיון. בניית מנועי צמיחה מבוססי סוכני AI בניהול אסטרטגי של ליהיא פינטו. קבעו שיחת אבחון.",
   },
 };
 

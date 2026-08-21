@@ -137,7 +137,7 @@ Specialist agents on the team
 Human-reviewed before it ships
 
 15 +
-Years scaling B2B SaaS
+Years scaling B2B tech
 
 0
 Outputs shipped unsupervised
@@ -170,7 +170,7 @@ Tripled revenue at a SaaS company. Then did it again.
 +
 The same playbook Triple & Co. runs today: positioning, pipeline, and a CRM that tells the truth. Ask me how →
 
-15 years across B2B SaaS and investment banking. Numbers first, always.
+15 years across B2B technology and investment banking. Numbers first, always.
 +
 Every marketing decision tied to pipeline and revenue, not vanity metrics. Ask me how →
 
@@ -195,7 +195,7 @@ Senior leadership, full-service execution, and AI-native delivery, integrated in
 
 01
 Senior leadership
-CMO and CRO judgment from Lihi Pinto: 15+ years scaling B2B SaaS, $70M+ raised, revenue tripled repeatedly.
+CMO and CRO judgment from Lihi Pinto: 15+ years scaling B2B tech, $70M+ raised, revenue tripled repeatedly.
 
 02
 Full-service execution
@@ -212,7 +212,7 @@ Specialist AI agents
 Human-reviewed before it ships
 
 15 +
-Years scaling B2B SaaS
+Years scaling B2B tech
 
 The supervised team in numbers.
 
@@ -352,19 +352,31 @@ Book a call → ×
 
 FAQ
 
-## Questions before we get on a call.
+## What do founders ask before we get on a call?
 
-How is this different from a traditional marketing agency? + Traditional agencies create assets, manage channels, and run campaigns. They rarely connect everything into one revenue engine. Triple & Co. runs senior CMO and CRO leadership, full-service execution, and a supervised team of specialist AI agents from inside one operating system. Lihi owns the outcome.
+### How is this different from a traditional marketing agency? +
 
-How is this different from a fractional CMO? + A fractional CMO gives you part-time leadership. Triple gives you part-time leadership plus a full execution team. Lihi runs the strategy. The eight agents handle the work. You get senior judgment without paying for a full marketing department.
+Traditional agencies create assets, manage channels, and run campaigns. They rarely connect everything into one revenue engine. Triple & Co. runs senior CMO and CRO leadership, full-service execution, and a supervised team of specialist AI agents from inside one operating system. Lihi owns the outcome.
 
-What does "supervised AI team" actually mean day to day? + Every piece of work passes a human before it ships. Lihi sits at the top. The eight specialist agents handle brand, strategy, social, research, analytics, repurposing, art direction, and video. Nothing leaves the command center without review.
+### How is this different from a fractional CMO? +
 
-Do the agents replace humans on my team? + No. The agents replace the agency roster, the freelancer stack, and the contractor sprawl you would otherwise have to manage. Your in-house people get a senior CMO and CRO partner plus an execution layer they can lean on. If you want, we can also help you build your in-house team. That is one of the services.
+A fractional CMO gives you part-time leadership. Triple gives you part-time leadership plus a full execution team. Lihi runs the strategy. The eight agents handle the work. You get senior judgment without paying for a full marketing department.
 
-Do you work with companies outside Israel? + Yes. About half the work is global. Lihi is bilingual in Hebrew and English. The agents do not care about timezones. The Israeli context is a strength, not a limit.
+### What does "supervised AI team" actually mean day to day? +
 
-What does the first month look like? + We start with Analysis. We map your revenue funnel, your current marketing, and the highest-impact growth levers. You get an AI Revenue Blueprint that names the moves to make and the order to make them. Then Strategy. Then Execution. The team starts shipping in week one.
+Every piece of work passes a human before it ships. Lihi sits at the top. The eight specialist agents handle brand, strategy, social, research, analytics, repurposing, art direction, and video. Nothing leaves the command center without review.
+
+### Do the agents replace humans on my team? +
+
+No. The agents replace the agency roster, the freelancer stack, and the contractor sprawl you would otherwise have to manage. Your in-house people get a senior CMO and CRO partner plus an execution layer they can lean on. If you want, we can also help you build your in-house team. That is one of the services.
+
+### Do you work with companies outside Israel? +
+
+Yes. About half the work is global. Lihi is bilingual in Hebrew and English. The agents do not care about timezones. The Israeli context is a strength, not a limit.
+
+### What does the first month look like? +
+
+We start with Analysis. We map your revenue funnel, your current marketing, and the highest-impact growth levers. You get an AI Revenue Blueprint that names the moves to make and the order to make them. Then Strategy. Then Execution. The team starts shipping in week one.
 
 Led by Lihi. Powered by AI. Built for revenue.
 
@@ -373,13 +385,13 @@ Book a Diagnostic Call with Lihi → 30-minute diagnostic. Zero pressure. Lihi w
 ---
 url: https://www.tripleandco.com/about
 title: Lihi Pinto: Israel's Native AI CMO & CRO | Triple & Co.
-description: Lihi Pinto is Israel's first native AI CMO/CRO. 15+ years in B2B SaaS, revenue tripled repeatedly, now running 8 specialist AI agents supervised end-to-end.
+description: Lihi Pinto is Israel's first native AI CMO/CRO. 15+ years in B2B tech, revenue tripled repeatedly, now running 8 specialist AI agents supervised end-to-end.
 ---
 Israel's First
 
 # Hey, I'm Lihi .
 
-15 years in B2B SaaS and investment banking. $70M+ raised. Revenue tripled, repeatedly. Now running the world's first fully supervised AI marketing operation, built on 8 specialist agents with Lihi as the human in the loop.
+15 years in B2B technology and investment banking. $70M+ raised. Revenue tripled, repeatedly. Now running the world's first fully supervised AI marketing operation, built on 8 specialist agents with Lihi as the human in the loop.
 Not AI output handed to you raw. Not a prompt library. A supervised, end-to-end revenue machine. Run by a CMO who has done it before.
 Book a Diagnostic → Meet the agents
 
@@ -400,7 +412,7 @@ $ 70 M+
 raised at companies Lihi led
 
 15 +
-years in B2B SaaS
+years in B2B tech
 
 3 ×
 revenue growth, repeatedly
@@ -506,7 +518,7 @@ Book your diagnostic call →
 ---
 url: https://www.tripleandco.com/about-he
 title: ליהיא פינטו | CMO ו-CRO as a Service | Triple & Co.
-description: מומחית CMO ו-CRO as a Service לסטארטאפים B2B SaaS עם 15 שנות ניסיון. בניית מנועי צמיחה מבוססי סוכני AI בניהול אסטרטגי של ליהיא פינטו. קבעו שיחת אבחון.
+description: מומחית CMO ו-CRO as a Service לסטארטאפים B2B Tech עם 15 שנות ניסיון. בניית מנועי צמיחה מבוססי סוכני AI בניהול אסטרטגי של ליהיא פינטו. קבעו שיחת אבחון.
 ---
 ראשון בישראל
 
@@ -514,12 +526,12 @@ description: מומחית CMO ו-CRO as a Service לסטארטאפים B2B SaaS 
 
 Fractional CMO ו-CRO as a Service לסטארטאפים B2B ישראל
 
-טריפל אנד קו (Triple & Co) הוא שירות ה-CMO ו-CRO הראשון בישראל מבוסס בינה מלאכותית לסטארטאפים B2B SaaS. השירות משלב פיקוח אנושי אסטרטגי של המייסדת ליהיא פינטו עם צוות של 8 סוכני AI מתמחים לביצוע אקסקיושן שיווקי והאצת הכנסות.
-ליהיא פינטו היא מייסדת Triple & Co. ומומחית Fractional CMO ו-CRO as a Service לסטארטאפים B2B SaaS. זהו העמוד הרשמי של ליהיא פינטו בעברית, עם מידע על הניסיון, שיטת העבודה והשירותים שהיא מובילה דרך Triple & Co.
-עם מעל 15 שנות ניסיון בבנקאות השקעות, יזמות הייטק, גיוסי הון ובניית מנועי צמיחה B2B SaaS, ליהיא פינטו גייסה מעל 70 מיליון דולר, בנתה מכונת SaaS משומנת ושילשה הכנסות שוב ושוב.
+טריפל אנד קו (Triple & Co) הוא שירות ה-CMO ו-CRO הראשון בישראל מבוסס בינה מלאכותית לסטארטאפים B2B Tech. השירות משלב פיקוח אנושי אסטרטגי של המייסדת ליהיא פינטו עם צוות של 8 סוכני AI מתמחים לביצוע אקסקיושן שיווקי והאצת הכנסות.
+ליהיא פינטו היא מייסדת Triple & Co. ומומחית Fractional CMO ו-CRO as a Service לסטארטאפים B2B Tech. זהו העמוד הרשמי של ליהיא פינטו בעברית, עם מידע על הניסיון, שיטת העבודה והשירותים שהיא מובילה דרך Triple & Co.
+עם מעל 15 שנות ניסיון בבנקאות השקעות, יזמות הייטק, גיוסי הון ובניית מנועי צמיחה B2B Tech, ליהיא פינטו גייסה מעל 70 מיליון דולר, בנתה מכונת SaaS משומנת ושילשה הכנסות שוב ושוב.
 היום ליהיא פינטו מובילה את Triple & Co. כצוות שיווק, מכירות ו AI נייטיב לסטארטאפים שרוצים לבנות פייפליין, לחדד מיצוב ולהאיץ צמיחה.
 
-- 15+ שנות ניסיון ב-B2B SaaS
+- 15+ שנות ניסיון ב-B2B Tech
 - 70M$+ גיוסי הון
 - 8 סוכני AI בצוות שלכם
 ← קבעו שיחת אבחון הכירו את הסוכנים
@@ -545,7 +557,7 @@ Native AI CMO / CRO
 גיוסים
 
 0 +
-שנות ניסיון ב-B2B SaaS
+שנות ניסיון ב-B2B Tech
 
 0 ×
 צמיחה בהכנסות, שוב ושוב
@@ -557,7 +569,7 @@ Native AI CMO / CRO
 
 ליהיא פינטו היא יזמת, מומחית צמיחה ומייסדת Triple & Co. לאורך הקריירה שלה היא שילבה בין בנקאות השקעות, יזמות, שיווק, מכירות ובניית מנועי הכנסות לחברות טכנולוגיה.
 לפני הקמת Triple & Co., ליהיא פינטו הייתה ממייסדי Syte, חברת B2B SaaS בתחום ה-eCommerce, ושימשה בתפקידי צמיחה, שיווק והכנסות. הניסיון הזה הפך לבסיס לשיטת העבודה של Triple & Co. שילוב בין אסטרטגיה בכירה, ביצוע שיווקי, תהליכי מכירה, customer success ו AI בפיקוח אנושי.
-דרך Triple & Co., ליהיא פינטו מלווה מייסדים והנהלות של חברות B2B SaaS שרוצות לבנות תשתית צמיחה מדידה, להגדיל פייפליין ולייצר מנוע הכנסות יציב.
+דרך Triple & Co., ליהיא פינטו מלווה מייסדים והנהלות של חברות B2B Tech שרוצות לבנות תשתית צמיחה מדידה, להגדיל פייפליין ולייצר מנוע הכנסות יציב.
 
 הראשון מסוגו
 
@@ -570,7 +582,7 @@ Native AI CMO / CRO
 
 פיקוח מקצה לקצה, על ידי ליהיא
 8 מומחי Claude מוגדרים מראש
-15+ שנות ניסיון ב-B2B SaaS, Fractional CMO בפועל, לא תיאוריה שיווקית
+15+ שנות ניסיון ב-B2B Tech, Fractional CMO בפועל, לא תיאוריה שיווקית
 
 “בונה את צוותי השיווק שהייתי רוצה שיהיו לי כמייסדת בשלב מוקדם.”
 
@@ -650,7 +662,7 @@ art director
 
 ### במה ליהיא פינטו מתמחה?
 
-ליהיא פינטו מתמחה בצמיחה לסטארטאפים B2B SaaS, בניית אסטרטגיית שיווק ומכירות, מיצוב, יצירת ביקושים, ניהול פייפליין והקמת מנועי הכנסות. היא נחשבת לאחת ממומחיות ה-Fractional CMO המובילות לסטארטאפים B2B SaaS בישראל.
+ליהיא פינטו מתמחה בצמיחה לסטארטאפים B2B Tech, בניית אסטרטגיית שיווק ומכירות, מיצוב, יצירת ביקושים, ניהול פייפליין והקמת מנועי הכנסות. היא נחשבת לאחת ממומחיות ה-Fractional CMO המובילות לסטארטאפים B2B Tech בישראל.
 
 ### האם זה העמוד הרשמי של ליהיא פינטו?
 
@@ -751,7 +763,7 @@ Meet the full team →
 One leader owns acquisition, activation, and retention.
 A fractional Head of Growth who owns your growth system, not a single channel. We set the experiment roadmap, instrument the funnel, and ship tests every week so growth compounds through learning velocity instead of stalling between one-off projects.
 Who it's for
-B2B SaaS companies with product-market fit whose growth has flattened and where the founder is still running acquisition personally.
+B2B tech companies with product-market fit whose growth has flattened and where the founder is still running acquisition personally.
 
 The problem
 Growth is a pile of disconnected tactics measured in clicks nobody can tie to revenue. Retention leaks while everyone crowds the top of the funnel.
@@ -1055,7 +1067,7 @@ Market
 
 ### Israel
 
-Israeli B2B and SaaS marketing built to sell globally.
+Israeli B2B tech marketing built to sell globally.
 Learn more →
 Market
 
@@ -1085,19 +1097,19 @@ Book a Consultation →
 
 ---
 url: https://www.tripleandco.com/cmo-as-a-service
-title: CMO as a Service for B2B SaaS | Triple & Co.
-description: CMO as a Service for B2B SaaS. One subscription replaces your agency retainers: senior strategy, 8 AI agents, and a full revenue operating system.
+title: CMO as a Service for B2B Tech | Triple & Co.
+description: CMO as a Service for B2B tech. One subscription replaces your agency retainers: senior strategy, 8 AI agents, and a full revenue operating system.
 ---
 - Home
 - CMO as a Service
-CMO as a Service for B2B & SaaS
+CMO as a Service for B2B Tech
 
 # CMO as a Service: One Subscription Replaces Your Agency Stack
 
 Count your retainers. Content agency. Paid media agency. SEO shop. A designer on Upwork. None of them talk to each other, and all of them invoice you.
 Triple & Co. replaces the whole stack with one integrated revenue operating system: senior CMO leadership from Lihi Pinto, a digital COO orchestrating the work, and 8 supervised AI agents executing across every channel. Connected strategy. Daily output. One invoice. The operating model behind it is public: the Orchestrator Method .
 Book a 30-Minute Revenue Diagnostic → Meet the 8 agents inside the system → CMO ו CRO as a Service עם ליהיא פינטו →
-15+ years in B2B SaaS · $70M+ raised at companies Lihi led · One system, zero agency handoffs
+15+ years in B2B tech · $70M+ raised at companies Lihi led · One system, zero agency handoffs
 
 The problem
 
@@ -1119,7 +1131,7 @@ Triple & Co.'s CMO as a Service runs on our Woman in the Loop (WIL) model: one s
 
 ### Lihi Pinto Owns Your Revenue Strategy
 
-15+ years scaling B2B SaaS, $70M+ raised at companies she led. Positioning, ICP, pricing, funnel architecture, and board reporting sit with one accountable executive, not scattered across account managers.
+15+ years scaling B2B tech, $70M+ raised at companies she led. Positioning, ICP, pricing, funnel architecture, and board reporting sit with one accountable executive, not scattered across account managers.
 
 ### A Digital COO Replaces the Handoffs
 
@@ -1201,7 +1213,7 @@ Global by default
 
 ## Built in the Start-Up Nation. Running Revenue Systems Worldwide.
 
-Triple & Co. operates from Israel, the ecosystem that produces more B2B SaaS companies per capita than anywhere on earth. Here, every company sells globally from day one, so global is our default, not our stretch goal.
+Triple & Co. operates from Israel, the ecosystem that produces more B2B tech companies per capita than anywhere on earth. Here, every company sells globally from day one, so global is our default, not our stretch goal. Scaling an Israeli company into global markets? See CMO as a Service in Israel for B2B tech .
 
 ### Always-On by Architecture
 
@@ -1233,15 +1245,23 @@ FAQ
 
 ## CMO as a Service, Explained
 
-What is CMO as a Service? + CMO as a Service is a subscription model that gives your company full marketing leadership and execution without hiring an executive or managing agencies. At Triple & Co., that means a senior CMO (Lihi Pinto, 15+ years in B2B SaaS) owning your strategy, plus an integrated AI operating system, 8 supervised agents and a digital COO, executing it daily across content, campaigns, SEO, outreach, and analytics.
+### What is CMO as a Service? +
 
-How is CMO as a Service different from hiring a marketing agency? + An agency sells you a channel: SEO, paid, or content, each with its own retainer, account manager, and reporting. You remain responsible for strategy and for coordinating between them. CMO as a Service inverts that. Strategy ownership comes first, and execution across all channels runs inside one connected system with shared data and messaging. You replace 3 to 4 retainers and the founder-as-project-manager role with a single accountable partner.
+CMO as a Service is a subscription model that gives your company full marketing leadership and execution without hiring an executive or managing agencies. At Triple & Co., that means a senior CMO (Lihi Pinto, 15+ years in B2B tech) owning your strategy, plus an integrated AI operating system, 8 supervised agents and a digital COO, executing it daily across content, campaigns, SEO, outreach, and analytics.
 
-How is this different from your Fractional CMO offering? + Same engine, different entry point. Fractional CMO engagements suit founders who want a named marketing executive in their leadership team. CMO as a Service suits companies consolidating agency spend into one integrated system. Both run on the Woman in the Loop model: Lihi's strategy, supervised AI execution. We'll recommend the right structure on your diagnostic call.
+### How is CMO as a Service different from hiring a marketing agency? +
 
-Do you work with B2B SaaS companies outside of Israel? + Yes, that's most of our client base. We're built for US and European markets: async operations across timezones, fluent English, and Start-Up Nation experience scaling companies globally from day one. The AI layer works around the clock, which usually means faster turnaround than a local agency.
+An agency sells you a channel: SEO, paid, or content, each with its own retainer, account manager, and reporting. You remain responsible for strategy and for coordinating between them. CMO as a Service inverts that. Strategy ownership comes first, and execution across all channels runs inside one connected system with shared data and messaging. You replace 3 to 4 retainers and the founder-as-project-manager role with a single accountable partner.
 
-Looking for a named executive on your leadership team instead? See our Fractional CMO for B2B SaaS engagement.
+### How is this different from your Fractional CMO offering? +
+
+Same engine, different entry point. Fractional CMO engagements suit founders who want a named marketing executive in their leadership team. CMO as a Service suits companies consolidating agency spend into one integrated system. Both run on the Woman in the Loop model: Lihi's strategy, supervised AI execution. We'll recommend the right structure on your diagnostic call.
+
+### Do you work with B2B tech companies outside of Israel? +
+
+Yes, that's most of our client base. We're built for US and European markets: async operations across timezones, fluent English, and Start-Up Nation experience scaling companies globally from day one. The AI layer works around the clock, which usually means faster turnaround than a local agency.
+
+Looking for a named executive on your leadership team instead? See our Fractional CMO for B2B Tech engagement.
 
 ## Install the System.
 
@@ -1249,20 +1269,215 @@ One CMO. One operating system. One line on your P&L instead of five.
 Book a 30-Minute Revenue Diagnostic → Bring your current agency invoices. We'll show you exactly what the system replaces.
 
 ---
+url: https://www.tripleandco.com/cmo-as-a-service-israel
+title: CMO as a Service in Israel for B2B Tech | Triple & Co.
+description: CMO as a Service in Israel for B2B tech companies scaling globally. Senior leadership from Lihi Pinto plus 8 supervised AI agents, strategy to pipeline.
+---
+- Home
+- CMO as a Service in Israel
+CMO as a Service · Israel
+
+# CMO as a Service in Israel, for B2B Tech Ready to Scale Globally
+
+You do not need another marketing consultant. You need someone who sits beside the CEO, makes the marketing calls that matter, and makes sure the work actually ships.
+Triple & Co. gives Israeli B2B technology companies senior CMO leadership from Lihi Pinto, a full execution layer, and 8 supervised AI agents working inside one marketing operating system. Strategy does not end in a presentation. It turns into positioning, campaigns, content, pipeline, and sales alignment, measured in revenue.
+Book a 30-Minute Revenue Diagnostic → See how the agent team works →
+$70M+ raised at Syte.ai · Revenue tripled, twice · Top 1% fastest-growing SaaS
+
+CMO as a Service in Israel gives B2B technology companies senior marketing leadership without hiring a full-time CMO. Triple & Co. combines that leadership with full marketing execution and 8 supervised AI specialists, giving founders one accountable marketing function rather than separate consultants, agencies, and freelancers.
+
+The Israeli B2B tech challenge
+
+## Built in Israel. Built for Global Growth.
+
+Israeli technology companies share a specific growth challenge. The technology is often exceptional, and the founders understand the problem better than almost anyone in their market. But global buyers do not buy technology because it is technically superior. They buy when they understand the business problem, why solving it matters now, and why you are different from the established alternatives they already trust.
+
+That is hardest in complex B2B categories, SaaS, AI, cybersecurity, Deep Tech, cloud, and enterprise software, where the product is sophisticated, the buying committee spans multiple stakeholders, and the sales cycle runs months rather than weeks.
+
+Meanwhile the founders are still carrying the marketing function into every sales and investor conversation. Activity exists, but qualified pipeline does not follow, and positioning built by engineers rarely survives first contact with a US or European buying committee.
+
+Triple turns technological complexity into a commercial story global buyers can understand, trust, and act on. That is the job of CMO as a Service.
+
+What CMO as a Service includes
+
+## Leadership, Execution, and 8 Supervised AI Agents
+
+One growth partner, three layers, on our Woman in the Loop model: senior judgment sets the strategy, a full execution layer ships it, and a supervised AI team scales it. You are never handed raw AI output.
+
+### Lihi Pinto Owns the Strategy
+
+15+ years in B2B tech, $70M+ raised at companies where she led marketing, revenue tripled twice. Lihi sits beside the CEO, owns positioning, messaging, and pipeline strategy, and is accountable for the number.
+
+### A Full Execution Layer Ships It
+
+Strategy does not end in a slide deck. It becomes positioning, campaigns, content, sales enablement, and reporting, aligned with sales so marketing and revenue operate as one system.
+
+### 8 Specialist AI Agents Scale It
+
+Camille, Vega, Rex, Zara, Nova, Atlas, Sage, and Lumen each own one job: brand voice, creative, growth, social, research, analytics, repurposing, and video. Every deliverable passes Lihi's review before it ships. Supervised end to end.
+
+### Fractional CMO, Agency, or CMO as a Service?
+
+Fractional CMO Marketing agency Triple & Co.
+Owns strategy at CEO level Yes Rarely Yes
+Executes daily Depends on model, often relies on your internal team Per channel Yes, full layer
+Capacity One person, part time A shared account team Lihi plus 8 AI agents
+Accountable for pipeline Sometimes Varies, typically scoped to channels or deliverables Yes, revenue first
+Fits an Israeli budget Often Adds up per retainer One integrated engagement. See Israel pricing.
+
+Call it a fractional CMO, an outsourced CMO, or CMO services in Israel. The question underneath is the same: who owns the number, and who actually does the work. With Triple, one partner does both.
+Book a 30-Minute Revenue Diagnostic →
+
+Your AI team
+
+## Meet the Agents Behind the Execution
+
+Eight AI specialists, each trained for a specific marketing function, supervised by Lihi, zero unsupervised output.
+
+### Camille
+
+Brand Voice Generator
+Writes the brand voice. Not an LLM’s.
+View full profile
+
+### Rex
+
+Growth Campaign Strategist
+Briefs the strategy. Plans campaigns the team can execute.
+View full profile
+
+### Zara
+
+Social Media Commander
+Ships the social channels.
+View full profile
+
+### Nova
+
+Content Research Analyst
+Reads the room. Research, trends, competitive intel.
+View full profile
+
+### Atlas
+
+Performance Analytics Agent
+Reads the numbers. Tells us what’s working.
+View full profile
+
+### Sage
+
+Content Repurposing Engine
+Repurposes everything. One piece becomes ten.
+View full profile
+
+### Vega
+
+Art Director
+Directs how it looks. Art direction.
+View full profile
+
+### Lumen
+
+Video Director
+Turns it into video.
+View full profile
+
+Meet all agents in detail →
+
+Who this is for
+
+## Built for Israeli B2B Tech Scaling Globally
+
+Triple works across B2B technology: SaaS, AI, cybersecurity, Deep Tech, cloud, enterprise software, and other complex categories. The common denominator is not the business model. It is the challenge: a complex product that needs to become a clear commercial story, and marketing that needs to contribute directly to revenue.
+
+### Your Growth Market Is Abroad
+
+You build in Israel and sell into the US or Europe. Your buyers need education, credibility, and a story that survives a multi-stakeholder committee, written in native English for the market you sell into.
+
+### Founders Still Carry Marketing
+
+The positioning lives in the CEO's head. Marketing activity exists, but it is not producing enough qualified pipeline, and no senior owner is accountable for changing that.
+
+### You Need Leadership, Not Headcount
+
+You need CMO-level ownership now, without building a large in-house marketing department. Hire one agent, hire the team, or start with a fixed-scope diagnostic.
+
+B2B SaaS · AI · Cybersecurity · Deep Tech · Cloud · Enterprise Software
+
+FAQ
+
+## CMO as a Service in Israel, Answered
+
+### What does CMO as a Service include? +
+
+Senior CMO leadership from Lihi Pinto, a full execution layer, and 8 supervised AI agents in one operating system. In practice that means positioning and messaging, go-to-market strategy, campaigns, content, sales alignment, and reporting, run and reviewed by one accountable partner instead of a patchwork of agencies and freelancers. When you are ready to unify marketing and sales under one revenue owner, the same model extends to CRO as a Service.
+
+### How is this different from hiring a fractional CMO in Israel? +
+
+A fractional CMO gives you senior advice for a few days a month, and execution stays with your team or your agencies. CMO as a Service combines that leadership with the execution layer and an AI team that scales it, so strategy and delivery sit with one accountable partner. If you specifically want a named executive inside your leadership team, our Fractional CMO engagement runs on the same supervised model, and we will recommend the right structure on your diagnostic call.
+
+### How much does CMO as a Service cost in Israel? +
+
+For Israeli companies, CMO as a Service engagements that include execution typically run 18,000 to 40,000 NIS per month depending on scope, with all 8 AI agents included. That usually replaces the combined cost of several agency retainers and freelancers, and sits well below the real first-year cost of a full-time CMO hire in Israel, typically 700,000 NIS or more. Our pricing page lists the engagement models, and our outsourced CMO cost guide breaks down the shekel ranges by model.
+
+### Do you only work with Israeli companies? +
+
+No. Triple is built in Israel and works with B2B tech companies in Israel, the US, and Europe. The model is async by design: the AI layer works around the clock and Lihi overlaps US and European business hours. Most of our Israeli clients hire us precisely because their buyers are abroad.
+
+### What does supervised AI mean in practice? +
+
+Each agent owns one job and works from a brief, on a Brief, Run, Deliver loop. Every output passes Lihi's review before it reaches you or your market. You are never handed raw AI output, and the accountable name on the work is human.
+
+New to the model? Read the full CMO as a Service guide for how the operating system works end to end.
+
+Go deeper
+
+## B2B Growth in Israel, Page by Page
+
+### B2B Marketing in Israel →
+
+How Israeli B2B companies build marketing that sells into the US and Europe, in native English, async by design.
+
+### Fractional CMO for B2B →
+
+When a named marketing executive inside your leadership team is the right structure, on the same supervised model.
+
+### Outsourced CMO in Israel: Cost Guide →
+
+Shekel price ranges by engagement model, from outsourced marketing manager to full CMO as a Service.
+
+### Cybersecurity Marketing →
+
+Positioning and pipeline for Israeli security companies selling to skeptical, technical global buyers.
+
+### AI & Deep Tech Marketing →
+
+Turning research-grade technology into a commercial story enterprise buyers can evaluate and act on.
+
+### About Lihi Pinto →
+
+The operator behind Triple: 15+ years in B2B tech, $70M+ raised at Syte.ai, revenue tripled twice.
+
+## Turn Israeli Technology Into Global Revenue
+
+One senior operator beside the CEO. One execution layer. 8 supervised AI agents. Book a diagnostic call with Lihi and leave with a clear read on your positioning, pipeline, and next 90 days.
+Book a 30-Minute Revenue Diagnostic → No pitch. You will leave with 3 specific growth gaps, whether we work together or not.
+
+---
 url: https://www.tripleandco.com/cro-as-a-service
-title: CRO as a Service for B2B SaaS | Triple & Co.
-description: CRO as a Service for B2B SaaS. One leader owns the entire revenue number across marketing, sales, and customer success, backed by 8 supervised AI agents.
+title: CRO as a Service for B2B Tech | Triple & Co.
+description: CRO as a Service for B2B tech. One leader owns the entire revenue number across marketing, sales, and customer success, backed by 8 supervised AI agents.
 ---
 - Home
 - CRO as a Service
-CRO as a Service for B2B & SaaS
+CRO as a Service for B2B Tech
 
 # CRO as a Service: One Leader Owns Your Whole Revenue Number
 
 Marketing hits its MQL target. Sales hits its activity target. Customer success hits its ticket target. And revenue still misses the plan.
 That is not a team problem. It is an ownership problem. CRO as a Service puts one accountable leader over the entire funnel, from first touch to closed-won to expansion, backed by a supervised AI team that builds the forecasts, dashboards, and demand programs your revenue depends on. One number. One owner.
 Book a 30-Minute Revenue Diagnostic → Only need marketing leadership? See CMO as a Service →
-15+ years in B2B SaaS · $70M+ raised at companies Lihi led · One revenue owner, not three
+15+ years in B2B tech · $70M+ raised at companies Lihi led · One revenue owner, not three
 
 The problem
 
@@ -1284,7 +1499,7 @@ Triple & Co.'s CRO as a Service runs on our Woman in the Loop (WIL) model: one s
 
 ### Lihi Pinto Owns Your Revenue Number
 
-15+ years scaling B2B SaaS, $70M+ raised at companies she led. Positioning, pipeline architecture, pricing, forecasting, and board reporting sit with one accountable executive who owns the outcome, not three teams optimizing three metrics.
+15+ years scaling B2B tech, $70M+ raised at companies she led. Positioning, pipeline architecture, pricing, forecasting, and board reporting sit with one accountable executive who owns the outcome, not three teams optimizing three metrics.
 
 ### A Digital COO Connects the Funnel
 
@@ -1387,15 +1602,25 @@ FAQ
 
 ## CRO as a Service, Explained
 
-What is CRO as a Service? + CRO as a Service is a subscription model that puts one accountable Chief Revenue Officer in charge of your entire funnel, from demand generation through sales to customer success and expansion, without hiring a full-time executive. At Triple & Co., Lihi Pinto owns the revenue number and the go-to-market strategy, while a supervised team of 8 AI agents and a digital COO execute the pipeline, forecasting, and reporting daily. You get revenue ownership plus execution in one engagement.
+### What is CRO as a Service? +
 
-How is a CRO different from a CMO? + A CMO owns marketing: positioning, demand, brand, and pipeline creation. A CRO owns the whole revenue engine: marketing, sales, and customer success under one strategy and one number. If your marketing, sales, and CS teams each hit their own metrics while total revenue still misses plan, that is a coordination gap a CRO closes. Triple & Co. offers both entry points and will recommend the right one on your diagnostic call.
+CRO as a Service is a subscription model that puts one accountable Chief Revenue Officer in charge of your entire funnel, from demand generation through sales to customer success and expansion, without hiring a full-time executive. At Triple & Co., Lihi Pinto owns the revenue number and the go-to-market strategy, while a supervised team of 8 AI agents and a digital COO execute the pipeline, forecasting, and reporting daily. You get revenue ownership plus execution in one engagement.
 
-When should a B2B SaaS company bring in a CRO? + Usually between Series A and Series C, when there is real pipeline but revenue is leaking between teams: marketing passes leads sales does not trust, deals stall in handoff, and churn quietly erases new bookings. A fractional CRO gives you senior revenue leadership and the systems to fix those leaks, without the $350K+ cost and long search of a full-time hire.
+### How is a CRO different from a CMO? +
 
-What does CRO as a Service actually deliver in the first 90 days? + The first two weeks are diagnostic: full-funnel audit, pipeline math, handoff analysis, and churn review. By week three you have a prioritized revenue plan with shared targets across marketing, sales, and CS, and the agent team is already building the dashboards and demand programs behind it. By day 90 you should have clean stage criteria, a forecast your board can trust, and weekly shipped work, not a strategy deck waiting on headcount.
+A CMO owns marketing: positioning, demand, brand, and pipeline creation. A CRO owns the whole revenue engine: marketing, sales, and customer success under one strategy and one number. If your marketing, sales, and CS teams each hit their own metrics while total revenue still misses plan, that is a coordination gap a CRO closes. Triple & Co. offers both entry points and will recommend the right one on your diagnostic call.
 
-Do you work with B2B SaaS companies outside of Israel? + Yes, most of our client base sells into the US and Europe. Our operating model is async by design: fluent English, coverage across US and European business hours, and the Start-Up Nation playbook of scaling globally from day one. The AI execution layer runs around the clock, so turnaround is usually faster than a local hire.
+### When should a B2B tech company bring in a CRO? +
+
+Usually between Series A and Series C, when there is real pipeline but revenue is leaking between teams: marketing passes leads sales does not trust, deals stall in handoff, and churn quietly erases new bookings. A fractional CRO gives you senior revenue leadership and the systems to fix those leaks, without the $350K+ cost and long search of a full-time hire.
+
+### What does CRO as a Service actually deliver in the first 90 days? +
+
+The first two weeks are diagnostic: full-funnel audit, pipeline math, handoff analysis, and churn review. By week three you have a prioritized revenue plan with shared targets across marketing, sales, and CS, and the agent team is already building the dashboards and demand programs behind it. By day 90 you should have clean stage criteria, a forecast your board can trust, and weekly shipped work, not a strategy deck waiting on headcount.
+
+### Do you work with B2B tech companies outside of Israel? +
+
+Yes, most of our client base sells into the US and Europe. Our operating model is async by design: fluent English, coverage across US and European business hours, and the Start-Up Nation playbook of scaling globally from day one. The AI execution layer runs around the clock, so turnaround is usually faster than a local hire.
 
 Only need senior marketing leadership? See our CMO as a Service engagement.
 
@@ -1406,19 +1631,19 @@ Book a 30-Minute Revenue Diagnostic → Bring your funnel numbers. We'll show yo
 
 ---
 url: https://www.tripleandco.com/head-of-growth
-title: Head of Growth as a Service for B2B SaaS | Triple & Co.
-description: Fractional Head of Growth for B2B SaaS. One leader owns acquisition, activation, and retention as a measurable system, backed by a supervised AI team.
+title: Head of Growth as a Service for B2B Tech | Triple & Co.
+description: Fractional Head of Growth for B2B tech. One leader owns acquisition, activation, and retention as a measurable system, backed by a supervised AI team.
 ---
 - Home
 - Head of Growth
-Head of Growth as a Service for B2B & SaaS
+Head of Growth as a Service for B2B Tech
 
 # A Fractional Head of Growth Who Owns the Whole Growth System
 
 You have product-market fit. You have traffic. And growth has quietly flattened, while the founder is still the one running acquisition on nights and weekends.
 That is not a channel problem. It is an ownership problem. Head of Growth as a Service puts one accountable leader over acquisition, activation, and retention, backed by a supervised AI team that ships experiments, landing pages, and dashboards every week. Growth as a system, not a headcount gamble.
 Book a 30-Minute Growth Diagnostic → Need the full revenue funnel? See CRO as a Service →
-15+ years in B2B SaaS · $70M+ raised at companies Lihi led · Experiments shipped weekly
+15+ years in B2B tech · $70M+ raised at companies Lihi led · Experiments shipped weekly
 
 The problem
 
@@ -1440,7 +1665,7 @@ Triple & Co.'s Head of Growth as a Service runs on our Woman in the Loop (WIL) m
 
 ### Lihi Pinto Owns Your Growth System
 
-15+ years scaling B2B SaaS, $70M+ raised at companies she led. The growth strategy, the experiment roadmap, and the metrics that matter sit with one accountable leader who owns the outcome, not a rotating cast of freelancers optimizing single channels.
+15+ years scaling B2B tech, $70M+ raised at companies she led. The growth strategy, the experiment roadmap, and the metrics that matter sit with one accountable leader who owns the outcome, not a rotating cast of freelancers optimizing single channels.
 
 ### A Digital COO Runs the Experiment Loop
 
@@ -1543,15 +1768,25 @@ FAQ
 
 ## Head of Growth as a Service, Explained
 
-What is a fractional Head of Growth? + A fractional Head of Growth is a senior growth leader who owns your acquisition, activation, and retention system part-time, without a full-time executive salary. At Triple & Co., Lihi Pinto sets the growth strategy, the experiment roadmap, and the metrics that matter, while a supervised team of 8 AI agents runs the campaigns, builds the landing pages and dashboards, and ships tests every week. You get senior growth ownership plus daily execution in one engagement.
+### What is a fractional Head of Growth? +
 
-How is a Head of Growth different from a CMO? + A CMO owns marketing broadly: brand, positioning, demand, and pipeline. A Head of Growth (or CGO) owns the growth engine specifically: the loops and experiments that move acquisition, activation, conversion, and retention as one measurable system. In practice the roles overlap, so on your diagnostic call we recommend the right entry point. If your problem is that growth is stalling and nobody owns the experiment velocity, a Head of Growth is usually the fit.
+A fractional Head of Growth is a senior growth leader who owns your acquisition, activation, and retention system part-time, without a full-time executive salary. At Triple & Co., Lihi Pinto sets the growth strategy, the experiment roadmap, and the metrics that matter, while a supervised team of 8 AI agents runs the campaigns, builds the landing pages and dashboards, and ships tests every week. You get senior growth ownership plus daily execution in one engagement.
 
-When should a B2B SaaS company hire a Head of Growth? + Usually once you have product-market fit and early traction but growth is plateauing, when the founder is still running acquisition personally, or when marketing ships activity but no one owns the funnel math end to end. A fractional Head of Growth gives you senior ownership of the growth system and the experiment cadence to unlock the next stage, without the $300K+ cost and long search of a full-time hire.
+### How is a Head of Growth different from a CMO? +
 
-What does a Head of Growth engagement deliver in the first 90 days? + The first two weeks are diagnostic: funnel audit, activation and retention analysis, channel economics, and a ranked list of growth bets. By week three you have a prioritized experiment roadmap with clear metrics, and the agent team is already shipping the tests, landing pages, and dashboards behind it. By day 90 you should have a working experiment cadence, instrumented funnel metrics, and a handful of validated wins, not a growth deck waiting on headcount.
+A CMO owns marketing broadly: brand, positioning, demand, and pipeline. A Head of Growth (or CGO) owns the growth engine specifically: the loops and experiments that move acquisition, activation, conversion, and retention as one measurable system. In practice the roles overlap, so on your diagnostic call we recommend the right entry point. If your problem is that growth is stalling and nobody owns the experiment velocity, a Head of Growth is usually the fit.
 
-Do you work with B2B SaaS companies outside of Israel? + Yes, most of our client base sells into the US and Europe. Our operating model is async by design: fluent English, coverage across US and European business hours, and the Start-Up Nation playbook of scaling globally from day one. The AI execution layer runs around the clock, so experiment turnaround is usually faster than a local hire.
+### When should a B2B tech company hire a Head of Growth? +
+
+Usually once you have product-market fit and early traction but growth is plateauing, when the founder is still running acquisition personally, or when marketing ships activity but no one owns the funnel math end to end. A fractional Head of Growth gives you senior ownership of the growth system and the experiment cadence to unlock the next stage, without the $300K+ cost and long search of a full-time hire.
+
+### What does a Head of Growth engagement deliver in the first 90 days? +
+
+The first two weeks are diagnostic: funnel audit, activation and retention analysis, channel economics, and a ranked list of growth bets. By week three you have a prioritized experiment roadmap with clear metrics, and the agent team is already shipping the tests, landing pages, and dashboards behind it. By day 90 you should have a working experiment cadence, instrumented funnel metrics, and a handful of validated wins, not a growth deck waiting on headcount.
+
+### Do you work with B2B tech companies outside of Israel? +
+
+Yes, most of our client base sells into the US and Europe. Our operating model is async by design: fluent English, coverage across US and European business hours, and the Start-Up Nation playbook of scaling globally from day one. The AI execution layer runs around the clock, so experiment turnaround is usually faster than a local hire.
 
 Need one leader over marketing, sales, and customer success? See our CRO as a Service engagement.
 
@@ -1671,15 +1906,25 @@ Pricing FAQ
 
 ## Pricing, answered
 
-How much does CMO as a Service cost at Triple & Co.? + CMO as a Service runs $5,000 to $15,000 per month. That single subscription covers marketing strategy owned by Lihi Pinto plus daily execution by all 8 AI agents, replacing the 3 to 4 separate agency retainers most B2B companies stack up.
+### How much does CMO as a Service cost at Triple & Co.? +
 
-What does the Revenue Diagnostic cost? + Nothing. The Revenue Diagnostic is a free 30-minute call with Lihi Pinto. We review your funnel math together and you leave with three concrete moves to add pipeline this quarter, whether we work together afterwards or not.
+CMO as a Service runs $5,000 to $15,000 per month. That single subscription covers marketing strategy owned by Lihi Pinto plus daily execution by all 8 AI agents, replacing the 3 to 4 separate agency retainers most B2B companies stack up.
 
-Is the AI agent team billed separately? + No. All 8 agents are included in every CMO as a Service, CRO as a Service, and Head of Growth monthly rate. If you want a single specialist without a leadership engagement, individual agents start at $2,500 per month.
+### What does the Revenue Diagnostic cost? +
 
-What determines where an engagement lands in the $5,000 to $15,000 range? + Three things: the scope of ownership (one funnel stage versus the full pipeline), the execution volume the agent team runs daily, and how many markets and segments your go-to-market covers. We recommend the exact structure on the diagnostic call.
+Nothing. The Revenue Diagnostic is a free 30-minute call with Lihi Pinto. We review your funnel math together and you leave with three concrete moves to add pipeline this quarter, whether we work together afterwards or not.
 
-How does this compare to hiring a full-time CMO? + A full-time CMO in Israeli tech averages around 42,000 NIS per month in salary, and the real first-year cost typically passes 700,000 NIS once employer costs, recruiting, and ramp time are counted. A $5,000 to $15,000 monthly engagement delivers senior leadership plus an execution team without that commitment.
+### Is the AI agent team billed separately? +
+
+No. All 8 agents are included in every CMO as a Service, CRO as a Service, and Head of Growth monthly rate. If you want a single specialist without a leadership engagement, individual agents start at $2,500 per month.
+
+### What determines where an engagement lands in the $5,000 to $15,000 range? +
+
+Three things: the scope of ownership (one funnel stage versus the full pipeline), the execution volume the agent team runs daily, and how many markets and segments your go-to-market covers. We recommend the exact structure on the diagnostic call.
+
+### How does this compare to hiring a full-time CMO? +
+
+A full-time CMO in Israeli tech averages around 42,000 NIS per month in salary, and the real first-year cost typically passes 700,000 NIS once employer costs, recruiting, and ramp time are counted. A $5,000 to $15,000 monthly engagement delivers senior leadership plus an execution team without that commitment.
 
 Free · 30 minutes · No pitch
 
@@ -1732,22 +1977,32 @@ Across funding rounds at B2B tech companies, seed through growth, where Lihi Pin
 3x revenue tripled, repeatedly
 Revenue tripled repeatedly at the companies where Lihi led marketing, from early traction through scale, with pipeline as the scoreboard.
 
-15+ years in B2B SaaS marketing leadership
+15+ years in B2B tech marketing leadership
 Including co-founding and leading marketing at a venture-backed SaaS company. The same playbooks now run for Triple & Co. clients, executed by 8 supervised AI agents.
 
 Questions about results
 
 ## Asked before every engagement
 
-What results has Triple & Co. delivered? + Recent client outcomes include pipeline growing 2.5x in 2 quarters, SQLs up 4x in 2 months, and CAC down 18% in 3 months, all at B2B SaaS companies. Before founding Triple & Co., companies where Lihi Pinto led marketing raised $70M+ and tripled revenue repeatedly.
+### What results has Triple & Co. delivered? +
 
-Why doesn't Triple & Co. name its clients? + Client confidentiality. Triple & Co. works inside its clients' go-to-market as an embedded leadership function, and most engagements cover competitive positioning that clients prefer to keep private. The numbers are real and anonymized by category instead.
+Recent client outcomes include pipeline growing 2.5x in 2 quarters, SQLs up 4x in 2 months, and CAC down 18% in 3 months, all at B2B SaaS companies. Before founding Triple & Co., companies where Lihi Pinto led marketing raised $70M+ and tripled revenue repeatedly.
 
-How are these results measured? + Each engagement runs on an agreed scoreboard: pipeline, SQLs, CAC, and funnel conversion, tracked in the client's own CRM and analytics. The outcomes published here are taken from those client-owned systems, not from vanity metrics.
+### Why doesn't Triple & Co. name its clients? +
 
-How fast should we expect results? + The agent team starts shipping in the first weeks, so leading indicators (content velocity, outreach volume, funnel instrumentation) move almost immediately. Pipeline and CAC outcomes like the ones above typically show within 2 to 6 months, depending on sales cycle length.
+Client confidentiality. Triple & Co. works inside its clients' go-to-market as an embedded leadership function, and most engagements cover competitive positioning that clients prefer to keep private. The numbers are real and anonymized by category instead.
 
-Who did the work behind these numbers? + Lihi Pinto owned the strategy and every decision; the 8 supervised AI agents did the daily execution across content, campaigns, SEO, outreach, and analytics. Every output passed human review before shipping. That combination is the engagement model, priced at $5,000 to $15,000 per month.
+### How are these results measured? +
+
+Each engagement runs on an agreed scoreboard: pipeline, SQLs, CAC, and funnel conversion, tracked in the client's own CRM and analytics. The outcomes published here are taken from those client-owned systems, not from vanity metrics.
+
+### How fast should we expect results? +
+
+The agent team starts shipping in the first weeks, so leading indicators (content velocity, outreach volume, funnel instrumentation) move almost immediately. Pipeline and CAC outcomes like the ones above typically show within 2 to 6 months, depending on sales cycle length.
+
+### Who did the work behind these numbers? +
+
+Lihi Pinto owned the strategy and every decision; the 8 supervised AI agents did the daily execution across content, campaigns, SEO, outreach, and analytics. Every output passed human review before shipping. That combination is the engagement model, priced at $5,000 to $15,000 per month.
 
 ## Want numbers like these on your funnel?
 
@@ -1756,19 +2011,19 @@ Book the free Revenue Diagnostic See engagement models & pricing →
 
 ---
 url: https://www.tripleandco.com/fractional-cmo-b2b
-title: Fractional CMO for B2B SaaS, AI-Powered | Triple & Co.
-description: Get a fractional CMO who ships, not just advises. Senior B2B SaaS strategy from Lihi Pinto, plus 8 supervised AI agents executing daily. Book a call.
+title: Fractional CMO for B2B Tech, AI-Powered | Triple & Co.
+description: Get a fractional CMO who ships, not just advises. Senior B2B tech strategy from Lihi Pinto, plus 8 supervised AI agents executing daily. Book a call.
 ---
 - Home
 - Fractional CMO
-Fractional CMO for B2B & SaaS
+Fractional CMO for B2B Tech
 
 # The Fractional CMO Who Comes With a Built-In Execution Team
 
 You don't need another strategy deck. You need someone who builds the plan, then ships it.
-Triple & Co. gives you a senior fractional CMO with 15+ years scaling B2B SaaS companies, backed by 8 supervised AI agents that execute the work daily. Strategy and execution. One partner. One price. No hiring freelancers. No managing juniors. No waiting quarters for traction.
+Triple & Co. gives you a senior fractional CMO with 15+ years scaling B2B tech companies, backed by 8 supervised AI agents that execute the work daily. Strategy and execution. One partner. One price. No hiring freelancers. No managing juniors. No waiting quarters for traction.
 Book a 30-Minute Revenue Diagnostic → See how the agent team works →
-15+ years in B2B SaaS · $70M+ raised at companies Lihi led · Built in Israel, the Start-Up Nation
+15+ years in B2B tech · $70M+ raised at companies Lihi led · Built in Israel, the Start-Up Nation
 
 The problem
 
@@ -1790,7 +2045,7 @@ Triple & Co. runs on a model we call Woman in the Loop (WIL): senior human judgm
 
 ### Lihi Pinto, Your Fractional CMO
 
-15+ years scaling B2B SaaS companies. $70M+ raised at companies she led. Lihi owns your strategy: positioning, pipeline architecture, pricing, board-level reporting. Every decision that requires judgment, taste, and accountability stays human.
+15+ years scaling B2B tech companies. $70M+ raised at companies she led. Lihi owns your strategy: positioning, pipeline architecture, pricing, board-level reporting. Every decision that requires judgment, taste, and accountability stays human.
 
 ### A Digital COO That Runs the Operation
 
@@ -1871,7 +2126,7 @@ Global by default
 
 ## Built in the Start-Up Nation. Operating Everywhere.
 
-Triple & Co. is headquartered in Israel, the densest startup ecosystem on earth and the proving ground where B2B SaaS companies learn to sell globally from day one. That DNA is our default setting: every playbook we run assumes a global market, a remote team, and a US or European buyer.
+Triple & Co. is headquartered in Israel, the densest startup ecosystem on earth and the proving ground where B2B tech companies learn to sell globally from day one. That DNA is our default setting: every playbook we run assumes a global market, a remote team, and a US or European buyer.
 
 ### Async by Design
 
@@ -1891,13 +2146,21 @@ FAQ
 
 ## Fractional CMO Questions, Answered
 
-What is the difference between a traditional Fractional CMO and an AI-powered marketing partner? + A traditional fractional CMO gives you part-time strategic leadership, typically 1 to 2 days a week of planning, advising, and oversight. Execution is left to your existing team or contractors you hire separately. An AI-powered partner like Triple & Co. bundles both layers. You get the same senior fractional CMO leadership, plus a supervised team of 8 AI agents that executes the strategy daily: content, campaigns, SEO, ops, and reporting. One engagement covers what previously required an executive plus a department.
+### What is the difference between a traditional Fractional CMO and an AI-powered marketing partner? +
 
-Do you work with B2B companies outside of Israel? + Yes. Most of our clients sell into the US and Europe, and our entire operating model is built for it. We work async across timezones, communicate in fluent English, and bring the Start-Up Nation playbook of scaling globally from a small home market. Location has never been a constraint for our clients; if anything, it's an advantage.
+A traditional fractional CMO gives you part-time strategic leadership, typically 1 to 2 days a week of planning, advising, and oversight. Execution is left to your existing team or contractors you hire separately. An AI-powered partner like Triple & Co. bundles both layers. You get the same senior fractional CMO leadership, plus a supervised team of 8 AI agents that executes the strategy daily: content, campaigns, SEO, ops, and reporting. One engagement covers what previously required an executive plus a department.
 
-How much does a fractional CMO cost compared to hiring a full-time CMO? + A full-time B2B SaaS CMO typically costs $250K to $400K+ per year in salary, equity, and benefits, before you add the marketing team underneath them. A traditional fractional CMO runs $5K to $15K per month for strategy only. Triple & Co. prices at the level of a standalone fractional executive, but the engagement includes the execution layer, so you're replacing both the CMO line item and most of the team budget. Book a Revenue Diagnostic for a quote scoped to your stage.
+### Do you work with B2B companies outside of Israel? +
 
-What does a fractional CMO for SaaS actually do in the first 90 days? + At Triple & Co., the first two weeks are diagnostic: positioning audit, funnel analysis, and pipeline math. By week three you have a prioritized growth plan, and the agent team is already executing the first sprint: messaging, content engine, campaign infrastructure, and reporting. By day 90 you should see a working demand engine with weekly shipped output and board-ready metrics, not a slide deck waiting for headcount.
+Yes. Most of our clients sell into the US and Europe, and our entire operating model is built for it. We work async across timezones, communicate in fluent English, and bring the Start-Up Nation playbook of scaling globally from a small home market. Location has never been a constraint for our clients; if anything, it's an advantage.
+
+### How much does a fractional CMO cost compared to hiring a full-time CMO? +
+
+A full-time B2B tech CMO typically costs $250K to $400K+ per year in salary, equity, and benefits, before you add the marketing team underneath them. A traditional fractional CMO runs $5K to $15K per month for strategy only. Triple & Co. prices at the level of a standalone fractional executive, but the engagement includes the execution layer, so you're replacing both the CMO line item and most of the team budget. Book a Revenue Diagnostic for a quote scoped to your stage.
+
+### What does a fractional CMO for SaaS actually do in the first 90 days? +
+
+At Triple & Co., the first two weeks are diagnostic: positioning audit, funnel analysis, and pipeline math. By week three you have a prioritized growth plan, and the agent team is already executing the first sprint: messaging, content engine, campaign infrastructure, and reporting. By day 90 you should see a working demand engine with weekly shipped output and board-ready metrics, not a slide deck waiting for headcount.
 
 Consolidating agency retainers instead of hiring an executive? See our CMO as a Service model.
 
@@ -1909,7 +2172,7 @@ Book a 30-Minute Revenue Diagnostic → No pitch. You'll leave with 3 specific g
 ---
 url: https://www.tripleandco.com/fractional-cmo-vs-agency-vs-hire
 title: Fractional CMO vs Agency vs Full-Time Hire | Triple & Co.
-description: Fractional CMO vs marketing agency vs full-time hire for B2B SaaS. Compare cost, ownership, speed, and risk, and see which model fits your stage.
+description: Fractional CMO vs marketing agency vs full-time hire for B2B tech. Compare cost, ownership, speed, and risk, and see which model fits your stage.
 ---
 - Home
 - Fractional CMO vs Agency vs Hire
@@ -1920,7 +2183,7 @@ Compare your options
 Three ways to get senior B2B marketing leadership: hire a full-time CMO, retain an agency, or bring in a fractional CMO. They differ most on who owns the outcome and how fast you see work.
 A full-time hire gives you ownership but costs $300K+ and takes months to find. An agency gives you hands but rents you strategy by the project. A fractional CMO gives you senior ownership plus execution, without the salary or the search. Here is the honest breakdown.
 Book a 30-Minute Revenue Diagnostic → See how the agent team works →
-15+ years in B2B SaaS · $70M+ raised at companies Lihi led · One accountable owner
+15+ years in B2B tech · $70M+ raised at companies Lihi led · One accountable owner
 
 The real question
 
@@ -2043,13 +2306,21 @@ FAQ
 
 ## Fractional CMO vs Agency vs Hire, Answered.
 
-Is a fractional CMO cheaper than a full-time CMO? + Yes. A full-time CMO in B2B SaaS is typically a $300K+ fully loaded commitment once you add salary, equity, benefits, and ramp time. A fractional CMO gives you senior ownership for a fraction of that, because you pay for the leadership and the execution you need, not a full-time seat. The bigger saving is speed: you skip a three to six month executive search and start in days.
+### Is a fractional CMO cheaper than a full-time CMO? +
 
-How is a fractional CMO different from a marketing agency? + An agency is an execution vendor: you tell it what to do, it does the work, and strategy usually resets each renewal. A fractional CMO is an owner: they set the strategy, own the number, and are accountable to your board. At Triple & Co. you get both in one engagement, because Lihi owns the strategy and a supervised AI team does the execution an agency would normally handle.
+Yes. A full-time CMO in B2B tech is typically a $300K+ fully loaded commitment once you add salary, equity, benefits, and ramp time. A fractional CMO gives you senior ownership for a fraction of that, because you pay for the leadership and the execution you need, not a full-time seat. The bigger saving is speed: you skip a three to six month executive search and start in days.
 
-When is a full-time CMO the right call instead? + When you are at a scale where marketing is central to the moat, you need a leader building and managing a large in-house team full-time for years, and you can confidently fill the seat with a strong operator. If that is you, hire. A fractional model is the better fit when you need senior ownership and execution before a full-time hire is justified or findable.
+### How is a fractional CMO different from a marketing agency? +
 
-Can a fractional CMO really own the outcome part-time? + Ownership is about accountability and judgment, not hours logged. Lihi owns the strategy, the metrics, and the board narrative, and reviews every deliverable. The volume of execution that would normally require a full team is handled by 8 supervised AI agents running daily, so the output is full-time even though the leadership is fractional.
+An agency is an execution vendor: you tell it what to do, it does the work, and strategy usually resets each renewal. A fractional CMO is an owner: they set the strategy, own the number, and are accountable to your board. At Triple & Co. you get both in one engagement, because Lihi owns the strategy and a supervised AI team does the execution an agency would normally handle.
+
+### When is a full-time CMO the right call instead? +
+
+When you are at a scale where marketing is central to the moat, you need a leader building and managing a large in-house team full-time for years, and you can confidently fill the seat with a strong operator. If that is you, hire. A fractional model is the better fit when you need senior ownership and execution before a full-time hire is justified or findable.
+
+### Can a fractional CMO really own the outcome part-time? +
+
+Ownership is about accountability and judgment, not hours logged. Lihi owns the strategy, the metrics, and the board narrative, and reviews every deliverable. The volume of execution that would normally require a full team is handled by 8 supervised AI agents running daily, so the output is full-time even though the leadership is fractional.
 
 Want the version that owns the full revenue funnel, not just marketing? See CRO as a Service instead.
 
@@ -2061,7 +2332,7 @@ Book a 30-Minute Revenue Diagnostic → No pitch deck. A straight recommendation
 ---
 url: https://www.tripleandco.com/ai-marketing-team-vs-agency
 title: AI Marketing Team vs Agency for B2B | Triple & Co.
-description: AI marketing team vs traditional agency for B2B SaaS: compare speed, cost, quality, and accountability, and why a supervised AI team beats both.
+description: AI marketing team vs traditional agency for B2B tech: compare speed, cost, quality, and accountability, and why a supervised AI team beats both.
 ---
 - Home
 - AI Marketing Team vs Agency
@@ -2195,13 +2466,21 @@ FAQ
 
 ## AI Marketing Team vs Agency, Answered.
 
-Is an AI marketing team better than a traditional agency? + For most B2B SaaS teams, a supervised AI marketing team delivers comparable or better output faster and at a fraction of an agency retainer, because agents handle the volume and a senior human owns judgment. A traditional agency can still be the right call when you need a specific human craft or channel specialist and budget is not the constraint. The key difference is that a supervised AI team pairs AI speed with accountable human sign-off.
+### Is an AI marketing team better than a traditional agency? +
 
-How is this different from just using ChatGPT or AI tools ourselves? + Raw AI tools give you speed and low cost but hand you the hard part: strategy, briefing, editing, and brand safety. You become the bottleneck and the quality control. Triple & Co. runs 8 specialist agents as one coordinated team under Lihi Pinto, who owns the strategy and reviews every output, so you get the economics of AI without personally becoming the editor and strategist.
+For most B2B tech teams, a supervised AI marketing team delivers comparable or better output faster and at a fraction of an agency retainer, because agents handle the volume and a senior human owns judgment. A traditional agency can still be the right call when you need a specific human craft or channel specialist and budget is not the constraint. The key difference is that a supervised AI team pairs AI speed with accountable human sign-off.
 
-Is AI-generated marketing safe for a B2B brand? + Unsupervised AI is a real brand risk: generic copy, wrong claims, and off-strategy content that erodes trust. Supervised AI is different. In our Woman in the Loop model, nothing ships without human review, so the speed of AI never comes at the cost of brand voice, accuracy, or strategy. Supervision is the whole point.
+### How is this different from just using ChatGPT or AI tools ourselves? +
 
-Do I still get a human to talk to? + Yes. Lihi Pinto owns your strategy and is accountable for the outcome, the same as a senior marketing leader would be. The AI agents expand execution capacity behind her, they do not replace the human relationship or the human judgment.
+Raw AI tools give you speed and low cost but hand you the hard part: strategy, briefing, editing, and brand safety. You become the bottleneck and the quality control. Triple & Co. runs 8 specialist agents as one coordinated team under Lihi Pinto, who owns the strategy and reviews every output, so you get the economics of AI without personally becoming the editor and strategist.
+
+### Is AI-generated marketing safe for a B2B brand? +
+
+Unsupervised AI is a real brand risk: generic copy, wrong claims, and off-strategy content that erodes trust. Supervised AI is different. In our Woman in the Loop model, nothing ships without human review, so the speed of AI never comes at the cost of brand voice, accuracy, or strategy. Supervision is the whole point.
+
+### Do I still get a human to talk to? +
+
+Yes. Lihi Pinto owns your strategy and is accountable for the outcome, the same as a senior marketing leader would be. The AI agents expand execution capacity behind her, they do not replace the human relationship or the human judgment.
 
 Want to meet the agents doing the work? See the AI marketing agents and how Lihi supervises them.
 
@@ -2213,7 +2492,7 @@ Book a 30-Minute Revenue Diagnostic → Nothing ships without human review. That
 ---
 url: https://www.tripleandco.com/geo
 title: GEO: Generative Engine Optimization for B2B | Triple & Co.
-description: Generative Engine Optimization (GEO) makes your brand citable in ChatGPT, Perplexity, Gemini, and Google AI Overviews. B2B SaaS GEO from an AI-native CMO.
+description: Generative Engine Optimization (GEO) makes your brand citable in ChatGPT, Perplexity, Gemini, and Google AI Overviews. B2B tech GEO from an AI-native CMO.
 ---
 - Home
 - GEO
@@ -2279,15 +2558,25 @@ FAQ
 
 ## GEO for B2B, Explained
 
-What is Generative Engine Optimization (GEO)? + Generative Engine Optimization (GEO) is the practice of making your brand and content easy for AI answer engines to understand, trust, and cite. Where SEO optimizes for ranked links on a results page, GEO optimizes to be the source an AI quotes inside ChatGPT, Perplexity, Google AI Overviews, and Gemini. It combines clear structured answers, authoritative content, schema markup, and crawler access so language models select and attribute your brand.
+### What is Generative Engine Optimization (GEO)? +
 
-How is GEO different from SEO? + SEO earns you a ranked link that a human clicks. GEO earns you a citation inside a generated answer, often before any link is clicked. SEO optimizes pages for a crawler and an index; GEO optimizes claims, definitions, and evidence for a language model that synthesizes an answer. They share a foundation, clean, authoritative, well-structured content, but GEO adds quotable formatting, entity clarity, and explicit AI-crawler access. Most B2B buyers now start in an AI assistant, so both matter.
+Generative Engine Optimization (GEO) is the practice of making your brand and content easy for AI answer engines to understand, trust, and cite. Where SEO optimizes for ranked links on a results page, GEO optimizes to be the source an AI quotes inside ChatGPT, Perplexity, Google AI Overviews, and Gemini. It combines clear structured answers, authoritative content, schema markup, and crawler access so language models select and attribute your brand.
 
-Why does GEO matter for B2B SaaS? + B2B buyers increasingly ask an AI assistant to shortlist vendors, compare categories, and summarize options before they ever visit a website. If AI engines do not know who you are or cite a competitor instead, you are cut from the consideration set before the funnel starts. GEO puts your positioning, proof, and category language in the exact form these engines lift, so your brand shows up in the answer, not just on page two.
+### How is GEO different from SEO? +
 
-How do you measure GEO results? + We track whether target AI engines mention and cite your brand for the buyer questions that matter in your category, monitor changes over time, and benchmark against competitors. We also watch referral traffic and assisted pipeline from AI sources. The starting point is our free AI Visibility Audit, which shows what ChatGPT and other engines say about your brand today.
+SEO earns you a ranked link that a human clicks. GEO earns you a citation inside a generated answer, often before any link is clicked. SEO optimizes pages for a crawler and an index; GEO optimizes claims, definitions, and evidence for a language model that synthesizes an answer. They share a foundation, clean, authoritative, well-structured content, but GEO adds quotable formatting, entity clarity, and explicit AI-crawler access. Most B2B buyers now start in an AI assistant, so both matter.
 
-Is GEO a one-time project or ongoing? + The audit and initial fixes are a project; staying cited is ongoing. AI engines re-crawl, models update, and competitors publish. Because GEO is built into how Triple & Co. runs marketing, our agents keep producing quotable, structured, authoritative content and Lihi keeps the strategy current, so your citation footprint compounds instead of decaying.
+### Why does GEO matter for B2B tech? +
+
+B2B buyers increasingly ask an AI assistant to shortlist vendors, compare categories, and summarize options before they ever visit a website. If AI engines do not know who you are or cite a competitor instead, you are cut from the consideration set before the funnel starts. GEO puts your positioning, proof, and category language in the exact form these engines lift, so your brand shows up in the answer, not just on page two.
+
+### How do you measure GEO results? +
+
+We track whether target AI engines mention and cite your brand for the buyer questions that matter in your category, monitor changes over time, and benchmark against competitors. We also watch referral traffic and assisted pipeline from AI sources. The starting point is our free AI Visibility Audit, which shows what ChatGPT and other engines say about your brand today.
+
+### Is GEO a one-time project or ongoing? +
+
+The audit and initial fixes are a project; staying cited is ongoing. AI engines re-crawl, models update, and competitors publish. Because GEO is built into how Triple & Co. runs marketing, our agents keep producing quotable, structured, authoritative content and Lihi keeps the strategy current, so your citation footprint compounds instead of decaying.
 
 Want the practical, do-it-yourself version? Read our LLM SEO guide and checklist .
 
@@ -2387,22 +2676,32 @@ FAQ
 
 ## LLM SEO, Explained
 
-What is LLM SEO? + LLM SEO is the practice of optimizing your content so large language models like ChatGPT, Claude, Gemini, and Perplexity understand, trust, and cite your brand when they answer a user's question. It is closely related to Generative Engine Optimization (GEO). Where classic SEO optimizes for ranked links on a search results page, LLM SEO optimizes for being the source a model quotes inside a generated answer, often before the user clicks any link at all.
+### What is LLM SEO? +
 
-Is LLM SEO the same as GEO? + They overlap heavily. GEO (Generative Engine Optimization) is the broader discipline of being cited across AI answer engines, including Google AI Overviews and Perplexity, which blend search and generation. LLM SEO is the same idea framed around large language models specifically. In practice we treat them as one workstream: make your content quotable, make your entity legible, and make your credibility explicit so any AI system selects and attributes you.
+LLM SEO is the practice of optimizing your content so large language models like ChatGPT, Claude, Gemini, and Perplexity understand, trust, and cite your brand when they answer a user's question. It is closely related to Generative Engine Optimization (GEO). Where classic SEO optimizes for ranked links on a search results page, LLM SEO optimizes for being the source a model quotes inside a generated answer, often before the user clicks any link at all.
 
-How do large language models decide which sources to cite? + Answer engines favor content that is clearly structured, directly answers the question, states unambiguous facts and definitions, and comes from a source the model can identify as credible. Retrieval-augmented systems like Perplexity and AI Overviews pull from fresh, crawlable pages with strong topical authority and schema. Models reward clarity over cleverness: a crisp definition, a comparison table, or a cited statistic is far more likely to be lifted than a long, meandering paragraph.
+### Is LLM SEO the same as GEO? +
 
-How long does LLM SEO take to work? + Retrieval-based engines like Perplexity and Google AI Overviews can reflect new or updated content within days to weeks once it is crawled. Influencing a model's baseline training knowledge is slower and less direct, which is why the reliable lever is being consistently citable across the fresh, crawlable web. Staying cited is ongoing: engines re-crawl, models update, and competitors publish, so citation footprint is something you compound, not a one-time fix.
+They overlap heavily. GEO (Generative Engine Optimization) is the broader discipline of being cited across AI answer engines, including Google AI Overviews and Perplexity, which blend search and generation. LLM SEO is the same idea framed around large language models specifically. In practice we treat them as one workstream: make your content quotable, make your entity legible, and make your credibility explicit so any AI system selects and attributes you.
 
-Can I do LLM SEO myself? + The checklist on this page is a real starting point you can act on today. The harder part is doing it consistently across everything you publish, keeping entities and schema clean, and measuring whether engines actually cite you over time. That is how Triple & Co. runs marketing by default: our supervised AI agents produce quotable, structured content and Atlas tracks citations, while Lihi owns the strategy. Start with our free AI Visibility Audit to see where you stand.
+### How do large language models decide which sources to cite? +
+
+Answer engines favor content that is clearly structured, directly answers the question, states unambiguous facts and definitions, and comes from a source the model can identify as credible. Retrieval-augmented systems like Perplexity and AI Overviews pull from fresh, crawlable pages with strong topical authority and schema. Models reward clarity over cleverness: a crisp definition, a comparison table, or a cited statistic is far more likely to be lifted than a long, meandering paragraph.
+
+### How long does LLM SEO take to work? +
+
+Retrieval-based engines like Perplexity and Google AI Overviews can reflect new or updated content within days to weeks once it is crawled. Influencing a model's baseline training knowledge is slower and less direct, which is why the reliable lever is being consistently citable across the fresh, crawlable web. Staying cited is ongoing: engines re-crawl, models update, and competitors publish, so citation footprint is something you compound, not a one-time fix.
+
+### Can I do LLM SEO myself? +
+
+The checklist on this page is a real starting point you can act on today. The harder part is doing it consistently across everything you publish, keeping entities and schema clean, and measuring whether engines actually cite you over time. That is how Triple & Co. runs marketing by default: our supervised AI agents produce quotable, structured content and Atlas tracks citations, while Lihi owns the strategy. Start with our free AI Visibility Audit to see where you stand.
 
 Want us to run this as a service? See Generative Engine Optimization for B2B .
 
 ---
 url: https://www.tripleandco.com/ai-visibility-audit
-title: Free AI Visibility Audit for B2B SaaS | Triple & Co.
-description: See what ChatGPT, Perplexity, Gemini, and Google AI Overviews say about your brand. Free AI Visibility Audit for B2B SaaS, run by an AI-native CMO.
+title: Free AI Visibility Audit for B2B Tech | Triple & Co.
+description: See what ChatGPT, Perplexity, Gemini, and Google AI Overviews say about your brand. Free AI Visibility Audit for B2B tech, run by an AI-native CMO.
 ---
 - Home
 - AI Visibility Audit
@@ -2469,13 +2768,21 @@ FAQ
 
 ## The Audit, Explained
 
-What is an AI Visibility Audit? + An AI Visibility Audit checks whether AI answer engines like ChatGPT, Perplexity, Gemini, and Google AI Overviews mention and cite your brand when buyers ask category and vendor questions. It shows what these engines say about you, what they get wrong, where a competitor is cited instead, and the specific gaps in your content, structure, and authority that keep you out of the answer.
+### What is an AI Visibility Audit? +
 
-How much does the audit cost? + It is free. There is no cost and no obligation. We run it because it is the clearest way to show B2B SaaS teams where they stand in AI search, and because it reflects how we think about marketing in the AI era.
+An AI Visibility Audit checks whether AI answer engines like ChatGPT, Perplexity, Gemini, and Google AI Overviews mention and cite your brand when buyers ask category and vendor questions. It shows what these engines say about you, what they get wrong, where a competitor is cited instead, and the specific gaps in your content, structure, and authority that keep you out of the answer.
 
-What do I get and how long does it take? + You get a written read on how AI engines currently see your brand: which questions surface you, which surface a competitor, what the engines get right or wrong, and the highest-leverage fixes to become more citable. We send it to your inbox within two business days of your request.
+### How much does the audit cost? +
 
-What happens after the audit? + Nothing you do not ask for. The audit is yours to act on however you like. If you want help closing the gaps, our GEO and CMO as a Service engagements build citable, structured content into how your marketing runs. If not, you still walk away with a clear picture of your AI search visibility.
+It is free. There is no cost and no obligation. We run it because it is the clearest way to show B2B tech teams where they stand in AI search, and because it reflects how we think about marketing in the AI era.
+
+### What do I get and how long does it take? +
+
+You get a written read on how AI engines currently see your brand: which questions surface you, which surface a competitor, what the engines get right or wrong, and the highest-leverage fixes to become more citable. We send it to your inbox within two business days of your request.
+
+### What happens after the audit? +
+
+Nothing you do not ask for. The audit is yours to act on however you like. If you want help closing the gaps, our GEO and CMO as a Service engagements build citable, structured content into how your marketing runs. If not, you still walk away with a clear picture of your AI search visibility.
 
 ---
 url: https://www.tripleandco.com/b2b-saas-marketing
@@ -2615,13 +2922,21 @@ FAQ
 
 ## B2B SaaS Marketing Questions, Answered
 
-What does B2B SaaS marketing with Triple & Co. actually include? + One engagement covers both leadership and execution. Lihi Pinto owns strategy: positioning, messaging, pricing narrative, demand strategy, and pipeline reporting. The supervised AI agent team executes the daily work: content, SEO and GEO, campaigns, social, creative, and analytics. You get a CMO and the department underneath one, for the price of a single senior executive.
+### What does B2B SaaS marketing with Triple & Co. actually include? +
 
-How is this different from hiring a marketing agency? + Agencies execute against a brief you or someone else has to write, and they rarely own your revenue number. Triple & Co. owns the strategy and the execution together, so there is no gap between the plan and the work. Messaging stays consistent because it all runs through one system supervised by one accountable leader, instead of being split across a writer, an ads shop, and an SEO contractor.
+One engagement covers both leadership and execution. Lihi Pinto owns strategy: positioning, messaging, pricing narrative, demand strategy, and pipeline reporting. The supervised AI agent team executes the daily work: content, SEO and GEO, campaigns, social, creative, and analytics. You get a CMO and the department underneath one, for the price of a single senior executive.
 
-How fast will we see output? + The first two weeks are diagnostic: positioning audit, funnel analysis, and pipeline math. By week three you have a prioritized plan and the agent team is already shipping the first sprint. Most SaaS clients see live content, campaigns, and reporting inside the first month, not a deck waiting on headcount.
+### How is this different from hiring a marketing agency? +
 
-Do you work with early-stage and growth-stage SaaS? + Yes. For early-stage SaaS we focus on nailing positioning and building the first repeatable demand motion. For growth-stage SaaS we focus on scaling pipeline, tightening funnel conversion, and giving the board a clean view of what marketing is driving. Book a Revenue Diagnostic and we will scope it to your stage.
+Agencies execute against a brief you or someone else has to write, and they rarely own your revenue number. Triple & Co. owns the strategy and the execution together, so there is no gap between the plan and the work. Messaging stays consistent because it all runs through one system supervised by one accountable leader, instead of being split across a writer, an ads shop, and an SEO contractor.
+
+### How fast will we see output? +
+
+The first two weeks are diagnostic: positioning audit, funnel analysis, and pipeline math. By week three you have a prioritized plan and the agent team is already shipping the first sprint. Most SaaS clients see live content, campaigns, and reporting inside the first month, not a deck waiting on headcount.
+
+### Do you work with early-stage and growth-stage SaaS? +
+
+Yes. For early-stage SaaS we focus on nailing positioning and building the first repeatable demand motion. For growth-stage SaaS we focus on scaling pipeline, tightening funnel conversion, and giving the board a clean view of what marketing is driving. Book a Revenue Diagnostic and we will scope it to your stage.
 
 Want a single leader who owns the entire revenue number? See our CRO as a Service model.
 
@@ -2644,7 +2959,7 @@ Marketing for B2B Fintech
 In fintech, buyers do not just evaluate features. They evaluate whether they can trust you with money, data, and compliance. Your marketing has to prove that on every page.
 Triple & Co. gives you a senior fintech marketing leader plus 8 supervised AI agents that build trust-first positioning, compliant content, and a demand engine that turns credibility into pipeline. Strategy and execution in one engagement, with a human accountable for every claim that ships.
 Book a 30-Minute Revenue Diagnostic → See how the agent team works →
-15+ years in B2B SaaS and investment banking · $70M+ raised · Trust-first by design
+15+ years in B2B technology and investment banking · $70M+ raised · Trust-first by design
 
 The problem
 
@@ -2666,7 +2981,7 @@ Triple & Co. runs on our Woman in the Loop (WIL) model: senior human judgment di
 
 ### Lihi Pinto Owns the Trust Story
 
-15+ years across B2B SaaS and investment banking, $70M+ raised. Lihi owns positioning, the credibility narrative, and messaging, so the way you present risk, security, and proof is set by someone who has sat on both sides of the table.
+15+ years across B2B technology and investment banking, $70M+ raised. Lihi owns positioning, the credibility narrative, and messaging, so the way you present risk, security, and proof is set by someone who has sat on both sides of the table.
 
 ### A Digital COO Keeps Everything Reviewed
 
@@ -2768,13 +3083,21 @@ FAQ
 
 ## Fintech Marketing Questions, Answered
 
-Do you understand marketing for regulated financial products? + Yes. Lihi Pinto's background spans B2B SaaS and investment banking, so the trust story, the risk narrative, and the way regulated buyers evaluate vendors are core to how we position fintech companies. We lead with proof and credibility rather than hype, and every claim is reviewed by a human before it ships.
+### Do you understand marketing for regulated financial products? +
 
-How do you handle compliance and accuracy in content? + Our Woman in the Loop model means no output ships without senior human review. AI agents produce drafts at speed, but a human owns accuracy, so claims are defensible and your content is far less likely to get bounced back by legal or compliance. If you have an internal review process, we plug into it.
+Yes. Lihi Pinto's background spans B2B technology and investment banking, so the trust story, the risk narrative, and the way regulated buyers evaluate vendors are core to how we position fintech companies. We lead with proof and credibility rather than hype, and every claim is reviewed by a human before it ships.
 
-What kinds of fintech companies do you work with? + We work with B2B fintech and financial infrastructure companies: payments, banking-as-a-service, treasury, risk, compliance tech, and adjacent categories selling to finance and operations leaders. The common thread is a buyer who evaluates trust and risk, not just features.
+### How do you handle compliance and accuracy in content? +
 
-Can you support long, multi-stakeholder sales cycles? + Yes. Fintech deals often involve finance, security, legal, and operations. We build the content, nurture, and sales enablement that keep you credible and top of mind across a long cycle, and we report on pipeline so you can see how marketing is influencing deals over time.
+Our Woman in the Loop model means no output ships without senior human review. AI agents produce drafts at speed, but a human owns accuracy, so claims are defensible and your content is far less likely to get bounced back by legal or compliance. If you have an internal review process, we plug into it.
+
+### What kinds of fintech companies do you work with? +
+
+We work with B2B fintech and financial infrastructure companies: payments, banking-as-a-service, treasury, risk, compliance tech, and adjacent categories selling to finance and operations leaders. The common thread is a buyer who evaluates trust and risk, not just features.
+
+### Can you support long, multi-stakeholder sales cycles? +
+
+Yes. Fintech deals often involve finance, security, legal, and operations. We build the content, nurture, and sales enablement that keep you credible and top of mind across a long cycle, and we report on pipeline so you can see how marketing is influencing deals over time.
 
 Want one leader who owns the full revenue number across the funnel? See our CRO as a Service model.
 
@@ -2797,7 +3120,7 @@ Marketing for B2B Cybersecurity
 Security buyers can smell fluff instantly. CISOs and practitioners trust vendors who understand the threat, not vendors who shout the loudest at RSA.
 Triple & Co. gives you a senior cybersecurity marketing leader plus 8 supervised AI agents that produce technically credible positioning, content practitioners share, and a demand engine that reaches both the CISO and the analyst. Strategy and execution in one engagement, all reviewed by a human.
 Book a 30-Minute Revenue Diagnostic → See how the agent team works →
-15+ years in B2B SaaS · $70M+ raised · Built in Israel, the cybersecurity capital
+15+ years in B2B tech · $70M+ raised · Built in Israel, the cybersecurity capital
 
 The problem
 
@@ -2921,13 +3244,21 @@ FAQ
 
 ## Cybersecurity Marketing Questions, Answered
 
-Can you produce technically credible security content? + Yes. Our Woman in the Loop model pairs AI agents that draft at speed with senior human review that ensures technical accuracy. We work closely with your product and sales engineering to get the details right, so content earns practitioner respect instead of getting picked apart. Nothing that misrepresents how the product works ships.
+### Can you produce technically credible security content? +
 
-How do you market to both the CISO and the practitioner? + Security requires two coherent stories: the technical depth practitioners trust, and the risk and outcome framing a CISO can defend to the board. We build both from one positioning foundation, so the message stays consistent whether it reaches an analyst reading a technical deep dive or an executive scanning a one-pager.
+Yes. Our Woman in the Loop model pairs AI agents that draft at speed with senior human review that ensures technical accuracy. We work closely with your product and sales engineering to get the details right, so content earns practitioner respect instead of getting picked apart. Nothing that misrepresents how the product works ships.
 
-Why does being based in Israel matter for cybersecurity marketing? + Israel is one of the densest cybersecurity ecosystems in the world, which means the category, the talent, and the buyer are part of our default context. We understand how security companies are built and sold from a small home market into the US and Europe, and we bring that global-from-day-one playbook to every engagement.
+### How do you market to both the CISO and the practitioner? +
 
-How fast can you start producing? + The first two weeks are diagnostic: positioning, competitive landscape, and funnel review. By week three you have a plan and the agent team is shipping the first sprint of content and campaigns. Most security clients see live, technically reviewed output inside the first month.
+Security requires two coherent stories: the technical depth practitioners trust, and the risk and outcome framing a CISO can defend to the board. We build both from one positioning foundation, so the message stays consistent whether it reaches an analyst reading a technical deep dive or an executive scanning a one-pager.
+
+### Why does being based in Israel matter for cybersecurity marketing? +
+
+Israel is one of the densest cybersecurity ecosystems in the world, which means the category, the talent, and the buyer are part of our default context. We understand how security companies are built and sold from a small home market into the US and Europe, and we bring that global-from-day-one playbook to every engagement.
+
+### How fast can you start producing? +
+
+The first two weeks are diagnostic: positioning, competitive landscape, and funnel review. By week three you have a plan and the agent team is shipping the first sprint of content and campaigns. Most security clients see live, technically reviewed output inside the first month.
 
 Want one leader who owns the full revenue number across the funnel? See our CRO as a Service model.
 
@@ -3074,13 +3405,21 @@ FAQ
 
 ## AI and DeepTech Marketing Questions, Answered
 
-Can you actually understand our technology? + Our whole model is AI-native, so we are not intimidated by technical depth, and Lihi has 15+ years marketing complex B2B products. We invest the diagnostic time to understand how your system works, then translate it into positioning and a business case without stripping out the substance. Sophisticated buyers can tell the difference, and so can we.
+### Can you actually understand our technology? +
 
-How do you avoid generic AI hype? + By pairing AI-speed execution with senior human judgment. Every claim is reviewed for accuracy before it ships, so we lead with what your technology actually does and the outcome it produces, not vague buzzwords that sophisticated buyers immediately distrust. In deep tech, credibility is the conversion lever.
+Our whole model is AI-native, so we are not intimidated by technical depth, and Lihi has 15+ years marketing complex B2B products. We invest the diagnostic time to understand how your system works, then translate it into positioning and a business case without stripping out the substance. Sophisticated buyers can tell the difference, and so can we.
 
-Do you market AI companies using AI? + Yes. Our Woman in the Loop model runs a supervised team of AI agents for content, campaigns, research, and creative, directed by a senior human. We understand your AI-era buyer partly because our own operating model is AI-native, which also means we produce more, faster, than a traditional team.
+### How do you avoid generic AI hype? +
 
-Why does GEO matter for deep tech specifically? + Technical buyers increasingly start their research by asking AI engines like ChatGPT, Perplexity, and Gemini who the serious players are in a category. Generative Engine Optimization makes your brand and content citable in those answers, so you get shortlisted at the exact moment evaluation begins. See our GEO page for how this works.
+By pairing AI-speed execution with senior human judgment. Every claim is reviewed for accuracy before it ships, so we lead with what your technology actually does and the outcome it produces, not vague buzzwords that sophisticated buyers immediately distrust. In deep tech, credibility is the conversion lever.
+
+### Do you market AI companies using AI? +
+
+Yes. Our Woman in the Loop model runs a supervised team of AI agents for content, campaigns, research, and creative, directed by a senior human. We understand your AI-era buyer partly because our own operating model is AI-native, which also means we produce more, faster, than a traditional team.
+
+### Why does GEO matter for deep tech specifically? +
+
+Technical buyers increasingly start their research by asking AI engines like ChatGPT, Perplexity, and Gemini who the serious players are in a category. Generative Engine Optimization makes your brand and content citable in those answers, so you get shortlisted at the exact moment evaluation begins. See our GEO page for how this works.
 
 Want to get cited by AI engines when buyers research your category? See our GEO for B2B page.
 
@@ -3092,7 +3431,7 @@ Book a 30-Minute Revenue Diagnostic → No pitch. You will leave with 3 specific
 ---
 url: https://www.tripleandco.com/b2b-marketing-israel
 title: B2B Marketing Agency in Israel, AI-Powered | Triple & Co.
-description: B2B marketing in Israel built to sell globally. Senior strategy from Lihi Pinto plus 8 supervised AI agents, for Israeli B2B and SaaS companies going global.
+description: B2B marketing in Israel built to sell globally. Senior strategy from Lihi Pinto plus 8 supervised AI agents, for Israeli B2B tech companies going global.
 ---
 - Home
 - B2B Marketing in Israel
@@ -3125,7 +3464,7 @@ Triple & Co. runs on our Woman in the Loop (WIL) model: senior human judgment di
 
 ### Lihi Pinto Owns Go-To-Market
 
-15+ years scaling B2B SaaS, $70M+ raised at companies she led, fluent in English and Hebrew. Lihi owns positioning, messaging, and pipeline strategy for the global buyer, so the story is built for the market you sell into, not the one you sit in.
+15+ years scaling B2B tech, $70M+ raised at companies she led, fluent in English and Hebrew. Lihi owns positioning, messaging, and pipeline strategy for the global buyer, so the story is built for the market you sell into, not the one you sit in.
 
 ### A Digital COO Runs It Async
 
@@ -3227,13 +3566,21 @@ FAQ
 
 ## Israeli B2B Marketing Questions, Answered
 
-Do you work with Israeli companies selling into the US and Europe? + Yes, that is our core focus. Most of our clients are Israeli B2B and SaaS companies whose buyers are in the US and Europe. Our entire operating model is built for it: native English content, async work across timezones, and go-to-market playbooks tuned to how American and European buyers evaluate and buy.
+### Do you work with Israeli companies selling into the US and Europe? +
 
-Can you produce native-level English marketing? + Yes. Lihi is fluent in English and Hebrew, and all client-facing content is produced and reviewed to native-English standard. The goal is content that reads as if it were written by someone inside your target market, because awkward translation is one of the fastest ways an Israeli company loses credibility with a global buyer.
+Yes, that is our core focus. Most of our clients are Israeli B2B tech companies whose buyers are in the US and Europe. Our entire operating model is built for it: native English content, async work across timezones, and go-to-market playbooks tuned to how American and European buyers evaluate and buy.
 
-How do you handle working across timezones? + Async by design. Our supervised AI agent layer works around the clock, and Lihi overlaps with both US and European business hours. Briefs, reviews, and handoffs run through one system, so you get consistent output and fast responses regardless of where your buyers are.
+### Can you produce native-level English marketing? +
 
-Is this a fit for early-stage Israeli startups? + Yes. For early-stage companies we focus on nailing global positioning and building the first repeatable demand motion, so you can raise and sell into your target market with a story that matches the product. Book a Revenue Diagnostic and we will scope it to your stage and runway.
+Yes. Lihi is fluent in English and Hebrew, and all client-facing content is produced and reviewed to native-English standard. The goal is content that reads as if it were written by someone inside your target market, because awkward translation is one of the fastest ways an Israeli company loses credibility with a global buyer.
+
+### How do you handle working across timezones? +
+
+Async by design. Our supervised AI agent layer works around the clock, and Lihi overlaps with both US and European business hours. Briefs, reviews, and handoffs run through one system, so you get consistent output and fast responses regardless of where your buyers are.
+
+### Is this a fit for early-stage Israeli startups? +
+
+Yes. For early-stage companies we focus on nailing global positioning and building the first repeatable demand motion, so you can raise and sell into your target market with a story that matches the product. Book a Revenue Diagnostic and we will scope it to your stage and runway.
 
 Curious what an outsourced marketing leader costs in Israel? Read our guide on the cost of an outsourced CMO in Israel for a breakdown.
 
@@ -3278,7 +3625,7 @@ Triple & Co. runs on our Woman in the Loop (WIL) model: senior human judgment di
 
 ### Lihi Pinto Owns Go-To-Market
 
-15+ years scaling B2B SaaS, $70M+ raised, fluent in English and Hebrew. You get senior go-to-market ownership immediately, without the search, the salary war, or the risk of losing your one marketing hire to the next well-funded startup.
+15+ years scaling B2B tech, $70M+ raised, fluent in English and Hebrew. You get senior go-to-market ownership immediately, without the search, the salary war, or the risk of losing your one marketing hire to the next well-funded startup.
 
 ### A Digital COO Runs the Operation
 
@@ -3380,13 +3727,21 @@ FAQ
 
 ## Tel Aviv B2B Marketing Questions, Answered
 
-Do you work on-site in Tel Aviv or remotely? + We work primarily async and remote, which is how modern B2B marketing runs, but we are rooted in the Tel Aviv tech scene and available to meet locally when it helps. Our operating model overlaps US and European business hours, so you get fast responses and consistent output whether your team is in Tel Aviv and your buyers are abroad.
+### Do you work on-site in Tel Aviv or remotely? +
 
-Why not just hire a marketing leader in Tel Aviv? + You can, if you win the hire. Senior go-to-market marketers are scarce and expensive in Tel Aviv, and the best ones are quickly poached by well-funded startups. Triple & Co. gives you senior ownership plus a full execution layer immediately, with no search, no salary war, and no risk of your one hire leaving and taking the strategy with them.
+We work primarily async and remote, which is how modern B2B marketing runs, but we are rooted in the Tel Aviv tech scene and available to meet locally when it helps. Our operating model overlaps US and European business hours, so you get fast responses and consistent output whether your team is in Tel Aviv and your buyers are abroad.
 
-Can you market our Tel Aviv company to US and European buyers? + Yes, that is our specialty. We produce native English content and go-to-market playbooks tuned to how American and European buyers evaluate and buy, so your Tel Aviv company shows up credibly in the markets where your revenue actually is.
+### Why not just hire a marketing leader in Tel Aviv? +
 
-How quickly can you start? + The first two weeks are diagnostic: positioning, funnel, and pipeline review. By week three you have a plan and the agent team is shipping the first sprint. Most clients see live output inside the first month, far faster than a Tel Aviv hiring search would allow.
+You can, if you win the hire. Senior go-to-market marketers are scarce and expensive in Tel Aviv, and the best ones are quickly poached by well-funded startups. Triple & Co. gives you senior ownership plus a full execution layer immediately, with no search, no salary war, and no risk of your one hire leaving and taking the strategy with them.
+
+### Can you market our Tel Aviv company to US and European buyers? +
+
+Yes, that is our specialty. We produce native English content and go-to-market playbooks tuned to how American and European buyers evaluate and buy, so your Tel Aviv company shows up credibly in the markets where your revenue actually is.
+
+### How quickly can you start? +
+
+The first two weeks are diagnostic: positioning, funnel, and pipeline review. By week three you have a plan and the agent team is shipping the first sprint. Most clients see live output inside the first month, far faster than a Tel Aviv hiring search would allow.
 
 Selling from Israel into global markets? See our broader B2B marketing in Israel overview.
 
@@ -3431,7 +3786,7 @@ Triple & Co. runs on our Woman in the Loop (WIL) model: senior human judgment di
 
 ### Lihi Pinto Owns Go-To-Market
 
-15+ years scaling B2B SaaS with go-to-market playbooks tuned to the American buyer, $70M+ raised. Lihi owns positioning, messaging, and pipeline strategy, so your US story is confident, clear, and built to compete.
+15+ years scaling B2B tech with go-to-market playbooks tuned to the American buyer, $70M+ raised. Lihi owns positioning, messaging, and pipeline strategy, so your US story is confident, clear, and built to compete.
 
 ### A Digital COO Runs the Operation
 
@@ -3533,13 +3888,21 @@ FAQ
 
 ## US B2B Marketing Questions, Answered
 
-Can you market to US buyers even though you are not a US agency? + Yes. Our go-to-market playbooks are tuned specifically to the American buyer, and all content is produced and reviewed to native English standard. Many of our clients sell primarily into the US, and our operating model overlaps US business hours, so you get US-grade marketing without the cost of a US in-house team.
+### Can you market to US buyers even though you are not a US agency? +
 
-How does the cost compare to building a US marketing team? + A US CMO plus a marketing department typically runs well over $500K a year fully loaded, and takes months to assemble. Triple & Co. prices at the level of a single senior executive, with the execution layer included, so you replace both the leadership line and most of the team budget while entering the market faster.
+Yes. Our go-to-market playbooks are tuned specifically to the American buyer, and all content is produced and reviewed to native English standard. Many of our clients sell primarily into the US, and our operating model overlaps US business hours, so you get US-grade marketing without the cost of a US in-house team.
 
-We are expanding into the US. Can you help us enter the market? + Yes. For US market entry we focus on nailing positioning for the American buyer, building the first repeatable demand motion, and giving you clean pipeline reporting, so you can prove the motion before making a large, permanent investment in a US team. It is designed to make market entry a smart, reversible bet.
+### How does the cost compare to building a US marketing team? +
 
-Do you help us get found by US buyers using AI search? + Yes. American buyers increasingly ask AI engines like ChatGPT, Perplexity, and Gemini who to shortlist. Our Generative Engine Optimization work makes your brand and content citable in those answers, so you show up at the moment US buyers begin their research. See our GEO page for details.
+A US CMO plus a marketing department typically runs well over $500K a year fully loaded, and takes months to assemble. Triple & Co. prices at the level of a single senior executive, with the execution layer included, so you replace both the leadership line and most of the team budget while entering the market faster.
+
+### We are expanding into the US. Can you help us enter the market? +
+
+Yes. For US market entry we focus on nailing positioning for the American buyer, building the first repeatable demand motion, and giving you clean pipeline reporting, so you can prove the motion before making a large, permanent investment in a US team. It is designed to make market entry a smart, reversible bet.
+
+### Do you help us get found by US buyers using AI search? +
+
+Yes. American buyers increasingly ask AI engines like ChatGPT, Perplexity, and Gemini who to shortlist. Our Generative Engine Optimization work makes your brand and content citable in those answers, so you show up at the moment US buyers begin their research. See our GEO page for details.
 
 Want to get cited by AI engines when US buyers research your category? See our GEO for B2B page.
 
@@ -3565,7 +3928,7 @@ $5,000 עד $15,000 לחודש, כל הסוכנים כלולים. מתחילים
 
 ### ליהיא פינטו מובילה את האסטרטגיה
 
-יותר מ-15 שנות ניסיון ב-B2B SaaS, יותר מ-$70M גויסו בחברות שבהן הובילה את השיווק, וההכנסות שולשו שוב ושוב. מיצוב, הודעות, ארכיטקטורת פייפליין ודיווח להנהלה יושבים אצל מנהלת אחת שאחראית לתוצאה.
+יותר מ-15 שנות ניסיון ב-B2B Tech, יותר מ-$70M גויסו בחברות שבהן הובילה את השיווק, וההכנסות שולשו שוב ושוב. מיצוב, הודעות, ארכיטקטורת פייפליין ודיווח להנהלה יושבים אצל מנהלת אחת שאחראית לתוצאה.
 
 ### 8 סוכני AI מבצעים מדי יום
 
@@ -3697,7 +4060,7 @@ description: שיווק B2B לחברות טכנולוגיה ישראליות ש�
 
 ### בנוי לקונה האמריקאי
 
-המוצר ישראלי, אבל הקונה יושב בניו יורק או בלונדון. ההודעות, התוכן והקמפיינים נכתבים באנגלית ברמת שפת אם, על ידי מי שמכירה את הקונה הזה מבפנים אחרי יותר מ-15 שנה ב-B2B SaaS.
+המוצר ישראלי, אבל הקונה יושב בניו יורק או בלונדון. ההודעות, התוכן והקמפיינים נכתבים באנגלית ברמת שפת אם, על ידי מי שמכירה את הקונה הזה מבפנים אחרי יותר מ-15 שנה ב-B2B Tech.
 
 ### מנהיגות בכירה, לא עוד סוכנות
 
@@ -3766,7 +4129,7 @@ The content engine is three specialist agents working as one system, supervised 
 
 ### Camille Owns Brand Voice
 
-Camille extracts your voice from your existing content and applies it consistently across every channel, so your company sounds like itself, not like every other B2B SaaS on LinkedIn. She delivers voice extraction, asset rewrites, and a tone guide your whole team can use.
+Camille extracts your voice from your existing content and applies it consistently across every channel, so your company sounds like itself, not like every other B2B tech company on LinkedIn. She delivers voice extraction, asset rewrites, and a tone guide your whole team can use.
 
 ### Nova Grounds Strategy in Demand
 
@@ -3866,13 +4229,21 @@ FAQ
 
 ## AI Content Engine Questions, Answered
 
-What is an AI content engine? + An AI content engine is a system, not a tool: codified brand voice, demand-grounded topic selection, systematic repurposing, and human review, run continuously by specialized AI agents. At Triple & Co. that means Camille (brand voice), Nova (research and strategy), and Sage (repurposing), supervised by Lihi Pinto, with every output human-reviewed before it ships.
+### What is an AI content engine? +
 
-Will the content sound like AI wrote it? + No, and that is the point of the system. Camille writes in a voice extracted from your own best content, and nothing publishes without human review. The engine exists precisely because generic AI content stopped working: buyers and platforms now filter it out.
+An AI content engine is a system, not a tool: codified brand voice, demand-grounded topic selection, systematic repurposing, and human review, run continuously by specialized AI agents. At Triple & Co. that means Camille (brand voice), Nova (research and strategy), and Sage (repurposing), supervised by Lihi Pinto, with every output human-reviewed before it ships.
 
-How much does the AI content engine cost? + The full engine is included in every Triple & Co. leadership engagement, which run $5,000 to $15,000 per month for CMO as a Service, CRO as a Service, or Head of Growth. If you only want a single specialist, individual agents start at $2,500 per month.
+### Will the content sound like AI wrote it? +
 
-What do we get in the first month? + Typically: your brand voice extracted and documented by Camille, a demand-mapped content strategy from Nova with ten prioritized plays, your existing library scored for repurposing leverage by Sage, and the first sprint of content live. The diagnostic and setup happen in the first two weeks.
+No, and that is the point of the system. Camille writes in a voice extracted from your own best content, and nothing publishes without human review. The engine exists precisely because generic AI content stopped working: buyers and platforms now filter it out.
+
+### How much does the AI content engine cost? +
+
+The full engine is included in every Triple & Co. leadership engagement, which run $5,000 to $15,000 per month for CMO as a Service, CRO as a Service, or Head of Growth. If you only want a single specialist, individual agents start at $2,500 per month.
+
+### What do we get in the first month? +
+
+Typically: your brand voice extracted and documented by Camille, a demand-mapped content strategy from Nova with ten prioritized plays, your existing library scored for repurposing leverage by Sage, and the first sprint of content live. The diagnostic and setup happen in the first two weeks.
 
 Want the full marketing function, not just content? See CMO as a Service .
 
@@ -4017,13 +4388,21 @@ FAQ
 
 ## AI Social Engine Questions, Answered
 
-What is an AI social media engine? + A system that runs B2B social continuously: channel audit, executive voice framework, a 30-day publish-ready calendar, and measurement, executed by a specialized AI agent (Zara) in your extracted brand voice, with human review on every post before it publishes.
+### What is an AI social media engine? +
 
-Will it sound like the founder actually wrote it? + Yes, because it starts from the founder's actual voice and opinions. Camille extracts the voice from existing content and conversations, Zara drafts within it, and Lihi Pinto reviews every post. The founder reviews in minutes instead of writing for hours.
+A system that runs B2B social continuously: channel audit, executive voice framework, a 30-day publish-ready calendar, and measurement, executed by a specialized AI agent (Zara) in your extracted brand voice, with human review on every post before it publishes.
 
-How much does the AI social engine cost? + It is included in every Triple & Co. leadership engagement, which run $5,000 to $15,000 per month for CMO as a Service, CRO as a Service, or Head of Growth. A single specialist agent without a leadership engagement starts at $2,500 per month.
+### Will it sound like the founder actually wrote it? +
 
-Which platforms does it cover? + For most B2B tech companies the center of gravity is LinkedIn, founder profile first, company page second, and the engine is built around that. Other channels (X, YouTube, newsletters) are added where your buyers actually are, not by default.
+Yes, because it starts from the founder's actual voice and opinions. Camille extracts the voice from existing content and conversations, Zara drafts within it, and Lihi Pinto reviews every post. The founder reviews in minutes instead of writing for hours.
+
+### How much does the AI social engine cost? +
+
+It is included in every Triple & Co. leadership engagement, which run $5,000 to $15,000 per month for CMO as a Service, CRO as a Service, or Head of Growth. A single specialist agent without a leadership engagement starts at $2,500 per month.
+
+### Which platforms does it cover? +
+
+For most B2B tech companies the center of gravity is LinkedIn, founder profile first, company page second, and the engine is built around that. Other channels (X, YouTube, newsletters) are added where your buyers actually are, not by default.
 
 Want video in the mix too? See the AI video production engine.
 
@@ -4168,13 +4547,21 @@ FAQ
 
 ## AI Market Research Questions, Answered
 
-What does AI market research include at Triple & Co.? + Nova, our research agent, delivers a competitive gap analysis, an intent-based keyword map, and ten content plays sized by real demand, refreshed continuously rather than once a year. It also covers AI-engine visibility: which buyer questions ChatGPT and Perplexity answer in your category and who gets cited. Lihi Pinto reviews and translates findings into decisions.
+### What does AI market research include at Triple & Co.? +
 
-How is this different from a keyword research report? + Keyword lists tell you what people type. This maps what buyers are trying to decide: the questions behind the queries, the gaps competitors have left open, and the demand size of each play. It also covers AI answer engines, which classic keyword tools do not see.
+Nova, our research agent, delivers a competitive gap analysis, an intent-based keyword map, and ten content plays sized by real demand, refreshed continuously rather than once a year. It also covers AI-engine visibility: which buyer questions ChatGPT and Perplexity answer in your category and who gets cited. Lihi Pinto reviews and translates findings into decisions.
 
-How much does AI market research cost? + It is included in every Triple & Co. leadership engagement, which run $5,000 to $15,000 per month for CMO as a Service, CRO as a Service, or Head of Growth. A single specialist agent without a leadership engagement starts at $2,500 per month.
+### How is this different from a keyword research report? +
 
-How fast do we see the first findings? + The first competitive gap analysis and intent map are part of the diagnostic phase, delivered within the first two weeks of an engagement. From there the research function runs continuously and feeds each sprint's priorities.
+Keyword lists tell you what people type. This maps what buyers are trying to decide: the questions behind the queries, the gaps competitors have left open, and the demand size of each play. It also covers AI answer engines, which classic keyword tools do not see.
+
+### How much does AI market research cost? +
+
+It is included in every Triple & Co. leadership engagement, which run $5,000 to $15,000 per month for CMO as a Service, CRO as a Service, or Head of Growth. A single specialist agent without a leadership engagement starts at $2,500 per month.
+
+### How fast do we see the first findings? +
+
+The first competitive gap analysis and intent map are part of the diagnostic phase, delivered within the first two weeks of an engagement. From there the research function runs continuously and feeds each sprint's priorities.
 
 Want to see how AI engines describe your brand today? Start with the free AI Visibility Audit .
 
@@ -4319,13 +4706,21 @@ FAQ
 
 ## AI Analytics Questions, Answered
 
-What does AI marketing analytics include at Triple & Co.? + Atlas, our analytics agent, unifies your marketing and sales data, builds full-funnel multi-touch attribution, delivers a leadership-ready performance dashboard, and produces budget reallocation plans with ROI projections. Lihi Pinto reviews the outputs and acts on them as part of the same engagement.
+### What does AI marketing analytics include at Triple & Co.? +
 
-Does this replace our existing analytics tools? + No. It runs on top of what you have: your CRM, GA4, ad platforms, and product analytics. The value is unification and interpretation, one coherent view and someone accountable for what it says, not another tool in the stack.
+Atlas, our analytics agent, unifies your marketing and sales data, builds full-funnel multi-touch attribution, delivers a leadership-ready performance dashboard, and produces budget reallocation plans with ROI projections. Lihi Pinto reviews the outputs and acts on them as part of the same engagement.
 
-How much does AI analytics and attribution cost? + It is included in every Triple & Co. leadership engagement, which run $5,000 to $15,000 per month for CMO as a Service, CRO as a Service, or Head of Growth. A single specialist agent without a leadership engagement starts at $2,500 per month.
+### Does this replace our existing analytics tools? +
 
-How fast until we have a working dashboard? + The funnel math review happens in the diagnostic phase, in the first two weeks. A unified dashboard with attribution typically ships within the first month, depending on data access, and improves as the engagement runs.
+No. It runs on top of what you have: your CRM, GA4, ad platforms, and product analytics. The value is unification and interpretation, one coherent view and someone accountable for what it says, not another tool in the stack.
+
+### How much does AI analytics and attribution cost? +
+
+It is included in every Triple & Co. leadership engagement, which run $5,000 to $15,000 per month for CMO as a Service, CRO as a Service, or Head of Growth. A single specialist agent without a leadership engagement starts at $2,500 per month.
+
+### How fast until we have a working dashboard? +
+
+The funnel math review happens in the diagnostic phase, in the first two weeks. A unified dashboard with attribution typically ships within the first month, depending on data access, and improves as the engagement runs.
 
 Want one leader accountable for the whole revenue number? See CRO as a Service .
 
@@ -4470,13 +4865,21 @@ FAQ
 
 ## AI Video Production Questions, Answered
 
-What does AI video production include at Triple & Co.? + Lumen, our video agent, owns the full pipeline: concept, script, shot list, edit direction, and post. Vega provides art direction so everything ships on brand, and Lihi Pinto reviews every video before release. It covers founder-led social video, product stories, and campaign creative.
+### What does AI video production include at Triple & Co.? +
 
-Will it look like generic AI video? + No. Generic AI video is what you get from tools without judgment. Here the story is written first (hook, setup, payoff), the visual direction is set by an art-direction agent that always proposes multiple directions with a recommendation, founder videos use real recorded voice, and nothing ships without human review.
+Lumen, our video agent, owns the full pipeline: concept, script, shot list, edit direction, and post. Vega provides art direction so everything ships on brand, and Lihi Pinto reviews every video before release. It covers founder-led social video, product stories, and campaign creative.
 
-How much does AI video production cost? + It is included in every Triple & Co. leadership engagement, which run $5,000 to $15,000 per month for CMO as a Service, CRO as a Service, or Head of Growth. A single specialist agent without a leadership engagement starts at $2,500 per month. Compare that to five figures per video at a production agency.
+### Will it look like generic AI video? +
 
-What cadence can we expect? + Weekly is the working default for founder-led social video, with larger product or campaign pieces layered in. The engine exists precisely to make video a cadence, not an event.
+No. Generic AI video is what you get from tools without judgment. Here the story is written first (hook, setup, payoff), the visual direction is set by an art-direction agent that always proposes multiple directions with a recommendation, founder videos use real recorded voice, and nothing ships without human review.
+
+### How much does AI video production cost? +
+
+It is included in every Triple & Co. leadership engagement, which run $5,000 to $15,000 per month for CMO as a Service, CRO as a Service, or Head of Growth. A single specialist agent without a leadership engagement starts at $2,500 per month. Compare that to five figures per video at a production agency.
+
+### What cadence can we expect? +
+
+Weekly is the working default for founder-led social video, with larger product or campaign pieces layered in. The engine exists precisely to make video a cadence, not an event.
 
 Video works best inside the full engine. See the AI social engine it feeds.
 
@@ -4498,7 +4901,7 @@ Deployment console · 8 specialist agents
 
 Eight purpose-built Claude specialists for every marketing function, each one supervised by a fractional CMO who helped raise $70M and 3×'d SaaS revenue. Hire one, deploy a team, or start with a fixed-scope diagnostic.
 Deploy a team → Start with a diagnostic →
-Every output human-reviewed $70M+ raised 15+ yrs B2B SaaS Zero onboarding
+Every output human-reviewed $70M+ raised 15+ yrs B2B tech Zero onboarding
 
 Lihi · Supervisor
 
@@ -4801,7 +5204,7 @@ $70M+
 raised
 
 15+ yrs
-B2B SaaS
+B2B tech
 
 100%
 human-reviewed
@@ -4855,7 +5258,7 @@ For a B2B company at Series A or B that needs senior marketing output without bu
 
 Camille Brand Voice Generator
 Claude Sonnet
-Camille extracts your brand voice from your existing content and applies it consistently across every channel. So your company sounds like itself, not like every other B2B SaaS on LinkedIn. She handles voice extraction, asset rewrites, and delivers a tone guide your whole team can use.
+Camille extracts your brand voice from your existing content and applies it consistently across every channel. So your company sounds like itself, not like every other B2B tech company on LinkedIn. She handles voice extraction, asset rewrites, and delivers a tone guide your whole team can use.
 Start here: Brand Voice Diagnostic · 2 weeks · $2,000 fixed scope → Full profile →
 
 Vega Art Director
@@ -4897,7 +5300,7 @@ The Human in the Loop
 
 ## Every agent runs under Lihi’s supervision. Zero unsupervised output.
 
-Lihi Pinto is a marketing and revenue executive with 15+ years scaling B2B SaaS startups. She helped raise over $70M and tripled revenue at a SaaS company repeatedly, and built the operating system that powers the agent team.
+Lihi Pinto is a marketing and revenue executive with 15+ years scaling B2B technology startups. She helped raise over $70M and tripled revenue at a SaaS company repeatedly, and built the operating system that powers the agent team.
 Every deliverable passes Lihi before it reaches you. She reviews for brand alignment, strategic accuracy, and quality. You are not buying AI tools you manage yourself. You are getting an operator who runs them for you.
 Meet Lihi →
 
@@ -4927,7 +5330,7 @@ The first engagement is always a fixed-scope diagnostic, two to three weeks, fix
 
 AI marketing agents work best for B2B companies that are past product-market fit and need marketing output that compounds, not another tool to manage.
 
-✓ Series A-C B2B SaaS companies that need senior marketing execution without the cost of a full department
+✓ Series A-C B2B tech companies that need senior marketing execution without the cost of a full department
 
 ✓ Founders and CEOs who understand the value of AI but don’t want to spend time prompting it
 
@@ -4939,17 +5342,29 @@ It is not the right fit for companies that want to hand off strategy entirely, o
 
 ## Frequently Asked Questions
 
-What’s the difference between an AI marketing agent and a tool like HubSpot? + HubSpot is infrastructure. It manages your CRM, email, and reporting. An AI marketing agent produces the work that goes into those channels. Think of agents as the team that creates and executes, and HubSpot as the system that tracks and distributes it.
+### What’s the difference between an AI marketing agent and a tool like HubSpot? +
 
-Do I need to know how to use AI or Claude to work with the agents? + No. You brief Lihi, she configures and runs the agents, and you receive finished work. The AI is the engine. You interact with the operator, not the model.
+HubSpot is infrastructure. It manages your CRM, email, and reporting. An AI marketing agent produces the work that goes into those channels. Think of agents as the team that creates and executes, and HubSpot as the system that tracks and distributes it.
 
-How does Lihi Pinto’s oversight work day to day? + Every deliverable passes Lihi before it reaches you. She reviews outputs for brand alignment, strategic accuracy, and quality. If something isn’t right, she iterates before it ships. You’re not reviewing AI drafts. You’re receiving finished work.
+### Do I need to know how to use AI or Claude to work with the agents? +
 
-Can I hire one agent or do I need the full team? + You can hire one. Most engagements start with a single agent diagnostic, typically Camille for brand voice, Rex for growth strategy, or Nova for content research, and expand from there as trust is established.
+No. You brief Lihi, she configures and runs the agents, and you receive finished work. The AI is the engine. You interact with the operator, not the model.
 
-What does a typical first month look like? + Week one: kickoff call, brief, and agent configuration. Weeks two and three: the agent runs the diagnostic and produces the deliverable. Week four: review, iteration, and decision on whether to continue as a retainer. The diagnostic is designed to produce something immediately useful, not a roadmap for future work.
+### How does Lihi Pinto’s oversight work day to day? +
 
-How is this different from hiring a marketing agency? + A traditional agency manages channels and produces assets. Triple & Co. runs an operating system: senior CMO and CRO leadership, full-service execution, and specialist agents all connected into one revenue engine. Lihi owns the outcome, not just the deliverables.
+Every deliverable passes Lihi before it reaches you. She reviews outputs for brand alignment, strategic accuracy, and quality. If something isn’t right, she iterates before it ships. You’re not reviewing AI drafts. You’re receiving finished work.
+
+### Can I hire one agent or do I need the full team? +
+
+You can hire one. Most engagements start with a single agent diagnostic, typically Camille for brand voice, Rex for growth strategy, or Nova for content research, and expand from there as trust is established.
+
+### What does a typical first month look like? +
+
+Week one: kickoff call, brief, and agent configuration. Weeks two and three: the agent runs the diagnostic and produces the deliverable. Week four: review, iteration, and decision on whether to continue as a retainer. The diagnostic is designed to produce something immediately useful, not a roadmap for future work.
+
+### How is this different from hiring a marketing agency? +
+
+A traditional agency manages channels and produces assets. Triple & Co. runs an operating system: senior CMO and CRO leadership, full-service execution, and specialist agents all connected into one revenue engine. Lihi owns the outcome, not just the deliverables.
 
 ## Ready to Put AI Agents to Work?
 
@@ -5107,7 +5522,7 @@ Every start-up has its own scaling formula. Together, we will discover yours. Po
 
 ## Marketing
 
-Triple provides B2B SaaS companies with the know-how to create a well-oiled marketing machine. We develop your unique lead generation process from strategy to content creation to building a team of knowledgeable experts.
+Triple provides B2B tech companies with the know-how to create a well-oiled marketing machine. We develop your unique lead generation process from strategy to content creation to building a team of knowledgeable experts.
 Bring in qualified leads to feed your sales and fuel your growth.
 
 ### Marketing Strategy
@@ -5311,7 +5726,7 @@ Founder, Triple & Co. · June 2026 · Updated July 2026
 
 Every week an Israeli founder types the same question into Google: how much does an outsourced marketing manager cost? The answers they find range from 6,000 NIS a month to 50,000 NIS a month, with very little explanation of what separates the two.
 That gap is not noise. It reflects three genuinely different products sold under similar names. This guide breaks down what each one costs in the Israeli market in 2026, what you actually get at each price point, and how to choose for your stage. Real shekel numbers, no ranges that span an order of magnitude.
-One note before the numbers: I run a CMO as a Service practice, so I have a position in this market. I also spent 15 years on the hiring side in B2B SaaS and investment banking. The numbers below are the market as it actually prices, not as anyone wishes it priced.
+One note before the numbers: I run a CMO as a Service practice, so I have a position in this market. I also spent 15 years on the hiring side in B2B technology and investment banking. The numbers below are the market as it actually prices, not as anyone wishes it priced.
 
 ## First, the Terminology Mess
 
