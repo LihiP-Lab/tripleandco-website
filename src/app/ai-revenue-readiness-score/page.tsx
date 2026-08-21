@@ -192,7 +192,7 @@ export default function ReadinessPage() {
                   href="#assessment"
                   className="inline-flex items-center rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
                 >
-                  Get Your AI Readiness Score Now &rarr;
+                  Start My Score &rarr;
                 </a>
                 <p className="text-sm text-purple-7">
                   Free · 3 minutes · no email needed

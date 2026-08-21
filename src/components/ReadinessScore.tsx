@@ -388,8 +388,52 @@ export function ReadinessScore() {
     "idle" | "sending" | "sent" | "error"
   >("idle");
   const [copied, setCopied] = useState(false);
+  /* Focus mode: a dedicated fullscreen assessment surface on small screens. */
+  const [focus, setFocus] = useState(false);
+  const [shapeOpen, setShapeOpen] = useState(false);
 
   const consoleRef = useRef<HTMLDivElement | null>(null);
+
+  /* On small screens, the hero CTA opens focus mode instead of scrolling. */
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const t = e.target as HTMLElement | null;
+      if (!t || !t.closest?.('a[href="#assessment"]')) return;
+      if (
+        window.matchMedia("(max-width: 1023px)").matches &&
+        phase === "quiz"
+      ) {
+        e.preventDefault();
+        setFocus(true);
+      }
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, [phase]);
+
+  useEffect(() => {
+    if (phase !== "quiz") {
+      setFocus(false);
+      setShapeOpen(false);
+    }
+  }, [phase]);
+
+  useEffect(() => {
+    if (!focus) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setShapeOpen(false);
+        setFocus(false);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [focus]);
 
   const area = AREAS[cursor];
   const dimension = area ? area.dimension : "strategy";
@@ -707,10 +751,75 @@ export function ReadinessScore() {
         {/* ---------- INTRO ---------- */}
         {/* ---------- QUIZ ---------- */}
         {phase === "quiz" && area && (
-          <div>
-            <div className="px-5 sm:px-8 py-7 sm:py-9">
+          <div
+            className={
+              focus
+                ? "fixed inset-0 z-[120] flex flex-col overflow-y-auto overscroll-contain bg-dark text-white"
+                : ""
+            }
+            style={
+              focus
+                ? {
+                    backgroundImage:
+                      "radial-gradient(circle at 82% -6%, rgba(254,52,101,0.26), transparent 55%)",
+                  }
+                : undefined
+            }
+            role={focus ? "dialog" : undefined}
+            aria-modal={focus || undefined}
+            aria-label={focus ? "AI Revenue Readiness assessment" : undefined}
+          >
+            {focus && (
+              <div
+                className="sticky top-0 z-10 border-b border-white/10 bg-dark/95 px-4 backdrop-blur"
+                style={{ paddingTop: "env(safe-area-inset-top)" }}
+              >
+                <div className="flex h-12 items-center justify-between gap-3">
+                  <Image
+                    src="/images/logos/logo-bright.png"
+                    alt="Triple & Co."
+                    width={220}
+                    height={52}
+                    className="h-6 w-auto"
+                  />
+                  <span className="text-base font-black tabular-nums">
+                    {Math.round(easedRunning)}
+                    <span className="text-[12px] font-bold text-purple-3">
+                      {" "}
+                      / 100
+                    </span>
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShapeOpen(false);
+                      setFocus(false);
+                    }}
+                    aria-label="Exit the assessment"
+                    className="flex h-9 w-9 items-center justify-center rounded-[10px] border border-white/25 text-lg leading-none text-purple-2 transition-colors hover:border-pink-3 hover:text-white focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+                  >
+                    &times;
+                  </button>
+                </div>
+                <div className="h-1 w-full overflow-hidden rounded-full bg-white/10">
+                  <div
+                    className="h-full rounded-full transition-[width] duration-500 ease-out"
+                    style={{
+                      width: `${easedRunning}%`,
+                      background:
+                        "linear-gradient(90deg,#FE3465 0%,#896D9C 100%)",
+                    }}
+                  />
+                </div>
+                <p className="py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-purple-4">
+                  {cursor + 1} of {AREAS.length} &middot;{" "}
+                  {DIMENSION_BY_ID[dimension].label} &middot; {host.name}
+                </p>
+              </div>
+            )}
+            <div className={focus ? "flex-1 px-5 py-5" : "px-5 sm:px-8 py-7 sm:py-9"}>
               {/* host row */}
-              <div className="mb-6 flex items-start gap-4">
+              <div className={focus ? "hidden" : "mb-6 flex items-start gap-4"}>
                 <HostPortrait dimension={dimension} />
                 <div className="flex-1 pt-1">
                   <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">
@@ -824,7 +933,15 @@ export function ReadinessScore() {
                         <button
                           key={opt}
                           type="button"
-                          onClick={() => commit(area.id, i)}
+                          onClick={() => {
+                            if (
+                              !focus &&
+                              window.matchMedia("(max-width: 1023px)").matches
+                            ) {
+                              setFocus(true);
+                            }
+                            commit(area.id, i);
+                          }}
                           className={`rr-opt group flex w-full items-start gap-3 rounded-[14px] border px-4 py-3.5 text-left transition-all duration-200 ${
                             selected
                               ? "border-brand bg-white/10"
@@ -856,12 +973,65 @@ export function ReadinessScore() {
                 >
                   &larr; Back
                 </button>
-                {!(area.id === "C3" && c3State !== "self") && (
-                  <p className="text-xs text-purple-4">Press 1 to 4 to answer</p>
+                {focus ? (
+                  <button
+                    type="button"
+                    onClick={() => setShapeOpen(true)}
+                    className="rounded-[10px] border border-white/25 px-4 py-2 text-sm font-semibold text-purple-2 transition-colors hover:border-pink-3 hover:text-white focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+                  >
+                    View my shape
+                  </button>
+                ) : (
+                  !(area.id === "C3" && c3State !== "self") && (
+                    <p className="text-xs text-purple-4">Press 1 to 4 to answer</p>
+                  )
                 )}
               </div>
             </div>
 
+            {focus && shapeOpen && (
+              <div
+                className="fixed inset-0 z-[130] flex items-end bg-black/60"
+                onClick={() => setShapeOpen(false)}
+              >
+                <div
+                  className="w-full rounded-t-[20px] border-t border-white/10 bg-dark px-6 pt-5 pb-8"
+                  onClick={(e) => e.stopPropagation()}
+                  role="dialog"
+                  aria-label="Your shape so far"
+                >
+                  <p className="mb-2 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">
+                    Your shape so far
+                  </p>
+                  <div className="mx-auto w-full max-w-[240px]">
+                    <Radar values={radarValues} />
+                  </div>
+                  <ul className="mx-auto mt-3 grid max-w-[320px] list-none grid-cols-2 gap-x-6 gap-y-1 p-0">
+                    {DIMENSIONS.map((d) => {
+                      const ds = dimensionScore(answers, d.id);
+                      return (
+                        <li
+                          key={d.id}
+                          className="flex items-center justify-between text-[12px]"
+                        >
+                          <span className="text-purple-3">{d.short}</span>
+                          <span className="font-bold tabular-nums text-purple-2">
+                            {ds.points}/{ds.max}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <button
+                    type="button"
+                    onClick={() => setShapeOpen(false)}
+                    className="mx-auto mt-5 block rounded-[10px] bg-brand px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+                  >
+                    Back to the questions
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
