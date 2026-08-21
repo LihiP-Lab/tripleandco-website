@@ -28,6 +28,7 @@ const resources = [
   { href: "/llm-seo", label: "LLM SEO Guide" },
   { href: "/ai-visibility-audit", label: "Free AI Visibility Audit" },
   { href: "/ai-visibility-checker", label: "AI Visibility Checker" },
+  { href: "/ai-revenue-readiness-score", label: "AI Revenue Readiness Score" },
   { href: "/head-of-growth", label: "Head of Growth" },
   { href: "/fractional-cmo-b2b", label: "Fractional CMO" },
   {
