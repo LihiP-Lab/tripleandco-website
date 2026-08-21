@@ -326,7 +326,7 @@ function HostPortrait({ dimension }: { dimension: DimensionId }) {
               alt=""
               width={400}
               height={700}
-              className="w-9 sm:w-11 h-auto drop-shadow"
+              className="w-7 sm:w-9 h-auto drop-shadow"
             />
           </span>
         ))}
@@ -335,7 +335,7 @@ function HostPortrait({ dimension }: { dimension: DimensionId }) {
   }
 
   return (
-    <div className="rr-float w-20 sm:w-24 shrink-0">
+    <div className="rr-float w-14 sm:w-16 shrink-0">
       <Image
         key={host.id}
         src={host.image}
@@ -367,8 +367,8 @@ export function ReadinessScore() {
     return { answers: decoded, domain: searchParams.get("d") ?? "" };
   }, [searchParams]);
 
-  const [phase, setPhase] = useState<"intro" | "quiz" | "result">(
-    shared ? "result" : "intro"
+  const [phase, setPhase] = useState<"quiz" | "result">(
+    shared ? "result" : "quiz"
   );
   const [answers, setAnswers] = useState<Answers>(shared ? shared.answers : {});
   const [cursor, setCursor] = useState(0);
@@ -591,14 +591,18 @@ export function ReadinessScore() {
         @keyframes rr-pop   { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
         @keyframes rr-sweep { 0% { transform: translateY(-8%); } 100% { transform: translateY(108%); } }
         @keyframes rr-pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+        @keyframes rr-bank  { 0% { transform: scale(1); } 35% { transform: scale(1.16); } 100% { transform: scale(1); } }
+        @keyframes rr-glow  { 0% { box-shadow: 0 0 0 0 rgba(254,52,101,.55); } 100% { box-shadow: 0 0 24px 6px rgba(254,52,101,0); } }
         .rr-float { animation: rr-float 5s ease-in-out infinite; }
         .rr-fade  { animation: rr-fade var(--rr-dur, 240ms) cubic-bezier(0.22,0.61,0.36,1) both; }
         .rr-pop   { animation: rr-pop 260ms cubic-bezier(0.22,0.61,0.36,1) both; }
         .rr-sweep { animation: rr-sweep 1.5s cubic-bezier(0.45,0,0.55,1) infinite; }
         .rr-pulse { animation: rr-pulse 1.4s ease-in-out infinite; }
+        .rr-bank  { animation: rr-bank 420ms cubic-bezier(0.22,0.61,0.36,1); }
+        .rr-glow  { animation: rr-glow 700ms ease-out; }
         .rr-opt:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(254,52,101,.45); }
         @media (prefers-reduced-motion: reduce) {
-          .rr-float, .rr-fade, .rr-pop, .rr-sweep, .rr-pulse { animation: none !important; }
+          .rr-float, .rr-fade, .rr-pop, .rr-sweep, .rr-pulse, .rr-bank, .rr-glow { animation: none !important; }
         }
       `}</style>
 
@@ -610,37 +614,61 @@ export function ReadinessScore() {
             "radial-gradient(circle at 82% -10%, rgba(254,52,101,0.30), transparent 55%), radial-gradient(circle at 0% 110%, rgba(137,109,156,0.30), transparent 55%)",
         }}
       >
-        {/* live meter rail */}
-        <div className="border-b border-white/10 px-5 sm:px-8 py-4">
-          <div className="flex items-center justify-between gap-4 mb-2.5">
-            <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">
-              {phase === "result" ? "Your score" : "Points banked"}
-            </p>
-            <p className="text-[11px] font-semibold text-purple-3 tabular-nums">
-              {phase === "result"
-                ? `${AREAS.length} of ${AREAS.length} answered`
-                : `${answeredCount} of ${AREAS.length} answered`}
-            </p>
-          </div>
-          <div className="flex items-baseline gap-2 mb-3">
-            <span className="text-3xl sm:text-4xl font-black leading-none tabular-nums">
-              {Math.round(easedRunning)}
-            </span>
-            <span className="text-base font-bold text-purple-3">/ 100</span>
-            {answeredCount >= AREAS.length && (
-              <span className="ml-2 rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
-                {tier.name}
-              </span>
-            )}
-          </div>
-          <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
-            <div
-              className="h-full rounded-full transition-[width] duration-500 ease-out"
-              style={{
-                width: `${easedRunning}%`,
-                background: "linear-gradient(90deg,#FE3465 0%,#896D9C 100%)",
-              }}
-            />
+        {/* ===== THE INSTRUMENT: score, momentum, shape ===== */}
+        <div className="border-b border-white/10 px-5 sm:px-8 py-6 sm:py-7">
+          <div className="grid gap-6 sm:grid-cols-[1fr_auto] sm:items-center">
+            <div>
+              <div className="flex items-center justify-between gap-4 mb-1">
+                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">
+                  {phase === "result"
+                    ? "Your AI readiness score"
+                    : "Your AI readiness score · live"}
+                </p>
+                <p className="text-[11px] font-semibold text-purple-3 tabular-nums">
+                  {phase === "result"
+                    ? `${AREAS.length} of ${AREAS.length} answered`
+                    : `${answeredCount} of ${AREAS.length} answered`}
+                </p>
+              </div>
+              <div className="flex items-baseline gap-3 mb-4">
+                <span
+                  key={runningScore}
+                  className={`text-6xl sm:text-7xl lg:text-8xl font-black leading-none tabular-nums ${
+                    runningScore > 0 ? "rr-bank" : ""
+                  }`}
+                >
+                  {Math.round(easedRunning)}
+                </span>
+                <span className="text-xl font-bold text-purple-3">/ 100</span>
+                {answeredCount >= AREAS.length && (
+                  <span className="ml-1 rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+                    {tier.name}
+                  </span>
+                )}
+              </div>
+              <div
+                key={`m-${runningScore}`}
+                className={`h-3 w-full overflow-hidden rounded-full bg-white/10 ${
+                  runningScore > 0 ? "rr-glow" : ""
+                }`}
+              >
+                <div
+                  className="h-full rounded-full transition-[width] duration-500 ease-out"
+                  style={{
+                    width: `${easedRunning}%`,
+                    background: "linear-gradient(90deg,#FE3465 0%,#896D9C 100%)",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* the shape, drawing itself as answers land */}
+            <div className="hidden sm:block sm:w-[190px] lg:w-[220px]">
+              <Radar values={radarValues} />
+              <p className="mt-1 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-purple-4">
+                Your shape so far
+              </p>
+            </div>
           </div>
 
           {/* dimension pips */}
@@ -666,6 +694,10 @@ export function ReadinessScore() {
                   <span className="mt-1.5 block truncate text-[9px] font-bold uppercase tracking-wider text-purple-4">
                     {d.short}
                   </span>
+                  <span className="block text-[10px] font-bold tabular-nums text-purple-3">
+                    {s.points}
+                    <span className="font-medium text-purple-4">/{s.max}</span>
+                  </span>
                 </li>
               );
             })}
@@ -673,68 +705,9 @@ export function ReadinessScore() {
         </div>
 
         {/* ---------- INTRO ---------- */}
-        {phase === "intro" && (
-          <div className="px-5 sm:px-8 py-8 sm:py-10">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
-              <div className="flex-1">
-                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3 mb-3">
-                  20 questions · 7 dimensions · about 3 minutes
-                </p>
-                <h2 className="text-2xl sm:text-3xl font-black tracking-tight leading-tight mb-4">
-                  Seven rooms. One host each.
-                </h2>
-                <p className="text-[15px] leading-relaxed text-purple-2 mb-3">
-                  Rex opens on strategy. Nova audits your data. Camille takes
-                  content, then runs a live check on whether AI engines can see
-                  you at all. Sage covers pipeline. The whole team takes the AI
-                  architecture questions, because that section is about them.
-                  Lihi takes supervision herself. Atlas closes on the number.
-                </p>
-                <p className="text-[15px] leading-relaxed text-purple-2 mb-7">
-                  Your score builds as you answer, so you can watch where it
-                  breaks. Nothing is gated: the score and the three fixes are
-                  yours at the end whether you hand over an email or not.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setPhase("quiz")}
-                  className="inline-flex items-center rounded-[10px] bg-brand px-7 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(254,52,101,.30)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
-                >
-                  Start The Assessment &rarr;
-                </button>
-                <p className="mt-3 text-xs text-purple-4">
-                  Tip: press 1 to 4 to answer without touching the mouse.
-                </p>
-              </div>
-
-              <div className="flex shrink-0 items-end justify-center gap-0 lg:w-[46%]">
-                {CAST.map((a, i) => (
-                  <span
-                    key={a}
-                    className="rr-float block"
-                    style={{
-                      animationDelay: `${i * 260}ms`,
-                      marginLeft: i === 0 ? 0 : -14,
-                      zIndex: i % 2 === 0 ? 2 : 1,
-                    }}
-                  >
-                    <Image
-                      src={`/images/agents/${a}.png`}
-                      alt=""
-                      width={400}
-                      height={700}
-                      className="w-[38px] sm:w-[52px] lg:w-[58px] h-auto drop-shadow-lg"
-                    />
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
         {/* ---------- QUIZ ---------- */}
         {phase === "quiz" && area && (
-          <div className="grid gap-0 lg:grid-cols-[1fr_280px]">
+          <div>
             <div className="px-5 sm:px-8 py-7 sm:py-9">
               {/* host row */}
               <div className="mb-6 flex items-start gap-4">
@@ -889,17 +862,6 @@ export function ReadinessScore() {
               </div>
             </div>
 
-            {/* radar rail */}
-            <div className="hidden lg:flex flex-col justify-center border-l border-white/10 px-6 py-8">
-              <p className="mb-4 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-purple-4">
-                Your shape so far
-              </p>
-              <Radar values={radarValues} />
-              <p className="mt-4 text-center text-[12px] leading-relaxed text-purple-4">
-                Seven spokes, one per dimension. The dents are where the score
-                is leaking.
-              </p>
-            </div>
           </div>
         )}
 
