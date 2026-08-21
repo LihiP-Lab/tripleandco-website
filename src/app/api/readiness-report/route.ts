@@ -22,15 +22,22 @@ const NOTIFY_EMAIL = "lihi@tripleandco.com";
 const SITE = "https://www.tripleandco.com";
 
 const hits = new Map<string, number[]>();
-function rateLimited(ip: string): boolean {
+function rateLimited(
+  store: Map<string, number[]>,
+  key: string,
+  windowMs: number,
+  max: number
+): boolean {
   const now = Date.now();
-  const windowStart = now - 60_000;
-  const recent = (hits.get(ip) ?? []).filter((t) => t > windowStart);
+  const windowStart = now - windowMs;
+  const recent = (store.get(key) ?? []).filter((t) => t > windowStart);
   recent.push(now);
-  hits.set(ip, recent);
-  if (hits.size > 5000) hits.clear();
-  return recent.length > 5;
+  store.set(key, recent);
+  if (store.size > 5000) store.clear();
+  return recent.length > max;
 }
+
+const recipientHits = new Map<string, number[]>();
 
 function esc(s: string): string {
   return s
@@ -108,7 +115,7 @@ function reportHtml(
 export async function POST(request: NextRequest) {
   const ip =
     request.headers.get("x-forwarded-for")?.split(",")[0].trim() || "unknown";
-  if (rateLimited(ip)) {
+  if (rateLimited(hits, ip, 60_000, 5)) {
     return Response.json(
       { error: "Too many requests from this network. Try again in a minute." },
       { status: 429 }
@@ -142,6 +149,13 @@ export async function POST(request: NextRequest) {
   const answers = decodeAnswers(code);
   if (!answers) {
     return Response.json({ error: "Invalid result code." }, { status: 400 });
+  }
+
+  if (rateLimited(recipientHits, email.toLowerCase(), 3_600_000, 3)) {
+    return Response.json(
+      { error: "This address already received the report. Check your inbox." },
+      { status: 429 }
+    );
   }
 
   const resendKey = process.env.RESEND_API_KEY;
@@ -227,7 +241,7 @@ export async function POST(request: NextRequest) {
     console.error("readiness-report: HubSpot error", err);
   }
 
-  fetch("https://api.resend.com/emails", {
+  await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

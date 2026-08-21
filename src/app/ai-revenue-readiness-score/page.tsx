@@ -12,7 +12,7 @@ import { DIMENSIONS, TIERS, decodeAnswers, scoreOf, tierFor } from "@/lib/readin
 const URL = "https://www.tripleandco.com/ai-revenue-readiness-score";
 
 const baseMetadata: Metadata = {
-  title: "AI Revenue Readiness Score: Free 3-Minute Assessment",
+  title: "AI Revenue Readiness Score: Free Assessment",
   description:
     "Score your revenue operation 0 to 100 across 20 areas: strategy, data, content, pipeline, AI architecture, brand supervision, and revenue accountability. Free, no signup.",
   alternates: { canonical: "/ai-revenue-readiness-score" },
