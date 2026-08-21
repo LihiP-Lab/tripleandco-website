@@ -104,7 +104,12 @@ export function Footer() {
                   <Link
                     href={l.href}
                     className={linkCls}
-                    prefetch={l.href === "/ai-visibility-checker" ? false : undefined}
+                    prefetch={
+                      l.href === "/ai-visibility-checker" ||
+                      l.href === "/ai-revenue-readiness-score"
+                        ? false
+                        : undefined
+                    }
                   >
                     {l.label}
                   </Link>

@@ -373,10 +373,13 @@ export function ReadinessScore() {
   const [answers, setAnswers] = useState<Answers>(shared ? shared.answers : {});
   const [cursor, setCursor] = useState(0);
 
+  // A shared link is someone else's result: the domain in `d` was never
+  // verified in this session, so it must not render as "Measured live".
+  const [isShared, setIsShared] = useState(Boolean(shared));
   const [domain, setDomain] = useState(shared ? shared.domain : "");
   const [c3State, setC3State] = useState<
     "idle" | "scanning" | "measured" | "self" | "error"
-  >(shared && shared.domain ? "measured" : "idle");
+  >("idle");
   const [c3Checker, setC3Checker] = useState<number | null>(null);
   const [c3Error, setC3Error] = useState<string | null>(null);
 
@@ -450,6 +453,33 @@ export function ReadinessScore() {
     }
   }, [phase]);
 
+  // Completion beacon: the assessment is fully client-side, so this is the
+  // only server-side signal that someone finished it. Shared links are
+  // someone else's result and are not logged.
+  const loggedRef = useRef(false);
+  useEffect(() => {
+    if (phase !== "result" || isShared || loggedRef.current) return;
+    loggedRef.current = true;
+    const payload = JSON.stringify({
+      code: encodeAnswers(answers),
+      domain,
+      measured: c3State === "measured",
+    });
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(
+        "/api/readiness-log",
+        new Blob([payload], { type: "application/json" })
+      );
+    } else {
+      fetch("/api/readiness-log", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+        keepalive: true,
+      }).catch(() => {});
+    }
+  }, [phase, isShared, answers, domain, c3State]);
+
   /* --- C3 live check ----------------------------------------------- */
 
   async function runC3(e: React.FormEvent) {
@@ -495,6 +525,14 @@ export function ReadinessScore() {
     return `${window.location.origin}${window.location.pathname}?r=${code}${d}`;
   }, [answers, c3State, domain]);
 
+  function shareOnLinkedIn() {
+    window.open(
+      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  }
+
   function copyLink() {
     navigator.clipboard.writeText(shareUrl).then(
       () => {
@@ -511,32 +549,16 @@ export function ReadinessScore() {
     e.preventDefault();
     if (emailState === "sending") return;
     setEmailState("sending");
-    const lines = DIMENSIONS.map((d) => {
-      const s = dimensionScore(answers, d.id);
-      return `${d.label}: ${s.points}/${s.max}`;
-    }).join("; ");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/readiness-report", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          firstName: "Readiness",
-          lastName: "Score",
           email,
-          company: domain || "not given",
-          message: [
-            "AI Revenue Readiness Score result (self-serve tool)",
-            `Score: ${finalScore}/100 (${tier.name})`,
-            `Dimensions: ${lines}`,
-            `C3: ${
-              c3State === "measured"
-                ? `measured live, checker score ${c3Checker}`
-                : "self-reported"
-            }`,
-            `Top three actions: ${actions.map((a) => a.id).join(", ")}`,
-            `Result link: ${shareUrl}`,
-            "Requested: the full report",
-          ].join("\n"),
+          code: encodeAnswers(answers),
+          domain,
+          measured: c3State === "measured",
+          checkerScore: c3Checker,
         }),
       });
       if (!res.ok) throw new Error("failed");
@@ -547,6 +569,8 @@ export function ReadinessScore() {
   }
 
   function restart() {
+    setIsShared(false);
+    loggedRef.current = false;
     setAnswers({});
     setCursor(0);
     setPhase("quiz");
@@ -929,7 +953,11 @@ export function ReadinessScore() {
 
                 <p className="mt-4 text-[12px] text-purple-4">
                   AI search visibility:{" "}
-                  {c3State === "measured" ? (
+                  {isShared ? (
+                    <span className="font-semibold text-purple-3">
+                      From a shared link, not verified in this session
+                    </span>
+                  ) : c3State === "measured" ? (
                     <span className="font-semibold text-pink-3">
                       Measured live{c3Checker != null ? ` · checker score ${c3Checker}/100` : ""}
                     </span>
@@ -1076,13 +1104,20 @@ export function ReadinessScore() {
                   this exact result.
                 </p>
               </div>
-              <div className="flex shrink-0 gap-2">
+              <div className="flex shrink-0 flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={shareOnLinkedIn}
+                  className="rounded-[10px] bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-brand-dark"
+                >
+                  Share on LinkedIn →
+                </button>
                 <button
                   type="button"
                   onClick={copyLink}
                   className="rounded-[10px] border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-white/20"
                 >
-                  {copied ? "Link copied" : "Share Your Score →"}
+                  {copied ? "Link copied" : "Copy Link"}
                 </button>
                 <button
                   type="button"
