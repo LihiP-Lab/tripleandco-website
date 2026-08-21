@@ -39,6 +39,26 @@ function rateLimited(
 
 const recipientHits = new Map<string, number[]>();
 
+/** Peek at a window without recording, so failed sends never burn quota. */
+function overLimit(
+  store: Map<string, number[]>,
+  key: string,
+  windowMs: number,
+  max: number
+): boolean {
+  const now = Date.now();
+  const recent = (store.get(key) ?? []).filter((t) => t > now - windowMs);
+  store.set(key, recent);
+  return recent.length >= max;
+}
+
+function recordHit(store: Map<string, number[]>, key: string): void {
+  const arr = store.get(key) ?? [];
+  arr.push(Date.now());
+  store.set(key, arr);
+  if (store.size > 5000) store.clear();
+}
+
 function esc(s: string): string {
   return s
     .replace(/&/g, "&amp;")
@@ -151,7 +171,7 @@ export async function POST(request: NextRequest) {
     return Response.json({ error: "Invalid result code." }, { status: 400 });
   }
 
-  if (rateLimited(recipientHits, email.toLowerCase(), 3_600_000, 3)) {
+  if (overLimit(recipientHits, email.toLowerCase(), 3_600_000, 3)) {
     return Response.json(
       { error: "This address already received the report. Check your inbox." },
       { status: 429 }
@@ -191,6 +211,7 @@ export async function POST(request: NextRequest) {
       { status: 502 }
     );
   }
+  recordHit(recipientHits, email.toLowerCase());
 
   console.log(
     JSON.stringify({

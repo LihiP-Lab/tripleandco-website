@@ -190,7 +190,7 @@ export default function ReadinessPage() {
               <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
                 <a
                   href="#assessment"
-                  className="inline-flex items-center rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+                  className="inline-flex items-center rounded-[10px] bg-brand-dark px-8 py-4 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
                 >
                   Start My Score &rarr;
                 </a>
@@ -326,7 +326,7 @@ export default function ReadinessPage() {
             <div className="text-center">
               <Link
                 href="/revenue-diagnostic"
-                className="inline-block rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
+                className="inline-block rounded-[10px] bg-brand-dark px-8 py-4 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
               >
                 Book a 30-Minute Revenue Diagnostic &rarr;
               </Link>
