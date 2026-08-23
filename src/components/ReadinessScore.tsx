@@ -430,7 +430,7 @@ export function ReadinessScore() {
     dialogRef.current?.focus();
     return () => {
       document.body.style.overflow = prev;
-      returnFocusRef.current?.focus();
+      returnFocusRef.current?.focus({ preventScroll: true });
     };
   }, [focus]);
 
