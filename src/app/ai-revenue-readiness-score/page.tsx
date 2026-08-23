@@ -12,9 +12,9 @@ import { DIMENSIONS, TIERS, decodeAnswers, scoreOf, tierFor } from "@/lib/readin
 const URL = "https://www.tripleandco.com/ai-revenue-readiness-score";
 
 const baseMetadata: Metadata = {
-  title: "AI Revenue Readiness Score: Free 3-Minute Assessment",
+  title: "AI Revenue Readiness Score: Free Assessment",
   description:
-    "Score your revenue operation 0 to 100 across 20 areas: strategy, data, content, pipeline, AI architecture, brand supervision, and revenue accountability. Free, no signup.",
+    "Score your revenue operation 0 to 100 across 20 areas: strategy, data, content, pipeline, AI architecture, brand supervision, and revenue accountability. Free.",
   alternates: { canonical: "/ai-revenue-readiness-score" },
   openGraph: {
     title: "AI Revenue Readiness Score | Triple & Co.",
@@ -190,9 +190,9 @@ export default function ReadinessPage() {
               <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
                 <a
                   href="#assessment"
-                  className="inline-flex items-center rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+                  className="inline-flex items-center rounded-[10px] bg-brand-dark px-8 py-4 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
                 >
-                  Get Your AI Readiness Score Now &rarr;
+                  Start My Score &rarr;
                 </a>
                 <p className="text-sm text-purple-7">
                   Free · 3 minutes · no email needed
@@ -326,7 +326,7 @@ export default function ReadinessPage() {
             <div className="text-center">
               <Link
                 href="/revenue-diagnostic"
-                className="inline-block rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
+                className="inline-block rounded-[10px] bg-brand-dark px-8 py-4 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
               >
                 Book a 30-Minute Revenue Diagnostic &rarr;
               </Link>
