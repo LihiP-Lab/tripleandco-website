@@ -387,12 +387,16 @@ export function ReadinessScore() {
   const [emailState, setEmailState] = useState<
     "idle" | "sending" | "sent" | "error"
   >("idle");
+  const [emailError, setEmailError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   /* Focus mode: a dedicated fullscreen assessment surface on small screens. */
   const [focus, setFocus] = useState(false);
   const [shapeOpen, setShapeOpen] = useState(false);
 
   const consoleRef = useRef<HTMLDivElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
+  const sheetRef = useRef<HTMLDivElement | null>(null);
+  const returnFocusRef = useRef<HTMLElement | null>(null);
 
   /* On small screens, the hero CTA opens focus mode instead of scrolling. */
   useEffect(() => {
@@ -422,18 +426,52 @@ export function ReadinessScore() {
     if (!focus) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    returnFocusRef.current = document.activeElement as HTMLElement | null;
+    dialogRef.current?.focus();
+    return () => {
+      document.body.style.overflow = prev;
+      returnFocusRef.current?.focus({ preventScroll: true });
+    };
+  }, [focus]);
+
+  useEffect(() => {
+    if (!focus && !shapeOpen) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        setShapeOpen(false);
-        setFocus(false);
+        if (shapeOpen) setShapeOpen(false);
+        else setFocus(false);
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const root = shapeOpen ? sheetRef.current : dialogRef.current;
+      if (!root) return;
+      const focusables = root.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+      if (e.shiftKey) {
+        if (active === first || !root.contains(active)) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else if (active === last || !root.contains(active)) {
+        e.preventDefault();
+        first.focus();
       }
     };
     window.addEventListener("keydown", onKey);
-    return () => {
-      document.body.style.overflow = prev;
-      window.removeEventListener("keydown", onKey);
-    };
-  }, [focus]);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [focus, shapeOpen]);
+
+  useEffect(() => {
+    if (!shapeOpen) return;
+    const prev = document.activeElement as HTMLElement | null;
+    sheetRef.current?.focus();
+    return () => prev?.focus();
+  }, [shapeOpen]);
 
   const area = AREAS[cursor];
   const dimension = area ? area.dimension : "strategy";
@@ -593,6 +631,7 @@ export function ReadinessScore() {
     e.preventDefault();
     if (emailState === "sending") return;
     setEmailState("sending");
+    setEmailError(null);
     try {
       const res = await fetch("/api/readiness-report", {
         method: "POST",
@@ -605,7 +644,13 @@ export function ReadinessScore() {
           checkerScore: c3Checker,
         }),
       });
-      if (!res.ok) throw new Error("failed");
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        const message =
+          data && typeof data.error === "string" ? data.error : null;
+        setEmailError(message);
+        throw new Error("failed");
+      }
       setEmailState("sent");
     } catch {
       setEmailState("error");
@@ -622,6 +667,7 @@ export function ReadinessScore() {
     setC3Checker(null);
     setDomain("");
     setEmailState("idle");
+    setEmailError(null);
     window.history.replaceState(null, "", window.location.pathname);
   }
 
@@ -768,6 +814,8 @@ export function ReadinessScore() {
             role={focus ? "dialog" : undefined}
             aria-modal={focus || undefined}
             aria-label={focus ? "AI Revenue Readiness assessment" : undefined}
+            ref={dialogRef}
+            tabIndex={focus ? -1 : undefined}
           >
             {focus && (
               <div
@@ -933,15 +981,7 @@ export function ReadinessScore() {
                         <button
                           key={opt}
                           type="button"
-                          onClick={() => {
-                            if (
-                              !focus &&
-                              window.matchMedia("(max-width: 1023px)").matches
-                            ) {
-                              setFocus(true);
-                            }
-                            commit(area.id, i);
-                          }}
+                          onClick={() => commit(area.id, i)}
                           className={`rr-opt group flex w-full items-start gap-3 rounded-[14px] border px-4 py-3.5 text-left transition-all duration-200 ${
                             selected
                               ? "border-brand bg-white/10"
@@ -998,7 +1038,10 @@ export function ReadinessScore() {
                   className="w-full rounded-t-[20px] border-t border-white/10 bg-dark px-6 pt-5 pb-8"
                   onClick={(e) => e.stopPropagation()}
                   role="dialog"
+                  aria-modal="true"
                   aria-label="Your shape so far"
+                  ref={sheetRef}
+                  tabIndex={-1}
                 >
                   <p className="mb-2 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">
                     Your shape so far
@@ -1212,7 +1255,8 @@ export function ReadinessScore() {
                 )}
                 {emailState === "error" && (
                   <p className="mt-3 text-sm text-pink-3">
-                    That did not send. Try again, or book the diagnostic instead.
+                    {emailError ??
+                      "That did not send. Try again, or book the diagnostic instead."}
                   </p>
                 )}
               </div>

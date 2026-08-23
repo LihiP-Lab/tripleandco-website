@@ -38,7 +38,9 @@ export async function generateMetadata({
 
   const score = scoreOf(answers);
   const tier = tierFor(score);
-  const image = `/api/og/readiness?r=${encodeURIComponent(raw)}`;
+  const d = typeof params.d === "string" ? params.d.slice(0, 253) : "";
+  const dQuery = d ? `&d=${encodeURIComponent(d)}` : "";
+  const image = `/api/og/readiness?r=${encodeURIComponent(raw)}${dQuery}`;
 
   return {
     ...baseMetadata,
@@ -47,7 +49,7 @@ export async function generateMetadata({
       ...baseMetadata.openGraph,
       title: `AI Revenue Readiness Score: ${score}/100 · ${tier.name}`,
       description: tier.line,
-      url: `${URL}?r=${encodeURIComponent(raw)}`,
+      url: `${URL}?r=${encodeURIComponent(raw)}${dQuery}`,
       images: [
         {
           url: image,
