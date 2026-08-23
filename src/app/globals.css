@@ -74,10 +74,20 @@ body {
 
 /* Glass header */
 .glass-header {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-purple-15);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-header {
+    background: rgb(255, 255, 255);
+  }
+
+  [data-theme="dark"] .glass-header {
+    background: rgb(27, 22, 31);
+  }
 }
 
 /* Card base */
@@ -255,7 +265,7 @@ body {
 }
 
 [data-theme="dark"] .glass-header {
-  background: rgba(27, 22, 31, 0.92);
+  background: rgba(27, 22, 31, 0.97);
   border-bottom-color: var(--dk-line);
 }
 
