@@ -11,6 +11,7 @@ import {
   tierFor,
   type Answers,
 } from "@/lib/readiness";
+import { normalizeDomain } from "@/lib/visibility-check";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -53,6 +54,9 @@ export async function GET(request: NextRequest) {
   const code = request.nextUrl.searchParams.get("r") ?? "";
   const answers = decodeAnswers(code.slice(0, 40));
   if (!answers) return genericCard();
+  const domain = normalizeDomain(
+    (request.nextUrl.searchParams.get("d") ?? "").slice(0, 253)
+  );
 
   let data: Awaited<ReturnType<typeof loadCardData>>;
   try {
@@ -118,6 +122,19 @@ export async function GET(request: NextRequest) {
               }}
             >
               AI Revenue Readiness Score
+              {domain ? (
+                <div
+                  style={{
+                    display: "flex",
+                    marginLeft: 18,
+                    color: "#E7E2EB",
+                    letterSpacing: 1,
+                    textTransform: "lowercase",
+                  }}
+                >
+                  {domain}
+                </div>
+              ) : null}
             </div>
 
             <div style={{ display: "flex", alignItems: "baseline", marginTop: 10 }}>

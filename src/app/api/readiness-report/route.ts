@@ -178,52 +178,12 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const resendKey = process.env.RESEND_API_KEY;
-  if (!resendKey) {
-    console.error("readiness-report: RESEND_API_KEY is not configured");
-    return Response.json(
-      { error: "Report delivery is not available right now." },
-      { status: 503 }
-    );
-  }
-
   const score = scoreOf(answers);
   const tier = tierFor(score);
   const resultUrl = `${SITE}/ai-revenue-readiness-score?r=${encodeURIComponent(code)}`;
 
-  const sendRes = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${resendKey}`,
-    },
-    body: JSON.stringify({
-      from: "Triple&Co <notifications@tripleandco.com>",
-      to: email,
-      subject: `Your AI Revenue Readiness Score: ${score}/100 (${tier.name})`,
-      html: reportHtml(answers, measured, checkerScore, resultUrl),
-    }),
-  });
-  if (!sendRes.ok) {
-    console.error("readiness-report: send failed", await sendRes.text());
-    return Response.json(
-      { error: "The report could not be sent. Try again." },
-      { status: 502 }
-    );
-  }
-  recordHit(recipientHits, email.toLowerCase());
-
-  console.log(
-    JSON.stringify({
-      event: "readiness_report_requested",
-      score,
-      tier: tier.name,
-      domain: measured ? domain : null,
-      measured,
-      ts: new Date().toISOString(),
-    })
-  );
-
+  // Capture the lead before attempting delivery, so a missing key or a
+  // failed send never loses the contact.
   const hubspotPayload = {
     fields: [
       { objectTypeId: "0-1", name: "email", value: email },
@@ -261,6 +221,48 @@ export async function POST(request: NextRequest) {
   } catch (err) {
     console.error("readiness-report: HubSpot error", err);
   }
+
+  console.log(
+    JSON.stringify({
+      event: "readiness_report_requested",
+      score,
+      tier: tier.name,
+      domain: measured ? domain : null,
+      measured,
+      ts: new Date().toISOString(),
+    })
+  );
+
+  const resendKey = process.env.RESEND_API_KEY;
+  if (!resendKey) {
+    console.error("readiness-report: RESEND_API_KEY is not configured");
+    return Response.json(
+      { error: "Report delivery is not available right now." },
+      { status: 503 }
+    );
+  }
+
+  const sendRes = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${resendKey}`,
+    },
+    body: JSON.stringify({
+      from: "Triple&Co <notifications@tripleandco.com>",
+      to: email,
+      subject: `Your AI Revenue Readiness Score: ${score}/100 (${tier.name})`,
+      html: reportHtml(answers, measured, checkerScore, resultUrl),
+    }),
+  });
+  if (!sendRes.ok) {
+    console.error("readiness-report: send failed", await sendRes.text());
+    return Response.json(
+      { error: "The report could not be sent. Try again." },
+      { status: 502 }
+    );
+  }
+  recordHit(recipientHits, email.toLowerCase());
 
   await fetch("https://api.resend.com/emails", {
     method: "POST",
