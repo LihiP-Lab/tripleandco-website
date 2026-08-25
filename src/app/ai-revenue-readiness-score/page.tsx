@@ -277,35 +277,30 @@ export default function ReadinessPage() {
               </ScrollReveal>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* How it works */}
-      <section className="py-16 lg:py-24 bg-purple-05">
-        <div className="mx-auto max-w-[1000px] px-6 sm:px-8">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-3">How it runs</p>
-            <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-12 text-center">
-              A Diagnostic You Can{" "}
-              <span className="gradient-text">Actually Watch.</span>
-            </h2>
-          </ScrollReveal>
-          <div className="grid gap-6 md:grid-cols-2">
-            {HOW.map((s, i) => (
-              <ScrollReveal key={s.n} delay={0.08 * i}>
-                <div className="h-full rounded-2xl bg-white border border-purple-15 p-7 shadow-[var(--shadow-base)]">
-                  <p className="text-brand-dark font-black text-2xl mb-2">
-                    {s.n}
-                  </p>
-                  <h3 className="text-lg font-extrabold text-purple-9 mb-2">
-                    {s.title}
-                  </h3>
-                  <p className="text-sm text-purple-7 leading-relaxed">
-                    {s.body}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
+          {/* How it runs, folded into the same band so the page reads
+              instrument → what it measures → how, without a third act. */}
+          <div className="mt-14 lg:mt-16">
+            <ScrollReveal>
+              <p className="eyebrow text-center mb-8">How it runs</p>
+            </ScrollReveal>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {HOW.map((s, i) => (
+                <ScrollReveal key={s.n} delay={0.06 * i}>
+                  <div className="h-full rounded-2xl bg-purple-05 border border-purple-15 p-5">
+                    <p className="text-sm font-extrabold text-purple-9 mb-1.5">
+                      <span className="text-brand-dark font-black mr-2">
+                        {s.n}
+                      </span>
+                      {s.title}
+                    </p>
+                    <p className="text-[13px] text-purple-7 leading-relaxed">
+                      {s.body}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>

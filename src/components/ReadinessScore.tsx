@@ -1082,14 +1082,17 @@ export function ReadinessScore() {
         {phase === "result" && (
           <div className="px-5 sm:px-8 py-8 sm:py-10">
             <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-start lg:gap-12">
-              <div className="flex flex-col items-center">
+              <div className="rr-fade flex flex-col items-center">
                 <ScoreDial score={finalScore} color="#FFFFFF" />
-                <p className="mt-4 text-center text-2xl font-black tracking-tight">
+                <p
+                  className="rr-fade mt-4 text-center text-2xl font-black tracking-tight"
+                  style={{ animationDelay: "750ms" }}
+                >
                   <span className="gradient-text">{tier.name}</span>
                 </p>
               </div>
 
-              <div className="flex-1">
+              <div className="rr-fade flex-1" style={{ animationDelay: "350ms" }}>
                 <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3 mb-3">
                   Your AI Revenue Readiness Score
                 </p>
@@ -1144,7 +1147,7 @@ export function ReadinessScore() {
             </div>
 
             {/* three actions */}
-            <div className="mt-10">
+            <div className="rr-fade mt-10" style={{ animationDelay: "950ms" }}>
               <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">
                 Three things to fix first
               </p>
@@ -1199,7 +1202,10 @@ export function ReadinessScore() {
             </div>
 
             {/* CTAs */}
-            <div className="mt-10 grid gap-4 lg:grid-cols-2">
+            <div
+              className="rr-fade mt-10 grid gap-4 lg:grid-cols-2"
+              style={{ animationDelay: "1300ms" }}
+            >
               <div className="rounded-[18px] border border-white/10 bg-white/[0.04] p-6">
                 <h4 className="mb-2 text-[17px] font-extrabold">
                   Walk your score through with Lihi.
@@ -1263,7 +1269,10 @@ export function ReadinessScore() {
             </div>
 
             {/* share, hosted by Zara */}
-            <div className="mt-6 flex flex-col items-start gap-4 rounded-[18px] border border-white/10 bg-white/[0.04] p-5 sm:flex-row sm:items-center">
+            <div
+              className="rr-fade mt-6 flex flex-col items-start gap-4 rounded-[18px] border border-white/10 bg-white/[0.04] p-5 sm:flex-row sm:items-center"
+              style={{ animationDelay: "1550ms" }}
+            >
               <Image
                 src="/images/agents/zara.png"
                 alt="Zara, Triple &amp; Co.'s social media agent"
