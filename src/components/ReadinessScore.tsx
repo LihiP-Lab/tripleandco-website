@@ -309,7 +309,13 @@ function HostThumb({ host }: { host: Host }) {
   );
 }
 
-function HostPortrait({ dimension }: { dimension: DimensionId }) {
+function HostPortrait({
+  dimension,
+  large = false,
+}: {
+  dimension: DimensionId;
+  large?: boolean;
+}) {
   const host = DIMENSION_BY_ID[dimension].host;
 
   if (host.image === null) {
@@ -326,7 +332,9 @@ function HostPortrait({ dimension }: { dimension: DimensionId }) {
               alt=""
               width={400}
               height={700}
-              className="w-7 sm:w-9 h-auto drop-shadow"
+              className={`h-auto drop-shadow ${
+                large ? "w-11 sm:w-14" : "w-7 sm:w-9"
+              }`}
             />
           </span>
         ))}
@@ -335,7 +343,9 @@ function HostPortrait({ dimension }: { dimension: DimensionId }) {
   }
 
   return (
-    <div className="rr-float w-14 sm:w-16 shrink-0">
+    <div
+      className={`rr-float shrink-0 ${large ? "w-24 sm:w-28" : "w-14 sm:w-16"}`}
+    >
       <Image
         key={host.id}
         src={host.image}
@@ -346,6 +356,93 @@ function HostPortrait({ dimension }: { dimension: DimensionId }) {
           host.id === "lihi" ? "rounded-2xl object-cover aspect-[3/4]" : ""
         }`}
       />
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Room handoff                                                        */
+/* ------------------------------------------------------------------ */
+
+type Handoff = {
+  from: DimensionId | null;
+  to: DimensionId;
+  tierUp: string | null;
+};
+
+/**
+ * The beat between two dimensions. It banks the room just finished, marks a
+ * tier crossing when one happened, and hands the questions to the next host,
+ * so twenty questions read as a guided tour rather than a form. Auto-clears;
+ * any key or a click skips it. Never shown under reduced motion.
+ */
+function RoomHandoff({
+  handoff,
+  answers,
+  onSkip,
+  touch = false,
+}: {
+  handoff: Handoff;
+  answers: Answers;
+  onSkip: () => void;
+  /** Focus mode is the phone surface, where there is no key to press. */
+  touch?: boolean;
+}) {
+  const from = handoff.from ? DIMENSION_BY_ID[handoff.from] : null;
+  const to = DIMENSION_BY_ID[handoff.to];
+  const banked = from ? dimensionScore(answers, from.id) : null;
+  const roomNumber = DIMENSIONS.findIndex((d) => d.id === to.id) + 1;
+  const count = AREAS.filter((a) => a.dimension === to.id).length;
+
+  return (
+    <div
+      role="status"
+      aria-live="polite"
+      onClick={onSkip}
+      className="flex min-h-[280px] cursor-pointer flex-col items-center justify-center gap-4 py-4 text-center sm:min-h-[320px]"
+    >
+      {from && banked && (
+        <p className="rr-fade text-[13px] font-semibold text-purple-2">
+          <span className="text-purple-4">{from.label} banked</span>{" "}
+          <span className="tabular-nums text-white">
+            {banked.points}/{banked.max}
+          </span>
+        </p>
+      )}
+
+      {handoff.tierUp && (
+        <p
+          className="rr-pop rounded-full bg-white/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3"
+          style={{ animationDelay: "140ms" }}
+        >
+          {handoff.tierUp} territory
+        </p>
+      )}
+
+      <div className="rr-pop" style={{ animationDelay: "220ms" }}>
+        <HostPortrait dimension={to.id} large />
+      </div>
+
+      <div className="rr-fade" style={{ animationDelay: "340ms" }}>
+        <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-purple-4">
+          Room {roomNumber} of {DIMENSIONS.length}
+        </p>
+        <p className="mt-1 text-xl font-extrabold text-white sm:text-2xl">
+          {to.label}
+        </p>
+        <p className="mt-1 text-sm font-bold text-pink-3">
+          {to.host.image === null
+            ? "All eight agents"
+            : `${to.host.name} · ${to.host.role}`}
+        </p>
+        <p className="mx-auto mt-3 max-w-[420px] text-[13px] leading-relaxed text-purple-2">
+          {to.host.line}
+        </p>
+        <p className="mt-4 text-[11px] text-purple-4">
+          {count} {count === 1 ? "question" : "questions"} ·{" "}
+          {touch ? "tap to continue" : "press any key to continue"}
+        </p>
+      </div>
     </div>
   );
 }
@@ -488,6 +585,47 @@ export function ReadinessScore() {
     [answers]
   );
 
+  /* --- room handoff ------------------------------------------------- */
+
+  const [handoff, setHandoff] = useState<Handoff | null>(null);
+  const prevDimRef = useRef<DimensionId>(dimension);
+  const prevCursorRef = useRef(cursor);
+  const prevTierRef = useRef(tier.name);
+
+  // Crossing into a new dimension is the beat worth marking: the room just
+  // finished banks, and the next host takes over. Forward moves only, so
+  // stepping back does not replay it.
+  useEffect(() => {
+    if (phase !== "quiz") return;
+    const prevDim = prevDimRef.current;
+    const prevCursor = prevCursorRef.current;
+    const prevTier = prevTierRef.current;
+    prevDimRef.current = dimension;
+    prevCursorRef.current = cursor;
+    prevTierRef.current = tier.name;
+    if (cursor <= prevCursor || prevDim === dimension) return;
+    if (prefersReducedMotion()) return;
+    setHandoff({
+      from: prevDim,
+      to: dimension,
+      tierUp: tier.name !== prevTier ? tier.name : null,
+    });
+  }, [cursor, dimension, phase, tier.name]);
+
+  // It clears itself, and any key or click skips it. The listener is attached
+  // after the answering keystroke has already been dispatched, so the key that
+  // banked the last answer does not also dismiss the beat it just triggered.
+  useEffect(() => {
+    if (!handoff) return;
+    const clear = () => setHandoff(null);
+    const id = setTimeout(clear, 2000);
+    window.addEventListener("keydown", clear);
+    return () => {
+      clearTimeout(id);
+      window.removeEventListener("keydown", clear);
+    };
+  }, [handoff]);
+
   /* --- answering --------------------------------------------------- */
 
   const commit = useCallback(
@@ -512,7 +650,7 @@ export function ReadinessScore() {
   // Keyboard: 1 to 4 answers, Backspace steps back. Fast to run, and it
   // makes the assessment feel like a tool rather than a form.
   useEffect(() => {
-    if (phase !== "quiz" || !area) return;
+    if (phase !== "quiz" || !area || handoff) return;
     if (area.id === "C3" && c3State !== "self") return;
     function onKey(e: KeyboardEvent) {
       const t = e.target as HTMLElement | null;
@@ -527,7 +665,7 @@ export function ReadinessScore() {
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [phase, area, c3State, commit, goBack]);
+  }, [phase, area, c3State, commit, goBack, handoff]);
 
   useEffect(() => {
     if (phase === "result" && consoleRef.current) {
@@ -866,167 +1004,178 @@ export function ReadinessScore() {
               </div>
             )}
             <div className={focus ? "flex-1 px-5 py-5" : "px-5 sm:px-8 py-7 sm:py-9"}>
-              {/* host row */}
-              <div className={focus ? "hidden" : "mb-6 flex items-start gap-4"}>
-                <HostPortrait dimension={dimension} />
-                <div className="flex-1 pt-1">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">
-                    {DIMENSION_BY_ID[dimension].label}
-                  </p>
-                  <p className="text-sm font-bold text-white">
-                    {host.name}
-                    <span className="ml-2 font-medium text-purple-4">
-                      {host.role}
-                    </span>
-                  </p>
-                  <p
-                    key={dimension}
-                    className="rr-fade mt-2 text-[13px] leading-relaxed text-purple-2"
-                  >
-                    {host.line}
-                  </p>
-                </div>
-              </div>
-
-              {/* C3 live check */}
-              {area.id === "C3" && c3State !== "self" ? (
-                <div key="c3" className="rr-fade">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-purple-4 mb-2">
-                    Area 9 of 20 · Measured, not asked
-                  </p>
-                  <h3 className="text-xl sm:text-2xl font-extrabold leading-snug mb-2">
-                    {area.question}
-                  </h3>
-                  <p className="text-sm text-purple-2 leading-relaxed mb-5">
-                    This is the one area we measure instead of asking. Give
-                    Nova your domain and she fetches it the way AI crawlers do,
-                    then scores what comes back. Skip it and you can self-assess
-                    instead.
-                  </p>
-
-                  <form onSubmit={runC3} className="flex flex-col sm:flex-row gap-3">
-                    <label htmlFor="rr-domain" className="sr-only">
-                      Your domain
-                    </label>
-                    <input
-                      id="rr-domain"
-                      type="text"
-                      value={domain}
-                      onChange={(e) => setDomain(e.target.value)}
-                      placeholder="yourcompany.com"
-                      autoComplete="url"
-                      disabled={c3State === "scanning"}
-                      className="flex-1 rounded-[10px] border border-white/30 bg-white/5 px-4 py-3 text-[15px] text-white placeholder:text-purple-4 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50 disabled:opacity-60"
-                    />
-                    <button
-                      type="submit"
-                      disabled={c3State === "scanning" || domain.trim().length < 3}
-                      className="rounded-[10px] bg-brand px-6 py-3 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark disabled:opacity-50 disabled:hover:bg-brand focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
-                    >
-                      {c3State === "scanning" ? "Scanning" : "Scan My Site →"}
-                    </button>
-                  </form>
-
-                  {c3State === "scanning" && (
-                    <div className="mt-5 overflow-hidden rounded-[14px] border border-white/10 bg-white/5">
-                      <div className="relative h-24 overflow-hidden">
-                        <div
-                          className="rr-sweep absolute inset-x-0 h-10"
-                          style={{
-                            background:
-                              "linear-gradient(180deg, transparent, rgba(254,52,101,.35), transparent)",
-                          }}
-                        />
-                        <div className="relative flex h-full items-center gap-3 px-5">
-                          <span className="rr-pulse text-brand text-lg">&#9679;</span>
-                          <p className="font-mono text-[12px] leading-relaxed text-purple-2">
-                            nova.scan {domain || "your-domain"}
-                            <br />
-                            <span className="text-purple-4">
-                              llms.txt &middot; robots.txt for 10 AI crawlers
-                              &middot; JSON-LD &middot; Bing indexability
-                            </span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {c3Error && (
-                    <p className="mt-4 text-sm text-pink-3">{c3Error}</p>
-                  )}
-
-                  <button
-                    type="button"
-                    onClick={() => setC3State("self")}
-                    className="mt-4 text-sm font-semibold text-pink-3 underline underline-offset-4 hover:text-white"
-                  >
-                    Skip the scan and self-assess
-                  </button>
-                </div>
+              {handoff ? (
+                <RoomHandoff
+                  handoff={handoff}
+                  answers={answers}
+                  onSkip={() => setHandoff(null)}
+                  touch={focus}
+                />
               ) : (
-                <div key={area.id} className="rr-fade">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-purple-4 mb-2">
-                    Area {cursor + 1} of {AREAS.length} &middot; {area.title}
-                    {area.id === "C3" && c3State === "self" && " · self-reported"}
-                  </p>
-                  <h3 className="text-xl sm:text-2xl font-extrabold leading-snug mb-5">
-                    {area.question}
-                  </h3>
-
-                  <div className="flex flex-col gap-2.5">
-                    {area.options.map((opt, i) => {
-                      const selected = answers[area.id] === i;
-                      return (
-                        <button
-                          key={opt}
-                          type="button"
-                          onClick={() => commit(area.id, i)}
-                          className={`rr-opt group flex w-full items-start gap-3 rounded-[14px] border px-4 py-3.5 text-left transition-all duration-200 ${
-                            selected
-                              ? "border-brand bg-white/10"
-                              : "border-white/20 bg-white/[0.03] hover:border-pink-3 hover:bg-white/[0.07] hover:-translate-y-0.5"
-                          }`}
-                        >
-                          <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-white/25 text-[11px] font-bold text-purple-3 group-hover:border-pink-3 group-hover:text-white">
-                            {i + 1}
-                          </span>
-                          <span className="flex-1 text-[14px] leading-relaxed text-purple-2 group-hover:text-white">
-                            {opt}
-                          </span>
-                          <span className="mt-0.5 shrink-0 text-[11px] font-bold tabular-nums text-purple-4">
-                            +{POINTS[i]}
-                          </span>
-                        </button>
-                      );
-                    })}
+                <>
+                {/* host row */}
+                <div className={focus ? "hidden" : "mb-6 flex items-start gap-4"}>
+                  <HostPortrait dimension={dimension} />
+                  <div className="flex-1 pt-1">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">
+                      {DIMENSION_BY_ID[dimension].label}
+                    </p>
+                    <p className="text-sm font-bold text-white">
+                      {host.name}
+                      <span className="ml-2 font-medium text-purple-4">
+                        {host.role}
+                      </span>
+                    </p>
+                    <p
+                      key={dimension}
+                      className="rr-fade mt-2 text-[13px] leading-relaxed text-purple-2"
+                    >
+                      {host.line}
+                    </p>
                   </div>
                 </div>
-              )}
 
-              <div className="mt-6 flex items-center justify-between">
-                <button
-                  type="button"
-                  onClick={goBack}
-                  disabled={cursor === 0}
-                  className="text-sm font-semibold text-purple-3 transition-colors hover:text-white disabled:opacity-40 disabled:hover:text-purple-3"
-                >
-                  &larr; Back
-                </button>
-                {focus ? (
+                {/* C3 live check */}
+                {area.id === "C3" && c3State !== "self" ? (
+                  <div key="c3" className="rr-fade">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-purple-4 mb-2">
+                      Area 9 of 20 · Measured, not asked
+                    </p>
+                    <h3 className="text-xl sm:text-2xl font-extrabold leading-snug mb-2">
+                      {area.question}
+                    </h3>
+                    <p className="text-sm text-purple-2 leading-relaxed mb-5">
+                      This is the one area we measure instead of asking. Give
+                      Nova your domain and she fetches it the way AI crawlers do,
+                      then scores what comes back. Skip it and you can self-assess
+                      instead.
+                    </p>
+
+                    <form onSubmit={runC3} className="flex flex-col sm:flex-row gap-3">
+                      <label htmlFor="rr-domain" className="sr-only">
+                        Your domain
+                      </label>
+                      <input
+                        id="rr-domain"
+                        type="text"
+                        value={domain}
+                        onChange={(e) => setDomain(e.target.value)}
+                        placeholder="yourcompany.com"
+                        autoComplete="url"
+                        disabled={c3State === "scanning"}
+                        className="flex-1 rounded-[10px] border border-white/30 bg-white/5 px-4 py-3 text-[15px] text-white placeholder:text-purple-4 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50 disabled:opacity-60"
+                      />
+                      <button
+                        type="submit"
+                        disabled={c3State === "scanning" || domain.trim().length < 3}
+                        className="rounded-[10px] bg-brand px-6 py-3 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark disabled:opacity-50 disabled:hover:bg-brand focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+                      >
+                        {c3State === "scanning" ? "Scanning" : "Scan My Site →"}
+                      </button>
+                    </form>
+
+                    {c3State === "scanning" && (
+                      <div className="mt-5 overflow-hidden rounded-[14px] border border-white/10 bg-white/5">
+                        <div className="relative h-24 overflow-hidden">
+                          <div
+                            className="rr-sweep absolute inset-x-0 h-10"
+                            style={{
+                              background:
+                                "linear-gradient(180deg, transparent, rgba(254,52,101,.35), transparent)",
+                            }}
+                          />
+                          <div className="relative flex h-full items-center gap-3 px-5">
+                            <span className="rr-pulse text-brand text-lg">&#9679;</span>
+                            <p className="font-mono text-[12px] leading-relaxed text-purple-2">
+                              nova.scan {domain || "your-domain"}
+                              <br />
+                              <span className="text-purple-4">
+                                llms.txt &middot; robots.txt for 10 AI crawlers
+                                &middot; JSON-LD &middot; Bing indexability
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {c3Error && (
+                      <p className="mt-4 text-sm text-pink-3">{c3Error}</p>
+                    )}
+
+                    <button
+                      type="button"
+                      onClick={() => setC3State("self")}
+                      className="mt-4 text-sm font-semibold text-pink-3 underline underline-offset-4 hover:text-white"
+                    >
+                      Skip the scan and self-assess
+                    </button>
+                  </div>
+                ) : (
+                  <div key={area.id} className="rr-fade">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-purple-4 mb-2">
+                      Area {cursor + 1} of {AREAS.length} &middot; {area.title}
+                      {area.id === "C3" && c3State === "self" && " · self-reported"}
+                    </p>
+                    <h3 className="text-xl sm:text-2xl font-extrabold leading-snug mb-5">
+                      {area.question}
+                    </h3>
+
+                    <div className="flex flex-col gap-2.5">
+                      {area.options.map((opt, i) => {
+                        const selected = answers[area.id] === i;
+                        return (
+                          <button
+                            key={opt}
+                            type="button"
+                            onClick={() => commit(area.id, i)}
+                            className={`rr-opt group flex w-full items-start gap-3 rounded-[14px] border px-4 py-3.5 text-left transition-all duration-200 ${
+                              selected
+                                ? "border-brand bg-white/10"
+                                : "border-white/20 bg-white/[0.03] hover:border-pink-3 hover:bg-white/[0.07] hover:-translate-y-0.5"
+                            }`}
+                          >
+                            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-white/25 text-[11px] font-bold text-purple-3 group-hover:border-pink-3 group-hover:text-white">
+                              {i + 1}
+                            </span>
+                            <span className="flex-1 text-[14px] leading-relaxed text-purple-2 group-hover:text-white">
+                              {opt}
+                            </span>
+                            <span className="mt-0.5 shrink-0 text-[11px] font-bold tabular-nums text-purple-4">
+                              +{POINTS[i]}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                <div className="mt-6 flex items-center justify-between">
                   <button
                     type="button"
-                    onClick={() => setShapeOpen(true)}
-                    className="rounded-[10px] border border-white/25 px-4 py-2 text-sm font-semibold text-purple-2 transition-colors hover:border-pink-3 hover:text-white focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+                    onClick={goBack}
+                    disabled={cursor === 0}
+                    className="text-sm font-semibold text-purple-3 transition-colors hover:text-white disabled:opacity-40 disabled:hover:text-purple-3"
                   >
-                    View my shape
+                    &larr; Back
                   </button>
-                ) : (
-                  !(area.id === "C3" && c3State !== "self") && (
-                    <p className="text-xs text-purple-4">Press 1 to 4 to answer</p>
-                  )
-                )}
-              </div>
+                  {focus ? (
+                    <button
+                      type="button"
+                      onClick={() => setShapeOpen(true)}
+                      className="rounded-[10px] border border-white/25 px-4 py-2 text-sm font-semibold text-purple-2 transition-colors hover:border-pink-3 hover:text-white focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+                    >
+                      View my shape
+                    </button>
+                  ) : (
+                    !(area.id === "C3" && c3State !== "self") && (
+                      <p className="text-xs text-purple-4">Press 1 to 4 to answer</p>
+                    )
+                  )}
+                </div>
+                </>
+              )}
             </div>
 
             {focus && shapeOpen && (
