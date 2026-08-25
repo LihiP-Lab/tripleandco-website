@@ -495,22 +495,28 @@ export function ReadinessScore() {
   const sheetRef = useRef<HTMLDivElement | null>(null);
   const returnFocusRef = useRef<HTMLElement | null>(null);
 
-  /* On small screens, the hero CTA opens focus mode instead of scrolling. */
+  /**
+   * The hero CTA opens focus mode on every screen. Scrolling to the console
+   * instead landed the visitor on the instrument, which reads as a dashboard
+   * rather than the start of anything: "Start My Score" has to open a question.
+   */
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       const t = e.target as HTMLElement | null;
       if (!t || !t.closest?.('a[href="#assessment"]')) return;
-      if (
-        window.matchMedia("(max-width: 1023px)").matches &&
-        phase === "quiz"
-      ) {
-        e.preventDefault();
-        setFocus(true);
-      }
+      if (phase !== "quiz") return;
+      e.preventDefault();
+      setFocus(true);
     };
     document.addEventListener("click", onClick);
     return () => document.removeEventListener("click", onClick);
   }, [phase]);
+
+  /* The skip hint has to name the input the visitor actually has. */
+  const [isTouch, setIsTouch] = useState(false);
+  useEffect(() => {
+    setIsTouch(window.matchMedia("(pointer: coarse)").matches);
+  }, []);
 
   useEffect(() => {
     if (phase !== "quiz") {
@@ -957,10 +963,10 @@ export function ReadinessScore() {
           >
             {focus && (
               <div
-                className="sticky top-0 z-10 border-b border-white/10 bg-dark/95 px-4 backdrop-blur"
+                className="sticky top-0 z-10 border-b border-white/10 bg-dark/95 px-4 backdrop-blur lg:px-8"
                 style={{ paddingTop: "env(safe-area-inset-top)" }}
               >
-                <div className="flex h-12 items-center justify-between gap-3">
+                <div className="mx-auto flex h-12 w-full max-w-[1000px] items-center justify-between gap-3 lg:h-16">
                   <Image
                     src="/images/logos/logo-bright.png"
                     alt="Triple & Co."
@@ -987,195 +993,260 @@ export function ReadinessScore() {
                     &times;
                   </button>
                 </div>
-                <div className="h-1 w-full overflow-hidden rounded-full bg-white/10">
-                  <div
-                    className="h-full rounded-full transition-[width] duration-500 ease-out"
-                    style={{
-                      width: `${easedRunning}%`,
-                      background:
-                        "linear-gradient(90deg,#FE3465 0%,#896D9C 100%)",
-                    }}
-                  />
+                <div className="mx-auto w-full max-w-[1000px]">
+                  <div className="h-1 w-full overflow-hidden rounded-full bg-white/10">
+                    <div
+                      className="h-full rounded-full transition-[width] duration-500 ease-out"
+                      style={{
+                        width: `${easedRunning}%`,
+                        background:
+                          "linear-gradient(90deg,#FE3465 0%,#896D9C 100%)",
+                      }}
+                    />
+                  </div>
+                  <p className="py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-purple-4">
+                    {cursor + 1} of {AREAS.length} &middot;{" "}
+                    {DIMENSION_BY_ID[dimension].label} &middot; {host.name}
+                  </p>
                 </div>
-                <p className="py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-purple-4">
-                  {cursor + 1} of {AREAS.length} &middot;{" "}
-                  {DIMENSION_BY_ID[dimension].label} &middot; {host.name}
-                </p>
               </div>
             )}
-            <div className={focus ? "flex-1 px-5 py-5" : "px-5 sm:px-8 py-7 sm:py-9"}>
-              {handoff ? (
-                <RoomHandoff
-                  handoff={handoff}
-                  answers={answers}
-                  onSkip={() => setHandoff(null)}
-                  touch={focus}
-                />
-              ) : (
-                <>
-                {/* host row */}
-                <div className={focus ? "hidden" : "mb-6 flex items-start gap-4"}>
-                  <HostPortrait dimension={dimension} />
-                  <div className="flex-1 pt-1">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">
-                      {DIMENSION_BY_ID[dimension].label}
-                    </p>
-                    <p className="text-sm font-bold text-white">
-                      {host.name}
-                      <span className="ml-2 font-medium text-purple-4">
-                        {host.role}
-                      </span>
-                    </p>
-                    <p
-                      key={dimension}
-                      className="rr-fade mt-2 text-[13px] leading-relaxed text-purple-2"
-                    >
-                      {host.line}
-                    </p>
-                  </div>
-                </div>
-
-                {/* C3 live check */}
-                {area.id === "C3" && c3State !== "self" ? (
-                  <div key="c3" className="rr-fade">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-purple-4 mb-2">
-                      Area 9 of 20 · Measured, not asked
-                    </p>
-                    <h3 className="text-xl sm:text-2xl font-extrabold leading-snug mb-2">
-                      {area.question}
-                    </h3>
-                    <p className="text-sm text-purple-2 leading-relaxed mb-5">
-                      This is the one area we measure instead of asking. Give
-                      Nova your domain and she fetches it the way AI crawlers do,
-                      then scores what comes back. Skip it and you can self-assess
-                      instead.
-                    </p>
-
-                    <form onSubmit={runC3} className="flex flex-col sm:flex-row gap-3">
-                      <label htmlFor="rr-domain" className="sr-only">
-                        Your domain
-                      </label>
-                      <input
-                        id="rr-domain"
-                        type="text"
-                        value={domain}
-                        onChange={(e) => setDomain(e.target.value)}
-                        placeholder="yourcompany.com"
-                        autoComplete="url"
-                        disabled={c3State === "scanning"}
-                        className="flex-1 rounded-[10px] border border-white/30 bg-white/5 px-4 py-3 text-[15px] text-white placeholder:text-purple-4 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50 disabled:opacity-60"
-                      />
-                      <button
-                        type="submit"
-                        disabled={c3State === "scanning" || domain.trim().length < 3}
-                        className="rounded-[10px] bg-brand px-6 py-3 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark disabled:opacity-50 disabled:hover:bg-brand focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
-                      >
-                        {c3State === "scanning" ? "Scanning" : "Scan My Site →"}
-                      </button>
-                    </form>
-
-                    {c3State === "scanning" && (
-                      <div className="mt-5 overflow-hidden rounded-[14px] border border-white/10 bg-white/5">
-                        <div className="relative h-24 overflow-hidden">
-                          <div
-                            className="rr-sweep absolute inset-x-0 h-10"
-                            style={{
-                              background:
-                                "linear-gradient(180deg, transparent, rgba(254,52,101,.35), transparent)",
-                            }}
-                          />
-                          <div className="relative flex h-full items-center gap-3 px-5">
-                            <span className="rr-pulse text-brand text-lg">&#9679;</span>
-                            <p className="font-mono text-[12px] leading-relaxed text-purple-2">
-                              nova.scan {domain || "your-domain"}
-                              <br />
-                              <span className="text-purple-4">
-                                llms.txt &middot; robots.txt for 10 AI crawlers
-                                &middot; JSON-LD &middot; Bing indexability
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    {c3Error && (
-                      <p className="mt-4 text-sm text-pink-3">{c3Error}</p>
-                    )}
-
-                    <button
-                      type="button"
-                      onClick={() => setC3State("self")}
-                      className="mt-4 text-sm font-semibold text-pink-3 underline underline-offset-4 hover:text-white"
-                    >
-                      Skip the scan and self-assess
-                    </button>
-                  </div>
+            <div
+              className={
+                focus
+                  ? "mx-auto w-full max-w-[1000px] flex-1 px-5 py-5 lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-10"
+                  : "px-5 sm:px-8 py-7 sm:py-9"
+              }
+            >
+              <div
+                className={
+                  focus
+                    ? "lg:grid lg:grid-cols-[1fr_260px] lg:items-start lg:gap-10"
+                    : ""
+                }
+              >
+                <div className="min-w-0">
+                {handoff ? (
+                  <RoomHandoff
+                    handoff={handoff}
+                    answers={answers}
+                    onSkip={() => setHandoff(null)}
+                    touch={isTouch}
+                  />
                 ) : (
-                  <div key={area.id} className="rr-fade">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-purple-4 mb-2">
-                      Area {cursor + 1} of {AREAS.length} &middot; {area.title}
-                      {area.id === "C3" && c3State === "self" && " · self-reported"}
-                    </p>
-                    <h3 className="text-xl sm:text-2xl font-extrabold leading-snug mb-5">
-                      {area.question}
-                    </h3>
-
-                    <div className="flex flex-col gap-2.5">
-                      {area.options.map((opt, i) => {
-                        const selected = answers[area.id] === i;
-                        return (
-                          <button
-                            key={opt}
-                            type="button"
-                            onClick={() => commit(area.id, i)}
-                            className={`rr-opt group flex w-full items-start gap-3 rounded-[14px] border px-4 py-3.5 text-left transition-all duration-200 ${
-                              selected
-                                ? "border-brand bg-white/10"
-                                : "border-white/20 bg-white/[0.03] hover:border-pink-3 hover:bg-white/[0.07] hover:-translate-y-0.5"
-                            }`}
-                          >
-                            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-white/25 text-[11px] font-bold text-purple-3 group-hover:border-pink-3 group-hover:text-white">
-                              {i + 1}
-                            </span>
-                            <span className="flex-1 text-[14px] leading-relaxed text-purple-2 group-hover:text-white">
-                              {opt}
-                            </span>
-                            <span className="mt-0.5 shrink-0 text-[11px] font-bold tabular-nums text-purple-4">
-                              +{POINTS[i]}
-                            </span>
-                          </button>
-                        );
-                      })}
+                  <>
+                  {/* host row */}
+                  <div className={
+                      focus
+                        ? "hidden lg:mb-6 lg:flex lg:items-start lg:gap-4"
+                        : "mb-6 flex items-start gap-4"
+                    }>
+                    <HostPortrait dimension={dimension} />
+                    <div className="flex-1 pt-1">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">
+                        {DIMENSION_BY_ID[dimension].label}
+                      </p>
+                      <p className="text-sm font-bold text-white">
+                        {host.name}
+                        <span className="ml-2 font-medium text-purple-4">
+                          {host.role}
+                        </span>
+                      </p>
+                      <p
+                        key={dimension}
+                        className="rr-fade mt-2 text-[13px] leading-relaxed text-purple-2"
+                      >
+                        {host.line}
+                      </p>
                     </div>
                   </div>
-                )}
 
-                <div className="mt-6 flex items-center justify-between">
-                  <button
-                    type="button"
-                    onClick={goBack}
-                    disabled={cursor === 0}
-                    className="text-sm font-semibold text-purple-3 transition-colors hover:text-white disabled:opacity-40 disabled:hover:text-purple-3"
-                  >
-                    &larr; Back
-                  </button>
-                  {focus ? (
+                  {/* C3 live check */}
+                  {area.id === "C3" && c3State !== "self" ? (
+                    <div key="c3" className="rr-fade">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-purple-4 mb-2">
+                        Area 9 of 20 · Measured, not asked
+                      </p>
+                      <h3 className="text-xl sm:text-2xl font-extrabold leading-snug mb-2">
+                        {area.question}
+                      </h3>
+                      <p className="text-sm text-purple-2 leading-relaxed mb-5">
+                        This is the one area we measure instead of asking. Give
+                        Nova your domain and she fetches it the way AI crawlers do,
+                        then scores what comes back. Skip it and you can self-assess
+                        instead.
+                      </p>
+
+                      <form onSubmit={runC3} className="flex flex-col sm:flex-row gap-3">
+                        <label htmlFor="rr-domain" className="sr-only">
+                          Your domain
+                        </label>
+                        <input
+                          id="rr-domain"
+                          type="text"
+                          value={domain}
+                          onChange={(e) => setDomain(e.target.value)}
+                          placeholder="yourcompany.com"
+                          autoComplete="url"
+                          disabled={c3State === "scanning"}
+                          className="flex-1 rounded-[10px] border border-white/30 bg-white/5 px-4 py-3 text-[15px] text-white placeholder:text-purple-4 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50 disabled:opacity-60"
+                        />
+                        <button
+                          type="submit"
+                          disabled={c3State === "scanning" || domain.trim().length < 3}
+                          className="rounded-[10px] bg-brand px-6 py-3 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark disabled:opacity-50 disabled:hover:bg-brand focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+                        >
+                          {c3State === "scanning" ? "Scanning" : "Scan My Site →"}
+                        </button>
+                      </form>
+
+                      {c3State === "scanning" && (
+                        <div className="mt-5 overflow-hidden rounded-[14px] border border-white/10 bg-white/5">
+                          <div className="relative h-24 overflow-hidden">
+                            <div
+                              className="rr-sweep absolute inset-x-0 h-10"
+                              style={{
+                                background:
+                                  "linear-gradient(180deg, transparent, rgba(254,52,101,.35), transparent)",
+                              }}
+                            />
+                            <div className="relative flex h-full items-center gap-3 px-5">
+                              <span className="rr-pulse text-brand text-lg">&#9679;</span>
+                              <p className="font-mono text-[12px] leading-relaxed text-purple-2">
+                                nova.scan {domain || "your-domain"}
+                                <br />
+                                <span className="text-purple-4">
+                                  llms.txt &middot; robots.txt for 10 AI crawlers
+                                  &middot; JSON-LD &middot; Bing indexability
+                                </span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {c3Error && (
+                        <p className="mt-4 text-sm text-pink-3">{c3Error}</p>
+                      )}
+
+                      <button
+                        type="button"
+                        onClick={() => setC3State("self")}
+                        className="mt-4 text-sm font-semibold text-pink-3 underline underline-offset-4 hover:text-white"
+                      >
+                        Skip the scan and self-assess
+                      </button>
+                    </div>
+                  ) : (
+                    <div key={area.id} className="rr-fade">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-purple-4 mb-2">
+                        Area {cursor + 1} of {AREAS.length} &middot; {area.title}
+                        {area.id === "C3" && c3State === "self" && " · self-reported"}
+                      </p>
+                      <h3 className="text-xl sm:text-2xl font-extrabold leading-snug mb-5">
+                        {area.question}
+                      </h3>
+
+                      <div className="flex flex-col gap-2.5">
+                        {area.options.map((opt, i) => {
+                          const selected = answers[area.id] === i;
+                          return (
+                            <button
+                              key={opt}
+                              type="button"
+                              onClick={() => commit(area.id, i)}
+                              className={`rr-opt group flex w-full items-start gap-3 rounded-[14px] border px-4 py-3.5 text-left transition-all duration-200 ${
+                                selected
+                                  ? "border-brand bg-white/10"
+                                  : "border-white/20 bg-white/[0.03] hover:border-pink-3 hover:bg-white/[0.07] hover:-translate-y-0.5"
+                              }`}
+                            >
+                              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-white/25 text-[11px] font-bold text-purple-3 group-hover:border-pink-3 group-hover:text-white">
+                                {i + 1}
+                              </span>
+                              <span className="flex-1 text-[14px] leading-relaxed text-purple-2 group-hover:text-white">
+                                {opt}
+                              </span>
+                              <span className="mt-0.5 shrink-0 text-[11px] font-bold tabular-nums text-purple-4">
+                                +{POINTS[i]}
+                              </span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="mt-6 flex items-center justify-between">
                     <button
                       type="button"
-                      onClick={() => setShapeOpen(true)}
-                      className="rounded-[10px] border border-white/25 px-4 py-2 text-sm font-semibold text-purple-2 transition-colors hover:border-pink-3 hover:text-white focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+                      onClick={goBack}
+                      disabled={cursor === 0}
+                      className="text-sm font-semibold text-purple-3 transition-colors hover:text-white disabled:opacity-40 disabled:hover:text-purple-3"
                     >
-                      View my shape
+                      &larr; Back
                     </button>
-                  ) : (
-                    !(area.id === "C3" && c3State !== "self") && (
-                      <p className="text-xs text-purple-4">Press 1 to 4 to answer</p>
-                    )
-                  )}
+                    {focus ? (
+                      <>
+                      <button
+                        type="button"
+                        onClick={() => setShapeOpen(true)}
+                        className="rounded-[10px] border border-white/25 px-4 py-2 text-sm font-semibold text-purple-2 transition-colors hover:border-pink-3 hover:text-white focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50 lg:hidden"
+                      >
+                        View my shape
+                      </button>
+                      {!isTouch &&
+                        !(area.id === "C3" && c3State !== "self") && (
+                          <p className="hidden text-xs text-purple-4 lg:block">
+                            Press 1 to 4 to answer
+                          </p>
+                        )}
+                      </>
+                    ) : (
+                      !(area.id === "C3" && c3State !== "self") && (
+                        <p className="text-xs text-purple-4">Press 1 to 4 to answer</p>
+                      )
+                    )}
+                  </div>
+                  </>
+                )}
                 </div>
-                </>
-              )}
+                {focus && (
+                  <aside className="hidden lg:block">
+                    <Radar values={radarValues} />
+                    <p className="mt-1 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-purple-4">
+                      Your shape so far
+                    </p>
+                    <ul className="mt-4 list-none space-y-1.5 p-0">
+                      {DIMENSIONS.map((d) => {
+                        const ds = dimensionScore(answers, d.id);
+                        return (
+                          <li
+                            key={d.id}
+                            className="flex items-center justify-between text-[12px]"
+                          >
+                            <span
+                              className={
+                                d.id === dimension
+                                  ? "font-bold text-pink-3"
+                                  : "text-purple-3"
+                              }
+                            >
+                              {d.short}
+                            </span>
+                            <span className="font-bold tabular-nums text-purple-2">
+                              {ds.points}
+                              <span className="font-medium text-purple-4">
+                                /{ds.max}
+                              </span>
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </aside>
+                )}
+              </div>
             </div>
 
             {focus && shapeOpen && (
