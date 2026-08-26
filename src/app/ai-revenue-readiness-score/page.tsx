@@ -7,6 +7,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { PillarFAQ } from "@/components/PillarFAQ";
 import { ReadinessScore } from "@/components/ReadinessScore";
 import { ScoreDemo } from "@/components/ScoreDemo";
+import { ScoreLoops } from "@/components/ScoreLoops";
 import { DIMENSIONS, TIERS, decodeAnswers, scoreOf, tierFor } from "@/lib/readiness";
 
 const URL = "https://www.tripleandco.com/ai-revenue-readiness-score";
@@ -301,6 +302,34 @@ export default function ReadinessPage() {
                 </ScrollReveal>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Proof: the instrument running, captured from the live page. */}
+      <section className="py-16 lg:py-20 bg-purple-05">
+        <div className="mx-auto max-w-[1100px] px-6 sm:px-8">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-3">See it run</p>
+            <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4 text-center">
+              Twenty Seconds of the{" "}
+              <span className="gradient-text">Real Thing.</span>
+            </h2>
+            <p className="text-base text-purple-7 leading-relaxed text-center mb-12 max-w-[660px] mx-auto">
+              Not a mockup. These are recordings of the assessment above,
+              running exactly as it will for you.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.06}>
+            <ScoreLoops />
+          </ScrollReveal>
+          <div className="mt-12 text-center">
+            <a
+              href="#assessment"
+              className="inline-flex items-center rounded-[10px] bg-brand-dark px-8 py-4 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+            >
+              Start My Score &rarr;
+            </a>
           </div>
         </div>
       </section>
