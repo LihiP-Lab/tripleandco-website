@@ -17,7 +17,9 @@ export function InsightsHub() {
   const [active, setActive] = useState<"All" | InsightCategory>("All");
 
   const visible =
-    active === "All" ? ARTICLES : ARTICLES.filter((a) => a.category === active);
+    active === "All"
+      ? ARTICLES.filter((a) => !a.featured)
+      : ARTICLES.filter((a) => a.category === active);
 
   return (
     <section className="py-12 lg:py-20 bg-white" id="all-insights">
