@@ -113,6 +113,12 @@ body {
   to { width: 100%; }
 }
 
+/* Referenced from a class so the minifier keeps the keyframes;
+   duration comes from --chapter-duration set inline. */
+.animate-chapter-fill {
+  animation: chapter-fill var(--chapter-duration, 5000ms) linear forwards;
+}
+
 @keyframes fade-in-left {
   from { opacity: 0; transform: translateX(-30px); }
   to { opacity: 1; transform: translateX(0); }
