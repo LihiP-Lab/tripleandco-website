@@ -102,7 +102,7 @@ function Frame({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative h-full overflow-hidden rounded-2xl border border-purple-15 bg-dark shadow-[var(--shadow-base)]">
+    <div className="relative flex-1 overflow-hidden rounded-2xl border border-purple-15 bg-dark shadow-[var(--shadow-base)]">
       <div className="flex items-center gap-2 border-b border-white/10 bg-white/5 px-4 py-2.5">
         <span className="flex gap-1.5" aria-hidden="true">
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
@@ -513,11 +513,11 @@ export function ScoreShowcase() {
       </figure>
 
       <div className="mt-10 grid gap-8 md:grid-cols-2 md:gap-6">
-        <figure className="m-0">
+        <figure className="m-0 flex flex-col">
           <SceneAnswering running={visible} />
           <Caption {...CAPTIONS[0]} />
         </figure>
-        <figure className="m-0">
+        <figure className="m-0 flex flex-col">
           <SceneHandoff running={visible} />
           <Caption {...CAPTIONS[1]} />
         </figure>
