@@ -3,6 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { InsightsNewsletter } from "@/components/InsightsNewsletter";
+import { InsightsHub } from "@/components/InsightsHub";
+import { InsightToolStrip } from "@/components/InsightToolHook";
+import {
+  ARTICLES,
+  articleHref,
+  CATEGORY_AGENTS,
+  FEATURED_ARTICLE,
+  TRACKS,
+} from "@/lib/insights";
 
 // ---------------------------------------------------------------------------
 // SEO METADATA
@@ -29,135 +38,6 @@ export const metadata: Metadata = {
   },
 };
 
-// ---------------------------------------------------------------------------
-// CONTENT DATA
-// ---------------------------------------------------------------------------
-const topicCategories = [
-  { label: "All", href: "/insights" },
-  { label: "CMO & CRO as a Service", href: "/insights/revenue" },
-  { label: "Fractional Leadership", href: "/insights/strategy" },
-  { label: "Native AI Marketing", href: "/insights/strategy" },
-  { label: "Podcasts", href: "/insights/podcasts" },
-];
-
-const silos = [
-  {
-    tagline: "The New Execution Model",
-    label: "CMO & CRO as a Service",
-    description:
-      "Why elite B2B companies are replacing legacy agency retainers with CMO as a Service and CRO as a Service, and the AI-native execution layer that makes it work at scale.",
-    href: "/insights/revenue",
-    accent: "brand",
-    agent: {
-      img: "/images/agents/rex.png",
-      name: "Rex",
-      role: "Growth Campaign Strategist",
-    },
-  },
-  {
-    tagline: "Hire for Leverage, Not Headcount",
-    label: "Fractional Leadership",
-    description:
-      "A decision framework for founders and CEOs: when a Fractional CMO or Fractional CRO outperforms a full-time hire, how to structure the engagement, and the signals that tell you it is time to bring one in.",
-    href: "/insights/strategy",
-    accent: "purple",
-    agent: {
-      img: "/images/agents/nova.png",
-      name: "Nova",
-      role: "Content Research Analyst",
-    },
-  },
-  {
-    tagline: "Agents, Not Just Tools",
-    label: "Native AI Marketing",
-    description:
-      "How to architect a marketing function for B2B in the AI era: supervised AI agents, human-in-the-loop oversight, and the operating model that lets a lean team execute like an enterprise.",
-    href: "/insights/strategy",
-    accent: "brand",
-    agent: {
-      img: "/images/agents/camille.png",
-      name: "Camille",
-      role: "Brand Voice Generator",
-    },
-  },
-];
-
-const articles = [
-  {
-    date: "Jun 2026",
-    title:
-      "Outsourced CMO in Israel: What It Really Costs in 2026 (and What You Get)",
-    excerpt:
-      "Full-time hire, outsourced marketing manager, or CMO as a Service? Real Israeli market numbers in shekels, what each tier actually delivers, and how to choose for your stage.",
-    category: "CMO & CRO as a Service",
-    href: "/insights/outsourced-cmo-israel-cost",
-    featured: true,
-    pillar: true,
-    readTime: "12 min read",
-    image: "/images/insights/featured.png",
-  },
-  {
-    date: "Jun 2026",
-    title: "What Is CMO as a Service? The Complete Guide for B2B Founders",
-    excerpt:
-      "Not a fractional hire. Not an agency retainer. CMO as a Service is a full marketing function: strategy, AI execution, and senior oversight in one engagement. Here is everything you need to know.",
-    category: "CMO & CRO as a Service",
-    href: "/insights/what-is-cmo-as-a-service",
-    featured: false,
-    pillar: true,
-    readTime: "10 min read",
-    image: "/images/insights/revenue.png",
-  },
-  {
-    date: "Jun 2026",
-    title: "Why Your B2B Company Needs a Native AI CMO, Not Just AI Tools",
-    excerpt:
-      "Every B2B marketing team is using AI. Pipeline quality has not improved proportionally. The problem is not the tools. It is the architecture, and here is what native AI marketing actually looks like.",
-    category: "Native AI Marketing",
-    href: "/insights/native-ai-cmo-marketing-for-b2b-in-the-ai-era",
-    featured: false,
-    pillar: true,
-    readTime: "9 min read",
-    image: "/images/insights/native-ai.png",
-  },
-  {
-    date: "8 Jul 2025",
-    title: "How to Write Strategic, Precise, and High-Impact Marketing Prompts",
-    excerpt:
-      "AI is only as good as the prompts you give it. Learn how to craft marketing prompts that produce content your team can actually use.",
-    category: "Native AI Marketing",
-    featured: false,
-    pillar: false,
-    readTime: "6 min read",
-    image: "/images/insights/native-ai.png",
-  },
-  {
-    date: "30 May 2025",
-    title: "The Future Is Here and It Is Not What We Feared",
-    excerpt:
-      "AI is not replacing marketers. It is giving the best ones superpowers. Here is what the future of marketing actually looks like.",
-    category: "Native AI Marketing",
-    featured: false,
-    pillar: false,
-    readTime: "5 min read",
-    image: "/images/insights/revenue.png",
-  },
-  {
-    date: "24 Mar 2024",
-    title: "How a Fractional CMO Can Transform Your Startup",
-    excerpt:
-      "Fractional CMOs bring executive-level marketing leadership without the overhead. Here is what to expect and how to get the most out of the engagement.",
-    category: "Fractional Leadership",
-    featured: false,
-    pillar: false,
-    readTime: "7 min read",
-    image: "/images/insights/fractional.png",
-  },
-];
-
-const featured = articles.find((a) => a.featured);
-const rest = articles.filter((a) => !a.featured);
-
 const blogSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
@@ -171,57 +51,18 @@ const blogSchema = {
     name: "Triple & Co.",
     url: "https://www.tripleandco.com",
   },
-  blogPost: articles
-    .filter((a) => a.href)
-    .map((a) => ({
-      "@type": "BlogPosting",
-      headline: a.title,
-      description: a.excerpt,
-      url: `https://www.tripleandco.com${a.href}`,
-      author: { "@type": "Person", name: "Lihi Pinto" },
-    })),
+  blogPost: ARTICLES.map((a) => ({
+    "@type": "BlogPosting",
+    headline: a.title,
+    description: a.excerpt,
+    url: `https://www.tripleandco.com${articleHref(a)}`,
+    datePublished: a.dateISO,
+    author: { "@type": "Person", name: "Lihi Pinto" },
+  })),
 };
 
-function AuthorRow({
-  date,
-  readTime,
-  light = false,
-}: {
-  date: string;
-  readTime?: string;
-  light?: boolean;
-}) {
-  return (
-    <div className="flex items-center gap-3">
-      <div className="relative w-8 h-8 rounded-full overflow-hidden border border-purple-15 shrink-0">
-        <Image
-          src="/images/lihi.png"
-          alt="Lihi Pinto"
-          fill
-          className="object-cover"
-          sizes="32px"
-        />
-      </div>
-      <div className="leading-tight">
-        <p
-          className={`text-[13px] font-semibold ${
-            light ? "text-white" : "text-purple-9"
-          }`}
-        >
-          Lihi Pinto
-        </p>
-        <p
-          className={`text-[13px] ${light ? "text-purple-4" : "text-purple-5"}`}
-        >
-          {date}
-          {readTime ? ` · ${readTime}` : ""}
-        </p>
-      </div>
-    </div>
-  );
-}
-
 export default function InsightsPage() {
+  const featured = FEATURED_ARTICLE;
   return (
     <>
       <script
@@ -269,30 +110,33 @@ export default function InsightsPage() {
               <span className="gradient-text">AI Era</span>
             </h1>
             <p className="text-lg text-purple-3 leading-relaxed max-w-2xl">
-              Marketing for B2B in the AI era is not a channel problem. It is an
-              architecture problem. Triple &amp; Co. publishes battle-tested
-              scaling playbooks drawn from live engagements as a Fractional CMO,
-              a native AI CRO as a Service team, and an embedded growth partner
-              for venture-backed companies worldwide. No theory. No filler.
-              Only what we have shipped, measured, and repeated.
+              Marketing for B2B in the AI era is not a channel problem. It is
+              an architecture problem. Everything here is drawn from live
+              Fractional CMO and CRO engagements. No theory. No filler. Only
+              what we have shipped, measured, and repeated.
             </p>
           </div>
 
-          {/* Topic filter nav */}
+          {/* Quick paths */}
           <div className="flex flex-wrap gap-2 mt-8">
-            {topicCategories.map((cat) => (
-              <Link
-                key={cat.label}
-                href={cat.href}
-                className={`rounded-full px-4 py-2 text-sm font-semibold transition-all ${
-                  cat.label === "All"
-                    ? "bg-brand text-white"
-                    : "border border-purple-7 text-purple-2 hover:border-brand hover:text-white"
-                }`}
-              >
-                {cat.label}
-              </Link>
-            ))}
+            <a
+              href="#all-insights"
+              className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-brand-dark"
+            >
+              Browse the Library
+            </a>
+            <a
+              href="#tracks"
+              className="rounded-full border border-purple-7 px-4 py-2 text-sm font-semibold text-purple-2 transition-all hover:border-brand hover:text-white"
+            >
+              Explore the Tracks
+            </a>
+            <Link
+              href="/insights/podcasts"
+              className="rounded-full border border-purple-7 px-4 py-2 text-sm font-semibold text-purple-2 transition-all hover:border-brand hover:text-white"
+            >
+              Podcast
+            </Link>
           </div>
         </div>
       </section>
@@ -326,25 +170,37 @@ export default function InsightsPage() {
                     <p className="text-purple-3 leading-relaxed">
                       {featured.excerpt}
                     </p>
-                    <AuthorRow
-                      date={featured.date}
-                      readTime={featured.readTime}
-                      light
-                    />
-                    {featured.href && (
-                      <Link
-                        href={featured.href}
-                        className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] mt-1"
-                      >
-                        Read the Full Story <span aria-hidden>&#8594;</span>
-                      </Link>
-                    )}
+                    <div className="flex items-center gap-3">
+                      <div className="relative w-8 h-8 rounded-full overflow-hidden border border-purple-15 shrink-0">
+                        <Image
+                          src="/images/lihi.png"
+                          alt="Lihi Pinto"
+                          fill
+                          className="object-cover"
+                          sizes="32px"
+                        />
+                      </div>
+                      <div className="leading-tight">
+                        <p className="text-[13px] font-semibold text-white">
+                          Lihi Pinto
+                        </p>
+                        <p className="text-[13px] text-purple-4">
+                          {featured.date} &middot; {featured.readTime}
+                        </p>
+                      </div>
+                    </div>
+                    <Link
+                      href={articleHref(featured)}
+                      className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] mt-1"
+                    >
+                      Read the Full Story <span aria-hidden>&#8594;</span>
+                    </Link>
                   </div>
 
                   {/* Featured visual panel */}
                   <div className="relative hidden lg:block overflow-hidden min-h-[404px]">
                     <Image
-                      src={featured.image}
+                      src="/images/insights/featured.png"
                       alt={featured.title}
                       fill
                       className="object-cover"
@@ -376,99 +232,18 @@ export default function InsightsPage() {
       )}
 
       {/* ================================================================
-          ARTICLES GRID
+          ARTICLES GRID (client, real filtering)
       ================================================================ */}
-      <section className="py-12 lg:py-20 bg-white">
-        <div className="mx-auto max-w-[1200px] px-8">
-          <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-brand mb-2">
-              Latest Insights
-            </p>
-            <h2 className="text-2xl lg:text-3xl font-extrabold text-purple-9 mb-8">
-              All Insights
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {rest.map((article, i) => {
-              const cardClass =
-                "relative bg-white rounded-[20px] shadow-[0_4px_20px_rgba(137,109,156,0.12)] overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(137,109,156,0.18)] h-full flex flex-col group";
-              const cardInner = (
-                <>
-                  {/* Gradient top bar */}
-                  <div className="h-[5px] gradient-bar shrink-0" aria-hidden />
-                  {/* Image header */}
-                  <div className="relative h-[220px] shrink-0 overflow-hidden">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover"
-                      sizes="(min-width: 1024px) 405px, 100vw"
-                    />
-                    <div
-                      aria-hidden
-                      className="absolute inset-0"
-                      style={{
-                        background:
-                          "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.18) 100%)",
-                      }}
-                    />
-                    <span className="absolute top-4 left-4 rounded-full border border-purple-7 px-3 py-1.5 text-[11px] font-semibold uppercase text-purple-2 bg-purple-9/80 backdrop-blur-sm">
-                      {article.category}
-                    </span>
-                    {article.pillar && (
-                      <span className="absolute top-4 right-4 rounded-full bg-brand px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-widest text-white">
-                        Pillar
-                      </span>
-                    )}
-                  </div>
-                  {/* Body */}
-                  <div className="p-6 flex flex-col gap-4 flex-1">
-                    <div className="flex flex-col gap-2 flex-1">
-                      <h3 className="text-[20px] font-bold text-purple-9 tracking-tight leading-[1.3] group-hover:text-brand transition-colors">
-                        {article.title}
-                      </h3>
-                      <p className="text-sm text-purple-5 leading-[1.5]">
-                        {article.excerpt}
-                      </p>
-                    </div>
-                    <div className="border-t border-purple-15 pt-4">
-                      <AuthorRow
-                        date={article.date}
-                        readTime={article.readTime}
-                      />
-                    </div>
-                  </div>
-                </>
-              );
-              return (
-                <ScrollReveal key={article.title} delay={0.05 + i * 0.04}>
-                  {article.href ? (
-                    <Link
-                      href={article.href}
-                      className={`${cardClass} cursor-pointer`}
-                    >
-                      {cardInner}
-                    </Link>
-                  ) : (
-                    <article className={cardClass}>{cardInner}</article>
-                  )}
-                </ScrollReveal>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <InsightsHub />
 
       {/* ================================================================
-          THREE CONTENT SILOS
+          THREE CONTENT TRACKS (agent-hosted)
       ================================================================ */}
-      <section className="py-12 lg:py-16 bg-purple-05">
+      <section className="py-12 lg:py-16 bg-purple-05" id="tracks">
         <div className="mx-auto max-w-[1200px] px-8">
           <ScrollReveal>
             <h2 className="text-2xl font-extrabold text-purple-9 mb-2">
-              Browse by Topic
+              Browse by Track
             </h2>
             <p className="text-purple-6 mb-2 text-base">
               Three content tracks. Each one built around a decision a scaling
@@ -484,44 +259,67 @@ export default function InsightsPage() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {silos.map((silo, i) => (
-              <ScrollReveal key={silo.label} delay={0.05 + i * 0.07}>
-                <Link
-                  href={silo.href}
-                  className="group relative flex flex-col gap-4 rounded-2xl border border-purple-15 bg-white p-7 transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(137,109,156,0.18)] hover:border-brand/30 card-gradient-top h-full"
-                >
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-brand mb-2">
-                      {silo.tagline}
-                    </p>
-                    <h3 className="text-lg font-extrabold text-purple-9 leading-snug">
-                      {silo.label}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-purple-7 leading-relaxed flex-1 pr-16">
-                    {silo.description}
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand group-hover:gap-2 transition-all">
-                    Explore <span>&#8594;</span>
-                  </span>
-                  {/* Topic-owner agent */}
-                  <div
-                    className="absolute bottom-2 right-3 h-[120px] w-[72px] pointer-events-none transition-transform group-hover:-translate-y-1"
-                    aria-hidden={false}
+            {TRACKS.map((track, i) => {
+              const agent = CATEGORY_AGENTS[track.category];
+              return (
+                <ScrollReveal key={track.category} delay={0.05 + i * 0.07}>
+                  <Link
+                    href={track.href}
+                    className="group relative flex flex-col gap-4 rounded-2xl border border-purple-15 bg-white p-7 transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(137,109,156,0.18)] hover:border-brand/30 card-gradient-top h-full"
                   >
-                    <Image
-                      src={silo.agent.img}
-                      alt={`${silo.agent.name}, ${silo.agent.role}`}
-                      title={`${silo.agent.name} · ${silo.agent.role}`}
-                      fill
-                      className="object-contain object-bottom"
-                      sizes="72px"
-                    />
-                  </div>
-                </Link>
-              </ScrollReveal>
-            ))}
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-widest text-brand mb-2">
+                        {track.tagline}
+                      </p>
+                      <h3 className="text-lg font-extrabold text-purple-9 leading-snug">
+                        {track.category}
+                      </h3>
+                    </div>
+                    <p className="text-sm text-purple-7 leading-relaxed flex-1 pr-16">
+                      {track.description}
+                    </p>
+                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand group-hover:gap-2 transition-all">
+                      Explore <span aria-hidden>&#8594;</span>
+                    </span>
+                    {/* Track-owner agent */}
+                    <div className="absolute bottom-2 right-3 h-[120px] w-[72px] pointer-events-none transition-transform group-hover:-translate-y-1">
+                      <Image
+                        src={agent.img}
+                        alt={`${agent.name}, ${agent.role}`}
+                        title={`${agent.name} · ${agent.role}`}
+                        fill
+                        className="object-contain object-bottom"
+                        sizes="72px"
+                      />
+                    </div>
+                  </Link>
+                </ScrollReveal>
+              );
+            })}
           </div>
+        </div>
+      </section>
+
+      {/* ================================================================
+          DO IT, DON'T JUST READ IT (product hooks)
+      ================================================================ */}
+      <section className="py-12 lg:py-16 bg-white">
+        <div className="mx-auto max-w-[1200px] px-8">
+          <ScrollReveal>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-brand mb-2">
+              Do it, don&apos;t just read it
+            </p>
+            <h2 className="text-2xl font-extrabold text-purple-9 mb-2">
+              Turn the Playbooks Into Numbers
+            </h2>
+            <p className="text-purple-6 mb-8 text-base max-w-2xl">
+              Every playbook in this hub maps to a live instrument. Run one and
+              see where your own operation stands before you read another word.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <InsightToolStrip />
+          </ScrollReveal>
         </div>
       </section>
 
@@ -588,7 +386,7 @@ export default function InsightsPage() {
                 href="/insights/podcasts"
                 className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
               >
-                Browse Episodes <span>&#8594;</span>
+                Browse Episodes <span aria-hidden>&#8594;</span>
               </Link>
               {/* Lumen, Video & Motion Director */}
               <div className="absolute bottom-0 right-6 h-[160px] w-[132px] hidden lg:block pointer-events-none">
@@ -674,7 +472,7 @@ export default function InsightsPage() {
                     href="/about"
                     className="text-sm font-semibold text-brand hover:text-brand-dark transition-colors"
                   >
-                    Full story <span>&#8594;</span>
+                    Full story <span aria-hidden>&#8594;</span>
                   </Link>
                   <Link
                     href="/revenue-diagnostic#book"
@@ -707,7 +505,7 @@ export default function InsightsPage() {
               href="/revenue-diagnostic#book"
               className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
             >
-              Book a Diagnostic Call <span>&#8594;</span>
+              Book a Diagnostic Call <span aria-hidden>&#8594;</span>
             </Link>
           </ScrollReveal>
         </div>

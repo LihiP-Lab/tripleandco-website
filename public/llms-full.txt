@@ -5456,9 +5456,9 @@ AI B2B Growth Resource Hub
 
 # Revenue Playbooks for B2B Leaders Who Build in the AI Era
 
-Marketing for B2B in the AI era is not a channel problem. It is an architecture problem. Triple & Co. publishes battle-tested scaling playbooks drawn from live engagements as a Fractional CMO, a native AI CRO as a Service team, and an embedded growth partner for venture-backed companies worldwide. No theory. No filler. Only what we have shipped, measured, and repeated.
+Marketing for B2B in the AI era is not a channel problem. It is an architecture problem. Everything here is drawn from live Fractional CMO and CRO engagements. No theory. No filler. Only what we have shipped, measured, and repeated.
 
-All CMO & CRO as a Service Fractional Leadership Native AI Marketing Podcasts
+Browse the Library Explore the Tracks Podcast
 
 Featured Pillar Article
 
@@ -5467,16 +5467,27 @@ Featured Pillar Article
 Full-time hire, outsourced marketing manager, or CMO as a Service? Real Israeli market numbers in shekels, what each tier actually delivers, and how to choose for your stage.
 
 Lihi Pinto
-Jun 2026 · 12 min read
+June 2026 · 12 min read
 
 Read the Full Story →
 
 Featured Insight
 12 min read
 
-Latest Insights
+The Library
 
 ## All Insights
+
+All CMO & CRO as a Service Fractional Leadership Native AI Marketing Podcasts ↗
+
+CMO & CRO as a Service Pillar
+
+### Outsourced CMO in Israel: What It Really Costs in 2026 (and What You Get)
+
+Full-time hire, outsourced marketing manager, or CMO as a Service? Real Israeli market numbers in shekels, what each tier actually delivers, and how to choose for your stage.
+
+Lihi Pinto
+June 2026 · 12 min read
 
 CMO & CRO as a Service Pillar
 
@@ -5485,7 +5496,7 @@ CMO & CRO as a Service Pillar
 Not a fractional hire. Not an agency retainer. CMO as a Service is a full marketing function: strategy, AI execution, and senior oversight in one engagement. Here is everything you need to know.
 
 Lihi Pinto
-Jun 2026 · 10 min read
+June 2026 · 10 min read
 
 Native AI Marketing Pillar
 
@@ -5494,36 +5505,9 @@ Native AI Marketing Pillar
 Every B2B marketing team is using AI. Pipeline quality has not improved proportionally. The problem is not the tools. It is the architecture, and here is what native AI marketing actually looks like.
 
 Lihi Pinto
-Jun 2026 · 9 min read
+June 2026 · 9 min read
 
-Native AI Marketing
-
-### How to Write Strategic, Precise, and High-Impact Marketing Prompts
-
-AI is only as good as the prompts you give it. Learn how to craft marketing prompts that produce content your team can actually use.
-
-Lihi Pinto
-8 Jul 2025 · 6 min read
-
-Native AI Marketing
-
-### The Future Is Here and It Is Not What We Feared
-
-AI is not replacing marketers. It is giving the best ones superpowers. Here is what the future of marketing actually looks like.
-
-Lihi Pinto
-30 May 2025 · 5 min read
-
-Fractional Leadership
-
-### How a Fractional CMO Can Transform Your Startup
-
-Fractional CMOs bring executive-level marketing leadership without the overhead. Here is what to expect and how to get the most out of the engagement.
-
-Lihi Pinto
-24 Mar 2024 · 7 min read
-
-## Browse by Topic
+## Browse by Track
 
 Three content tracks. Each one built around a decision a scaling B2B company actually has to make.
 Each track is run by one of our marketing agents →
@@ -5547,6 +5531,32 @@ Agents, Not Just Tools
 
 How to architect a marketing function for B2B in the AI era: supervised AI agents, human-in-the-loop oversight, and the operating model that lets a lean team execute like an enterprise.
 Explore →
+
+Do it, don't just read it
+
+## Turn the Playbooks Into Numbers
+
+Every playbook in this hub maps to a live instrument. Run one and see where your own operation stands before you read another word.
+
+AI Revenue Readiness Score
+
+### How ready is your revenue operation?
+
+20 questions, 7 dimensions, a 0 to 100 score, and the exact gaps holding your pipeline back.
+Free · 3 minutes · no email needed
+Get My Score → AI Visibility Checker
+
+### Can AI models actually see your site?
+
+A live audit of your robots.txt, structured data, and llms.txt, scored 0 to 100 for AI-era discoverability.
+Free · instant · runs on your live site
+Check My Visibility → Revenue Diagnostic
+
+### Get a concrete plan for your stage
+
+A free 45-minute call with Lihi: your funnel, your gaps, and the highest-leverage fix, mapped live.
+Free · 45 minutes · with a senior operator
+Book a Diagnostic Call →
 
 Stay Sharp
 
@@ -5579,153 +5589,149 @@ Book a Diagnostic Call →
 
 ---
 url: https://www.tripleandco.com/insights/revenue
-title: Revenue Insights | Triple & Co.
-description: Every startup has its own scaling formula. Explore how Triple & Co. builds marketing, sales, and customer success engines that triple revenue.
+title: CMO & CRO as a Service Insights | Triple & Co.
+description: The new execution model: why B2B companies are replacing agency retainers with CMO and CRO as a Service, and the AI-native layer that makes it scale.
 ---
 - Home
 - Insights
-- Revenue
-Revenue
+- CMO & CRO as a Service
+Content Track
 
-# Every Start-Up Is Unique .
+# CMO & CRO as a Service
 
-Every start-up has its own scaling formula. Together, we will discover yours. Powered by over 15 years of experience and a relentless passion for growth, Lihi Pinto will become an extension of your start-up.
+The new execution model. Why elite B2B companies are replacing legacy agency retainers and lone fractional hires with a full marketing and revenue function: senior strategy, AI-native execution, and human oversight in one engagement.
 
-## Marketing
+Track host
+Rex · Growth Campaign Strategist
 
-Triple provides B2B tech companies with the know-how to create a well-oiled marketing machine. We develop your unique lead generation process from strategy to content creation to building a team of knowledgeable experts.
-Bring in qualified leads to feed your sales and fuel your growth.
+In this track
 
-### Marketing Strategy
+## The Playbooks
 
-- Hiring
-- Go-to-market (GTM) strategy
-- Lead gen foundations for pipeline generation
-- Buyer persona analysis: finding your ICP
-- Funnel analysis
-- A/B Testing
-- Content strategy and creation
-- Competitive analysis
+CMO & CRO as a Service Pillar
 
-### Branding
+### Outsourced CMO in Israel: What It Really Costs in 2026 (and What You Get)
 
-- Messaging
-- Logo creation
-- Website creation
+Full-time hire, outsourced marketing manager, or CMO as a Service? Real Israeli market numbers in shekels, what each tier actually delivers, and how to choose for your stage.
 
-### Inbound
+Lihi Pinto
+June 2026 · 12 min read
 
-- Content creation
-- Ebooks
-- Case studies
-- White papers
-- Webinars
+CMO & CRO as a Service Pillar
 
-### ABM: Triple’s LEC Method
+### What Is CMO as a Service? The Complete Guide for B2B Founders
 
-- Locate: zero in on the accounts you need to grow
-- Engage: nail their needs with hyper-personalized content
-- Convert: invite them to be a part of your larger vision
+Not a fractional hire. Not an agency retainer. CMO as a Service is a full marketing function: strategy, AI execution, and senior oversight in one engagement. Here is everything you need to know.
 
-## Sales
+Lihi Pinto
+June 2026 · 10 min read
 
-Building a powerhouse sales team and scaling it over and over is undoubtedly one of the most challenging tasks founders face. Triple provides a specific sales strategy that suits you, your product, and most importantly, your customer.
-We analyze the customer journey and design a funnel that brings the right clients to your door.
+## What This Track Covers
 
-### Outbound & Business Development
+Every piece answers one question: how does a scaling B2B company get a complete marketing and revenue function without building a department?
 
-- Sales organization structure
-- Align strategy and budget goals
-- Identify your best-performing sales method
+### The Model
 
-### Partnership Strategies
+- CMO as a Service vs. Fractional CMO vs. agency
+- What a full marketing function actually includes
+- Pricing tiers and what each one delivers
+- How senior oversight and AI execution combine
 
-- Establish a referral strategy
-- Initiate a reseller strategy
+### The Economics
 
-## Customer Success
+- Real market costs, in real numbers
+- The hidden costs of the traditional retainer
+- Cost per outcome, not cost per hour
+- When a full-time hire is actually the right call
 
-Customer Success is THE most crucial aspect of a sustainable and scaling SaaS business. The reason is simple: Customer Success is handling the most valuable asset we have: our customers.
-Once we value the importance of the success of our customers and become totally obsessed over it, we know we’re poised for growth.
+### The Execution Layer
 
-### SaaS Metrics & Tools
+- Eight specialist agents under human supervision
+- The Orchestrator Method: Brief, Run, Deliver
+- Woman in the Loop quality control
+- From strategy doc to shipped pipeline
 
-- Collect and measure
-- Analyze data
-- Predict the best action for success
+AI Revenue Readiness Score
 
-### End-to-End Assessment
+### How ready is your revenue operation?
 
-- Current performance and metrics review
-- Onboarding process to full renewal cycle
-- Focus on the most important CS KPI: Expansions
+20 questions, 7 dimensions, a 0 to 100 score, and the exact gaps holding your pipeline back.
+Get My Score → Free · 3 minutes · no email needed
 
-The joint work process
+## See the Model on Your Own Numbers
 
-## Triple Becomes an Extension of Your Start-Up
-
-We are there with you throughout the entire process, constantly assessing, re-evaluating, and enhancing for maximum growth.
+Book a free diagnostic call with Lihi and find out what CMO or CRO as a Service would look like for your stage and market.
 Book a Diagnostic Call →
 
 ---
 url: https://www.tripleandco.com/insights/strategy
-title: Strategy Insights | Triple & Co.
-description: The Joint Work Process: more than a collaboration, more than coaching. Triple becomes another hand in your business, guiding you toward relentless growth.
+title: Leadership & AI Strategy Insights | Triple & Co.
+description: Two tracks for founders and CEOs: when fractional leadership beats a full-time hire, and how to architect an AI-native marketing function that scales.
 ---
 - Home
 - Insights
-- Strategy
-Strategy
+- Leadership & AI Strategy
+Content Tracks
 
-# The Joint Work Process
+# Leadership & AI Strategy
 
-More than a collaboration, more than coaching. Triple becomes another hand in your business, strategically guiding you toward success and relentless growth, one step at a time.
+Two tracks, one question: how should a scaling B2B company staff and architect its growth function in the AI era? Decision frameworks for fractional leadership, and operating models for AI-native marketing.
 
-Triple will help you make crucial decisions at a healthy pace. Our creative methods set you up to understand how to manage high-speed growth and decision-making optimized for success.
-At each new phase of growth, it's essential to look at what's immediately in front of us as well as what possibilities are on the horizon. The SaaS world is highly competitive, and even with a ground-breaking idea, there's competition all around.
+Fractional Leadership Native AI Marketing
 
-Projects we cover together
+Hire for Leverage, Not Headcount
 
-## Seven Pillars of Growth
+## Fractional Leadership
 
-### Marketing
+A decision framework for founders and CEOs: when a Fractional CMO or Fractional CRO outperforms a full-time hire, how to structure the engagement, and the signals that tell you it is time to bring one in.
 
-Brand and Lead Generation
-From positioning and brand strategy to inbound and demand generation, we build the marketing engine that feeds your pipeline.
+Track host
+Nova · Content Research Analyst
 
-### Sales
+### In this track
 
-The Best-Performing Method for Your Start-Up
-We identify and implement the sales methodology that works for your product, market, and buyer, then build the team and playbooks to scale it.
+- Fractional CMO vs. full-time hire vs. agency: the real trade-offs
+- How to structure and scope a fractional engagement
+- The signals that say it is time to bring in senior leadership
+- What senior oversight looks like when AI does the execution
 
-### Customer Success
+The first playbooks in this track are in production with Nova . Meanwhile, the full library covers the adjacent decisions.
 
-Build a Revenue Machine: Onboarding to Expansions
-From first onboarding to renewal to expansion, we design the customer success foundations that protect and grow recurring revenue.
+Agents, Not Just Tools
 
-### M&A Opportunities
+## Native AI Marketing
 
-Identifying and Executing M&A
-Spot acquisition targets, evaluate strategic fit, and execute transactions that accelerate your growth trajectory.
+How to architect a marketing function for B2B in the AI era: supervised AI agents, human-in-the-loop oversight, and the operating model that lets a lean team execute like an enterprise.
 
-### Product Road Map
+Track host
+Camille · Brand Voice Generator
 
-Align Product with Revenue
-Ensure your product roadmap is driven by market demand and revenue goals, not just feature requests.
+### In this track
 
-### Funding Strategy
+- Why AI tools alone do not move pipeline quality
+- Supervised AI: agents with human-in-the-loop review
+- The operating model behind an AI-native marketing function
+- GEO and LLM SEO: being found by AI, not just by Google
 
-Strategy and Execution
-Lihi’s investment banking background helps you map capital needs, prepare materials, and connect with the right investors and partners.
+Native AI Marketing Pillar
 
-### Pricing
+### Why Your B2B Company Needs a Native AI CMO, Not Just AI Tools
 
-Optimize Your Pricing Model
-Get your pricing right with competitive analysis, value-based pricing frameworks, and packaging strategies that maximize revenue per customer.
+Every B2B marketing team is using AI. Pipeline quality has not improved proportionally. The problem is not the tools. It is the architecture, and here is what native AI marketing actually looks like.
 
-## Ready to Triple Your Start-Up?
+Lihi Pinto
+June 2026 · 9 min read
 
-Let's discuss your goals and map out the strategy that will unlock your next stage of growth.
+AI Visibility Checker
+
+### Can AI models actually see your site?
+
+A live audit of your robots.txt, structured data, and llms.txt, scored 0 to 100 for AI-era discoverability.
+Check My Visibility → Free · instant · runs on your live site
+
+## Map Your Own Growth Architecture
+
+Book a free diagnostic call with Lihi and get a straight answer on leadership, structure, and the AI-native operating model that fits your stage.
 Book a Diagnostic Call →
 
 ---
@@ -5862,6 +5868,13 @@ Usually post-Series B, when there is a real marketing team to lead daily and the
 
 Go deeper
 New to the model? Read What Is CMO as a Service? The Complete Guide for B2B Founders or see how the AI delivery layer works in Why Your B2B Company Needs a Native AI CMO .
+
+AI Revenue Readiness Score
+
+### How ready is your revenue operation?
+
+20 questions, 7 dimensions, a 0 to 100 score, and the exact gaps holding your pipeline back.
+Get My Score → Free · 3 minutes · no email needed
 
 Get a real number
 
@@ -6016,6 +6029,13 @@ Ready to talk specifics?
 
 In a 45-minute Diagnostic Call, Lihi will assess your current marketing setup, identify the highest-leverage gap in your system, and give you a straight answer about whether CMO as a Service is the right move for your company right now. No generic pitch. No AI-generated proposal. A senior operator who has built this from scratch, telling you what she actually sees.
 Book a Diagnostic Call →
+
+AI Revenue Readiness Score
+
+### How ready is your revenue operation?
+
+20 questions, 7 dimensions, a 0 to 100 score, and the exact gaps holding your pipeline back.
+Get My Score → Free · 3 minutes · no email needed
 
 Triple & Co. is a Native AI CMO and CRO as a Service firm. Our Woman in the Loop (WIL) architecture combines senior strategic direction from Lihi Pinto with eight specialized AI agents executing across brand, content, SEO, paid, social, email, intelligence, and analytics. Meet the agents or learn how we work .
 
@@ -6200,6 +6220,13 @@ For companies competing in global B2B markets, US-based companies targeting EU e
 Using AI tools is table stakes. Every B2B company is doing it. The competitive advantage has moved upstream, to the architecture that determines what those tools produce and whether that output moves the revenue needle.
 A Native AI CMO function is not a technology investment. It is a structural decision about how your company will compete for attention, trust, and pipeline in a market where every competitor has access to the same foundation models, the same distribution channels, and the same volume-production capabilities.
 The differentiator is not the AI. It is the strategic judgment that directs it, the specialized architecture that structures it, and the human oversight that ensures every output advances a specific commercial objective rather than filling a content calendar. That is the WIL model. That is what marketing for B2B in the AI era actually looks like when it is built to produce revenue rather than activity.
+
+AI Visibility Checker
+
+### Can AI models actually see your site?
+
+A live audit of your robots.txt, structured data, and llms.txt, scored 0 to 100 for AI-era discoverability.
+Check My Visibility → Free · instant · runs on your live site
 
 See the system. Then decide.
 

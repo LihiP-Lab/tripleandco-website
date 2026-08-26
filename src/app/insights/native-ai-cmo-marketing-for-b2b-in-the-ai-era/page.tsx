@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { InsightToolHook } from "@/components/InsightToolHook";
 
 export const metadata: Metadata = {
   title: "Native AI CMO: Marketing for B2B",
@@ -447,6 +448,13 @@ export default function Article3Page() {
             </p>
 
           </div>
+        </div>
+      </section>
+
+      {/* ── TOOL HOOK ── */}
+      <section className="py-12 lg:py-16 bg-white">
+        <div className="mx-auto max-w-[880px] px-8">
+          <InsightToolHook id="visibility" />
         </div>
       </section>
 
