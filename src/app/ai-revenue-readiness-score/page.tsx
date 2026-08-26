@@ -219,9 +219,9 @@ export default function ReadinessPage() {
                   {DIMENSIONS[0].host.name} &middot; {DIMENSIONS[0].host.role}
                 </p>
                 <p className="text-[15px] font-semibold leading-relaxed text-purple-9">
-                  That was a sample run. Yours starts at zero, right below
-                  &mdash; I open with three strategy questions, and your score
-                  is on screen in about three minutes.
+                  That was a sample run. Yours starts at zero, right below.
+                  I open with three strategy questions, and your score is on
+                  screen in about three minutes.
                 </p>
               </div>
               <a
