@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { PillarFAQ } from "@/components/PillarFAQ";
 import { ReadinessScore } from "@/components/ReadinessScore";
-import { ScoreDemo } from "@/components/ScoreDemo";
+import { ScoreHeroLoop } from "@/components/ScoreHeroLoop";
 import { ScoreShowcase } from "@/components/ScoreShowcase";
 import { DIMENSIONS, TIERS, decodeAnswers, scoreOf, tierFor } from "@/lib/readiness";
 
@@ -180,30 +180,29 @@ export default function ReadinessPage() {
               { label: "AI Revenue Readiness Score" },
             ]}
           />
-          <div className="mt-2 grid items-center gap-10 lg:grid-cols-[1fr_400px]">
-            <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.03] text-purple-9 mb-4">
-                What&apos;s Your Company&apos;s{" "}
-                <span className="gradient-text">Score Today?</span>
-              </h1>
-              <p className="text-lg sm:text-xl text-purple-7 leading-relaxed mb-8 max-w-[540px]">
-                Watch it build live. 20 answers, 100 points, and the exact
-                shape of where your revenue operation is leaking.
+          <div className="mt-2 mx-auto max-w-[760px] text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.03] text-purple-9 mb-4">
+              What&apos;s Your Company&apos;s{" "}
+              <span className="gradient-text">Score Today?</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-purple-7 leading-relaxed mb-8 mx-auto max-w-[560px]">
+              Watch it build live. 20 answers, 100 points, and the exact shape
+              of where your revenue operation is leaking.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3">
+              <a
+                href="#assessment"
+                className="inline-flex items-center rounded-[10px] bg-brand-dark px-8 py-4 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+              >
+                Start My Score &rarr;
+              </a>
+              <p className="text-sm text-purple-7">
+                Free · 3 minutes · no email needed
               </p>
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-                <a
-                  href="#assessment"
-                  className="inline-flex items-center rounded-[10px] bg-brand-dark px-8 py-4 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
-                >
-                  Start My Score &rarr;
-                </a>
-                <p className="text-sm text-purple-7">
-                  Free · 3 minutes · no email needed
-                </p>
-              </div>
             </div>
-            <ScoreDemo />
           </div>
+
+          <ScoreHeroLoop />
         </div>
       </section>
 

@@ -1014,7 +1014,7 @@ export function ReadinessScore() {
             <div
               className={
                 focus
-                  ? "mx-auto w-full max-w-[1000px] flex-1 px-5 py-5 lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-10"
+                  ? "mx-auto flex w-full max-w-[1000px] flex-1 flex-col justify-center px-5 py-5 lg:px-8 lg:py-10"
                   : "px-5 sm:px-8 py-7 sm:py-9"
               }
             >
