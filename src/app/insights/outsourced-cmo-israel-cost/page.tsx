@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { InsightToolHook } from "@/components/InsightToolHook";
 
 export const metadata: Metadata = {
   title: "Outsourced CMO in Israel: 2026 Costs",
@@ -456,6 +457,13 @@ export default function OutsourcedCmoIsraelCostPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── TOOL HOOK ── */}
+      <section className="py-12 lg:py-16 bg-purple-05">
+        <div className="mx-auto max-w-[880px] px-8">
+          <InsightToolHook id="score" />
         </div>
       </section>
 
