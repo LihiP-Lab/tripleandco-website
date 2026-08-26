@@ -6,8 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { PillarFAQ } from "@/components/PillarFAQ";
 import { ReadinessScore } from "@/components/ReadinessScore";
-import { ScoreDemo } from "@/components/ScoreDemo";
-import { ScoreShowcase } from "@/components/ScoreShowcase";
+import { ScoreHeroDemo } from "@/components/ScoreHeroDemo";
 import { DIMENSIONS, TIERS, decodeAnswers, scoreOf, tierFor } from "@/lib/readiness";
 
 const URL = "https://www.tripleandco.com/ai-revenue-readiness-score";
@@ -171,8 +170,8 @@ export default function ReadinessPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
-      {/* Hero: a question, and the instrument answering it. */}
-      <section className="pt-14 pb-8 lg:pt-18 lg:pb-10 bg-purple-05">
+      {/* Hero: the claim, then the whole instrument running as one film. */}
+      <section className="pt-14 pb-12 lg:pt-18 lg:pb-16 bg-purple-05">
         <div className="mx-auto max-w-[1100px] px-6 sm:px-8">
           <Breadcrumbs
             items={[
@@ -180,30 +179,28 @@ export default function ReadinessPage() {
               { label: "AI Revenue Readiness Score" },
             ]}
           />
-          <div className="mt-2 grid items-center gap-10 lg:grid-cols-[1fr_400px]">
-            <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.03] text-purple-9 mb-4">
-                What&apos;s Your Company&apos;s{" "}
-                <span className="gradient-text">Score Today?</span>
-              </h1>
-              <p className="text-lg sm:text-xl text-purple-7 leading-relaxed mb-8 max-w-[540px]">
-                Watch it build live. 20 answers, 100 points, and the exact
-                shape of where your revenue operation is leaking.
+          <div className="mt-4 text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.03] text-purple-9 mb-4">
+              What&apos;s Your Company&apos;s{" "}
+              <span className="gradient-text">Score Today?</span>
+            </h1>
+            <p className="mx-auto text-lg sm:text-xl text-purple-7 leading-relaxed mb-7 max-w-[620px]">
+              20 answers, 100 points, and the exact shape of where your
+              revenue operation is leaking. Here is a full run, live.
+            </p>
+            <div className="mb-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 lg:mb-12">
+              <a
+                href="#assessment"
+                className="inline-flex items-center rounded-[10px] bg-brand-dark px-8 py-4 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+              >
+                Start My Score &rarr;
+              </a>
+              <p className="text-sm text-purple-7">
+                Free · 3 minutes · no email needed
               </p>
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-                <a
-                  href="#assessment"
-                  className="inline-flex items-center rounded-[10px] bg-brand-dark px-8 py-4 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
-                >
-                  Start My Score &rarr;
-                </a>
-                <p className="text-sm text-purple-7">
-                  Free · 3 minutes · no email needed
-                </p>
-              </div>
             </div>
-            <ScoreDemo />
           </div>
+          <ScoreHeroDemo />
         </div>
       </section>
 
@@ -302,35 +299,6 @@ export default function ReadinessPage() {
                 </ScrollReveal>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Proof: the instrument running, replayed live from the real component. */}
-      <section className="py-16 lg:py-20 bg-purple-05">
-        <div className="mx-auto max-w-[1100px] px-6 sm:px-8">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-3">See it run</p>
-            <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4 text-center">
-              Twenty Seconds of the{" "}
-              <span className="gradient-text">Real Thing.</span>
-            </h2>
-            <p className="text-base text-purple-7 leading-relaxed text-center mb-12 max-w-[660px] mx-auto">
-              Not a mockup, not even a recording. These are the real
-              components from the assessment above, replaying a sample run
-              live on this page.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.06}>
-            <ScoreShowcase />
-          </ScrollReveal>
-          <div className="mt-12 text-center">
-            <a
-              href="#assessment"
-              className="inline-flex items-center rounded-[10px] bg-brand-dark px-8 py-4 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
-            >
-              Start My Score &rarr;
-            </a>
           </div>
         </div>
       </section>
