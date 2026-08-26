@@ -201,6 +201,37 @@ export default function ReadinessPage() {
             </div>
           </div>
           <ScoreHeroDemo />
+
+          {/* Rex bridges the sample run into the real one. */}
+          <div className="mx-auto mt-10 max-w-[820px] lg:mt-12">
+            <div className="flex flex-col items-center gap-5 rounded-2xl border border-purple-15 bg-white p-6 text-center shadow-[var(--shadow-base)] sm:flex-row sm:gap-6 sm:p-7 sm:text-left">
+              {DIMENSIONS[0].host.image && (
+                <Image
+                  src={DIMENSIONS[0].host.image}
+                  alt={`${DIMENSIONS[0].host.name}, ${DIMENSIONS[0].host.role}`}
+                  width={400}
+                  height={700}
+                  className="w-16 h-auto shrink-0 drop-shadow-md"
+                />
+              )}
+              <div className="flex-1">
+                <p className="mb-1 text-[11px] font-bold uppercase tracking-wider text-brand-dark">
+                  {DIMENSIONS[0].host.name} &middot; {DIMENSIONS[0].host.role}
+                </p>
+                <p className="text-[15px] font-semibold leading-relaxed text-purple-9">
+                  That was a sample run. Yours starts at zero, right below
+                  &mdash; I open with three strategy questions, and your score
+                  is on screen in about three minutes.
+                </p>
+              </div>
+              <a
+                href="#assessment"
+                className="inline-flex shrink-0 items-center rounded-[10px] bg-brand-dark px-7 py-3.5 text-[15px] font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand/50"
+              >
+                Get My Score Now &rarr;
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
