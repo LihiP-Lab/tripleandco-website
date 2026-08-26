@@ -482,10 +482,10 @@ export function ScoreHeroDemo() {
                   <div
                     className="h-full rounded-full"
                     style={{
-                      width: done || active ? "100%" : "0%",
+                      width: done ? "100%" : "0%",
                       background: GRAD,
-                      transition: active
-                        ? `width ${chapterDuration(c)}ms linear`
+                      animation: active
+                        ? `chapter-fill ${chapterDuration(c)}ms linear forwards`
                         : "none",
                     }}
                   />
