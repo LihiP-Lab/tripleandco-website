@@ -480,13 +480,13 @@ export function ScoreHeroDemo() {
                 </p>
                 <div className="h-1 overflow-hidden rounded-full bg-white/10">
                   <div
-                    className="h-full rounded-full"
+                    className={`h-full rounded-full ${
+                      active ? "animate-chapter-fill" : ""
+                    }`}
                     style={{
                       width: done ? "100%" : "0%",
                       background: GRAD,
-                      animation: active
-                        ? `chapter-fill ${chapterDuration(c)}ms linear forwards`
-                        : "none",
+                      ["--chapter-duration" as string]: `${chapterDuration(c)}ms`,
                     }}
                   />
                 </div>
