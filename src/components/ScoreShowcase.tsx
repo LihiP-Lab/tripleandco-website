@@ -465,7 +465,7 @@ const CAPTIONS = [
   {
     n: "01",
     title: "The score banks as you answer",
-    body: "Points land the moment you pick, and the seven-spoke shape starts drawing itself beside the questions.",
+    body: "Points land the moment you pick: the running total ticks up, the bar fills, and the banked points float in.",
   },
   {
     n: "02",
