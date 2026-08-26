@@ -3,6 +3,7 @@ import { ThreeLayersSection } from "@/components/ThreeLayersSection";
 import { ArchitectureSection } from "@/components/ArchitectureSection";
 import { LiveCommandCenter } from "@/components/LiveCommandCenter";
 import { OperatorSection } from "@/components/OperatorSection";
+import { ScoreDemoSection } from "@/components/ScoreDemoSection";
 import { WhyDifferentSection } from "@/components/WhyDifferentSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { FAQ } from "@/components/FAQ";
@@ -249,6 +250,7 @@ export default function Home() {
       <ThreeLayersSection />
       <ArchitectureSection />
       <LiveCommandCenter />
+      <ScoreDemoSection />
       <OperatorSection />
       <WhyDifferentSection />
       <ServicesSection />

@@ -147,6 +147,77 @@ Nothing leaves the command center without her review.
 
 Meet the team behind the feed →
 
+AI Revenue Readiness Score
+
+## What's your company's score today?
+
+20 answers, 100 points, and the exact shape of where your revenue operation is leaking. Here is a full run, live.
+
+tripleandco.com/ai-revenue-readiness-score Full demo · live
+Area 1 of 20 · ICP clarity · Rex hosting
+Who is your ideal customer?
+2 A rough target market description exists. + 1
+3 A written ICP with firmographics and pains. Sales and marketing use the same one. + 3
+4 A tiered ICP with named accounts, reviewed quarterly against closed-won data. + 5
+
+Running score
+12 / 100
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
++ 3 banked
+
+Strategy banked 12/15
+
+Room 2 of 7
+Data
+Nova · Content Research Analyst
+
+My job is auditing what is really there. Three questions on your funnel, your CRM, and how often numbers actually change a decision. This is where most scores drop.
+
+0 out of 100
+
+Operator
+Where the gaps are
+
+- Strategy 12 / 15
+- Data 7 / 15
+- Content 10 / 15
+- Pipeline 9 / 15
+- AI arch. 6 / 15
+- Supervision 8 / 10
+- Revenue 10 / 15
+
+Three things to fix first
+A2 · AI architecture
+Write the operating model down
+
+D2 · Data
+Make the CRM the single source of truth
+
+P2 · Pipeline
+Stand up a real outbound motion
+
+0 1 Answer
+
+0 2 Hand off
+
+0 3 Your result
+
+Get My Score Now → Free · 3 minutes · no email needed
+
 $70M+ raised
 
 Lihi's AI operating system
