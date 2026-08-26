@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { PillarFAQ } from "@/components/PillarFAQ";
 import { ReadinessScore } from "@/components/ReadinessScore";
 import { ScoreDemo } from "@/components/ScoreDemo";
-import { ScoreLoops } from "@/components/ScoreLoops";
+import { ScoreShowcase } from "@/components/ScoreShowcase";
 import { DIMENSIONS, TIERS, decodeAnswers, scoreOf, tierFor } from "@/lib/readiness";
 
 const URL = "https://www.tripleandco.com/ai-revenue-readiness-score";
@@ -306,7 +306,7 @@ export default function ReadinessPage() {
         </div>
       </section>
 
-      {/* Proof: the instrument running, captured from the live page. */}
+      {/* Proof: the instrument running, replayed live from the real component. */}
       <section className="py-16 lg:py-20 bg-purple-05">
         <div className="mx-auto max-w-[1100px] px-6 sm:px-8">
           <ScrollReveal>
@@ -316,12 +316,13 @@ export default function ReadinessPage() {
               <span className="gradient-text">Real Thing.</span>
             </h2>
             <p className="text-base text-purple-7 leading-relaxed text-center mb-12 max-w-[660px] mx-auto">
-              Not a mockup. These are recordings of the assessment above,
-              running exactly as it will for you.
+              Not a mockup, not even a recording. These are the real
+              components from the assessment above, replaying a sample run
+              live on this page.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.06}>
-            <ScoreLoops />
+            <ScoreShowcase />
           </ScrollReveal>
           <div className="mt-12 text-center">
             <a
