@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ScrollReveal } from "./ScrollReveal";
+import { BrandIcon, type BrandIconName } from "./BrandIcon";
 
 /* ── Data ─────────────────────────────────────────────── */
 
@@ -15,17 +16,7 @@ type Service = {
   includes: string[];
   metric: { big: string; small: string };
   cta: string;
-  icon: React.ReactNode;
-};
-
-const iconProps = {
-  viewBox: "0 0 24 24",
-  fill: "none",
-  stroke: "currentColor",
-  strokeWidth: 2,
-  strokeLinecap: "round" as const,
-  strokeLinejoin: "round" as const,
-  className: "w-[22px] h-[22px]",
+  icon: BrandIconName;
 };
 
 const featuredCro: Service = {
@@ -41,12 +32,7 @@ const featuredCro: Service = {
   ],
   metric: { big: "$70M+", small: "raised at companies Lihi led marketing" },
   cta: "See the model",
-  icon: (
-    <svg {...iconProps}>
-      <path d="M3 12l3-3 4 4 8-8" />
-      <path d="M14 5h6v6" />
-    </svg>
-  ),
+  icon: "revenue",
 };
 
 const featuredCmo: Service = {
@@ -58,12 +44,7 @@ const featuredCmo: Service = {
   includes: ["Embedded leadership, 2-3 days a week", "Strategy, budget, and team ownership"],
   metric: { big: "Top 1%", small: "fastest-growing SaaS, led from this seat" },
   cta: "Meet your CMO",
-  icon: (
-    <svg {...iconProps}>
-      <circle cx="12" cy="8" r="4" />
-      <path d="M4 21a8 8 0 0116 0" />
-    </svg>
-  ),
+  icon: "leadership",
 };
 
 const services: Service[] = [
@@ -76,11 +57,7 @@ const services: Service[] = [
     includes: ["Positioning, voice, and visual language", "Messaging that scales with the company"],
     metric: { big: "1 story", small: "every team, deck, and page tells the same one" },
     cta: "Build the story",
-    icon: (
-      <svg {...iconProps}>
-        <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" />
-      </svg>
-    ),
+    icon: "brand",
   },
   {
     id: "gtm",
@@ -91,12 +68,7 @@ const services: Service[] = [
     includes: ["ICP, channels, and positioning thesis", "90-day execution plan with owners"],
     metric: { big: "90 days", small: "from kickoff to a running GTM motion" },
     cta: "Get the plan",
-    icon: (
-      <svg {...iconProps}>
-        <rect x="3" y="4" width="18" height="16" rx="2" />
-        <path d="M3 10h18M8 4v6" />
-      </svg>
-    ),
+    icon: "roadmap",
   },
   {
     id: "social",
@@ -107,11 +79,7 @@ const services: Service[] = [
     includes: ["Full marketing calendar, written and designed", "Founder voice, never raw AI output"],
     metric: { big: "3x/week", small: "founder posts without writing a word" },
     cta: "See a sample month",
-    icon: (
-      <svg {...iconProps}>
-        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
-      </svg>
-    ),
+    icon: "social",
   },
   {
     id: "hubspot",
@@ -122,12 +90,7 @@ const services: Service[] = [
     includes: ["Pipeline, lifecycle, and attribution rebuild", "Automation that sales actually uses"],
     metric: { big: "1 source", small: "of truth for the whole revenue team" },
     cta: "Audit my HubSpot",
-    icon: (
-      <svg {...iconProps}>
-        <rect x="2" y="4" width="20" height="16" rx="2" />
-        <path d="M2 10h20M6 14h4M14 14h4" />
-      </svg>
-    ),
+    icon: "crm",
   },
   {
     id: "pipeline",
@@ -138,12 +101,7 @@ const services: Service[] = [
     includes: ["Demand programs tied to revenue targets", "Qualification and handoff that sticks"],
     metric: { big: "SQLs", small: "measured in meetings booked, not form fills" },
     cta: "Fill the pipeline",
-    icon: (
-      <svg {...iconProps}>
-        <path d="M3 3v18h18" />
-        <path d="M7 14l4-4 4 4 6-6" />
-      </svg>
-    ),
+    icon: "pipeline",
   },
   {
     id: "events",
@@ -154,12 +112,7 @@ const services: Service[] = [
     includes: ["Pre-event outbound and meeting booking", "Post-event follow-up to closed-won"],
     metric: { big: "Booth → $", small: "full attribution from badge scan to deal" },
     cta: "Plan the next event",
-    icon: (
-      <svg {...iconProps}>
-        <rect x="3" y="7" width="18" height="13" rx="2" />
-        <path d="M16 2l-4 5-4-5M8 11h8M8 15h8" />
-      </svg>
-    ),
+    icon: "events",
   },
   {
     id: "team",
@@ -170,13 +123,7 @@ const services: Service[] = [
     includes: ["Role design, sourcing, and interviews", "Onboarding, playbooks, and handover"],
     metric: { big: "Yours", small: "the team stays when we leave. That's the point" },
     cta: "Build my team",
-    icon: (
-      <svg {...iconProps}>
-        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-      </svg>
-    ),
+    icon: "team",
   },
 ];
 
@@ -327,7 +274,7 @@ export function ServicesSection() {
               <div className="absolute top-0 left-0 right-0 h-[5px] gradient-bar transition-all duration-300 group-hover:h-2" />
               <div className="mb-5 flex items-start justify-between gap-3">
                 <div className="flex h-[52px] w-[52px] items-center justify-center rounded-[14px] bg-pink-05 text-brand transition-all duration-300 group-hover:bg-[linear-gradient(135deg,#FE3465_0%,#896D9C_100%)] group-hover:text-white">
-                  {featuredCmo.icon}
+                  <BrandIcon name={featuredCmo.icon} className="w-[22px] h-[22px]" />
                 </div>
                 <span className="whitespace-nowrap rounded-full bg-pink-05 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-brand">
                   {featuredCmo.tag}
@@ -389,7 +336,7 @@ export function ServicesSection() {
                 <div className="absolute top-0 left-0 right-0 h-[5px] gradient-bar transition-all duration-300 group-hover:h-2" />
                 <div className="mb-5 flex items-start justify-between gap-3">
                   <div className="flex h-[52px] w-[52px] items-center justify-center rounded-[14px] bg-pink-05 text-brand transition-all duration-300 group-hover:bg-[linear-gradient(135deg,#FE3465_0%,#896D9C_100%)] group-hover:text-white">
-                    {s.icon}
+                    <BrandIcon name={s.icon} className="w-[22px] h-[22px]" />
                   </div>
                   <span className="whitespace-nowrap rounded-full bg-pink-05 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-brand">
                     {s.tag}

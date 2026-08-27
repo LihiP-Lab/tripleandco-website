@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { BrandIcon, type BrandIconName } from "@/components/BrandIcon";
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -38,7 +38,7 @@ type Service = {
   agentNote: string;
   link: string | null;
   linkLabel?: string;
-  icon: ReactNode;
+  icon: BrandIconName;
 };
 
 const agentRoster: Record<string, Agent> = {
@@ -75,12 +75,7 @@ const services: Service[] = [
       "Lihi leads the strategy in your leadership room. Rex drafts the campaign plans behind it, and Atlas builds the board-level reporting. Lihi reviews everything before it reaches your team.",
     link: "/cmo-as-a-service",
     linkLabel: "Learn more",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-        <circle cx="12" cy="8" r="4" />
-        <path d="M4 21a8 8 0 0116 0" />
-      </svg>
-    ),
+    icon: "leadership",
   },
   {
     id: "cro",
@@ -104,12 +99,7 @@ const services: Service[] = [
       "Atlas runs the forecasts, dashboards, and funnel analytics that one revenue number depends on. Rex pressure-tests the demand side. Lihi owns the calls and the accountability.",
     link: "/cro-as-a-service",
     linkLabel: "Learn more",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-        <path d="M3 12l3-3 4 4 8-8" />
-        <path d="M14 5h6v6" />
-      </svg>
-    ),
+    icon: "revenue",
   },
   {
     id: "head-of-growth",
@@ -133,12 +123,7 @@ const services: Service[] = [
       "Rex runs the campaigns and experiments. Atlas instruments the funnel and builds the dashboards every test depends on. Lihi owns the growth strategy and reviews each bet before it ships.",
     link: "/head-of-growth",
     linkLabel: "Learn more",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-        <path d="M3 17l6-6 4 4 7-7" />
-        <path d="M14 8h6v6" />
-      </svg>
-    ),
+    icon: "growth",
   },
   {
     id: "brand",
@@ -161,11 +146,7 @@ const services: Service[] = [
     agentNote:
       "Camille drafts the messaging and voice system. Vega directs the visual identity. Lihi sets the positioning with you and signs off on every word and pixel.",
     link: null,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-        <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" />
-      </svg>
-    ),
+    icon: "brand",
   },
   {
     id: "gtm",
@@ -188,12 +169,7 @@ const services: Service[] = [
     agentNote:
       "Nova researches the market, the ICP, and the competition. Rex turns it into the 90-day plan. Lihi makes the strategic calls with you, then your team executes with her behind it.",
     link: null,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-        <rect x="3" y="4" width="18" height="16" rx="2" />
-        <path d="M3 10h18M8 4v6" />
-      </svg>
-    ),
+    icon: "roadmap",
   },
   {
     id: "social",
@@ -216,11 +192,7 @@ const services: Service[] = [
     agentNote:
       "Zara runs the calendar and engagement. Sage multiplies every post across channels. Lumen turns the best ones into video. Lihi keeps it all in your founder's voice, never raw AI output.",
     link: null,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
-      </svg>
-    ),
+    icon: "social",
   },
   {
     id: "hubspot",
@@ -243,12 +215,7 @@ const services: Service[] = [
     agentNote:
       "Nova audits what's broken in your CRM today. Atlas designs the dashboards and reporting your team will live in. Lihi architects the workflows and trains your team on them.",
     link: null,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-        <rect x="2" y="4" width="20" height="16" rx="2" />
-        <path d="M2 10h20M6 14h4M14 14h4" />
-      </svg>
-    ),
+    icon: "crm",
   },
   {
     id: "pipeline",
@@ -271,12 +238,7 @@ const services: Service[] = [
     agentNote:
       "Rex builds the demand programs that fill the top. Atlas scores, tracks, and forecasts every stage. Lihi aligns sales and marketing on a shared definition of qualified.",
     link: null,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-        <path d="M3 3v18h18" />
-        <path d="M7 14l4-4 4 4 6-6" />
-      </svg>
-    ),
+    icon: "pipeline",
   },
   {
     id: "events",
@@ -299,12 +261,7 @@ const services: Service[] = [
     agentNote:
       "Nova researches attendees and target accounts before the show. Sage builds the follow-up sequences that run after it. Lihi preps your team and ties every badge scan to pipeline.",
     link: null,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-        <rect x="3" y="7" width="18" height="13" rx="2" />
-        <path d="M16 2l-4 5-4-5M8 11h8M8 15h8" />
-      </svg>
-    ),
+    icon: "events",
   },
   {
     id: "team",
@@ -327,13 +284,7 @@ const services: Service[] = [
     agentNote:
       "Nova benchmarks roles, compensation, and team structures. Camille writes the job specs and onboarding playbooks. Lihi runs the interviews with you and trains the hires.",
     link: null,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-      </svg>
-    ),
+    icon: "team",
   },
 ];
 
@@ -409,7 +360,7 @@ function ServiceBlock({ service }: { service: Service }) {
     >
       <div className="flex items-center gap-4 mb-2">
         <div className="w-11 h-11 rounded-xl bg-pink-05 flex items-center justify-center text-brand flex-shrink-0">
-          {service.icon}
+          <BrandIcon name={service.icon} className="w-6 h-6" />
         </div>
         <h2 className="text-2xl lg:text-[26px] font-extrabold text-purple-9 tracking-tight">
           {service.name}
