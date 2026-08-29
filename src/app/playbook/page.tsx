@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "The Supervised AI Marketing Playbook",
   description:
-    "How one orchestrator and 8 AI agents run a B2B revenue engine: mindset shifts, workflows, human oversight, and a practical 90-day roadmap.",
+    "How one orchestrator and 8 AI agents run a B2B revenue engine: the operating model, the shifts, the audit, and a 90-day roadmap for CEOs and marketing leaders.",
   alternates: { canonical: "/playbook" },
   openGraph: {
     title: "The 9-Person Marketing Team Where 8 Aren't People | Triple & Co.",
@@ -59,6 +59,106 @@ const cast = [
   { name: "Sage", role: "Repurposing. One piece becomes ten.", image: "/images/agents/sage.png" },
   { name: "Vega", role: "Art direction and visual system.", image: "/images/agents/vega.png" },
   { name: "Lumen", role: "Video, from script to cut.", image: "/images/agents/lumen.png" },
+];
+
+const audiences = [
+  {
+    href: "#ceos",
+    who: "CEOs & founders",
+    line: "Why the pilot died and what an owned AI function looks like.",
+  },
+  {
+    href: "#marketing-leaders",
+    who: "Marketing leaders",
+    line: "Five shifts that turn tool operators into editors-in-chief.",
+  },
+  {
+    href: "#operators",
+    who: "RevOps & GTM operators",
+    line: "The handoff filter, the stop rules, the numbers that count.",
+  },
+];
+
+const riskStats = [
+  {
+    stat: "95%",
+    line: "of enterprise AI pilots showed no measurable P&L impact. Same models everyone else uses. Different operating model.",
+    source:
+      "MIT NANDA, The GenAI Divide, 2025 (small-sample preprint, widely cited)",
+  },
+  {
+    stat: "40%+",
+    line: "of agentic AI projects are expected to be canceled by the end of 2027, mostly on unclear business value and escalating cost.",
+    source: "Gartner, June 2025",
+  },
+  {
+    stat: "25%",
+    line: "of AI initiatives deliver their expected ROI. Your CFO has read that study too.",
+    source: "IBM Institute for Business Value, CEO Study, 2025",
+  },
+];
+
+const pilotGap = {
+  stack: [
+    "One generalist copilot, thirty use cases, no job description",
+    "A champion who is excited but owns nothing after Tuesday",
+    "Quality checked by vibes: \u201Cthis looks pretty good\u201D",
+    "Measured in time saved and demo applause",
+    "Dies quietly in 90 days; nobody notices for 60 more",
+  ],
+  team: [
+    "Eight specialists, each with a name and exactly one job",
+    "One accountable human owner per workflow, named on day one",
+    "Quality checked against a written eval set, updated weekly",
+    "Measured in pipeline created, cycle time, CAC payback",
+    "Compounds: every review cycle makes the agent better",
+  ],
+};
+
+const loop = [
+  { step: "Brief", line: "A human frames the job and the quality bar." },
+  { step: "Run", line: "The specialist agent executes its one job." },
+  { step: "Deliver", line: "A named reviewer approves before anything ships." },
+  { step: "Compound", line: "Evals update; the agent gets better every cycle." },
+];
+
+const fiveChanges = [
+  {
+    n: "01",
+    title: "Name one owner per workflow",
+    line: "A champion is excited. An owner is accountable for the prompt, the quality bar, and the escalation rule.",
+    breaks: "Skip it and the workflow stops the week its builder gets busy.",
+  },
+  {
+    n: "02",
+    title: "Write the eval set first",
+    line: "Ten labelled examples of \u201Cgood\u201D before the first run, so quality is a test, not a taste debate.",
+    breaks: "Skip it and every review becomes an argument about opinions.",
+  },
+  {
+    n: "03",
+    title: "Cap the autonomy",
+    line: "Document what each agent must never decide alone, and where it has to stop and ask.",
+    breaks: "Skip it and one confident hallucination becomes a brand problem.",
+  },
+  {
+    n: "04",
+    title: "Pair every agent with one named reviewer",
+    line: "Not a committee. One person whose name is on the output that ships.",
+    breaks: "Skip it and raw output reaches your buyers, who can tell.",
+  },
+  {
+    n: "05",
+    title: "Measure pipeline, not activity",
+    line: "Baseline the number today. Report pipeline created and cycle time, not volume produced.",
+    breaks: "Skip it and you will be defending screenshots at the next board meeting.",
+  },
+];
+
+const vendorFilter = [
+  "Which handoff does this collapse? Name the exact step where the human hands off and the agent hands back.",
+  "Who owns it afterward? A person, named, with the review cadence in their calendar.",
+  "What number moves if it works? Chosen before the pilot starts, with today's baseline written down.",
 ];
 
 type Chapter = {
@@ -192,6 +292,18 @@ const shouldOwn = [
   "The production grind, on schedule, every week",
 ];
 
+const auditLegend = [
+  {
+    label: "Green",
+    line: "Running, with a named owner and a written quality bar.",
+  },
+  {
+    label: "Amber",
+    line: "Happening, but it lives in someone's personal workflow.",
+  },
+  { label: "Red", line: "Not happening, or nobody could tell you who owns it." },
+];
+
 const audit = [
   {
     area: "AI Visibility",
@@ -232,10 +344,10 @@ const roadmap = [
     phase: "Days 1\u201330",
     title: "Build the foundation",
     items: [
-      "Audit what AI models currently say about you",
-      "Extract and codify the brand voice",
-      "Define the supervision loop: who briefs, who reviews, who has the veto",
-      "Ship the founder's first structured post",
+      "Run the audit. Pick your weakest function, not your favourite",
+      "Choose one workflow, name one owner and one reviewer",
+      "Write the eval set: ten labelled examples of good, before the first run",
+      "Baseline today's number, in writing. You will want it in 60 days",
     ],
   },
   {
@@ -243,20 +355,35 @@ const roadmap = [
     title: "Build the rhythm",
     items: [
       "Run the weekly cadence: brief \u2192 run \u2192 review \u2192 ship",
-      "Stand up the repurposing pass on every top performer",
-      "Make the site machine-readable for AI search",
-      "Start reading engagement as sales signal",
+      "Add the adjacent agent, so one output feeds the next",
+      "Write the stop rules: what no agent decides alone",
+      "Move prompts and evals out of personal chats into versioned docs",
     ],
   },
   {
     phase: "Days 61\u201390",
     title: "Build the engine",
     items: [
-      "Double down on what the data says is working",
-      "Wire signals to sales; measure against pipeline",
-      "Expand to a second channel and format",
-      "Review the quarter, set the next one \u2014 with receipts",
+      "Double down on the workflow that moved its number",
+      "Report pipeline created and cycle time to leadership, nothing else",
+      "Hand the operating model over: it should run without its builder",
+      "Retire one underperformer. Publicly. It buys more trust than any demo",
     ],
+  },
+];
+
+const entryPoints = [
+  {
+    title: "Hire one agent",
+    line: "One workflow, one owner, one number. The smallest version of this that can prove itself in 30 days.",
+  },
+  {
+    title: "Hire the team",
+    line: "CMO-as-a-Service: the full supervised engine, run by Lihi, reporting into your board cadence.",
+  },
+  {
+    title: "Start with the diagnostic",
+    line: "Fixed scope. Your funnel math, your AI visibility, and a straight answer on where the gap is.",
   },
 ];
 
@@ -305,10 +432,25 @@ export default function PlaybookPage() {
             and zero unsupervised output.
           </p>
           <p className="text-base text-purple-6 leading-relaxed mb-8">
-            Five chapters, each fronted by the agent who owns that job. Every
-            claim has a source. Every page was approved by a human named Lihi.
-            Yes, we named the agents. No, we&apos;re not sorry.
+            Written for the three people who can make it happen: the CEO who
+            signs for it, the marketing leader who runs it, and the operator who
+            has to make it survive contact with real data. Every claim has a
+            source. Every page was approved by a human named Lihi.
           </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            {audiences.map((a) => (
+              <a
+                key={a.href}
+                href={a.href}
+                className="block rounded-2xl bg-white border border-purple-15 p-5 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
+              >
+                <p className="text-sm font-extrabold text-purple-9 mb-1">
+                  {a.who} <span className="text-brand">&#8594;</span>
+                </p>
+                <p className="text-xs text-purple-6 leading-snug">{a.line}</p>
+              </a>
+            ))}
+          </div>
           <div className="flex flex-wrap items-center gap-5">
             <Link
               href="/revenue-diagnostic"
@@ -359,8 +501,146 @@ export default function PlaybookPage() {
         </div>
       </section>
 
+      {/* Part 1: CEOs & founders */}
+      <section id="ceos" className="py-16 lg:py-24 bg-purple-05 scroll-mt-24">
+        <div className="mx-auto max-w-[1100px] px-8">
+          <ScrollReveal>
+            <p className="eyebrow mb-3">Part 1 &middot; CEOs &amp; founders</p>
+            <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
+              Everyone Is Excited About AI.{" "}
+              <span className="gradient-text">Nobody Owns It.</span>
+            </h2>
+            <div className="space-y-4 max-w-[760px] mb-10">
+              <p className="text-base text-purple-7 leading-relaxed">
+                You are expected to have an AI story for investors, customers,
+                and your own team. So pilots get greenlit. The demo lands in the
+                all-hands. Everyone claps. Ninety days later the workflow has
+                quietly stopped running, because the senior IC who built it went
+                back to their day job.
+              </p>
+              <p className="text-base text-purple-7 leading-relaxed">
+                It is rarely a model problem. A champion is excited; an owner is
+                accountable. One generalist copilot is asked to do everything, so
+                it does nothing well enough to trust. And the pilot is scored in
+                screenshots and hours saved instead of pipeline created. Your
+                board can tell the difference even when the deck cannot.
+              </p>
+              <p className="text-base font-semibold text-brand">
+                The shift: stop installing AI like software. Start hiring it like
+                personnel.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+            {riskStats.map((s, i) => (
+              <ScrollReveal key={s.stat} delay={0.05 * i}>
+                <div className="relative bg-white rounded-2xl p-7 shadow-[var(--shadow-base)] card-gradient-top overflow-hidden h-full border border-purple-15">
+                  <p className="text-4xl font-black gradient-text mb-3">
+                    {s.stat}
+                  </p>
+                  <p className="text-sm text-purple-7 leading-relaxed mb-3">
+                    {s.line}
+                  </p>
+                  <p className="text-xs text-purple-5">{s.source}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <ScrollReveal delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+              <div className="rounded-2xl bg-white border border-purple-15 p-8 shadow-[var(--shadow-base)] h-full">
+                <h3 className="text-lg font-extrabold text-purple-9 mb-4">
+                  The AI tool stack
+                </h3>
+                <ul className="space-y-3">
+                  {pilotGap.stack.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="text-brand font-black mt-0.5">&#10007;</span>
+                      <span className="text-sm text-purple-7 leading-relaxed">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-xs text-purple-5 mt-5 italic">
+                  Board thinks: what did we get for that budget?
+                </p>
+              </div>
+              <div className="rounded-2xl bg-white border border-purple-15 p-8 shadow-[var(--shadow-base)] h-full">
+                <h3 className="text-lg font-extrabold text-purple-9 mb-4">
+                  The supervised AI team
+                </h3>
+                <ul className="space-y-3">
+                  {pilotGap.team.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="text-brand font-black mt-0.5">&#10003;</span>
+                      <span className="text-sm text-purple-7 leading-relaxed">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-xs text-purple-5 mt-5 italic">
+                  Board thinks: why is this not everywhere yet?
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.15}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+              {loop.map((l, i) => (
+                <div
+                  key={l.step}
+                  className="rounded-2xl bg-white border border-purple-15 p-6 shadow-[var(--shadow-base)]"
+                >
+                  <p className="text-xs font-bold text-purple-5 mb-1">
+                    Step {i + 1}
+                  </p>
+                  <p className="text-base font-extrabold text-purple-9 mb-2">
+                    {l.step}
+                  </p>
+                  <p className="text-sm text-purple-7 leading-relaxed">
+                    {l.line}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <h3 className="text-xl font-extrabold text-purple-9 mb-6">
+              Five changes before any agent goes live
+            </h3>
+            <div className="space-y-4">
+              {fiveChanges.map((c) => (
+                <div
+                  key={c.n}
+                  className="rounded-2xl bg-white border border-purple-15 p-6 shadow-[var(--shadow-base)]"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="shrink-0 text-lg font-black gradient-text">
+                      {c.n}
+                    </span>
+                    <div>
+                      <p className="text-base font-extrabold text-purple-9 mb-1">
+                        {c.title}
+                      </p>
+                      <p className="text-sm text-purple-7 leading-relaxed mb-1">
+                        {c.line}
+                      </p>
+                      <p className="text-sm text-purple-5 leading-relaxed">
+                        {c.breaks}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* The cast */}
-      <section className="py-16 lg:py-24 bg-purple-05">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-[1100px] px-8">
           <ScrollReveal>
             <p className="eyebrow text-center mb-3">Meet your authors</p>
@@ -413,12 +693,34 @@ export default function PlaybookPage() {
                   Lihi Pinto &middot; The Orchestrator
                 </p>
                 <p className="text-xs text-purple-6 leading-snug">
-                  15+ years in B2B tech. $70M+ raised at a company she founded
-                  and led marketing for. Owns the strategy, the taste, and the
-                  veto.
+                  15+ years in B2B tech. Ran marketing through $70M+ of raises at
+                  Syte.ai, a top 1% fastest-growing SaaS. Owns the strategy, the
+                  taste, and the veto.
                 </p>
               </div>
             </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Part 2 intro */}
+      <section
+        id="marketing-leaders"
+        className="pt-16 pb-4 lg:pt-24 lg:pb-6 bg-purple-05 scroll-mt-24"
+      >
+        <div className="mx-auto max-w-[880px] px-8">
+          <ScrollReveal>
+            <p className="eyebrow mb-3">Part 2 &middot; Marketing leaders</p>
+            <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
+              From Tool Operator to{" "}
+              <span className="gradient-text">Editor-in-Chief.</span>
+            </h2>
+            <p className="text-base text-purple-7 leading-relaxed">
+              Five chapters, five shifts, each fronted by the agent who owns that
+              job and closed by the human who decides what ships. The new job
+              title for your team is editor-in-chief: agents draft overnight,
+              humans make the calls the agent cannot.
+            </p>
           </ScrollReveal>
         </div>
       </section>
@@ -493,8 +795,88 @@ export default function PlaybookPage() {
         </section>
       ))}
 
+      {/* Part 3: operators */}
+      <section
+        id="operators"
+        className="py-16 lg:py-24 bg-purple-05 scroll-mt-24"
+      >
+        <div className="mx-auto max-w-[1100px] px-8">
+          <ScrollReveal>
+            <p className="eyebrow mb-3">Part 3 &middot; RevOps &amp; GTM operators</p>
+            <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
+              Stop Evaluating Tools.{" "}
+              <span className="gradient-text">Evaluate Handoffs.</span>
+            </h2>
+            <div className="space-y-4 max-w-[760px] mb-10">
+              <p className="text-base text-purple-7 leading-relaxed">
+                Every vendor demo looks the same: a clean happy path, a wow
+                moment, a pricing page. You are the one who has to work out which
+                of them survives contact with your data, your handoffs, and your
+                actual quarter.
+              </p>
+              <p className="text-base text-purple-7 leading-relaxed">
+                Revenue work moves through five or six handoffs: research, list
+                build, draft, send, follow-up, qualify. The lift is never
+                &ldquo;AI does the job.&rdquo; The lift is AI collapsing one
+                specific handoff. So ask three questions and skip the forty-minute
+                demo.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="space-y-4 mb-10">
+            {vendorFilter.map((q, i) => (
+              <ScrollReveal key={q.slice(0, 30)} delay={0.06 * i}>
+                <div className="flex items-start gap-4 rounded-2xl bg-white border border-purple-15 p-6 shadow-[var(--shadow-base)]">
+                  <span className="shrink-0 text-lg font-black gradient-text">
+                    Q{i + 1}
+                  </span>
+                  <p className="text-sm text-purple-7 leading-relaxed">{q}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <ScrollReveal delay={0.2}>
+            <div className="relative bg-white rounded-2xl p-8 shadow-[var(--shadow-base)] card-gradient-top overflow-hidden border border-purple-15">
+              <p className="text-xs font-bold uppercase tracking-wider text-purple-5 mb-3">
+                One engagement, one handoff
+              </p>
+              <p className="text-base text-purple-7 leading-relaxed mb-6">
+                On a single Triple &amp; Co. engagement, the entire gain came from
+                one change: Nova drafting account briefs overnight, before the
+                SDRs touched the queue. Nothing else in the stack changed.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div>
+                  <p className="text-3xl font-black gradient-text mb-1">
+                    2.1% &#8594; 7.8%
+                  </p>
+                  <p className="text-sm text-purple-7">reply rate</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-black gradient-text mb-1">
+                    11 &#8594; 4 days
+                  </p>
+                  <p className="text-sm text-purple-7">cold to discovery call</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-black gradient-text mb-1">
+                    &#8722;38%
+                  </p>
+                  <p className="text-sm text-purple-7">cost per meeting</p>
+                </div>
+              </div>
+              <p className="text-xs text-purple-5 mt-6">
+                Source: Triple &amp; Co. engagement data, one client, measured
+                over a single quarter against a written baseline. One data point,
+                not a benchmark. We will walk you through the working.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* The red pen rules */}
-      <section className="py-16 lg:py-24 bg-purple-05">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-[1100px] px-8">
           <ScrollReveal>
             <p className="eyebrow text-center mb-3">The rules of the loop</p>
@@ -548,7 +930,7 @@ export default function PlaybookPage() {
       </section>
 
       {/* Audit */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-purple-05">
         <div className="mx-auto max-w-[1100px] px-8">
           <ScrollReveal>
             <p className="eyebrow text-center mb-3">Appendix A</p>
@@ -556,10 +938,24 @@ export default function PlaybookPage() {
               The Supervised AI{" "}
               <span className="gradient-text">Readiness Audit.</span>
             </h2>
-            <p className="text-base text-purple-7 text-center max-w-[640px] mx-auto mb-12">
-              Be honest. Every unchecked box is exactly where to start
-              building.
+            <p className="text-base text-purple-7 text-center max-w-[640px] mx-auto mb-8">
+              Score every line green, amber, or red. Be honest: amber is the most
+              common answer and the most expensive one, because it means the
+              leverage leaves when the person does.
             </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-[900px] mx-auto mb-12">
+              {auditLegend.map((l) => (
+                <div
+                  key={l.label}
+                  className="rounded-2xl bg-white border border-purple-15 px-6 py-5"
+                >
+                  <p className="text-sm font-extrabold text-purple-9 mb-1">
+                    {l.label}
+                  </p>
+                  <p className="text-xs text-purple-6 leading-snug">{l.line}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {audit.map((a, i) => (
@@ -586,7 +982,7 @@ export default function PlaybookPage() {
       </section>
 
       {/* Roadmap */}
-      <section className="py-16 lg:py-24 bg-purple-05">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-[1100px] px-8">
           <ScrollReveal>
             <p className="eyebrow text-center mb-3">Appendix B</p>
@@ -623,7 +1019,7 @@ export default function PlaybookPage() {
       </section>
 
       {/* How this was made */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-purple-05">
         <div className="mx-auto max-w-[880px] px-8">
           <ScrollReveal>
             <p className="eyebrow text-center mb-3">Full disclosure</p>
@@ -652,24 +1048,44 @@ export default function PlaybookPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 lg:py-24 bg-purple-05">
-        <div className="mx-auto max-w-[720px] px-8 text-center">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-[1100px] px-8 text-center">
           <ScrollReveal>
             <h2 className="text-3xl lg:text-[40px] font-black tracking-tight leading-[1.1] text-purple-9 mb-4">
-              Want This Engine Running on{" "}
-              <span className="gradient-text">Your Funnel?</span>
+              Ready to Hire Your{" "}
+              <span className="gradient-text">First Agent?</span>
             </h2>
-            <p className="text-base text-purple-7 leading-relaxed mb-8">
-              The playbook is the model. The revenue diagnostic is where it
-              meets your numbers: 30 minutes, your funnel math, and a straight
-              answer on where the gap is.
+            <p className="text-base text-purple-7 leading-relaxed mb-4 max-w-[720px] mx-auto">
+              Triple &amp; Co. is CMO-as-a-Service and CRO-as-a-Service for B2B
+              tech and AI companies. We work best with post-raise teams that have
+              board expectations and no marketing engine yet.
             </p>
+            <p className="text-base text-purple-7 leading-relaxed mb-10 max-w-[720px] mx-auto">
+              Three ways in, depending on how much of the engine you want us to
+              run.
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 text-left">
+            {entryPoints.map((e, i) => (
+              <ScrollReveal key={e.title} delay={0.06 * i}>
+                <div className="relative bg-white rounded-2xl p-7 shadow-[var(--shadow-base)] card-gradient-top overflow-hidden h-full border border-purple-15">
+                  <p className="text-base font-extrabold text-purple-9 mb-2">
+                    {e.title}
+                  </p>
+                  <p className="text-sm text-purple-7 leading-relaxed">
+                    {e.line}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <ScrollReveal delay={0.2}>
             <div className="flex flex-wrap items-center justify-center gap-5">
               <Link
                 href="/revenue-diagnostic"
                 className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
               >
-                Book the revenue diagnostic <span>&#8594;</span>
+                Book a strategy call <span>&#8594;</span>
               </Link>
               <Link
                 href="/agents"

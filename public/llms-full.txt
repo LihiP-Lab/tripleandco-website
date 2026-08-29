@@ -5447,7 +5447,7 @@ Pair agents with fractional CMO leadership → Browse all 8 agents → About Lih
 ---
 url: https://www.tripleandco.com/playbook
 title: The Supervised AI Marketing Playbook | Triple & Co.
-description: How one orchestrator and 8 AI agents run a B2B revenue engine: mindset shifts, workflows, human oversight, and a practical 90-day roadmap.
+description: How one orchestrator and 8 AI agents run a B2B revenue engine: the operating model, the shifts, the audit, and a 90-day roadmap for CEOs and marketing leaders.
 ---
 - Home
 - The Playbook
@@ -5456,7 +5456,14 @@ The Supervised AI Marketing Playbook
 # The 9-Person Marketing Team Where 8 Aren't People.
 
 Your buyers already research with AI. Most marketing teams still don't ship with it. This playbook is the operating model that closes the gap: one human orchestrator, eight specialist AI agents, and zero unsupervised output.
-Five chapters, each fronted by the agent who owns that job. Every claim has a source. Every page was approved by a human named Lihi. Yes, we named the agents. No, we're not sorry.
+Written for the three people who can make it happen: the CEO who signs for it, the marketing leader who runs it, and the operator who has to make it survive contact with real data. Every claim has a source. Every page was approved by a human named Lihi.
+CEOs & founders →
+Why the pilot died and what an owned AI function looks like.
+Marketing leaders →
+Five shifts that turn tool operators into editors-in-chief.
+RevOps & GTM operators →
+The handoff filter, the stop rules, the numbers that count.
+
 See it applied to your funnel → The method behind it →
 
 Chapter 0 · The gap
@@ -5489,6 +5496,82 @@ Salesforce State of Marketing, 9th ed.
 of consumers assume brand content is at least partly AI-generated, and reward proof over polish.
 Cashew Research, 2026, n=2,149
 
+Part 1 · CEOs & founders
+
+## Everyone Is Excited About AI. Nobody Owns It.
+
+You are expected to have an AI story for investors, customers, and your own team. So pilots get greenlit. The demo lands in the all-hands. Everyone claps. Ninety days later the workflow has quietly stopped running, because the senior IC who built it went back to their day job.
+It is rarely a model problem. A champion is excited; an owner is accountable. One generalist copilot is asked to do everything, so it does nothing well enough to trust. And the pilot is scored in screenshots and hours saved instead of pipeline created. Your board can tell the difference even when the deck cannot.
+The shift: stop installing AI like software. Start hiring it like personnel.
+
+95%
+of enterprise AI pilots showed no measurable P&L impact. Same models everyone else uses. Different operating model.
+MIT NANDA, The GenAI Divide, 2025 (small-sample preprint, widely cited)
+
+40%+
+of agentic AI projects are expected to be canceled by the end of 2027, mostly on unclear business value and escalating cost.
+Gartner, June 2025
+
+25%
+of AI initiatives deliver their expected ROI. Your CFO has read that study too.
+IBM Institute for Business Value, CEO Study, 2025
+
+### The AI tool stack
+
+- ✗ One generalist copilot, thirty use cases, no job description
+- ✗ A champion who is excited but owns nothing after Tuesday
+- ✗ Quality checked by vibes: “this looks pretty good”
+- ✗ Measured in time saved and demo applause
+- ✗ Dies quietly in 90 days; nobody notices for 60 more
+Board thinks: what did we get for that budget?
+
+### The supervised AI team
+
+- ✓ Eight specialists, each with a name and exactly one job
+- ✓ One accountable human owner per workflow, named on day one
+- ✓ Quality checked against a written eval set, updated weekly
+- ✓ Measured in pipeline created, cycle time, CAC payback
+- ✓ Compounds: every review cycle makes the agent better
+Board thinks: why is this not everywhere yet?
+
+Step 1
+Brief
+A human frames the job and the quality bar.
+
+Step 2
+Run
+The specialist agent executes its one job.
+
+Step 3
+Deliver
+A named reviewer approves before anything ships.
+
+Step 4
+Compound
+Evals update; the agent gets better every cycle.
+
+### Five changes before any agent goes live
+
+01 Name one owner per workflow
+A champion is excited. An owner is accountable for the prompt, the quality bar, and the escalation rule.
+Skip it and the workflow stops the week its builder gets busy.
+
+02 Write the eval set first
+Ten labelled examples of “good” before the first run, so quality is a test, not a taste debate.
+Skip it and every review becomes an argument about opinions.
+
+03 Cap the autonomy
+Document what each agent must never decide alone, and where it has to stop and ask.
+Skip it and one confident hallucination becomes a brand problem.
+
+04 Pair every agent with one named reviewer
+Not a committee. One person whose name is on the output that ships.
+Skip it and raw output reaches your buyers, who can tell.
+
+05 Measure pipeline, not activity
+Baseline the number today. Report pipeline created and cycle time, not volume produced.
+Skip it and you will be defending screenshots at the next board meeting.
+
 Meet your authors
 
 ## Eight Agents. One Red Pen.
@@ -5520,7 +5603,13 @@ Lumen
 Video, from script to cut.
 
 Lihi Pinto · The Orchestrator
-15+ years in B2B tech. $70M+ raised at a company she founded and led marketing for. Owns the strategy, the taste, and the veto.
+15+ years in B2B tech. Ran marketing through $70M+ of raises at Syte.ai, a top 1% fastest-growing SaaS. Owns the strategy, the taste, and the veto.
+
+Part 2 · Marketing leaders
+
+## From Tool Operator to Editor-in-Chief.
+
+Five chapters, five shifts, each fronted by the agent who owns that job and closed by the human who decides what ships. The new job title for your team is editor-in-chief: agents draft overnight, humans make the calls the agent cannot.
 
 Chapter 01 · presented by Nova , Content Research Analyst
 
@@ -5612,6 +5701,32 @@ B2B Marketing Automation Wave, Q4 2024
 Lihi's red pen
 “ Atlas tells me what moved. He doesn't get to decide what matters. Metrics are witnesses, not judges. ”
 
+Part 3 · RevOps & GTM operators
+
+## Stop Evaluating Tools. Evaluate Handoffs.
+
+Every vendor demo looks the same: a clean happy path, a wow moment, a pricing page. You are the one who has to work out which of them survives contact with your data, your handoffs, and your actual quarter.
+Revenue work moves through five or six handoffs: research, list build, draft, send, follow-up, qualify. The lift is never “AI does the job.” The lift is AI collapsing one specific handoff. So ask three questions and skip the forty-minute demo.
+
+Q 1 Which handoff does this collapse? Name the exact step where the human hands off and the agent hands back.
+
+Q 2 Who owns it afterward? A person, named, with the review cadence in their calendar.
+
+Q 3 What number moves if it works? Chosen before the pilot starts, with today's baseline written down.
+
+One engagement, one handoff
+On a single Triple & Co. engagement, the entire gain came from one change: Nova drafting account briefs overnight, before the SDRs touched the queue. Nothing else in the stack changed.
+2.1% → 7.8%
+reply rate
+
+11 → 4 days
+cold to discovery call
+
+−38%
+cost per meeting
+
+Source: Triple & Co. engagement data, one client, measured over a single quarter against a written baseline. One data point, not a benchmark. We will walk you through the working.
+
 The rules of the loop
 
 ## What AI Must Never Own.
@@ -5638,7 +5753,15 @@ Appendix A
 
 ## The Supervised AI Readiness Audit.
 
-Be honest. Every unchecked box is exactly where to start building.
+Score every line green, amber, or red. Be honest: amber is the most common answer and the most expensive one, because it means the leverage leaves when the person does.
+Green
+Running, with a named owner and a written quality bar.
+
+Amber
+Happening, but it lives in someone's personal workflow.
+
+Red
+Not happening, or nobody could tell you who owns it.
 
 ### AI Visibility
 
@@ -5672,28 +5795,28 @@ Days 1–30
 
 ### Build the foundation
 
-- → Audit what AI models currently say about you
-- → Extract and codify the brand voice
-- → Define the supervision loop: who briefs, who reviews, who has the veto
-- → Ship the founder's first structured post
+- → Run the audit. Pick your weakest function, not your favourite
+- → Choose one workflow, name one owner and one reviewer
+- → Write the eval set: ten labelled examples of good, before the first run
+- → Baseline today's number, in writing. You will want it in 60 days
 
 Days 31–60
 
 ### Build the rhythm
 
 - → Run the weekly cadence: brief → run → review → ship
-- → Stand up the repurposing pass on every top performer
-- → Make the site machine-readable for AI search
-- → Start reading engagement as sales signal
+- → Add the adjacent agent, so one output feeds the next
+- → Write the stop rules: what no agent decides alone
+- → Move prompts and evals out of personal chats into versioned docs
 
 Days 61–90
 
 ### Build the engine
 
-- → Double down on what the data says is working
-- → Wire signals to sales; measure against pipeline
-- → Expand to a second channel and format
-- → Review the quarter, set the next one — with receipts
+- → Double down on the workflow that moved its number
+- → Report pipeline created and cycle time to leadership, nothing else
+- → Hand the operating model over: it should run without its builder
+- → Retire one underperformer. Publicly. It buys more trust than any demo
 
 Full disclosure
 
@@ -5711,10 +5834,21 @@ Sage is already turning it into ten other things
 
 Lihi held the red pen. Every page passed a human.
 
-## Want This Engine Running on Your Funnel?
+## Ready to Hire Your First Agent?
 
-The playbook is the model. The revenue diagnostic is where it meets your numbers: 30 minutes, your funnel math, and a straight answer on where the gap is.
-Book the revenue diagnostic → Meet the agents →
+Triple & Co. is CMO-as-a-Service and CRO-as-a-Service for B2B tech and AI companies. We work best with post-raise teams that have board expectations and no marketing engine yet.
+Three ways in, depending on how much of the engine you want us to run.
+
+Hire one agent
+One workflow, one owner, one number. The smallest version of this that can prove itself in 30 days.
+
+Hire the team
+CMO-as-a-Service: the full supervised engine, run by Lihi, reporting into your board cadence.
+
+Start with the diagnostic
+Fixed scope. Your funnel math, your AI visibility, and a straight answer on where the gap is.
+
+Book a strategy call → Meet the agents →
 
 ---
 url: https://www.tripleandco.com/insights
