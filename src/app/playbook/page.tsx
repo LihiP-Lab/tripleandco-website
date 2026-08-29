@@ -401,11 +401,11 @@ export default function PlaybookPage() {
             <div className="flex items-center gap-5 rounded-2xl bg-white border border-purple-15 p-6 shadow-[var(--shadow-base)] max-w-[560px] mx-auto">
               <div className="w-16 h-16 shrink-0 rounded-full bg-purple-05 overflow-hidden">
                 <Image
-                  src="/images/lihi.png"
+                  src="/images/lihi-avatar.png"
                   alt="Lihi Pinto, orchestrator"
                   width={64}
                   height={64}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>
