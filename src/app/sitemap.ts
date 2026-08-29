@@ -25,6 +25,7 @@ const LAST_MODIFIED: Record<string, string> = {
   "/ai-visibility-checker": "2026-08-14",
   "/ai-revenue-readiness-score": "2026-08-20",
   "/orchestrator-method": "2026-08-14",
+  "/playbook": "2026-08-29",
   "/b2b-saas-marketing": "2026-08-06",
   "/fintech-marketing": "2026-08-06",
   "/cybersecurity-marketing": "2026-08-06",
