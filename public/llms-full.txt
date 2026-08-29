@@ -5478,7 +5478,7 @@ B2B buyers use generative AI as much as or more than search when researching ven
 Responsive, Inside the Buyer's Mind, 2025
 
 11%
-of B2B marketing orgs have AI agents actually in production beyond single-task automation. The other 89% are still piloting.
+of B2B marketing teams have AI agents actually in production beyond single-task automation. The other 89% are still piloting.
 Industry AI-in-Marketing survey, 2024, n=405
 
 47%
@@ -5520,7 +5520,7 @@ Lumen
 Video, from script to cut.
 
 Lihi Pinto · The Orchestrator
-15+ years in B2B tech. $70M+ raised at companies where she led marketing. Owns the strategy, the taste, and the veto.
+15+ years in B2B tech. $70M+ raised at a company she founded and led marketing for. Owns the strategy, the taste, and the veto.
 
 Chapter 01 · presented by Nova , Content Research Analyst
 
@@ -5584,11 +5584,11 @@ The shift: From creating more to extracting more from what already works.
 
 Your best content already exists. It's in your sales calls, your customer conversations, and the one LinkedIn post that actually landed last month. Most teams let it die in one format, on one channel, once.
 One strong idea should become a carousel, three short variations, a newsletter section, and a 60-second video script — same thinking, five entry points. That's how always-on presence happens without always-on effort.
-The move: run a repurposing pass on your top performer every single week. Vega keeps the visuals in system, Lumen turns the script into video, and the idea compounds instead of expiring.
+The move: run a repurposing pass on your top performer every single week. Vega keeps the visuals on brand, Lumen turns the script into video, and the idea compounds instead of expiring.
 
 The receipt
 63%
-average productivity lift on content operations tasks handled by AI agents.
+average productivity lift on content-operations tasks handled by AI agents.
 State of AI industry report, 2024
 
 Lihi's red pen
@@ -5600,13 +5600,13 @@ Chapter 05 · presented by Atlas , Performance Analytics Agent
 
 The shift: From vanity metrics to sales signals.
 
-Engagement isn't a score, it's a signal: which topics resonate, which accounts are paying attention, and who's warming up before they ever fill in a form.
+Engagement isn't a score; it's a signal: which topics resonate, which accounts are paying attention, and who's warming up before they ever fill in a form.
 Report in three layers: activity (are we consistent?), audience (are the right people engaging?), impact (is it touching pipeline, inbound, or hiring?). When social answers business questions, it stops being a cost center.
 The move: read the numbers mid-flight, not in next month's retro. Briefs get corrected while the week can still change. That's the difference between a dashboard and a feedback loop.
 
 The receipt
 21%
-average reduction in enterprise B2B sales cycle length where agentic AI coordinates cross-channel account engagement.
+average reduction in enterprise B2B sales-cycle length where agentic AI coordinates cross-channel account engagement.
 B2B Marketing Automation Wave, Q4 2024
 
 Lihi's red pen

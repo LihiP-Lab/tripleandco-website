@@ -35,7 +35,7 @@ const gapStats = [
   },
   {
     stat: "11%",
-    line: "of B2B marketing orgs have AI agents actually in production beyond single-task automation. The other 89% are still piloting.",
+    line: "of B2B marketing teams have AI agents actually in production beyond single-task automation. The other 89% are still piloting.",
     source: "Industry AI-in-Marketing survey, 2024, n=405",
   },
   {
@@ -144,11 +144,11 @@ const chapters: Chapter[] = [
     body: [
       "Your best content already exists. It's in your sales calls, your customer conversations, and the one LinkedIn post that actually landed last month. Most teams let it die in one format, on one channel, once.",
       "One strong idea should become a carousel, three short variations, a newsletter section, and a 60-second video script \u2014 same thinking, five entry points. That's how always-on presence happens without always-on effort.",
-      "The move: run a repurposing pass on your top performer every single week. Vega keeps the visuals in system, Lumen turns the script into video, and the idea compounds instead of expiring.",
+      "The move: run a repurposing pass on your top performer every single week. Vega keeps the visuals on brand, Lumen turns the script into video, and the idea compounds instead of expiring.",
     ],
     data: {
       stat: "63%",
-      line: "average productivity lift on content operations tasks handled by AI agents.",
+      line: "average productivity lift on content-operations tasks handled by AI agents.",
       source: "State of AI industry report, 2024",
     },
     redPen:
@@ -162,13 +162,13 @@ const chapters: Chapter[] = [
     title: "Impressions Are Applause. Pipeline Is Revenue.",
     shift: "From vanity metrics to sales signals.",
     body: [
-      "Engagement isn't a score, it's a signal: which topics resonate, which accounts are paying attention, and who's warming up before they ever fill in a form.",
+      "Engagement isn't a score; it's a signal: which topics resonate, which accounts are paying attention, and who's warming up before they ever fill in a form.",
       "Report in three layers: activity (are we consistent?), audience (are the right people engaging?), impact (is it touching pipeline, inbound, or hiring?). When social answers business questions, it stops being a cost center.",
       "The move: read the numbers mid-flight, not in next month's retro. Briefs get corrected while the week can still change. That's the difference between a dashboard and a feedback loop.",
     ],
     data: {
       stat: "21%",
-      line: "average reduction in enterprise B2B sales cycle length where agentic AI coordinates cross-channel account engagement.",
+      line: "average reduction in enterprise B2B sales-cycle length where agentic AI coordinates cross-channel account engagement.",
       source: "B2B Marketing Automation Wave, Q4 2024",
     },
     redPen:
@@ -413,8 +413,9 @@ export default function PlaybookPage() {
                   Lihi Pinto &middot; The Orchestrator
                 </p>
                 <p className="text-xs text-purple-6 leading-snug">
-                  15+ years in B2B tech. $70M+ raised at companies where she
-                  led marketing. Owns the strategy, the taste, and the veto.
+                  15+ years in B2B tech. $70M+ raised at a company she founded
+                  and led marketing for. Owns the strategy, the taste, and the
+                  veto.
                 </p>
               </div>
             </div>
