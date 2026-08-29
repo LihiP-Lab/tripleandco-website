@@ -312,13 +312,13 @@ export default function PlaybookPage() {
           <div className="flex flex-wrap items-center gap-5">
             <Link
               href="/revenue-diagnostic"
-              className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-brand px-7 py-4 text-[19px] font-bold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
             >
               See it applied to your funnel <span>&#8594;</span>
             </Link>
             <Link
               href="/orchestrator-method"
-              className="text-sm font-semibold text-brand hover:underline"
+              className="text-sm font-semibold text-brand-dark hover:underline"
             >
               The method behind it &#8594;
             </Link>
