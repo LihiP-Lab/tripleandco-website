@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "The Supervised AI Marketing Playbook",
   description:
-    "How one orchestrator and 8 AI agents run a full B2B revenue engine. The mindset shifts, the workflows, what AI must never own, and a 90-day roadmap — every page human-approved.",
+    "How one orchestrator and 8 AI agents run a B2B revenue engine: mindset shifts, workflows, human oversight, and a practical 90-day roadmap.",
   alternates: { canonical: "/playbook" },
   openGraph: {
     title: "The 9-Person Marketing Team Where 8 Aren't People | Triple & Co.",
@@ -45,7 +45,7 @@ const gapStats = [
   },
   {
     stat: "87%",
-    line: "of consumers assume brand content is at least partly AI-generated — and reward proof over polish.",
+    line: "of consumers assume brand content is at least partly AI-generated, and reward proof over polish.",
     source: "Cashew Research, 2026, n=2,149",
   },
 ];

@@ -51,6 +51,7 @@ const ROUTES = [
   "/ai-video-production",
   "/agents",
   "/ai-marketing-agents",
+  "/playbook",
   "/insights",
   "/insights/revenue",
   "/insights/strategy",

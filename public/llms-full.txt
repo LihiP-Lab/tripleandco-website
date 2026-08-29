@@ -5445,6 +5445,278 @@ Book a Diagnostic Call with Lihi →
 Pair agents with fractional CMO leadership → Browse all 8 agents → About Lihi Pinto →
 
 ---
+url: https://www.tripleandco.com/playbook
+title: The Supervised AI Marketing Playbook | Triple & Co.
+description: How one orchestrator and 8 AI agents run a B2B revenue engine: mindset shifts, workflows, human oversight, and a practical 90-day roadmap.
+---
+- Home
+- The Playbook
+The Supervised AI Marketing Playbook
+
+# The 9-Person Marketing Team Where 8 Aren't People.
+
+Your buyers already research with AI. Most marketing teams still don't ship with it. This playbook is the operating model that closes the gap: one human orchestrator, eight specialist AI agents, and zero unsupervised output.
+Five chapters, each fronted by the agent who owns that job. Every claim has a source. Every page was approved by a human named Lihi. Yes, we named the agents. No, we're not sorry.
+See it applied to your funnel → The method behind it →
+
+Chapter 0 · The gap
+
+## Buyers Moved. Marketing Didn't.
+
+The whole playbook in six numbers. The distance between the first three and the last three is where deals are being won and lost right now.
+
+94%
+of B2B buyers now use AI somewhere in their buying process. Up from 89% a year earlier.
+Forrester Buyers' Journey Survey, 2026
+
+29%
+of buyers start their research in ChatGPT more often than in Google. Nearly 8 in 10 say AI search changed how they research.
+G2 Buyer Behavior Report, 2025
+
+2 in 3
+B2B buyers use generative AI as much as or more than search when researching vendors. In tech, it's 80%.
+Responsive, Inside the Buyer's Mind, 2025
+
+11%
+of B2B marketing orgs have AI agents actually in production beyond single-task automation. The other 89% are still piloting.
+Industry AI-in-Marketing survey, 2024, n=405
+
+47%
+of CMOs name governance, hallucination risk, and brand safety as the top barrier to deploying AI agents.
+Salesforce State of Marketing, 9th ed.
+
+87%
+of consumers assume brand content is at least partly AI-generated, and reward proof over polish.
+Cashew Research, 2026, n=2,149
+
+Meet your authors
+
+## Eight Agents. One Red Pen.
+
+Each chapter is presented by the agent who runs that part of the engine — and closed by the human who decides what ships.
+
+Camille
+Brand voice. Yours, not an LLM's.
+
+Rex
+Campaign strategy and briefs.
+
+Zara
+Social channels that ship.
+
+Nova
+Research, trends, competitive intel.
+
+Atlas
+The numbers. What's actually working.
+
+Sage
+Repurposing. One piece becomes ten.
+
+Vega
+Art direction and visual system.
+
+Lumen
+Video, from script to cut.
+
+Lihi Pinto · The Orchestrator
+15+ years in B2B tech. $70M+ raised at companies where she led marketing. Owns the strategy, the taste, and the veto.
+
+Chapter 01 · presented by Nova , Content Research Analyst
+
+## Your Buyers Already Switched. Quietly.
+
+The shift: From “AI is coming” to “AI is how you're already being evaluated.”
+
+Your next customer's first impression of you probably wasn't your website. It was a ChatGPT answer you never saw, comparing you to two competitors you didn't pick.
+AI referral traffic doesn't spread evenly. It concentrates 4–9x on decision pages: pricing, tools, comparisons. The exact pages where deals are made. ChatGPT alone sends 84% of it, and it tripled in a year.
+The move: treat AI answers as a channel. Audit what the models say about you, structure your site so they can read it (llms.txt, JSON-LD, clean headings), and publish content that answers the questions buyers actually ask machines.
+
+The receipt
+84.2%
+of AI referral traffic comes from ChatGPT, growing 3.26x year over year, and it lands on decision pages.
+Previsible State of AI Discovery, 2025 — 1.96M LLM sessions
+
+Lihi's red pen
+“ Nova brings me ten trends a week. My job is to kill eight of them. Research without a veto is just anxiety with charts. ”
+
+Chapter 02 · presented by Camille , Brand Voice Generator
+
+## Everyone Sounds Like the Same Robot Now.
+
+The shift: From “generate more content” to “sound like yourself, at scale.”
+
+Here's the uncomfortable part: your audience already assumes you use AI. 87% of consumers believe brand content is at least partly AI-generated. Pretending otherwise is a losing game.
+What they punish isn't AI. It's slop — the generic, safe, could-be-anyone voice that says “nobody here read this before publishing.” Trust has moved from polish to proof.
+The move: extract your voice before you scale it. Codify the sentence structure, the phrases you'd never use, the opinions you actually hold — and make every AI-assisted draft pass through that filter. The voice guide is the asset. The volume is just leverage.
+
+The receipt
+87%
+of consumers assume brand content is at least partly AI-made. Only 13% are confident they can tell. Authenticity is now table stakes; proof is the differentiator.
+Cashew Research, 2026
+
+Lihi's red pen
+“ Camille drafts in our voice. I still read every line out loud. If I wouldn't say it on a call with a client, it doesn't ship. ”
+
+Chapter 03 · presented by Zara , Social Media Commander
+
+## Your Company Page Is Not the Engine. You Are.
+
+The shift: From company-centric posting to people-led distribution.
+
+Organic reach for LinkedIn company pages sits around 2–6% of followers. Personal profiles drive up to 8x more engagement. Your buyers follow people, not logos — they always have.
+B2B buying journeys run 3–6 months, mostly invisible. If you only show up for launches, you're absent for the entire evaluation. Consistency beats brilliance here: reliably present beats occasionally impressive.
+The move: build the founder's voice as infrastructure, not as a hobby. A monthly extraction session, pre-approved formats, and an always-on cadence that survives busy weeks — because the agent doesn't get busy.
+
+The receipt
+8x
+more engagement on personal profiles than company pages — while company-page organic reach sits at 2–6% of followers.
+LinkedIn benchmarks, via SAGE B2B Social Playbook
+
+Lihi's red pen
+“ Zara can schedule a month of posts in an afternoon. She cannot have an opinion about this week's funding news. That part is mine. ”
+
+Chapter 04 · presented by Sage , Content Repurposing Engine
+
+## You Don't Have a Content Problem. You Have a Leverage Problem.
+
+The shift: From creating more to extracting more from what already works.
+
+Your best content already exists. It's in your sales calls, your customer conversations, and the one LinkedIn post that actually landed last month. Most teams let it die in one format, on one channel, once.
+One strong idea should become a carousel, three short variations, a newsletter section, and a 60-second video script — same thinking, five entry points. That's how always-on presence happens without always-on effort.
+The move: run a repurposing pass on your top performer every single week. Vega keeps the visuals in system, Lumen turns the script into video, and the idea compounds instead of expiring.
+
+The receipt
+63%
+average productivity lift on content operations tasks handled by AI agents.
+State of AI industry report, 2024
+
+Lihi's red pen
+“ Sage will happily turn one post into ten. The question I ask first: did the original deserve to exist ten times? Multiply signal, not noise. ”
+
+Chapter 05 · presented by Atlas , Performance Analytics Agent
+
+## Impressions Are Applause. Pipeline Is Revenue.
+
+The shift: From vanity metrics to sales signals.
+
+Engagement isn't a score, it's a signal: which topics resonate, which accounts are paying attention, and who's warming up before they ever fill in a form.
+Report in three layers: activity (are we consistent?), audience (are the right people engaging?), impact (is it touching pipeline, inbound, or hiring?). When social answers business questions, it stops being a cost center.
+The move: read the numbers mid-flight, not in next month's retro. Briefs get corrected while the week can still change. That's the difference between a dashboard and a feedback loop.
+
+The receipt
+21%
+average reduction in enterprise B2B sales cycle length where agentic AI coordinates cross-channel account engagement.
+B2B Marketing Automation Wave, Q4 2024
+
+Lihi's red pen
+“ Atlas tells me what moved. He doesn't get to decide what matters. Metrics are witnesses, not judges. ”
+
+The rules of the loop
+
+## What AI Must Never Own.
+
+This is the answer to the 47% of CMOs stuck on governance and brand safety. Supervision isn't a compromise — it's the architecture.
+
+### The human owns
+
+- ✗ The strategy and the point of view
+- ✗ The founder's authentic voice
+- ✗ The judgment call on what ships
+- ✗ The human moments that build trust
+- ✗ Accountability for the outcome
+
+### The agents own
+
+- ✓ Turning raw thinking into structured drafts
+- ✓ Repurposing one asset into many formats
+- ✓ Voice consistency at scale
+- ✓ Research, trends, and gap detection
+- ✓ The production grind, on schedule, every week
+
+Appendix A
+
+## The Supervised AI Readiness Audit.
+
+Be honest. Every unchecked box is exactly where to start building.
+
+### AI Visibility
+
+- You know what ChatGPT says when asked about your category
+- Your site is machine-readable: llms.txt, JSON-LD, clean structure
+- Decision pages (pricing, comparisons) answer real buyer questions
+
+### Voice & Trust
+
+- Your brand voice is codified, not tribal knowledge
+- Every AI-assisted draft passes a human review before shipping
+- You're transparent about how you use AI
+
+### Distribution
+
+- Founder posts at least weekly, with a real point of view
+- Content runs always-on, not in campaign bursts
+- Top content gets repurposed across formats every week
+
+### Proof
+
+- Social and content are measured against pipeline, not likes
+- Engagement signals reach sales as warm-account intel
+- Performance data corrects next week's briefs
+
+Appendix B
+
+## The 90-Day Quick Start.
+
+Days 1–30
+
+### Build the foundation
+
+- → Audit what AI models currently say about you
+- → Extract and codify the brand voice
+- → Define the supervision loop: who briefs, who reviews, who has the veto
+- → Ship the founder's first structured post
+
+Days 31–60
+
+### Build the rhythm
+
+- → Run the weekly cadence: brief → run → review → ship
+- → Stand up the repurposing pass on every top performer
+- → Make the site machine-readable for AI search
+- → Start reading engagement as sales signal
+
+Days 61–90
+
+### Build the engine
+
+- → Double down on what the data says is working
+- → Wire signals to sales; measure against pipeline
+- → Expand to a second channel and format
+- → Review the quarter, set the next one — with receipts
+
+Full disclosure
+
+## How This Playbook Was Made.
+
+This playbook was produced by the exact system it describes. That's not a gimmick — it's the proof.
+
+Nova pulled the research and the sources
+
+Camille kept it sounding like us
+
+Vega held the visual system to the brand
+
+Sage is already turning it into ten other things
+
+Lihi held the red pen. Every page passed a human.
+
+## Want This Engine Running on Your Funnel?
+
+The playbook is the model. The revenue diagnostic is where it meets your numbers: 30 minutes, your funnel math, and a straight answer on where the gap is.
+Book the revenue diagnostic → Meet the agents →
+
+---
 url: https://www.tripleandco.com/insights
 title: AI B2B Growth Hub | CMO & CRO as a Service | Triple & Co.
 description: Battle-tested B2B playbooks from AI-Native fractional CMO and CRO leaders. Revenue architecture for the AI era, without the agency overhead.
@@ -5479,15 +5751,6 @@ The Library
 ## All Insights
 
 All CMO & CRO as a Service Fractional Leadership Native AI Marketing Podcasts ↗
-
-CMO & CRO as a Service Pillar
-
-### Outsourced CMO in Israel: What It Really Costs in 2026 (and What You Get)
-
-Full-time hire, outsourced marketing manager, or CMO as a Service? Real Israeli market numbers in shekels, what each tier actually delivers, and how to choose for your stage.
-
-Lihi Pinto
-June 2026 · 12 min read
 
 CMO & CRO as a Service Pillar
 

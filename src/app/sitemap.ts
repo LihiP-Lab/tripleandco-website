@@ -80,6 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ai-visibility-checker",
     "/ai-revenue-readiness-score",
     "/orchestrator-method",
+    "/playbook",
     "/b2b-saas-marketing",
     "/fintech-marketing",
     "/cybersecurity-marketing",
