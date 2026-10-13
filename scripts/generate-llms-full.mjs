@@ -46,6 +46,7 @@ const ROUTES = [
   "/b2b-marketing-israel-he",
   "/ai-content-engine",
   "/ai-social-engine",
+  "/social-media-management",
   "/ai-market-research",
   "/ai-analytics-attribution",
   "/ai-video-production",

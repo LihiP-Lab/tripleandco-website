@@ -5,7 +5,7 @@ import Script from "next/script";
 
 // Base Calendly widget params we always want set.
 // primary_color matches Triple brand pink; hide_gdpr_banner keeps it clean.
-const CALENDLY_BASE = "https://calendly.com/lihi-tripleandco/30min";
+export const CALENDLY_BASE = "https://calendly.com/lihi-tripleandco/30min";
 const CALENDLY_PARAMS = new URLSearchParams({
   hide_gdpr_banner: "1",
   primary_color: "FE3465",
@@ -19,7 +19,25 @@ const DEFAULT_UTMS: Record<string, string> = {
   utm_medium: "organic",
 };
 
-type CalendlyWindow = Window & {
+/**
+ * Booking URL with brand params, the visitor's inbound query string (the
+ * ad's/campaign's UTMs) forwarded verbatim, and attribution defaults filled
+ * only where the visitor supplied none. `extraDefaults` follow the same
+ * rule, so a page-level hint never overwrites a real campaign value.
+ */
+export function buildCalendlyUrl(extraDefaults: Record<string, string> = {}) {
+  const params = new URLSearchParams(CALENDLY_PARAMS);
+  if (typeof window !== "undefined") {
+    const inbound = new URLSearchParams(window.location.search);
+    inbound.forEach((value, key) => params.set(key, value));
+  }
+  for (const [key, value] of Object.entries({ ...DEFAULT_UTMS, ...extraDefaults })) {
+    if (!params.has(key)) params.set(key, value);
+  }
+  return `${CALENDLY_BASE}?${params.toString()}`;
+}
+
+export type CalendlyWindow = Window & {
   Calendly?: {
     initInlineWidget: (opts: { url: string; parentElement: HTMLElement }) => void;
   };
@@ -37,21 +55,7 @@ const LINKEDIN_BOOKED_CONVERSION_ID = 27632930;
 export function CalendlyInline() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const buildUrl = useCallback(() => {
-    const params = new URLSearchParams(CALENDLY_PARAMS);
-    if (typeof window !== "undefined") {
-      // Forward the visitor's real inbound query string (the ad's/campaign's
-      // UTMs) verbatim, so a booking attributes back to the exact source.
-      const inbound = new URLSearchParams(window.location.search);
-      inbound.forEach((value, key) => params.set(key, value));
-    }
-    // Only fill attribution defaults the visitor did not supply, so unknown
-    // traffic reads as "website / organic" rather than as LinkedIn paid.
-    for (const [key, value] of Object.entries(DEFAULT_UTMS)) {
-      if (!params.has(key)) params.set(key, value);
-    }
-    return `${CALENDLY_BASE}?${params.toString()}`;
-  }, []);
+  const buildUrl = useCallback(() => buildCalendlyUrl(), []);
 
   const initWidget = useCallback(() => {
     const w = window as CalendlyWindow;
