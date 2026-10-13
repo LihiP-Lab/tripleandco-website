@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Check, Minus } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { PillarFAQ } from "@/components/PillarFAQ";
 import { BookCallLink } from "@/components/social/BookCallLink";
+import { AgentTeam } from "@/components/social/AgentTeam";
+import { HowItWorks } from "@/components/social/HowItWorks";
 import { SampleMonth } from "@/components/social/SampleMonth";
 import { SamplePieces } from "@/components/social/SamplePieces";
 import { SocialBooking } from "@/components/social/SocialBooking";
+import { StudioBoard } from "@/components/social/StudioBoard";
+import { Avatar, LIHI_PORTRAIT } from "@/components/social/studio";
 import { ORG_ID, SITE_URL, lihiRef } from "@/lib/seo";
 import {
   ADVOCACY_ADDON,
@@ -14,6 +17,7 @@ import {
   PUBLISHING_ITEMS,
   REPORT_ITEMS,
   SAMPLE_COMPANY,
+  SOCIAL_AGENTS,
   SOCIAL_PACKAGES,
   SOCIAL_ROUTE,
   additionalChannelsLabel,
@@ -25,7 +29,7 @@ const PAGE_URL = `${SITE_URL}${SOCIAL_ROUTE}`;
 export const metadata: Metadata = {
   title: "Managed B2B Social Media, Not Another Tool",
   description:
-    "A managed B2B social team led by Lihi Pinto, not another tool: LinkedIn-first content, employee advocacy, and a monthly HubSpot results report. Book a call.",
+    "Lihi Pinto plus 8 AI agents as your managed B2B social team: LinkedIn-first content, employee advocacy, and a monthly HubSpot results report. Book a call.",
   alternates: { canonical: SOCIAL_ROUTE },
   openGraph: {
     title: "Managed Social Media, Led by Lihi Pinto | Triple & Co.",
@@ -100,7 +104,7 @@ const LIHI_OWNS = [
   },
   {
     title: "Production orchestration",
-    body: "She runs the Triple & Co. production team across writing, design, video, and publishing.",
+    body: "She directs the eight Triple & Co. agents across research, writing, design, video, publishing, and reporting.",
   },
   {
     title: "Personal batch review",
@@ -118,7 +122,7 @@ const YOU_BRING = [
 
 const COMPARISON: { topic: string; tool: string; team: string }[] = [
   { topic: "Ideas and monthly direction", tool: "Your team", team: "Lihi, tied to your commercial priorities" },
-  { topic: "Writing, design, and video", tool: "Your team", team: "The Triple & Co. team" },
+  { topic: "Writing, design, and video", tool: "Your team", team: "8 Triple & Co. agents, directed and reviewed by Lihi" },
   { topic: "Quality review", tool: "Your team, when there is time", team: "Lihi, every monthly batch" },
   { topic: "Scheduling and publishing", tool: "Your team, inside the tool", team: "We do it, once you approve" },
   {
@@ -154,19 +158,18 @@ const COUNTING = [
   },
 ];
 
-const STEPS = [
-  { who: "You", title: "Share your priorities", body: "Offers, launches, buyers, and what the business needs this quarter." },
-  { who: "Lihi", title: "Shapes the direction", body: "Positioning, founder voice, and the monthly calendar." },
-  { who: "Triple & Co.", title: "Creates the batch", body: "Copy, design, and video, adapted for each account." },
-  { who: "Lihi", title: "Reviews every piece", body: "The whole batch, before it reaches you." },
-  { who: "You", title: "Approve", body: "With one consolidated revision round per monthly batch." },
-  { who: "Triple & Co.", title: "Publishes and learns", body: "Scheduling, publishing, the monthly results report, and next month's direction." },
-];
-
 const FAQS = [
   {
     q: "How is this different from a social media management platform?",
-    a: "A platform gives your team software to plan, publish, and measure. Your team still comes up with the ideas, writes, designs, and posts. We are the team: Lihi leads the direction, Triple & Co. creates and publishes, and you approve. If you already have an in-house social team that needs better tooling, a platform may be the better fit, and we will say so on the call.",
+    a: "A platform gives your team software to plan, publish, and measure. Your team still comes up with the ideas, writes, designs, and posts. We are the team: Lihi leads the direction, eight Triple & Co. agents create and publish, and you approve. If you already have an in-house social team that needs better tooling, a platform may be the better fit, and we will say so on the call.",
+  },
+  {
+    q: "What do the 8 agents do?",
+    a: "They are the production team behind your social media. Nova researches, Rex plans campaigns, Camille writes, Vega designs, Lumen edits video, Sage adapts each piece for every account, Zara runs the calendar and publishing, and Atlas tracks links and builds the monthly report. All eight are included in every package, and Lihi directs their work.",
+  },
+  {
+    q: "Is the content written by AI?",
+    a: "The agents do the production work, and Lihi stays in charge of it. She sets the direction, contributes ideas and copy, and reviews every piece before it reaches you. You approve before anything is published. Founder videos use your own recordings, never an AI avatar.",
   },
   {
     q: "Do we need to know which package we want before we book?",
@@ -235,7 +238,7 @@ const serviceSchema = {
   areaServed: "Worldwide",
   audience: { "@type": "BusinessAudience", audienceType: "B2B service and technology companies" },
   description:
-    "A managed B2B social media team, not another tool. Led by Lihi Pinto, created and published by Triple & Co., LinkedIn first, with a monthly results report from HubSpot.",
+    "A managed B2B social media team, not another tool. Lihi Pinto and eight Triple & Co. AI agents create and publish the work, LinkedIn first, with a monthly results report from HubSpot.",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Managed social media packages",
@@ -316,6 +319,17 @@ function AccountRow({ label, value, included }: { label: string; value: string; 
   );
 }
 
+function TeamStack({ size = 24 }: { size?: number }) {
+  return (
+    <span aria-hidden="true" className="flex shrink-0 -space-x-2">
+      <Avatar src={LIHI_PORTRAIT} kind="person" size={size + 4} className="relative z-10" />
+      {SOCIAL_AGENTS.slice(0, 4).map((a) => (
+        <Avatar key={a.id} src={a.image} size={size} />
+      ))}
+    </span>
+  );
+}
+
 function PackageCard({ pkg }: { pkg: SocialPackage }) {
   return (
     <article className={`${cardCls} flex flex-col p-6 sm:p-7`} aria-labelledby={`pkg-${pkg.id}`}>
@@ -351,10 +365,10 @@ function PackageCard({ pkg }: { pkg: SocialPackage }) {
         />
       </ul>
 
-      <p className="flex items-center gap-2 rounded-[10px] bg-pink-05 px-3 py-2.5 text-sm font-semibold text-purple-9 mb-6">
-        <Check className="h-4 w-4 text-brand-dark shrink-0" aria-hidden="true" />
-        Lihi&apos;s direction and batch review
-      </p>
+      <div className="flex items-center gap-3 rounded-[10px] bg-pink-05 px-3 py-2.5 mb-6">
+        <TeamStack />
+        <p className="text-sm font-semibold text-purple-9 leading-snug">Lihi + all 8 agents, with Lihi&apos;s batch review</p>
+      </div>
 
       <BookCallLink location={`package-${pkg.id}`} packageId={pkg.id} className={`${primaryBtn} mt-auto w-full`}>
         Book a Call with Lihi <Arrow />
@@ -374,77 +388,55 @@ export default function SocialMediaManagementPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-purple-9 pt-16 pb-20 lg:pt-24 lg:pb-28">
+      <section className="tech-grid relative overflow-hidden bg-white pt-14 pb-20 lg:pt-20 lg:pb-28">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -top-40 right-[-10%] h-[520px] w-[520px] rounded-full bg-brand/20 blur-[120px]"
+          className="pointer-events-none absolute -top-40 right-[-10%] h-[520px] w-[520px] rounded-full bg-brand/10 blur-[120px]"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute bottom-[-30%] left-[-10%] h-[420px] w-[420px] rounded-full bg-purple-5/25 blur-[120px]"
+          className="pointer-events-none absolute bottom-[-30%] left-[-10%] h-[420px] w-[420px] rounded-full bg-purple-5/15 blur-[120px]"
         />
-        <div className="relative z-10 mx-auto max-w-[1200px] px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-center">
+        <div className="relative z-10 mx-auto max-w-[1200px] px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-14 items-center">
           <div>
-            <p className="mb-5 text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">Managed B2B social media · LinkedIn first · Led by Lihi Pinto</p>
-            <h1 className="text-[40px] sm:text-5xl lg:text-[60px] font-black tracking-tight leading-[1.02] text-white mb-6">
+            <p className="eyebrow mb-5">Managed B2B social media · LinkedIn first · Led by Lihi Pinto</p>
+            <h1 className="text-[40px] sm:text-5xl lg:text-[58px] font-black tracking-tight leading-[1.02] text-purple-9 mb-6">
               Social media with creative ownership and <span className="gradient-text">commercial purpose.</span>
             </h1>
-            <p className="text-lg sm:text-xl text-purple-2 leading-relaxed mb-8 max-w-[580px]">
-              <strong className="font-semibold text-white">Led by Lihi Pinto. Created and published by Triple &amp; Co.</strong>{" "}
+            <p className="text-lg sm:text-xl text-purple-7 leading-relaxed mb-8 max-w-[580px]">
+              <strong className="font-semibold text-purple-9">Led by Lihi Pinto. Created and published by Triple &amp; Co.</strong>{" "}
               Not another social media tool: a B2B social team built around what your business needs to communicate,
               who it needs to reach, and how it can contribute to revenue. Every month you see what reached your
               HubSpot.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 mb-4">
+            <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <BookCallLink location="hero" className={primaryBtn}>
                 Book a Call with Lihi <Arrow />
               </BookCallLink>
               <a
                 href="#packages"
-                className="inline-flex items-center justify-center min-h-[48px] rounded-[10px] border border-white/25 px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:border-white/60"
+                className="inline-flex items-center justify-center min-h-[48px] rounded-[10px] border border-purple-15 bg-white px-7 py-3.5 text-[15px] font-semibold text-purple-9 transition-colors hover:bg-purple-05"
               >
                 Explore the Packages
               </a>
             </div>
-            <p className="text-sm text-purple-3">
-              A 30-minute call to find the right content volume and channels for your business. No preparation needed.
-            </p>
+            <div className="flex items-center gap-3">
+              <TeamStack size={30} />
+              <p className="text-sm text-purple-7 leading-snug">
+                <span className="font-bold text-purple-9">Lihi + 8 AI agents</span> on every package. A 30-minute
+                call, no preparation needed.
+              </p>
+            </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[380px]">
-            <div className="relative overflow-hidden rounded-[28px] border border-white/10 shadow-2xl">
-              <Image
-                src="/images/lihi-portrait.jpg"
-                alt="Lihi Pinto, founder of Triple & Co."
-                width={896}
-                height={1088}
-                priority
-                sizes="(min-width: 1024px) 380px, 90vw"
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="relative -mt-16 mx-4 sm:mx-6 rounded-2xl bg-purple-85/95 border border-white/10 p-5 backdrop-blur-md shadow-2xl">
-              <p className="text-xs font-bold uppercase tracking-widest text-pink-3 mb-3">Every monthly batch</p>
-              <ol className="space-y-2 text-sm">
-                {[
-                  ["Directed by", "Lihi Pinto"],
-                  ["Created by", "Triple & Co."],
-                  ["Reviewed by", "Lihi Pinto"],
-                  ["Approved by", "You"],
-                ].map(([verb, who]) => (
-                  <li key={verb} className="flex items-center justify-between gap-4">
-                    <span className="text-purple-3">{verb}</span>
-                    <span className="font-bold text-white">{who}</span>
-                  </li>
-                ))}
-              </ol>
-            </div>
+          <div className="relative mx-auto w-full max-w-[520px]">
+            <StudioBoard />
           </div>
         </div>
       </section>
 
       {/* Situation */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-purple-05 py-20 lg:py-28">
         <div className="mx-auto max-w-[1200px] px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16">
           <ScrollReveal>
             <p className="eyebrow mb-4">Sound familiar?</p>
@@ -481,53 +473,23 @@ export default function SocialMediaManagementPage() {
         </div>
       </section>
 
-      {/* Tool vs team */}
-      <section className="relative overflow-hidden bg-purple-9 py-20 lg:py-28" aria-labelledby="compare-title">
-        <div className="relative z-10 mx-auto max-w-[1200px] px-6 sm:px-8">
+      {/* Team */}
+      <section className="tech-grid bg-white py-20 lg:py-28" aria-labelledby="team-title">
+        <div className="mx-auto max-w-[1200px] px-6 sm:px-8">
           <ScrollReveal>
-            <div className="max-w-[760px] mb-12">
-              <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">Software or a team?</p>
-              <h2 id="compare-title" className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.08] text-white mb-5">
-                A tool needs a team. <span className="gradient-text">We are the team.</span>
+            <div className="max-w-[760px] mb-10">
+              <p className="eyebrow mb-4">Your team</p>
+              <h2 id="team-title" className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.08] text-purple-9 mb-5">
+                Lihi + 8 agents. <span className="gradient-text">One social team.</span>
               </h2>
-              <p className="text-lg text-purple-2 leading-relaxed">
-                Social media platforms are good at publishing, inboxes, and dashboards. They still need people to come
-                up with the ideas, write, design, and post every week. Here is who does the work in each model.
+              <p className="text-lg text-purple-7 leading-relaxed">
+                Every package includes all eight Triple &amp; Co. AI agents as your production team, working
+                alongside Lihi. They research, write, design, edit, adapt, publish, and measure. Lihi sets the
+                direction, contributes to the work, and reviews every piece before it reaches you.
               </p>
             </div>
           </ScrollReveal>
-          <div className="rounded-2xl border border-white/10 overflow-hidden">
-            <div aria-hidden="true" className="hidden md:grid grid-cols-[1fr_1fr_1.2fr] gap-6 bg-white/5 px-6 py-4 text-xs font-bold uppercase tracking-widest">
-              <span className="text-purple-3">Who does it</span>
-              <span className="text-purple-3">With social media software</span>
-              <span className="text-pink-3">With Triple &amp; Co.</span>
-            </div>
-            <ul>
-              {COMPARISON.map((row) => (
-                <li
-                  key={row.topic}
-                  className="grid grid-cols-1 md:grid-cols-[1fr_1fr_1.2fr] gap-2 md:gap-6 px-6 py-5 border-t border-white/10 first:border-t-0 md:first:border-t"
-                >
-                  <p className="font-extrabold text-white">{row.topic}</p>
-                  <p className="text-[15px] text-purple-3">
-                    <span className="md:sr-only font-semibold">With software: </span>
-                    {row.tool}
-                  </p>
-                  <p className="flex gap-2 text-[15px] font-semibold text-white">
-                    <Check className="h-5 w-5 text-pink-3 shrink-0" aria-hidden="true" />
-                    <span>
-                      <span className="md:sr-only text-pink-3">With Triple &amp; Co.: </span>
-                      {row.team}
-                    </span>
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <p className="mt-6 text-[15px] text-purple-3 max-w-[760px]">
-            Already have an in-house social team that needs better tooling? A platform may be the better fit, and
-            we will tell you so on the call.
-          </p>
+          <AgentTeam />
         </div>
       </section>
 
@@ -597,8 +559,58 @@ export default function SocialMediaManagementPage() {
         </div>
       </section>
 
+      {/* Tool vs team */}
+      <section className="bg-white py-20 lg:py-28" aria-labelledby="compare-title">
+        <div className="mx-auto max-w-[1200px] px-6 sm:px-8">
+          <ScrollReveal>
+            <div className="max-w-[760px] mb-12">
+              <p className="eyebrow mb-4">Software or a team?</p>
+              <h2 id="compare-title" className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.08] text-purple-9 mb-5">
+                A tool needs a team. <span className="gradient-text">We are the team.</span>
+              </h2>
+              <p className="text-lg text-purple-7 leading-relaxed">
+                Social media platforms are good at publishing, inboxes, and dashboards. They still need people to come
+                up with the ideas, write, design, and post every week. Here is who does the work in each model.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="rounded-2xl border border-purple-15 bg-white overflow-hidden shadow-[var(--shadow-base)]">
+            <div aria-hidden="true" className="hidden md:grid grid-cols-[1fr_1fr_1.2fr] gap-6 bg-purple-05 px-6 py-4 text-xs font-bold uppercase tracking-widest">
+              <span className="text-purple-6">Who does it</span>
+              <span className="text-purple-6">With social media software</span>
+              <span className="text-brand-dark">With Triple &amp; Co.</span>
+            </div>
+            <ul>
+              {COMPARISON.map((row) => (
+                <li
+                  key={row.topic}
+                  className="grid grid-cols-1 md:grid-cols-[1fr_1fr_1.2fr] gap-2 md:gap-6 px-6 py-5 border-t border-purple-15 first:border-t-0 md:first:border-t"
+                >
+                  <p className="font-extrabold text-purple-9">{row.topic}</p>
+                  <p className="text-[15px] text-purple-6">
+                    <span className="md:sr-only font-semibold">With software: </span>
+                    {row.tool}
+                  </p>
+                  <p className="flex gap-2 text-[15px] font-semibold text-purple-9">
+                    <Check className="h-5 w-5 text-brand-dark shrink-0" aria-hidden="true" />
+                    <span>
+                      <span className="md:sr-only text-brand-dark">With Triple &amp; Co.: </span>
+                      {row.team}
+                    </span>
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="mt-6 text-[15px] text-purple-7 max-w-[760px]">
+            Already have an in-house social team that needs better tooling? A platform may be the better fit, and
+            we will tell you so on the call.
+          </p>
+        </div>
+      </section>
+
       {/* Packages */}
-      <section id="packages" className="bg-white py-20 lg:py-28 scroll-mt-20" aria-labelledby="packages-title">
+      <section id="packages" className="bg-purple-05 py-20 lg:py-28 scroll-mt-20" aria-labelledby="packages-title">
         <div className="mx-auto max-w-[1200px] px-6 sm:px-8">
           <ScrollReveal>
             <div className="max-w-[760px] mb-12">
@@ -702,7 +714,7 @@ export default function SocialMediaManagementPage() {
 
           {/* Included in every package */}
           <ScrollReveal>
-            <div className="mt-14 rounded-2xl bg-purple-05 p-6 sm:p-10">
+            <div className="mt-14 rounded-2xl border border-purple-15 bg-white p-6 sm:p-10">
               <h3 className="text-2xl font-black tracking-tight text-purple-9 mb-6">Included in every package</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3">
                 {COMMON_INCLUSIONS.map((item) => (
@@ -797,7 +809,7 @@ export default function SocialMediaManagementPage() {
       </section>
 
       {/* Sample month */}
-      <section className="bg-purple-05 py-20 lg:py-28" aria-labelledby="sample-title">
+      <section className="bg-white py-20 lg:py-28" aria-labelledby="sample-title">
         <div className="mx-auto max-w-[1200px] px-6 sm:px-8">
           <ScrollReveal>
             <div className="max-w-[760px] mb-10">
@@ -839,45 +851,14 @@ export default function SocialMediaManagementPage() {
       </section>
 
       {/* How it works */}
-      <section className="bg-white py-20 lg:py-28" aria-labelledby="how-title">
+      <section className="bg-purple-05 py-20 lg:py-28" aria-labelledby="how-title">
         <div className="mx-auto max-w-[1200px] px-6 sm:px-8">
-          <ScrollReveal>
-            <div className="max-w-[720px] mb-12">
-              <p className="eyebrow mb-4">How it works</p>
-              <h2 id="how-title" className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.08] text-purple-9">
-                One month, <span className="gradient-text">six clear steps.</span>
-              </h2>
-            </div>
-          </ScrollReveal>
-          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {STEPS.map((s, i) => (
-              <li key={s.title} className={`${cardCls} p-6`}>
-                <TopBar />
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-4xl font-black text-brand tabular-nums" aria-hidden="true">
-                    0{i + 1}
-                  </span>
-                  <span
-                    className={`rounded-full px-3 py-1 text-xs font-bold ${
-                      s.who === "Lihi" ? "bg-brand-dark text-white" : "bg-purple-05 text-purple-8 border border-purple-15"
-                    }`}
-                  >
-                    {s.who}
-                  </span>
-                </div>
-                <h3 className="text-lg font-extrabold text-purple-9 mb-1.5">
-                  <span className="sr-only">Step {i + 1}: {s.who}, </span>
-                  {s.title}
-                </h3>
-                <p className="text-[15px] text-purple-7 leading-relaxed">{s.body}</p>
-              </li>
-            ))}
-          </ol>
+          <HowItWorks />
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="bg-purple-05 py-20 lg:py-28" aria-labelledby="faq-title">
+      <section className="bg-white py-20 lg:py-28" aria-labelledby="faq-title">
         <div className="mx-auto max-w-[860px] px-6 sm:px-8">
           <ScrollReveal>
             <div className="text-center mb-10">
@@ -892,18 +873,18 @@ export default function SocialMediaManagementPage() {
       </section>
 
       {/* Closing + booking */}
-      <section id="book" className="relative overflow-hidden bg-purple-9 py-20 lg:py-28 scroll-mt-16" aria-labelledby="book-title">
+      <section id="book" className="tech-grid relative overflow-hidden bg-purple-05 py-20 lg:py-28 scroll-mt-16" aria-labelledby="book-title">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -top-32 left-1/2 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-brand/15 blur-[120px]"
+          className="pointer-events-none absolute -top-32 left-1/2 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-brand/10 blur-[120px]"
         />
         <div className="relative z-10 mx-auto max-w-[960px] px-6 sm:px-8">
           <div className="text-center mb-10">
-            <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">Book a call with Lihi</p>
-            <h2 id="book-title" className="text-3xl sm:text-4xl lg:text-[48px] font-black tracking-tight leading-[1.05] text-white mb-4">
+            <p className="eyebrow mb-4">Book a call with Lihi</p>
+            <h2 id="book-title" className="text-3xl sm:text-4xl lg:text-[48px] font-black tracking-tight leading-[1.05] text-purple-9 mb-4">
               Let&apos;s find the right package <span className="gradient-text">for your business.</span>
             </h2>
-            <p className="text-lg text-purple-2 max-w-[620px] mx-auto leading-relaxed">
+            <p className="text-lg text-purple-7 max-w-[620px] mx-auto leading-relaxed">
               Let&apos;s find the right content volume, channels, and add-ons for your business. You do not need to
               know your package in advance.
             </p>

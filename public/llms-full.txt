@@ -4485,7 +4485,7 @@ Book a 30-Minute Revenue Diagnostic → No pitch. You will leave with 3 specific
 ---
 url: https://www.tripleandco.com/social-media-management
 title: Managed B2B Social Media, Not Another Tool | Triple & Co.
-description: A managed B2B social team led by Lihi Pinto, not another tool: LinkedIn-first content, employee advocacy, and a monthly HubSpot results report. Book a call.
+description: Lihi Pinto plus 8 AI agents as your managed B2B social team: LinkedIn-first content, employee advocacy, and a monthly HubSpot results report. Book a call.
 ---
 Managed B2B social media · LinkedIn first · Led by Lihi Pinto
 
@@ -4493,14 +4493,37 @@ Managed B2B social media · LinkedIn first · Led by Lihi Pinto
 
 Led by Lihi Pinto. Created and published by Triple & Co. Not another social media tool: a B2B social team built around what your business needs to communicate, who it needs to reach, and how it can contribute to revenue. Every month you see what reached your HubSpot.
 Book a Call with Lihi → Explore the Packages
-A 30-minute call to find the right content volume and channels for your business. No preparation needed.
+Lihi + 8 AI agents on every package. A 30-minute call, no preparation needed.
 
-Every monthly batch
+Illustration of the production studio for SignalWorks , a fictional company: agents draft, design, and render each piece, Lihi reviews it, and approved pieces are scheduled. Studio · SignalWorks Paused Pause the production studio animation
+In production 3
+With Lihi 0
+Approved 7/20
 
-- Directed by Lihi Pinto
-- Created by Triple & Co.
-- Reviewed by Lihi Pinto
-- Approved by You
+- Camille · Founder LinkedIn
+The question I ask every ops leader first
+
+Drafting 14 %
+
+- Lumen · Company LinkedIn
+Walkthrough: raw signal to decision
+
+Rendering 57 %
+
+- Vega · Company LinkedIn
+5 signals your operations data is lying
+
+Designing 100 %
+
+- Sage · Instagram
+Carousel adapted for Instagram
+
+Approved by Lihi
+
+Lihi Pinto
+Reviews every piece before it reaches you
+
+Month batch
 
 Sound familiar?
 
@@ -4530,6 +4553,122 @@ Built for
 
 We take ownership of the month: direction, creation, review, and publishing. You bring the expertise and the approvals.
 
+Your team
+
+## Lihi + 8 agents. One social team.
+
+Every package includes all eight Triple & Co. AI agents as your production team, working alongside Lihi. They research, write, design, edit, adapt, publish, and measure. Lihi sets the direction, contributes to the work, and reviews every piece before it reaches you.
+
+Pause the agent status animation
+
+- Research
+
+### Nova
+
+Finds the questions your buyers ask, what competitors publish, and the topics worth owning this month.
+Mapping buyer questions
+
+- Campaigns
+
+### Rex
+
+Turns your commercial priorities into campaigns, angles, and calls to action for the calendar.
+Matching CTAs to offers
+
+- Copy in your voice
+
+### Camille
+
+Drafts founder and company posts in two distinct voices, from your positioning and approved facts.
+Tightening the hooks
+
+- Design
+
+### Vega
+
+Designs carousels, images, and branded visuals to your brand system.
+Laying out a carousel
+
+Direction and final review
+
+### Lihi Pinto
+
+- Sets the monthly direction
+- Contributes ideas, angles, and copy
+- Reviews every piece before it reaches you
+8 agents report to Lihi
+
+- Video
+
+### Lumen
+
+Scripts, edits, and captions short videos from your assets or your founder's own recordings.
+Adding captions
+
+- Adaptation
+
+### Sage
+
+Adapts every original piece for each managed account and format, so one idea works wherever it fits.
+Writing alt text
+
+- Calendar and publishing
+
+### Zara
+
+Runs the monthly calendar, the approvals queue, and scheduling across your accounts.
+Scheduling Tuesday 09:00
+
+- Tracking and reporting
+
+### Atlas
+
+Tags every link, follows what reaches your HubSpot, and builds the monthly results report.
+Syncing HubSpot
+
+The agents do the production work. Lihi is accountable for the quality, and you approve before anything is published. Meet the agents
+
+Who is in charge
+
+## Lihi leads your social. Personally.
+
+Lihi Pinto founded Triple & Co. She is accountable for the direction and quality of your social presence, and the Triple & Co. team produces and publishes the work. Here is what she owns, in every package.
+
+### What Lihi owns
+
+- 1 Positioning and founder voice
+She leads discovery at the start, so content sounds like your founder and reflects how you actually sell.
+
+- 2 Monthly content direction
+Each calendar follows your commercial priorities, the questions your buyers ask, and the calls to action that matter now.
+
+- 3 Creative contribution
+She contributes ideas, angles, and copy to the work itself, not only to the brief.
+
+- 4 Production orchestration
+She directs the eight Triple & Co. agents across research, writing, design, video, publishing, and reporting.
+
+- 5 Personal batch review
+She reviews every monthly batch before it reaches you.
+
+### What you bring
+
+- Your expertise and point of view
+- Approved facts, assets, and customer stories
+- Business updates and priorities
+- Timely approval of each monthly batch
+- Access to HubSpot (or your CRM) for the results report
+You stay the source of truth on facts and priorities. We take the ideas, drafts, design, scheduling, and follow-through off your plate.
+
+- $70M+
+raised at Syte.ai, where Lihi was founder and CRO
+
+- 0 to $14M
+ARR built as the company's first salesperson
+
+- 46 people
+marketing and sales organisation she led
+
 Software or a team?
 
 ## A tool needs a team. We are the team.
@@ -4544,7 +4683,7 @@ With Triple & Co.: Lihi, tied to your commercial priorities
 
 - Writing, design, and video
 With software: Your team
-With Triple & Co.: The Triple & Co. team
+With Triple & Co.: 8 Triple & Co. agents, directed and reviewed by Lihi
 
 - Quality review
 With software: Your team, when there is time
@@ -4568,47 +4707,6 @@ With Triple & Co.: Your expertise, approvals, and HubSpot access
 
 Already have an in-house social team that needs better tooling? A platform may be the better fit, and we will tell you so on the call.
 
-Who is in charge
-
-## Lihi leads your social. Personally.
-
-Lihi Pinto founded Triple & Co. She is accountable for the direction and quality of your social presence, and the Triple & Co. team produces and publishes the work. Here is what she owns, in every package.
-
-### What Lihi owns
-
-- 1 Positioning and founder voice
-She leads discovery at the start, so content sounds like your founder and reflects how you actually sell.
-
-- 2 Monthly content direction
-Each calendar follows your commercial priorities, the questions your buyers ask, and the calls to action that matter now.
-
-- 3 Creative contribution
-She contributes ideas, angles, and copy to the work itself, not only to the brief.
-
-- 4 Production orchestration
-She runs the Triple & Co. production team across writing, design, video, and publishing.
-
-- 5 Personal batch review
-She reviews every monthly batch before it reaches you.
-
-### What you bring
-
-- Your expertise and point of view
-- Approved facts, assets, and customer stories
-- Business updates and priorities
-- Timely approval of each monthly batch
-- Access to HubSpot (or your CRM) for the results report
-You stay the source of truth on facts and priorities. We take the ideas, drafts, design, scheduling, and follow-through off your plate.
-
-- $70M+
-raised at Syte.ai, where Lihi was founder and CRO
-
-- 0 to $14M
-ARR built as the company's first salesperson
-
-- 46 people
-marketing and sales organisation she led
-
 Three packages
 
 ## Three levels of volume. One standard of ownership.
@@ -4626,7 +4724,8 @@ A consistent founder and company presence on LinkedIn.
 - Founder LinkedIn profile Included
 - Company LinkedIn page Included
 - Instagram, Facebook, X, TikTok Not included
-Lihi's direction and batch review
+Lihi + all 8 agents, with Lihi's batch review
+
 Book a Call with Lihi → about Social Essentials
 
 ### Social Growth
@@ -4640,7 +4739,8 @@ More content and a presence on two additional channels.
 - Founder LinkedIn profile Included
 - Company LinkedIn page Included
 - Instagram, Facebook, X, TikTok Choose 2 of 4
-Lihi's direction and batch review
+Lihi + all 8 agents, with Lihi's batch review
+
 Book a Call with Lihi → about Social Growth
 
 ### Social Complete
@@ -4654,7 +4754,8 @@ The highest content volume and coverage across all five platforms.
 - Founder LinkedIn profile Included
 - Company LinkedIn page Included
 - Instagram, Facebook, X, TikTok All 4
-Lihi's direction and batch review
+Lihi + all 8 agents, with Lihi's batch review
+
 Book a Call with Lihi → about Social Complete
 Written or visual piece Short video
 Proposed package levels. We confirm the right scope with you on the call.
@@ -4712,6 +4813,7 @@ If something happens in your market or your business, tell us and we pause sched
 
 ### Included in every package
 
+- All 8 Triple & Co. AI agents as your production team, working alongside Lihi
 - Initial positioning and founder-voice discovery led by Lihi
 - A monthly content calendar tied to your business priorities
 - Copywriting, branded design, and your short-video allowance
@@ -4972,47 +5074,50 @@ How it works
 
 ## One month, six clear steps.
 
--
-0 1 You
+Scroll through a month of work and see who does what, from your brief to the results report.
+Month tracker Day 0 of 30
+Your month starts here
+Scroll to run it
+
+- 01 You
 
 ### Step 1 : You , Share your priorities
 
 Offers, launches, buyers, and what the business needs this quarter.
 
--
-0 2 Lihi
+- 02 Lihi
 
 ### Step 2 : Lihi , Shapes the direction
 
-Positioning, founder voice, and the monthly calendar.
+Positioning, founder voice, and the monthly calendar, with buyer research from Nova and campaign angles from Rex.
+20 pieces planned across 4 weeks
 
--
-0 3 Triple & Co.
+- 03 8 agents
 
-### Step 3 : Triple & Co. , Creates the batch
+### Step 3 : 8 agents , Create the batch
 
-Copy, design, and video, adapted for each account.
+Camille writes, Vega designs, Lumen edits the videos, and Sage adapts each piece for every account.
+Camille Vega Lumen Sage
 
--
-0 4 Lihi
+- 04 Lihi
 
 ### Step 4 : Lihi , Reviews every piece
 
 The whole batch, before it reaches you.
 
--
-0 5 You
+- 05 You
 
 ### Step 5 : You , Approve
 
 With one consolidated revision round per monthly batch.
+1 revision round · batch of 20 Approve batch
 
--
-0 6 Triple & Co.
+- 06 Zara + Atlas
 
-### Step 6 : Triple & Co. , Publishes and learns
+### Step 6 : Zara + Atlas , Publish and report
 
-Scheduling, publishing, the monthly results report, and next month's direction.
+Zara schedules and publishes. Atlas tracks every link and builds the monthly results report, and Lihi sets next month's direction.
+Published · tracked · reported in HubSpot
 
 Questions
 
@@ -5020,7 +5125,15 @@ Questions
 
 ### How is this different from a social media management platform? +
 
-A platform gives your team software to plan, publish, and measure. Your team still comes up with the ideas, writes, designs, and posts. We are the team: Lihi leads the direction, Triple & Co. creates and publishes, and you approve. If you already have an in-house social team that needs better tooling, a platform may be the better fit, and we will say so on the call.
+A platform gives your team software to plan, publish, and measure. Your team still comes up with the ideas, writes, designs, and posts. We are the team: Lihi leads the direction, eight Triple & Co. agents create and publish, and you approve. If you already have an in-house social team that needs better tooling, a platform may be the better fit, and we will say so on the call.
+
+### What do the 8 agents do? +
+
+They are the production team behind your social media. Nova researches, Rex plans campaigns, Camille writes, Vega designs, Lumen edits video, Sage adapts each piece for every account, Zara runs the calendar and publishing, and Atlas tracks links and builds the monthly report. All eight are included in every package, and Lihi directs their work.
+
+### Is the content written by AI? +
+
+The agents do the production work, and Lihi stays in charge of it. She sets the direction, contributes ideas and copy, and reviews every piece before it reaches you. You approve before anything is published. Founder videos use your own recordings, never an AI avatar.
 
 ### Do we need to know which package we want before we book? +
 

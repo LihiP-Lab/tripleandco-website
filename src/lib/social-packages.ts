@@ -6,6 +6,8 @@
 // These are the working package proposals under review, not launched SKUs.
 // Do not add prices here: pricing is discussed on the call.
 
+import { agents } from "./agents-data";
+
 export const SOCIAL_ROUTE = "/social-media-management";
 
 export type PackageId = "essentials" | "growth" | "complete";
@@ -92,6 +94,7 @@ export function isPackageInterest(value: unknown): value is PackageInterest {
 
 /** Included in every package. Strategy and review are never tier-gated. */
 export const COMMON_INCLUSIONS: string[] = [
+  "All 8 Triple & Co. AI agents as your production team, working alongside Lihi",
   "Initial positioning and founder-voice discovery led by Lihi",
   "A monthly content calendar tied to your business priorities",
   "Copywriting, branded design, and your short-video allowance",
@@ -261,3 +264,78 @@ export const SAMPLE_PACKAGE_NOTES: Record<PackageId, string> = {
   complete:
     "Complete covers all six accounts. X takes more publications because short text pieces adapt well there; TikTok takes only the video pieces that suit it.",
 };
+
+// ---------------------------------------------------------------- agent team
+
+export type SocialAgentId = "nova" | "rex" | "camille" | "vega" | "lumen" | "sage" | "zara" | "atlas";
+
+export interface SocialAgent {
+  id: SocialAgentId;
+  name: string;
+  image: string;
+  /** What the agent owns inside the social service. */
+  job: string;
+  body: string;
+  /** Short status lines cycled in the live team view. */
+  tasks: string[];
+}
+
+const SOCIAL_AGENT_JOBS: Omit<SocialAgent, "name" | "image">[] = [
+  {
+    id: "nova",
+    job: "Research",
+    body: "Finds the questions your buyers ask, what competitors publish, and the topics worth owning this month.",
+    tasks: ["Mapping buyer questions", "Scanning competitor posts", "Shortlisting 12 angles"],
+  },
+  {
+    id: "rex",
+    job: "Campaigns",
+    body: "Turns your commercial priorities into campaigns, angles, and calls to action for the calendar.",
+    tasks: ["Planning the launch campaign", "Matching CTAs to offers", "Sequencing week 2"],
+  },
+  {
+    id: "camille",
+    job: "Copy in your voice",
+    body: "Drafts founder and company posts in two distinct voices, from your positioning and approved facts.",
+    tasks: ["Drafting a founder post", "Writing carousel copy", "Tightening the hooks"],
+  },
+  {
+    id: "vega",
+    job: "Design",
+    body: "Designs carousels, images, and branded visuals to your brand system.",
+    tasks: ["Laying out a carousel", "Building an image set", "Checking brand colours"],
+  },
+  {
+    id: "lumen",
+    job: "Video",
+    body: "Scripts, edits, and captions short videos from your assets or your founder's own recordings.",
+    tasks: ["Rendering a 45s video", "Adding captions", "Cutting a founder clip"],
+  },
+  {
+    id: "sage",
+    job: "Adaptation",
+    body: "Adapts every original piece for each managed account and format, so one idea works wherever it fits.",
+    tasks: ["Resizing for Instagram", "Adapting copy for X", "Writing alt text"],
+  },
+  {
+    id: "zara",
+    job: "Calendar and publishing",
+    body: "Runs the monthly calendar, the approvals queue, and scheduling across your accounts.",
+    tasks: ["Scheduling Tuesday 09:00", "Queuing your approvals", "Publishing to LinkedIn"],
+  },
+  {
+    id: "atlas",
+    job: "Tracking and reporting",
+    body: "Tags every link, follows what reaches your HubSpot, and builds the monthly results report.",
+    tasks: ["Tagging links", "Syncing HubSpot", "Building the monthly report"],
+  },
+];
+
+export const SOCIAL_AGENTS: SocialAgent[] = SOCIAL_AGENT_JOBS.map((job) => {
+  const agent = agents.find((a) => a.id === job.id);
+  if (!agent) throw new Error(`Unknown agent: ${job.id}`);
+  return { ...job, name: agent.name, image: agent.image };
+});
+
+export const socialAgent = (id: SocialAgentId): SocialAgent =>
+  SOCIAL_AGENTS.find((a) => a.id === id) as SocialAgent;
