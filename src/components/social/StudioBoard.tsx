@@ -161,7 +161,7 @@ export function StudioBoard() {
   const withLihi = lanes.filter((l) => l.phase === "review").length;
 
   return (
-    <figure ref={ref} className="relative rounded-2xl border border-purple-15 bg-white shadow-[var(--shadow-base)]">
+    <figure ref={ref} data-motion={running ? "on" : "off"} className="relative rounded-2xl border border-purple-15 bg-white shadow-[var(--shadow-base)]">
       <figcaption className="sr-only">
         Illustration of the production studio for {SAMPLE_COMPANY}, a fictional company: agents draft, design, and
         render each piece, Lihi reviews it, and approved pieces are scheduled.

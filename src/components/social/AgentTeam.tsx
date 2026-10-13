@@ -57,12 +57,12 @@ function AgentCard({
 }
 
 export function AgentTeam() {
-  const { ref, tick, paused, setPaused, reduced } = useStudioTicker(2400);
+  const { ref, tick, paused, setPaused, reduced, running } = useStudioTicker(2400);
   const left = SOCIAL_AGENTS.slice(0, 4);
   const right = SOCIAL_AGENTS.slice(4);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} data-motion={running ? "on" : "off"}>
       {!reduced && (
         <div className="mb-4 flex justify-end">
           <MotionToggle paused={paused} onToggle={() => setPaused((p) => !p)} label="the agent status animation" />
