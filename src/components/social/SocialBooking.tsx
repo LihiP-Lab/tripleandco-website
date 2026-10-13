@@ -4,7 +4,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Script from "next/script";
 import { CalendarCheck, ExternalLink, Loader2, Lock } from "lucide-react";
 import {
-  CALENDLY_BASE,
   buildCalendlyUrl,
   type CalendlyWindow,
 } from "@/components/CalendlyInline";
@@ -18,6 +17,7 @@ import { BOOK_CALL_EVENT, trackSocial, type BookCallDetail } from "@/lib/social-
 type Status = "idle" | "loading" | "ready" | "failed" | "confirmed";
 
 const CALENDLY_ORIGIN = "https://calendly.com";
+const SOCIAL_CALENDLY_URL = "https://calendly.com/lihi-tripleandco/social-media-package-call";
 // No `event_type_viewed` message within this window means the embed is
 // blocked or down, so we switch to the direct-link fallback.
 const LOAD_TIMEOUT_MS = 12_000;
@@ -26,7 +26,7 @@ const LOAD_TIMEOUT_MS = 12_000;
 // source/medium/campaign are kept for ad attribution, but utm_content always
 // carries the package so Lihi sees it on the booking.
 const bookingUrl = (interest: PackageInterest) => {
-  const url = new URL(buildCalendlyUrl({ utm_campaign: "social-media-management" }));
+  const url = new URL(buildCalendlyUrl({ utm_campaign: "social-media-management" }, SOCIAL_CALENDLY_URL));
   url.searchParams.set("utm_content", `social-${interest}`);
   return url.toString();
 };
@@ -133,7 +133,7 @@ export function SocialBooking() {
     return () => window.removeEventListener("message", onMessage);
   }, []);
 
-  const directUrl = `${CALENDLY_BASE}?utm_source=website&utm_medium=organic&utm_campaign=social-media-management&utm_content=social-${interest}`;
+  const directUrl = `${SOCIAL_CALENDLY_URL}?utm_source=website&utm_medium=organic&utm_campaign=social-media-management&utm_content=social-${interest}`;
   const showOverlay = status === "idle" || status === "loading";
 
   return (

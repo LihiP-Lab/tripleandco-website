@@ -25,7 +25,7 @@ const DEFAULT_UTMS: Record<string, string> = {
  * only where the visitor supplied none. `extraDefaults` follow the same
  * rule, so a page-level hint never overwrites a real campaign value.
  */
-export function buildCalendlyUrl(extraDefaults: Record<string, string> = {}) {
+export function buildCalendlyUrl(extraDefaults: Record<string, string> = {}, base = CALENDLY_BASE) {
   const params = new URLSearchParams(CALENDLY_PARAMS);
   if (typeof window !== "undefined") {
     const inbound = new URLSearchParams(window.location.search);
@@ -34,7 +34,7 @@ export function buildCalendlyUrl(extraDefaults: Record<string, string> = {}) {
   for (const [key, value] of Object.entries({ ...DEFAULT_UTMS, ...extraDefaults })) {
     if (!params.has(key)) params.set(key, value);
   }
-  return `${CALENDLY_BASE}?${params.toString()}`;
+  return `${base}?${params.toString()}`;
 }
 
 export type CalendlyWindow = Window & {
