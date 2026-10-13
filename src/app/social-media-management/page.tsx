@@ -5,6 +5,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { PillarFAQ } from "@/components/PillarFAQ";
 import { BookCallLink } from "@/components/social/BookCallLink";
 import { SampleMonth } from "@/components/social/SampleMonth";
+import { SamplePieces } from "@/components/social/SamplePieces";
 import { SocialBooking } from "@/components/social/SocialBooking";
 import { ORG_ID, SITE_URL, lihiRef } from "@/lib/seo";
 import {
@@ -13,7 +14,6 @@ import {
   PUBLISHING_ITEMS,
   REPORT_ITEMS,
   SAMPLE_COMPANY,
-  SAMPLE_WEEKS,
   SOCIAL_PACKAGES,
   SOCIAL_ROUTE,
   additionalChannelsLabel,
@@ -51,6 +51,38 @@ const PAINS = [
   "Every post waits on the founder for the idea, the draft, and the follow-up.",
   "Product updates and customer stories rarely turn into content worth reading.",
   "You have a social media tool, or could buy one. What you are missing is the people to fill it.",
+];
+
+const BUILT_FOR = [
+  "SaaS",
+  "AI",
+  "Cybersecurity",
+  "Agritech",
+  "Foodtech",
+  "Defense",
+  "Consultancies",
+  "Specialist tech services",
+];
+
+const LIHI_CREDENTIALS = [
+  { figure: "$70M+", label: "raised at Syte.ai, where Lihi was founder and CRO" },
+  { figure: "0 to $14M", label: "ARR built as the company's first salesperson" },
+  { figure: "46 people", label: "marketing and sales organisation she led" },
+];
+
+const VIDEO_APPROACHES = [
+  {
+    option: "Option A",
+    title: "Without client filming",
+    body: "Brand-led videos made from your approved assets, product footage, screenshots, simple motion graphics, and suitable licensed material.",
+    examples: ["Product walkthroughs and feature updates", "Customer-story and proof-point videos", "Framework and explainer motion pieces"],
+  },
+  {
+    option: "Option B",
+    title: "With client filming",
+    body: "Founder-led videos from recordings you make on a phone or webcam. We provide the scripts, recording guidance, editing, captions, and publishing.",
+    examples: ["Founder perspective and opinion pieces", "Answers to the questions buyers keep asking", "Behind-the-scenes and team moments"],
+  },
 ];
 
 const LIHI_OWNS = [
@@ -159,6 +191,10 @@ const FAQS = [
   {
     q: "Which channels can we add on Social Growth?",
     a: "Social Growth covers your founder LinkedIn profile, your company LinkedIn page, and any two of Instagram, Facebook, X, and TikTok. Only pieces that suit a channel are published there, so publication counts depend on the channels you choose.",
+  },
+  {
+    q: "Who owns our social accounts?",
+    a: "You do. We publish through standard scheduling access to your accounts, and you keep ownership of every account.",
   },
   {
     q: "Can our team members post too?",
@@ -351,12 +387,13 @@ export default function SocialMediaManagementPage() {
           <div>
             <p className="mb-5 text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">Managed B2B social media · LinkedIn first · Led by Lihi Pinto</p>
             <h1 className="text-[40px] sm:text-5xl lg:text-[60px] font-black tracking-tight leading-[1.02] text-white mb-6">
-              Not another social media tool. <span className="gradient-text">Your B2B social team.</span>
+              Social media with creative ownership and <span className="gradient-text">commercial purpose.</span>
             </h1>
             <p className="text-lg sm:text-xl text-purple-2 leading-relaxed mb-8 max-w-[580px]">
-              Social media software gives your team a dashboard to fill. We are the team: Lihi Pinto leads the
-              direction, Triple &amp; Co. creates and publishes, LinkedIn first. Every month you see what reached
-              your HubSpot.
+              <strong className="font-semibold text-white">Led by Lihi Pinto. Created and published by Triple &amp; Co.</strong>{" "}
+              Not another social media tool: a B2B social team built around what your business needs to communicate,
+              who it needs to reach, and how it can contribute to revenue. Every month you see what reached your
+              HubSpot.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
               <BookCallLink location="hero" className={primaryBtn}>
@@ -369,7 +406,9 @@ export default function SocialMediaManagementPage() {
                 Explore the Packages
               </a>
             </div>
-            <p className="text-sm text-purple-3">Let&apos;s find the right content volume and channels for your business.</p>
+            <p className="text-sm text-purple-3">
+              A 30-minute call to find the right content volume and channels for your business. No preparation needed.
+            </p>
           </div>
 
           <div className="relative mx-auto w-full max-w-[380px]">
@@ -416,6 +455,14 @@ export default function SocialMediaManagementPage() {
               We work with B2B service and technology companies that have a clear offer, real traction, and expertise
               worth sharing, but not the internal capacity to own social every week.
             </p>
+            <p className="eyebrow mt-8 mb-3">Built for</p>
+            <ul aria-label="Sectors we work with" className="flex flex-wrap gap-2">
+              {BUILT_FOR.map((sector) => (
+                <li key={sector} className="rounded-full border border-purple-15 bg-white px-3.5 py-1.5 text-sm text-purple-8">
+                  {sector}
+                </li>
+              ))}
+            </ul>
           </ScrollReveal>
           <ScrollReveal>
             <ol className="divide-y divide-purple-15 border-y border-purple-15">
@@ -539,6 +586,14 @@ export default function SocialMediaManagementPage() {
               </div>
             </ScrollReveal>
           </div>
+          <ul aria-label="Lihi's track record" className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-purple-15 pt-8">
+            {LIHI_CREDENTIALS.map((c) => (
+              <li key={c.figure}>
+                <p className="text-3xl sm:text-4xl font-black tracking-tight text-purple-9">{c.figure}</p>
+                <p className="text-[15px] text-purple-7 mt-1">{c.label}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -717,24 +772,22 @@ export default function SocialMediaManagementPage() {
               </p>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div className={`${cardCls} p-6 sm:p-7`}>
-                <TopBar />
-                <p className="text-sm font-bold text-brand-dark mb-1">Option A</p>
-                <h4 className="text-lg font-extrabold text-purple-9 mb-2">Without client filming</h4>
-                <p className="text-[15px] text-purple-7 leading-relaxed">
-                  Brand-led videos made from your approved assets, product footage, screenshots, simple motion
-                  graphics, and suitable licensed material.
-                </p>
-              </div>
-              <div className={`${cardCls} p-6 sm:p-7`}>
-                <TopBar />
-                <p className="text-sm font-bold text-brand-dark mb-1">Option B</p>
-                <h4 className="text-lg font-extrabold text-purple-9 mb-2">With client filming</h4>
-                <p className="text-[15px] text-purple-7 leading-relaxed">
-                  Founder-led videos from recordings you make. We provide the scripts, recording guidance, editing,
-                  captions, and publishing.
-                </p>
-              </div>
+              {VIDEO_APPROACHES.map((v) => (
+                <div key={v.option} className={`${cardCls} p-6 sm:p-7`}>
+                  <TopBar />
+                  <p className="text-sm font-bold text-brand-dark mb-1">{v.option}</p>
+                  <h4 className="text-lg font-extrabold text-purple-9 mb-2">{v.title}</h4>
+                  <p className="text-[15px] text-purple-7 leading-relaxed mb-4">{v.body}</p>
+                  <ul className="space-y-2">
+                    {v.examples.map((e) => (
+                      <li key={e} className="flex gap-2.5 text-[15px] text-purple-8">
+                        <Check className="h-5 w-5 text-brand-dark shrink-0" aria-hidden="true" />
+                        {e}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
             <p className="text-sm text-purple-6 mt-4">
               We do not travel to film, and neither approach needs an AI avatar or a synthetic version of anyone.
@@ -755,32 +808,32 @@ export default function SocialMediaManagementPage() {
               <p className="inline-flex items-start gap-2 rounded-[10px] border border-purple-15 bg-white px-4 py-3 text-sm text-purple-8">
                 <span className="font-bold text-brand-dark shrink-0">Illustrative example.</span>
                 <span>
-                  {SAMPLE_COMPANY} is a fictional B2B AI operations company, not a Triple &amp; Co. client. Real
+                  {SAMPLE_COMPANY}{" "}is a fictional B2B AI operations company, not a Triple &amp; Co. client. Real
                   calendars follow your priorities and channels.
                 </span>
               </p>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-6 items-start">
-            <SampleMonth />
-            <ol className="space-y-3">
-              {SAMPLE_WEEKS.map((w) => (
-                <li key={w.week} className={`${cardCls} p-5 sm:p-6`}>
-                  <TopBar />
-                  <div className="flex items-baseline gap-3 mb-1.5">
-                    <span className="text-xs font-bold uppercase tracking-widest text-brand-dark shrink-0">Week {w.week}</span>
-                    <h3 className="font-extrabold text-purple-9">{w.theme}</h3>
-                  </div>
-                  <p className="text-sm text-purple-7 mb-3">{w.summary}</p>
-                  <div className="rounded-[10px] bg-purple-05 px-4 py-3">
-                    <p className="text-xs text-purple-6 mb-0.5">
-                      {w.example.account} · {w.example.format}
-                    </p>
-                    <p className="text-[15px] font-semibold text-purple-9">&ldquo;{w.example.title}&rdquo;</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
+          <SampleMonth />
+
+          <div className="mt-16">
+            <ScrollReveal>
+              <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
+                <div className="max-w-[720px]">
+                  <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-purple-9 mb-3">
+                    Five pieces from the same month, finished.
+                  </h3>
+                  <p className="text-purple-7 leading-relaxed">
+                    Illustrative previews for {SAMPLE_COMPANY}. The voice, the formats, and the adaptation are what you
+                    would receive; the company and its numbers are invented.
+                  </p>
+                </div>
+                <p aria-hidden="true" className="text-sm font-semibold text-purple-7">
+                  Scroll for more <Arrow />
+                </p>
+              </div>
+            </ScrollReveal>
+            <SamplePieces />
           </div>
         </div>
       </section>

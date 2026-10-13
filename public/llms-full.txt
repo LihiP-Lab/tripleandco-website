@@ -4489,11 +4489,11 @@ description: A managed B2B social team led by Lihi Pinto, not another tool: Link
 ---
 Managed B2B social media · LinkedIn first · Led by Lihi Pinto
 
-# Not another social media tool. Your B2B social team.
+# Social media with creative ownership and commercial purpose.
 
-Social media software gives your team a dashboard to fill. We are the team: Lihi Pinto leads the direction, Triple & Co. creates and publishes, LinkedIn first. Every month you see what reached your HubSpot.
+Led by Lihi Pinto. Created and published by Triple & Co. Not another social media tool: a B2B social team built around what your business needs to communicate, who it needs to reach, and how it can contribute to revenue. Every month you see what reached your HubSpot.
 Book a Call with Lihi → Explore the Packages
-Let's find the right content volume and channels for your business.
+A 30-minute call to find the right content volume and channels for your business. No preparation needed.
 
 Every monthly batch
 
@@ -4507,6 +4507,16 @@ Sound familiar?
 ## Your business is sharper than your feed.
 
 We work with B2B service and technology companies that have a clear offer, real traction, and expertise worth sharing, but not the internal capacity to own social every week.
+Built for
+
+- SaaS
+- AI
+- Cybersecurity
+- Agritech
+- Foodtech
+- Defense
+- Consultancies
+- Specialist tech services
 
 - 0 1 Your online presence does not reflect the quality of the business behind it.
 
@@ -4589,6 +4599,15 @@ She reviews every monthly batch before it reaches you.
 - Timely approval of each monthly batch
 - Access to HubSpot (or your CRM) for the results report
 You stay the source of truth on facts and priorities. We take the ideas, drafts, design, scheduling, and follow-through off your plate.
+
+- $70M+
+raised at Syte.ai, where Lihi was founder and CRO
+
+- 0 to $14M
+ARR built as the company's first salesperson
+
+- 46 people
+marketing and sales organisation she led
 
 Three packages
 
@@ -4729,8 +4748,16 @@ Your short-video allowance works either way, or as a mix. Videos run about 30 to
 Option A
 Without client filming Brand-led videos made from your approved assets, product footage, screenshots, simple motion graphics, and suitable licensed material.
 
+- Product walkthroughs and feature updates
+- Customer-story and proof-point videos
+- Framework and explainer motion pieces
+
 Option B
-With client filming Founder-led videos from recordings you make. We provide the scripts, recording guidance, editing, captions, and publishing.
+With client filming Founder-led videos from recordings you make on a phone or webcam. We provide the scripts, recording guidance, editing, captions, and publishing.
+
+- Founder perspective and opinion pieces
+- Answers to the questions buyers keep asking
+- Behind-the-scenes and team moments
 
 We do not travel to film, and neither approach needs an AI avatar or a synthetic version of anyone.
 
@@ -4741,55 +4768,205 @@ A sample month
 Illustrative example. SignalWorks is a fictional B2B AI operations company, not a Triple & Co. client. Real calendars follow your priorities and channels.
 
 Essentials Growth Complete
-SignalWorks on Social Growth
-44 publications
 
-from 20 original pieces
-across 4 accounts
+signalworks · october 2026 · social growth
 
-- Founder LinkedIn 8
-- Company LinkedIn 12
-- Instagram 12
-- Facebook 12
-- X 0
-- TikTok 0
-This example selects Instagram and Facebook. Choosing TikTok instead would change the count, because only suitable video pieces go there. Active accounts: Founder LinkedIn, Company LinkedIn, Instagram, Facebook .
+### Your October batch
 
--
-Week 1
+20 original pieces across 4 accounts, planned around one monthly narrative.
 
-### Problem and perspective
+- Reviewed by Lihi
+- Awaiting your approval
+- 1 revision round
 
-Name the operational problem buyers feel, in the founder's own point of view.
-Founder LinkedIn · Founder post
-“ Why most AI operations pilots stall after the demo ”
+Short video Carousel Image Text post F Founder voice C Company voice
+Week 1 Problem and perspective 5 pieces
+Mon
 
--
-Week 2
+- Why most ops teams measure the wrong thing
+Short video , founder voice, published on Founder LinkedIn, Instagram, Facebook .
+F Founder LI IG FB short video
 
-### Evaluation and workflow
+Tue
 
-Help buyers judge options and picture the workflow change.
-Company LinkedIn · Carousel
-“ Five questions to ask before you automate an operations workflow ”
+- 5 signals your operations data is lying to you
+Carousel , company voice, published on Company LinkedIn, Instagram, Facebook .
+C Company LI IG FB carousel
 
--
-Week 3
+Wed
 
-### Evidence and measurement
+- The hidden cost of a 48-hour reporting lag
+Text post , company voice, published on Company LinkedIn, Instagram, Facebook .
+C Company LI IG FB text post
 
-Show how the product is measured, using approved facts and footage.
-Company LinkedIn · Short video, about 45 seconds
-“ How to measure an AI workflow before and after rollout ”
+Thu
 
--
-Week 4
+- I used to think more dashboards meant more control
+Text post , founder voice, published on Founder LinkedIn .
+F Founder LI text post
 
-### Readiness and conversation
+- One number: how often most ops teams rebuild the same report by hand
+Image , company voice, published on Company LinkedIn, Instagram, Facebook .
+C Company LI IG FB image
 
-Invite the right buyers into a conversation with a relevant call to action.
-Founder LinkedIn · Founder post with call to action
-“ A four-point readiness check, and an open invitation to compare notes ”
+Fri
+
+Week 2 Evaluation and workflow 5 pieces
+Mon
+
+- How to evaluate an AI ops platform without a 90-day pilot
+Text post , founder voice, published on Founder LinkedIn .
+F Founder LI text post
+
+Tue
+
+- Walkthrough: from raw signal to a decision in one screen
+Short video , company voice, published on Company LinkedIn, Instagram, Facebook .
+C Company LI IG FB short video
+
+Wed
+
+- Three questions to ask any vendor about data lineage
+Text post , company voice, published on Company LinkedIn .
+C Company LI text post
+
+Thu
+
+- The SignalWorks workflow in 6 steps
+Carousel , company voice, published on Company LinkedIn, Instagram, Facebook .
+C Company LI IG FB carousel
+
+Fri
+
+- The evaluation mistake I see on almost every call
+Short video , founder voice, published on Founder LinkedIn, Instagram, Facebook .
+F Founder LI IG FB short video
+
+Week 3 Evidence and measurement 6 pieces
+Mon
+
+- Customer story: how a 40-person ops team cut incident triage time
+Text post , company voice, published on Company LinkedIn .
+C Company LI text post
+
+Tue
+
+- The metric that finally convinced our CFO
+Text post , founder voice, published on Founder LinkedIn .
+F Founder LI text post
+
+- Customer voice: 60 seconds with an ops lead
+Short video , company voice, published on Company LinkedIn, Instagram, Facebook .
+C Company LI IG FB short video
+
+Wed
+
+- Product update: anomaly detection on every pipeline
+Short video , company voice, published on Company LinkedIn, Instagram, Facebook .
+C Company LI IG FB short video
+
+Thu
+
+- Before and after: one team's weekly reporting hours
+Image , company voice, published on Company LinkedIn, Instagram, Facebook .
+C Company LI IG FB image
+
+Fri
+
+- What our customers measure that most teams do not
+Text post , founder voice, published on Founder LinkedIn .
+F Founder LI text post
+
+Week 4 Readiness and conversation 4 pieces
+Mon
+
+- Are you ready for AI in operations? Four honest checks
+Short video , founder voice, published on Founder LinkedIn, Instagram, Facebook .
+F Founder LI IG FB short video
+
+Tue
+
+- The five questions to bring to a first call with us
+Text post , company voice, published on Company LinkedIn .
+C Company LI text post
+
+Wed
+
+- Readiness checklist for ops leaders
+Image , company voice, published on Company LinkedIn, Instagram, Facebook .
+C Company LI IG FB image
+
+Thu
+
+Fri
+
+- What I would do in my first 30 days as an ops leader today
+Text post , founder voice, published on Founder LinkedIn .
+F Founder LI text post
+
+Founder LinkedIn 8
+Company LinkedIn 12
+Instagram 12
+Facebook 12
+X 0
+TikTok 0
+44 publications across 4 accounts
+
+This example selects Instagram and Facebook as the two additional channels. Choosing TikTok instead changes the count, because only suitable video pieces go there.
+
+### Five pieces from the same month, finished.
+
+Illustrative previews for SignalWorks . The voice, the formats, and the adaptation are what you would receive; the company and its numbers are invented.
+
+Scroll for more →
+
+piece 01 · founder linkedin · text post ML Maya Lev
+CEO at SignalWorks · 1d
+
+Most ops teams measure the wrong thing.
+Not because they lack data. Because the metric that is easiest to pull is rarely the one that moves the business.
+Time to detect gets reported every week. Time to a decision almost never does. The gap between the two is where incidents become outages.
+If you only track one number this quarter, track the second one. It is harder to measure and it is the one your CFO will ask about.
+#operations #b2bsaas #aiops
+
+Like Comment Repost Send
+
+piece 02 · company linkedin · carousel SW SignalWorks
+2,140 followers · 2d
+
+Your dashboards look fine. Here are five ways your operations data is quietly lying to you.
+SignalWorks 1 / 6
+5 signals your operations data is lying to you
+And the one check that catches each of them
+Swipe →
+
+Like Comment Repost Send
+
+piece 05 · instagram · adapted image SW signalworks.ai
+
+One number
+Every month.
+That is how often most ops teams rebuild the same report by hand.
+
+signalworks.ai Rebuilding the same report every month is not reporting. It is a backlog with a chart on top. Link in bio for the checklist.
+
+piece 12 · short video · founder-led · 0:45 Founder · SignalWorks
+The evaluation mistake I see on almost every call
+
+0:12 0:45
+
+Recorded by the founder on a phone. Scripted, edited, captioned, and published by Triple & Co. One cut for LinkedIn, one 9:16 cut for Instagram and TikTok.
+piece 16 · company linkedin · customer story SW SignalWorks
+2,140 followers · 5d
+
+A 40-person ops team was triaging incidents from three tools and a spreadsheet. Here is what changed in 60 days.
+Customer story
+From three tools and a spreadsheet to one triage view
+
+- Before: alerts checked in three places
+- After: one queue, one owner per incident
+
+Like Comment Repost Send
 
 How it works
 
@@ -4868,6 +5045,10 @@ We deliver each month as one batch, already reviewed by Lihi. You approve it wit
 ### Which channels can we add on Social Growth? +
 
 Social Growth covers your founder LinkedIn profile, your company LinkedIn page, and any two of Instagram, Facebook, X, and TikTok. Only pieces that suit a channel are published there, so publication counts depend on the channels you choose.
+
+### Who owns our social accounts? +
+
+You do. We publish through standard scheduling access to your accounts, and you keep ownership of every account.
 
 ### Can our team members post too? +
 

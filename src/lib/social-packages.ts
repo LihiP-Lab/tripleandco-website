@@ -169,10 +169,75 @@ export const REPORT_ITEMS: { title: string; body: string }[] = [
 
 export const SAMPLE_COMPANY = "SignalWorks";
 
-export type SampleAccount =
-  | "Founder LinkedIn"
-  | "Company LinkedIn"
-  | AdditionalChannel;
+export type SampleFormat = "video" | "carousel" | "image" | "post";
+export type SampleVoice = "founder" | "company";
+export type SampleWeekNumber = 1 | 2 | 3 | 4;
+
+export interface SamplePiece {
+  week: SampleWeekNumber;
+  /** 0 = Monday ... 4 = Friday */
+  day: number;
+  voice: SampleVoice;
+  format: SampleFormat;
+  /** Smallest package that includes this piece. */
+  tier: PackageId;
+  title: string;
+  /** Additional channels the piece is adapted for on Social Growth and Social Complete. */
+  growth: AdditionalChannel[];
+  complete: AdditionalChannel[];
+}
+
+export const SAMPLE_WEEK_THEMES: Record<SampleWeekNumber, string> = {
+  1: "Problem and perspective",
+  2: "Evaluation and workflow",
+  3: "Evidence and measurement",
+  4: "Readiness and conversation",
+};
+
+export const SAMPLE_PIECES: SamplePiece[] = [
+  { week: 1, day: 0, voice: "founder", format: "video", tier: "essentials", title: "Why most ops teams measure the wrong thing", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "TikTok"] },
+  { week: 1, day: 1, voice: "company", format: "carousel", tier: "essentials", title: "5 signals your operations data is lying to you", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "X"] },
+  { week: 1, day: 1, voice: "founder", format: "post", tier: "complete", title: "The question I ask every ops leader in the first five minutes", growth: [], complete: ["Instagram", "Facebook", "X"] },
+  { week: 1, day: 2, voice: "company", format: "post", tier: "essentials", title: "The hidden cost of a 48-hour reporting lag", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "X"] },
+  { week: 1, day: 3, voice: "founder", format: "post", tier: "growth", title: "I used to think more dashboards meant more control", growth: [], complete: ["Instagram", "Facebook", "X"] },
+  { week: 1, day: 3, voice: "company", format: "image", tier: "growth", title: "One number: how often most ops teams rebuild the same report by hand", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "X"] },
+  { week: 1, day: 4, voice: "company", format: "post", tier: "complete", title: "What we got wrong in our first year", growth: [], complete: ["X"] },
+  { week: 2, day: 0, voice: "founder", format: "post", tier: "essentials", title: "How to evaluate an AI ops platform without a 90-day pilot", growth: [], complete: ["X"] },
+  { week: 2, day: 0, voice: "company", format: "post", tier: "complete", title: "Changelog: alert routing now supports on-call rotations", growth: [], complete: ["X"] },
+  { week: 2, day: 1, voice: "company", format: "video", tier: "essentials", title: "Walkthrough: from raw signal to a decision in one screen", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "TikTok"] },
+  { week: 2, day: 2, voice: "company", format: "post", tier: "essentials", title: "Three questions to ask any vendor about data lineage", growth: [], complete: ["X"] },
+  { week: 2, day: 2, voice: "founder", format: "post", tier: "complete", title: "Build versus buy, answered with a spreadsheet", growth: [], complete: ["X"] },
+  { week: 2, day: 3, voice: "company", format: "carousel", tier: "growth", title: "The SignalWorks workflow in 6 steps", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "X"] },
+  { week: 2, day: 4, voice: "founder", format: "video", tier: "growth", title: "The evaluation mistake I see on almost every call", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "TikTok"] },
+  { week: 2, day: 4, voice: "company", format: "image", tier: "complete", title: "Integration map: where SignalWorks sits in your stack", growth: [], complete: ["Instagram", "Facebook", "X"] },
+  { week: 3, day: 0, voice: "company", format: "post", tier: "essentials", title: "Customer story: how a 40-person ops team cut incident triage time", growth: [], complete: ["X"] },
+  { week: 3, day: 1, voice: "founder", format: "post", tier: "essentials", title: "The metric that finally convinced our CFO", growth: [], complete: ["X"] },
+  { week: 3, day: 1, voice: "company", format: "video", tier: "growth", title: "Customer voice: 60 seconds with an ops lead", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "TikTok"] },
+  { week: 3, day: 2, voice: "company", format: "video", tier: "essentials", title: "Product update: anomaly detection on every pipeline", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "TikTok"] },
+  { week: 3, day: 3, voice: "company", format: "image", tier: "growth", title: "Before and after: one team's weekly reporting hours", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "X"] },
+  { week: 3, day: 3, voice: "founder", format: "video", tier: "complete", title: "Reading an incident report the way an investor reads a P&L", growth: [], complete: ["Instagram", "Facebook", "TikTok"] },
+  { week: 3, day: 4, voice: "founder", format: "post", tier: "growth", title: "What our customers measure that most teams do not", growth: [], complete: ["X"] },
+  { week: 3, day: 4, voice: "company", format: "carousel", tier: "complete", title: "The four numbers in every SignalWorks monthly review", growth: [], complete: ["Instagram", "Facebook", "X"] },
+  { week: 4, day: 0, voice: "founder", format: "video", tier: "essentials", title: "Are you ready for AI in operations? Four honest checks", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "TikTok"] },
+  { week: 4, day: 1, voice: "company", format: "post", tier: "essentials", title: "The five questions to bring to a first call with us", growth: [], complete: ["X"] },
+  { week: 4, day: 2, voice: "company", format: "image", tier: "essentials", title: "Readiness checklist for ops leaders", growth: ["Instagram", "Facebook"], complete: ["Instagram", "Facebook", "X"] },
+  { week: 4, day: 2, voice: "founder", format: "post", tier: "complete", title: "An open invitation: show me your messiest pipeline", growth: [], complete: ["X"] },
+  { week: 4, day: 3, voice: "company", format: "post", tier: "complete", title: "Meet the team behind the product", growth: ["Instagram", "Facebook"], complete: ["X"] },
+  { week: 4, day: 4, voice: "founder", format: "post", tier: "growth", title: "What I would do in my first 30 days as an ops leader today", growth: [], complete: ["X"] },
+  { week: 4, day: 4, voice: "company", format: "video", tier: "complete", title: "Behind the scenes: how a feature ships at SignalWorks", growth: [], complete: ["Instagram", "Facebook", "TikTok"] },
+];
+
+const TIER_RANK: Record<PackageId, number> = { essentials: 0, growth: 1, complete: 2 };
+
+export function samplePiecesFor(id: PackageId): SamplePiece[] {
+  return SAMPLE_PIECES.filter((p) => TIER_RANK[p.tier] <= TIER_RANK[id]);
+}
+
+export function sampleChannelsFor(piece: SamplePiece, id: PackageId): AdditionalChannel[] {
+  return id === "essentials" ? [] : piece[id];
+}
+
+export type SampleAccount = "Founder LinkedIn" | "Company LinkedIn" | AdditionalChannel;
 
 export const SAMPLE_ACCOUNTS: SampleAccount[] = [
   "Founder LinkedIn",
@@ -180,92 +245,19 @@ export const SAMPLE_ACCOUNTS: SampleAccount[] = [
   ...ADDITIONAL_CHANNELS,
 ];
 
-export const SAMPLE_PUBLICATIONS: Record<PackageId, Record<SampleAccount, number>> = {
-  essentials: {
-    "Founder LinkedIn": 4,
-    "Company LinkedIn": 8,
-    Instagram: 0,
-    Facebook: 0,
-    X: 0,
-    TikTok: 0,
-  },
-  growth: {
-    "Founder LinkedIn": 8,
-    "Company LinkedIn": 12,
-    Instagram: 12,
-    Facebook: 12,
-    X: 0,
-    TikTok: 0,
-  },
-  complete: {
-    "Founder LinkedIn": 12,
-    "Company LinkedIn": 18,
-    Instagram: 18,
-    Facebook: 18,
-    X: 22,
-    TikTok: 8,
-  },
-};
-
-export function samplePublicationTotal(id: PackageId): number {
-  return Object.values(SAMPLE_PUBLICATIONS[id]).reduce((a, b) => a + b, 0);
+export function samplePublications(id: PackageId): Record<SampleAccount, number> {
+  const counts = Object.fromEntries(SAMPLE_ACCOUNTS.map((a) => [a, 0])) as Record<SampleAccount, number>;
+  for (const piece of samplePiecesFor(id)) {
+    counts[piece.voice === "founder" ? "Founder LinkedIn" : "Company LinkedIn"] += 1;
+    for (const channel of sampleChannelsFor(piece, id)) counts[channel] += 1;
+  }
+  return counts;
 }
 
 export const SAMPLE_PACKAGE_NOTES: Record<PackageId, string> = {
-  essentials:
-    "Two LinkedIn accounts with distinct voices. The founder speaks in first person; the company page carries product, proof, and invitations.",
+  essentials: "Essentials publishes on LinkedIn only: two accounts, one platform.",
   growth:
-    "This example selects Instagram and Facebook. Choosing TikTok instead would change the count, because only suitable video pieces go there.",
+    "This example selects Instagram and Facebook as the two additional channels. Choosing TikTok instead changes the count, because only suitable video pieces go there.",
   complete:
-    "All five platforms. X takes more frequent, shorter adaptations, and TikTok receives only the pieces that work as video.",
+    "Complete covers all six accounts. X takes more publications because short text pieces adapt well there; TikTok takes only the video pieces that suit it.",
 };
-
-export interface SampleWeek {
-  week: number;
-  theme: string;
-  summary: string;
-  example: { account: SampleAccount; format: string; title: string };
-}
-
-export const SAMPLE_WEEKS: SampleWeek[] = [
-  {
-    week: 1,
-    theme: "Problem and perspective",
-    summary: "Name the operational problem buyers feel, in the founder's own point of view.",
-    example: {
-      account: "Founder LinkedIn",
-      format: "Founder post",
-      title: "Why most AI operations pilots stall after the demo",
-    },
-  },
-  {
-    week: 2,
-    theme: "Evaluation and workflow",
-    summary: "Help buyers judge options and picture the workflow change.",
-    example: {
-      account: "Company LinkedIn",
-      format: "Carousel",
-      title: "Five questions to ask before you automate an operations workflow",
-    },
-  },
-  {
-    week: 3,
-    theme: "Evidence and measurement",
-    summary: "Show how the product is measured, using approved facts and footage.",
-    example: {
-      account: "Company LinkedIn",
-      format: "Short video, about 45 seconds",
-      title: "How to measure an AI workflow before and after rollout",
-    },
-  },
-  {
-    week: 4,
-    theme: "Readiness and conversation",
-    summary: "Invite the right buyers into a conversation with a relevant call to action.",
-    example: {
-      account: "Founder LinkedIn",
-      format: "Founder post with call to action",
-      title: "A four-point readiness check, and an open invitation to compare notes",
-    },
-  },
-];
