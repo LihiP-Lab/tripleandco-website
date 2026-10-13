@@ -10,6 +10,7 @@ interface BookCallLinkProps {
   /** Package of interest to carry into the booking step, if any. */
   packageId?: PackageInterest;
   className?: string;
+  onClick?: () => void;
   children: ReactNode;
 }
 
@@ -18,12 +19,13 @@ interface BookCallLinkProps {
  * booking section, carries the package of interest, and records the CTA
  * location. Without JavaScript it is still a plain #book anchor.
  */
-export function BookCallLink({ location, packageId, className, children }: BookCallLinkProps) {
+export function BookCallLink({ location, packageId, className, onClick, children }: BookCallLinkProps) {
   return (
     <a
       href="#book"
       className={className}
       onClick={() => {
+        onClick?.();
         trackSocial("Social CTA Click", { location, package: packageId ?? "none" });
         window.dispatchEvent(
           new CustomEvent<BookCallDetail>(BOOK_CALL_EVENT, { detail: { package: packageId } }),

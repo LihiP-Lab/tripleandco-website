@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useTheme } from "./ThemeProvider";
 import { ThemeToggle } from "./ThemeToggle";
+import { BookCallLink } from "./social/BookCallLink";
+import { SOCIAL_ROUTE } from "@/lib/social-packages";
 
 const navLinks = [
   { href: "/about", label: "About" },
@@ -20,6 +22,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const { theme } = useTheme();
+  const isSocial = pathname === SOCIAL_ROUTE;
 
   return (
     <header className="sticky top-0 z-50 glass-header" role="banner">
@@ -56,12 +59,21 @@ export function Navbar() {
 
         <div className="hidden xl:flex items-center gap-3">
           <ThemeToggle />
-          <Link
-            href="/revenue-diagnostic#book"
-            className="inline-flex items-center gap-2 rounded-[10px] bg-brand-dark px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(254,52,101,.20)]"
-          >
-            Book a Diagnostic Call <span>&#8594;</span>
-          </Link>
+          {isSocial ? (
+            <BookCallLink
+              location="navbar"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-brand-dark px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(254,52,101,.20)]"
+            >
+              Book a Call with Lihi <span aria-hidden="true">&#8594;</span>
+            </BookCallLink>
+          ) : (
+            <Link
+              href="/revenue-diagnostic#book"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-brand-dark px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(254,52,101,.20)]"
+            >
+              Book a Diagnostic Call <span>&#8594;</span>
+            </Link>
+          )}
         </div>
 
         <div className="flex items-center gap-2 xl:hidden">
@@ -120,13 +132,23 @@ export function Navbar() {
               </Link>
             );
           })}
-          <Link
-            href="/revenue-diagnostic#book"
-            onClick={() => setMobileOpen(false)}
-            className="block w-full text-center rounded-[10px] bg-brand px-5 py-3 text-sm font-semibold text-white"
-          >
-            Book a Diagnostic Call &#8594;
-          </Link>
+          {isSocial ? (
+            <BookCallLink
+              location="navbar-mobile"
+              onClick={() => setMobileOpen(false)}
+              className="block w-full text-center rounded-[10px] bg-brand px-5 py-3 text-sm font-semibold text-white"
+            >
+              Book a Call with Lihi &#8594;
+            </BookCallLink>
+          ) : (
+            <Link
+              href="/revenue-diagnostic#book"
+              onClick={() => setMobileOpen(false)}
+              className="block w-full text-center rounded-[10px] bg-brand px-5 py-3 text-sm font-semibold text-white"
+            >
+              Book a Diagnostic Call &#8594;
+            </Link>
+          )}
         </nav>
       </div>
     </header>
