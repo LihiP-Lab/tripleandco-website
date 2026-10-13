@@ -22,12 +22,14 @@ const CALENDLY_ORIGIN = "https://calendly.com";
 // blocked or down, so we switch to the direct-link fallback.
 const LOAD_TIMEOUT_MS = 12_000;
 
-// Package interest travels as a non-personal attribution hint. It fills
-// utm_content only when the visitor's own campaign did not set one.
-const interestHint = (interest: PackageInterest) => ({
-  utm_campaign: "social-media-management",
-  utm_content: `social-${interest}`,
-});
+// Package interest travels as a non-personal attribution hint. Inbound
+// source/medium/campaign are kept for ad attribution, but utm_content always
+// carries the package so Lihi sees it on the booking.
+const bookingUrl = (interest: PackageInterest) => {
+  const url = new URL(buildCalendlyUrl({ utm_campaign: "social-media-management" }));
+  url.searchParams.set("utm_content", `social-${interest}`);
+  return url.toString();
+};
 
 export function SocialBooking() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -94,7 +96,7 @@ export function SocialBooking() {
       trackSocial("Social Scheduler Failed", { package: interestRef.current });
     }, LOAD_TIMEOUT_MS);
     w.Calendly.initInlineWidget({
-      url: buildCalendlyUrl(interestHint(interestRef.current)),
+      url: bookingUrl(interestRef.current),
       parentElement: container,
     });
   }, []);
