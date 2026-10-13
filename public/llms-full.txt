@@ -5079,6 +5079,8 @@ Month tracker Day 0 of 30
 Your month starts here
 Scroll to run it
 
+Your month starts here Day 0 / 30
+
 - 01 You
 
 ### Step 1 : You , Share your priorities
