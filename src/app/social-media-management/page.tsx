@@ -223,7 +223,7 @@ function AccountRow({ label, value, included }: { label: string; value: string; 
   return (
     <li className="flex items-start justify-between gap-3 py-2.5 border-t border-purple-15 text-sm">
       <span className="text-purple-7">{label}</span>
-      <span className={`inline-flex items-center gap-1.5 text-right font-semibold ${included ? "text-purple-9" : "text-purple-5"}`}>
+      <span className={`inline-flex items-center gap-1.5 text-right font-semibold ${included ? "text-purple-9" : "text-purple-6"}`}>
         {included ? (
           <Check className="h-4 w-4 text-brand-dark shrink-0" aria-hidden="true" />
         ) : (
@@ -304,7 +304,7 @@ export default function SocialMediaManagementPage() {
         />
         <div className="relative z-10 mx-auto max-w-[1200px] px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-center">
           <div>
-            <p className="eyebrow mb-5">Managed social media · Led by Lihi Pinto</p>
+            <p className="mb-5 text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">Managed social media · Led by Lihi Pinto</p>
             <h1 className="text-[40px] sm:text-5xl lg:text-[60px] font-black tracking-tight leading-[1.02] text-white mb-6">
               Social media with <span className="gradient-text">creative ownership</span> and{" "}
               <span className="gradient-text">commercial purpose.</span>
@@ -636,7 +636,7 @@ export default function SocialMediaManagementPage() {
               <li key={s.title} className={`${cardCls} p-6`}>
                 <TopBar />
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-4xl font-black text-purple-15 tabular-nums" aria-hidden="true">
+                  <span className="text-4xl font-black text-brand tabular-nums" aria-hidden="true">
                     0{i + 1}
                   </span>
                   <span
@@ -681,7 +681,7 @@ export default function SocialMediaManagementPage() {
         />
         <div className="relative z-10 mx-auto max-w-[960px] px-6 sm:px-8">
           <div className="text-center mb-10">
-            <p className="eyebrow mb-4">Book a call with Lihi</p>
+            <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">Book a call with Lihi</p>
             <h2 id="book-title" className="text-3xl sm:text-4xl lg:text-[48px] font-black tracking-tight leading-[1.05] text-white mb-4">
               Let&apos;s find the right package <span className="gradient-text">for your business.</span>
             </h2>

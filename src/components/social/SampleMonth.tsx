@@ -101,14 +101,14 @@ export function SampleMonth() {
               const n = counts[account];
               return (
                 <li key={account} className="grid grid-cols-[8.5rem_1fr_2rem] items-center gap-3 text-sm">
-                  <span className={n ? "font-semibold text-purple-8" : "text-purple-5"}>{account}</span>
+                  <span className={n ? "font-semibold text-purple-8" : "text-purple-6"}>{account}</span>
                   <span className="h-2.5 rounded-full bg-purple-05 overflow-hidden" aria-hidden="true">
                     <span
                       className="block h-full rounded-full gradient-bar transition-[width] duration-500 motion-reduce:transition-none"
                       style={{ width: `${(n / MAX_PUBLICATIONS) * 100}%` }}
                     />
                   </span>
-                  <span className={`text-right tabular-nums ${n ? "font-bold text-purple-9" : "text-purple-5"}`}>
+                  <span className={`text-right tabular-nums ${n ? "font-bold text-purple-9" : "text-purple-6"}`}>
                     {n || <span aria-label="not included">0</span>}
                   </span>
                 </li>
