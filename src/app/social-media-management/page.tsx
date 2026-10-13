@@ -560,7 +560,7 @@ export default function SocialMediaManagementPage() {
       </section>
 
       {/* Tool vs team */}
-      <section className="bg-white py-20 lg:py-28" aria-labelledby="compare-title">
+      <section className="tech-grid bg-white py-20 lg:py-28" aria-labelledby="compare-title">
         <div className="mx-auto max-w-[1200px] px-6 sm:px-8">
           <ScrollReveal>
             <div className="max-w-[760px] mb-12">

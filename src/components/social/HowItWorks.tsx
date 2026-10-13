@@ -191,7 +191,7 @@ export function HowItWorks() {
         <p className="text-lg text-purple-7 leading-relaxed mb-8">
           Scroll through a month of work and see who does what, from your brief to the results report.
         </p>
-        <div aria-hidden="true" className="rounded-2xl border border-purple-15 bg-white p-5 shadow-[var(--shadow-base)]">
+        <div aria-hidden="true" className="hidden lg:block rounded-2xl border border-purple-15 bg-white p-5 shadow-[var(--shadow-base)]">
           <div className="flex items-center justify-between text-[11px] font-bold uppercase tracking-widest">
             <span className="text-purple-6">Month tracker</span>
             <span className="text-brand-dark tabular-nums">Day {shown < 0 ? 0 : current.day} of 30</span>
@@ -209,7 +209,27 @@ export function HowItWorks() {
         </div>
       </div>
 
-      <ol className="relative">
+      <div>
+        <div
+          aria-hidden="true"
+          className="lg:hidden sticky top-[84px] z-20 mb-5 rounded-xl border border-purple-15 bg-white px-4 py-3 shadow-[var(--shadow-base)]"
+        >
+          <div className="flex items-center justify-between gap-3">
+            <span key={shown} className="studio-enter truncate text-sm font-extrabold text-purple-8">
+              {shown < 0 ? "Your month starts here" : `${shown + 1}. ${current.title}`}
+            </span>
+            <span className="shrink-0 text-[11px] font-bold uppercase tracking-widest text-brand-dark tabular-nums">
+              Day {shown < 0 ? 0 : current.day} / 30
+            </span>
+          </div>
+          <span className="mt-2 block h-1.5 overflow-hidden rounded-full bg-purple-15">
+            <span
+              className="block h-full rounded-full gradient-bar transition-[width] duration-700 ease-out"
+              style={{ width: `${Math.max(0, progress)}%` }}
+            />
+          </span>
+        </div>
+        <ol className="relative">
         <span aria-hidden="true" className="absolute left-[19px] top-2 bottom-2 w-0.5 rounded-full bg-purple-15">
           <span
             className="block w-full rounded-full gradient-bar transition-[height] duration-700 ease-out"
@@ -264,7 +284,8 @@ export function HowItWorks() {
             </li>
           );
         })}
-      </ol>
+        </ol>
+      </div>
     </div>
   );
 }
