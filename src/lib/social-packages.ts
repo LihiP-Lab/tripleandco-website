@@ -100,7 +100,66 @@ export const COMMON_INCLUSIONS: string[] = [
   "Lihi's personal review of every monthly batch",
   "Your approval, with one consolidated revision round per batch",
   "Scheduling and publishing of approved content",
-  "Monthly performance reporting and direction for the next calendar",
+  "LinkedIn first: your founder profile and company page in every package",
+  "A monthly results report from your HubSpot, with direction for the next calendar",
+];
+
+export const ADVOCACY_ADDON = {
+  name: "Employee advocacy",
+  minMembers: 2,
+  maxMembers: 5,
+  points: [
+    "Posts written for each team member, in their own voice, for their personal LinkedIn profile",
+    "Drawn from your monthly calendar, so your people amplify the same priorities as the company",
+    "Reviewed by Lihi with the monthly batch, then approved by each team member",
+    "We publish with their approval, or hand over ready-to-post drafts. No sharing tool to log in to.",
+  ],
+} as const;
+
+export const PUBLISHING_ITEMS: { title: string; body: string }[] = [
+  {
+    title: "Campaign-based publishing",
+    body: "Every post is tied to a campaign or business priority, so the report shows what each campaign contributed.",
+  },
+  {
+    title: "One calendar across every account",
+    body: "You see the whole month across founder, company, team members, and channels before anything goes live.",
+  },
+  {
+    title: "Approvals that fit your team",
+    body: "Comment on any piece in the batch. Add approvers such as legal or product if you need them.",
+  },
+  {
+    title: "Your brand asset library",
+    body: "We keep your approved logos, visuals, product shots, and footage in one place, so every piece stays on brand.",
+  },
+  {
+    title: "Compliance checks",
+    body: "Every piece is checked against your banned words, claims rules, and approval rules before it is scheduled.",
+  },
+  {
+    title: "Pause on request",
+    body: "If something happens in your market or your business, tell us and we pause scheduled posts.",
+  },
+];
+
+export const REPORT_ITEMS: { title: string; body: string }[] = [
+  {
+    title: "Tracked links on every post",
+    body: "Each link carries tracking tags, so visits from social show up by account, post, and campaign.",
+  },
+  {
+    title: "What reached your HubSpot",
+    body: "The visits, form fills, contacts, and deals that came through those links.",
+  },
+  {
+    title: "Reach and engagement",
+    body: "By account and by piece, so we can see what is working and what is not.",
+  },
+  {
+    title: "Next month's direction",
+    body: "Lihi's read on the numbers and what changes in the next calendar.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

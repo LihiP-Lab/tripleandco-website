@@ -7,7 +7,7 @@ export const alt = "Managed social media led by Lihi Pinto, Triple & Co.";
 export default function OgImage() {
   return ogCard({
     eyebrow: "Managed Social Media",
-    title: "Social Media With Creative Ownership and Commercial Purpose",
-    subtitle: "Led by Lihi Pinto. Created and executed by Triple & Co.",
+    title: "Not Another Social Media Tool. Your B2B Social Team.",
+    subtitle: "Led by Lihi Pinto. Created, published, and reported by Triple & Co.",
   });
 }

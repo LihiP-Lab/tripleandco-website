@@ -8,7 +8,10 @@ import { SampleMonth } from "@/components/social/SampleMonth";
 import { SocialBooking } from "@/components/social/SocialBooking";
 import { ORG_ID, SITE_URL, lihiRef } from "@/lib/seo";
 import {
+  ADVOCACY_ADDON,
   COMMON_INCLUSIONS,
+  PUBLISHING_ITEMS,
+  REPORT_ITEMS,
   SAMPLE_COMPANY,
   SAMPLE_WEEKS,
   SOCIAL_PACKAGES,
@@ -20,14 +23,14 @@ import {
 const PAGE_URL = `${SITE_URL}${SOCIAL_ROUTE}`;
 
 export const metadata: Metadata = {
-  title: "Managed Social Media for B2B, Led by Lihi Pinto",
+  title: "Managed B2B Social Media, Not Another Tool",
   description:
-    "Managed social media for B2B companies. Lihi Pinto leads the direction and reviews every monthly batch. Triple & Co. creates and publishes. Book a call.",
+    "A managed B2B social team led by Lihi Pinto, not another tool: LinkedIn-first content, employee advocacy, and a monthly HubSpot results report. Book a call.",
   alternates: { canonical: SOCIAL_ROUTE },
   openGraph: {
     title: "Managed Social Media, Led by Lihi Pinto | Triple & Co.",
     description:
-      "Social media with creative ownership and commercial purpose. Led by Lihi Pinto. Created and executed by Triple & Co.",
+      "Not another social media tool. Your B2B social team, led by Lihi Pinto and run by Triple & Co.",
     url: PAGE_URL,
     siteName: "Triple & Co.",
     type: "website",
@@ -36,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Managed Social Media, Led by Lihi Pinto | Triple & Co.",
     description:
-      "Social media with creative ownership and commercial purpose. Led by Lihi Pinto. Created and executed by Triple & Co.",
+      "Not another social media tool. Your B2B social team, led by Lihi Pinto and run by Triple & Co.",
   },
 };
 
@@ -47,7 +50,7 @@ const PAINS = [
   "Your founder has real expertise and opinions. Publishing still happens in bursts.",
   "Every post waits on the founder for the idea, the draft, and the follow-up.",
   "Product updates and customer stories rarely turn into content worth reading.",
-  "Your lean team needs a partner who takes the work all the way to published.",
+  "You have a social media tool, or could buy one. What you are missing is the people to fill it.",
 ];
 
 const LIHI_OWNS = [
@@ -78,6 +81,29 @@ const YOU_BRING = [
   "Approved facts, assets, and customer stories",
   "Business updates and priorities",
   "Timely approval of each monthly batch",
+  "Access to HubSpot (or your CRM) for the results report",
+];
+
+const COMPARISON: { topic: string; tool: string; team: string }[] = [
+  { topic: "Ideas and monthly direction", tool: "Your team", team: "Lihi, tied to your commercial priorities" },
+  { topic: "Writing, design, and video", tool: "Your team", team: "The Triple & Co. team" },
+  { topic: "Quality review", tool: "Your team, when there is time", team: "Lihi, every monthly batch" },
+  { topic: "Scheduling and publishing", tool: "Your team, inside the tool", team: "We do it, once you approve" },
+  {
+    topic: "Employee advocacy",
+    tool: "Your people share from a content board",
+    team: "We write posts for 2 to 5 team members, in their own voice",
+  },
+  {
+    topic: "Pipeline reporting",
+    tool: "Dashboards your team sets up and reads",
+    team: "A monthly results report from your HubSpot, with Lihi's read on it",
+  },
+  {
+    topic: "What you need to start",
+    tool: "A license, a setup project, and people to run it",
+    team: "Your expertise, approvals, and HubSpot access",
+  },
 ];
 
 const COUNTING = [
@@ -102,10 +128,14 @@ const STEPS = [
   { who: "Triple & Co.", title: "Creates the batch", body: "Copy, design, and video, adapted for each account." },
   { who: "Lihi", title: "Reviews every piece", body: "The whole batch, before it reaches you." },
   { who: "You", title: "Approve", body: "With one consolidated revision round per monthly batch." },
-  { who: "Triple & Co.", title: "Publishes and learns", body: "Scheduling, publishing, a monthly report, and direction for next month." },
+  { who: "Triple & Co.", title: "Publishes and learns", body: "Scheduling, publishing, the monthly results report, and next month's direction." },
 ];
 
 const FAQS = [
+  {
+    q: "How is this different from a social media management platform?",
+    a: "A platform gives your team software to plan, publish, and measure. Your team still comes up with the ideas, writes, designs, and posts. We are the team: Lihi leads the direction, Triple & Co. creates and publishes, and you approve. If you already have an in-house social team that needs better tooling, a platform may be the better fit, and we will say so on the call.",
+  },
   {
     q: "Do we need to know which package we want before we book?",
     a: "No. The call is where we work out the right content volume and channels together. Choose \"Not sure yet\" when you book, or pick the package you are leaning toward.",
@@ -131,12 +161,20 @@ const FAQS = [
     a: "Social Growth covers your founder LinkedIn profile, your company LinkedIn page, and any two of Instagram, Facebook, X, and TikTok. Only pieces that suit a channel are published there, so publication counts depend on the channels you choose.",
   },
   {
+    q: "Can our team members post too?",
+    a: "Yes, with the employee advocacy add-on. We write posts for 2 to 5 of your team members in their own voice, for their personal LinkedIn profiles. Lihi reviews them with the monthly batch, and each person approves their own posts. It works with any package, and the volume per person is agreed on the call.",
+  },
+  {
+    q: "How do we see results?",
+    a: "Every month you get a results report. Every link we publish carries tracking tags, and the report shows the visits, form fills, contacts, and deals from social that reached your HubSpot, alongside reach and engagement by account. Not on HubSpot? We agree the setup on the call.",
+  },
+  {
     q: "Can you handle technical or specialised topics?",
     a: "That is the work we are built for: B2B service and technology companies with complex offers, in sectors such as SaaS, AI, agritech, foodtech, defence, cybersecurity, consultancies, and specialist technology services. Lihi leads discovery so we understand your offer and your buyers, and you approve facts before anything is published.",
   },
   {
     q: "Will social media generate leads for us?",
-    a: "We build every month around your commercial priorities: the questions buyers ask, the calls to action that fit, and the signals we can measure. We do not promise a set number of leads, sales, or revenue from organic posts.",
+    a: "We build every month around your commercial priorities: the questions buyers ask, the calls to action that fit, and a monthly report on what reached your HubSpot. We do not promise a set number of leads, sales, or revenue from organic posts.",
   },
   {
     q: "What is not included?",
@@ -161,7 +199,7 @@ const serviceSchema = {
   areaServed: "Worldwide",
   audience: { "@type": "BusinessAudience", audienceType: "B2B service and technology companies" },
   description:
-    "Social media with creative ownership and commercial purpose. Led by Lihi Pinto. Created and executed by Triple & Co.",
+    "A managed B2B social media team, not another tool. Led by Lihi Pinto, created and published by Triple & Co., LinkedIn first, with a monthly results report from HubSpot.",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Managed social media packages",
@@ -172,7 +210,14 @@ const serviceSchema = {
         name: p.name,
         description: `${p.descriptor} ${p.originalPieces} original pieces a month across ${p.managedAccounts} managed accounts.`,
       },
-    })),
+    })).concat({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: `${ADVOCACY_ADDON.name} add-on`,
+        description: `LinkedIn posts written for ${ADVOCACY_ADDON.minMembers} to ${ADVOCACY_ADDON.maxMembers} team members in their own voice. Available with any package.`,
+      },
+    }),
   },
 };
 
@@ -304,14 +349,14 @@ export default function SocialMediaManagementPage() {
         />
         <div className="relative z-10 mx-auto max-w-[1200px] px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-center">
           <div>
-            <p className="mb-5 text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">Managed social media · Led by Lihi Pinto</p>
+            <p className="mb-5 text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">Managed B2B social media · LinkedIn first · Led by Lihi Pinto</p>
             <h1 className="text-[40px] sm:text-5xl lg:text-[60px] font-black tracking-tight leading-[1.02] text-white mb-6">
-              Social media with <span className="gradient-text">creative ownership</span> and{" "}
-              <span className="gradient-text">commercial purpose.</span>
+              Not another social media tool. <span className="gradient-text">Your B2B social team.</span>
             </h1>
             <p className="text-lg sm:text-xl text-purple-2 leading-relaxed mb-8 max-w-[580px]">
-              Led by Lihi Pinto. Created and executed by Triple &amp; Co. Built around what your business needs to
-              communicate, who it needs to reach, and how it can contribute to revenue.
+              Social media software gives your team a dashboard to fill. We are the team: Lihi Pinto leads the
+              direction, Triple &amp; Co. creates and publishes, LinkedIn first. Every month you see what reached
+              your HubSpot.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
               <BookCallLink location="hero" className={primaryBtn}>
@@ -386,6 +431,56 @@ export default function SocialMediaManagementPage() {
               the approvals.
             </p>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Tool vs team */}
+      <section className="relative overflow-hidden bg-purple-9 py-20 lg:py-28" aria-labelledby="compare-title">
+        <div className="relative z-10 mx-auto max-w-[1200px] px-6 sm:px-8">
+          <ScrollReveal>
+            <div className="max-w-[760px] mb-12">
+              <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.14em] text-pink-3">Software or a team?</p>
+              <h2 id="compare-title" className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.08] text-white mb-5">
+                A tool needs a team. <span className="gradient-text">We are the team.</span>
+              </h2>
+              <p className="text-lg text-purple-2 leading-relaxed">
+                Social media platforms are good at publishing, inboxes, and dashboards. They still need people to come
+                up with the ideas, write, design, and post every week. Here is who does the work in each model.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="rounded-2xl border border-white/10 overflow-hidden">
+            <div aria-hidden="true" className="hidden md:grid grid-cols-[1fr_1fr_1.2fr] gap-6 bg-white/5 px-6 py-4 text-xs font-bold uppercase tracking-widest">
+              <span className="text-purple-3">Who does it</span>
+              <span className="text-purple-3">With social media software</span>
+              <span className="text-pink-3">With Triple &amp; Co.</span>
+            </div>
+            <ul>
+              {COMPARISON.map((row) => (
+                <li
+                  key={row.topic}
+                  className="grid grid-cols-1 md:grid-cols-[1fr_1fr_1.2fr] gap-2 md:gap-6 px-6 py-5 border-t border-white/10 first:border-t-0 md:first:border-t"
+                >
+                  <p className="font-extrabold text-white">{row.topic}</p>
+                  <p className="text-[15px] text-purple-3">
+                    <span className="md:sr-only font-semibold">With software: </span>
+                    {row.tool}
+                  </p>
+                  <p className="flex gap-2 text-[15px] font-semibold text-white">
+                    <Check className="h-5 w-5 text-pink-3 shrink-0" aria-hidden="true" />
+                    <span>
+                      <span className="md:sr-only text-pink-3">With Triple &amp; Co.: </span>
+                      {row.team}
+                    </span>
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="mt-6 text-[15px] text-purple-3 max-w-[760px]">
+            Already have an in-house social team that needs better tooling? A platform may be the better fit, and
+            we will tell you so on the call.
+          </p>
         </div>
       </section>
 
@@ -478,6 +573,76 @@ export default function SocialMediaManagementPage() {
               </span>
             </p>
             <p>Proposed package levels. We confirm the right scope with you on the call.</p>
+          </div>
+
+          <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-6">
+            <ScrollReveal>
+              <article className={`${cardCls} p-6 sm:p-8 h-full`} aria-labelledby="addon-title">
+                <TopBar />
+                <p className="text-sm font-bold text-brand-dark mb-1">Add-on · Works with any package</p>
+                <h3 id="addon-title" className="text-2xl font-black tracking-tight text-purple-9 mb-3">
+                  {ADVOCACY_ADDON.name} for {ADVOCACY_ADDON.minMembers} to {ADVOCACY_ADDON.maxMembers} team members
+                </h3>
+                <p className="text-[15px] text-purple-7 leading-relaxed mb-5">
+                  Your people reach buyers your company page never will. We make it easy for them to show up.
+                </p>
+                <ul className="space-y-3 mb-5">
+                  {ADVOCACY_ADDON.points.map((point) => (
+                    <li key={point} className="flex gap-3 text-[15px] text-purple-8 leading-relaxed">
+                      <Check className="h-5 w-5 text-brand-dark shrink-0 mt-0.5" aria-hidden="true" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-sm text-purple-6">Volume per person is agreed on the call.</p>
+              </article>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <article className={`${cardCls} p-6 sm:p-8 h-full`} aria-labelledby="report-title">
+                <TopBar />
+                <p className="text-sm font-bold text-brand-dark mb-1">Included · Every package</p>
+                <h3 id="report-title" className="text-2xl font-black tracking-tight text-purple-9 mb-3">
+                  A monthly results report
+                </h3>
+                <p className="text-[15px] text-purple-7 leading-relaxed mb-5">
+                  Social should show up in your pipeline, not only in likes. Every month you see what it contributed.
+                </p>
+                <dl className="space-y-4">
+                  {REPORT_ITEMS.map((item) => (
+                    <div key={item.title}>
+                      <dt className="font-extrabold text-purple-9">{item.title}</dt>
+                      <dd className="text-[15px] text-purple-7 leading-relaxed mt-0.5">{item.body}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="text-sm text-purple-6 mt-5">Not on HubSpot? We agree the setup on the call.</p>
+              </article>
+            </ScrollReveal>
+          </div>
+
+          {/* Publishing, handled */}
+          <div className="mt-14">
+            <ScrollReveal>
+              <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-purple-9 mb-3">
+                Everything a publishing platform does, handled for you
+              </h3>
+              <p className="text-purple-7 leading-relaxed mb-6 max-w-[720px]">
+                Campaigns, calendar, approvals, assets, and governance are part of the service. Your team never has to
+                learn or run a publishing tool.
+              </p>
+            </ScrollReveal>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {PUBLISHING_ITEMS.map((item) => (
+                <li key={item.title} className={`${cardCls} p-6`}>
+                  <TopBar />
+                  <p className="flex items-center gap-2 font-extrabold text-purple-9 mb-1.5">
+                    <Check className="h-5 w-5 text-brand-dark shrink-0" aria-hidden="true" />
+                    {item.title}
+                  </p>
+                  <p className="text-[15px] text-purple-7 leading-relaxed">{item.body}</p>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Included in every package */}
@@ -686,8 +851,8 @@ export default function SocialMediaManagementPage() {
               Let&apos;s find the right package <span className="gradient-text">for your business.</span>
             </h2>
             <p className="text-lg text-purple-2 max-w-[620px] mx-auto leading-relaxed">
-              Let&apos;s find the right content volume and channels for your business. You do not need to know your
-              package in advance.
+              Let&apos;s find the right content volume, channels, and add-ons for your business. You do not need to
+              know your package in advance.
             </p>
           </div>
           <div className={`${cardCls} p-5 sm:p-8`}>
