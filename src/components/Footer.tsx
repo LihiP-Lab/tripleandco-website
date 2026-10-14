@@ -9,6 +9,7 @@ const services = [
   { href: "/cmo-as-a-service", label: "CMO as a Service" },
   { href: "/cro-as-a-service", label: "CRO as a Service" },
   { href: "/agents", label: "Marketing Agents" },
+  { href: "/social-media-management", label: "Managed Social Media" },
   { href: "/revenue-diagnostic", label: "Revenue Diagnostic" },
   { href: "/pricing", label: "Engagement Models & Pricing" },
   { href: "/results", label: "Results" },

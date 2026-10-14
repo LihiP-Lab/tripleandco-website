@@ -37,6 +37,7 @@ const LAST_MODIFIED: Record<string, string> = {
   "/b2b-marketing-israel-he": "2026-08-14",
   "/ai-content-engine": "2026-08-14",
   "/ai-social-engine": "2026-08-14",
+  "/social-media-management": "2026-10-13",
   "/ai-market-research": "2026-08-14",
   "/ai-analytics-attribution": "2026-08-14",
   "/ai-video-production": "2026-08-14",
@@ -91,6 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/b2b-marketing-israel-he",
     "/ai-content-engine",
     "/ai-social-engine",
+    "/social-media-management",
     "/ai-market-research",
     "/ai-analytics-attribution",
     "/ai-video-production",
@@ -141,6 +143,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             route === "/ai-marketing-agents" ||
             route === "/ai-content-engine" ||
             route === "/ai-social-engine" ||
+            route === "/social-media-management" ||
             route === "/ai-market-research" ||
             route === "/ai-analytics-attribution" ||
             route === "/ai-video-production" ||
