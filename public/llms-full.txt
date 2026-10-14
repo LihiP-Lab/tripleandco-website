@@ -4869,142 +4869,133 @@ A sample month
 
 Illustrative example. SignalWorks is a fictional B2B AI operations company, not a Triple & Co. client. Real calendars follow your priorities and channels.
 
-Essentials Growth Complete
+Essentials 12 Growth 20 Complete 30
 
-signalworks · october 2026 · social growth
+signalworks · next month · social growth
 
-### Your October batch
+### Your next batch
 
 20 original pieces across 4 accounts, planned around one monthly narrative.
 
-- Reviewed by Lihi
-- Awaiting your approval
-- 1 revision round
+Agents drafting 0 / 20
+Pause the sample month
 
-Short video Carousel Image Text post F Founder voice C Company voice
-Week 1 Problem and perspective 5 pieces
+Lihi + 8 agents made this month.
+Founder voice Company voice Reviewed by Lihi
+
+Mon
+Tue
+Wed
+Thu
+Fri
+Week 1
+Problem and perspective
+
 Mon
 
-- Why most ops teams measure the wrong thing
-Short video , founder voice, published on Founder LinkedIn, Instagram, Facebook .
-F Founder LI IG FB short video
+- 08:30 Founder Why most ops teams measure the wrong thing short video IG FB . Short video , founder voice, Monday at 08:30 , published on Founder LinkedIn, Instagram, Facebook . Open preview.
 
 Tue
 
-- 5 signals your operations data is lying to you
-Carousel , company voice, published on Company LinkedIn, Instagram, Facebook .
-C Company LI IG FB carousel
+- 12:00 Company 5 signals your operations data is lying to you carousel IG FB . Carousel , company voice, Tuesday at 12:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
 
 Wed
 
-- The hidden cost of a 48-hour reporting lag
-Text post , company voice, published on Company LinkedIn, Instagram, Facebook .
-C Company LI IG FB text post
+- 09:15 Company The hidden cost of a 48-hour reporting lag text post IG FB . Text post , company voice, Wednesday at 09:15 , published on Company LinkedIn, Instagram, Facebook . Open preview.
 
 Thu
 
-- I used to think more dashboards meant more control
-Text post , founder voice, published on Founder LinkedIn .
-F Founder LI text post
-
-- One number: how often most ops teams rebuild the same report by hand
-Image , company voice, published on Company LinkedIn, Instagram, Facebook .
-C Company LI IG FB image
+- 17:00 Founder I used to think more dashboards meant more control text post . Text post , founder voice, Thursday at 17:00 , published on Founder LinkedIn . Open preview.
+- 13:30 Company One number: how often most ops teams rebuild the same report by hand image IG FB . Image , company voice, Thursday at 13:30 , published on Company LinkedIn, Instagram, Facebook . Open preview.
 
 Fri
 
-Week 2 Evaluation and workflow 5 pieces
+Week 2
+Evaluation and workflow
+
 Mon
 
-- How to evaluate an AI ops platform without a 90-day pilot
-Text post , founder voice, published on Founder LinkedIn .
-F Founder LI text post
+- 08:30 Founder How to evaluate an AI ops platform without a 90-day pilot text post . Text post , founder voice, Monday at 08:30 , published on Founder LinkedIn . Open preview.
 
 Tue
 
-- Walkthrough: from raw signal to a decision in one screen
-Short video , company voice, published on Company LinkedIn, Instagram, Facebook .
-C Company LI IG FB short video
+- 12:00 Company Walkthrough: from raw signal to a decision in one screen short video IG FB . Short video , company voice, Tuesday at 12:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
 
 Wed
 
-- Three questions to ask any vendor about data lineage
-Text post , company voice, published on Company LinkedIn .
-C Company LI text post
+- 09:15 Company Three questions to ask any vendor about data lineage text post . Text post , company voice, Wednesday at 09:15 , published on Company LinkedIn . Open preview.
 
 Thu
 
-- The SignalWorks workflow in 6 steps
-Carousel , company voice, published on Company LinkedIn, Instagram, Facebook .
-C Company LI IG FB carousel
+- 17:00 Company The SignalWorks workflow in 6 steps carousel IG FB . Carousel , company voice, Thursday at 17:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
 
 Fri
 
-- The evaluation mistake I see on almost every call
-Short video , founder voice, published on Founder LinkedIn, Instagram, Facebook .
-F Founder LI IG FB short video
+- 13:30 Founder The evaluation mistake I see on almost every call short video IG FB . Short video , founder voice, Friday at 13:30 , published on Founder LinkedIn, Instagram, Facebook . Open preview.
 
-Week 3 Evidence and measurement 6 pieces
+Week 3
+Evidence and measurement
+
 Mon
 
-- Customer story: how a 40-person ops team cut incident triage time
-Text post , company voice, published on Company LinkedIn .
-C Company LI text post
+- 08:30 Company Customer story: how a 40-person ops team cut incident triage time text post . Text post , company voice, Monday at 08:30 , published on Company LinkedIn . Open preview.
 
 Tue
 
-- The metric that finally convinced our CFO
-Text post , founder voice, published on Founder LinkedIn .
-F Founder LI text post
-
-- Customer voice: 60 seconds with an ops lead
-Short video , company voice, published on Company LinkedIn, Instagram, Facebook .
-C Company LI IG FB short video
+- 12:00 Founder The metric that finally convinced our CFO text post . Text post , founder voice, Tuesday at 12:00 , published on Founder LinkedIn . Open preview.
+- 09:15 Company Customer voice: 60 seconds with an ops lead short video IG FB . Short video , company voice, Tuesday at 09:15 , published on Company LinkedIn, Instagram, Facebook . Open preview.
 
 Wed
 
-- Product update: anomaly detection on every pipeline
-Short video , company voice, published on Company LinkedIn, Instagram, Facebook .
-C Company LI IG FB short video
+- 17:00 Company Product update: anomaly detection on every pipeline short video IG FB . Short video , company voice, Wednesday at 17:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
 
 Thu
 
-- Before and after: one team's weekly reporting hours
-Image , company voice, published on Company LinkedIn, Instagram, Facebook .
-C Company LI IG FB image
+- 13:30 Company Before and after: one team's weekly reporting hours image IG FB . Image , company voice, Thursday at 13:30 , published on Company LinkedIn, Instagram, Facebook . Open preview.
 
 Fri
 
-- What our customers measure that most teams do not
-Text post , founder voice, published on Founder LinkedIn .
-F Founder LI text post
+- 08:30 Founder What our customers measure that most teams do not text post . Text post , founder voice, Friday at 08:30 , published on Founder LinkedIn . Open preview.
 
-Week 4 Readiness and conversation 4 pieces
+Week 4
+Readiness and conversation
+
 Mon
 
-- Are you ready for AI in operations? Four honest checks
-Short video , founder voice, published on Founder LinkedIn, Instagram, Facebook .
-F Founder LI IG FB short video
+- 12:00 Founder Are you ready for AI in operations? Four honest checks short video IG FB . Short video , founder voice, Monday at 12:00 , published on Founder LinkedIn, Instagram, Facebook . Open preview.
 
 Tue
 
-- The five questions to bring to a first call with us
-Text post , company voice, published on Company LinkedIn .
-C Company LI text post
+- 09:15 Company The five questions to bring to a first call with us text post . Text post , company voice, Tuesday at 09:15 , published on Company LinkedIn . Open preview.
 
 Wed
 
-- Readiness checklist for ops leaders
-Image , company voice, published on Company LinkedIn, Instagram, Facebook .
-C Company LI IG FB image
+- 17:00 Company Readiness checklist for ops leaders image IG FB . Image , company voice, Wednesday at 17:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
 
 Thu
 
 Fri
 
-- What I would do in my first 30 days as an ops leader today
-Text post , founder voice, published on Founder LinkedIn .
-F Founder LI text post
+- 13:30 Founder What I would do in my first 30 days as an ops leader today text post . Text post , founder voice, Friday at 13:30 , published on Founder LinkedIn . Open preview.
+
+Week 1 Week 2 Week 3 Week 4
+Problem and perspective 5 pieces
+Monday
+
+- 08:30 Founder Why most ops teams measure the wrong thing short video IG FB . Short video , founder voice, Monday at 08:30 , published on Founder LinkedIn, Instagram, Facebook . Open preview.
+
+Tuesday
+
+- 12:00 Company 5 signals your operations data is lying to you carousel IG FB . Carousel , company voice, Tuesday at 12:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+
+Wednesday
+
+- 09:15 Company The hidden cost of a 48-hour reporting lag text post IG FB . Text post , company voice, Wednesday at 09:15 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+
+Thursday
+
+- 17:00 Founder I used to think more dashboards meant more control text post . Text post , founder voice, Thursday at 17:00 , published on Founder LinkedIn . Open preview.
+- 13:30 Company One number: how often most ops teams rebuild the same report by hand image IG FB . Image , company voice, Thursday at 13:30 , published on Company LinkedIn, Instagram, Facebook . Open preview.
 
 Founder LinkedIn 8
 Company LinkedIn 12
