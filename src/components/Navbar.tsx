@@ -14,7 +14,7 @@ const navLinks = [
   { href: "/services", label: "CMO & CRO" },
   { href: "/agents", label: "Marketing Agents" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/insights", label: "Insights" },
+  { href: SOCIAL_ROUTE, label: "Social Media" },
   { href: "/contact", label: "Contact" },
 ];
 
