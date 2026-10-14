@@ -178,7 +178,7 @@ function PieceChip({
         <span className="sr-only">
           {". "}
           {FORMAT_LABEL[piece.format]}, {founder ? "founder" : "company"} voice, {DAY_NAMES[piece.day]}
-          {date ? ` ${date}` : ""} at {time}, published on {[accountOf(piece), ...channels].join(", ")}. Open preview.
+          {date ? ` ${date}` : ""} at {time}, planned for {[accountOf(piece), ...channels].join(", ")}. Open preview.
         </span>
       </button>
     </li>
@@ -339,6 +339,7 @@ export function SampleMonth() {
   function choose(id: PackageId) {
     setActive(id);
     setStep(0);
+    setPaused(false);
     setOpen(null);
   }
 
@@ -434,12 +435,12 @@ export function SampleMonth() {
               aria-controls={`${baseId}-panel`}
               tabIndex={selected ? 0 : -1}
               onClick={() => choose(p.id)}
-              className={`flex-1 sm:flex-none min-h-[44px] rounded-[10px] px-5 text-sm font-semibold transition-colors ${
+              className={`flex-1 sm:flex-none min-h-[44px] whitespace-nowrap rounded-[10px] px-2.5 sm:px-5 text-sm font-semibold transition-colors ${
                 selected ? "bg-brand-dark text-white" : "text-purple-7 hover:text-purple-9"
               }`}
             >
               {p.name.replace("Social ", "")}
-              <span className="ml-1.5 font-mono text-xs">{p.originalPieces}</span>
+              <span className="ml-1 sm:ml-1.5 font-mono text-xs">{p.originalPieces}</span>
             </button>
           );
         })}
@@ -479,7 +480,7 @@ export function SampleMonth() {
               </ul>
             ) : (
               <p aria-hidden="true" className="inline-flex items-center gap-2 rounded-full border border-purple-15 bg-white px-3 py-1.5 text-xs font-semibold text-purple-8">
-                <span className="live-dot h-2 w-2 rounded-full bg-brand" />
+                <span className={`${paused ? "" : "live-dot "}h-2 w-2 rounded-full bg-brand`} />
                 {s < t.fillEnd ? "Agents drafting" : "Lihi reviewing"}
                 <span className="font-mono tabular-nums text-purple-7">
                   {s < t.fillEnd ? drafted : reviewedCount} / {pieces.length}

@@ -4893,20 +4893,20 @@ Problem and perspective
 
 Mon
 
-- 08:30 Founder Why most ops teams measure the wrong thing short video IG FB . Short video , founder voice, Monday at 08:30 , published on Founder LinkedIn, Instagram, Facebook . Open preview.
+- 08:30 Founder Why most ops teams measure the wrong thing short video IG FB . Short video , founder voice, Monday at 08:30 , planned for Founder LinkedIn, Instagram, Facebook . Open preview.
 
 Tue
 
-- 12:00 Company 5 signals your operations data is lying to you carousel IG FB . Carousel , company voice, Tuesday at 12:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 12:00 Company 5 signals your operations data is lying to you carousel IG FB . Carousel , company voice, Tuesday at 12:00 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Wed
 
-- 09:15 Company The hidden cost of a 48-hour reporting lag text post IG FB . Text post , company voice, Wednesday at 09:15 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 09:15 Company The hidden cost of a 48-hour reporting lag text post IG FB . Text post , company voice, Wednesday at 09:15 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Thu
 
-- 17:00 Founder I used to think more dashboards meant more control text post . Text post , founder voice, Thursday at 17:00 , published on Founder LinkedIn . Open preview.
-- 13:30 Company One number: how often most ops teams rebuild the same report by hand image IG FB . Image , company voice, Thursday at 13:30 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 17:00 Founder I used to think more dashboards meant more control text post . Text post , founder voice, Thursday at 17:00 , planned for Founder LinkedIn . Open preview.
+- 13:30 Company One number: how often most ops teams rebuild the same report by hand image IG FB . Image , company voice, Thursday at 13:30 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Fri
 
@@ -4915,87 +4915,87 @@ Evaluation and workflow
 
 Mon
 
-- 08:30 Founder How to evaluate an AI ops platform without a 90-day pilot text post . Text post , founder voice, Monday at 08:30 , published on Founder LinkedIn . Open preview.
+- 08:30 Founder How to evaluate an AI ops platform without a 90-day pilot text post . Text post , founder voice, Monday at 08:30 , planned for Founder LinkedIn . Open preview.
 
 Tue
 
-- 12:00 Company Walkthrough: from raw signal to a decision in one screen short video IG FB . Short video , company voice, Tuesday at 12:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 12:00 Company Walkthrough: from raw signal to a decision in one screen short video IG FB . Short video , company voice, Tuesday at 12:00 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Wed
 
-- 09:15 Company Three questions to ask any vendor about data lineage text post . Text post , company voice, Wednesday at 09:15 , published on Company LinkedIn . Open preview.
+- 09:15 Company Three questions to ask any vendor about data lineage text post . Text post , company voice, Wednesday at 09:15 , planned for Company LinkedIn . Open preview.
 
 Thu
 
-- 17:00 Company The SignalWorks workflow in 6 steps carousel IG FB . Carousel , company voice, Thursday at 17:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 17:00 Company The SignalWorks workflow in 6 steps carousel IG FB . Carousel , company voice, Thursday at 17:00 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Fri
 
-- 13:30 Founder The evaluation mistake I see on almost every call short video IG FB . Short video , founder voice, Friday at 13:30 , published on Founder LinkedIn, Instagram, Facebook . Open preview.
+- 13:30 Founder The evaluation mistake I see on almost every call short video IG FB . Short video , founder voice, Friday at 13:30 , planned for Founder LinkedIn, Instagram, Facebook . Open preview.
 
 Week 3
 Evidence and measurement
 
 Mon
 
-- 08:30 Company Customer story: how a 40-person ops team cut incident triage time text post . Text post , company voice, Monday at 08:30 , published on Company LinkedIn . Open preview.
+- 08:30 Company Customer story: how a 40-person ops team cut incident triage time text post . Text post , company voice, Monday at 08:30 , planned for Company LinkedIn . Open preview.
 
 Tue
 
-- 12:00 Founder The metric that finally convinced our CFO text post . Text post , founder voice, Tuesday at 12:00 , published on Founder LinkedIn . Open preview.
-- 09:15 Company Customer voice: 60 seconds with an ops lead short video IG FB . Short video , company voice, Tuesday at 09:15 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 12:00 Founder The metric that finally convinced our CFO text post . Text post , founder voice, Tuesday at 12:00 , planned for Founder LinkedIn . Open preview.
+- 09:15 Company Customer voice: 60 seconds with an ops lead short video IG FB . Short video , company voice, Tuesday at 09:15 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Wed
 
-- 17:00 Company Product update: anomaly detection on every pipeline short video IG FB . Short video , company voice, Wednesday at 17:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 17:00 Company Product update: anomaly detection on every pipeline short video IG FB . Short video , company voice, Wednesday at 17:00 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Thu
 
-- 13:30 Company Before and after: one team's weekly reporting hours image IG FB . Image , company voice, Thursday at 13:30 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 13:30 Company Before and after: one team's weekly reporting hours image IG FB . Image , company voice, Thursday at 13:30 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Fri
 
-- 08:30 Founder What our customers measure that most teams do not text post . Text post , founder voice, Friday at 08:30 , published on Founder LinkedIn . Open preview.
+- 08:30 Founder What our customers measure that most teams do not text post . Text post , founder voice, Friday at 08:30 , planned for Founder LinkedIn . Open preview.
 
 Week 4
 Readiness and conversation
 
 Mon
 
-- 12:00 Founder Are you ready for AI in operations? Four honest checks short video IG FB . Short video , founder voice, Monday at 12:00 , published on Founder LinkedIn, Instagram, Facebook . Open preview.
+- 12:00 Founder Are you ready for AI in operations? Four honest checks short video IG FB . Short video , founder voice, Monday at 12:00 , planned for Founder LinkedIn, Instagram, Facebook . Open preview.
 
 Tue
 
-- 09:15 Company The five questions to bring to a first call with us text post . Text post , company voice, Tuesday at 09:15 , published on Company LinkedIn . Open preview.
+- 09:15 Company The five questions to bring to a first call with us text post . Text post , company voice, Tuesday at 09:15 , planned for Company LinkedIn . Open preview.
 
 Wed
 
-- 17:00 Company Readiness checklist for ops leaders image IG FB . Image , company voice, Wednesday at 17:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 17:00 Company Readiness checklist for ops leaders image IG FB . Image , company voice, Wednesday at 17:00 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Thu
 
 Fri
 
-- 13:30 Founder What I would do in my first 30 days as an ops leader today text post . Text post , founder voice, Friday at 13:30 , published on Founder LinkedIn . Open preview.
+- 13:30 Founder What I would do in my first 30 days as an ops leader today text post . Text post , founder voice, Friday at 13:30 , planned for Founder LinkedIn . Open preview.
 
 Week 1 Week 2 Week 3 Week 4
 Problem and perspective 5 pieces
 Monday
 
-- 08:30 Founder Why most ops teams measure the wrong thing short video IG FB . Short video , founder voice, Monday at 08:30 , published on Founder LinkedIn, Instagram, Facebook . Open preview.
+- 08:30 Founder Why most ops teams measure the wrong thing short video IG FB . Short video , founder voice, Monday at 08:30 , planned for Founder LinkedIn, Instagram, Facebook . Open preview.
 
 Tuesday
 
-- 12:00 Company 5 signals your operations data is lying to you carousel IG FB . Carousel , company voice, Tuesday at 12:00 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 12:00 Company 5 signals your operations data is lying to you carousel IG FB . Carousel , company voice, Tuesday at 12:00 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Wednesday
 
-- 09:15 Company The hidden cost of a 48-hour reporting lag text post IG FB . Text post , company voice, Wednesday at 09:15 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 09:15 Company The hidden cost of a 48-hour reporting lag text post IG FB . Text post , company voice, Wednesday at 09:15 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Thursday
 
-- 17:00 Founder I used to think more dashboards meant more control text post . Text post , founder voice, Thursday at 17:00 , published on Founder LinkedIn . Open preview.
-- 13:30 Company One number: how often most ops teams rebuild the same report by hand image IG FB . Image , company voice, Thursday at 13:30 , published on Company LinkedIn, Instagram, Facebook . Open preview.
+- 17:00 Founder I used to think more dashboards meant more control text post . Text post , founder voice, Thursday at 17:00 , planned for Founder LinkedIn . Open preview.
+- 13:30 Company One number: how often most ops teams rebuild the same report by hand image IG FB . Image , company voice, Thursday at 13:30 , planned for Company LinkedIn, Instagram, Facebook . Open preview.
 
 Founder LinkedIn 8
 Company LinkedIn 12
