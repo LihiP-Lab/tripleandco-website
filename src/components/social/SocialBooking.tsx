@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Script from "next/script";
 import { CalendarCheck, ExternalLink, Loader2, Lock } from "lucide-react";
 import {
@@ -30,6 +30,8 @@ const bookingUrl = (interest: PackageInterest) => {
   url.searchParams.set("utm_content", `social-${interest}`);
   return url.toString();
 };
+
+const noopSubscribe = () => () => {};
 
 export function SocialBooking() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -133,7 +135,12 @@ export function SocialBooking() {
     return () => window.removeEventListener("message", onMessage);
   }, []);
 
-  const directUrl = `${SOCIAL_CALENDLY_URL}?utm_source=website&utm_medium=organic&utm_campaign=social-media-management&utm_content=social-${interest}`;
+  // Inbound UTMs only exist in the browser, so the server render uses the
+  // organic defaults and the client swaps in the full attribution.
+  const hydrated = useSyncExternalStore(noopSubscribe, () => true, () => false);
+  const directUrl = hydrated
+    ? bookingUrl(interest)
+    : `${SOCIAL_CALENDLY_URL}?utm_source=website&utm_medium=organic&utm_campaign=social-media-management&utm_content=social-${interest}`;
   const showOverlay = status === "idle" || status === "loading";
 
   return (
@@ -215,48 +222,50 @@ export function SocialBooking() {
         </div>
       )}
 
-      {status === "failed" ? (
-        <div className="rounded-2xl border border-purple-15 bg-purple-05 p-6 sm:p-8 text-center">
-          <p className="font-extrabold text-purple-9 text-lg mb-2">The calendar did not load here.</p>
-          <p className="text-purple-7 mb-5 max-w-md mx-auto">
-            A browser extension or network setting may be blocking it. You can still book directly with Lihi.
-          </p>
-          <a
-            href={directUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 min-h-[48px] rounded-[10px] bg-brand-dark px-6 py-3 text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5"
-          >
-            Open Lihi&apos;s calendar <ExternalLink className="h-4 w-4" aria-hidden="true" />
-            <span className="sr-only">(opens in a new tab)</span>
-          </a>
-          <p className="text-sm text-purple-6 mt-4">
-            Or email{" "}
-            <a href="mailto:lihi@tripleandco.com" className="font-semibold text-brand-dark underline underline-offset-2">
-              lihi@tripleandco.com
+      <div className="relative">
+        {/* Stays mounted and laid out under the fallback, so a calendar that
+            loads after the timeout can still take over. */}
+        <div
+          ref={containerRef}
+          inert={status === "failed"}
+          className="overflow-hidden rounded-2xl border border-purple-15 bg-white h-[1040px] sm:h-[720px]"
+          style={{ minWidth: 300 }}
+          aria-label="Book a call with Lihi Pinto"
+          role="region"
+        />
+        {showOverlay && (
+          <div className="absolute inset-0 flex flex-col items-center justify-start gap-3 rounded-2xl border border-purple-15 bg-white pt-24 text-center">
+            <Loader2 className="h-6 w-6 text-brand-dark animate-spin motion-reduce:animate-none" aria-hidden="true" />
+            <p className="font-semibold text-purple-8">Loading Lihi&apos;s calendar</p>
+            <p className="text-sm text-purple-6 max-w-xs">
+              You will see available times first. Calendly asks for your details after you pick one.
+            </p>
+          </div>
+        )}
+        {status === "failed" && (
+          <div className="absolute inset-0 flex flex-col items-center justify-start rounded-2xl border border-purple-15 bg-purple-05 px-6 pt-24 text-center">
+            <p className="font-extrabold text-purple-9 text-lg mb-2">The calendar did not load here.</p>
+            <p className="text-purple-7 mb-5 max-w-md mx-auto">
+              A browser extension or network setting may be blocking it. You can still book directly with Lihi.
+            </p>
+            <a
+              href={directUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 min-h-[48px] rounded-[10px] bg-brand-dark px-6 py-3 text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5"
+            >
+              Open Lihi&apos;s calendar <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              <span className="sr-only">(opens in a new tab)</span>
             </a>
-          </p>
-        </div>
-      ) : (
-        <div className="relative">
-          <div
-            ref={containerRef}
-            className="overflow-hidden rounded-2xl border border-purple-15 bg-white h-[1040px] sm:h-[720px]"
-            style={{ minWidth: 300 }}
-            aria-label="Book a call with Lihi Pinto"
-            role="region"
-          />
-          {showOverlay && (
-            <div className="absolute inset-0 flex flex-col items-center justify-start gap-3 rounded-2xl border border-purple-15 bg-white pt-24 text-center">
-              <Loader2 className="h-6 w-6 text-brand-dark animate-spin motion-reduce:animate-none" aria-hidden="true" />
-              <p className="font-semibold text-purple-8">Loading Lihi&apos;s calendar</p>
-              <p className="text-sm text-purple-6 max-w-xs">
-                You will see available times first. Calendly asks for your details after you pick one.
-              </p>
-            </div>
-          )}
-        </div>
-      )}
+            <p className="text-sm text-purple-6 mt-4">
+              Or email{" "}
+              <a href="mailto:lihi@tripleandco.com" className="font-semibold text-brand-dark underline underline-offset-2">
+                lihi@tripleandco.com
+              </a>
+            </p>
+          </div>
+        )}
+      </div>
 
       {status !== "failed" && (
         <p className="text-sm text-purple-6 mt-4 text-center">
