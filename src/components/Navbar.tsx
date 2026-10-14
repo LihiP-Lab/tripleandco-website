@@ -14,7 +14,7 @@ const navLinks = [
   { href: "/services", label: "CMO & CRO" },
   { href: "/agents", label: "Marketing Agents" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/insights", label: "Insights" },
+  { href: SOCIAL_ROUTE, label: "Social Media" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -45,7 +45,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative whitespace-nowrap transition-colors hover:text-brand ${isActive ? "text-brand" : ""}`}
+                className={`relative whitespace-nowrap transition-colors hover:text-brand ${isActive ? "text-brand-dark" : ""}`}
                 aria-current={isActive ? "page" : undefined}
               >
                 {link.label}
@@ -125,7 +125,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className={`block text-sm font-medium hover:text-brand ${isActive ? "text-brand" : "text-purple-7"}`}
+                className={`block text-sm font-medium hover:text-brand ${isActive ? "text-brand-dark" : "text-purple-7"}`}
                 aria-current={isActive ? "page" : undefined}
               >
                 {link.label}
