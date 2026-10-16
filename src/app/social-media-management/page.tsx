@@ -169,7 +169,7 @@ const FAQS = [
   },
   {
     q: "Is the content written by AI?",
-    a: "The agents do the production work, and Lihi stays in charge of it. She sets the direction, contributes ideas and copy, and reviews every piece before it reaches you. You approve before anything is published. Founder videos use your own recordings, never an AI avatar.",
+    a: "The agents do the production work, and Lihi stays in charge of it. She sets the direction, contributes ideas and copy, and reviews every piece before it reaches you. You approve before anything is published. Founder videos always use your own face and voice.",
   },
   {
     q: "Do we need to know which package we want before we book?",
@@ -802,7 +802,7 @@ export default function SocialMediaManagementPage() {
               ))}
             </div>
             <p className="text-sm text-purple-6 mt-4">
-              We do not travel to film, and neither approach needs an AI avatar or a synthetic version of anyone.
+              We do not travel to film.
             </p>
           </div>
         </div>
