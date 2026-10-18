@@ -38,6 +38,7 @@ const LAST_MODIFIED: Record<string, string> = {
   "/ai-content-engine": "2026-08-14",
   "/ai-social-engine": "2026-08-14",
   "/social-media-management": "2026-10-13",
+  "/social-media-for-founders": "2026-10-19",
   "/ai-market-research": "2026-08-14",
   "/ai-analytics-attribution": "2026-08-14",
   "/ai-video-production": "2026-08-14",
@@ -93,6 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ai-content-engine",
     "/ai-social-engine",
     "/social-media-management",
+    "/social-media-for-founders",
     "/ai-market-research",
     "/ai-analytics-attribution",
     "/ai-video-production",
@@ -144,6 +146,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             route === "/ai-content-engine" ||
             route === "/ai-social-engine" ||
             route === "/social-media-management" ||
+            route === "/social-media-for-founders" ||
             route === "/ai-market-research" ||
             route === "/ai-analytics-attribution" ||
             route === "/ai-video-production" ||

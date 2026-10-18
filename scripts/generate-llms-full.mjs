@@ -47,6 +47,7 @@ const ROUTES = [
   "/ai-content-engine",
   "/ai-social-engine",
   "/social-media-management",
+  "/social-media-for-founders",
   "/ai-market-research",
   "/ai-analytics-attribution",
   "/ai-video-production",

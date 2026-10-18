@@ -25,15 +25,18 @@ const LOAD_TIMEOUT_MS = 12_000;
 // Package interest travels as a non-personal attribution hint. Inbound
 // source/medium/campaign are kept for ad attribution, but utm_content always
 // carries the package so Lihi sees it on the booking.
-const bookingUrl = (interest: PackageInterest) => {
-  const url = new URL(buildCalendlyUrl({ utm_campaign: "social-media-management" }, SOCIAL_CALENDLY_URL));
+const DEFAULT_CAMPAIGN = "social-media-management";
+
+const bookingUrl = (interest: PackageInterest, campaign: string) => {
+  const url = new URL(buildCalendlyUrl({ utm_campaign: campaign }, SOCIAL_CALENDLY_URL));
   url.searchParams.set("utm_content", `social-${interest}`);
   return url.toString();
 };
 
 const noopSubscribe = () => () => {};
 
-export function SocialBooking() {
+/** `campaign` is the organic utm_campaign for the page hosting the booking. */
+export function SocialBooking({ campaign = DEFAULT_CAMPAIGN }: { campaign?: string } = {}) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<number | null>(null);
@@ -44,6 +47,7 @@ export function SocialBooking() {
   const [status, setStatus] = useState<Status>("idle");
   const [timeChosen, setTimeChosen] = useState(false);
   const interestRef = useRef(interest);
+  const campaignRef = useRef(campaign);
   useEffect(() => {
     interestRef.current = interest;
   }, [interest]);
@@ -98,7 +102,7 @@ export function SocialBooking() {
       trackSocial("Social Scheduler Failed", { package: interestRef.current });
     }, LOAD_TIMEOUT_MS);
     w.Calendly.initInlineWidget({
-      url: bookingUrl(interestRef.current),
+      url: bookingUrl(interestRef.current, campaignRef.current),
       parentElement: container,
     });
   }, []);
@@ -139,8 +143,8 @@ export function SocialBooking() {
   // organic defaults and the client swaps in the full attribution.
   const hydrated = useSyncExternalStore(noopSubscribe, () => true, () => false);
   const directUrl = hydrated
-    ? bookingUrl(interest)
-    : `${SOCIAL_CALENDLY_URL}?utm_source=website&utm_medium=organic&utm_campaign=social-media-management&utm_content=social-${interest}`;
+    ? bookingUrl(interest, campaign)
+    : `${SOCIAL_CALENDLY_URL}?utm_source=website&utm_medium=organic&utm_campaign=${campaign}&utm_content=social-${interest}`;
   const showOverlay = status === "idle" || status === "loading";
 
   return (
