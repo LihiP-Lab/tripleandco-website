@@ -74,8 +74,21 @@ function timeline(n: number) {
 // ------------------------------------------------------------ next month
 // The sample always shows the next calendar month, so its dates never age.
 
-function subscribeNever() {
-  return () => {};
+// setTimeout overflows above ~24.8 days, so long waits re-arm until the rollover.
+const MAX_TIMEOUT_MS = 2 ** 31 - 1;
+
+function subscribeMonthRollover(onChange: () => void) {
+  let timer: ReturnType<typeof setTimeout>;
+  const arm = () => {
+    const now = new Date();
+    const rollover = new Date(now.getFullYear(), now.getMonth() + 1, 1).getTime();
+    timer = setTimeout(() => {
+      onChange();
+      arm();
+    }, Math.min(rollover - now.getTime() + 1000, MAX_TIMEOUT_MS));
+  };
+  arm();
+  return () => clearTimeout(timer);
 }
 function nextMonthKey() {
   const now = new Date();
@@ -93,7 +106,9 @@ function monthFromKey(key: string | null) {
     dateOf: (week: SampleWeekNumber, day: number) => {
       const d = new Date(start);
       d.setDate(start.getDate() + (week - 1) * 7 + day);
-      return d.getDate();
+      return d.getMonth() === first.getMonth()
+        ? String(d.getDate())
+        : `${d.toLocaleString("en-US", { month: "short" })} ${d.getDate()}`;
     },
   };
 }
@@ -130,7 +145,7 @@ function PieceChip({
   index: number;
   pkg: PackageId;
   state: PieceState;
-  date: number | null;
+  date: string | null;
   onOpen: (piece: SamplePiece, el: HTMLButtonElement) => void;
 }) {
   const founder = piece.voice === "founder";
@@ -139,6 +154,7 @@ function PieceChip({
   const time = TIMES[index % TIMES.length];
   return (
     <li
+      inert={state === "hidden"}
       className={`transition-[opacity,transform] duration-300 ease-out ${
         state === "hidden" ? "opacity-0 translate-y-1.5" : "opacity-100 translate-y-0"
       }`}
@@ -302,7 +318,7 @@ export function SampleMonth() {
   const baseId = useId();
   const reduced = usePrefersReducedMotion();
   const { ref: viewRef, inView } = useInView({ threshold: 0.25, once: true });
-  const month = monthFromKey(useSyncExternalStore(subscribeNever, nextMonthKey, () => null));
+  const month = monthFromKey(useSyncExternalStore(subscribeMonthRollover, nextMonthKey, () => null));
 
   const pkg = SOCIAL_PACKAGES.find((p) => p.id === active)!;
   const pieces = [...samplePiecesFor(active)].sort((a, b) => a.week - b.week || a.day - b.day);
